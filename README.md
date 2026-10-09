@@ -16,7 +16,8 @@ Visit `http://localhost:8080`. Any ordinary static host can serve the same `dist
 
 - Dark mode is the default. Use the sun/moon button in the top bar to switch themes; the browser remembers your preference. Original application captures keep their recorded colors.
 - Search feature names, criterion IDs, and evidence descriptions. Press `/` to focus search.
-- Filter GUI-QML by full or partial evidence, capture availability, feature area, and personal review status. Full requires targeted automated evidence and a matching capture with no recorded failure; partial includes all remaining criteria, including missing workflows. Qt Widgets stays visible as the reference in comparisons and galleries.
+- Filter GUI-QML by **Parity**, **Partial parity**, or **Not implemented**. In Groups view this applies to the entire feature group; in Subfeatures view it applies to individual capabilities. Qt Widgets stays visible as the reference in comparisons and galleries.
+- Combine implementation parity with evidence coverage, capture availability, feature area, and personal review status. Full evidence requires targeted automated evidence and a matching capture with no recorded failure; partial evidence includes the remaining criteria. Evidence coverage and implementation parity are independent.
 - Switch between feature groups and individual subfeatures. Filter state is included in catalog links.
 - Open a group for per-subfeature application comparisons, modules/tests, or a capture gallery.
 - Inspect original screenshots with full-size zoom, timestamps, hashes, and keyboard navigation.
@@ -25,6 +26,8 @@ Visit `http://localhost:8080`. Any ordinary static host can serve the same `dist
 Reviews are stored only in the browser, keyed to the exact evidence snapshot. They are not submitted to the hosting service or written into the evidence pack. Import preserves existing differing records and reports conflicts. A different snapshot is rejected. If browser storage is unavailable, export before closing the page. Moving between the local file and a hosted origin requires export/import.
 
 Review status is separate from acceptance. Evidence levels, the one known failing QML script, and the original scope limitations remain visible. The site does not turn a screenshot or a related passing test into an acceptance decision.
+
+Implementation parity compares the listed capabilities at the pinned source revisions. Missing captures or untested hardware do not imply missing implementation. Each subfeature has a recorded assessment and reason in [`data/implementation.json`](data/implementation.json). Groups reach parity when every subfeature does; groups with no implemented subfeatures are not implemented; all other groups have partial parity. Rescan initiation through RPC counts where the Widgets baseline also permits RPC, while missing graphical rescan progress and cancellation keep that group at partial parity.
 
 ## Source and regeneration
 
@@ -40,6 +43,8 @@ node --check src/app.js
 The builder regenerates from the bundled snapshot under `dist/gui-feature-evidence/`. To intentionally replace that snapshot, pass `--evidence /path/to/gui-feature-evidence`. Screenshot bytes and evidence statuses are checked against the original manifests. All feature modules and source links remain pinned to the reviewed revisions.
 
 Commit both the source edits and regenerated `dist/` output. CI rebuilds the site and fails if the committed output is stale. The bundled snapshot makes a fresh clone self-contained.
+
+Update `data/implementation.json` when implementation changes are reviewed. The builder requires an explicit status and reason for every inventory criterion and rejects assessments that refer to a different evidence snapshot or source revision. Generated `dist/implementation.json` exposes the assessment for reviewers. Adding these assessments preserves the existing evidence snapshot identity and saved review compatibility.
 
 ## Validation
 

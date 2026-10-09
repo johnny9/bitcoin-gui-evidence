@@ -2,9 +2,11 @@
 
 Validated October 9, 2026, against evidence snapshot `b4b1026b74ad8bf0a1628c9889b82193d33d210c3aa0170e94783f371fe15c0b`.
 
-- **25 browser checks passed**, using Chromium 139 in the existing Puppeteer 24.16.0 image, with external networking disabled.
+- **31 browser checks passed**, using Chromium 139 in the existing Puppeteer 24.16.0 image, with external networking disabled.
 - All 34 feature routes expose their 203 original criteria; all 116 original images decode at their recorded dimensions.
 - Search, GUI-QML evidence/capture filters, review filters, deep links, galleries, zoom, keyboard search, mobile menus, and local-file access passed.
+- Parity filtering is independent of evidence coverage. Group results are 4 parity, 27 partial parity, and 3 not implemented; subfeature results are 128 parity, 32 partial parity, and 43 not implemented. All groups are aggregated from their subfeatures. Browser checks cover group/subfeature scope, combined evidence and parity filters, reload persistence, mobile filtering, and the unchanged Widgets reference.
+- Regression cases include source-only automatic-backup evidence at implementation parity, device address generation without verification at partial parity, absent legacy backup restore/migrate at not implemented, and the recorded recipient-note failure at partial parity.
 - Full evidence selects 89 GUI-QML criteria with targeted automated evidence and a capture; partial selects the remaining 114, including all 43 missing workflows and the known failure. The sets are disjoint and cover all 203 criteria. Capture filters use QML records even when Widgets has a capture. Widgets remains visible in comparisons and galleries. Legacy application/evidence links migrate to the simplified filters.
 - Personal notes persist locally and render markup as text. Export/import preserves the snapshot identity; import rejects an unrelated snapshot.
 - Mobile catalog, feature, tests, and provenance views fit a 390-pixel viewport without page-level horizontal overflow. Wide test tables scroll within their panels.
@@ -18,6 +20,8 @@ Validated October 9, 2026, against evidence snapshot `b4b1026b74ad8bf0a1628c9889
 Dark-mode QA screenshots are in the workspace's `../.validation/gui-feature-review-dark-20261009/` directory.
 
 Filter-update QA screenshots and results are in `../.validation/gui-feature-review-filters-20261009/`.
+
+Parity-filter QA screenshots and results are in the ignored `.validation/parity/` directory. Every assessment is checked against the original criterion IDs, source revisions, and snapshot identity; all original evidence statuses and capture hashes are preserved.
 
 The browser run initially exposed a sidebar transition intercepting the menu click during a desktop-to-mobile resize. Removing that transition fixed the interaction; the final full run passed. Chrome cache configuration was adjusted for the container account during setup.
 

@@ -59,6 +59,14 @@ def main():
         evidence = staged / 'gui-feature-evidence'
     load = lambda name: json.loads((evidence / name).read_text())
     inventory = load('inventory.json')
+    implementation = json.loads((ROOT / 'data/implementation.json').read_text())
+    implementation_rows = implementation['criteria']
+    criterion_ids = {s['id'] for f in inventory for s in f['subfeatures']}
+    if implementation_rows.keys() != criterion_ids:
+        raise ValueError('Implementation assessment must cover exactly the inventory criteria')
+    for sid, assessment in implementation_rows.items():
+        if assessment['status'] not in ('parity', 'partial', 'not-implemented') or not assessment['reason'].strip():
+            raise ValueError('Invalid implementation assessment: ' + sid)
     coverage = {r['id']: r for r in load('coverage.json')}
     photos = load('selected-captures.json')
     groups_by_slug = {f['slug']: f['id'] for f in inventory}
@@ -111,7 +119,8 @@ def main():
         rows = []
         for match in re.finditer(r'^### (F\d+\.S\d+) · (.*?)\n(.*?)(?=^### |^## |\Z)', text, re.M | re.S):
             sid, intent, body = match.groups()
-            row = {'id': sid, 'intent': intent.strip(), 'groupId': fid, 'area': area, 'applications': {}}
+            row = {'id': sid, 'intent': intent.strip(), 'groupId': fid, 'area': area, 'applications': {},
+                   'implementation': implementation_rows[sid]}
             for app, label in [('widgets', 'Qt Widgets'), ('qml', 'GUI-QML')]:
                 line = next(line for line in body.splitlines() if line.startswith('| ' + label + ' |'))
                 cells = re.split(r'(?<!\\)\|', line)[1:-1]
@@ -138,8 +147,13 @@ def main():
             cells = [c.strip() for c in re.split(r'(?<!\\)\|', line)[1:-1]]
             tests.append({'application': cells[0], 'testHtml': html(cells[1], fid), 'resultHtml': html(cells[2], fid),
                           'failed': bool(re.search(r'\bfailed\b', cells[2]))})
+        implementation_counts = {status: sum(r['implementation']['status'] == status for r in rows)
+                                 for status in ('parity', 'partial', 'not-implemented')}
+        group_implementation = ('parity' if implementation_counts['parity'] == len(rows) else
+                                'not-implemented' if implementation_counts['not-implemented'] == len(rows) else 'partial')
         groups.append({
             'id': fid, 'name': feature['name'], 'number': feature['number'], 'slug': feature['slug'], 'area': area,
+            'implementation': {'status': group_implementation, 'counts': implementation_counts},
             'comparisonHtml': html(feature['qml_comparison'], fid),
             'modulesHtml': html(section(text, 'Modules'), fid, inline=False),
             'supportHtml': html(' '.join(feature.get('support', [])), fid),
@@ -150,8 +164,11 @@ def main():
     digest = hashlib.sha256()
     for filename in ['inventory.json', 'coverage.json', 'selected-captures.json', 'summary.json']:
         digest.update((evidence / filename).read_bytes())
+    if implementation['snapshotCatalogId'] != digest.hexdigest():
+        raise ValueError('Reassess implementation parity for the changed evidence snapshot')
     data = {
         'catalogId': digest.hexdigest(), 'summary': load('summary.json'),
+        'implementationAssessment': {k: v for k, v in implementation.items() if k != 'criteria'},
         'areas': [{'id': key, 'label': label} for key, label, _ in AREAS],
         'groups': groups, 'captures': photos,
         'functional': load('logs/qml-functional-results.json'),
@@ -159,6 +176,8 @@ def main():
         'provenanceHtml': html((evidence / 'PROVENANCE.md').read_text(), document=evidence / 'PROVENANCE.md', inline=False),
         'revisions': {'widgets': 'f739c7876b81304bdc72e7eaa307702da269ac31', 'qml': 'a91f4b4774f25de061fe1a7c132a91ddde117fca'},
     }
+    if implementation['sourceRevisions'] != data['revisions']:
+        raise ValueError('Implementation assessment source revisions do not match the comparison')
     if DEST.exists():
         shutil.rmtree(DEST)
     DEST.mkdir()
@@ -166,6 +185,7 @@ def main():
         if file.is_file():
             shutil.copy2(file, DEST / file.name)
     (DEST / 'data.js').write_text('window.REVIEW_EVIDENCE = ' + json.dumps(data, ensure_ascii=False).replace('</', '<\\/') + ';\n')
+    shutil.copy2(ROOT / 'data/implementation.json', DEST / 'implementation.json')
     output_evidence = DEST / 'gui-feature-evidence'
     output_evidence.mkdir()
     for file in evidence.iterdir():

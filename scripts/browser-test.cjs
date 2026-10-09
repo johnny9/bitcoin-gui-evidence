@@ -83,6 +83,68 @@ async function main() {
     await page.keyboard.press('Escape');
     assert.equal(await page.$eval('#capture-dialog',el=>el.open),false);
   });
+  await go('#catalog?parity=parity');
+  await check('Group parity filters the whole feature, independently of evidence',async()=>{
+    assert.deepEqual(await page.$$eval('[data-filter="parity"] option',els=>els.map(el=>el.textContent)),['Any implementation','Parity','Partial parity','Not implemented']);
+    assert.deepEqual(await page.$$eval('.group-card .group-card-top .criterion-id',els=>els.map(el=>el.textContent)),['F11','F19','F28','F33']);
+    assert.equal(await page.$$eval('.group-card .parity-badge[data-parity="parity"]',els=>els.length),4);
+    assert.match(await page.$eval('#filter-scope',el=>el.textContent),/whole feature groups/);
+    await page.reload({waitUntil:'networkidle0'});
+    assert.equal(await page.$eval('[data-filter="parity"]',el=>el.value),'parity');
+  });
+  await check('Partial and absent groups are distinct, with no mixed groups shown as absent',async()=>{
+    await value('[data-filter="parity"]','partial');
+    assert.equal(await page.$$eval('.group-card',els=>els.length),27);
+    assert.ok(await page.$('.group-card[href="#feature/F01"]'));
+    assert.ok(await page.$('.group-card[href="#feature/F34"]')); // RPC rescan exists; progress/cancel do not.
+    await value('[data-filter="parity"]','not-implemented');
+    assert.deepEqual(await page.$$eval('.group-card .group-card-top .criterion-id',els=>els.map(el=>el.textContent)),['F05','F25','F32']);
+    assert.equal(await page.$('.group-card[href="#feature/F01"]'),null);
+    await page.screenshot({path:output+'/parity-groups.png'});
+  });
+  await check('Subfeature parity distinguishes partial functionality from absence',async()=>{
+    await page.click('[data-view="criteria"]');
+    const absent=await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent));
+    assert.equal(absent.length,43);
+    assert.ok(absent.includes('F01.S04'));
+    assert.ok(absent.includes('F03.S04'));
+    assert.ok(!absent.includes('F15.S03')); // Receiving exists; device verification is missing.
+    await value('[data-filter="parity"]','partial');
+    const partial=await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent));
+    assert.equal(partial.length,32);
+    assert.ok(partial.includes('F15.S03'));
+    assert.ok(partial.includes('F09.S03'));
+    await value('[data-filter="parity"]','parity');
+    const parity=await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent));
+    assert.equal(parity.length,128);
+    assert.ok(parity.includes('F04.S02')); // Source evidence, without a runtime assertion or capture.
+    assert.ok(parity.includes('F21.S04')); // Physical router not tested.
+    assert.equal(new Set([...parity,...partial,...absent]).size,203);
+    assert.match(await page.$eval('#filter-scope',el=>el.textContent),/individual subfeatures/);
+  });
+  await check('Parity and evidence coverage can be combined without conflating them',async()=>{
+    await value('[data-filter="evidence"]','partial');
+    await page.type('#catalog-search','F04.S02');
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),1);
+    assert.ok(await page.$('.criterion-result .parity-badge[data-parity="parity"]'));
+    await page.reload({waitUntil:'networkidle0'});
+    assert.equal(await page.$eval('[data-filter="parity"]',el=>el.value),'parity');
+    assert.equal(await page.$eval('[data-filter="evidence"]',el=>el.value),'partial');
+    await page.click('.criterion-result');
+    await page.waitForSelector('[id="F04.S02"] .parity-detail');
+    assert.ok(await page.$('[id="F04.S02"] .parity-badge[data-parity="parity"]'));
+    assert.equal(await page.$$eval('[id="F04.S02"] .application-evidence',els=>els.length),2);
+    assert.match(await page.$eval('[id="F04.S02"] .parity-detail',el=>el.textContent),/automatic backup/);
+    await page.screenshot({path:output+'/parity-feature.png'});
+  });
+  await go('#catalog?parity=partial');
+  await check('Opening a partial group retains its complete implementation breakdown',async()=>{
+    await page.click('.group-card[href="#feature/F01"]');
+    await page.waitForSelector('[id="F01.S04"]');
+    assert.equal(await page.$$eval('.criterion-card',els=>els.length),6);
+    assert.equal(await page.$$eval('.criterion-card .parity-badge[data-parity="parity"]',els=>els.length),5);
+    assert.equal(await page.$$eval('.criterion-card .parity-badge[data-parity="not-implemented"]',els=>els.length),1);
+  });
   await go('#catalog?evidence=full&view=criteria');
   let fullIds, partialIds;
   await check('Full evidence requires GUI-QML automation and a capture',async()=>{
@@ -102,7 +164,7 @@ async function main() {
     assert.ok(partialIds.includes('F09.S03'));
     assert.ok(partialIds.includes('F09.S08'));
     assert.ok(partialIds.includes('F04.S02'));
-    assert.equal(await page.$$eval('.result-statuses .badge-gap',els=>els.length),43);
+    assert.equal(await page.$$eval('.result-statuses .badge-gap:not(.parity-badge)',els=>els.length),43);
     assert.equal(new Set([...fullIds,...partialIds]).size,203);
     assert.equal(fullIds.some(id=>partialIds.includes(id)),false);
     await page.reload({waitUntil:'networkidle0'});
@@ -241,6 +303,15 @@ async function main() {
   });
   await page.screenshot({path:output+'/feature-mobile.png',fullPage:false});
   await go('#catalog?evidence=any');
+  await check('Parity filtering is usable on mobile and keeps both references visible',async()=>{
+    await value('[data-filter="parity"]','not-implemented');
+    assert.equal(await page.$$eval('.group-card',els=>els.length),3);
+    await page.click('[data-view="criteria"]');
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),43);
+    assert.equal(await page.$$eval('.result-statuses',els=>els.every(el=>el.textContent.includes('Qt Widgets')&&el.textContent.includes('GUI-QML'))),true);
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+    await page.click('[data-action="clear-filters"]');
+  });
   await page.screenshot({path:output+'/catalog-mobile.png',fullPage:false});
   await check('Mobile tests and provenance remain navigable',async()=>{
     await go('#tests');assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
