@@ -1,0 +1,3 @@
+{"id": "sign-message", "features": ["F19.S01"], "description": "GUI signature verifies through Core RPC.", "actual": true, "expected": true, "status": "passed"}
+{"id": "copy-signature", "features": ["F19.S03"], "description": "Signature is copied to the system clipboard.", "actual": "IDqe1D5RM9RBIgprt/w0m6E7kpLmWXyv0P7o+J/6gTf9GbydQmQ9+a8ZfISPnZnnTRxx76CX91ntgf4oBBPbuGc=", "expected": "IDqe1D5RM9RBIgprt/w0m6E7kpLmWXyv0P7o+J/6gTf9GbydQmQ9+a8ZfISPnZnnTRxx76CX91ntgf4oBBPbuGc=", "status": "passed"}
+{"id": "verify-message", "features": ["F19.S02"], "description": "GUI reports valid message signature.", "actual": "Message verified.", "expected": "Message verified.", "status": "passed"}

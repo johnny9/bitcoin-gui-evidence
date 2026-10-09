@@ -1,0 +1,121 @@
+{
+  "parent": "4527986d46e1a34710cb77e8d5ffac0a349745f9",
+  "bitcoin": "dc282ff31d1cc97507530a541d9cec8a8f6a6ef4",
+  "source_path": "/home/codex/workspaces/bitcoin-core-app/.validation/pr937-depends-perf-20260930/source",
+  "original_review_source": "/tmp/gui-qml-pr937-review-4527986",
+  "depends_patch": "patches/depends-Add-Qt-Qml-and-Qt-Quick-modules.patch",
+  "depends_patch_sha256": "4a82165a9cebfa0ec500c3abb6b2294b4bfe6edf34ab76003f06a7acba4646b9",
+  "expected_qt": "6.8.3",
+  "depends_host": "x86_64-pc-linux-gnu",
+  "depends_command": "make -j8 HOST=x86_64-pc-linux-gnu DEBUG= LOG=1",
+  "container_image": "pr915-review-qt:20260923",
+  "expected_compiler": "GCC 13.3.0",
+  "runtime_image": "pr915-review-qt:20260923",
+  "original_cached_prefix_rejected": "gui-qml/depends/x86_64-pc-linux-gnu contains Qt6.8.4 and lacks required SVG; its binary Qt cache was not reused as Qt6.8.3",
+  "patch_only_source_changes": [
+    "depends/packages/native_qt.mk",
+    "depends/packages/qt.mk",
+    "depends/packages/qt_details.mk",
+    "depends/patches/qt/qtbase_skip_tools.patch",
+    "depends/patches/qt/static_fixes.patch"
+  ],
+  "actual_qt": "6.8.3",
+  "qt_installed_header_features": {
+    "QT_FEATURE_static": "1",
+    "QT_VERSION_STR": "\"6.8.3\"",
+    "QT_FEATURE_opengles2": "-1",
+    "QT_FEATURE_opengl": "-1",
+    "QT_FEATURE_vulkan": "-1",
+    "QT_FEATURE_xcb": "1",
+    "QT_FEATURE_xcb_glx_plugin": "-1",
+    "QT_FEATURE_qml_profiler": "-1",
+    "QT_FEATURE_quick_canvas": "1"
+  },
+  "depends_build_result": "exit 0",
+  "container_image_id": "sha256:5101ac87837bc5cca898ebef392a903680f93d6133f6d31c8bb891f413baab29",
+  "compiler": "GCC 13.3.0",
+  "cmake": "3.28.3",
+  "app_build_type": "Release",
+  "app_options": [
+    "BUILD_APP_TESTS=ON",
+    "BUILD_GUI=ON",
+    "ENABLE_WALLET=ON",
+    "ENABLE_IPC=OFF",
+    "ENABLE_TEST_AUTOMATION=ON"
+  ],
+  "app_source_mount": "read-only /validation/source",
+  "base": "4ca85d5945d35f9e7ccc6fab3129b6558bfee785",
+  "app_build_result": "exit 0",
+  "ctest_result": "2/2 targets passed",
+  "cpp_test_counts": {
+    "passed": 765,
+    "failed": 0,
+    "skipped": 1,
+    "skip_reason": "Root can still write to chmod-protected temporary directory"
+  },
+  "qml_test_counts": {
+    "passed": 634,
+    "failed": 0,
+    "skipped": 0
+  },
+  "ctest_seconds": 144.73,
+  "qt_test_runtime": "6.8.3",
+  "app_sha256": "a8215c7e45242fdf0e740339733696ec832e362f8306bfbe3bac95dd6bb4fb4c",
+  "app_path": "/home/codex/workspaces/bitcoin-core-app/.validation/pr937-depends-perf-20260930/build/bin/bitcoin-core-app",
+  "app_qt_linkage": "static; no Qt shared libraries listed by ldd",
+  "app_other_shared_dependencies": [
+    "depends libfreetype.so.6",
+    "depends libfontconfig.so.1",
+    "system libstdc++.so.6",
+    "system libm.so.6",
+    "system libgcc_s.so.1",
+    "system libc.so.6"
+  ],
+  "finished_utc": "2026-09-30T21:29:04.359419+00:00",
+  "heavy_work_complete": true,
+  "font_libraries": [
+    {
+      "package": "freetype",
+      "version": "2.11.1",
+      "recipe": "/home/codex/workspaces/bitcoin-core-app/.validation/pr937-depends-perf-20260930/source/bitcoin/depends/packages/freetype.mk",
+      "shared_flag": "-DBUILD_SHARED_LIBS=TRUE",
+      "archive": "/home/codex/workspaces/bitcoin-core-app/.validation/pr937-depends-perf-20260930/source/bitcoin/depends/built/x86_64-pc-linux-gnu/freetype/freetype-2.11.1-9827a0707bf.tar.gz",
+      "archive_member": "./lib/libfreetype.so.6.18.1",
+      "installed_library": "/home/codex/workspaces/bitcoin-core-app/.validation/pr937-depends-perf-20260930/source/bitcoin/depends/x86_64-pc-linux-gnu/lib/libfreetype.so.6.18.1",
+      "container_library": "/validation/source/bitcoin/depends/x86_64-pc-linux-gnu/lib/libfreetype.so.6.18.1",
+      "sha256": "5fe1fcbcaf28a708375de54ea4a3d9d36e2aafe51754cc5918edf29d6dc5ab5c",
+      "matches_depends_archive": true,
+      "build_evidence": "depends-build.log records extracting verified source, preprocessing, configuring, building, staging and caching this package in this run"
+    },
+    {
+      "package": "fontconfig",
+      "version": "2.12.6",
+      "recipe": "/home/codex/workspaces/bitcoin-core-app/.validation/pr937-depends-perf-20260930/source/bitcoin/depends/packages/fontconfig.mk",
+      "shared_flag": "--disable-static",
+      "archive": "/home/codex/workspaces/bitcoin-core-app/.validation/pr937-depends-perf-20260930/source/bitcoin/depends/built/x86_64-pc-linux-gnu/fontconfig/fontconfig-2.12.6-a485f355de0.tar.gz",
+      "archive_member": "./lib/libfontconfig.so.1.10.1",
+      "installed_library": "/home/codex/workspaces/bitcoin-core-app/.validation/pr937-depends-perf-20260930/source/bitcoin/depends/x86_64-pc-linux-gnu/lib/libfontconfig.so.1.10.1",
+      "container_library": "/validation/source/bitcoin/depends/x86_64-pc-linux-gnu/lib/libfontconfig.so.1.10.1",
+      "sha256": "4f86eb0f6c6019ad5b1ec781daffaa862c4b6f564d97e2ddc9c3df94c8ce78e2",
+      "matches_depends_archive": true,
+      "build_evidence": "depends-build.log records extracting verified source, preprocessing, configuring, building, staging and caching this package in this run"
+    }
+  ],
+  "runtime_fontconfig": {
+    "observed_warning": "Fontconfig error: Cannot load default config file",
+    "reported_by": "root agent running actual application matrix",
+    "reason": "depends recipe removes etc/share after installation; compiled default config path remains under depends prefix",
+    "fallback": "Exact 2.12.6 source uses /usr/share/fonts on Linux",
+    "embedded_fonts": [
+      "BitcoinCoreSans regular",
+      "BitcoinCoreSans semibold",
+      "RobotoMono regular"
+    ],
+    "candidate_desktop_override": {
+      "FONTCONFIG_FILE": "/etc/fonts/fonts.conf",
+      "FONTCONFIG_PATH": "/etc/fonts"
+    },
+    "override_applied": false,
+    "scope": "No runtime equality claim for font substitution/hinting or cost without later comparison"
+  }
+}

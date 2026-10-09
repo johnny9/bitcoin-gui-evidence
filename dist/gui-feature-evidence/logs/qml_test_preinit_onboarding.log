@@ -1,0 +1,22 @@
+Starting GUI: /validation/build/bin/bitcoin-core-app -test-automation=/work/tmp/qml_test_bridge_8mwo9ztr/test_bridge.sock -test-settings-dir=/work/tmp/qml_test_bridge_8mwo9ztr/config -resetguisettings -logtimemicros -debug -debugexclude=leveldb -regtest -nolisten
+QmlDriver connected to test bridge.
+Starting GUI: /validation/build/bin/bitcoin-core-app -test-automation=/work/tmp/qml_test_bridge_8mwo9ztr/test_bridge.sock -test-settings-dir=/work/tmp/qml_test_bridge_8mwo9ztr/config -logtimemicros -debug -debugexclude=leveldb -regtest -nolisten
+QmlDriver connected to test bridge.
+Starting GUI: /validation/build/bin/bitcoin-core-app -test-automation=/work/tmp/qml_test_bridge_1exgzebf/test_bridge.sock -test-settings-dir=/work/tmp/qml_test_bridge_1exgzebf/config -resetguisettings -logtimemicros -debug -debugexclude=leveldb -regtest -disablewallet -nolisten
+QmlDriver connected to test bridge.
+Starting GUI: /validation/build/bin/bitcoin-core-app -datadir=/tmp/qml704_h862hoqy/node0 -test-automation=/tmp/qml704_h862hoqy/node0/test_bridge.sock -test-settings-dir=/tmp/qml704_h862hoqy/config -logtimemicros -debug -debugexclude=leveldb -regtest -disablewallet -nolisten
+QmlDriver connected to test bridge.
+Starting GUI: /validation/build/bin/bitcoin-core-app -datadir=/tmp/qml704_h862hoqy/node0 -test-automation=/tmp/qml704_h862hoqy/node0/test_bridge.sock -test-settings-dir=/tmp/qml704_h862hoqy/config -logtimemicros -debug -debugexclude=leveldb -regtest -disablewallet -nolisten
+QmlDriver connected to test bridge.
+Starting GUI: /validation/build/bin/bitcoin-core-app -test-automation=/work/tmp/qml_test_bridge_q6h7w2pn/test_bridge.sock -test-settings-dir=/work/tmp/qml_test_bridge_q6h7w2pn/config -logtimemicros -debug -debugexclude=leveldb -regtest -disablewallet -conf=/work/tmp/qml_test_bridge_q6h7w2pn/conf_source/bitcoin.conf -nolisten
+QmlDriver connected to test bridge.
+Starting GUI: /validation/build/bin/bitcoin-core-app -datadir=/tmp/qml704_wallets_bh75izoj/node0 -test-automation=/tmp/qml704_wallets_bh75izoj/node0/test_bridge.sock -test-settings-dir=/tmp/qml704_wallets_bh75izoj/config -logtimemicros -debug -debugexclude=leveldb -regtest -nolisten
+QmlDriver connected to test bridge.
+Starting GUI: /validation/build/bin/bitcoin-core-app -datadir=/tmp/qml704_walletdir_3e09aq0v/node0 -test-automation=/tmp/qml704_walletdir_3e09aq0v/node0/test_bridge.sock -test-settings-dir=/tmp/qml704_walletdir_3e09aq0v/config -logtimemicros -debug -debugexclude=leveldb -regtest -walletdir=/tmp/qml704_walletdir_3e09aq0v/external_wallets -nolisten
+QmlDriver connected to test bridge.
+Starting GUI: /validation/build/bin/bitcoin-core-app -datadir=/tmp/qml704_override_y0qpxqv2/node0 -test-automation=/tmp/qml704_override_y0qpxqv2/node0/test_bridge.sock -test-settings-dir=/tmp/qml704_override_y0qpxqv2/config -logtimemicros -debug -debugexclude=leveldb -regtest -disablewallet -qml_onboarded=0
+QmlDriver connected to test bridge.
+
+==================================================
+All tests PASSED
+==================================================

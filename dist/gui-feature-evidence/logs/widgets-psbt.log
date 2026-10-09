@@ -1,0 +1,3 @@
+{"id": "export-unsigned-psbt", "features": ["F13.S01", "F13.S02", "F13.S03", "F13.S04", "F13.S05"], "description": "GUI creates a decodable unsigned single-signature PSBT in the system clipboard.", "actual": true, "expected": true, "status": "passed"}
+{"id": "sign-imported-psbt", "features": ["F14.S01", "F14.S03", "F14.S04", "F14.S06"], "description": "GUI signs an imported PSBT and copies a complete finalizable PSBT.", "actual": true, "expected": true, "status": "passed"}
+{"id": "broadcast-psbt", "features": ["F14.S07", "F09.S07"], "description": "GUI broadcast reaches the node mempool.", "actual": true, "expected": true, "status": "passed"}

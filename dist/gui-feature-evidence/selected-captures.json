@@ -1,0 +1,1772 @@
+[
+  {
+    "path": "media/widgets/startup-sync-status.png",
+    "caption": "Startup sync status",
+    "features": [
+      "F20.S05",
+      "F29.S02",
+      "F30.S06"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:43:17.021566+00:00",
+    "sha256": "293fd9df3a75079f85cc559e4d08d94993d9fe40c63af04318c5309f52521230",
+    "application": "widgets",
+    "width": 562,
+    "height": 483
+  },
+  {
+    "path": "media/widgets/create-wallet-options.png",
+    "caption": "Create wallet options",
+    "features": [
+      "F01.S01",
+      "F01.S02",
+      "F01.S03",
+      "F01.S04",
+      "F01.S05",
+      "F01.S06"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:43:17.989835+00:00",
+    "sha256": "2eef155ff6686b6749b7f69fcb3a29173ccb8f3f785da3ed7c5e541611e66bc6",
+    "application": "widgets",
+    "width": 433,
+    "height": 298
+  },
+  {
+    "path": "media/widgets/wallet-overview-funded.png",
+    "caption": "Wallet overview funded",
+    "features": [
+      "F07.S01",
+      "F07.S02",
+      "F29.S01",
+      "F29.S02",
+      "F29.S05"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:43:23.260959+00:00",
+    "sha256": "3f8bf485d9e702a37a5b33a1bf658bf0939017dc4379c1fec1abba78f318b833",
+    "application": "widgets",
+    "width": 755,
+    "height": 483
+  },
+  {
+    "path": "media/widgets/create-blank-wallet.png",
+    "caption": "Create blank wallet",
+    "features": [
+      "F01.S04"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:43:59.224748+00:00",
+    "sha256": "7e500ffc973de9df698b3df4c3869a0ab5af0bd790eaa10c0b81a1a222fd017e",
+    "application": "widgets",
+    "width": 433,
+    "height": 298
+  },
+  {
+    "path": "media/widgets/create-watch-only-wallet.png",
+    "caption": "Create watch only wallet",
+    "features": [
+      "F01.S03"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:44:00.836437+00:00",
+    "sha256": "254beea0eb65c3484bdd4346ec02f34e2df1273073f2b63ab1d13cf7b7bda1ce",
+    "application": "widgets",
+    "width": 433,
+    "height": 298
+  },
+  {
+    "path": "media/widgets/preferences-general.png",
+    "caption": "Preferences general",
+    "features": [
+      "F20.S02",
+      "F20.S03",
+      "F23.S01",
+      "F23.S02",
+      "F23.S11",
+      "F27.S01"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:45:16.435230+00:00",
+    "sha256": "0dccc4e472d89e572280d46571313f9c8ab9a924a542d3f3b01db4286c1e7d34",
+    "application": "widgets",
+    "width": 601,
+    "height": 440
+  },
+  {
+    "path": "media/widgets/preferences-wallet.png",
+    "caption": "Preferences wallet",
+    "features": [
+      "F23.S03",
+      "F23.S04",
+      "F23.S05",
+      "F15.S01"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:45:16.964004+00:00",
+    "sha256": "69972ee28124b7b00aa722577f5aca04a21a39f91459348e35f31f76d73ad3c1",
+    "application": "widgets",
+    "width": 601,
+    "height": 440
+  },
+  {
+    "path": "media/widgets/preferences-network.png",
+    "caption": "Preferences network",
+    "features": [
+      "F21.S02",
+      "F21.S03",
+      "F21.S04",
+      "F29.S03"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:45:17.486820+00:00",
+    "sha256": "943a184c4c4806420ac9dc0b77248b11e0aa8e7c2fa3f27a3cc0f2520718c95c",
+    "application": "widgets",
+    "width": 601,
+    "height": 440
+  },
+  {
+    "path": "media/widgets/preferences-window.png",
+    "caption": "Preferences window",
+    "features": [
+      "F23.S09",
+      "F24.S05",
+      "F26.S03"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:45:18.008135+00:00",
+    "sha256": "a50e4aff1b24f3d5b6b0cb1d5464f31a89c68a8d142de760009f902ab4286dda",
+    "application": "widgets",
+    "width": 601,
+    "height": 440
+  },
+  {
+    "path": "media/widgets/preferences-display.png",
+    "caption": "Preferences display",
+    "features": [
+      "F23.S06",
+      "F23.S07",
+      "F23.S08"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:45:18.529737+00:00",
+    "sha256": "57889938783edc24393e543d9583bfc11fa90fe48187ae4d2b404775ba48030b",
+    "application": "widgets",
+    "width": 601,
+    "height": 440
+  },
+  {
+    "path": "media/widgets/send-coin-control.png",
+    "caption": "Send coin control",
+    "features": [
+      "F09.S01",
+      "F09.S02",
+      "F09.S04",
+      "F09.S05",
+      "F12.S08"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:45:19.970607+00:00",
+    "sha256": "1bc2ce347659cd33c3b038351e0d4c53f31d3a1adf80c6d91a5881202146cba2",
+    "application": "widgets",
+    "width": 830,
+    "height": 483
+  },
+  {
+    "path": "media/widgets/receive-request-form.png",
+    "caption": "Receive request form",
+    "features": [
+      "F08.S01",
+      "F08.S02",
+      "F08.S07"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:47:02.996862+00:00",
+    "sha256": "6b235881dbbc19f5bdec31019dcac0e601ae97c99472a376cfab985dc3d8badb",
+    "application": "widgets",
+    "width": 830,
+    "height": 483
+  },
+  {
+    "path": "media/widgets/receive-payment-qr.png",
+    "caption": "Receive payment QR",
+    "features": [
+      "F08.S02",
+      "F08.S03",
+      "F08.S04",
+      "F08.S05"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:47:03.735227+00:00",
+    "sha256": "3101f900d97a275e7faebd8f8d70619dec811060321dafbdfe2aee7e40413e43",
+    "application": "widgets",
+    "width": 691,
+    "height": 546
+  },
+  {
+    "path": "media/widgets/receive-saved-request.png",
+    "caption": "Receive saved request",
+    "features": [
+      "F08.S07"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:47:04.943595+00:00",
+    "sha256": "eced78c14027514c3d73bfd050d10f4cae092c394bbb1fc3a48fdd26a7847f83",
+    "application": "widgets",
+    "width": 830,
+    "height": 483
+  },
+  {
+    "path": "media/widgets/message-signed.png",
+    "caption": "Message signed",
+    "features": [
+      "F19.S01",
+      "F19.S03"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:47:06.357016+00:00",
+    "sha256": "f31e46c4f7acd5730c8651af8526586c443291a90f826009c588fd5cfce765ed",
+    "application": "widgets",
+    "width": 700,
+    "height": 380
+  },
+  {
+    "path": "media/widgets/message-verified.png",
+    "caption": "Message verified",
+    "features": [
+      "F19.S02"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:47:07.354364+00:00",
+    "sha256": "e1b9726f9327734a3cd49631ae65bc8ef654be7b3be97b6aa94ae5e635ee2019",
+    "application": "widgets",
+    "width": 700,
+    "height": 380
+  },
+  {
+    "path": "media/widgets/privacy-masked-overview.png",
+    "caption": "Privacy masked overview",
+    "features": [
+      "F07.S05",
+      "F32.S01",
+      "F32.S02"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:47:59.700550+00:00",
+    "sha256": "237964bc25861667942fa8da7a7119493f7ef4700fefa4f3afb71ded3f54d0af",
+    "application": "widgets",
+    "width": 830,
+    "height": 483
+  },
+  {
+    "path": "media/widgets/node-information.png",
+    "caption": "Node information",
+    "features": [
+      "F22.S01",
+      "F28.S03"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:48:01.030705+00:00",
+    "sha256": "3a70591f18b0782a5c05265e5947429ce3099f640b75cd4d6cfb5396fd961cae",
+    "application": "widgets",
+    "width": 740,
+    "height": 430
+  },
+  {
+    "path": "media/widgets/rpc-console.png",
+    "caption": "RPC console",
+    "features": [
+      "F22.S05",
+      "F22.S06",
+      "F22.S07",
+      "F22.S08"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:48:01.811146+00:00",
+    "sha256": "6bd06910f5890e331777af2537a76765a0ba783fae3e20c002bed78f6159726c",
+    "application": "widgets",
+    "width": 740,
+    "height": 430
+  },
+  {
+    "path": "media/widgets/network-traffic.png",
+    "caption": "Network traffic",
+    "features": [
+      "F22.S02",
+      "F22.S03"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:48:02.590673+00:00",
+    "sha256": "6d0db8932e063a56c49f84a05a6e774331f6ce47efdfdd81a6c098a62b6c3660",
+    "application": "widgets",
+    "width": 740,
+    "height": 430
+  },
+  {
+    "path": "media/widgets/about-application.png",
+    "caption": "About application",
+    "features": [
+      "F31.S06"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:48:45.796841+00:00",
+    "sha256": "393890799322e18226a4ccc7c7a4058a80e6f9a80a5a78ca630a9251ca2b8f67",
+    "application": "widgets",
+    "width": 780,
+    "height": 400
+  },
+  {
+    "path": "media/widgets/command-line-help.png",
+    "caption": "Command line help",
+    "features": [
+      "F31.S06"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:48:46.801857+00:00",
+    "sha256": "8893dadef9bb71ec2d650574e74e8401eda9c2d6f44868e63d9d59307517571b",
+    "application": "widgets",
+    "width": 780,
+    "height": 400
+  },
+  {
+    "path": "media/widgets/backup-wallet-file.png",
+    "caption": "Backup wallet file",
+    "features": [
+      "F03.S01"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:48:48.166242+00:00",
+    "sha256": "fcacf07ab47024acfc97b3a7083c21faa216a2b88374893a348ef564c38c2cf9",
+    "application": "widgets",
+    "width": 624,
+    "height": 412
+  },
+  {
+    "path": "media/widgets/export-watch-only-wallet.png",
+    "caption": "Export watch only wallet",
+    "features": [
+      "F05.S01",
+      "F05.S02",
+      "F05.S04"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:48:49.686869+00:00",
+    "sha256": "83e68217d1a02c62d0665e3cdf70d3aaa6a311f546482909dc239035d4d331bb",
+    "application": "widgets",
+    "width": 624,
+    "height": 412
+  },
+  {
+    "path": "media/widgets/export-watch-only-success.png",
+    "caption": "Export watch only success",
+    "features": [
+      "F05.S01",
+      "F05.S02",
+      "F05.S04"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:49:32.586234+00:00",
+    "sha256": "48b62ff5c30dc8ab626e28fa4705941517e8dc73f1103cb71273bb2dcad09e24",
+    "application": "widgets",
+    "width": 450,
+    "height": 84
+  },
+  {
+    "path": "media/widgets/restore-wallet-file.png",
+    "caption": "Restore wallet file",
+    "features": [
+      "F03.S02"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:49:33.908235+00:00",
+    "sha256": "a9a4055d8b61f4c9550eb09acae694eb99972992349556f01658dbaed7d93100",
+    "application": "widgets",
+    "width": 624,
+    "height": 412
+  },
+  {
+    "path": "media/widgets/restore-wallet-name.png",
+    "caption": "Restore wallet name",
+    "features": [
+      "F03.S02",
+      "F03.S03"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:50:28.118897+00:00",
+    "sha256": "e9246a3e02914017abf41d78eb7a1546907d844f589c82962a20339a6eed8304",
+    "application": "widgets",
+    "width": 200,
+    "height": 94
+  },
+  {
+    "path": "media/widgets/open-payment-uri.png",
+    "caption": "Open payment URI",
+    "features": [
+      "F10.S01",
+      "F10.S02"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:50:30.269336+00:00",
+    "sha256": "9411ac1d34f7fd876c1fc4089fe22d49923d08406df60daa23d88fc5e5c1651f",
+    "application": "widgets",
+    "width": 564,
+    "height": 109
+  },
+  {
+    "path": "media/widgets/send-fee-selection.png",
+    "caption": "Send fee selection",
+    "features": [
+      "F09.S01",
+      "F09.S02",
+      "F09.S03",
+      "F09.S05",
+      "F11.S01",
+      "F11.S02",
+      "F11.S03",
+      "F11.S04"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:50:31.273603+00:00",
+    "sha256": "59c1654ef60a15986c587dd188c539cb833d0a07a35b03270cc6ed26efb1fc49",
+    "application": "widgets",
+    "width": 830,
+    "height": 483
+  },
+  {
+    "path": "media/widgets/coin-control-inputs.png",
+    "caption": "Coin control inputs",
+    "features": [
+      "F12.S01",
+      "F12.S02",
+      "F12.S03",
+      "F12.S04",
+      "F12.S05",
+      "F12.S06",
+      "F12.S07"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:50:32.041791+00:00",
+    "sha256": "0a40100e31f374ff93bd091f1b83e8a299a3c7485d7158fccc82260742ea8b0a",
+    "application": "widgets",
+    "width": 1000,
+    "height": 500
+  },
+  {
+    "path": "media/widgets/send-review.png",
+    "caption": "Send review",
+    "features": [
+      "F09.S06",
+      "F09.S09",
+      "F13.S01",
+      "F13.S04"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:50:33.402831+00:00",
+    "sha256": "b7f6972a804b099cc57aa3cab4b7bac1c02dca25ab3d038e5b3372ebd96bb81b",
+    "application": "widgets",
+    "width": 500,
+    "height": 268
+  },
+  {
+    "path": "media/widgets/restored-wallet-success.png",
+    "caption": "Restored wallet success",
+    "features": [
+      "F03.S02",
+      "F03.S03"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:51:50.761999+00:00",
+    "sha256": "d76db4d105c145d79fdd472e8a5c75732f28f3c21770c6b71a266cdb41df15bf",
+    "application": "widgets",
+    "width": 245,
+    "height": 86
+  },
+  {
+    "path": "media/widgets/import-unsigned-psbt.png",
+    "caption": "Import unsigned PSBT",
+    "features": [
+      "F14.S01",
+      "F14.S02",
+      "F14.S04"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:51:51.788459+00:00",
+    "sha256": "bb06601b91af185ed55827f92f89fd7ac7b6cba44788ad04083f54ca4b846d76",
+    "application": "widgets",
+    "width": 585,
+    "height": 327
+  },
+  {
+    "path": "media/widgets/psbt-signed-ready.png",
+    "caption": "PSBT signed ready",
+    "features": [
+      "F14.S02",
+      "F14.S04",
+      "F14.S07"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:51:52.748688+00:00",
+    "sha256": "4e42d7e7fff086c15468bff073c4408faff86b966a4dd03d041dc953b0b3f307",
+    "application": "widgets",
+    "width": 585,
+    "height": 327
+  },
+  {
+    "path": "media/widgets/psbt-broadcast.png",
+    "caption": "PSBT broadcast",
+    "features": [
+      "F14.S07"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:51:53.794965+00:00",
+    "sha256": "2be439c7a8ddfd7357afb5d1daf5d9cf97bad2ed4816aea93db4f5ed5dbc3fac",
+    "application": "widgets",
+    "width": 893,
+    "height": 327
+  },
+  {
+    "path": "media/widgets/transaction-history.png",
+    "caption": "Transaction history",
+    "features": [
+      "F16.S01",
+      "F16.S02",
+      "F16.S03",
+      "F16.S04",
+      "F16.S08"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:51:54.814882+00:00",
+    "sha256": "71bf4f1f0c089506f8b217cb21e893075f24dc24ac69faa85e7f1f801cb64a30",
+    "application": "widgets",
+    "width": 830,
+    "height": 483
+  },
+  {
+    "path": "media/widgets/encrypt-wallet-passphrase.png",
+    "caption": "Encrypt wallet passphrase",
+    "features": [
+      "F06.S01",
+      "F06.S06",
+      "F01.S02"
+    ],
+    "note": "",
+    "utc": "2026-10-08T19:55:35.281401+00:00",
+    "sha256": "c194eb881a7b5bf9fc756edf583d8deb77a573696bf3234df46351ee50e8ca06",
+    "application": "widgets",
+    "width": 598,
+    "height": 222
+  },
+  {
+    "path": "media/widgets/encryption-confirmation.png",
+    "caption": "Encryption confirmation",
+    "features": [
+      "F06.S01",
+      "F30.S02"
+    ],
+    "note": "",
+    "utc": "2026-10-08T20:00:22.521694+00:00",
+    "sha256": "c6d67d2824ca64ecf8ea3e2936bd04f12aff62bdb21f2ebe68de9994abde7ea8",
+    "application": "widgets",
+    "width": 500,
+    "height": 114
+  },
+  {
+    "path": "media/widgets/wallet-encrypted-result.png",
+    "caption": "Wallet encrypted result",
+    "features": [
+      "F06.S01"
+    ],
+    "note": "",
+    "utc": "2026-10-08T20:01:45.509817+00:00",
+    "sha256": "ff6c7ceec7f88852c8c942ec990eba1b9cd1a06e4ec6b7f27c2c88a4855e9abe",
+    "application": "widgets",
+    "width": 500,
+    "height": 184
+  },
+  {
+    "path": "media/widgets/change-wallet-passphrase.png",
+    "caption": "Change wallet passphrase",
+    "features": [
+      "F06.S02",
+      "F06.S06"
+    ],
+    "note": "",
+    "utc": "2026-10-08T20:01:46.561567+00:00",
+    "sha256": "6c8ab3e18498933718472f741481e95b31c3026747fcf3572ceab2fc17564bd3",
+    "application": "widgets",
+    "width": 598,
+    "height": 222
+  },
+  {
+    "path": "media/widgets/encrypted-wallet-status.png",
+    "caption": "Encrypted wallet status",
+    "features": [
+      "F06.S05",
+      "F29.S04"
+    ],
+    "note": "",
+    "utc": "2026-10-08T20:01:48.232892+00:00",
+    "sha256": "1fac734561e770d12838f4b09f3f78409f68462ed4cd08064b255a2fc0a82bb1",
+    "application": "widgets",
+    "width": 830,
+    "height": 483
+  },
+  {
+    "path": "media/widgets/temporary-unlock-prompt.png",
+    "caption": "Temporary unlock prompt",
+    "features": [
+      "F06.S03",
+      "F06.S06"
+    ],
+    "note": "",
+    "utc": "2026-10-08T20:01:49.312009+00:00",
+    "sha256": "1429fcaa921f867699c0db02f4b5df6728aeba7a2425dc795f94b50c95ff6a5f",
+    "application": "widgets",
+    "width": 598,
+    "height": 222
+  },
+  {
+    "path": "media/widgets/encrypted-message-signed.png",
+    "caption": "Encrypted message signed",
+    "features": [
+      "F06.S03",
+      "F06.S04",
+      "F19.S01"
+    ],
+    "note": "",
+    "utc": "2026-10-08T20:01:50.388519+00:00",
+    "sha256": "d8160fd2d934ea85c450b482e414fe04e2ebd006c374d79e6231300f08432ada",
+    "application": "widgets",
+    "width": 700,
+    "height": 380
+  },
+  {
+    "path": "media/widgets/add-saved-recipient.png",
+    "caption": "Add saved recipient",
+    "features": [
+      "F18.S01",
+      "F18.S02"
+    ],
+    "note": "",
+    "utc": "2026-10-08T20:02:40.991829+00:00",
+    "sha256": "54a172e7ca2f131a26342fce06761dbb62406afc4562e421023ce64f5a5dcc10",
+    "application": "widgets",
+    "width": 457,
+    "height": 126
+  },
+  {
+    "path": "media/widgets/saved-sending-addresses.png",
+    "caption": "Saved sending addresses",
+    "features": [
+      "F18.S01",
+      "F18.S02",
+      "F18.S04",
+      "F18.S05",
+      "F18.S06",
+      "F28.S03"
+    ],
+    "note": "",
+    "utc": "2026-10-08T20:02:41.731264+00:00",
+    "sha256": "45d53f354b406348c2ba70a44c928661b48f6cd24edf620bb9dd6d8021bc3bec",
+    "application": "widgets",
+    "width": 760,
+    "height": 380
+  },
+  {
+    "path": "media/widgets/saved-receiving-addresses.png",
+    "caption": "Saved receiving addresses",
+    "features": [
+      "F18.S01",
+      "F18.S03",
+      "F18.S04",
+      "F18.S05"
+    ],
+    "note": "",
+    "utc": "2026-10-08T20:02:43.530315+00:00",
+    "sha256": "3ed4a0d7d552e08c5b2d79e2c8df3321a3f9c04b93f26880a03f78811b02672d",
+    "application": "widgets",
+    "width": 760,
+    "height": 380
+  },
+  {
+    "path": "media/widgets/transaction-history-actions.png",
+    "caption": "Transaction history actions",
+    "features": [
+      "F16.S06",
+      "F16.S07",
+      "F17.S01",
+      "F17.S05"
+    ],
+    "note": "",
+    "utc": "2026-10-08T20:02:56.636650+00:00",
+    "sha256": "b22083d42c881a9d5c7c5a013e42efc7f0a9f7f267062703bc75281ec2cd4667",
+    "application": "widgets",
+    "width": 219,
+    "height": 222
+  },
+  {
+    "path": "media/widgets/transaction-details.png",
+    "caption": "Transaction details",
+    "features": [
+      "F16.S04",
+      "F16.S05",
+      "F16.S06"
+    ],
+    "note": "",
+    "utc": "2026-10-08T20:02:57.707030+00:00",
+    "sha256": "29b2004df23dfc64e07e3c1c2574559ed23ab772ab28c0a6358abec9b6467969",
+    "application": "widgets",
+    "width": 620,
+    "height": 250
+  },
+  {
+    "path": "media/widgets/fee-bump-review.png",
+    "caption": "Fee bump review",
+    "features": [
+      "F17.S01",
+      "F17.S02",
+      "F17.S03",
+      "F17.S04"
+    ],
+    "note": "",
+    "utc": "2026-10-08T20:03:33.788989+00:00",
+    "sha256": "8c788dacf7f7d8a1f821f749416b2b179b71c196f1188da7167b8892d272084a",
+    "application": "widgets",
+    "width": 500,
+    "height": 206
+  },
+  {
+    "path": "media/widgets/fee-bump-result.png",
+    "caption": "Fee bump result",
+    "features": [
+      "F17.S01",
+      "F17.S03"
+    ],
+    "note": "",
+    "utc": "2026-10-08T20:03:35.060645+00:00",
+    "sha256": "46d3a113856c2fafa1a561685827220745e79b27a04f757356a2fd6b09a7a741",
+    "application": "widgets",
+    "width": 830,
+    "height": 483
+  },
+  {
+    "path": "media/widgets/overview-balances.png",
+    "caption": "Overview balances",
+    "features": [
+      "F07.S01",
+      "F07.S02",
+      "F26.S05",
+      "F28.S01",
+      "F28.S04",
+      "F29.S01",
+      "F29.S02"
+    ],
+    "note": "",
+    "utc": "2026-10-08T20:05:08.542838+00:00",
+    "sha256": "7cdfd54c57d0a90908c0b3e4b984cb3e819457cc500b77cbdd70d4b4fb95478e",
+    "application": "widgets",
+    "width": 830,
+    "height": 483
+  },
+  {
+    "path": "media/widgets/restored-wallet-overview.png",
+    "caption": "Restored wallet overview",
+    "features": [
+      "F02.S02",
+      "F02.S03",
+      "F03.S02",
+      "F03.S03",
+      "F28.S02"
+    ],
+    "note": "",
+    "utc": "2026-10-08T20:05:09.905634+00:00",
+    "sha256": "6604b444928171c0b3cf9c4a02fab692625f796ed2894f02a8df84aa0be7900c",
+    "application": "widgets",
+    "width": 830,
+    "height": 483
+  },
+  {
+    "path": "media/widgets/peers.png",
+    "caption": "peers",
+    "features": [
+      "F21.S05",
+      "F21.S06",
+      "F21.S07",
+      "F21.S08"
+    ],
+    "note": "",
+    "utc": "2026-10-08T20:05:12.316230+00:00",
+    "sha256": "66008e5ab3ea2621aa95774f8d32289d7b48e6ee05108aad3aafa8501573de66",
+    "application": "widgets",
+    "width": 748,
+    "height": 430
+  },
+  {
+    "path": "media/widgets/network-paused.png",
+    "caption": "Network paused",
+    "features": [
+      "F21.S01",
+      "F29.S01"
+    ],
+    "note": "",
+    "utc": "2026-10-08T20:05:13.637785+00:00",
+    "sha256": "4e1305d2768f9135bb9237f746fe857eafafe0612b775f6319f81f7a1fbb232e",
+    "application": "widgets",
+    "width": 830,
+    "height": 483
+  },
+  {
+    "path": "media/widgets/node-only-shell.png",
+    "caption": "Node only shell",
+    "features": [
+      "F33.S01",
+      "F33.S03"
+    ],
+    "note": "",
+    "utc": "2026-10-08T20:13:05.533116+00:00",
+    "sha256": "cc7510ab7b36aa07f6bca8793a5776ee3bb35fef1b9227df6eb93cad418d04aa",
+    "application": "widgets",
+    "width": 473,
+    "height": 520
+  },
+  {
+    "path": "media/widgets/node-only-diagnostics.png",
+    "caption": "Node only diagnostics",
+    "features": [
+      "F33.S02",
+      "F22.S01"
+    ],
+    "note": "",
+    "utc": "2026-10-08T20:13:06.302514+00:00",
+    "sha256": "922040052d157809323797e7349a1f703daa9c6e8cd8c4b38ebf9a1232e73eb8",
+    "application": "widgets",
+    "width": 473,
+    "height": 474
+  },
+  {
+    "path": "media/widgets/node-only-preferences.png",
+    "caption": "Node only preferences",
+    "features": [
+      "F33.S03"
+    ],
+    "note": "",
+    "utc": "2026-10-08T20:13:07.272366+00:00",
+    "sha256": "66d647acf53476b08d46be319d2b9e2e8bafd2b423fa67d426971150576600fc",
+    "application": "widgets",
+    "width": 601,
+    "height": 440
+  },
+  {
+    "path": "media/widgets/linux-tray-menu.png",
+    "caption": "Native Linux tray menu",
+    "features": [
+      "F24.S01",
+      "F24.S03",
+      "F24.S04"
+    ],
+    "kind": "desktop-screenshot",
+    "utc": "2026-10-08T20:06:13.081967+00:00",
+    "width": 1440,
+    "height": 1080,
+    "sha256": "3d2a0fd5e77b75a07e62f201fcb66ba3b394ddcf3ec0f8fe7bf862696f3352f1",
+    "application": "widgets"
+  },
+  {
+    "path": "media/widgets/linux-tray-hidden.png",
+    "caption": "Node remains accessible with its window hidden",
+    "features": [
+      "F24.S01",
+      "F24.S02",
+      "F26.S03"
+    ],
+    "kind": "desktop-screenshot",
+    "utc": "2026-10-08T20:11:35.093647+00:00",
+    "width": 1440,
+    "height": 1080,
+    "sha256": "658398a0873e702006d66d385ffb4662d90f56c424446e765969ec0e54383a7d",
+    "application": "widgets"
+  },
+  {
+    "path": "media/widgets/linux-payment-notification.png",
+    "caption": "Incoming payment delivered to the desktop",
+    "features": [
+      "F25.S01",
+      "F25.S02"
+    ],
+    "kind": "desktop-screenshot",
+    "utc": "2026-10-08T20:11:42.232618+00:00",
+    "width": 1440,
+    "height": 1080,
+    "sha256": "dee6cf4ebbbbafb827fc5868e3b59588859606024f4ad024ec58f0de82178d6c",
+    "application": "widgets"
+  },
+  {
+    "path": "media/qml/linux-tray-menu.png",
+    "caption": "Native Linux tray menu",
+    "features": [
+      "F24.S01",
+      "F24.S04"
+    ],
+    "kind": "desktop-screenshot",
+    "utc": "2026-10-08T20:10:00.213036+00:00",
+    "width": 1440,
+    "height": 1080,
+    "sha256": "cfb3f582b957113efcb921b8c317ec3b0a15219a73460296f5b6208b26544bef",
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/linux-tray-hidden.png",
+    "caption": "QML window hidden while the node keeps running",
+    "features": [
+      "F24.S01",
+      "F24.S02",
+      "F26.S03"
+    ],
+    "kind": "desktop-screenshot",
+    "utc": "2026-10-08T20:10:01.559031+00:00",
+    "width": 1440,
+    "height": 1080,
+    "sha256": "74420ff27c85ed99f35f2f5eda6590972edc025cb73d534d45d191b742f4513d",
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_create_wallet_name/015-wait-for-page-walletcreationreadypage.png",
+    "caption": "Wallet created",
+    "utc": "2026-10-08T19:43:12.273634+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "c2c8182290973ddbc4cccac2bbfab96e9f17f055f0d567c128bd8cd8dde30a96",
+    "test": "qml_test_create_wallet_name",
+    "kind": "application-screenshot",
+    "features": [
+      "F01.S01",
+      "F01.S02",
+      "F01.S06"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_watchonly_wallet/006-wait-for-page-walletcreationreadypage.png",
+    "caption": "Watch-only wallet created",
+    "utc": "2026-10-08T19:43:19.588020+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "892a766264698ad79601e53913ca2f0079dddf0e530b3c68f46febdccac5aac3",
+    "test": "qml_test_watchonly_wallet",
+    "kind": "application-screenshot",
+    "features": [
+      "F01.S03",
+      "F08.S09"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_external_signer/014-14-external-signer-wallet-hides-password-settings.png",
+    "caption": "External signer wallet",
+    "utc": "2026-10-08T19:38:09.789738+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "2d43aafecfb0894c23c61e2a72d63325e93f5a4b6bdc6f5e7bb1fc3d4e4116f2",
+    "test": "qml_test_external_signer",
+    "kind": "application-screenshot",
+    "features": [
+      "F01.S05",
+      "F15.S01",
+      "F15.S02"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_additional/032-multiple-loaded-wallets.png",
+    "caption": "Multiple wallets available",
+    "utc": "2026-10-08T20:05:57.668773+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "b476c409a0076a3e32259e8bd1722b5d6c5a5ff237ff8a0d80f1a505f988c5e4",
+    "test": "qml_additional",
+    "kind": "application-screenshot",
+    "features": [
+      "F02.S01",
+      "F02.S02",
+      "F02.S03",
+      "F28.S02"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_wallet_selector_load/013-05-selected-wallet-unloads-only-after-confirmation.png",
+    "caption": "Wallet closed after confirmation",
+    "utc": "2026-10-08T19:45:01.412019+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "7c3cb63d2bcfbf298b946d7c588d407ea5c621bd58124b6afef45e61d68d59f9",
+    "test": "qml_test_wallet_selector_load",
+    "kind": "application-screenshot",
+    "features": [
+      "F02.S04"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_wallet_selector_load/008-03-load-error-alert-popup-displayed.png",
+    "caption": "Wallet-load error",
+    "utc": "2026-10-08T19:44:52.595581+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "0adf979c80bd3a8b02228e0e6322bac9cbf03acaaa1ea582d41d8b732bbae27c",
+    "test": "qml_test_wallet_selector_load",
+    "kind": "application-screenshot",
+    "features": [
+      "F30.S01",
+      "F30.S03",
+      "F30.S04"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_wallet_settings/010-06-wallet-backup-created.png",
+    "caption": "Wallet settings after saving a backup",
+    "utc": "2026-10-08T19:45:16.064222+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "400d211a00fec1e7b71cd058b5a4b15f5efe2cd1e388410e1cfebd2fa1c7a934",
+    "test": "qml_test_wallet_settings",
+    "kind": "application-screenshot",
+    "features": [
+      "F03.S01"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_wallet_restore/009-04-import-success-screen-displayed.png",
+    "caption": "Wallet backup restored",
+    "utc": "2026-10-08T19:50:12.494291+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "d3e09fa71e425593589d90b31978109cf1eb37fffe5ff0ca370d7b760a63bda7",
+    "test": "qml_test_wallet_restore",
+    "kind": "application-screenshot",
+    "features": [
+      "F03.S02",
+      "F03.S03"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_wallet_restore/005-04-legacy-backup-submitted.png",
+    "caption": "Legacy backup import feedback",
+    "utc": "2026-10-08T19:50:06.863244+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "904fd5b4a92e0af5b6aac5b16d94b7d8f5b900c404e8c2d9301c5a0ad9739588",
+    "test": "qml_test_wallet_restore",
+    "kind": "application-screenshot",
+    "features": [
+      "F03.S04"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_wallet_migration/003-06-unencrypted-migration-prompt-displayed.png",
+    "caption": "Legacy wallet migration confirmation",
+    "utc": "2026-10-08T19:50:18.608097+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "75c0dc975daaf50c943b6a8a844b8f4ed4cf930b3d67e026c980b304cc30dca5",
+    "test": "qml_test_wallet_migration",
+    "kind": "application-screenshot",
+    "features": [
+      "F04.S01",
+      "F04.S04"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_wallet_migration/004-07-unencrypted-wallet-migrated-and-loaded.png",
+    "caption": "Encrypted legacy wallet migrated",
+    "utc": "2026-10-08T19:50:20.174867+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "6f642d247bed55840d8365523bb5fd90ff26f0e0c51dd7b42f3d85e751a33371",
+    "test": "qml_test_wallet_migration",
+    "kind": "application-screenshot",
+    "features": [
+      "F04.S01",
+      "F04.S04"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_password_wallet/007-07-review-passphrase-prompt-displayed.png",
+    "caption": "Unlock for transaction review",
+    "utc": "2026-10-08T19:43:45.931364+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "eeb1122fe74d654459878c0dcb0eed1616c3b1e29c3fb5733e1909e89bda1d2f",
+    "test": "qml_test_password_wallet",
+    "kind": "application-screenshot",
+    "features": [
+      "F06.S03",
+      "F06.S06",
+      "F09.S06"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_password_wallet/008-08-review-built-and-wallet-relocked.png",
+    "caption": "Transaction reviewed after temporary unlock",
+    "utc": "2026-10-08T19:43:48.847752+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "6a24451dfaf78e5bce023d54c6f807871918d0f9441bcf9da397cbaff9280fbe",
+    "test": "qml_test_password_wallet",
+    "kind": "application-screenshot",
+    "features": [
+      "F06.S04",
+      "F09.S06",
+      "F09.S07"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_wallet_settings/032-05-wrong-current-password-rejected-and-preserved.png",
+    "caption": "Incorrect passphrase feedback",
+    "utc": "2026-10-08T19:45:50.980117+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "ebd890cd61cfb7a9dde9433f4df088e750a3f1328cbb790333ee7fa6900f0e61",
+    "test": "qml_test_wallet_settings",
+    "kind": "application-screenshot",
+    "features": [
+      "F06.S02",
+      "F06.S07"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/006-06-activity-shows-payment-request-and-mined-rows.png",
+    "caption": "Wallet activity",
+    "utc": "2026-10-08T19:47:57.425605+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "2ae1b3122371556d3d237a66c39aa5d598d66b27b4e5de8d047d6cf542e179bc",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot",
+    "features": [
+      "F07.S01",
+      "F07.S02",
+      "F16.S01",
+      "F16.S04",
+      "F28.S01"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_receive/022-receive-created.png",
+    "caption": "Payment request and QR code",
+    "utc": "2026-10-08T19:46:06.486190+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "e933181c67063d10aec76f4e7b477bd445a8e7141d3a7a9583606b7a09d0b75a",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot",
+    "features": [
+      "F08.S01",
+      "F08.S02",
+      "F08.S03",
+      "F08.S04",
+      "F08.S05"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_receive/024-receive-menu.png",
+    "caption": "Payment-request sharing actions",
+    "utc": "2026-10-08T19:46:07.485361+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "fcc2ad591f72da8c026c94a8f67983c61a9addb5c12a4e0e234487e2a7e7e2d8",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot",
+    "features": [
+      "F08.S04",
+      "F08.S05",
+      "F08.S07"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_send_receive/012-14-review-page-with-fixed-amount.png",
+    "caption": "Payment review",
+    "utc": "2026-10-08T19:47:06.836761+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "c81f6a4c5504ae02ae11caa9285af73cdacc215f07a1ab4b98fc2338eddc4221",
+    "test": "qml_test_send_receive",
+    "kind": "application-screenshot",
+    "features": [
+      "F09.S01",
+      "F09.S06",
+      "F09.S07",
+      "F09.S09",
+      "F11.S01",
+      "F11.S02",
+      "F11.S03",
+      "F13.S04"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_send_receive/007-09-maximum-preserves-the-fixed-amount-of-another-recipient.png",
+    "caption": "Maximum amount with another recipient",
+    "utc": "2026-10-08T19:47:01.920650+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "a641f22aad65ef00bae6101272456c81020fe74ffa399c50f435f2dc7f586b03",
+    "test": "qml_test_send_receive",
+    "kind": "application-screenshot",
+    "features": [
+      "F09.S01",
+      "F09.S04"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_send_receive/008-10-automatic-maximum-excludes-locked-coins-and-shows-both-warnings.png",
+    "caption": "Maximum spending excludes locked coins",
+    "utc": "2026-10-08T19:47:03.975650+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "77749d8e6507cc1cd6d7be3b7549ef64168e690ea49ff500ef40d6e919cede9c",
+    "test": "qml_test_send_receive",
+    "kind": "application-screenshot",
+    "features": [
+      "F09.S04",
+      "F12.S05",
+      "F12.S07"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_uri_import/006-click-senduriimportapplybutton.png",
+    "caption": "Imported payment request",
+    "utc": "2026-10-08T19:48:43.862168+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "354e71f1d7839ea50bf0501897e5f8705b8aada3a95721b970cdd015515bd8b2",
+    "test": "qml_test_uri_import",
+    "kind": "application-screenshot",
+    "features": [
+      "F10.S01",
+      "F10.S02"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_additional/006-send-multiple-custom-fee.png",
+    "caption": "Multiple recipients and custom fee",
+    "utc": "2026-10-08T20:05:44.063893+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "1cbc2398936e2e14a4c36be41d84cf6432b6d8bca7633a33ce9139468e9a73e6",
+    "test": "qml_additional",
+    "kind": "application-screenshot",
+    "features": [
+      "F09.S01",
+      "F11.S02"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_additional/009-coin-selection-selected.png",
+    "caption": "Selected transaction input",
+    "utc": "2026-10-08T20:05:45.549626+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "a68f284a142f685b25e34430ff339e09137f16119f55d2a78124834b00baabb8",
+    "test": "qml_additional",
+    "kind": "application-screenshot",
+    "features": [
+      "F12.S01",
+      "F12.S02",
+      "F12.S03",
+      "F12.S04",
+      "F12.S07"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_additional/019-wallet-coin-locked.png",
+    "caption": "Locked coin in the wallet",
+    "utc": "2026-10-08T20:05:50.654815+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "fe310644c0d71567b9bc609cd50f141c9643c145865da8c699a7113fb2af0ee1",
+    "test": "qml_additional",
+    "kind": "application-screenshot",
+    "features": [
+      "F12.S05"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_psbt/009-11-multiple-recipient-review-displayed.png",
+    "caption": "Imported PSBT recipients",
+    "utc": "2026-10-08T19:47:36.465212+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "6025fedbfd58109688628240b4a6dd92d59f1a3d5ce980d28f3d1c07f79e0b79",
+    "test": "qml_test_psbt",
+    "kind": "application-screenshot",
+    "features": [
+      "F14.S01",
+      "F14.S02",
+      "F14.S03"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_psbt/012-14-review-only-transaction-modal-displayed.png",
+    "caption": "PSBT that requires another signer",
+    "utc": "2026-10-08T19:47:37.953805+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "4d09539926774101fb6229e3638a90013b6ce19813d3eb95cb36a462f5c16957",
+    "test": "qml_test_psbt",
+    "kind": "application-screenshot",
+    "features": [
+      "F13.S01",
+      "F14.S02",
+      "F14.S03",
+      "F14.S06"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_psbt/015-17-signed-foreign-psbt-ready-to-broadcast.png",
+    "caption": "Signed PSBT ready to broadcast",
+    "utc": "2026-10-08T19:47:39.784698+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "c13e5e6a3dcd76e6a19ccd612a6f2fff3066f90301287310cdf778095365e318",
+    "test": "qml_test_psbt",
+    "kind": "application-screenshot",
+    "features": [
+      "F14.S07"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_psbt/016-18-signed-foreign-psbt-broadcast-confirmed.png",
+    "caption": "Send form after PSBT broadcast (RPC checked)",
+    "utc": "2026-10-08T19:47:40.613579+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "783181410fdda6b9fd02971441da019938fbe27a50e9aab28b7d4c6796eb2024",
+    "test": "qml_test_psbt",
+    "kind": "application-screenshot",
+    "features": [
+      "F14.S07"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_external_signer/020-20-no-signer-review-displayed.png",
+    "caption": "External-signer payment review",
+    "utc": "2026-10-08T19:38:23.441075+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "a75b35805e691e98b80095f970933003d332d84b2d9b627079175f783bb7cf8c",
+    "test": "qml_test_external_signer",
+    "kind": "application-screenshot",
+    "features": [
+      "F15.S01",
+      "F15.S02",
+      "F15.S04"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_external_signer/025-25-signed-transaction-broadcast.png",
+    "caption": "External-signer broadcast result",
+    "utc": "2026-10-08T19:38:28.000959+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "ab1305a4aa1beec018d8bce2886e413d4ea84cc6f1dc66a0c7ec29969e9a5f1c",
+    "test": "qml_test_external_signer",
+    "kind": "application-screenshot",
+    "features": [
+      "F15.S04"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/010-10-today-and-mined-filters-applied.png",
+    "caption": "Filtered transaction history",
+    "utc": "2026-10-08T19:47:59.712113+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "206bfec519c1a191d6961882f27a639ab5a8204ca489a364727c204ddec09762",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot",
+    "features": [
+      "F16.S01",
+      "F16.S02",
+      "F16.S03"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/017-17-filtered-activity-exported-to-csv.png",
+    "caption": "Activity after CSV export",
+    "utc": "2026-10-08T19:48:03.914417+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "8630eba3a1b74acc3b73e332047d286d5b12dd64df4056452296ffe78bff86ee",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot",
+    "features": [
+      "F16.S08"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/030-30-activity-details-amount-uses-selected-display-unit.png",
+    "caption": "Transaction details",
+    "utc": "2026-10-08T19:48:12.418355+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "c211129cb7436ac5923aba37721862ee3f468829ee1bd0ae2d87a6076b5a683e",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot",
+    "features": [
+      "F16.S04",
+      "F16.S05",
+      "F29.S05"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_wallet_rbf/006-click-updatetransactionbutton.png",
+    "caption": "Authorize a fee increase",
+    "utc": "2026-10-08T19:47:48.979766+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "c2c1a92defb291aced801952357a6c3e0394001fea9f602a5ebe25b0ae52a08a",
+    "test": "qml_test_wallet_rbf",
+    "kind": "application-screenshot",
+    "features": [
+      "F17.S01",
+      "F17.S02",
+      "F17.S03"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_addresses/012-click-walletaddressesrow.png",
+    "caption": "Receiving-address records",
+    "utc": "2026-10-08T19:48:22.505123+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "c2a813110748ae9f40d93446510e1f8a02b533e36daba862687edccbfea9f3fc",
+    "test": "qml_test_addresses",
+    "kind": "application-screenshot",
+    "features": [
+      "F18.S01",
+      "F18.S03",
+      "F18.S05"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_additional/027-message-signed-full-view.png",
+    "caption": "Signed message",
+    "utc": "2026-10-08T20:05:54.804056+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "b774ea70b8d3044977fe341e71fd1b5dc1ee1e00604c445552896e950b6963e3",
+    "test": "qml_additional",
+    "kind": "application-screenshot",
+    "features": [
+      "F19.S01",
+      "F19.S03"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_additional/030-message-verified-full-view.png",
+    "caption": "Verified message",
+    "utc": "2026-10-08T20:05:56.306794+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "98d8a5059e7eb63012f9402842b918d8466c04dee31ced9f0a222c6ceb671bbc",
+    "test": "qml_additional",
+    "kind": "application-screenshot",
+    "features": [
+      "F19.S02"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_preinit_onboarding/013-wait-for-page-onboardingstoragelocation.png",
+    "caption": "Choose data storage",
+    "utc": "2026-10-08T19:48:56.087263+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "69e4a5ddcf264a7aad13c769b8d7b1b29b2c4cf4127b9b3f9395d2851561ebe7",
+    "test": "qml_test_preinit_onboarding",
+    "kind": "application-screenshot",
+    "features": [
+      "F20.S01"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_preinit_onboarding/015-wait-for-page-onboardingstorageamount.png",
+    "caption": "Choose blockchain storage amount",
+    "utc": "2026-10-08T19:48:57.034630+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "fc4f64c1250472e560b0bcd2440b03ed48d68b1d6b0f5a297133b1acabe4ef3d",
+    "test": "qml_test_preinit_onboarding",
+    "kind": "application-screenshot",
+    "features": [
+      "F20.S02",
+      "F20.S03"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_preinit_onboarding/017-wait-for-page-onboardingconnection.png",
+    "caption": "Initial-download confirmation and network settings",
+    "utc": "2026-10-08T19:48:57.980570+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "0095b0e4a877daf05adce59d30e14b1e5c7f5bb2fad0a6d1c1ea26843b716749",
+    "test": "qml_test_preinit_onboarding",
+    "kind": "application-screenshot",
+    "features": [
+      "F20.S01",
+      "F21.S02"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_peers/004-wait-for-page-peerdetails.png",
+    "caption": "Connected peer details",
+    "utc": "2026-10-08T19:38:48.026726+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "6d61eafe7ae06092c5f08ff2c9d3d60bc5a44b772b857b436dc9cd014bec763d",
+    "test": "qml_test_peers",
+    "kind": "application-screenshot",
+    "features": [
+      "F21.S05",
+      "F21.S06",
+      "F21.S07"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_peers/032-click-viewbannedpeersbutton.png",
+    "caption": "Banned peers",
+    "utc": "2026-10-08T19:39:04.103953+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "91cfd77fe25b626606aed25a6b0ac9e439050daccfdea23ee5940714387b16f2",
+    "test": "qml_test_peers",
+    "kind": "application-screenshot",
+    "features": [
+      "F21.S08"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_proxy/005-wait-for-page-proxysettingspage.png",
+    "caption": "Proxy settings",
+    "utc": "2026-10-08T19:39:22.177887+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "30df724db24dff22f549bed335de36ba1d281d7c0cbd91c3730c28379f6f4a70",
+    "test": "qml_test_proxy",
+    "kind": "application-screenshot",
+    "features": [
+      "F21.S03",
+      "F29.S03"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_console/004-wait-for-page-rpcconsolesettingspage.png",
+    "caption": "RPC console",
+    "utc": "2026-10-08T19:38:31.157043+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "b7db8828d617df45711eff64fb6e9accf19926bbbebf1fb0c829f263956a454c",
+    "test": "qml_test_console",
+    "kind": "application-screenshot",
+    "features": [
+      "F22.S05",
+      "F22.S06",
+      "F22.S07",
+      "F22.S08",
+      "F22.S09"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_debug_log/005-wait-for-page-debuglogview.png",
+    "caption": "Debug log viewer",
+    "utc": "2026-10-08T19:38:39.706981+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "8e3294ce83d39dec471ecf4fbcbe3c5fc007b73d3bbc15675c3230e5cb1b39ae",
+    "test": "qml_test_debug_log",
+    "kind": "application-screenshot",
+    "features": [
+      "F22.S04"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_disablewallet_boot/017-17-network-traffic-settings-opened.png",
+    "caption": "Network traffic",
+    "utc": "2026-10-08T19:40:11.419744+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "8414a887ee8b5feb996638967b7e807c3f5a24d7df2a658b43041354eb182d42",
+    "test": "qml_test_disablewallet_boot",
+    "kind": "application-screenshot",
+    "features": [
+      "F22.S02",
+      "F22.S03",
+      "F33.S02"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_disablewallet_boot/005-05-node-settings-opened-without-wallet-ui.png",
+    "caption": "Node settings without a wallet",
+    "utc": "2026-10-08T19:40:05.650845+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "43256538686ac27e28e336cf0cb99f9267d17249f9bee433088d32fbfa799484",
+    "test": "qml_test_disablewallet_boot",
+    "kind": "application-screenshot",
+    "features": [
+      "F22.S01",
+      "F33.S02",
+      "F33.S03"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/004-wait-for-page-displaysettingspage.png",
+    "caption": "Display preferences",
+    "utc": "2026-10-08T19:39:32.537159+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "5a211d502b49a60bb9a36640019c6c647a391017006ecc1e233b2f1a6f0b3975",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot",
+    "features": [
+      "F23.S06",
+      "F23.S07",
+      "F23.S08",
+      "F31.S03"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_tray/005-wait-for-page-windowbehaviorsettingspage.png",
+    "caption": "Window and tray preferences",
+    "utc": "2026-10-08T19:39:53.471345+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "cc2cb77689688e7694f4a2acb39828488b7b2f126e23d63ff2944812ed2d2903",
+    "test": "qml_test_tray",
+    "kind": "application-screenshot",
+    "features": [
+      "F23.S09",
+      "F24.S05",
+      "F26.S03"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_shutdown/001-wait-for-page-shutdownpage.png",
+    "caption": "Application shutdown workflow",
+    "utc": "2026-10-08T19:40:28.837003+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "5c143b112c0ffd1780a255ef1340d638169e600b37a68ea19639879a52b621e0",
+    "test": "qml_test_shutdown",
+    "kind": "application-screenshot",
+    "features": [
+      "F27.S05",
+      "F27.S06"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_node_runtime_dialogs/003-reindex-question-ok-abort.png",
+    "caption": "Runtime confirmation dialog",
+    "utc": "2026-10-08T19:40:00.863765+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "e71ddbf4b2fc65ba30520609222e71d1a08bc02bd4391664feca4f74f65d323b",
+    "test": "qml_test_node_runtime_dialogs",
+    "kind": "application-screenshot",
+    "features": [
+      "F30.S01",
+      "F30.S02",
+      "F30.S03",
+      "F30.S04"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_disablewallet_boot/006-06-about-settings-opened.png",
+    "caption": "Application information",
+    "utc": "2026-10-08T19:40:06.139958+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "b269cdf3e13889b3ffceca5c8adf05b6334e3609f3f3f90981ae2122ed97d4f0",
+    "test": "qml_test_disablewallet_boot",
+    "kind": "application-screenshot",
+    "features": [
+      "F31.S06"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_disablewallet_boot/002-02-node-only-main-screen-reached.png",
+    "caption": "Node running with wallet features disabled",
+    "utc": "2026-10-08T19:40:04.064060+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "ce163835d48fe3fecc0a5e06cb50557b8e8f717a1e3dbb2386a0776aef88f208",
+    "test": "qml_test_disablewallet_boot",
+    "kind": "application-screenshot",
+    "features": [
+      "F20.S06",
+      "F26.S05",
+      "F33.S01"
+    ],
+    "application": "qml"
+  },
+  {
+    "path": "media/qml/qml_test_blockclock/002-click-blockclocktogglearea.png",
+    "caption": "Paused network status",
+    "utc": "2026-10-08T19:40:23.622352+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "b36eb8a1e125387fe6fe4d8f02dd02ac9658ab2a3640783f44feb28bd1f4ca25",
+    "test": "qml_test_blockclock",
+    "kind": "application-screenshot",
+    "features": [
+      "F29.S01"
+    ],
+    "application": "qml"
+  }
+]

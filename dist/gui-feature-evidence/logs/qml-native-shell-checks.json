@@ -1,0 +1,30 @@
+[
+  {
+    "id": "native-tray-hide",
+    "features": [
+      "F24.S01",
+      "F24.S02",
+      "F26.S03"
+    ],
+    "description": "Linux tray hides the QML window while RPC still responds.",
+    "status": "passed"
+  },
+  {
+    "id": "native-tray-show",
+    "features": [
+      "F24.S01",
+      "F24.S02"
+    ],
+    "description": "Linux tray restores the QML window.",
+    "status": "passed"
+  },
+  {
+    "id": "native-tray-quit",
+    "features": [
+      "F24.S04",
+      "F27.S05"
+    ],
+    "description": "The native Linux tray Quit action exits the application successfully.",
+    "status": "passed"
+  }
+]

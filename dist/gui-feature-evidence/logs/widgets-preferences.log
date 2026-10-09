@@ -1,0 +1,1 @@
+{"id": "enable-coin-control", "features": ["F23.S05"], "description": "Enabling advanced controls exposes input selection.", "actual": true, "expected": true, "status": "passed"}

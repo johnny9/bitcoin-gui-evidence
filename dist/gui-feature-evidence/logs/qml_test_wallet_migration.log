@@ -1,0 +1,25 @@
+Checkpoint screenshots will be saved under: /work/qml-source/test/artifacts/qml_test_wallet_migration-20261008-195013
+[qml_test_wallet_migration] checkpoint 01: legacy bitcoind located: /work/releases/bitcoin-28.0/bin/bitcoind
+[qml_test_wallet_migration] checkpoint 02: unencrypted legacy wallet fixture copied to GUI datadir: /work/tmp/qml_wallet_migration_wttsrd0w/gui_node/regtest/wallets/legacy_flow
+[qml_test_wallet_migration] checkpoint 03: encrypted legacy wallet fixture copied to GUI datadir: /work/tmp/qml_wallet_migration_wttsrd0w/gui_node/regtest/wallets/legacy_encrypted_flow
+[qml_test_wallet_migration] checkpoint 04: GUI launched
+[qml_test_wallet_migration] checkpoint 04: screenshot saved to /evidence/media/qml/qml_test_wallet_migration/001-04-gui-launched.png (800x665)
+[qml_test_wallet_migration] legacy wallet dir entry: {'name': 'legacy_flow', 'warnings': ['This wallet is a legacy wallet and will need to be migrated with migratewallet before it can be loaded']}
+[qml_test_wallet_migration] legacy wallet dir entry: {'name': 'legacy_encrypted_flow', 'warnings': ['This wallet is a legacy wallet and will need to be migrated with migratewallet before it can be loaded']}
+[qml_test_wallet_migration] checkpoint 05: legacy wallet warnings verified
+[qml_test_wallet_migration] checkpoint 05: screenshot saved to /evidence/media/qml/qml_test_wallet_migration/002-05-legacy-wallet-warnings-verified.png (800x665)
+[qml_test_wallet_migration] checkpoint 06: unencrypted migration prompt displayed
+[qml_test_wallet_migration] checkpoint 06: screenshot saved to /evidence/media/qml/qml_test_wallet_migration/003-06-unencrypted-migration-prompt-displayed.png (800x665)
+[qml_test_wallet_migration] migrated wallet info: {'walletname': 'legacy_flow', 'walletversion': 169900, 'format': 'sqlite', 'txcount': 0, 'keypoolsize': 4000, 'keypoolsize_hd_internal': 4000, 'private_keys_enabled': True, 'avoid_reuse': False, 'scanning': False, 'descriptors': True, 'external_signer': False, 'blank': False, 'birthtime': 0, 'flags': ['last_hardened_xpub_cached', 'descriptor_wallet'], 'lastprocessedblock': {'hash': '0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206', 'height': 0}}
+[qml_test_wallet_migration] checkpoint 07: unencrypted wallet migrated and loaded
+[qml_test_wallet_migration] checkpoint 07: screenshot saved to /evidence/media/qml/qml_test_wallet_migration/004-07-unencrypted-wallet-migrated-and-loaded.png (800x665)
+[qml_test_wallet_migration] checkpoint 08: encrypted migration prompt displayed
+[qml_test_wallet_migration] checkpoint 08: screenshot saved to /evidence/media/qml/qml_test_wallet_migration/005-08-encrypted-migration-prompt-displayed.png (800x665)
+[qml_test_wallet_migration] checkpoint 09: encrypted migration passphrase prompt displayed
+[qml_test_wallet_migration] checkpoint 09: screenshot saved to /evidence/media/qml/qml_test_wallet_migration/006-09-encrypted-migration-passphrase-prompt-displayed.png (800x665)
+[qml_test_wallet_migration] checkpoint 10: wrong encrypted migration password rejected
+[qml_test_wallet_migration] checkpoint 10: screenshot saved to /evidence/media/qml/qml_test_wallet_migration/007-10-wrong-encrypted-migration-password-rejected.png (800x665)
+[qml_test_wallet_migration] migrated wallet info: {'walletname': 'legacy_encrypted_flow', 'walletversion': 169900, 'format': 'sqlite', 'txcount': 0, 'keypoolsize': 4000, 'keypoolsize_hd_internal': 4000, 'unlocked_until': 0, 'private_keys_enabled': True, 'avoid_reuse': False, 'scanning': False, 'descriptors': True, 'external_signer': False, 'blank': False, 'birthtime': 0, 'flags': ['key_origin_metadata', 'last_hardened_xpub_cached', 'descriptor_wallet'], 'lastprocessedblock': {'hash': '0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206', 'height': 0}}
+[qml_test_wallet_migration] checkpoint 11: encrypted wallet migrated and loaded
+[qml_test_wallet_migration] checkpoint 11: screenshot saved to /evidence/media/qml/qml_test_wallet_migration/008-11-encrypted-wallet-migrated-and-loaded.png (800x665)
+Migration flows passed.

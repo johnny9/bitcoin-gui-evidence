@@ -1,0 +1,39 @@
+Checkpoint screenshots will be saved under: /work/qml-source/test/artifacts/qml_test_psbt-20261008-194724
+[psbt-import-routing] checkpoint 01: starting harness
+[psbt-import-routing] checkpoint 02: GUI launched
+[psbt-import-routing] checkpoint 02: screenshot saved to /evidence/media/qml/qml_test_psbt/001-02-gui-launched.png (800x665)
+[psbt-import-routing] checkpoint 03: GUI RPC ready
+[psbt-import-routing] checkpoint 03: screenshot saved to /evidence/media/qml/qml_test_psbt/002-03-gui-rpc-ready.png (800x665)
+[psbt-import-routing] checkpoint 04: PSBT fixtures created
+[psbt-import-routing] checkpoint 05: wallet selected: psbt-source
+[psbt-import-routing] checkpoint 05: screenshot saved to /evidence/media/qml/qml_test_psbt/003-05-wallet-selected-psbt-source.png (800x665)
+[psbt-import-routing] checkpoint 06: send page opened
+[psbt-import-routing] checkpoint 06: screenshot saved to /evidence/media/qml/qml_test_psbt/004-06-send-page-opened.png (800x665)
+[psbt-import-routing] checkpoint 07: single-recipient PSBT submitted
+[psbt-import-routing] checkpoint 07: screenshot saved to /evidence/media/qml/qml_test_psbt/005-07-single-recipient-psbt-submitted.png (800x665)
+[psbt-import-routing] checkpoint 08: single-recipient review displayed
+[psbt-import-routing] checkpoint 08: screenshot saved to /evidence/media/qml/qml_test_psbt/006-08-single-recipient-review-displayed.png (800x665)
+[psbt-import-routing] checkpoint 09: returned from single review to send page
+[psbt-import-routing] checkpoint 09: screenshot saved to /evidence/media/qml/qml_test_psbt/007-09-returned-from-single-review-to-send-page.png (800x665)
+[psbt-import-routing] checkpoint 10: multi-recipient PSBT submitted
+[psbt-import-routing] checkpoint 10: screenshot saved to /evidence/media/qml/qml_test_psbt/008-10-multi-recipient-psbt-submitted.png (800x665)
+[psbt-import-routing] checkpoint 11: multiple-recipient review displayed
+[psbt-import-routing] checkpoint 11: screenshot saved to /evidence/media/qml/qml_test_psbt/009-11-multiple-recipient-review-displayed.png (800x665)
+[psbt-import-routing] checkpoint 12: returned from multiple review to send page
+[psbt-import-routing] checkpoint 12: screenshot saved to /evidence/media/qml/qml_test_psbt/010-12-returned-from-multiple-review-to-send-page.png (800x665)
+[psbt-import-routing] checkpoint 13: review-only PSBT submitted
+[psbt-import-routing] checkpoint 13: screenshot saved to /evidence/media/qml/qml_test_psbt/011-13-review-only-psbt-submitted.png (800x665)
+[psbt-import-routing] checkpoint 14: review-only transaction modal displayed
+[psbt-import-routing] checkpoint 14: screenshot saved to /evidence/media/qml/qml_test_psbt/012-14-review-only-transaction-modal-displayed.png (800x665)
+[psbt-import-routing] checkpoint 15: review-only transaction modal dismissed
+[psbt-import-routing] checkpoint 15: screenshot saved to /evidence/media/qml/qml_test_psbt/013-15-review-only-transaction-modal-dismissed.png (800x665)
+[psbt-import-routing] checkpoint 16: signed foreign PSBT submitted
+[psbt-import-routing] checkpoint 16: screenshot saved to /evidence/media/qml/qml_test_psbt/014-16-signed-foreign-psbt-submitted.png (800x665)
+[psbt-import-routing] checkpoint 17: signed foreign PSBT ready to broadcast
+[psbt-import-routing] checkpoint 17: screenshot saved to /evidence/media/qml/qml_test_psbt/015-17-signed-foreign-psbt-ready-to-broadcast.png (800x665)
+[psbt-import-routing] checkpoint 18: signed foreign PSBT broadcast confirmed
+[psbt-import-routing] checkpoint 18: screenshot saved to /evidence/media/qml/qml_test_psbt/016-18-signed-foreign-psbt-broadcast-confirmed.png (800x665)
+
+==================================================
+All tests PASSED
+==================================================

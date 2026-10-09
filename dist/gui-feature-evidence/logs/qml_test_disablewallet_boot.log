@@ -1,0 +1,88 @@
+
+-- cli -disablewallet -----------------------------------------
+Starting GUI: /validation/build/bin/bitcoin-core-app -datadir=/work/tmp/qml_test_bridge_ynncm9kg/node0 -test-automation=/work/tmp/qml_test_bridge_ynncm9kg/test_bridge.sock -test-settings-dir=/work/tmp/qml_test_bridge_ynncm9kg/config -qml_onboarded=1 -logtimemicros -debug -debugexclude=leveldb -disablewallet -nolisten
+QmlDriver connected to test bridge.
+[qml_test_disablewallet_boot] checkpoint 01: GUI launched
+[qml_test_disablewallet_boot] checkpoint 01: screenshot saved to /evidence/media/qml/qml_test_disablewallet_boot/001-01-gui-launched.png (800x665)
+Reached node-only main screen
+[qml_test_disablewallet_boot] checkpoint 02: node-only main screen reached
+[qml_test_disablewallet_boot] checkpoint 02: screenshot saved to /evidence/media/qml/qml_test_disablewallet_boot/002-02-node-only-main-screen-reached.png (800x665)
+  Opening Peers (header icon)
+[qml_test_disablewallet_boot] checkpoint 03: peers opened
+[qml_test_disablewallet_boot] checkpoint 03: screenshot saved to /evidence/media/qml/qml_test_disablewallet_boot/003-03-peers-opened.png (800x665)
+[qml_test_disablewallet_boot] checkpoint 04: returned from peers
+[qml_test_disablewallet_boot] checkpoint 04: screenshot saved to /evidence/media/qml/qml_test_disablewallet_boot/004-04-returned-from-peers.png (800x665)
+[qml_test_disablewallet_boot] checkpoint 05: node settings opened without wallet UI
+[qml_test_disablewallet_boot] checkpoint 05: screenshot saved to /evidence/media/qml/qml_test_disablewallet_boot/005-05-node-settings-opened-without-wallet-ui.png (800x665)
+  Opening About settings (sidebar)
+[qml_test_disablewallet_boot] checkpoint 06: about settings opened
+[qml_test_disablewallet_boot] checkpoint 06: screenshot saved to /evidence/media/qml/qml_test_disablewallet_boot/006-06-about-settings-opened.png (800x665)
+[qml_test_disablewallet_boot] checkpoint 07: developer settings opened
+[qml_test_disablewallet_boot] checkpoint 07: screenshot saved to /evidence/media/qml/qml_test_disablewallet_boot/007-07-developer-settings-opened.png (800x665)
+[qml_test_disablewallet_boot] checkpoint 08: returned from developer settings
+[qml_test_disablewallet_boot] checkpoint 08: screenshot saved to /evidence/media/qml/qml_test_disablewallet_boot/008-08-returned-from-developer-settings.png (800x665)
+  Opening Display settings (sidebar)
+[qml_test_disablewallet_boot] checkpoint 09: display settings opened
+[qml_test_disablewallet_boot] checkpoint 09: screenshot saved to /evidence/media/qml/qml_test_disablewallet_boot/009-09-display-settings-opened.png (800x665)
+[qml_test_disablewallet_boot] checkpoint 10: display unit picker opened
+[qml_test_disablewallet_boot] checkpoint 10: screenshot saved to /evidence/media/qml/qml_test_disablewallet_boot/010-10-display-unit-picker-opened.png (800x665)
+[qml_test_disablewallet_boot] checkpoint 11: language settings opened
+[qml_test_disablewallet_boot] checkpoint 11: screenshot saved to /evidence/media/qml/qml_test_disablewallet_boot/011-11-language-settings-opened.png (800x665)
+[qml_test_disablewallet_boot] checkpoint 12: returned from display sub-pages
+[qml_test_disablewallet_boot] checkpoint 12: screenshot saved to /evidence/media/qml/qml_test_disablewallet_boot/012-12-returned-from-display-sub-pages.png (800x665)
+  Opening Storage settings (sidebar)
+[qml_test_disablewallet_boot] checkpoint 13: storage settings opened
+[qml_test_disablewallet_boot] checkpoint 13: screenshot saved to /evidence/media/qml/qml_test_disablewallet_boot/013-13-storage-settings-opened.png (800x665)
+  Opening Connection settings (sidebar)
+[qml_test_disablewallet_boot] checkpoint 14: connection settings opened
+[qml_test_disablewallet_boot] checkpoint 14: screenshot saved to /evidence/media/qml/qml_test_disablewallet_boot/014-14-connection-settings-opened.png (800x665)
+[qml_test_disablewallet_boot] checkpoint 15: proxy settings opened
+[qml_test_disablewallet_boot] checkpoint 15: screenshot saved to /evidence/media/qml/qml_test_disablewallet_boot/015-15-proxy-settings-opened.png (800x665)
+[qml_test_disablewallet_boot] checkpoint 16: returned from proxy settings
+[qml_test_disablewallet_boot] checkpoint 16: screenshot saved to /evidence/media/qml/qml_test_disablewallet_boot/016-16-returned-from-proxy-settings.png (800x665)
+  Opening Network Traffic settings (sidebar)
+[qml_test_disablewallet_boot] checkpoint 17: network traffic settings opened
+[qml_test_disablewallet_boot] checkpoint 17: screenshot saved to /evidence/media/qml/qml_test_disablewallet_boot/017-17-network-traffic-settings-opened.png (800x665)
+  Opening Debug Log settings (sidebar)
+[qml_test_disablewallet_boot] checkpoint 18: debug log settings opened
+[qml_test_disablewallet_boot] checkpoint 18: screenshot saved to /evidence/media/qml/qml_test_disablewallet_boot/018-18-debug-log-settings-opened.png (800x665)
+[qml_test_disablewallet_boot] checkpoint 19: node settings closed
+[qml_test_disablewallet_boot] checkpoint 19: screenshot saved to /evidence/media/qml/qml_test_disablewallet_boot/019-19-node-settings-closed.png (800x665)
+
+-- bitcoin.conf disablewallet=1 -------------------------------
+Starting GUI: /validation/build/bin/bitcoin-core-app -datadir=/work/tmp/qml_test_bridge_8rkt6yon/node0 -test-automation=/work/tmp/qml_test_bridge_8rkt6yon/test_bridge.sock -test-settings-dir=/work/tmp/qml_test_bridge_8rkt6yon/config -qml_onboarded=1 -logtimemicros -debug -debugexclude=leveldb -nolisten
+QmlDriver connected to test bridge.
+[qml_test_disablewallet_boot] checkpoint 20: GUI launched
+[qml_test_disablewallet_boot] checkpoint 20: screenshot saved to /evidence/media/qml/qml_test_disablewallet_boot/020-20-gui-launched.png (800x665)
+Reached node-only main screen
+[qml_test_disablewallet_boot] checkpoint 21: node-only main screen reached
+[qml_test_disablewallet_boot] checkpoint 21: screenshot saved to /evidence/media/qml/qml_test_disablewallet_boot/021-21-node-only-main-screen-reached.png (800x665)
+[qml_test_disablewallet_boot] checkpoint 22: node settings opened without wallet UI
+[qml_test_disablewallet_boot] checkpoint 22: screenshot saved to /evidence/media/qml/qml_test_disablewallet_boot/022-22-node-settings-opened-without-wallet-ui.png (800x665)
+[qml_test_disablewallet_boot] checkpoint 23: node settings closed
+[qml_test_disablewallet_boot] checkpoint 23: screenshot saved to /evidence/media/qml/qml_test_disablewallet_boot/023-23-node-settings-closed.png (800x665)
+
+-- settings.json disablewallet=true ---------------------------
+Starting GUI: /validation/build/bin/bitcoin-core-app -datadir=/work/tmp/qml_test_bridge_3g8thlay/node0 -test-automation=/work/tmp/qml_test_bridge_3g8thlay/test_bridge.sock -test-settings-dir=/work/tmp/qml_test_bridge_3g8thlay/config -qml_onboarded=1 -logtimemicros -debug -debugexclude=leveldb -nolisten
+QmlDriver connected to test bridge.
+[qml_test_disablewallet_boot] checkpoint 24: GUI launched
+[qml_test_disablewallet_boot] checkpoint 24: screenshot saved to /evidence/media/qml/qml_test_disablewallet_boot/024-24-gui-launched.png (800x665)
+Reached node-only main screen
+[qml_test_disablewallet_boot] checkpoint 25: node-only main screen reached
+[qml_test_disablewallet_boot] checkpoint 25: screenshot saved to /evidence/media/qml/qml_test_disablewallet_boot/025-25-node-only-main-screen-reached.png (800x665)
+[qml_test_disablewallet_boot] checkpoint 26: node settings opened without wallet UI
+[qml_test_disablewallet_boot] checkpoint 26: screenshot saved to /evidence/media/qml/qml_test_disablewallet_boot/026-26-node-settings-opened-without-wallet-ui.png (800x665)
+[qml_test_disablewallet_boot] checkpoint 27: node settings closed
+[qml_test_disablewallet_boot] checkpoint 27: screenshot saved to /evidence/media/qml/qml_test_disablewallet_boot/027-27-node-settings-closed.png (800x665)
+
+-- cli -disablewallet=0 overrides bitcoin.conf ----------------
+Starting GUI: /validation/build/bin/bitcoin-core-app -datadir=/work/tmp/qml_test_bridge_ei606rhe/node0 -test-automation=/work/tmp/qml_test_bridge_ei606rhe/test_bridge.sock -test-settings-dir=/work/tmp/qml_test_bridge_ei606rhe/config -qml_onboarded=1 -logtimemicros -debug -debugexclude=leveldb -disablewallet=0 -nolisten
+QmlDriver connected to test bridge.
+[qml_test_disablewallet_boot] checkpoint 28: GUI launched with CLI wallet override
+[qml_test_disablewallet_boot] checkpoint 28: screenshot saved to /evidence/media/qml/qml_test_disablewallet_boot/028-28-gui-launched-with-cli-wallet-override.png (800x665)
+[qml_test_disablewallet_boot] checkpoint 29: wallet UI opened after CLI override
+[qml_test_disablewallet_boot] checkpoint 29: screenshot saved to /evidence/media/qml/qml_test_disablewallet_boot/029-29-wallet-ui-opened-after-cli-override.png (800x665)
+
+============================================================
+Disablewallet node-only boot test PASSED
+============================================================

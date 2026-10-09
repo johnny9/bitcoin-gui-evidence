@@ -1,0 +1,1 @@
+{"id": "restore-wallet", "features": ["F03.S02", "F03.S03"], "description": "GUI restores the selected backup under the requested name with spending keys.", "actual": ["Recovered acceptance wallet", true], "expected": ["Recovered acceptance wallet", true], "status": "passed"}

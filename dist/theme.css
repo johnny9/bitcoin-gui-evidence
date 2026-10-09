@@ -1,0 +1,100 @@
+/* Screen-only palette: the evidence images retain their original pixels. */
+@media screen {
+  :root { color-scheme: light; }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #11161e;
+    --panel: #1a222d;
+    --ink: #e5ebf3;
+    --muted: #a4b1c3;
+    --line: #344152;
+    --orange: #efac69;
+    --orange-soft: #382b21;
+    --green: #9cd4b2;
+    --green-soft: #203d30;
+    --red: #f0ae99;
+    --red-soft: #422b28;
+    --blue: #abc5e8;
+    --shadow: 0 3px 14px #00000012;
+  }
+  [data-theme="dark"] .sidebar,
+  [data-theme="dark"] .sidebar-footer { background: #151c25; }
+  [data-theme="dark"] .topbar { background: #151c25ed; }
+  [data-theme="dark"] .feature-navigation { scrollbar-color: #46546a transparent; }
+  [data-theme="dark"] :is(.button,.group-card,.criterion-result,.empty-state,.criterion-card,.content-panel,.gallery-card,.suite-card,.source-cards>a,dialog,.capture-preview,.review-button,.filter-field select,.review-dialog select,.review-dialog textarea) {
+    background: var(--panel);
+    border-color: var(--line);
+    color: var(--ink);
+  }
+  [data-theme="dark"] :is(.primary-nav>a:hover,.icon-button:hover,.feature-navigation a:hover,.area-chip:hover,.button:hover) { background: #273344; color: var(--ink); }
+  [data-theme="dark"] .primary-nav>a[aria-current] { background: #382b21; color: #efac69; }
+  [data-theme="dark"] .nav-count { background: #594027; color: #ffcb91; }
+  [data-theme="dark"] .feature-navigation a[aria-current] { background: #283546; color: var(--ink); }
+  [data-theme="dark"] :is(.primary-nav>a,.feature-navigation a,.feature-navigation summary,.breadcrumb>span:last-child,.stat-label,.area-chip,.filter-field,.group-meta,.coverage-description,.group-card-footer,.group-card-footer>span:last-child,.filter-scope,.evidence-legend,.result-group,.criterion-id,.application-label,.application-label code,.evidence-description,.capture-caption,.capture-strip span,.no-capture,.criterion-footer .subtle-link,.feature-bottom-links,.module-list,.tests-table td,.tests-table td:first-child,.tests-table td a,.gallery-intro,.suite-meta,.how-to-grid p,.status-guide p,.scope-panel p,.record-links,.detailed-report>summary,.detailed-report>.prose,.capture-provenance,.review-dialog .helper-text) { color: var(--muted); }
+  [data-theme="dark"] :is(.nav-label,.nav-feature-id,.feature-navigation summary>span,.local-label,.breadcrumb,.stat>span:last-child,.stat-denominator,.snapshot-notice,.snapshot-notice strong,.clear-filters,.page-footer,.group-card-top>.criterion-id,.card-arrow,.feature-tabs a,.feature-tabs a>span,.criterion-list-heading,.criterion-list-heading .helper-text,.implementation-note>summary,.implementation-note>summary>span,.implementation-note>.prose,.baseline-note,.source-cards code,.source-cards .icon,.capture-toolbar .eyebrow,.capture-controls>span) { color: #9baabd; }
+  [data-theme="dark"] :is(.stat .failure-text,.finding-links,.failure-count) { color: #edb28a !important; }
+  [data-theme="dark"] :is(.clear-filters.has-filters,.match-count,.feature-tabs a[aria-current],.step-number) { color: var(--orange); }
+  [data-theme="dark"] .search-box { color: #a3b3c7; border-color: var(--line); }
+  [data-theme="dark"] .search-box input { color: var(--ink); }
+  [data-theme="dark"] .search-box input::placeholder { color: #9baabd; }
+  [data-theme="dark"] .review-dialog textarea::placeholder { color: #9baabd; opacity: 1; }
+  [data-theme="dark"] .skip-link { background: #e5ebf3; color: #11161e; }
+  [data-theme="dark"] .search-box:focus-within { box-shadow: inset 0 0 0 2px #b5824d; }
+  [data-theme="dark"] :is(.search-box kbd,.group-icon,.copy-link,.count-badge,.feature-pagination .icon-button) { background: #222e3e; color: #b1c1d5; border-color: var(--line); }
+  [data-theme="dark"] .segmented { background: #111923; }
+  [data-theme="dark"] :is(.segmented button,.segmented a) { color: #a0afc3; }
+  [data-theme="dark"] :is(.segmented .selected,.segmented [aria-current],.area-chip.selected) { background: #2b394c; color: var(--ink); border-color: #45556a; }
+  [data-theme="dark"] :is(.group-card:hover,.criterion-result:hover,.capture-preview:hover,.button:hover,.suite-card:hover,.review-button:hover) { border-color: #70809a; }
+  [data-theme="dark"] .stat-link:hover { border-color: #b18a60; color: var(--ink); }
+  [data-theme="dark"] .review-progress-track { background: #2a3647; }
+  [data-theme="dark"] .review-progress-track span { background: #e5a669; }
+  [data-theme="dark"] :is(.group-card-footer,.feature-tabs-row,.criterion-card-heading,.application-evidence+.application-evidence,.criterion-footer,.saved-note,.tests-table td,.assertion-links>a,.capture-toolbar,.capture-provenance) { border-color: var(--line); }
+  [data-theme="dark"] .feature-tabs a[aria-current] { border-bottom-color: var(--orange); }
+  [data-theme="dark"] .implementation-note { background: #192330; border-color: var(--line); }
+  [data-theme="dark"] .evidence-description strong { color: #d6e0ee; }
+  [data-theme="dark"] :is(.evidence-description a,.prose a,.tests-table td a:hover) { color: #efb780; text-decoration-color: #926b45; }
+  [data-theme="dark"] .badge-assertions { background: #213d30; color: #a0d7b3; }
+  [data-theme="dark"] .badge-limited { background: #3d3521; color: #e1c883; }
+  [data-theme="dark"] .badge-visual { background: #26374d; color: #b4cce9; }
+  [data-theme="dark"] .badge-source { background: #2d3847; color: #c0ccdb; }
+  [data-theme="dark"] .badge-gap { background: #422c28; color: #efb3a0; }
+  [data-theme="dark"] .failure-marker { background: #442e24; color: #f2bf98; }
+  [data-theme="dark"] .criterion-card.has-finding { border-color: #956753; }
+  [data-theme="dark"] .criterion-card:target { border-color: var(--orange); }
+  [data-theme="dark"] .capture-image-wrap { background: #111a25; }
+  [data-theme="dark"] .capture-canvas { background: #0d131c; }
+  [data-theme="dark"] :is(.capture-strip button,.no-capture) { background: #17212d; border-color: #415067; }
+  [data-theme="dark"] .capture-caption>span { color: #9baec5; }
+  [data-theme="dark"] .criterion-footer { background: #161f2b; }
+  [data-theme="dark"] .review-button.review-reviewed { background: #233d2f; color: #b1d5b8; }
+  [data-theme="dark"] .review-button.review-followup { background: #443221; color: #edc38f; }
+  [data-theme="dark"] .saved-note { background: #2a2b23; }
+  [data-theme="dark"] :is(.saved-note .small-label,.saved-note p) { color: #d0cbb1; }
+  [data-theme="dark"] .active-filter-notice { background: #3a2e21; color: #e6bb89; }
+  [data-theme="dark"] .active-filter-notice .text-button { color: #ffd2a0; }
+  [data-theme="dark"] :is(.prose pre,.prose code,.prose th,.tests-table th) { background: #131d2a; color: #afc0d4; border-color: var(--line); }
+  [data-theme="dark"] .prose pre code { background: none; }
+  [data-theme="dark"] :is(.prose td,.prose th) { border-color: var(--line); }
+  [data-theme="dark"] .tests-table td a { text-decoration-color: #73849a; }
+  [data-theme="dark"] .tests-table tr.failed-row { background: #352622; }
+  [data-theme="dark"] .tests-table tr.failed-row td { color: #efbca8; }
+  [data-theme="dark"] .capture-criteria a { background: #263346; color: #b9cbe0; }
+  [data-theme="dark"] .capture-criteria a:hover { background: #433222; color: var(--orange); }
+  [data-theme="dark"] .finding-panel { background: #30251f; border-color: #70543e; }
+  [data-theme="dark"] .finding-icon { color: #e7b58b; border-color: #a58061; }
+  [data-theme="dark"] .finding-panel .eyebrow { color: #e1b08b; }
+  [data-theme="dark"] .finding-panel h2 { color: #f4c7a5; }
+  [data-theme="dark"] .finding-panel p { color: #d7b79f; }
+  [data-theme="dark"] .suite-card strong>span { color: #a0ceac; }
+  [data-theme="dark"] .scope-panel { background: #192330; border-color: var(--line); }
+  [data-theme="dark"] .button.button-primary { background: #e4eaf2; color: #1b2533; border-color: #e4eaf2; }
+  [data-theme="dark"] .button.button-primary:hover { background: #c8d6e8; border-color: #c8d6e8; color: #152030; }
+  [data-theme="dark"] .toast { background: #d9e3f0; color: #1b2533; }
+  [data-theme="dark"] .noscript { background: #392e22; color: #f2c99e; }
+  [data-theme="dark"] dialog::backdrop { background: #03070cc7; }
+  [data-theme="dark"] :is(button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible) { outline-color: #edb478; }
+}
+@media (max-width: 600px) {
+  .topbar-left { flex: 1; }
+  .breadcrumb { min-width: 0; }
+}

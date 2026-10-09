@@ -1,0 +1,38 @@
+Starting GUI: /validation/build/bin/bitcoin-core-app -datadir=/work/tmp/qml_test_bridge_hb_9fzxa/node0 -test-automation=/work/tmp/qml_test_bridge_hb_9fzxa/test_bridge.sock -test-settings-dir=/work/tmp/qml_test_bridge_hb_9fzxa/config -qml_onboarded=1 -logtimemicros -debug -debugexclude=leveldb -disablewallet -nolisten
+QmlDriver connected to test bridge.
+  Navigated to Console page; command input auto-focused.
+
+── test_console_page_matches_design ────────────────────────────
+  PASSED: settings toolbar, font stepper, and command footer match the design
+
+── test_console_output_rows_match_design ───────────────────────
+  PASSED: console output entry geometry, timestamps, and categories match design
+
+── test_execute_getblockcount ──────────────────────────────────
+  PASSED: getblockcount produced a request+reply pair without hanging the UI
+
+── test_execute_help ───────────────────────────────────────────
+  PASSED: help command produced output
+
+── test_execute_invalid_command ────────────────────────────────
+  PASSED: invalid command handled; UI not blocked; error output appeared
+
+── test_autocomplete_popup_appears ─────────────────────────────
+  PASSED: autocomplete popup appeared for partial command
+
+── test_autocomplete_popup_hidden_no_match ─────────────────────
+  PASSED: autocomplete popup hidden for non-matching input
+
+── test_autocomplete_click_applies_suggestion ───────────────────
+  PASSED: clicking autocomplete suggestion filled input field
+
+── test_autocomplete_help_variants ─────────────────────────────
+  PASSED: autocomplete popup appeared for 'help get' prefix
+
+── test_clear_removes_output_and_keeps_help_footer ─────────────
+  PASSED: clear removed output and retained the external help footer
+
+── test_back_navigation ────────────────────────────────────────
+  PASSED: back navigation returned to NodeRunner
+
+All console tests passed.

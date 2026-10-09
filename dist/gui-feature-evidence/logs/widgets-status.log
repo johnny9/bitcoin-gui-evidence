@@ -1,0 +1,3 @@
+{"id": "switch-active-wallet", "features": ["F02.S03", "F28.S02"], "description": "Selecting another wallet changes the application title.", "actual": true, "expected": true, "status": "passed"}
+{"id": "pause-network", "features": ["F21.S01", "F29.S01"], "description": "The GUI network action pauses peer networking.", "actual": false, "expected": false, "status": "passed"}
+{"id": "resume-network", "features": ["F21.S01"], "description": "The GUI network action resumes peer networking.", "actual": true, "expected": true, "status": "passed"}

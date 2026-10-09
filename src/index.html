@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fa">
+  <meta name="description" content="Explore Bitcoin Core GUI and GUI-QML feature evidence. Compare real captures, inspect tests, and keep a review record.">
+  <title>Feature evidence · Bitcoin Core</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script src="theme.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="theme.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Feature navigation">
+      <a class="brand" href="#catalog"><span class="bitcoin-mark" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"><path d="M11 8h7c7 0 7 8 0 8h-7m0 0h8c7 0 7 8 0 8h-8V8m3-3v3m4-3v3m-4 16v3m4-3v3M9 8h2M9 24h2"/></svg></span><span>Bitcoin Core<small>Interface review</small></span></a>
+      <button class="mobile-close icon-button" id="close-navigation" aria-label="Close navigation">×</button>
+      <nav class="primary-nav" aria-label="Main">
+        <a href="#catalog" data-nav="catalog"><span data-icon="grid"></span>Feature catalog<span class="nav-count">34</span></a>
+        <a href="#tests" data-nav="tests"><span data-icon="check"></span>Test results<span class="issue-dot" title="One failing test"></span></a>
+        <a href="#about" data-nav="about"><span data-icon="info"></span>About this evidence</a>
+      </nav>
+      <div class="nav-label">FEATURE GROUPS</div>
+      <nav id="feature-navigation" class="feature-navigation" aria-label="Feature groups"></nav>
+      <div class="sidebar-footer"><div class="review-progress-label"><span>My review</span><strong id="review-progress-text">0 / 203</strong></div><div class="review-progress-track"><span id="review-progress-bar"></span></div><span class="local-label" id="storage-status">Saved in this browser</span></div>
+    </aside>
+    <button id="nav-backdrop" class="nav-backdrop" aria-label="Close navigation" hidden></button>
+    <div class="workspace">
+      <header class="topbar">
+        <div class="topbar-left"><button class="icon-button mobile-menu" id="open-navigation" aria-label="Open navigation" aria-expanded="false"><span data-icon="menu"></span></button><span class="breadcrumb">Bitcoin Core <span>/</span> <span id="breadcrumb-current">Feature catalog</span></span></div>
+        <div class="topbar-actions"><span class="snapshot"><span class="snapshot-dot"></span>08 Oct 2026 snapshot</span><button class="icon-button" id="theme-toggle" aria-label="Switch to light mode" title="Switch to light mode"><span data-icon="sun"></span></button><button class="button button-small" id="export-review"><span data-icon="download"></span>Export review</button><button class="icon-button" id="import-review" aria-label="Import a review" title="Import a review"><span data-icon="upload"></span></button><input type="file" id="import-file" accept="application/json,.json" hidden></div>
+      </header>
+      <main id="main" tabindex="-1"></main>
+      <footer class="page-footer"><span>Bitcoin GUI evidence · Linux / regtest</span><a href="#about">Scope & provenance <span aria-hidden="true">↗</span></a></footer>
+    </div>
+  </div>
+  <dialog id="capture-dialog" class="capture-dialog" aria-labelledby="capture-title">
+    <div class="capture-toolbar"><div><span class="eyebrow" id="capture-application"></span><h2 id="capture-title"></h2></div><button class="icon-button" data-close-dialog="capture-dialog" aria-label="Close screenshot">×</button></div>
+    <div id="capture-canvas" class="capture-canvas"><img id="capture-image" alt=""></div>
+    <div class="capture-controls"><button class="button" id="capture-prev" aria-label="Previous capture">← Previous</button><span id="capture-counter"></span><button class="button" id="capture-zoom">Actual size</button><a id="capture-original" class="button" target="_blank" rel="noopener">Open original ↗</a><button class="button" id="capture-next" aria-label="Next capture">Next →</button></div>
+    <details class="capture-provenance"><summary>Capture information</summary><div id="capture-metadata"></div></details>
+  </dialog>
+  <dialog id="review-dialog" class="review-dialog" aria-labelledby="review-title">
+    <div class="dialog-header"><span class="eyebrow" id="review-criterion-id"></span><button class="icon-button" data-close-dialog="review-dialog" aria-label="Close review">×</button></div>
+    <h2 id="review-title"></h2>
+    <form id="review-form"><label for="review-state">Review status</label><select id="review-state"><option value="unreviewed">Not reviewed</option><option value="reviewed">Reviewed</option><option value="followup">Needs follow-up</option></select><label for="review-note">Notes <span class="muted">(optional)</span></label><textarea id="review-note" rows="6" maxlength="10000" placeholder="Record what you checked and what still needs evidence."></textarea><p class="helper-text">This records your review of the comparison. It does not change the underlying evidence or mark a feature accepted. Notes stay in this browser; export to keep or share them.</p><div class="dialog-actions"><button type="button" class="button" data-close-dialog="review-dialog">Cancel</button><button type="submit" class="button button-primary">Save review</button></div></form>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <noscript><div class="noscript">Enable JavaScript to search and review the catalog, or open the <a href="gui-feature-evidence/README.md">original Markdown evidence index</a>.</div></noscript>
+</body>
+</html>

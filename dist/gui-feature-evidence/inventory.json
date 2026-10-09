@@ -1,0 +1,1214 @@
+[
+  {
+    "id": "F01",
+    "number": 1,
+    "name": "Create Wallet",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/createwalletdialog.cpp",
+    "slug": "01-create-wallet",
+    "subfeatures": [
+      {
+        "id": "F01.S01",
+        "intent": "Create a standard single-signature wallet."
+      },
+      {
+        "id": "F01.S02",
+        "intent": "Create an encrypted or unencrypted wallet containing spending keys."
+      },
+      {
+        "id": "F01.S03",
+        "intent": "Create a watch-only wallet to monitor funds without holding spending keys."
+      },
+      {
+        "id": "F01.S04",
+        "intent": "Create a blank wallet for later setup."
+      },
+      {
+        "id": "F01.S05",
+        "intent": "Create a wallet that uses an external signer, such as a hardware wallet."
+      },
+      {
+        "id": "F01.S06",
+        "intent": "Name the wallet."
+      }
+    ],
+    "support": [
+      "*Support: Configuring watched funds or multisig policies requires RPC. Encryption applies to wallets containing private keys. Blank wallets allow private keys to be added later.*"
+    ],
+    "qml_comparison": "**Partial.** Single-signature wallets, encrypted or unencrypted wallets, named wallets, watch-only wallets from an extended public key, and external-signer wallets. Watch-only creation sets up native SegWit receiving and change addresses. No standalone blank-wallet creation flow; broader watch-only or multisig configuration requires RPC.<br><br>[Wallet creation](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/walletqmlcontroller.cpp#L507); [Creation choices](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/wallet/WalletCreationTypePage.qml)."
+  },
+  {
+    "id": "F02",
+    "number": 2,
+    "name": "Open, Switch, and Close Wallets",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/bitcoingui.cpp",
+    "slug": "02-open-switch-and-close-wallets",
+    "subfeatures": [
+      {
+        "id": "F02.S01",
+        "intent": "Open existing wallets."
+      },
+      {
+        "id": "F02.S02",
+        "intent": "Keep multiple wallets available at the same time."
+      },
+      {
+        "id": "F02.S03",
+        "intent": "Choose which wallet to use."
+      },
+      {
+        "id": "F02.S04",
+        "intent": "Close individual wallets or all wallets."
+      }
+    ],
+    "support": [
+      "*Support: Legacy wallets require migration before they can be opened.*"
+    ],
+    "qml_comparison": "**Partial.** Open existing wallets, keep several loaded, switch the active wallet, and close an individual wallet. No close-all-wallets action.<br><br>[Wallet management](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/walletqmlcontroller.cpp#L93); [Wallet selection](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/wallet/WalletSelect.qml)."
+  },
+  {
+    "id": "F03",
+    "number": 3,
+    "name": "Back Up and Restore Wallet",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/walletcontroller.cpp",
+    "slug": "03-back-up-and-restore-wallet",
+    "subfeatures": [
+      {
+        "id": "F03.S01",
+        "intent": "Save a wallet backup to a file."
+      },
+      {
+        "id": "F03.S02",
+        "intent": "Restore a wallet from a backup file."
+      },
+      {
+        "id": "F03.S03",
+        "intent": "Name a recovered wallet."
+      },
+      {
+        "id": "F03.S04",
+        "intent": "Recover and update a legacy wallet backup."
+      }
+    ],
+    "support": [],
+    "qml_comparison": "**Partial.** Save wallet backups and restore supported wallet backup files. The restored wallet name is inferred from the file rather than chosen independently. Legacy backup import reports that migration is required; it does not perform a combined restore-and-migrate workflow.<br><br>[Backup](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/settings/WalletSectionPage.qml); [Restore](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/walletqmlcontroller.cpp#L1009); [Restore test cases](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/test/functional/qml_test_wallet_restore.py)."
+  },
+  {
+    "id": "F04",
+    "number": 4,
+    "name": "Migrate Legacy Wallet",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/walletcontroller.cpp",
+    "slug": "04-migrate-legacy-wallet",
+    "subfeatures": [
+      {
+        "id": "F04.S01",
+        "intent": "Update legacy wallets to the current wallet format."
+      },
+      {
+        "id": "F04.S02",
+        "intent": "Preserve the original wallet with an automatic backup."
+      },
+      {
+        "id": "F04.S03",
+        "intent": "Preserve wallet contents, including watch-only information."
+      },
+      {
+        "id": "F04.S04",
+        "intent": "Open migrated wallets immediately or later."
+      }
+    ],
+    "support": [],
+    "qml_comparison": "**Partial.** Migrate an existing legacy wallet in managed wallet storage, including encrypted wallets, using Core migration and its backup/content preservation. The migrated wallet opens automatically; deferring that opening is not offered.<br><br>[Migration](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/walletqmlcontroller.cpp#L1194); [Migration flow](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/wallet/DesktopWallets.qml#L440)."
+  },
+  {
+    "id": "F05",
+    "number": 5,
+    "name": "Export Watch-Only Wallet",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/bitcoingui.cpp",
+    "slug": "05-export-watch-only-wallet",
+    "subfeatures": [
+      {
+        "id": "F05.S01",
+        "intent": "Create a copy of a wallet that can monitor its funds without spending them."
+      },
+      {
+        "id": "F05.S02",
+        "intent": "Export the watch-only wallet to a file."
+      },
+      {
+        "id": "F05.S03",
+        "intent": "Transfer wallet monitoring to another node."
+      },
+      {
+        "id": "F05.S04",
+        "intent": "Keep spending keys separate from a wallet used for monitoring."
+      }
+    ],
+    "support": [],
+    "qml_comparison": "**Not available in GUI.** Watch-only wallet creation is available, but exporting a spending wallet as a watch-only wallet file is not.<br><br>[Available wallet actions](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/settings/WalletSectionPage.qml)."
+  },
+  {
+    "id": "F06",
+    "number": 6,
+    "name": "Encrypt Wallet and Manage Passphrase",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/askpassphrasedialog.cpp",
+    "slug": "06-encrypt-wallet-and-manage-passphrase",
+    "subfeatures": [
+      {
+        "id": "F06.S01",
+        "intent": "Protect stored spending keys with passphrase encryption."
+      },
+      {
+        "id": "F06.S02",
+        "intent": "Change the wallet passphrase."
+      },
+      {
+        "id": "F06.S03",
+        "intent": "Temporarily unlock spending keys for operations that require them."
+      },
+      {
+        "id": "F06.S04",
+        "intent": "Automatically restore the locked state after temporary access. [Unlock handling](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/walletmodel.cpp)."
+      },
+      {
+        "id": "F06.S05",
+        "intent": "Check whether a wallet is encrypted and locked."
+      },
+      {
+        "id": "F06.S06",
+        "intent": "Show or hide entered passphrases."
+      },
+      {
+        "id": "F06.S07",
+        "intent": "Receive feedback on passphrase mismatches and common entry mistakes."
+      }
+    ],
+    "support": [],
+    "qml_comparison": "**Partial.** Encrypt an existing wallet, change its passphrase, temporarily unlock for wallet operations, and relock automatically. Passphrase visibility and validation feedback are available. Encryption is reflected in wallet settings, but the current locked/unlocked state is not displayed.<br><br>[Passphrase management](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/wallet/WalletPasswordSettings.qml); [Temporary unlocking](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/models/walletunlock.cpp)."
+  },
+  {
+    "id": "F07",
+    "number": 7,
+    "name": "View Wallet Overview",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/overviewpage.cpp",
+    "slug": "07-view-wallet-overview",
+    "subfeatures": [
+      {
+        "id": "F07.S01",
+        "intent": "View available, pending, immature mining, and total balances."
+      },
+      {
+        "id": "F07.S02",
+        "intent": "Review recent wallet activity."
+      },
+      {
+        "id": "F07.S03",
+        "intent": "Find a recent transaction in the full transaction history. [Activity navigation](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/walletview.cpp)."
+      },
+      {
+        "id": "F07.S04",
+        "intent": "Know when wallet information may be out of date."
+      },
+      {
+        "id": "F07.S05",
+        "intent": "Conceal balances and recent activity with privacy mode."
+      }
+    ],
+    "support": [],
+    "qml_comparison": "**Partial.** View the wallet balance, recent/full activity, pending activity totals, and synchronization status. No complete available/pending/immature/total balance breakdown and no privacy masking.<br><br>[Wallet overview](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/wallet/DesktopWallets.qml); [Activity](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/wallet/ActivityListPage.qml)."
+  },
+  {
+    "id": "F08",
+    "number": 8,
+    "name": "Receive Bitcoin / Request Payment",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/receivecoinsdialog.cpp",
+    "slug": "08-receive-bitcoin-request-payment",
+    "subfeatures": [
+      {
+        "id": "F08.S01",
+        "intent": "Generate receiving addresses using legacy, wrapped SegWit, native SegWit, or Taproot formats supported by the wallet."
+      },
+      {
+        "id": "F08.S02",
+        "intent": "Request a payment with an optional amount, label, and message."
+      },
+      {
+        "id": "F08.S03",
+        "intent": "Generate payment links and QR codes. [QR support](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/qrimagewidget.cpp)."
+      },
+      {
+        "id": "F08.S04",
+        "intent": "Copy receiving addresses, payment links, and request details to the clipboard."
+      },
+      {
+        "id": "F08.S05",
+        "intent": "Copy payment QR codes to the clipboard or save them as images."
+      },
+      {
+        "id": "F08.S06",
+        "intent": "Share QR images with other applications using drag and drop."
+      },
+      {
+        "id": "F08.S07",
+        "intent": "Review, reuse, and remove saved payment requests."
+      },
+      {
+        "id": "F08.S08",
+        "intent": "Verify receiving addresses on a compatible signing device."
+      },
+      {
+        "id": "F08.S09",
+        "intent": "Generate receiving addresses for a configured watch-only wallet."
+      }
+    ],
+    "support": [
+      "*Support: QR support depends on the application build. Request labels and messages describe the request without becoming part of the on-chain transaction.*"
+    ],
+    "qml_comparison": "**Partial.** Generate receiving addresses, choose address formats, request an amount with descriptive information, and generate payment links and QR codes. Copy addresses/payment requests and QR images, save QR images, and review, reuse, edit, or remove saved requests. Configured watch-only wallets can receive. Device address verification and sharing QR images by drag and drop are missing.<br><br>[Receiving](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/wallet/ReceivePage.qml); [Payment requests](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/components/PaymentRequestCard.qml); [Address types](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/models/walletqmlmodel.cpp#L1050)."
+  },
+  {
+    "id": "F09",
+    "number": 9,
+    "name": "Send Bitcoin",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/sendcoinsdialog.cpp",
+    "slug": "09-send-bitcoin",
+    "subfeatures": [
+      {
+        "id": "F09.S01",
+        "intent": "Pay one recipient or multiple recipients in a single transaction."
+      },
+      {
+        "id": "F09.S02",
+        "intent": "Enter or paste a recipient address, or use a saved address."
+      },
+      {
+        "id": "F09.S03",
+        "intent": "Associate recipient addresses with recognizable labels."
+      },
+      {
+        "id": "F09.S04",
+        "intent": "Send the available balance."
+      },
+      {
+        "id": "F09.S05",
+        "intent": "Deduct fees from selected recipient amounts."
+      },
+      {
+        "id": "F09.S06",
+        "intent": "Review payment details and total costs before authorizing a transaction."
+      },
+      {
+        "id": "F09.S07",
+        "intent": "Sign payments with local spending keys or a compatible external signer."
+      },
+      {
+        "id": "F09.S08",
+        "intent": "Prepare a payment from a watch-only wallet for signing elsewhere."
+      },
+      {
+        "id": "F09.S09",
+        "intent": "Check payment details and available funds before sending. [Payment validation](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/walletmodel.cpp)."
+      }
+    ],
+    "support": [],
+    "qml_comparison": "**Partial.** Single or multiple recipients, pasted addresses, recipient notes/labels, sending the available balance, validation, and payment review. Local signing, external signing, and saving a watch-only payment for signing elsewhere are available. No saved-recipient picker or general control for subtracting fees from selected recipient amounts.<br><br>[Sending](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/wallet/SendCreate.qml); [Payment review](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/wallet/SendTransactionReview.qml)."
+  },
+  {
+    "id": "F10",
+    "number": 10,
+    "name": "Open Payment URI",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/paymentserver.cpp",
+    "slug": "10-open-payment-uri",
+    "subfeatures": [
+      {
+        "id": "F10.S01",
+        "intent": "Open or paste Bitcoin payment links."
+      },
+      {
+        "id": "F10.S02",
+        "intent": "Prepare a payment using the requested recipient, amount, and descriptive information."
+      },
+      {
+        "id": "F10.S03",
+        "intent": "Handle payment requests from other applications, including while Bitcoin Core is already running."
+      }
+    ],
+    "support": [
+      "*Support: Supports BIP21 payment links; BIP70 payment requests are unsupported.*"
+    ],
+    "qml_comparison": "**Partial.** Import BIP21 requests by entering or pasting a link, selecting a file, or dragging and dropping; review and apply the recipient, amount, label, and message. Desktop/operating-system delivery and forwarding requests to an already-running application are missing.<br><br>[Payment-request import](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/wallet/SendCreate.qml); [URI handling](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/models/bitcoinurimodel.cpp)."
+  },
+  {
+    "id": "F11",
+    "number": 11,
+    "name": "Choose Transaction Fee",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/sendcoinsdialog.cpp",
+    "slug": "11-choose-transaction-fee",
+    "subfeatures": [
+      {
+        "id": "F11.S01",
+        "intent": "Choose an estimated fee based on the desired confirmation speed."
+      },
+      {
+        "id": "F11.S02",
+        "intent": "Set a custom fee rate."
+      },
+      {
+        "id": "F11.S03",
+        "intent": "Assess expected confirmation timing."
+      },
+      {
+        "id": "F11.S04",
+        "intent": "Know when a fee estimate is unavailable."
+      }
+    ],
+    "support": [],
+    "qml_comparison": "**Implemented.** Choose estimated fees by confirmation target, set a custom fee rate, review the target and fee amount, and see when estimates are unavailable.<br><br>[Fee selection](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/components/SendFeeSelection.qml); [Estimate feedback](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/wallet/SendCreate.qml#L969)."
+  },
+  {
+    "id": "F12",
+    "number": 12,
+    "name": "Select Coins / Coin Control",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/coincontroldialog.cpp",
+    "slug": "12-select-coins-coin-control",
+    "subfeatures": [
+      {
+        "id": "F12.S01",
+        "intent": "Choose which coins fund a transaction."
+      },
+      {
+        "id": "F12.S02",
+        "intent": "Select individual coins or groups of coins."
+      },
+      {
+        "id": "F12.S03",
+        "intent": "Inspect coins individually or grouped by address."
+      },
+      {
+        "id": "F12.S04",
+        "intent": "Compare coins by amount, address, label, age, and confirmations."
+      },
+      {
+        "id": "F12.S05",
+        "intent": "Control spending eligibility by locking or unlocking coins."
+      },
+      {
+        "id": "F12.S06",
+        "intent": "Copy coin addresses, labels, amounts, identifiers, and transaction estimates to the clipboard."
+      },
+      {
+        "id": "F12.S07",
+        "intent": "Review the selected funds, expected fees, and change."
+      },
+      {
+        "id": "F12.S08",
+        "intent": "Choose where transaction change is returned."
+      },
+      {
+        "id": "F12.S09",
+        "intent": "Receive a warning when a change destination is not recognized as spendable by the wallet."
+      }
+    ],
+    "support": [],
+    "qml_comparison": "**Partial.** Select individual or multiple inputs; browse, search, sort, and group coins; lock/unlock coins; review selected funds, fees, and change estimates. Coin confirmation counts, coin-detail clipboard actions, and custom change destinations are missing.<br><br>[Coin controls](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/components/CoinsList.qml); [Coin data](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/models/coinslistmodel.h)."
+  },
+  {
+    "id": "F13",
+    "number": 13,
+    "name": "Create and Export PSBT",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/sendcoinsdialog.cpp",
+    "slug": "13-create-and-export-psbt",
+    "subfeatures": [
+      {
+        "id": "F13.S01",
+        "intent": "Prepare a transaction for later signing."
+      },
+      {
+        "id": "F13.S02",
+        "intent": "Create transactions from watch-only wallets or wallets containing spending keys."
+      },
+      {
+        "id": "F13.S03",
+        "intent": "Use single-signature or previously configured multisig wallets. [Multisig support](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/doc/descriptors.md#basic-multisig-example)."
+      },
+      {
+        "id": "F13.S04",
+        "intent": "Choose recipients, fees, and coins for the proposed transaction."
+      },
+      {
+        "id": "F13.S05",
+        "intent": "Copy an unsigned PSBT to the clipboard or save it to a file for signing elsewhere."
+      }
+    ],
+    "support": [],
+    "qml_comparison": "**Partial.** Prepare payments with selected recipients, fees, and inputs, then save unsigned PSBT files, including from watch-only wallets. Configured watch-only multisig wallets can prepare unsigned payments; wallets holding only some required private keys cannot use that unsigned-payment workflow. Clipboard export is not exposed.<br><br>[Transaction preparation](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/models/walletqmlmodel.cpp#L2251); [PSBT export](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/models/walletqmlmodel.cpp#L2676); [Export flow](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/wallet/SendTransactionReview.qml)."
+  },
+  {
+    "id": "F14",
+    "number": 14,
+    "name": "Import, Sign, and Broadcast PSBT",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/psbtoperationsdialog.cpp",
+    "slug": "14-import-sign-and-broadcast-psbt",
+    "subfeatures": [
+      {
+        "id": "F14.S01",
+        "intent": "Import a PSBT from a file or the clipboard."
+      },
+      {
+        "id": "F14.S02",
+        "intent": "Review recipients, amounts, available fee information, and signing progress."
+      },
+      {
+        "id": "F14.S03",
+        "intent": "Process single-signature and multisig transactions when the required keys and transaction information are available."
+      },
+      {
+        "id": "F14.S04",
+        "intent": "Sign with local wallets, including encrypted wallets after unlocking."
+      },
+      {
+        "id": "F14.S05",
+        "intent": "Collect additional signatures by passing a transaction between signers."
+      },
+      {
+        "id": "F14.S06",
+        "intent": "Copy a partially signed PSBT to the clipboard or save it to a file for further signing."
+      },
+      {
+        "id": "F14.S07",
+        "intent": "Finalize and broadcast a transaction once sufficient signatures are present."
+      },
+      {
+        "id": "F14.S08",
+        "intent": "Inspect transactions and broadcast fully signed transactions without opening a wallet."
+      }
+    ],
+    "support": [
+      "*Support: Signing imported PSBTs requires local private keys. External signing is supported for payments created by the application. Combining independently signed copies requires RPC. Wallet functionality must be enabled even when no wallet is open. [Multisig workflow](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/doc/descriptors.md#basic-multisig-example).*"
+    ],
+    "qml_comparison": "**Partial.** Import PSBT files, review recipients/amounts/fees, save the imported PSBT, sign eligible transactions the selected wallet can fully sign, and broadcast fully signed transactions. Incomplete multisig transactions can be reviewed, but collecting partial local signatures is not supported by the reachable flow. Clipboard import/export and operation without a loaded wallet are missing. Import also has recipient and output-script compatibility limits.<br><br>[PSBT import and signing](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/models/walletqmlmodel.cpp#L2508); [Import interface](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/wallet/SendCreate.qml#L224); [Review actions](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/wallet/SendTransactionReview.qml)."
+  },
+  {
+    "id": "F15",
+    "number": 15,
+    "name": "Use Hardware Wallet / External Signer",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/doc/external-signer.md",
+    "slug": "15-use-hardware-wallet-external-signer",
+    "subfeatures": [
+      {
+        "id": "F15.S01",
+        "intent": "Connect a wallet to a compatible external signer."
+      },
+      {
+        "id": "F15.S02",
+        "intent": "Keep spending keys on the signing device."
+      },
+      {
+        "id": "F15.S03",
+        "intent": "Generate receiving addresses and verify them on the device."
+      },
+      {
+        "id": "F15.S04",
+        "intent": "Authorize outgoing payments using the device."
+      },
+      {
+        "id": "F15.S05",
+        "intent": "Continue a signing workflow when additional signatures are needed. [Signing workflow](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/sendcoinsdialog.cpp)."
+      }
+    ],
+    "support": [
+      "*Support: Requires compatible signer software, device support, and an application build with external signing enabled. The integration expects one connected signer at a time.*"
+    ],
+    "qml_comparison": "**Partial.** Configure compatible signer software, discover a device, create an external-signer wallet, and approve payments on the device. A partially signed device result can be saved as a PSBT for further signing. Receiving-address verification on the device is missing. Requires signer support in the build and one connected signer.<br><br>[Signer setup](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/settings/ExternalSignerSettingsPage.qml); [Device approval](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/models/walletqmlmodel.cpp#L2373)."
+  },
+  {
+    "id": "F16",
+    "number": 16,
+    "name": "Browse and Export Transaction History",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/transactionview.cpp",
+    "slug": "16-browse-and-export-transaction-history",
+    "subfeatures": [
+      {
+        "id": "F16.S01",
+        "intent": "Review incoming, outgoing, mined, and other transactions."
+      },
+      {
+        "id": "F16.S02",
+        "intent": "Filter transactions by date, type, or minimum amount."
+      },
+      {
+        "id": "F16.S03",
+        "intent": "Search by address, transaction ID, or label, and sort transaction history."
+      },
+      {
+        "id": "F16.S04",
+        "intent": "View confirmation, conflict, abandonment, and mining-maturity status. [Transaction states](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/transactionrecord.cpp)."
+      },
+      {
+        "id": "F16.S05",
+        "intent": "Inspect transaction costs, balance changes, confirmation details, and transaction data. [Transaction details](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/transactiondesc.cpp)."
+      },
+      {
+        "id": "F16.S06",
+        "intent": "Copy addresses, amounts, transaction IDs, transaction details, and raw transaction data to the clipboard."
+      },
+      {
+        "id": "F16.S07",
+        "intent": "Update address labels associated with transactions."
+      },
+      {
+        "id": "F16.S08",
+        "intent": "Export filtered transaction history as CSV for record keeping or analysis."
+      },
+      {
+        "id": "F16.S09",
+        "intent": "Inspect transactions in external block explorers."
+      }
+    ],
+    "support": [],
+    "qml_comparison": "**Partial.** Browse transaction types and statuses; search; filter by date, type, and amount; inspect transaction details; export filtered CSV; and open external explorers. Copy addresses, transaction IDs, and raw transactions. History uses a fixed chronological order; user-selected sorting, the full set of amount/detail clipboard exports, and editing outgoing-recipient labels are missing.<br><br>[History and export](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/wallet/ActivityListPage.qml); [Transaction details](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/wallet/TransactionDetail.qml); [Detail copying](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/components/TransactionDetailsSection.qml)."
+  },
+  {
+    "id": "F17",
+    "number": 17,
+    "name": "Manage Unconfirmed Transactions",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/walletmodel.cpp",
+    "slug": "17-manage-unconfirmed-transactions",
+    "subfeatures": [
+      {
+        "id": "F17.S01",
+        "intent": "Increase the fee of an eligible transaction to improve its confirmation prospects."
+      },
+      {
+        "id": "F17.S02",
+        "intent": "Review the additional cost before authorizing a fee increase."
+      },
+      {
+        "id": "F17.S03",
+        "intent": "Sign and submit a replacement transaction."
+      },
+      {
+        "id": "F17.S04",
+        "intent": "Create a fee-bump PSBT and copy it to the clipboard for signing elsewhere."
+      },
+      {
+        "id": "F17.S05",
+        "intent": "Abandon eligible transactions so their inputs can be used for another spend."
+      }
+    ],
+    "support": [],
+    "qml_comparison": "**Partial.** Increase an eligible transaction fee, review the additional cost, unlock when needed, and sign/submit the replacement with local keys. No fee-bump PSBT export or transaction-abandonment action.<br><br>[Fee bumping](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/models/bumptransactionmodel.cpp); [Fee-bump review](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/wallet/SpeedUpOverlay.qml)."
+  },
+  {
+    "id": "F18",
+    "number": 18,
+    "name": "Manage Address Book",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/addressbookpage.cpp",
+    "slug": "18-manage-address-book",
+    "subfeatures": [
+      {
+        "id": "F18.S01",
+        "intent": "Keep records of sending and receiving addresses."
+      },
+      {
+        "id": "F18.S02",
+        "intent": "Add, update, and remove saved recipients."
+      },
+      {
+        "id": "F18.S03",
+        "intent": "Label receiving addresses."
+      },
+      {
+        "id": "F18.S04",
+        "intent": "Search and sort saved addresses by address or label."
+      },
+      {
+        "id": "F18.S05",
+        "intent": "Copy saved addresses and labels to the clipboard."
+      },
+      {
+        "id": "F18.S06",
+        "intent": "Export address records as CSV."
+      }
+    ],
+    "support": [],
+    "qml_comparison": "**Partial.** Browse receiving and change addresses, distinguish used addresses, edit address labels/notes, and copy addresses. A sending-contact address book with add/edit/remove, address search/sort controls, and CSV export is missing.<br><br>[Address browser](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/wallet/AddressList.qml); [Address details](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/wallet/AddressDetails.qml)."
+  },
+  {
+    "id": "F19",
+    "number": 19,
+    "name": "Sign and Verify Messages",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/signverifymessagedialog.cpp",
+    "slug": "19-sign-and-verify-messages",
+    "subfeatures": [
+      {
+        "id": "F19.S01",
+        "intent": "Sign a message to demonstrate control of a Bitcoin address."
+      },
+      {
+        "id": "F19.S02",
+        "intent": "Verify that a message was signed by the holder of the corresponding key."
+      },
+      {
+        "id": "F19.S03",
+        "intent": "Copy the resulting signature to the clipboard."
+      }
+    ],
+    "support": [
+      "*Support: Message signing and verification support legacy P2PKH addresses.*"
+    ],
+    "qml_comparison": "**Implemented.** Sign and verify legacy P2PKH messages, unlock an encrypted signing wallet when needed, and copy the signature. The interface requires a selected wallet to access this flow.<br><br>[Message signing and verification](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/wallet/SignVerifyMessage.qml); [Address compatibility](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/models/signverifymessagemodel.cpp)."
+  },
+  {
+    "id": "F20",
+    "number": 20,
+    "name": "Set Up and Synchronize Node",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/intro.cpp",
+    "slug": "20-set-up-and-synchronize-node",
+    "subfeatures": [
+      {
+        "id": "F20.S01",
+        "intent": "Choose where node and wallet data are stored."
+      },
+      {
+        "id": "F20.S02",
+        "intent": "Limit blockchain storage through pruning."
+      },
+      {
+        "id": "F20.S03",
+        "intent": "Assess available storage, expected requirements, and the effect of pruning on wallet recovery."
+      },
+      {
+        "id": "F20.S04",
+        "intent": "Download and validate the blockchain."
+      },
+      {
+        "id": "F20.S05",
+        "intent": "Monitor synchronization progress and how far the node is behind."
+      },
+      {
+        "id": "F20.S06",
+        "intent": "Operate the node without an open wallet."
+      },
+      {
+        "id": "F20.S07",
+        "intent": "Use mainnet, testnet, testnet4, signet, or regtest. [Network support](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/networkstyle.cpp)."
+      }
+    ],
+    "support": [
+      "*Support: The network is selected as part of startup configuration.*"
+    ],
+    "qml_comparison": "**Partial.** Choose storage location and pruning, check available/required storage, validate and synchronize the chain, monitor progress and estimated time remaining, and run without an open wallet. Mainnet, testnet, testnet4, signet, and regtest are recognized. Guidance about how pruning affects wallet recovery is missing.<br><br>[Node setup](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/onboarding/OnboardingWizard.qml); [Storage checks](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/models/onboardingoptionsmodel.h); [Networks](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/networkstyle.cpp)."
+  },
+  {
+    "id": "F21",
+    "number": 21,
+    "name": "Configure Network and Manage Peers",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/rpcconsole.cpp",
+    "slug": "21-configure-network-and-manage-peers",
+    "subfeatures": [
+      {
+        "id": "F21.S01",
+        "intent": "Enable or pause peer-to-peer networking."
+      },
+      {
+        "id": "F21.S02",
+        "intent": "Allow incoming peer connections."
+      },
+      {
+        "id": "F21.S03",
+        "intent": "Route connections through SOCKS5 proxies, with separate routing for Tor. [Proxy support](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/optionsdialog.cpp)."
+      },
+      {
+        "id": "F21.S04",
+        "intent": "Automatically configure router access for incoming connections where supported."
+      },
+      {
+        "id": "F21.S05",
+        "intent": "Inspect peer connectivity, performance, synchronization, and relay behavior."
+      },
+      {
+        "id": "F21.S06",
+        "intent": "Check whether peer connections use encrypted transport."
+      },
+      {
+        "id": "F21.S07",
+        "intent": "Sort peers, copy peer addresses to the clipboard, and disconnect unwanted peers."
+      },
+      {
+        "id": "F21.S08",
+        "intent": "Temporarily ban peers, review existing bans, and restore access."
+      },
+      {
+        "id": "F21.S09",
+        "intent": "Copy banned addresses and network ranges to the clipboard."
+      }
+    ],
+    "support": [],
+    "qml_comparison": "**Partial.** Pause/resume networking, allow inbound connections, configure SOCKS5/Tor routing and automatic port mapping, and inspect peer details and encrypted transport. Sort/filter peers, copy peer details, disconnect, temporarily ban, review bans, and unban. Copying banned addresses/network ranges is missing.<br><br>[Network settings](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/settings/ConnectionSettingsPage.qml); [Peers](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/node/Peers.qml); [Peer details](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/node/PeerDetails.qml); [Bans](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/components/BannedPeersPopup.qml)."
+  },
+  {
+    "id": "F22",
+    "number": 22,
+    "name": "Inspect Node and Use RPC Console",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/rpcconsole.cpp",
+    "slug": "22-inspect-node-and-use-rpc-console",
+    "subfeatures": [
+      {
+        "id": "F22.S01",
+        "intent": "Inspect node identity, network, synchronization, and mempool information."
+      },
+      {
+        "id": "F22.S02",
+        "intent": "Monitor network traffic and data usage over time."
+      },
+      {
+        "id": "F22.S03",
+        "intent": "Focus traffic monitoring on a chosen time period or begin a fresh observation."
+      },
+      {
+        "id": "F22.S04",
+        "intent": "Inspect logs for troubleshooting."
+      },
+      {
+        "id": "F22.S05",
+        "intent": "Run advanced node and wallet commands."
+      },
+      {
+        "id": "F22.S06",
+        "intent": "Choose which wallet an advanced operation applies to."
+      },
+      {
+        "id": "F22.S07",
+        "intent": "Use command history, completion, and help."
+      },
+      {
+        "id": "F22.S08",
+        "intent": "Adjust console readability and clear previous output."
+      },
+      {
+        "id": "F22.S09",
+        "intent": "Use RPC for descriptor import, multisig setup, wallet rescans, and combining PSBTs."
+      }
+    ],
+    "support": [],
+    "qml_comparison": "**Partial.** Inspect node/mempool information, traffic totals/history with selectable time ranges, and logs. Run node and selected-wallet RPC commands with history, completion, help, adjustable text, and output clearing. No action to reset traffic history and start a fresh observation.<br><br>[Node information](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/models/nodemodel.cpp#L654); [Console](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/node/CommandConsole.qml); [Wallet context](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/components/SettingsView.qml#L372); [Traffic](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/node/NetworkTraffic.qml)."
+  },
+  {
+    "id": "F23",
+    "number": 23,
+    "name": "Configure Application Preferences",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/forms/optionsdialog.ui",
+    "slug": "23-configure-application-preferences",
+    "subfeatures": [
+      {
+        "id": "F23.S01",
+        "intent": "Allocate memory and processing resources for block validation."
+      },
+      {
+        "id": "F23.S02",
+        "intent": "Allow external tools to communicate with the node through RPC."
+      },
+      {
+        "id": "F23.S03",
+        "intent": "Choose whether unconfirmed change is available for spending."
+      },
+      {
+        "id": "F23.S04",
+        "intent": "Set the default treatment of fees in recipient amounts."
+      },
+      {
+        "id": "F23.S05",
+        "intent": "Choose whether advanced transaction controls are available."
+      },
+      {
+        "id": "F23.S06",
+        "intent": "Choose the interface language and amount units: BTC, mBTC, bits, or satoshis. [Amount units](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/bitcoinunits.cpp)."
+      },
+      {
+        "id": "F23.S07",
+        "intent": "Customize the font used to display wallet balances."
+      },
+      {
+        "id": "F23.S08",
+        "intent": "Choose external services for inspecting transactions."
+      },
+      {
+        "id": "F23.S09",
+        "intent": "Configure startup and window behavior."
+      },
+      {
+        "id": "F23.S10",
+        "intent": "Manage advanced application configuration."
+      },
+      {
+        "id": "F23.S11",
+        "intent": "Understand which settings take precedence and which changes require a restart. [Settings behavior](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/optionsdialog.cpp)."
+      },
+      {
+        "id": "F23.S12",
+        "intent": "Restore default preferences while retaining a backup of previous settings. [Settings recovery](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/optionsmodel.cpp)."
+      }
+    ],
+    "support": [],
+    "qml_comparison": "**Partial.** Configure validation resources, RPC server access, networking/storage, language, all four amount units, money fonts, explorers, and window behavior; view setting precedence and restart requirements. No preferences for unconfirmed-change spending, default fee subtraction, or enabling/disabling advanced transaction controls; no configuration-file opening action. Resetting settings with a backup is available through the startup option, without an in-app reset flow. Automatic login startup is missing.<br><br>[Preferences](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/models/options_model.h); [Display settings](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/settings/DisplaySettingsPage.qml); [Settings reset](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/datadir.cpp#L229)."
+  },
+  {
+    "id": "F24",
+    "number": 24,
+    "name": "System Tray / macOS Dock",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/bitcoingui.cpp#L894",
+    "slug": "24-system-tray-macos-dock",
+    "subfeatures": [
+      {
+        "id": "F24.S01",
+        "intent": "Keep the application accessible while its main window is hidden."
+      },
+      {
+        "id": "F24.S02",
+        "intent": "Control application visibility without interrupting the node."
+      },
+      {
+        "id": "F24.S03",
+        "intent": "Quickly access payments, message signing and verification, settings, and diagnostics."
+      },
+      {
+        "id": "F24.S04",
+        "intent": "Quit the application."
+      },
+      {
+        "id": "F24.S05",
+        "intent": "Choose whether to display a tray icon on supported desktops."
+      }
+    ],
+    "support": [
+      "*Support: Uses the system tray on supported Windows/Linux desktops and the Dock on macOS.*"
+    ],
+    "qml_comparison": "**Partial.** Show/hide the main window, keep the node running in the background, quit through the tray, and configure tray visibility. Reopen the application through the macOS Dock. Tray/Dock shortcuts to payments, message signing, settings, and diagnostics are missing.<br><br>[Tray](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/models/desktoptrayiconcontroller.cpp); [Dock](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/models/macdockiconhandler.mm)."
+  },
+  {
+    "id": "F25",
+    "number": 25,
+    "name": "Desktop Notifications",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/notificator.cpp",
+    "slug": "25-desktop-notifications",
+    "subfeatures": [
+      {
+        "id": "F25.S01",
+        "intent": "Receive updates about incoming and outgoing payments."
+      },
+      {
+        "id": "F25.S02",
+        "intent": "Identify the affected transaction and wallet, including amounts and recipient information."
+      },
+      {
+        "id": "F25.S03",
+        "intent": "Receive informational, warning, and critical messages through desktop notifications."
+      },
+      {
+        "id": "F25.S04",
+        "intent": "Receive critical error messages when desktop notifications are unavailable."
+      },
+      {
+        "id": "F25.S05",
+        "intent": "Avoid a flood of notifications while historical wallet activity is being loaded. [Transaction notifications](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/walletview.cpp#L125)."
+      }
+    ],
+    "support": [
+      "*Support: Delivery depends on the application build and the desktop notification support available.*"
+    ],
+    "qml_comparison": "**Not available in GUI.** No desktop payment-notification or desktop information/warning/error delivery is connected. In-app messages and critical-error dialogs are available under progress, errors, and confirmations.<br><br>[Desktop integration](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/models/desktoptrayiconcontroller.cpp); [In-app messages](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/models/nodemodel.cpp#L590)."
+  },
+  {
+    "id": "F26",
+    "number": 26,
+    "name": "Manage Application Windows",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/bitcoingui.cpp",
+    "slug": "26-manage-application-windows",
+    "subfeatures": [
+      {
+        "id": "F26.S01",
+        "intent": "Arrange, hide, and restore application windows."
+      },
+      {
+        "id": "F26.S02",
+        "intent": "Remember the main window placement between sessions."
+      },
+      {
+        "id": "F26.S03",
+        "intent": "Keep the node running while the main window is minimized or closed, where supported."
+      },
+      {
+        "id": "F26.S04",
+        "intent": "Use diagnostics alongside wallet activity."
+      },
+      {
+        "id": "F26.S05",
+        "intent": "Identify the active wallet and network."
+      }
+    ],
+    "support": [],
+    "qml_comparison": "**Partial.** Resize, minimize, hide, restore, and remember main-window placement; keep running on minimize/close where supported; identify the active wallet and network. A separate diagnostics window for use alongside wallet activity is missing.<br><br>[Window behavior](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/MainWindow.qml); [Window preferences](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/settings/WindowBehaviorSettingsPage.qml)."
+  },
+  {
+    "id": "F27",
+    "number": 27,
+    "name": "Start and Exit Application",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/bitcoin.cpp",
+    "slug": "27-start-and-exit-application",
+    "subfeatures": [
+      {
+        "id": "F27.S01",
+        "intent": "Start automatically at system login on Windows and Linux. [Automatic startup](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/guiutil.cpp)."
+      },
+      {
+        "id": "F27.S02",
+        "intent": "Start with the main window minimized."
+      },
+      {
+        "id": "F27.S03",
+        "intent": "Monitor initialization progress."
+      },
+      {
+        "id": "F27.S04",
+        "intent": "Request an orderly shutdown during startup."
+      },
+      {
+        "id": "F27.S05",
+        "intent": "Shut down the node cleanly."
+      },
+      {
+        "id": "F27.S06",
+        "intent": "Know when shutdown is still in progress."
+      },
+      {
+        "id": "F27.S07",
+        "intent": "Recover unreadable settings or stop startup without changing them."
+      },
+      {
+        "id": "F27.S08",
+        "intent": "Coordinate application shutdown with Windows session shutdown. [System shutdown integration](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/winshutdownmonitor.cpp)."
+      }
+    ],
+    "support": [],
+    "qml_comparison": "**Partial.** Show startup/busy states and startup failures, request shutdown during initialization, shut down cleanly, and display shutdown progress. Automatic login startup, starting minimized, an interactive repair-or-abort choice for unreadable settings, and Windows session-shutdown coordination are missing.<br><br>[Application lifecycle](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/bitcoin.cpp); [Shutdown](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/models/nodemodel.cpp#L427); [Startup options](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/guiargs.cpp)."
+  },
+  {
+    "id": "F28",
+    "number": 28,
+    "name": "Navigate the Application",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/bitcoingui.cpp#L253",
+    "slug": "28-navigate-the-application",
+    "subfeatures": [
+      {
+        "id": "F28.S01",
+        "intent": "Move between wallet balances, payments, and transaction history."
+      },
+      {
+        "id": "F28.S02",
+        "intent": "Switch between available wallets."
+      },
+      {
+        "id": "F28.S03",
+        "intent": "Access address records and node diagnostics."
+      },
+      {
+        "id": "F28.S04",
+        "intent": "Reach common wallet and application tasks quickly."
+      },
+      {
+        "id": "F28.S05",
+        "intent": "Use keyboard shortcuts for navigation and common actions."
+      }
+    ],
+    "support": [],
+    "qml_comparison": "**Implemented.** Navigate wallets, balances/activity, sending, receiving, addresses, settings, and node tools. Switch wallets and use application menus and keyboard shortcuts for common actions.<br><br>[Application navigation](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/MainWindow.qml); [Menu actions and shortcuts](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/components/DesktopMenuActions.qml)."
+  },
+  {
+    "id": "F29",
+    "number": 29,
+    "name": "View Application Status",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/bitcoingui.cpp",
+    "slug": "29-view-application-status",
+    "subfeatures": [
+      {
+        "id": "F29.S01",
+        "intent": "Check connection count and whether networking is active."
+      },
+      {
+        "id": "F29.S02",
+        "intent": "Understand synchronization progress and whether wallet information is current."
+      },
+      {
+        "id": "F29.S03",
+        "intent": "Check whether a proxy is in use."
+      },
+      {
+        "id": "F29.S04",
+        "intent": "Check wallet encryption, lock, and key-generation status."
+      },
+      {
+        "id": "F29.S05",
+        "intent": "Choose the denomination used to display amounts."
+      },
+      {
+        "id": "F29.S06",
+        "intent": "Understand available actions through contextual guidance."
+      }
+    ],
+    "support": [],
+    "qml_comparison": "**Partial.** Show peer/network state, synchronization state, amount units, wallet type, and contextual guidance. Proxy configuration and encryption information are available in settings. Visible wallet locked/unlocked and key-generation status are missing.<br><br>[Wallet and node status](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/wallet/DesktopWallets.qml); [Wallet information](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/settings/WalletSectionPage.qml); [Proxy information](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/settings/ProxySettingsPage.qml)."
+  },
+  {
+    "id": "F30",
+    "number": 30,
+    "name": "Show Progress, Errors, and Confirmations",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/bitcoingui.cpp#L1286",
+    "slug": "30-show-progress-errors-and-confirmations",
+    "subfeatures": [
+      {
+        "id": "F30.S01",
+        "intent": "Understand operation results, warnings, and errors."
+      },
+      {
+        "id": "F30.S02",
+        "intent": "Review important decisions before committing to an action."
+      },
+      {
+        "id": "F30.S03",
+        "intent": "Inspect additional diagnostic information when available."
+      },
+      {
+        "id": "F30.S04",
+        "intent": "Receive a prompt when an operation requires attention."
+      },
+      {
+        "id": "F30.S05",
+        "intent": "Track long-running operations."
+      },
+      {
+        "id": "F30.S06",
+        "intent": "Assess synchronization progress, processing rate, and estimated remaining work. [Synchronization feedback](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/modaloverlay.cpp)."
+      },
+      {
+        "id": "F30.S07",
+        "intent": "Monitor background synchronization while retaining access to the application."
+      }
+    ],
+    "support": [],
+    "qml_comparison": "**Partial.** Show node warnings/errors/questions, wallet-operation feedback, confirmations, busy states, and background synchronization with progress and estimated remaining time. General wallet-operation/rescan progress reporting and an explicit synchronization processing-rate display are missing.<br><br>[Runtime messages](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/models/nodemodel.cpp#L590); [Synchronization feedback](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/components/BlockClock.qml); [Application dialogs](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/MainWindow.qml)."
+  },
+  {
+    "id": "F31",
+    "number": 31,
+    "name": "Desktop Integration and Application Help",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/bitcoingui.cpp",
+    "slug": "31-desktop-integration-and-application-help",
+    "subfeatures": [
+      {
+        "id": "F31.S01",
+        "intent": "Open Bitcoin payment requests from other applications or by drag and drop."
+      },
+      {
+        "id": "F31.S02",
+        "intent": "Distinguish application instances using different Bitcoin networks."
+      },
+      {
+        "id": "F31.S03",
+        "intent": "Adapt application visuals to the desktop appearance."
+      },
+      {
+        "id": "F31.S04",
+        "intent": "Prevent macOS background throttling from slowing initial synchronization and reindexing."
+      },
+      {
+        "id": "F31.S05",
+        "intent": "Use external block explorers to inspect transactions."
+      },
+      {
+        "id": "F31.S06",
+        "intent": "Access application information and command-line help."
+      }
+    ],
+    "support": [],
+    "qml_comparison": "**Partial.** Import payment requests by drag and drop, distinguish networks, choose light/dark appearance, open explorers, and view application information and RPC documentation. Desktop-delivered payment links, automatic following of desktop appearance, macOS protection against background throttling, and in-app command-line help are missing.<br><br>[Payment-request import](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/wallet/SendCreate.qml); [Appearance](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/controls/Theme.qml); [Help and desktop actions](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/components/DesktopMenuActions.qml); [Startup integration](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/bitcoin.cpp)."
+  },
+  {
+    "id": "F32",
+    "number": 32,
+    "name": "Mask Wallet Values / Privacy Mode",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/overviewpage.cpp",
+    "slug": "32-mask-wallet-values-privacy-mode",
+    "subfeatures": [
+      {
+        "id": "F32.S01",
+        "intent": "Conceal wallet balances and recent activity."
+      },
+      {
+        "id": "F32.S02",
+        "intent": "Restrict access to transaction history while privacy mode is active. [History privacy](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/bitcoingui.cpp)."
+      },
+      {
+        "id": "F32.S03",
+        "intent": "Apply the privacy preference across loaded wallets."
+      },
+      {
+        "id": "F32.S04",
+        "intent": "Remember the privacy preference between sessions."
+      }
+    ],
+    "support": [
+      "*Support: Masking covers the wallet overview and history. Notification contents and other amount displays are outside its scope.*"
+    ],
+    "qml_comparison": "**Not available in GUI.** No wallet balance/activity masking, history restriction, or persistent privacy-mode preference.<br><br>[Wallet display](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/wallet/DesktopWallets.qml); [Display preferences](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/settings/DisplaySettingsPage.qml)."
+  },
+  {
+    "id": "F33",
+    "number": 33,
+    "name": "Run with Wallet Functionality Disabled",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/bitcoingui.cpp",
+    "slug": "33-run-with-wallet-functionality-disabled",
+    "subfeatures": [
+      {
+        "id": "F33.S01",
+        "intent": "Operate a node independently of wallet functionality."
+      },
+      {
+        "id": "F33.S02",
+        "intent": "Manage node information, networking, traffic, and diagnostics."
+      },
+      {
+        "id": "F33.S03",
+        "intent": "Retain application preferences and desktop integration without wallet features."
+      }
+    ],
+    "support": [
+      "*Support: Wallet screens and graphical PSBT workflows require wallet functionality to be enabled. Leaving wallets closed is a separate supported mode.*"
+    ],
+    "qml_comparison": "**Implemented.** Runtime wallet-disabled mode retains node operation, networking, traffic, diagnostics, settings, and the application shell while hiding wallet workflows.<br><br>[Wallet-disabled startup](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/bitcoin.cpp); [Wallet-disabled test cases](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/test/functional/qml_test_disablewallet_boot.py)."
+  },
+  {
+    "id": "F34",
+    "number": 34,
+    "name": "Monitor and Cancel Wallet Rescans",
+    "widgets_source": "https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/walletview.cpp",
+    "slug": "34-monitor-and-cancel-wallet-rescans",
+    "subfeatures": [
+      {
+        "id": "F34.S01",
+        "intent": "Rediscover wallet activity from blockchain history."
+      },
+      {
+        "id": "F34.S02",
+        "intent": "Monitor rescan progress."
+      },
+      {
+        "id": "F34.S03",
+        "intent": "Request cancellation of an ongoing wallet rescan."
+      }
+    ],
+    "support": [
+      "*Support: Rescans are initiated by wallet operations or RPC.*"
+    ],
+    "qml_comparison": "**RPC only.** Core wallet RPCs provide rescanning, but QML has no wallet-rescan progress display or cancellation flow. The general node synchronization display does not represent a wallet rescan.<br><br>[Wallet model](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/models/walletqmlmodel.h); [RPC console](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/node/CommandConsole.qml)."
+  }
+]

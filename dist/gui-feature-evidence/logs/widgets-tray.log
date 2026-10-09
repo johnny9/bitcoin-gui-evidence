@@ -1,0 +1,3 @@
+{"id": "tray-hide-keeps-node", "features": ["F24.S01", "F24.S02", "F26.S03"], "description": "Native tray Hide makes the main window invisible while node RPC still responds.", "actual": [false, true], "expected": [false, true], "status": "passed"}
+{"id": "tray-restore-window", "features": ["F24.S01", "F24.S02"], "description": "Native tray Show restores the main window.", "actual": true, "expected": true, "status": "passed"}
+{"id": "notification-payment-arrived", "features": ["F25.S01", "F25.S02"], "description": "Notification fixture transaction reaches the GUI wallet.", "actual": 0.125, "expected": 0.125, "status": "passed"}

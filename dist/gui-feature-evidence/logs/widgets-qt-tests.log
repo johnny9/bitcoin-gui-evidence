@@ -1,0 +1,110 @@
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+********* Start testing of AppTests *********
+Config: Using QtTest library 6.4.2, Qt 6.4.2 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 13.2.0), ubuntu 24.04
+PASS   : AppTests::initTestCase()
+QINFO  : AppTests::appTests() Backing up GUI settings to "/tmp/test_common bitcoin/5059c063672e1c14e1a6/regtest/guisettings.ini.bak"
+QDEBUG : AppTests::appTests() requestInitialize : Requesting initialize
+QDEBUG : AppTests::appTests() Running initialization in thread
+QDEBUG : AppTests::appTests() initializeResult : Initialization result:  true
+QINFO  : AppTests::appTests() Platform customization: "other"
+QWARN  : AppTests::appTests() This plugin does not support propagateSizeHints()
+QWARN  : AppTests::appTests() This plugin does not support propagateSizeHints()
+QWARN  : AppTests::appTests() This plugin does not support raise()
+QWARN  : AppTests::appTests() This plugin does not support raise()
+QWARN  : AppTests::appTests() This plugin does not support grabbing the keyboard
+QWARN  : AppTests::appTests() This plugin does not support propagateSizeHints()
+QDEBUG : AppTests::appTests() requestShutdown : Requesting shutdown
+QDEBUG : AppTests::appTests() Running Shutdown in thread
+QDEBUG : AppTests::appTests() Shutdown finished
+PASS   : AppTests::appTests()
+PASS   : AppTests::cleanupTestCase()
+Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 327ms
+********* Finished testing of AppTests *********
+********* Start testing of OptionTests *********
+Config: Using QtTest library 6.4.2, Qt 6.4.2 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 13.2.0), ubuntu 24.04
+PASS   : OptionTests::initTestCase()
+PASS   : OptionTests::migrateSettings()
+PASS   : OptionTests::integerGetArgBug()
+PASS   : OptionTests::parametersInteraction()
+PASS   : OptionTests::extractFilter()
+PASS   : OptionTests::cleanupTestCase()
+Totals: 6 passed, 0 failed, 0 skipped, 0 blacklisted, 81ms
+********* Finished testing of OptionTests *********
+********* Start testing of URITests *********
+Config: Using QtTest library 6.4.2, Qt 6.4.2 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 13.2.0), ubuntu 24.04
+PASS   : URITests::initTestCase()
+PASS   : URITests::uriTests()
+PASS   : URITests::cleanupTestCase()
+Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 0ms
+********* Finished testing of URITests *********
+********* Start testing of RPCNestedTests *********
+Config: Using QtTest library 6.4.2, Qt 6.4.2 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 13.2.0), ubuntu 24.04
+PASS   : RPCNestedTests::initTestCase()
+PASS   : RPCNestedTests::rpcNestedTests()
+PASS   : RPCNestedTests::cleanupTestCase()
+Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 19ms
+********* Finished testing of RPCNestedTests *********
+********* Start testing of WalletTests *********
+Config: Using QtTest library 6.4.2, Qt 6.4.2 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 13.2.0), ubuntu 24.04
+PASS   : WalletTests::initTestCase()
+QDEBUG : WalletTests::walletTests() NotifyUnload
+QWARN  : WalletTests::walletTests() This plugin does not support propagateSizeHints()
+QDEBUG : WalletTests::walletTests() "NotifyTransactionChanged: 6f60b231b55191d7e6047161f6e370731d48aac92bd4e0e91c4dabe63c41e617 status= 0"
+QDEBUG : WalletTests::walletTests() "NotifyTransactionChanged: e45af49c1a8f5a53d79b31027bf8e43b1e88f583921ab3440fd568ef9225264d status= 1"
+QDEBUG : WalletTests::walletTests() "NotifyTransactionChanged: 505ccf44355b4a13874b31168aae61f3b1a85ee3d8747bb94d9de778b8bea312 status= 1"
+QDEBUG : WalletTests::walletTests() "NotifyAddressBookChanged: mfWxJ45yp2SFn7UciZyNpvDKrzbhyfKrY8  isMine=0 purpose=1 status=0"
+QWARN  : WalletTests::walletTests() This plugin does not support propagateSizeHints()
+QDEBUG : WalletTests::walletTests() "TransactionTablePriv::updateWallet: 6f60b231b55191d7e6047161f6e370731d48aac92bd4e0e91c4dabe63c41e617 0"
+QDEBUG : WalletTests::walletTests() "    inModel=0 Index=9-9 showTransaction=1 derivedStatus=0"
+QDEBUG : WalletTests::walletTests() "TransactionTablePriv::updateWallet: e45af49c1a8f5a53d79b31027bf8e43b1e88f583921ab3440fd568ef9225264d 1"
+QDEBUG : WalletTests::walletTests() "    inModel=1 Index=24-25 showTransaction=1 derivedStatus=1"
+QDEBUG : WalletTests::walletTests() "TransactionTablePriv::updateWallet: 505ccf44355b4a13874b31168aae61f3b1a85ee3d8747bb94d9de778b8bea312 1"
+QDEBUG : WalletTests::walletTests() "    inModel=1 Index=6-7 showTransaction=1 derivedStatus=1"
+QDEBUG : WalletTests::walletTests() "NotifyTransactionChanged: 5a0f69fac81c07bb2a9925fec07039b291d70ec4206f657dc9c6849f9d08e74c status= 0"
+QDEBUG : WalletTests::walletTests() "NotifyTransactionChanged: e9c211c215ba6aef8ea0c2dd449fb776e01e4e8a60143a26fa593d922c4de7db status= 1"
+QDEBUG : WalletTests::walletTests() "TransactionTablePriv::updateWallet: 5a0f69fac81c07bb2a9925fec07039b291d70ec4206f657dc9c6849f9d08e74c 0"
+QDEBUG : WalletTests::walletTests() "    inModel=0 Index=24-24 showTransaction=1 derivedStatus=0"
+QDEBUG : WalletTests::walletTests() "TransactionTablePriv::updateWallet: e9c211c215ba6aef8ea0c2dd449fb776e01e4e8a60143a26fa593d922c4de7db 1"
+QDEBUG : WalletTests::walletTests() "    inModel=1 Index=80-81 showTransaction=1 derivedStatus=1"
+QWARN  : WalletTests::walletTests() This plugin does not support propagateSizeHints()
+QWARN  : WalletTests::walletTests() This plugin does not support propagateSizeHints()
+QWARN  : WalletTests::walletTests() This plugin does not support propagateSizeHints()
+QDEBUG : WalletTests::walletTests() "NotifyTransactionChanged: 859c08895768e294fc3620f6241d70532e95482ea9b97dfc63d48bf01818cc15 status= 0"
+QDEBUG : WalletTests::walletTests() "NotifyTransactionChanged: e9c211c215ba6aef8ea0c2dd449fb776e01e4e8a60143a26fa593d922c4de7db status= 1"
+QDEBUG : WalletTests::walletTests() "NotifyTransactionChanged: 5a0f69fac81c07bb2a9925fec07039b291d70ec4206f657dc9c6849f9d08e74c status= 1"
+QDEBUG : WalletTests::walletTests() "TransactionTablePriv::updateWallet: 5a0f69fac81c07bb2a9925fec07039b291d70ec4206f657dc9c6849f9d08e74c 1"
+QDEBUG : WalletTests::walletTests() "    inModel=1 Index=24-25 showTransaction=1 derivedStatus=1"
+QDEBUG : WalletTests::walletTests() "TransactionTablePriv::updateWallet: 859c08895768e294fc3620f6241d70532e95482ea9b97dfc63d48bf01818cc15 0"
+QDEBUG : WalletTests::walletTests() "    inModel=0 Index=8-8 showTransaction=1 derivedStatus=0"
+QDEBUG : WalletTests::walletTests() "TransactionTablePriv::updateWallet: e9c211c215ba6aef8ea0c2dd449fb776e01e4e8a60143a26fa593d922c4de7db 1"
+QDEBUG : WalletTests::walletTests() "    inModel=1 Index=81-82 showTransaction=1 derivedStatus=1"
+QDEBUG : WalletTests::walletTests() "TransactionTablePriv::updateWallet: 5a0f69fac81c07bb2a9925fec07039b291d70ec4206f657dc9c6849f9d08e74c 1"
+QDEBUG : WalletTests::walletTests() "    inModel=1 Index=25-26 showTransaction=1 derivedStatus=1"
+QWARN  : WalletTests::walletTests() This plugin does not support propagateSizeHints()
+QDEBUG : WalletTests::walletTests() "NotifyAddressBookChanged: bcrt1q4d4tuwqun56l4dulyq7g90yulvgkf9d7mlgss3 TEST_LABEL_1 isMine=1 purpose=0 status=0"
+QWARN  : WalletTests::walletTests() This plugin does not support propagateSizeHints()
+QDEBUG : WalletTests::walletTests() NotifyUnload
+QWARN  : WalletTests::walletTests() This plugin does not support propagateSizeHints()
+QWARN  : WalletTests::walletTests() This plugin does not support propagateSizeHints()
+QWARN  : WalletTests::walletTests() This plugin does not support propagateSizeHints()
+PASS   : WalletTests::walletTests()
+PASS   : WalletTests::cleanupTestCase()
+Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 946ms
+********* Finished testing of WalletTests *********
+********* Start testing of AddressBookTests *********
+Config: Using QtTest library 6.4.2, Qt 6.4.2 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 13.2.0), ubuntu 24.04
+PASS   : AddressBookTests::initTestCase()
+QDEBUG : AddressBookTests::addressBookTests() NotifyUnload
+QWARN  : AddressBookTests::addressBookTests() This plugin does not support propagateSizeHints()
+QWARN  : AddressBookTests::addressBookTests() This plugin does not support propagateSizeHints()
+QDEBUG : AddressBookTests::addressBookTests() "NotifyAddressBookChanged: bcrt1q04hzn6a63fnjj7hwx4pj6544mn3k3d7dhfld6c io - new A isMine=0 purpose=1 status=0"
+QDEBUG : AddressBookTests::addressBookTests() "NotifyAddressBookChanged: bcrt1ql9n72vyh2ejx73zla6nc2vscdqm7jg0z5ylp4t io - new B isMine=0 purpose=1 status=0"
+PASS   : AddressBookTests::addressBookTests()
+PASS   : AddressBookTests::cleanupTestCase()
+Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 353ms
+********* Finished testing of AddressBookTests *********
+
+All tests passed.
+
+~InitExecutor : Stopping thread
+~InitExecutor : Stopped thread

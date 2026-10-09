@@ -1,0 +1,483 @@
+[
+  {
+    "id": "create-standard-wallet",
+    "features": [
+      "F01.S01",
+      "F01.S02",
+      "F01.S06"
+    ],
+    "description": "GUI creates the named, unencrypted descriptor wallet with private keys.",
+    "actual": [
+      "Acceptance wallet",
+      true,
+      true,
+      true
+    ],
+    "expected": [
+      "Acceptance wallet",
+      true,
+      true,
+      true
+    ],
+    "status": "passed"
+  },
+  {
+    "id": "create-blank-wallet",
+    "features": [
+      "F01.S04"
+    ],
+    "description": "Blank wallet has no generated keys.",
+    "actual": 0,
+    "expected": 0,
+    "status": "passed"
+  },
+  {
+    "id": "create-watchonly-wallet",
+    "features": [
+      "F01.S03"
+    ],
+    "description": "Watch-only wallet has private keys disabled.",
+    "actual": false,
+    "expected": false,
+    "status": "passed"
+  },
+  {
+    "id": "multiple-wallets-loaded",
+    "features": [
+      "F02.S01",
+      "F02.S02"
+    ],
+    "description": "Several wallets remain loaded.",
+    "actual": true,
+    "expected": true,
+    "status": "passed"
+  },
+  {
+    "id": "enable-coin-control",
+    "features": [
+      "F23.S05"
+    ],
+    "description": "Enabling advanced controls exposes input selection.",
+    "actual": true,
+    "expected": true,
+    "status": "passed"
+  },
+  {
+    "id": "receive-copy-address",
+    "features": [
+      "F08.S04"
+    ],
+    "description": "Copy address writes the generated address to the system clipboard.",
+    "actual": "bcrt1qyvxz30y0qhakrvkg88gmy6ym226qgdtks7720k",
+    "expected": "bcrt1qyvxz30y0qhakrvkg88gmy6ym226qgdtks7720k",
+    "status": "passed"
+  },
+  {
+    "id": "receive-copy-uri",
+    "features": [
+      "F08.S02",
+      "F08.S03",
+      "F08.S04"
+    ],
+    "description": "Copied BIP21 link includes address, amount, label and message.",
+    "actual": [
+      "bcrt1qyvxz30y0qhakrvkg88gmy6ym226qgdtks7720k",
+      1.25,
+      [
+        "Acceptance payment"
+      ],
+      [
+        "Regtest payment request"
+      ]
+    ],
+    "expected": [
+      "bcrt1qyvxz30y0qhakrvkg88gmy6ym226qgdtks7720k",
+      1.25,
+      [
+        "Acceptance payment"
+      ],
+      [
+        "Regtest payment request"
+      ]
+    ],
+    "status": "passed"
+  },
+  {
+    "id": "receive-owned-address",
+    "features": [
+      "F08.S01"
+    ],
+    "description": "Generated receiving address belongs to the selected wallet.",
+    "actual": true,
+    "expected": true,
+    "status": "passed"
+  },
+  {
+    "id": "sign-message",
+    "features": [
+      "F19.S01"
+    ],
+    "description": "GUI signature verifies through Core RPC.",
+    "actual": true,
+    "expected": true,
+    "status": "passed"
+  },
+  {
+    "id": "copy-signature",
+    "features": [
+      "F19.S03"
+    ],
+    "description": "Signature is copied to the system clipboard.",
+    "actual": "IDqe1D5RM9RBIgprt/w0m6E7kpLmWXyv0P7o+J/6gTf9GbydQmQ9+a8ZfISPnZnnTRxx76CX91ntgf4oBBPbuGc=",
+    "expected": "IDqe1D5RM9RBIgprt/w0m6E7kpLmWXyv0P7o+J/6gTf9GbydQmQ9+a8ZfISPnZnnTRxx76CX91ntgf4oBBPbuGc=",
+    "status": "passed"
+  },
+  {
+    "id": "verify-message",
+    "features": [
+      "F19.S02"
+    ],
+    "description": "GUI reports valid message signature.",
+    "actual": "Message verified.",
+    "expected": "Message verified.",
+    "status": "passed"
+  },
+  {
+    "id": "privacy-values",
+    "features": [
+      "F07.S05",
+      "F32.S01"
+    ],
+    "description": "Balance text is masked in the overview.",
+    "actual": true,
+    "expected": true,
+    "status": "passed"
+  },
+  {
+    "id": "privacy-history-disabled",
+    "features": [
+      "F32.S02"
+    ],
+    "description": "Transaction history action is disabled while privacy is on.",
+    "actual": false,
+    "expected": false,
+    "status": "passed"
+  },
+  {
+    "id": "backup-wallet-file",
+    "features": [
+      "F03.S01"
+    ],
+    "description": "The GUI writes a nonempty wallet backup file.",
+    "actual": true,
+    "expected": true,
+    "status": "passed"
+  },
+  {
+    "id": "export-watchonly-file",
+    "features": [
+      "F05.S02"
+    ],
+    "description": "The GUI exports a nonempty watch-only backup.",
+    "actual": true,
+    "expected": true,
+    "status": "passed"
+  },
+  {
+    "id": "watchonly-transfer",
+    "features": [
+      "F05.S01",
+      "F05.S03",
+      "F05.S04"
+    ],
+    "description": "Exported wallet restores on another node with private keys disabled and public descriptors only.",
+    "actual": [
+      false,
+      true,
+      false
+    ],
+    "expected": [
+      false,
+      true,
+      false
+    ],
+    "status": "passed"
+  },
+  {
+    "id": "restore-wallet",
+    "features": [
+      "F03.S02",
+      "F03.S03"
+    ],
+    "description": "GUI restores the selected backup under the requested name with spending keys.",
+    "actual": [
+      "Recovered acceptance wallet",
+      true
+    ],
+    "expected": [
+      "Recovered acceptance wallet",
+      true
+    ],
+    "status": "passed"
+  },
+  {
+    "id": "uri-populates-send",
+    "features": [
+      "F10.S01",
+      "F10.S02"
+    ],
+    "description": "Opening a payment URI populates recipient and amount.",
+    "actual": [
+      "bcrt1q8dvwxnqx8a9yphp2gm5ew738w0dgtvlezywwdr",
+      125000000
+    ],
+    "expected": [
+      "bcrt1q8dvwxnqx8a9yphp2gm5ew738w0dgtvlezywwdr",
+      125000000
+    ],
+    "status": "passed"
+  },
+  {
+    "id": "export-unsigned-psbt",
+    "features": [
+      "F13.S01",
+      "F13.S02",
+      "F13.S03",
+      "F13.S04",
+      "F13.S05"
+    ],
+    "description": "GUI creates a decodable unsigned single-signature PSBT in the system clipboard.",
+    "actual": true,
+    "expected": true,
+    "status": "passed"
+  },
+  {
+    "id": "sign-imported-psbt",
+    "features": [
+      "F14.S01",
+      "F14.S03",
+      "F14.S04",
+      "F14.S06"
+    ],
+    "description": "GUI signs an imported PSBT and copies a complete finalizable PSBT.",
+    "actual": true,
+    "expected": true,
+    "status": "passed"
+  },
+  {
+    "id": "broadcast-psbt",
+    "features": [
+      "F14.S07",
+      "F09.S07"
+    ],
+    "description": "GUI broadcast reaches the node mempool.",
+    "actual": true,
+    "expected": true,
+    "status": "passed"
+  },
+  {
+    "id": "encrypt-wallet",
+    "features": [
+      "F06.S01"
+    ],
+    "description": "After GUI encryption, the backend reports an encrypted, locked wallet.",
+    "actual": 0,
+    "expected": 0,
+    "status": "passed"
+  },
+  {
+    "id": "change-passphrase",
+    "features": [
+      "F06.S02"
+    ],
+    "description": "The new GUI-supplied passphrase unlocks the wallet through Core RPC.",
+    "actual": true,
+    "expected": true,
+    "status": "passed"
+  },
+  {
+    "id": "temporary-unlock-relock",
+    "features": [
+      "F06.S03",
+      "F06.S04"
+    ],
+    "description": "The GUI signs successfully and immediately restores the locked wallet state.",
+    "actual": [
+      true,
+      0
+    ],
+    "expected": [
+      true,
+      0
+    ],
+    "status": "passed"
+  },
+  {
+    "id": "save-address-label",
+    "features": [
+      "F18.S01",
+      "F18.S02"
+    ],
+    "description": "GUI-created recipient label appears in the wallet address book.",
+    "actual": true,
+    "expected": true,
+    "status": "passed"
+  },
+  {
+    "id": "export-address-book",
+    "features": [
+      "F18.S06"
+    ],
+    "description": "GUI CSV export contains the saved address and label.",
+    "actual": true,
+    "expected": true,
+    "status": "passed"
+  },
+  {
+    "id": "activity-copy-txid",
+    "features": [
+      "F16.S06"
+    ],
+    "description": "The selected history row copies a real transaction ID.",
+    "actual": true,
+    "expected": true,
+    "status": "passed"
+  },
+  {
+    "id": "fee-bump-broadcast",
+    "features": [
+      "F17.S01",
+      "F17.S02",
+      "F17.S03"
+    ],
+    "description": "The GUI replaces the mempool transaction with a higher-fee transaction.",
+    "actual": true,
+    "expected": true,
+    "status": "passed"
+  },
+  {
+    "id": "switch-active-wallet",
+    "features": [
+      "F02.S03",
+      "F28.S02"
+    ],
+    "description": "Selecting another wallet changes the application title.",
+    "actual": true,
+    "expected": true,
+    "status": "passed"
+  },
+  {
+    "id": "pause-network",
+    "features": [
+      "F21.S01",
+      "F29.S01"
+    ],
+    "description": "The GUI network action pauses peer networking.",
+    "actual": false,
+    "expected": false,
+    "status": "passed"
+  },
+  {
+    "id": "resume-network",
+    "features": [
+      "F21.S01"
+    ],
+    "description": "The GUI network action resumes peer networking.",
+    "actual": true,
+    "expected": true,
+    "status": "passed"
+  },
+  {
+    "id": "tray-hide-keeps-node",
+    "features": [
+      "F24.S01",
+      "F24.S02",
+      "F26.S03"
+    ],
+    "description": "Native tray Hide makes the main window invisible while node RPC still responds.",
+    "actual": [
+      false,
+      true
+    ],
+    "expected": [
+      false,
+      true
+    ],
+    "status": "passed"
+  },
+  {
+    "id": "tray-restore-window",
+    "features": [
+      "F24.S01",
+      "F24.S02"
+    ],
+    "description": "Native tray Show restores the main window.",
+    "actual": true,
+    "expected": true,
+    "status": "passed"
+  },
+  {
+    "id": "notification-payment-arrived",
+    "features": [
+      "F25.S01",
+      "F25.S02"
+    ],
+    "description": "Notification fixture transaction reaches the GUI wallet.",
+    "actual": 0.125,
+    "expected": 0.125,
+    "status": "passed"
+  },
+  {
+    "id": "runtime-disablewallet",
+    "features": [
+      "F33.S01"
+    ],
+    "description": "Node RPC remains available with wallet functionality disabled.",
+    "actual": true,
+    "expected": true,
+    "status": "passed"
+  },
+  {
+    "id": "node-only-diagnostics",
+    "features": [
+      "F33.S02"
+    ],
+    "description": "Node diagnostics open in wallet-disabled mode.",
+    "actual": true,
+    "expected": true,
+    "status": "passed"
+  },
+  {
+    "id": "native-tray-quit",
+    "features": [
+      "F24.S04",
+      "F27.S05"
+    ],
+    "description": "Native Linux tray Exit terminates the Widgets process successfully.",
+    "actual": 0,
+    "expected": 0,
+    "status": "passed"
+  },
+  {
+    "id": "desktop-notification-delivered",
+    "features": [
+      "F25.S01",
+      "F25.S02"
+    ],
+    "description": "The desktop service receives the application notification with amount, wallet and label.",
+    "actual": true,
+    "expected": true,
+    "status": "passed"
+  },
+  {
+    "id": "wallet-disabled-clean-exit",
+    "features": [
+      "F27.S05",
+      "F33.S03"
+    ],
+    "description": "The wallet-disabled Widgets process shuts down successfully.",
+    "actual": 0,
+    "expected": 0,
+    "status": "passed"
+  }
+]

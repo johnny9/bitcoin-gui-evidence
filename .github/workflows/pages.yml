@@ -1,0 +1,78 @@
+name: Validate and publish Pages
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Check out source
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - name: Install build dependency
+        run: python -m pip install -r requirements-build.txt
+      - name: Rebuild and validate evidence
+        run: |
+          python scripts/build.py
+          python scripts/validate.py
+          node --check src/app.js
+          node --check src/theme.js
+          node --check scripts/browser-test.cjs
+          git diff --exit-code -- dist
+      - name: Check browser behavior under the Pages project path
+        run: |
+          mkdir -p .validation/browser
+          docker run --rm --init --network none --user 0 --shm-size=256m \
+            -e PUPPETEER_CACHE_DIR=/home/pptruser/.cache/puppeteer \
+            -e SITE_BASE_PATH=/bitcoin-gui-evidence/ \
+            -v "$PWD:/site:ro" -v "$PWD/.validation/browser:/qa:rw" \
+            -w /home/pptruser ghcr.io/puppeteer/puppeteer:24.16.0 \
+            node /site/scripts/browser-test.cjs
+      - name: Retain browser results
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: browser-validation
+          path: |
+            .validation/browser/*.json
+            .validation/browser/*.png
+          if-no-files-found: ignore
+          retention-days: 14
+      - name: Upload site
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
+        with:
+          path: dist
+
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: validate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure Pages
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
+      - name: Publish site
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4

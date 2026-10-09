@@ -1,0 +1,11 @@
+{"id": "create-standard-wallet", "features": ["F01.S01", "F01.S02", "F01.S06"], "description": "GUI creates the named, unencrypted descriptor wallet with private keys.", "actual": ["Acceptance wallet", true, true, true], "expected": ["Acceptance wallet", true, true, true], "status": "passed"}
+{"id": "create-blank-wallet", "features": ["F01.S04"], "description": "Blank wallet has no generated keys.", "actual": 4000, "expected": 0, "status": "failed"}
+Traceback (most recent call last):
+  File "/evidence/scripts/widgets_scenarios.py", line 68, in <module>
+    globals()[sys.argv[1]]()
+  File "/evidence/scripts/widgets_scenarios.py", line 60, in create
+    check('create-blank-wallet',['F01.S04'],'Blank wallet has no generated keys.',info['keypoolsize'],0)
+  File "/evidence/scripts/widgets_scenarios.py", line 31, in check
+    assert passed,description
+           ^^^^^^
+AssertionError: Blank wallet has no generated keys.

@@ -1,0 +1,3 @@
+Starting GUI: /validation/build/bin/bitcoin-core-app -datadir=/work/tmp/qml_test_bridge_t9zwlnlx/node0 -test-automation=/work/tmp/qml_test_bridge_t9zwlnlx/test_bridge.sock -test-settings-dir=/work/tmp/qml_test_bridge_t9zwlnlx/config -qml_onboarded=1 -logtimemicros -debug -debugexclude=leveldb -disablewallet -nolisten
+QmlDriver connected to test bridge.
+BlockClock smoke test PASSED

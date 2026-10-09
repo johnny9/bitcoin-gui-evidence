@@ -1,0 +1,1207 @@
+{
+  "objects": [
+    {
+      "class": "GUIUtil::ClickableProgressBar",
+      "enabled": true,
+      "geometry": [
+        542,
+        759,
+        152,
+        22
+      ],
+      "id": 1,
+      "name": "",
+      "statusTip": "",
+      "text": "15 year(s) and 35 week(s) behind",
+      "title": "",
+      "toolTip": "<nobr>Catching up\u2026<br>Processed 0 block(s) of transaction history.<br>Last received block was generated 15 year(s) and 35 week(s) ago.<br>Transactions after this will not yet be visible.</nobr>",
+      "value": 2021,
+      "visible": true,
+      "window": 2
+    },
+    {
+      "class": "QFrame",
+      "enabled": true,
+      "geometry": [
+        852,
+        759,
+        110,
+        22
+      ],
+      "id": 3,
+      "name": "",
+      "statusTip": "",
+      "title": "",
+      "toolTip": "",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 4,
+      "name": "",
+      "statusTip": "",
+      "text": "",
+      "toolTip": ""
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 5,
+      "name": "",
+      "statusTip": "",
+      "text": "BTC",
+      "toolTip": "BTC"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 6,
+      "name": "",
+      "statusTip": "",
+      "text": "mBTC",
+      "toolTip": "mBTC"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 7,
+      "name": "",
+      "statusTip": "",
+      "text": "\u00b5BTC (bits)",
+      "toolTip": "\u00b5BTC (bits)"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 8,
+      "name": "",
+      "statusTip": "",
+      "text": "Satoshi (sat)",
+      "toolTip": "Satoshi (sat)"
+    },
+    {
+      "class": "QLabel",
+      "enabled": true,
+      "geometry": [
+        693,
+        620,
+        78,
+        14
+      ],
+      "id": 9,
+      "name": "progressIncreasePerH",
+      "statusTip": "",
+      "text": "calculating\u2026",
+      "title": "",
+      "toolTip": "",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "class": "QLabel",
+      "enabled": true,
+      "geometry": [
+        470,
+        640,
+        217,
+        14
+      ],
+      "id": 10,
+      "name": "labelEstimatedTimeLeft",
+      "statusTip": "",
+      "text": "Estimated time left until synced",
+      "title": "",
+      "toolTip": "",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "class": "QLabel",
+      "enabled": true,
+      "geometry": [
+        693,
+        580,
+        155,
+        14
+      ],
+      "id": 11,
+      "name": "newestBlockDate",
+      "statusTip": "",
+      "text": "Wed Feb 2 23:16:42 2011",
+      "title": "",
+      "toolTip": "",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "class": "QLabel",
+      "enabled": true,
+      "geometry": [
+        470,
+        560,
+        146,
+        14
+      ],
+      "id": 12,
+      "name": "labelNumberOfBlocksLeft",
+      "statusTip": "",
+      "text": "Number of blocks left",
+      "title": "",
+      "toolTip": "",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "checked": false,
+      "class": "QPushButton",
+      "enabled": true,
+      "geometry": [
+        812,
+        664,
+        80,
+        22
+      ],
+      "id": 13,
+      "name": "closeButton",
+      "statusTip": "",
+      "text": "Hide",
+      "title": "",
+      "toolTip": "",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "class": "QLabel",
+      "enabled": true,
+      "geometry": [
+        402,
+        759,
+        134,
+        22
+      ],
+      "id": 14,
+      "name": "",
+      "statusTip": "",
+      "text": "Connecting to peers\u2026",
+      "title": "",
+      "toolTip": "<nobr>Catching up\u2026<br>Processed 0 block(s) of transaction history.<br>Last received block was generated 15 year(s) and 35 week(s) ago.<br>Transactions after this will not yet be visible.</nobr>",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "class": "BitcoinGUI",
+      "enabled": true,
+      "geometry": [
+        400,
+        300,
+        562,
+        483
+      ],
+      "id": 2,
+      "name": "",
+      "statusTip": "",
+      "title": "Bitcoin Core - [regtest]",
+      "toolTip": "",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 15,
+      "name": "",
+      "statusTip": "",
+      "text": "",
+      "toolTip": ""
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 16,
+      "name": "",
+      "statusTip": "",
+      "text": "Show Peers tab",
+      "toolTip": "Show Peers tab"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 17,
+      "name": "",
+      "statusTip": "",
+      "text": "Disable network activity",
+      "toolTip": "Disable network activity"
+    },
+    {
+      "checked": true,
+      "class": "QAction",
+      "id": 18,
+      "name": "",
+      "statusTip": "Show general overview of wallet",
+      "text": "&Overview",
+      "toolTip": "Show general overview of wallet"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 19,
+      "name": "",
+      "statusTip": "Send coins to a Bitcoin address",
+      "text": "&Send",
+      "toolTip": "Send coins to a Bitcoin address"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 20,
+      "name": "",
+      "statusTip": "Request payments (generates QR codes and bitcoin: URIs)",
+      "text": "&Receive",
+      "toolTip": "Request payments (generates QR codes and bitcoin: URIs)"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 21,
+      "name": "",
+      "statusTip": "Browse transaction history",
+      "text": "&Transactions",
+      "toolTip": "Browse transaction history"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 22,
+      "name": "",
+      "statusTip": "Quit application",
+      "text": "E&xit",
+      "toolTip": "Exit"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 23,
+      "name": "",
+      "statusTip": "Show information about Bitcoin Core",
+      "text": "&About Bitcoin Core",
+      "toolTip": "About Bitcoin Core"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 24,
+      "name": "",
+      "statusTip": "Show information about Qt",
+      "text": "About &Qt",
+      "toolTip": "About Qt"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 25,
+      "name": "",
+      "statusTip": "Modify configuration options for Bitcoin Core",
+      "text": "&Options\u2026",
+      "toolTip": "Options\u2026"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 26,
+      "name": "",
+      "statusTip": "Encrypt the private keys that belong to your wallet",
+      "text": "&Encrypt Wallet\u2026",
+      "toolTip": "Encrypt Wallet\u2026"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 27,
+      "name": "",
+      "statusTip": "Backup wallet to another location",
+      "text": "&Backup Wallet\u2026",
+      "toolTip": "Backup Wallet\u2026"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 28,
+      "name": "",
+      "statusTip": "Change the passphrase used for wallet encryption",
+      "text": "&Change Passphrase\u2026",
+      "toolTip": "Change Passphrase\u2026"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 29,
+      "name": "",
+      "statusTip": "Sign messages with your Bitcoin addresses to prove you own them",
+      "text": "Sign &message\u2026",
+      "toolTip": "Sign message\u2026"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 30,
+      "name": "",
+      "statusTip": "Verify messages to ensure they were signed with specified Bitcoin addresses",
+      "text": "&Verify message\u2026",
+      "toolTip": "Verify message\u2026"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 31,
+      "name": "",
+      "statusTip": "Load Partially Signed Bitcoin Transaction",
+      "text": "&Load PSBT from file\u2026",
+      "toolTip": "Load PSBT from file\u2026"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 32,
+      "name": "",
+      "statusTip": "Load Partially Signed Bitcoin Transaction from clipboard",
+      "text": "Load PSBT from &clipboard\u2026",
+      "toolTip": "Load PSBT from clipboard\u2026"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 33,
+      "name": "openRPCConsoleAction",
+      "statusTip": "Open node debugging and diagnostic console",
+      "text": "Node window",
+      "toolTip": "Node window"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 34,
+      "name": "",
+      "statusTip": "Show the list of used sending addresses and labels",
+      "text": "&Sending addresses",
+      "toolTip": "Sending addresses"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 35,
+      "name": "",
+      "statusTip": "Show the list of used receiving addresses and labels",
+      "text": "&Receiving addresses",
+      "toolTip": "Receiving addresses"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 36,
+      "name": "",
+      "statusTip": "Open a bitcoin: URI",
+      "text": "Open &URI\u2026",
+      "toolTip": "Open URI\u2026"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 37,
+      "name": "",
+      "statusTip": "Open a wallet",
+      "text": "Open Wallet",
+      "toolTip": "Open Wallet"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 38,
+      "name": "",
+      "statusTip": "",
+      "text": "",
+      "toolTip": ""
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 39,
+      "name": "",
+      "statusTip": "Close wallet",
+      "text": "Close Wallet\u2026",
+      "toolTip": "Close Wallet\u2026"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 40,
+      "name": "",
+      "statusTip": "Create a new wallet",
+      "text": "Create Wallet\u2026",
+      "toolTip": "Create Wallet\u2026"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 41,
+      "name": "",
+      "statusTip": "Restore a wallet from a backup file",
+      "text": "Restore Wallet\u2026",
+      "toolTip": "Restore Wallet\u2026"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 42,
+      "name": "",
+      "statusTip": "Close all wallets",
+      "text": "Close All Wallets\u2026",
+      "toolTip": "Close All Wallets\u2026"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 43,
+      "name": "",
+      "statusTip": "Migrate a wallet",
+      "text": "Migrate Wallet",
+      "toolTip": "Migrate Wallet"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 44,
+      "name": "",
+      "statusTip": "",
+      "text": "",
+      "toolTip": ""
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 45,
+      "name": "",
+      "statusTip": "Show the Bitcoin Core help message to get a list with possible Bitcoin command-line options",
+      "text": "&Command-line options",
+      "toolTip": "Command-line options"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 46,
+      "name": "",
+      "statusTip": "Mask the values in the Overview tab",
+      "text": "&Mask values",
+      "toolTip": "Mask values"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 47,
+      "name": "",
+      "statusTip": "Export a watch-only version of the current wallet that can be restored onto another node.",
+      "text": "Export watch-only wallet",
+      "toolTip": "Export watch-only wallet"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 48,
+      "name": "",
+      "statusTip": "",
+      "text": "&File",
+      "toolTip": "File"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 49,
+      "name": "",
+      "statusTip": "",
+      "text": "",
+      "toolTip": ""
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 50,
+      "name": "",
+      "statusTip": "",
+      "text": "",
+      "toolTip": ""
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 51,
+      "name": "",
+      "statusTip": "",
+      "text": "",
+      "toolTip": ""
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 52,
+      "name": "",
+      "statusTip": "",
+      "text": "&Settings",
+      "toolTip": "Settings"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 53,
+      "name": "",
+      "statusTip": "",
+      "text": "",
+      "toolTip": ""
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 54,
+      "name": "",
+      "statusTip": "",
+      "text": "",
+      "toolTip": ""
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 55,
+      "name": "",
+      "statusTip": "",
+      "text": "&Window",
+      "toolTip": "Window"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 56,
+      "name": "",
+      "statusTip": "",
+      "text": "&Minimize",
+      "toolTip": "Minimize"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 57,
+      "name": "",
+      "statusTip": "",
+      "text": "",
+      "toolTip": ""
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 58,
+      "name": "",
+      "statusTip": "",
+      "text": "",
+      "toolTip": ""
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 59,
+      "name": "",
+      "statusTip": "",
+      "text": "&Information",
+      "toolTip": "Information"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 60,
+      "name": "",
+      "statusTip": "",
+      "text": "&Console",
+      "toolTip": "Console"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 61,
+      "name": "",
+      "statusTip": "",
+      "text": "&Network Traffic",
+      "toolTip": "Network Traffic"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 62,
+      "name": "",
+      "statusTip": "",
+      "text": "&Peers",
+      "toolTip": "Peers"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 63,
+      "name": "",
+      "statusTip": "",
+      "text": "&Help",
+      "toolTip": "Help"
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 64,
+      "name": "",
+      "statusTip": "",
+      "text": "",
+      "toolTip": ""
+    },
+    {
+      "checked": false,
+      "class": "QAction",
+      "id": 65,
+      "name": "",
+      "statusTip": "",
+      "text": "",
+      "toolTip": ""
+    },
+    {
+      "checked": true,
+      "class": "QAction",
+      "id": 66,
+      "name": "",
+      "statusTip": "",
+      "text": "Tabs toolbar",
+      "toolTip": "Tabs toolbar"
+    },
+    {
+      "checked": false,
+      "class": "QWidgetAction",
+      "id": 67,
+      "name": "",
+      "statusTip": "",
+      "text": "",
+      "toolTip": ""
+    },
+    {
+      "checked": false,
+      "class": "QWidgetAction",
+      "id": 68,
+      "name": "",
+      "statusTip": "",
+      "text": "",
+      "toolTip": ""
+    },
+    {
+      "checked": false,
+      "class": "QWidgetAction",
+      "id": 69,
+      "name": "",
+      "statusTip": "",
+      "text": "",
+      "toolTip": ""
+    },
+    {
+      "class": "QLabel",
+      "enabled": true,
+      "geometry": [
+        557,
+        514,
+        247,
+        42
+      ],
+      "id": 70,
+      "name": "",
+      "statusTip": "",
+      "text": "No wallet has been loaded.\nGo to File > Open Wallet to load a wallet.\n- OR -",
+      "title": "",
+      "toolTip": "",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "class": "GUIUtil::ClickableLabel",
+      "enabled": true,
+      "geometry": [
+        934,
+        759,
+        16,
+        22
+      ],
+      "id": 71,
+      "name": "",
+      "statusTip": "",
+      "text": "",
+      "title": "",
+      "toolTip": "<nobr>0 active connection(s) to Bitcoin network.<br>Click for more actions.</nobr>",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "checked": false,
+      "class": "QPushButton",
+      "enabled": false,
+      "geometry": [
+        470,
+        448,
+        60,
+        54
+      ],
+      "id": 72,
+      "name": "warningIcon",
+      "statusTip": "",
+      "text": "",
+      "title": "",
+      "toolTip": "",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "class": "QToolBar",
+      "enabled": true,
+      "geometry": [
+        400,
+        319,
+        562,
+        39
+      ],
+      "id": 73,
+      "name": "",
+      "statusTip": "",
+      "title": "Tabs toolbar",
+      "toolTip": "",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "class": "QLabel",
+      "enabled": true,
+      "geometry": [
+        530,
+        448,
+        362,
+        56
+      ],
+      "id": 74,
+      "name": "infoText",
+      "statusTip": "",
+      "text": "Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitcoin network, as detailed below.",
+      "title": "",
+      "toolTip": "",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "checked": false,
+      "class": "QPushButton",
+      "enabled": true,
+      "geometry": [
+        617,
+        562,
+        128,
+        22
+      ],
+      "id": 75,
+      "name": "",
+      "statusTip": "",
+      "text": "Create a new wallet",
+      "title": "",
+      "toolTip": "",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "class": "QMenuBar",
+      "enabled": true,
+      "geometry": [
+        400,
+        300,
+        562,
+        19
+      ],
+      "id": 76,
+      "name": "",
+      "statusTip": "",
+      "title": "",
+      "toolTip": "",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "checked": false,
+      "class": "QGroupBox",
+      "enabled": true,
+      "geometry": [
+        400,
+        358,
+        562,
+        398
+      ],
+      "id": 77,
+      "name": "",
+      "statusTip": "",
+      "title": "",
+      "toolTip": "",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "class": "QWidget",
+      "enabled": true,
+      "geometry": [
+        460,
+        418,
+        442,
+        278
+      ],
+      "id": 78,
+      "name": "contentWidget",
+      "statusTip": "",
+      "title": "",
+      "toolTip": "",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "class": "QLabel",
+      "enabled": true,
+      "geometry": [
+        470,
+        600,
+        60,
+        14
+      ],
+      "id": 79,
+      "name": "labelSyncDone",
+      "statusTip": "",
+      "text": "Progress",
+      "title": "",
+      "toolTip": "",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "checked": false,
+      "class": "QToolButton",
+      "enabled": false,
+      "geometry": [
+        674,
+        323,
+        119,
+        31
+      ],
+      "id": 80,
+      "name": "",
+      "statusTip": "Browse transaction history",
+      "text": "Transactions",
+      "title": "",
+      "toolTip": "Browse transaction history",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "class": "QLabel",
+      "enabled": true,
+      "geometry": [
+        470,
+        580,
+        104,
+        14
+      ],
+      "id": 81,
+      "name": "labelLastBlockTime",
+      "statusTip": "",
+      "text": "Last block time",
+      "title": "",
+      "toolTip": "",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "class": "UnitDisplayStatusBarControl",
+      "enabled": true,
+      "geometry": [
+        855,
+        759,
+        76,
+        22
+      ],
+      "id": 82,
+      "name": "",
+      "statusTip": "",
+      "text": "BTC",
+      "title": "",
+      "toolTip": "Unit to show amounts in. Click to select another unit.",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "class": "QWidget",
+      "enabled": true,
+      "geometry": [
+        400,
+        358,
+        562,
+        398
+      ],
+      "id": 83,
+      "name": "bgWidget",
+      "statusTip": "",
+      "title": "",
+      "toolTip": "",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "checked": false,
+      "class": "QToolButton",
+      "enabled": false,
+      "geometry": [
+        582,
+        323,
+        91,
+        31
+      ],
+      "id": 84,
+      "name": "",
+      "statusTip": "Request payments (generates QR codes and bitcoin: URIs)",
+      "text": "Receive",
+      "title": "",
+      "toolTip": "Request payments (generates QR codes and bitcoin: URIs)",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "class": "QStackedWidget",
+      "enabled": true,
+      "geometry": [
+        400,
+        358,
+        562,
+        398
+      ],
+      "id": 85,
+      "name": "",
+      "statusTip": "",
+      "title": "",
+      "toolTip": "",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "class": "QLabel",
+      "enabled": true,
+      "geometry": [
+        470,
+        620,
+        184,
+        14
+      ],
+      "id": 86,
+      "name": "labelProgressIncrease",
+      "statusTip": "",
+      "text": "Progress increase per hour",
+      "title": "",
+      "toolTip": "",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "class": "QLabel",
+      "enabled": true,
+      "geometry": [
+        693,
+        640,
+        78,
+        14
+      ],
+      "id": 87,
+      "name": "expectedTimeLeft",
+      "statusTip": "",
+      "text": "calculating\u2026",
+      "title": "",
+      "toolTip": "",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "class": "GUIUtil::ClickableLabel",
+      "enabled": true,
+      "geometry": [
+        953,
+        759,
+        6,
+        22
+      ],
+      "id": 88,
+      "name": "",
+      "statusTip": "",
+      "text": "",
+      "title": "",
+      "toolTip": "<nobr>Catching up\u2026<br>Processed 0 block(s) of transaction history.<br>Last received block was generated 15 year(s) and 35 week(s) ago.<br>Transactions after this will not yet be visible.</nobr>",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "class": "QLabel",
+      "enabled": true,
+      "geometry": [
+        530,
+        504,
+        362,
+        42
+      ],
+      "id": 89,
+      "name": "infoTextStrong",
+      "statusTip": "",
+      "text": "Attempting to spend bitcoins that are affected by not-yet-displayed transactions will not be accepted by the network.",
+      "title": "",
+      "toolTip": "",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "class": "QStatusBar",
+      "enabled": true,
+      "geometry": [
+        400,
+        756,
+        562,
+        27
+      ],
+      "id": 90,
+      "name": "",
+      "statusTip": "",
+      "title": "",
+      "toolTip": "",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "class": "ModalOverlay",
+      "enabled": true,
+      "geometry": [
+        400,
+        358,
+        562,
+        398
+      ],
+      "id": 91,
+      "name": "ModalOverlay",
+      "statusTip": "",
+      "title": "Form",
+      "toolTip": "",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "class": "WalletFrame",
+      "enabled": true,
+      "geometry": [
+        400,
+        358,
+        562,
+        398
+      ],
+      "id": 92,
+      "name": "",
+      "statusTip": "",
+      "title": "",
+      "toolTip": "",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "class": "QLabel",
+      "enabled": true,
+      "geometry": [
+        693,
+        600,
+        39,
+        14
+      ],
+      "id": 93,
+      "name": "percentageProgress",
+      "statusTip": "",
+      "text": "0.00%",
+      "title": "",
+      "toolTip": "",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "checked": false,
+      "class": "QToolButton",
+      "enabled": false,
+      "geometry": [
+        506,
+        323,
+        75,
+        31
+      ],
+      "id": 94,
+      "name": "",
+      "statusTip": "Send coins to a Bitcoin address",
+      "text": "Send",
+      "title": "",
+      "toolTip": "Send coins to a Bitcoin address",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "class": "QWidget",
+      "enabled": true,
+      "geometry": [
+        794,
+        323,
+        164,
+        31
+      ],
+      "id": 95,
+      "name": "",
+      "statusTip": "",
+      "title": "",
+      "toolTip": "",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "class": "QLabel",
+      "enabled": true,
+      "geometry": [
+        693,
+        560,
+        68,
+        14
+      ],
+      "id": 96,
+      "name": "numberOfBlocksLeft",
+      "statusTip": "",
+      "text": "Unknown\u2026",
+      "title": "",
+      "toolTip": "",
+      "visible": true,
+      "window": 2
+    },
+    {
+      "checked": true,
+      "class": "QToolButton",
+      "enabled": false,
+      "geometry": [
+        404,
+        323,
+        101,
+        31
+      ],
+      "id": 97,
+      "name": "",
+      "statusTip": "Show general overview of wallet",
+      "text": "Overview",
+      "title": "",
+      "toolTip": "Show general overview of wallet",
+      "visible": true,
+      "window": 2
+    }
+  ]
+}

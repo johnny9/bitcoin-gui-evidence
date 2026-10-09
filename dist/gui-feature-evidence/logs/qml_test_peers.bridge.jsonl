@@ -1,0 +1,188 @@
+{"utc": "2026-10-08T19:38:45.066174+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/qml_test_peers_iwhup8ww/gui_node", "-test-automation=/work/tmp/qml_test_peers_iwhup8ww/test_bridge.sock", "-disablewallet", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb"], "pid": 12267, "platform": "xcb"}
+{"utc": "2026-10-08T19:38:46.125311+00:00", "request": {"cmd": "click", "objectName": "peersTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:46.608581+00:00", "request": {"cmd": "wait_for_page", "page": "peers", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:47.080948+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:38:47.081632+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-08T19:38:47.082102+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:38:47.082547+00:00", "request": {"cmd": "get_property", "objectName": "peerListItem_1", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:47.082949+00:00", "request": {"cmd": "get_property", "objectName": "viewBannedPeersButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:38:47.083350+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:38:47.083741+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-08T19:38:47.084115+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:38:47.084683+00:00", "request": {"cmd": "click", "objectName": "peerListItem_1"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:47.556442+00:00", "request": {"cmd": "wait_for_page", "page": "peerDetails", "timeout": 8000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:48.028396+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:38:48.029022+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-08T19:38:48.029471+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:38:48.030238+00:00", "request": {"cmd": "click", "objectName": "peerActionsButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:48.504067+00:00", "request": {"cmd": "get_property", "objectName": "peerActionsMenu", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:48.504776+00:00", "request": {"cmd": "get_property", "objectName": "peerDisconnectButton", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:48.505927+00:00", "request": {"cmd": "click", "objectName": "peerDisconnectButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:48.978588+00:00", "request": {"cmd": "get_property", "objectName": "disconnectConfirmationPopup", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:48.980014+00:00", "request": {"cmd": "click", "objectName": "disconnectConfirmButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:49.665623+00:00", "request": {"cmd": "get_property", "objectName": "viewBannedPeersButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:38:50.168717+00:00", "request": {"cmd": "get_property", "objectName": "peerListItem_2", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:50.169338+00:00", "request": {"cmd": "get_property", "objectName": "viewBannedPeersButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:38:50.169861+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:38:50.170336+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-08T19:38:50.170824+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:38:50.171441+00:00", "request": {"cmd": "click", "objectName": "peerListItem_2"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:50.643288+00:00", "request": {"cmd": "wait_for_page", "page": "peerDetails", "timeout": 8000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:51.116040+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:38:51.116667+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-08T19:38:51.117163+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:38:51.117970+00:00", "request": {"cmd": "click", "objectName": "peerActionsButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:51.591077+00:00", "request": {"cmd": "get_property", "objectName": "peerActionsMenu", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:51.591564+00:00", "request": {"cmd": "get_property", "objectName": "peerBanDuration_3600", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:51.592726+00:00", "request": {"cmd": "click", "objectName": "peerBanDuration_3600"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:52.065397+00:00", "request": {"cmd": "get_property", "objectName": "banConfirmationPopup", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:52.067628+00:00", "request": {"cmd": "click", "objectName": "banConfirmButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:52.704186+00:00", "request": {"cmd": "wait_for_page", "page": "peers", "timeout": 30000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:53.175097+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:38:53.175667+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-08T19:38:53.176056+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:38:53.176428+00:00", "request": {"cmd": "get_property", "objectName": "viewBannedPeersButton", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:53.176795+00:00", "request": {"cmd": "get_property", "objectName": "viewBannedPeersButton", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:53.680843+00:00", "request": {"cmd": "get_property", "objectName": "peerListItem_3", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:53.681367+00:00", "request": {"cmd": "get_property", "objectName": "viewBannedPeersButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:38:53.681776+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:38:53.682209+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-08T19:38:53.683023+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:38:53.684153+00:00", "request": {"cmd": "click", "objectName": "peerListItem_3"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:54.156303+00:00", "request": {"cmd": "wait_for_page", "page": "peerDetails", "timeout": 8000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:54.629301+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:38:54.630397+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-08T19:38:54.631124+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:38:54.631805+00:00", "request": {"cmd": "click", "objectName": "peerActionsButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:55.102986+00:00", "request": {"cmd": "get_property", "objectName": "peerActionsMenu", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:55.103758+00:00", "request": {"cmd": "get_property", "objectName": "peerBanDuration_86400", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:55.104803+00:00", "request": {"cmd": "click", "objectName": "peerBanDuration_86400"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:55.577554+00:00", "request": {"cmd": "get_property", "objectName": "banConfirmationPopup", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:55.579684+00:00", "request": {"cmd": "click", "objectName": "banConfirmButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:56.168592+00:00", "request": {"cmd": "wait_for_page", "page": "peers", "timeout": 30000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:56.638335+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:38:56.638928+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-08T19:38:56.639384+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:38:56.639865+00:00", "request": {"cmd": "get_property", "objectName": "viewBannedPeersButton", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:56.640289+00:00", "request": {"cmd": "get_property", "objectName": "viewBannedPeersButton", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:57.143985+00:00", "request": {"cmd": "get_property", "objectName": "peerListItem_4", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:57.144601+00:00", "request": {"cmd": "get_property", "objectName": "viewBannedPeersButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:38:57.145026+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:38:57.145432+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-08T19:38:57.145821+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:38:57.146350+00:00", "request": {"cmd": "click", "objectName": "peerListItem_4"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:57.620167+00:00", "request": {"cmd": "wait_for_page", "page": "peerDetails", "timeout": 8000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:58.092503+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:38:58.093367+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-08T19:38:58.093947+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:38:58.094776+00:00", "request": {"cmd": "click", "objectName": "peerActionsButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:58.567386+00:00", "request": {"cmd": "get_property", "objectName": "peerActionsMenu", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:58.568121+00:00", "request": {"cmd": "get_property", "objectName": "peerBanDuration_604800", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:58.569131+00:00", "request": {"cmd": "click", "objectName": "peerBanDuration_604800"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:59.044137+00:00", "request": {"cmd": "get_property", "objectName": "banConfirmationPopup", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:59.046146+00:00", "request": {"cmd": "click", "objectName": "banConfirmButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:59.685057+00:00", "request": {"cmd": "wait_for_page", "page": "peers", "timeout": 30000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:39:00.155468+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:39:00.156548+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-08T19:39:00.157558+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:39:00.158688+00:00", "request": {"cmd": "get_property", "objectName": "viewBannedPeersButton", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:39:00.159712+00:00", "request": {"cmd": "get_property", "objectName": "viewBannedPeersButton", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:39:00.664360+00:00", "request": {"cmd": "get_property", "objectName": "peerListItem_5", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:39:00.665137+00:00", "request": {"cmd": "get_property", "objectName": "viewBannedPeersButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:39:00.665743+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:39:00.666389+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-08T19:39:00.666879+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:39:00.667389+00:00", "request": {"cmd": "click", "objectName": "peerListItem_5"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:39:01.140296+00:00", "request": {"cmd": "wait_for_page", "page": "peerDetails", "timeout": 8000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:39:01.613313+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:39:01.613939+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-08T19:39:01.614569+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:39:01.615561+00:00", "request": {"cmd": "click", "objectName": "peerActionsButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:39:02.088853+00:00", "request": {"cmd": "get_property", "objectName": "peerActionsMenu", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:39:02.089433+00:00", "request": {"cmd": "get_property", "objectName": "peerBanDuration_31536000", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:39:02.090354+00:00", "request": {"cmd": "click", "objectName": "peerBanDuration_31536000"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:39:02.563036+00:00", "request": {"cmd": "get_property", "objectName": "banConfirmationPopup", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:39:02.565213+00:00", "request": {"cmd": "click", "objectName": "banConfirmButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:39:03.153959+00:00", "request": {"cmd": "wait_for_page", "page": "peers", "timeout": 30000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:39:03.629944+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:39:03.630558+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-08T19:39:03.631017+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:39:03.631483+00:00", "request": {"cmd": "get_property", "objectName": "viewBannedPeersButton", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:39:03.631941+00:00", "request": {"cmd": "get_property", "objectName": "viewBannedPeersButton", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:39:03.632373+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:39:03.632822+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-08T19:39:03.633312+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:39:03.633842+00:00", "request": {"cmd": "get_property", "objectName": "viewBannedPeersButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:39:03.634791+00:00", "request": {"cmd": "click", "objectName": "viewBannedPeersButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:39:04.105937+00:00", "request": {"cmd": "get_property", "objectName": "bannedPeersPopup", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:39:04.106996+00:00", "request": {"cmd": "click", "objectName": "unbanButton_0"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:39:04.578131+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:39:04.578727+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-08T19:39:04.579157+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:39:04.579777+00:00", "request": {"cmd": "click", "objectName": "bannedPeersCloseButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:39:05.049752+00:00", "request": {"cmd": "get_property", "objectName": "bannedPeersPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:39:05.050343+00:00", "request": {"cmd": "wait_for_page", "page": "peers", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:39:05.521692+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:39:05.522245+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-08T19:39:05.522660+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:39:05.523052+00:00", "request": {"cmd": "get_property", "objectName": "viewBannedPeersButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:39:06.026717+00:00", "request": {"cmd": "get_property", "objectName": "peerListItem_6", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:39:06.028255+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:39:06.028818+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-08T19:39:06.029305+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:39:06.029848+00:00", "request": {"cmd": "click", "objectName": "peerListItem_6"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:39:06.505545+00:00", "request": {"cmd": "wait_for_page", "page": "peerDetails", "timeout": 8000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:39:06.978005+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:39:06.978939+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-08T19:39:06.979820+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:39:06.980703+00:00", "request": {"cmd": "click", "objectName": "peerActionsButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:39:07.453347+00:00", "request": {"cmd": "get_property", "objectName": "peerActionsMenu", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:39:07.454256+00:00", "request": {"cmd": "get_property", "objectName": "peerBanDuration_3600", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:39:07.455301+00:00", "request": {"cmd": "click", "objectName": "peerBanDuration_3600"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:39:07.927114+00:00", "request": {"cmd": "get_property", "objectName": "banConfirmationPopup", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:39:07.929392+00:00", "request": {"cmd": "click", "objectName": "banConfirmButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:39:08.565805+00:00", "request": {"cmd": "wait_for_page", "page": "peers", "timeout": 30000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:39:09.037105+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:39:09.037779+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-08T19:39:09.038263+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:39:09.402952+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/qml_test_peers_iwhup8ww/gui_node", "-test-automation=/work/tmp/qml_test_peers_iwhup8ww/test_bridge.sock", "-disablewallet", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb"], "pid": 12868, "platform": "xcb"}
+{"utc": "2026-10-08T19:39:09.959405+00:00", "request": {"cmd": "click", "objectName": "peersTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:39:10.431483+00:00", "request": {"cmd": "wait_for_page", "page": "peers", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:39:10.900932+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:39:10.901523+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-08T19:39:10.901976+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:39:10.902429+00:00", "request": {"cmd": "get_property", "objectName": "viewBannedPeersButton", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:39:10.902869+00:00", "request": {"cmd": "get_property", "objectName": "viewBannedPeersButton", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:39:11.407509+00:00", "request": {"cmd": "get_property", "objectName": "peerListItem_0", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:39:11.913248+00:00", "request": {"cmd": "get_property", "objectName": "peerListItem_0", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:39:11.914628+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:39:11.915907+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-08T19:39:11.917101+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:39:11.918386+00:00", "request": {"cmd": "click", "objectName": "peerListItem_0"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:39:12.391779+00:00", "request": {"cmd": "wait_for_page", "page": "peerDetails", "timeout": 8000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:39:12.865501+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:39:12.866046+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-08T19:39:12.866509+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:39:12.867327+00:00", "request": {"cmd": "click", "objectName": "peerActionsButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:39:13.340892+00:00", "request": {"cmd": "get_property", "objectName": "peerActionsMenu", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:39:13.342067+00:00", "request": {"cmd": "click", "objectName": "peerDisconnectButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:39:13.816761+00:00", "request": {"cmd": "get_property", "objectName": "disconnectConfirmationPopup", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:39:13.818177+00:00", "request": {"cmd": "click", "objectName": "disconnectConfirmButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:39:15.024090+00:00", "request": {"cmd": "get_property", "objectName": "peerListItem_3", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:39:15.528464+00:00", "request": {"cmd": "get_property", "objectName": "peerListItem_3", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:39:15.529076+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:39:15.529543+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-08T19:39:15.529939+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:39:15.530440+00:00", "request": {"cmd": "click", "objectName": "peerListItem_3"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:39:16.002540+00:00", "request": {"cmd": "wait_for_page", "page": "peerDetails", "timeout": 8000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:39:16.475119+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:39:16.475783+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-08T19:39:16.476265+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:39:16.476996+00:00", "request": {"cmd": "click", "objectName": "peerActionsButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:39:16.950022+00:00", "request": {"cmd": "get_property", "objectName": "peerActionsMenu", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:39:16.950844+00:00", "request": {"cmd": "get_property", "objectName": "peerBanDuration_3600", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:39:16.951853+00:00", "request": {"cmd": "click", "objectName": "peerBanDuration_3600"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:39:17.423980+00:00", "request": {"cmd": "get_property", "objectName": "banConfirmationPopup", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:39:17.426010+00:00", "request": {"cmd": "click", "objectName": "banConfirmButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:39:18.390445+00:00", "application_pid": 12267, "exit_code": 0}
+{"utc": "2026-10-08T19:39:18.390548+00:00", "application_pid": 12868, "exit_code": 0}

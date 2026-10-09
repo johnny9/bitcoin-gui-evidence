@@ -1,0 +1,4 @@
+{"id": "privacy-values", "features": ["F07.S05", "F32.S01"], "description": "Balance text is masked in the overview.", "actual": true, "expected": true, "status": "passed"}
+{"id": "privacy-history-disabled", "features": ["F32.S02"], "description": "Transaction history action is disabled while privacy is on.", "actual": false, "expected": false, "status": "passed"}
+{'class': 'HelpMessageDialog', 'enabled': True, 'geometry': [424, 321, 780, 400], 'id': 692, 'name': 'HelpMessageDialog', 'statusTip': '', 'title': 'About Bitcoin Core', 'toolTip': '', 'visible': True, 'window': 692}
+{'class': 'BitcoinGUI', 'enabled': True, 'geometry': [400, 300, 830, 483], 'id': 2, 'name': '', 'statusTip': '', 'title': 'Bitcoin Core - Acceptance wallet - [regtest]', 'toolTip': '', 'visible': True, 'window': 2}

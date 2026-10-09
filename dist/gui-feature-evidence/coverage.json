@@ -1,0 +1,2442 @@
+[
+  {
+    "id": "F01.S01",
+    "intent": "Create a standard single-signature wallet.",
+    "page": "features/01-create-wallet.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "create-standard-wallet"
+    ],
+    "captures": [
+      "media/widgets/create-wallet-options.png",
+      "media/qml/qml_test_create_wallet_name/015-wait-for-page-walletcreationreadypage.png"
+    ]
+  },
+  {
+    "id": "F01.S02",
+    "intent": "Create an encrypted or unencrypted wallet containing spending keys.",
+    "page": "features/01-create-wallet.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "create-standard-wallet"
+    ],
+    "captures": [
+      "media/widgets/create-wallet-options.png",
+      "media/widgets/encrypt-wallet-passphrase.png",
+      "media/qml/qml_test_create_wallet_name/015-wait-for-page-walletcreationreadypage.png"
+    ]
+  },
+  {
+    "id": "F01.S03",
+    "intent": "Create a watch-only wallet to monitor funds without holding spending keys.",
+    "page": "features/01-create-wallet.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "create-watchonly-wallet"
+    ],
+    "captures": [
+      "media/widgets/create-wallet-options.png",
+      "media/widgets/create-watch-only-wallet.png",
+      "media/qml/qml_test_watchonly_wallet/006-wait-for-page-walletcreationreadypage.png"
+    ]
+  },
+  {
+    "id": "F01.S04",
+    "intent": "Create a blank wallet for later setup.",
+    "page": "features/01-create-wallet.md",
+    "widgets": "Assertions collected",
+    "qml": "Implementation gap",
+    "widgets_assertions": [
+      "create-blank-wallet"
+    ],
+    "captures": [
+      "media/widgets/create-wallet-options.png",
+      "media/widgets/create-blank-wallet.png"
+    ]
+  },
+  {
+    "id": "F01.S05",
+    "intent": "Create a wallet that uses an external signer, such as a hardware wallet.",
+    "page": "features/01-create-wallet.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/create-wallet-options.png",
+      "media/qml/qml_test_external_signer/014-14-external-signer-wallet-hides-password-settings.png"
+    ]
+  },
+  {
+    "id": "F01.S06",
+    "intent": "Name the wallet.",
+    "page": "features/01-create-wallet.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "create-standard-wallet"
+    ],
+    "captures": [
+      "media/widgets/create-wallet-options.png",
+      "media/qml/qml_test_create_wallet_name/015-wait-for-page-walletcreationreadypage.png"
+    ]
+  },
+  {
+    "id": "F02.S01",
+    "intent": "Open existing wallets.",
+    "page": "features/02-open-switch-and-close-wallets.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "multiple-wallets-loaded"
+    ],
+    "captures": [
+      "media/qml/qml_additional/032-multiple-loaded-wallets.png"
+    ]
+  },
+  {
+    "id": "F02.S02",
+    "intent": "Keep multiple wallets available at the same time.",
+    "page": "features/02-open-switch-and-close-wallets.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "multiple-wallets-loaded"
+    ],
+    "captures": [
+      "media/widgets/restored-wallet-overview.png",
+      "media/qml/qml_additional/032-multiple-loaded-wallets.png"
+    ]
+  },
+  {
+    "id": "F02.S03",
+    "intent": "Choose which wallet to use.",
+    "page": "features/02-open-switch-and-close-wallets.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "switch-active-wallet"
+    ],
+    "captures": [
+      "media/widgets/restored-wallet-overview.png",
+      "media/qml/qml_additional/032-multiple-loaded-wallets.png"
+    ]
+  },
+  {
+    "id": "F02.S04",
+    "intent": "Close individual wallets or all wallets.",
+    "page": "features/02-open-switch-and-close-wallets.md",
+    "widgets": "Related automated suite",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": [
+      "media/qml/qml_test_wallet_selector_load/013-05-selected-wallet-unloads-only-after-confirmation.png"
+    ]
+  },
+  {
+    "id": "F03.S01",
+    "intent": "Save a wallet backup to a file.",
+    "page": "features/03-back-up-and-restore-wallet.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "backup-wallet-file"
+    ],
+    "captures": [
+      "media/widgets/backup-wallet-file.png",
+      "media/qml/qml_test_wallet_settings/010-06-wallet-backup-created.png"
+    ]
+  },
+  {
+    "id": "F03.S02",
+    "intent": "Restore a wallet from a backup file.",
+    "page": "features/03-back-up-and-restore-wallet.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "restore-wallet"
+    ],
+    "captures": [
+      "media/widgets/restore-wallet-file.png",
+      "media/widgets/restore-wallet-name.png",
+      "media/widgets/restored-wallet-success.png",
+      "media/widgets/restored-wallet-overview.png",
+      "media/qml/qml_test_wallet_restore/009-04-import-success-screen-displayed.png"
+    ]
+  },
+  {
+    "id": "F03.S03",
+    "intent": "Name a recovered wallet.",
+    "page": "features/03-back-up-and-restore-wallet.md",
+    "widgets": "Assertions collected",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [
+      "restore-wallet"
+    ],
+    "captures": [
+      "media/widgets/restore-wallet-name.png",
+      "media/widgets/restored-wallet-success.png",
+      "media/widgets/restored-wallet-overview.png",
+      "media/qml/qml_test_wallet_restore/009-04-import-success-screen-displayed.png"
+    ]
+  },
+  {
+    "id": "F03.S04",
+    "intent": "Recover and update a legacy wallet backup.",
+    "page": "features/03-back-up-and-restore-wallet.md",
+    "widgets": "Related automated suite",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": [
+      "media/qml/qml_test_wallet_restore/005-04-legacy-backup-submitted.png"
+    ]
+  },
+  {
+    "id": "F04.S01",
+    "intent": "Update legacy wallets to the current wallet format.",
+    "page": "features/04-migrate-legacy-wallet.md",
+    "widgets": "Source only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/qml/qml_test_wallet_migration/003-06-unencrypted-migration-prompt-displayed.png",
+      "media/qml/qml_test_wallet_migration/004-07-unencrypted-wallet-migrated-and-loaded.png"
+    ]
+  },
+  {
+    "id": "F04.S02",
+    "intent": "Preserve the original wallet with an automatic backup.",
+    "page": "features/04-migrate-legacy-wallet.md",
+    "widgets": "Source only",
+    "qml": "Source / related tests only",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F04.S03",
+    "intent": "Preserve wallet contents, including watch-only information.",
+    "page": "features/04-migrate-legacy-wallet.md",
+    "widgets": "Source only",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F04.S04",
+    "intent": "Open migrated wallets immediately or later.",
+    "page": "features/04-migrate-legacy-wallet.md",
+    "widgets": "Source only",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": [
+      "media/qml/qml_test_wallet_migration/003-06-unencrypted-migration-prompt-displayed.png",
+      "media/qml/qml_test_wallet_migration/004-07-unencrypted-wallet-migrated-and-loaded.png"
+    ]
+  },
+  {
+    "id": "F05.S01",
+    "intent": "Create a copy of a wallet that can monitor its funds without spending them.",
+    "page": "features/05-export-watch-only-wallet.md",
+    "widgets": "Assertions collected",
+    "qml": "Implementation gap",
+    "widgets_assertions": [
+      "watchonly-transfer"
+    ],
+    "captures": [
+      "media/widgets/export-watch-only-wallet.png",
+      "media/widgets/export-watch-only-success.png"
+    ]
+  },
+  {
+    "id": "F05.S02",
+    "intent": "Export the watch-only wallet to a file.",
+    "page": "features/05-export-watch-only-wallet.md",
+    "widgets": "Assertions collected",
+    "qml": "Implementation gap",
+    "widgets_assertions": [
+      "export-watchonly-file"
+    ],
+    "captures": [
+      "media/widgets/export-watch-only-wallet.png",
+      "media/widgets/export-watch-only-success.png"
+    ]
+  },
+  {
+    "id": "F05.S03",
+    "intent": "Transfer wallet monitoring to another node.",
+    "page": "features/05-export-watch-only-wallet.md",
+    "widgets": "Assertions collected",
+    "qml": "Implementation gap",
+    "widgets_assertions": [
+      "watchonly-transfer"
+    ],
+    "captures": []
+  },
+  {
+    "id": "F05.S04",
+    "intent": "Keep spending keys separate from a wallet used for monitoring.",
+    "page": "features/05-export-watch-only-wallet.md",
+    "widgets": "Assertions collected",
+    "qml": "Implementation gap",
+    "widgets_assertions": [
+      "watchonly-transfer"
+    ],
+    "captures": [
+      "media/widgets/export-watch-only-wallet.png",
+      "media/widgets/export-watch-only-success.png"
+    ]
+  },
+  {
+    "id": "F06.S01",
+    "intent": "Protect stored spending keys with passphrase encryption.",
+    "page": "features/06-encrypt-wallet-and-manage-passphrase.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "encrypt-wallet"
+    ],
+    "captures": [
+      "media/widgets/encrypt-wallet-passphrase.png",
+      "media/widgets/encryption-confirmation.png",
+      "media/widgets/wallet-encrypted-result.png"
+    ]
+  },
+  {
+    "id": "F06.S02",
+    "intent": "Change the wallet passphrase.",
+    "page": "features/06-encrypt-wallet-and-manage-passphrase.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "change-passphrase"
+    ],
+    "captures": [
+      "media/widgets/change-wallet-passphrase.png",
+      "media/qml/qml_test_wallet_settings/032-05-wrong-current-password-rejected-and-preserved.png"
+    ]
+  },
+  {
+    "id": "F06.S03",
+    "intent": "Temporarily unlock spending keys for operations that require them.",
+    "page": "features/06-encrypt-wallet-and-manage-passphrase.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "temporary-unlock-relock"
+    ],
+    "captures": [
+      "media/widgets/temporary-unlock-prompt.png",
+      "media/widgets/encrypted-message-signed.png",
+      "media/qml/qml_test_password_wallet/007-07-review-passphrase-prompt-displayed.png"
+    ]
+  },
+  {
+    "id": "F06.S04",
+    "intent": "Automatically restore the locked state after temporary access. [Unlock handling](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/walletmodel.cpp).",
+    "page": "features/06-encrypt-wallet-and-manage-passphrase.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "temporary-unlock-relock"
+    ],
+    "captures": [
+      "media/widgets/encrypted-message-signed.png",
+      "media/qml/qml_test_password_wallet/008-08-review-built-and-wallet-relocked.png"
+    ]
+  },
+  {
+    "id": "F06.S05",
+    "intent": "Check whether a wallet is encrypted and locked.",
+    "page": "features/06-encrypt-wallet-and-manage-passphrase.md",
+    "widgets": "Visual evidence only",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/encrypted-wallet-status.png"
+    ]
+  },
+  {
+    "id": "F06.S06",
+    "intent": "Show or hide entered passphrases.",
+    "page": "features/06-encrypt-wallet-and-manage-passphrase.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/encrypt-wallet-passphrase.png",
+      "media/widgets/change-wallet-passphrase.png",
+      "media/widgets/temporary-unlock-prompt.png",
+      "media/qml/qml_test_password_wallet/007-07-review-passphrase-prompt-displayed.png"
+    ]
+  },
+  {
+    "id": "F06.S07",
+    "intent": "Receive feedback on passphrase mismatches and common entry mistakes.",
+    "page": "features/06-encrypt-wallet-and-manage-passphrase.md",
+    "widgets": "Source only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/qml/qml_test_wallet_settings/032-05-wrong-current-password-rejected-and-preserved.png"
+    ]
+  },
+  {
+    "id": "F07.S01",
+    "intent": "View available, pending, immature mining, and total balances.",
+    "page": "features/07-view-wallet-overview.md",
+    "widgets": "Visual evidence only",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/wallet-overview-funded.png",
+      "media/widgets/overview-balances.png",
+      "media/qml/qml_test_activity_filter_export/006-06-activity-shows-payment-request-and-mined-rows.png"
+    ]
+  },
+  {
+    "id": "F07.S02",
+    "intent": "Review recent wallet activity.",
+    "page": "features/07-view-wallet-overview.md",
+    "widgets": "Visual evidence only",
+    "qml": "Visual evidence only",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/wallet-overview-funded.png",
+      "media/widgets/overview-balances.png",
+      "media/qml/qml_test_activity_filter_export/006-06-activity-shows-payment-request-and-mined-rows.png"
+    ]
+  },
+  {
+    "id": "F07.S03",
+    "intent": "Find a recent transaction in the full transaction history. [Activity navigation](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/walletview.cpp).",
+    "page": "features/07-view-wallet-overview.md",
+    "widgets": "Related automated suite",
+    "qml": "Source / related tests only",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F07.S04",
+    "intent": "Know when wallet information may be out of date.",
+    "page": "features/07-view-wallet-overview.md",
+    "widgets": "Related automated suite",
+    "qml": "Source / related tests only",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F07.S05",
+    "intent": "Conceal balances and recent activity with privacy mode.",
+    "page": "features/07-view-wallet-overview.md",
+    "widgets": "Assertions collected",
+    "qml": "Implementation gap",
+    "widgets_assertions": [
+      "privacy-values"
+    ],
+    "captures": [
+      "media/widgets/privacy-masked-overview.png"
+    ]
+  },
+  {
+    "id": "F08.S01",
+    "intent": "Generate receiving addresses using legacy, wrapped SegWit, native SegWit, or Taproot formats supported by the wallet.",
+    "page": "features/08-receive-bitcoin-request-payment.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "receive-owned-address"
+    ],
+    "captures": [
+      "media/widgets/receive-request-form.png",
+      "media/qml/qml_test_receive/022-receive-created.png"
+    ]
+  },
+  {
+    "id": "F08.S02",
+    "intent": "Request a payment with an optional amount, label, and message.",
+    "page": "features/08-receive-bitcoin-request-payment.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "receive-copy-uri"
+    ],
+    "captures": [
+      "media/widgets/receive-request-form.png",
+      "media/widgets/receive-payment-qr.png",
+      "media/qml/qml_test_receive/022-receive-created.png"
+    ]
+  },
+  {
+    "id": "F08.S03",
+    "intent": "Generate payment links and QR codes. [QR support](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/qrimagewidget.cpp).",
+    "page": "features/08-receive-bitcoin-request-payment.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "receive-copy-uri"
+    ],
+    "captures": [
+      "media/widgets/receive-payment-qr.png",
+      "media/qml/qml_test_receive/022-receive-created.png"
+    ]
+  },
+  {
+    "id": "F08.S04",
+    "intent": "Copy receiving addresses, payment links, and request details to the clipboard.",
+    "page": "features/08-receive-bitcoin-request-payment.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "receive-copy-address",
+      "receive-copy-uri"
+    ],
+    "captures": [
+      "media/widgets/receive-payment-qr.png",
+      "media/qml/qml_test_receive/022-receive-created.png",
+      "media/qml/qml_test_receive/024-receive-menu.png"
+    ]
+  },
+  {
+    "id": "F08.S05",
+    "intent": "Copy payment QR codes to the clipboard or save them as images.",
+    "page": "features/08-receive-bitcoin-request-payment.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/receive-payment-qr.png",
+      "media/qml/qml_test_receive/022-receive-created.png",
+      "media/qml/qml_test_receive/024-receive-menu.png"
+    ]
+  },
+  {
+    "id": "F08.S06",
+    "intent": "Share QR images with other applications using drag and drop.",
+    "page": "features/08-receive-bitcoin-request-payment.md",
+    "widgets": "Related automated suite",
+    "qml": "Implementation gap",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F08.S07",
+    "intent": "Review, reuse, and remove saved payment requests.",
+    "page": "features/08-receive-bitcoin-request-payment.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/receive-request-form.png",
+      "media/widgets/receive-saved-request.png",
+      "media/qml/qml_test_receive/024-receive-menu.png"
+    ]
+  },
+  {
+    "id": "F08.S08",
+    "intent": "Verify receiving addresses on a compatible signing device.",
+    "page": "features/08-receive-bitcoin-request-payment.md",
+    "widgets": "Related automated suite",
+    "qml": "Implementation gap",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F08.S09",
+    "intent": "Generate receiving addresses for a configured watch-only wallet.",
+    "page": "features/08-receive-bitcoin-request-payment.md",
+    "widgets": "Related automated suite",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/qml/qml_test_watchonly_wallet/006-wait-for-page-walletcreationreadypage.png"
+    ]
+  },
+  {
+    "id": "F09.S01",
+    "intent": "Pay one recipient or multiple recipients in a single transaction.",
+    "page": "features/09-send-bitcoin.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/send-coin-control.png",
+      "media/widgets/send-fee-selection.png",
+      "media/qml/qml_test_send_receive/012-14-review-page-with-fixed-amount.png",
+      "media/qml/qml_test_send_receive/007-09-maximum-preserves-the-fixed-amount-of-another-recipient.png",
+      "media/qml/qml_additional/006-send-multiple-custom-fee.png"
+    ]
+  },
+  {
+    "id": "F09.S02",
+    "intent": "Enter or paste a recipient address, or use a saved address.",
+    "page": "features/09-send-bitcoin.md",
+    "widgets": "Visual evidence only",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/send-coin-control.png",
+      "media/widgets/send-fee-selection.png"
+    ]
+  },
+  {
+    "id": "F09.S03",
+    "intent": "Associate recipient addresses with recognizable labels.",
+    "page": "features/09-send-bitcoin.md",
+    "widgets": "Visual evidence only",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/send-fee-selection.png"
+    ]
+  },
+  {
+    "id": "F09.S04",
+    "intent": "Send the available balance.",
+    "page": "features/09-send-bitcoin.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/send-coin-control.png",
+      "media/qml/qml_test_send_receive/007-09-maximum-preserves-the-fixed-amount-of-another-recipient.png",
+      "media/qml/qml_test_send_receive/008-10-automatic-maximum-excludes-locked-coins-and-shows-both-warnings.png"
+    ]
+  },
+  {
+    "id": "F09.S05",
+    "intent": "Deduct fees from selected recipient amounts.",
+    "page": "features/09-send-bitcoin.md",
+    "widgets": "Visual evidence only",
+    "qml": "Implementation gap",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/send-coin-control.png",
+      "media/widgets/send-fee-selection.png"
+    ]
+  },
+  {
+    "id": "F09.S06",
+    "intent": "Review payment details and total costs before authorizing a transaction.",
+    "page": "features/09-send-bitcoin.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/send-review.png",
+      "media/qml/qml_test_password_wallet/007-07-review-passphrase-prompt-displayed.png",
+      "media/qml/qml_test_password_wallet/008-08-review-built-and-wallet-relocked.png",
+      "media/qml/qml_test_send_receive/012-14-review-page-with-fixed-amount.png"
+    ]
+  },
+  {
+    "id": "F09.S07",
+    "intent": "Sign payments with local spending keys or a compatible external signer.",
+    "page": "features/09-send-bitcoin.md",
+    "widgets": "Assertions collected",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [
+      "broadcast-psbt"
+    ],
+    "captures": [
+      "media/qml/qml_test_password_wallet/008-08-review-built-and-wallet-relocked.png",
+      "media/qml/qml_test_send_receive/012-14-review-page-with-fixed-amount.png"
+    ]
+  },
+  {
+    "id": "F09.S08",
+    "intent": "Prepare a payment from a watch-only wallet for signing elsewhere.",
+    "page": "features/09-send-bitcoin.md",
+    "widgets": "Related automated suite",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F09.S09",
+    "intent": "Check payment details and available funds before sending. [Payment validation](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/walletmodel.cpp).",
+    "page": "features/09-send-bitcoin.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/send-review.png",
+      "media/qml/qml_test_send_receive/012-14-review-page-with-fixed-amount.png"
+    ]
+  },
+  {
+    "id": "F10.S01",
+    "intent": "Open or paste Bitcoin payment links.",
+    "page": "features/10-open-payment-uri.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "uri-populates-send"
+    ],
+    "captures": [
+      "media/widgets/open-payment-uri.png",
+      "media/qml/qml_test_uri_import/006-click-senduriimportapplybutton.png"
+    ]
+  },
+  {
+    "id": "F10.S02",
+    "intent": "Prepare a payment using the requested recipient, amount, and descriptive information.",
+    "page": "features/10-open-payment-uri.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "uri-populates-send"
+    ],
+    "captures": [
+      "media/widgets/open-payment-uri.png",
+      "media/qml/qml_test_uri_import/006-click-senduriimportapplybutton.png"
+    ]
+  },
+  {
+    "id": "F10.S03",
+    "intent": "Handle payment requests from other applications, including while Bitcoin Core is already running.",
+    "page": "features/10-open-payment-uri.md",
+    "widgets": "Related automated suite",
+    "qml": "Implementation gap",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F11.S01",
+    "intent": "Choose an estimated fee based on the desired confirmation speed.",
+    "page": "features/11-choose-transaction-fee.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/send-fee-selection.png",
+      "media/qml/qml_test_send_receive/012-14-review-page-with-fixed-amount.png"
+    ]
+  },
+  {
+    "id": "F11.S02",
+    "intent": "Set a custom fee rate.",
+    "page": "features/11-choose-transaction-fee.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/send-fee-selection.png",
+      "media/qml/qml_test_send_receive/012-14-review-page-with-fixed-amount.png",
+      "media/qml/qml_additional/006-send-multiple-custom-fee.png"
+    ]
+  },
+  {
+    "id": "F11.S03",
+    "intent": "Assess expected confirmation timing.",
+    "page": "features/11-choose-transaction-fee.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/send-fee-selection.png",
+      "media/qml/qml_test_send_receive/012-14-review-page-with-fixed-amount.png"
+    ]
+  },
+  {
+    "id": "F11.S04",
+    "intent": "Know when a fee estimate is unavailable.",
+    "page": "features/11-choose-transaction-fee.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/send-fee-selection.png"
+    ]
+  },
+  {
+    "id": "F12.S01",
+    "intent": "Choose which coins fund a transaction.",
+    "page": "features/12-select-coins-coin-control.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/coin-control-inputs.png",
+      "media/qml/qml_additional/009-coin-selection-selected.png"
+    ]
+  },
+  {
+    "id": "F12.S02",
+    "intent": "Select individual coins or groups of coins.",
+    "page": "features/12-select-coins-coin-control.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/coin-control-inputs.png",
+      "media/qml/qml_additional/009-coin-selection-selected.png"
+    ]
+  },
+  {
+    "id": "F12.S03",
+    "intent": "Inspect coins individually or grouped by address.",
+    "page": "features/12-select-coins-coin-control.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/coin-control-inputs.png",
+      "media/qml/qml_additional/009-coin-selection-selected.png"
+    ]
+  },
+  {
+    "id": "F12.S04",
+    "intent": "Compare coins by amount, address, label, age, and confirmations.",
+    "page": "features/12-select-coins-coin-control.md",
+    "widgets": "Visual evidence only",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/coin-control-inputs.png",
+      "media/qml/qml_additional/009-coin-selection-selected.png"
+    ]
+  },
+  {
+    "id": "F12.S05",
+    "intent": "Control spending eligibility by locking or unlocking coins.",
+    "page": "features/12-select-coins-coin-control.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/coin-control-inputs.png",
+      "media/qml/qml_test_send_receive/008-10-automatic-maximum-excludes-locked-coins-and-shows-both-warnings.png",
+      "media/qml/qml_additional/019-wallet-coin-locked.png"
+    ]
+  },
+  {
+    "id": "F12.S06",
+    "intent": "Copy coin addresses, labels, amounts, identifiers, and transaction estimates to the clipboard.",
+    "page": "features/12-select-coins-coin-control.md",
+    "widgets": "Visual evidence only",
+    "qml": "Implementation gap",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/coin-control-inputs.png"
+    ]
+  },
+  {
+    "id": "F12.S07",
+    "intent": "Review the selected funds, expected fees, and change.",
+    "page": "features/12-select-coins-coin-control.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/coin-control-inputs.png",
+      "media/qml/qml_test_send_receive/008-10-automatic-maximum-excludes-locked-coins-and-shows-both-warnings.png",
+      "media/qml/qml_additional/009-coin-selection-selected.png"
+    ]
+  },
+  {
+    "id": "F12.S08",
+    "intent": "Choose where transaction change is returned.",
+    "page": "features/12-select-coins-coin-control.md",
+    "widgets": "Visual evidence only",
+    "qml": "Implementation gap",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/send-coin-control.png"
+    ]
+  },
+  {
+    "id": "F12.S09",
+    "intent": "Receive a warning when a change destination is not recognized as spendable by the wallet.",
+    "page": "features/12-select-coins-coin-control.md",
+    "widgets": "Related automated suite",
+    "qml": "Implementation gap",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F13.S01",
+    "intent": "Prepare a transaction for later signing.",
+    "page": "features/13-create-and-export-psbt.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "export-unsigned-psbt"
+    ],
+    "captures": [
+      "media/widgets/send-review.png",
+      "media/qml/qml_test_psbt/012-14-review-only-transaction-modal-displayed.png"
+    ]
+  },
+  {
+    "id": "F13.S02",
+    "intent": "Create transactions from watch-only wallets or wallets containing spending keys.",
+    "page": "features/13-create-and-export-psbt.md",
+    "widgets": "Assertions collected",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [
+      "export-unsigned-psbt"
+    ],
+    "captures": []
+  },
+  {
+    "id": "F13.S03",
+    "intent": "Use single-signature or previously configured multisig wallets. [Multisig support](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/doc/descriptors.md#basic-multisig-example).",
+    "page": "features/13-create-and-export-psbt.md",
+    "widgets": "Assertions collected",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [
+      "export-unsigned-psbt"
+    ],
+    "captures": []
+  },
+  {
+    "id": "F13.S04",
+    "intent": "Choose recipients, fees, and coins for the proposed transaction.",
+    "page": "features/13-create-and-export-psbt.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "export-unsigned-psbt"
+    ],
+    "captures": [
+      "media/widgets/send-review.png",
+      "media/qml/qml_test_send_receive/012-14-review-page-with-fixed-amount.png"
+    ]
+  },
+  {
+    "id": "F13.S05",
+    "intent": "Copy an unsigned PSBT to the clipboard or save it to a file for signing elsewhere.",
+    "page": "features/13-create-and-export-psbt.md",
+    "widgets": "Assertions collected",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [
+      "export-unsigned-psbt"
+    ],
+    "captures": []
+  },
+  {
+    "id": "F14.S01",
+    "intent": "Import a PSBT from a file or the clipboard.",
+    "page": "features/14-import-sign-and-broadcast-psbt.md",
+    "widgets": "Assertions collected",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [
+      "sign-imported-psbt"
+    ],
+    "captures": [
+      "media/widgets/import-unsigned-psbt.png",
+      "media/qml/qml_test_psbt/009-11-multiple-recipient-review-displayed.png"
+    ]
+  },
+  {
+    "id": "F14.S02",
+    "intent": "Review recipients, amounts, available fee information, and signing progress.",
+    "page": "features/14-import-sign-and-broadcast-psbt.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/import-unsigned-psbt.png",
+      "media/widgets/psbt-signed-ready.png",
+      "media/qml/qml_test_psbt/009-11-multiple-recipient-review-displayed.png",
+      "media/qml/qml_test_psbt/012-14-review-only-transaction-modal-displayed.png"
+    ]
+  },
+  {
+    "id": "F14.S03",
+    "intent": "Process single-signature and multisig transactions when the required keys and transaction information are available.",
+    "page": "features/14-import-sign-and-broadcast-psbt.md",
+    "widgets": "Assertions collected",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [
+      "sign-imported-psbt"
+    ],
+    "captures": [
+      "media/qml/qml_test_psbt/009-11-multiple-recipient-review-displayed.png",
+      "media/qml/qml_test_psbt/012-14-review-only-transaction-modal-displayed.png"
+    ]
+  },
+  {
+    "id": "F14.S04",
+    "intent": "Sign with local wallets, including encrypted wallets after unlocking.",
+    "page": "features/14-import-sign-and-broadcast-psbt.md",
+    "widgets": "Assertions collected",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [
+      "sign-imported-psbt"
+    ],
+    "captures": [
+      "media/widgets/import-unsigned-psbt.png",
+      "media/widgets/psbt-signed-ready.png"
+    ]
+  },
+  {
+    "id": "F14.S05",
+    "intent": "Collect additional signatures by passing a transaction between signers.",
+    "page": "features/14-import-sign-and-broadcast-psbt.md",
+    "widgets": "Source only",
+    "qml": "Implementation gap",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F14.S06",
+    "intent": "Copy a partially signed PSBT to the clipboard or save it to a file for further signing.",
+    "page": "features/14-import-sign-and-broadcast-psbt.md",
+    "widgets": "Assertions collected",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [
+      "sign-imported-psbt"
+    ],
+    "captures": [
+      "media/qml/qml_test_psbt/012-14-review-only-transaction-modal-displayed.png"
+    ]
+  },
+  {
+    "id": "F14.S07",
+    "intent": "Finalize and broadcast a transaction once sufficient signatures are present.",
+    "page": "features/14-import-sign-and-broadcast-psbt.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "broadcast-psbt"
+    ],
+    "captures": [
+      "media/widgets/psbt-signed-ready.png",
+      "media/widgets/psbt-broadcast.png",
+      "media/qml/qml_test_psbt/015-17-signed-foreign-psbt-ready-to-broadcast.png",
+      "media/qml/qml_test_psbt/016-18-signed-foreign-psbt-broadcast-confirmed.png"
+    ]
+  },
+  {
+    "id": "F14.S08",
+    "intent": "Inspect transactions and broadcast fully signed transactions without opening a wallet.",
+    "page": "features/14-import-sign-and-broadcast-psbt.md",
+    "widgets": "Source only",
+    "qml": "Implementation gap",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F15.S01",
+    "intent": "Connect a wallet to a compatible external signer.",
+    "page": "features/15-use-hardware-wallet-external-signer.md",
+    "widgets": "Visual evidence only",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/preferences-wallet.png",
+      "media/qml/qml_test_external_signer/014-14-external-signer-wallet-hides-password-settings.png",
+      "media/qml/qml_test_external_signer/020-20-no-signer-review-displayed.png"
+    ]
+  },
+  {
+    "id": "F15.S02",
+    "intent": "Keep spending keys on the signing device.",
+    "page": "features/15-use-hardware-wallet-external-signer.md",
+    "widgets": "Source only",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": [
+      "media/qml/qml_test_external_signer/014-14-external-signer-wallet-hides-password-settings.png",
+      "media/qml/qml_test_external_signer/020-20-no-signer-review-displayed.png"
+    ]
+  },
+  {
+    "id": "F15.S03",
+    "intent": "Generate receiving addresses and verify them on the device.",
+    "page": "features/15-use-hardware-wallet-external-signer.md",
+    "widgets": "Source only",
+    "qml": "Implementation gap",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F15.S04",
+    "intent": "Authorize outgoing payments using the device.",
+    "page": "features/15-use-hardware-wallet-external-signer.md",
+    "widgets": "Source only",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": [
+      "media/qml/qml_test_external_signer/020-20-no-signer-review-displayed.png",
+      "media/qml/qml_test_external_signer/025-25-signed-transaction-broadcast.png"
+    ]
+  },
+  {
+    "id": "F15.S05",
+    "intent": "Continue a signing workflow when additional signatures are needed. [Signing workflow](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/sendcoinsdialog.cpp).",
+    "page": "features/15-use-hardware-wallet-external-signer.md",
+    "widgets": "Source only",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F16.S01",
+    "intent": "Review incoming, outgoing, mined, and other transactions.",
+    "page": "features/16-browse-and-export-transaction-history.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/transaction-history.png",
+      "media/qml/qml_test_activity_filter_export/006-06-activity-shows-payment-request-and-mined-rows.png",
+      "media/qml/qml_test_activity_filter_export/010-10-today-and-mined-filters-applied.png"
+    ]
+  },
+  {
+    "id": "F16.S02",
+    "intent": "Filter transactions by date, type, or minimum amount.",
+    "page": "features/16-browse-and-export-transaction-history.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/transaction-history.png",
+      "media/qml/qml_test_activity_filter_export/010-10-today-and-mined-filters-applied.png"
+    ]
+  },
+  {
+    "id": "F16.S03",
+    "intent": "Search by address, transaction ID, or label, and sort transaction history.",
+    "page": "features/16-browse-and-export-transaction-history.md",
+    "widgets": "Visual evidence only",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/transaction-history.png",
+      "media/qml/qml_test_activity_filter_export/010-10-today-and-mined-filters-applied.png"
+    ]
+  },
+  {
+    "id": "F16.S04",
+    "intent": "View confirmation, conflict, abandonment, and mining-maturity status. [Transaction states](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/transactionrecord.cpp).",
+    "page": "features/16-browse-and-export-transaction-history.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/transaction-history.png",
+      "media/widgets/transaction-details.png",
+      "media/qml/qml_test_activity_filter_export/006-06-activity-shows-payment-request-and-mined-rows.png",
+      "media/qml/qml_test_activity_filter_export/030-30-activity-details-amount-uses-selected-display-unit.png"
+    ]
+  },
+  {
+    "id": "F16.S05",
+    "intent": "Inspect transaction costs, balance changes, confirmation details, and transaction data. [Transaction details](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/transactiondesc.cpp).",
+    "page": "features/16-browse-and-export-transaction-history.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/transaction-details.png",
+      "media/qml/qml_test_activity_filter_export/030-30-activity-details-amount-uses-selected-display-unit.png"
+    ]
+  },
+  {
+    "id": "F16.S06",
+    "intent": "Copy addresses, amounts, transaction IDs, transaction details, and raw transaction data to the clipboard.",
+    "page": "features/16-browse-and-export-transaction-history.md",
+    "widgets": "Assertions collected",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [
+      "activity-copy-txid"
+    ],
+    "captures": [
+      "media/widgets/transaction-history-actions.png",
+      "media/widgets/transaction-details.png"
+    ]
+  },
+  {
+    "id": "F16.S07",
+    "intent": "Update address labels associated with transactions.",
+    "page": "features/16-browse-and-export-transaction-history.md",
+    "widgets": "Visual evidence only",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/transaction-history-actions.png"
+    ]
+  },
+  {
+    "id": "F16.S08",
+    "intent": "Export filtered transaction history as CSV for record keeping or analysis.",
+    "page": "features/16-browse-and-export-transaction-history.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/transaction-history.png",
+      "media/qml/qml_test_activity_filter_export/017-17-filtered-activity-exported-to-csv.png"
+    ]
+  },
+  {
+    "id": "F16.S09",
+    "intent": "Inspect transactions in external block explorers.",
+    "page": "features/16-browse-and-export-transaction-history.md",
+    "widgets": "Related automated suite",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F17.S01",
+    "intent": "Increase the fee of an eligible transaction to improve its confirmation prospects.",
+    "page": "features/17-manage-unconfirmed-transactions.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "fee-bump-broadcast"
+    ],
+    "captures": [
+      "media/widgets/transaction-history-actions.png",
+      "media/widgets/fee-bump-review.png",
+      "media/widgets/fee-bump-result.png",
+      "media/qml/qml_test_wallet_rbf/006-click-updatetransactionbutton.png"
+    ]
+  },
+  {
+    "id": "F17.S02",
+    "intent": "Review the additional cost before authorizing a fee increase.",
+    "page": "features/17-manage-unconfirmed-transactions.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "fee-bump-broadcast"
+    ],
+    "captures": [
+      "media/widgets/fee-bump-review.png",
+      "media/qml/qml_test_wallet_rbf/006-click-updatetransactionbutton.png"
+    ]
+  },
+  {
+    "id": "F17.S03",
+    "intent": "Sign and submit a replacement transaction.",
+    "page": "features/17-manage-unconfirmed-transactions.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "fee-bump-broadcast"
+    ],
+    "captures": [
+      "media/widgets/fee-bump-review.png",
+      "media/widgets/fee-bump-result.png",
+      "media/qml/qml_test_wallet_rbf/006-click-updatetransactionbutton.png"
+    ]
+  },
+  {
+    "id": "F17.S04",
+    "intent": "Create a fee-bump PSBT and copy it to the clipboard for signing elsewhere.",
+    "page": "features/17-manage-unconfirmed-transactions.md",
+    "widgets": "Visual evidence only",
+    "qml": "Implementation gap",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/fee-bump-review.png"
+    ]
+  },
+  {
+    "id": "F17.S05",
+    "intent": "Abandon eligible transactions so their inputs can be used for another spend.",
+    "page": "features/17-manage-unconfirmed-transactions.md",
+    "widgets": "Visual evidence only",
+    "qml": "Implementation gap",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/transaction-history-actions.png"
+    ]
+  },
+  {
+    "id": "F18.S01",
+    "intent": "Keep records of sending and receiving addresses.",
+    "page": "features/18-manage-address-book.md",
+    "widgets": "Assertions collected",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [
+      "save-address-label"
+    ],
+    "captures": [
+      "media/widgets/add-saved-recipient.png",
+      "media/widgets/saved-sending-addresses.png",
+      "media/widgets/saved-receiving-addresses.png",
+      "media/qml/qml_test_addresses/012-click-walletaddressesrow.png"
+    ]
+  },
+  {
+    "id": "F18.S02",
+    "intent": "Add, update, and remove saved recipients.",
+    "page": "features/18-manage-address-book.md",
+    "widgets": "Assertions collected",
+    "qml": "Implementation gap",
+    "widgets_assertions": [
+      "save-address-label"
+    ],
+    "captures": [
+      "media/widgets/add-saved-recipient.png",
+      "media/widgets/saved-sending-addresses.png"
+    ]
+  },
+  {
+    "id": "F18.S03",
+    "intent": "Label receiving addresses.",
+    "page": "features/18-manage-address-book.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/saved-receiving-addresses.png",
+      "media/qml/qml_test_addresses/012-click-walletaddressesrow.png"
+    ]
+  },
+  {
+    "id": "F18.S04",
+    "intent": "Search and sort saved addresses by address or label.",
+    "page": "features/18-manage-address-book.md",
+    "widgets": "Visual evidence only",
+    "qml": "Implementation gap",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/saved-sending-addresses.png",
+      "media/widgets/saved-receiving-addresses.png"
+    ]
+  },
+  {
+    "id": "F18.S05",
+    "intent": "Copy saved addresses and labels to the clipboard.",
+    "page": "features/18-manage-address-book.md",
+    "widgets": "Visual evidence only",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/saved-sending-addresses.png",
+      "media/widgets/saved-receiving-addresses.png",
+      "media/qml/qml_test_addresses/012-click-walletaddressesrow.png"
+    ]
+  },
+  {
+    "id": "F18.S06",
+    "intent": "Export address records as CSV.",
+    "page": "features/18-manage-address-book.md",
+    "widgets": "Assertions collected",
+    "qml": "Implementation gap",
+    "widgets_assertions": [
+      "export-address-book"
+    ],
+    "captures": [
+      "media/widgets/saved-sending-addresses.png"
+    ]
+  },
+  {
+    "id": "F19.S01",
+    "intent": "Sign a message to demonstrate control of a Bitcoin address.",
+    "page": "features/19-sign-and-verify-messages.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "sign-message"
+    ],
+    "captures": [
+      "media/widgets/message-signed.png",
+      "media/widgets/encrypted-message-signed.png",
+      "media/qml/qml_additional/027-message-signed-full-view.png"
+    ]
+  },
+  {
+    "id": "F19.S02",
+    "intent": "Verify that a message was signed by the holder of the corresponding key.",
+    "page": "features/19-sign-and-verify-messages.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "verify-message"
+    ],
+    "captures": [
+      "media/widgets/message-verified.png",
+      "media/qml/qml_additional/030-message-verified-full-view.png"
+    ]
+  },
+  {
+    "id": "F19.S03",
+    "intent": "Copy the resulting signature to the clipboard.",
+    "page": "features/19-sign-and-verify-messages.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "copy-signature"
+    ],
+    "captures": [
+      "media/widgets/message-signed.png",
+      "media/qml/qml_additional/027-message-signed-full-view.png"
+    ]
+  },
+  {
+    "id": "F20.S01",
+    "intent": "Choose where node and wallet data are stored.",
+    "page": "features/20-set-up-and-synchronize-node.md",
+    "widgets": "Related automated suite",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/qml/qml_test_preinit_onboarding/013-wait-for-page-onboardingstoragelocation.png",
+      "media/qml/qml_test_preinit_onboarding/017-wait-for-page-onboardingconnection.png"
+    ]
+  },
+  {
+    "id": "F20.S02",
+    "intent": "Limit blockchain storage through pruning.",
+    "page": "features/20-set-up-and-synchronize-node.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/preferences-general.png",
+      "media/qml/qml_test_preinit_onboarding/015-wait-for-page-onboardingstorageamount.png"
+    ]
+  },
+  {
+    "id": "F20.S03",
+    "intent": "Assess available storage, expected requirements, and the effect of pruning on wallet recovery.",
+    "page": "features/20-set-up-and-synchronize-node.md",
+    "widgets": "Visual evidence only",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/preferences-general.png",
+      "media/qml/qml_test_preinit_onboarding/015-wait-for-page-onboardingstorageamount.png"
+    ]
+  },
+  {
+    "id": "F20.S04",
+    "intent": "Download and validate the blockchain.",
+    "page": "features/20-set-up-and-synchronize-node.md",
+    "widgets": "Related automated suite",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F20.S05",
+    "intent": "Monitor synchronization progress and how far the node is behind.",
+    "page": "features/20-set-up-and-synchronize-node.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/startup-sync-status.png"
+    ]
+  },
+  {
+    "id": "F20.S06",
+    "intent": "Operate the node without an open wallet.",
+    "page": "features/20-set-up-and-synchronize-node.md",
+    "widgets": "Related automated suite",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/qml/qml_test_disablewallet_boot/002-02-node-only-main-screen-reached.png"
+    ]
+  },
+  {
+    "id": "F20.S07",
+    "intent": "Use mainnet, testnet, testnet4, signet, or regtest. [Network support](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/networkstyle.cpp).",
+    "page": "features/20-set-up-and-synchronize-node.md",
+    "widgets": "Related automated suite",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F21.S01",
+    "intent": "Enable or pause peer-to-peer networking.",
+    "page": "features/21-configure-network-and-manage-peers.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "pause-network",
+      "resume-network"
+    ],
+    "captures": [
+      "media/widgets/network-paused.png"
+    ]
+  },
+  {
+    "id": "F21.S02",
+    "intent": "Allow incoming peer connections.",
+    "page": "features/21-configure-network-and-manage-peers.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/preferences-network.png",
+      "media/qml/qml_test_preinit_onboarding/017-wait-for-page-onboardingconnection.png"
+    ]
+  },
+  {
+    "id": "F21.S03",
+    "intent": "Route connections through SOCKS5 proxies, with separate routing for Tor. [Proxy support](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/optionsdialog.cpp).",
+    "page": "features/21-configure-network-and-manage-peers.md",
+    "widgets": "Visual evidence only",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/preferences-network.png",
+      "media/qml/qml_test_proxy/005-wait-for-page-proxysettingspage.png"
+    ]
+  },
+  {
+    "id": "F21.S04",
+    "intent": "Automatically configure router access for incoming connections where supported.",
+    "page": "features/21-configure-network-and-manage-peers.md",
+    "widgets": "Visual evidence only",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/preferences-network.png"
+    ]
+  },
+  {
+    "id": "F21.S05",
+    "intent": "Inspect peer connectivity, performance, synchronization, and relay behavior.",
+    "page": "features/21-configure-network-and-manage-peers.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/peers.png",
+      "media/qml/qml_test_peers/004-wait-for-page-peerdetails.png"
+    ]
+  },
+  {
+    "id": "F21.S06",
+    "intent": "Check whether peer connections use encrypted transport.",
+    "page": "features/21-configure-network-and-manage-peers.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/peers.png",
+      "media/qml/qml_test_peers/004-wait-for-page-peerdetails.png"
+    ]
+  },
+  {
+    "id": "F21.S07",
+    "intent": "Sort peers, copy peer addresses to the clipboard, and disconnect unwanted peers.",
+    "page": "features/21-configure-network-and-manage-peers.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/peers.png",
+      "media/qml/qml_test_peers/004-wait-for-page-peerdetails.png"
+    ]
+  },
+  {
+    "id": "F21.S08",
+    "intent": "Temporarily ban peers, review existing bans, and restore access.",
+    "page": "features/21-configure-network-and-manage-peers.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/peers.png",
+      "media/qml/qml_test_peers/032-click-viewbannedpeersbutton.png"
+    ]
+  },
+  {
+    "id": "F21.S09",
+    "intent": "Copy banned addresses and network ranges to the clipboard.",
+    "page": "features/21-configure-network-and-manage-peers.md",
+    "widgets": "Related automated suite",
+    "qml": "Implementation gap",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F22.S01",
+    "intent": "Inspect node identity, network, synchronization, and mempool information.",
+    "page": "features/22-inspect-node-and-use-rpc-console.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/node-information.png",
+      "media/widgets/node-only-diagnostics.png",
+      "media/qml/qml_test_disablewallet_boot/005-05-node-settings-opened-without-wallet-ui.png"
+    ]
+  },
+  {
+    "id": "F22.S02",
+    "intent": "Monitor network traffic and data usage over time.",
+    "page": "features/22-inspect-node-and-use-rpc-console.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/network-traffic.png",
+      "media/qml/qml_test_disablewallet_boot/017-17-network-traffic-settings-opened.png"
+    ]
+  },
+  {
+    "id": "F22.S03",
+    "intent": "Focus traffic monitoring on a chosen time period or begin a fresh observation.",
+    "page": "features/22-inspect-node-and-use-rpc-console.md",
+    "widgets": "Visual evidence only",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/network-traffic.png",
+      "media/qml/qml_test_disablewallet_boot/017-17-network-traffic-settings-opened.png"
+    ]
+  },
+  {
+    "id": "F22.S04",
+    "intent": "Inspect logs for troubleshooting.",
+    "page": "features/22-inspect-node-and-use-rpc-console.md",
+    "widgets": "Related automated suite",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/qml/qml_test_debug_log/005-wait-for-page-debuglogview.png"
+    ]
+  },
+  {
+    "id": "F22.S05",
+    "intent": "Run advanced node and wallet commands.",
+    "page": "features/22-inspect-node-and-use-rpc-console.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/rpc-console.png",
+      "media/qml/qml_test_console/004-wait-for-page-rpcconsolesettingspage.png"
+    ]
+  },
+  {
+    "id": "F22.S06",
+    "intent": "Choose which wallet an advanced operation applies to.",
+    "page": "features/22-inspect-node-and-use-rpc-console.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/rpc-console.png",
+      "media/qml/qml_test_console/004-wait-for-page-rpcconsolesettingspage.png"
+    ]
+  },
+  {
+    "id": "F22.S07",
+    "intent": "Use command history, completion, and help.",
+    "page": "features/22-inspect-node-and-use-rpc-console.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/rpc-console.png",
+      "media/qml/qml_test_console/004-wait-for-page-rpcconsolesettingspage.png"
+    ]
+  },
+  {
+    "id": "F22.S08",
+    "intent": "Adjust console readability and clear previous output.",
+    "page": "features/22-inspect-node-and-use-rpc-console.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/rpc-console.png",
+      "media/qml/qml_test_console/004-wait-for-page-rpcconsolesettingspage.png"
+    ]
+  },
+  {
+    "id": "F22.S09",
+    "intent": "Use RPC for descriptor import, multisig setup, wallet rescans, and combining PSBTs.",
+    "page": "features/22-inspect-node-and-use-rpc-console.md",
+    "widgets": "Related automated suite",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": [
+      "media/qml/qml_test_console/004-wait-for-page-rpcconsolesettingspage.png"
+    ]
+  },
+  {
+    "id": "F23.S01",
+    "intent": "Allocate memory and processing resources for block validation.",
+    "page": "features/23-configure-application-preferences.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/preferences-general.png"
+    ]
+  },
+  {
+    "id": "F23.S02",
+    "intent": "Allow external tools to communicate with the node through RPC.",
+    "page": "features/23-configure-application-preferences.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/preferences-general.png"
+    ]
+  },
+  {
+    "id": "F23.S03",
+    "intent": "Choose whether unconfirmed change is available for spending.",
+    "page": "features/23-configure-application-preferences.md",
+    "widgets": "Visual evidence only",
+    "qml": "Implementation gap",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/preferences-wallet.png"
+    ]
+  },
+  {
+    "id": "F23.S04",
+    "intent": "Set the default treatment of fees in recipient amounts.",
+    "page": "features/23-configure-application-preferences.md",
+    "widgets": "Visual evidence only",
+    "qml": "Implementation gap",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/preferences-wallet.png"
+    ]
+  },
+  {
+    "id": "F23.S05",
+    "intent": "Choose whether advanced transaction controls are available.",
+    "page": "features/23-configure-application-preferences.md",
+    "widgets": "Assertions collected",
+    "qml": "Implementation gap",
+    "widgets_assertions": [
+      "enable-coin-control"
+    ],
+    "captures": [
+      "media/widgets/preferences-wallet.png"
+    ]
+  },
+  {
+    "id": "F23.S06",
+    "intent": "Choose the interface language and amount units: BTC, mBTC, bits, or satoshis. [Amount units](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/bitcoinunits.cpp).",
+    "page": "features/23-configure-application-preferences.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/preferences-display.png",
+      "media/qml/qml_test_settings_display/004-wait-for-page-displaysettingspage.png"
+    ]
+  },
+  {
+    "id": "F23.S07",
+    "intent": "Customize the font used to display wallet balances.",
+    "page": "features/23-configure-application-preferences.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/preferences-display.png",
+      "media/qml/qml_test_settings_display/004-wait-for-page-displaysettingspage.png"
+    ]
+  },
+  {
+    "id": "F23.S08",
+    "intent": "Choose external services for inspecting transactions.",
+    "page": "features/23-configure-application-preferences.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/preferences-display.png",
+      "media/qml/qml_test_settings_display/004-wait-for-page-displaysettingspage.png"
+    ]
+  },
+  {
+    "id": "F23.S09",
+    "intent": "Configure startup and window behavior.",
+    "page": "features/23-configure-application-preferences.md",
+    "widgets": "Visual evidence only",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/preferences-window.png",
+      "media/qml/qml_test_tray/005-wait-for-page-windowbehaviorsettingspage.png"
+    ]
+  },
+  {
+    "id": "F23.S10",
+    "intent": "Manage advanced application configuration.",
+    "page": "features/23-configure-application-preferences.md",
+    "widgets": "Related automated suite",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F23.S11",
+    "intent": "Understand which settings take precedence and which changes require a restart. [Settings behavior](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/optionsdialog.cpp).",
+    "page": "features/23-configure-application-preferences.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/preferences-general.png"
+    ]
+  },
+  {
+    "id": "F23.S12",
+    "intent": "Restore default preferences while retaining a backup of previous settings. [Settings recovery](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/optionsmodel.cpp).",
+    "page": "features/23-configure-application-preferences.md",
+    "widgets": "Related automated suite",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F24.S01",
+    "intent": "Keep the application accessible while its main window is hidden.",
+    "page": "features/24-system-tray-macos-dock.md",
+    "widgets": "Assertions collected",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [
+      "tray-hide-keeps-node",
+      "tray-restore-window"
+    ],
+    "captures": [
+      "media/widgets/linux-tray-menu.png",
+      "media/widgets/linux-tray-hidden.png",
+      "media/qml/linux-tray-menu.png",
+      "media/qml/linux-tray-hidden.png"
+    ]
+  },
+  {
+    "id": "F24.S02",
+    "intent": "Control application visibility without interrupting the node.",
+    "page": "features/24-system-tray-macos-dock.md",
+    "widgets": "Assertions collected",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [
+      "tray-hide-keeps-node",
+      "tray-restore-window"
+    ],
+    "captures": [
+      "media/widgets/linux-tray-hidden.png",
+      "media/qml/linux-tray-hidden.png"
+    ]
+  },
+  {
+    "id": "F24.S03",
+    "intent": "Quickly access payments, message signing and verification, settings, and diagnostics.",
+    "page": "features/24-system-tray-macos-dock.md",
+    "widgets": "Visual evidence only",
+    "qml": "Implementation gap",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/linux-tray-menu.png"
+    ]
+  },
+  {
+    "id": "F24.S04",
+    "intent": "Quit the application.",
+    "page": "features/24-system-tray-macos-dock.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "native-tray-quit"
+    ],
+    "captures": [
+      "media/widgets/linux-tray-menu.png",
+      "media/qml/linux-tray-menu.png"
+    ]
+  },
+  {
+    "id": "F24.S05",
+    "intent": "Choose whether to display a tray icon on supported desktops.",
+    "page": "features/24-system-tray-macos-dock.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/preferences-window.png",
+      "media/qml/qml_test_tray/005-wait-for-page-windowbehaviorsettingspage.png"
+    ]
+  },
+  {
+    "id": "F25.S01",
+    "intent": "Receive updates about incoming and outgoing payments.",
+    "page": "features/25-desktop-notifications.md",
+    "widgets": "Assertions collected",
+    "qml": "Implementation gap",
+    "widgets_assertions": [
+      "notification-payment-arrived",
+      "desktop-notification-delivered"
+    ],
+    "captures": [
+      "media/widgets/linux-payment-notification.png"
+    ]
+  },
+  {
+    "id": "F25.S02",
+    "intent": "Identify the affected transaction and wallet, including amounts and recipient information.",
+    "page": "features/25-desktop-notifications.md",
+    "widgets": "Assertions collected",
+    "qml": "Implementation gap",
+    "widgets_assertions": [
+      "notification-payment-arrived",
+      "desktop-notification-delivered"
+    ],
+    "captures": [
+      "media/widgets/linux-payment-notification.png"
+    ]
+  },
+  {
+    "id": "F25.S03",
+    "intent": "Receive informational, warning, and critical messages through desktop notifications.",
+    "page": "features/25-desktop-notifications.md",
+    "widgets": "Source only",
+    "qml": "Implementation gap",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F25.S04",
+    "intent": "Receive critical error messages when desktop notifications are unavailable.",
+    "page": "features/25-desktop-notifications.md",
+    "widgets": "Source only",
+    "qml": "Implementation gap",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F25.S05",
+    "intent": "Avoid a flood of notifications while historical wallet activity is being loaded. [Transaction notifications](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/walletview.cpp#L125).",
+    "page": "features/25-desktop-notifications.md",
+    "widgets": "Source only",
+    "qml": "Implementation gap",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F26.S01",
+    "intent": "Arrange, hide, and restore application windows.",
+    "page": "features/26-manage-application-windows.md",
+    "widgets": "Related automated suite",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F26.S02",
+    "intent": "Remember the main window placement between sessions.",
+    "page": "features/26-manage-application-windows.md",
+    "widgets": "Related automated suite",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F26.S03",
+    "intent": "Keep the node running while the main window is minimized or closed, where supported.",
+    "page": "features/26-manage-application-windows.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "tray-hide-keeps-node"
+    ],
+    "captures": [
+      "media/widgets/preferences-window.png",
+      "media/widgets/linux-tray-hidden.png",
+      "media/qml/linux-tray-hidden.png",
+      "media/qml/qml_test_tray/005-wait-for-page-windowbehaviorsettingspage.png"
+    ]
+  },
+  {
+    "id": "F26.S04",
+    "intent": "Use diagnostics alongside wallet activity.",
+    "page": "features/26-manage-application-windows.md",
+    "widgets": "Related automated suite",
+    "qml": "Implementation gap",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F26.S05",
+    "intent": "Identify the active wallet and network.",
+    "page": "features/26-manage-application-windows.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/overview-balances.png",
+      "media/qml/qml_test_disablewallet_boot/002-02-node-only-main-screen-reached.png"
+    ]
+  },
+  {
+    "id": "F27.S01",
+    "intent": "Start automatically at system login on Windows and Linux. [Automatic startup](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/guiutil.cpp).",
+    "page": "features/27-start-and-exit-application.md",
+    "widgets": "Visual evidence only",
+    "qml": "Implementation gap",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/preferences-general.png"
+    ]
+  },
+  {
+    "id": "F27.S02",
+    "intent": "Start with the main window minimized.",
+    "page": "features/27-start-and-exit-application.md",
+    "widgets": "Related automated suite",
+    "qml": "Implementation gap",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F27.S03",
+    "intent": "Monitor initialization progress.",
+    "page": "features/27-start-and-exit-application.md",
+    "widgets": "Related automated suite",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F27.S04",
+    "intent": "Request an orderly shutdown during startup.",
+    "page": "features/27-start-and-exit-application.md",
+    "widgets": "Related automated suite",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F27.S05",
+    "intent": "Shut down the node cleanly.",
+    "page": "features/27-start-and-exit-application.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "native-tray-quit",
+      "wallet-disabled-clean-exit"
+    ],
+    "captures": [
+      "media/qml/qml_test_shutdown/001-wait-for-page-shutdownpage.png"
+    ]
+  },
+  {
+    "id": "F27.S06",
+    "intent": "Know when shutdown is still in progress.",
+    "page": "features/27-start-and-exit-application.md",
+    "widgets": "Related automated suite",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/qml/qml_test_shutdown/001-wait-for-page-shutdownpage.png"
+    ]
+  },
+  {
+    "id": "F27.S07",
+    "intent": "Recover unreadable settings or stop startup without changing them.",
+    "page": "features/27-start-and-exit-application.md",
+    "widgets": "Related automated suite",
+    "qml": "Implementation gap",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F27.S08",
+    "intent": "Coordinate application shutdown with Windows session shutdown. [System shutdown integration](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/winshutdownmonitor.cpp).",
+    "page": "features/27-start-and-exit-application.md",
+    "widgets": "Related automated suite",
+    "qml": "Implementation gap",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F28.S01",
+    "intent": "Move between wallet balances, payments, and transaction history.",
+    "page": "features/28-navigate-the-application.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/overview-balances.png",
+      "media/qml/qml_test_activity_filter_export/006-06-activity-shows-payment-request-and-mined-rows.png"
+    ]
+  },
+  {
+    "id": "F28.S02",
+    "intent": "Switch between available wallets.",
+    "page": "features/28-navigate-the-application.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "switch-active-wallet"
+    ],
+    "captures": [
+      "media/widgets/restored-wallet-overview.png",
+      "media/qml/qml_additional/032-multiple-loaded-wallets.png"
+    ]
+  },
+  {
+    "id": "F28.S03",
+    "intent": "Access address records and node diagnostics.",
+    "page": "features/28-navigate-the-application.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/node-information.png",
+      "media/widgets/saved-sending-addresses.png"
+    ]
+  },
+  {
+    "id": "F28.S04",
+    "intent": "Reach common wallet and application tasks quickly.",
+    "page": "features/28-navigate-the-application.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/overview-balances.png"
+    ]
+  },
+  {
+    "id": "F28.S05",
+    "intent": "Use keyboard shortcuts for navigation and common actions.",
+    "page": "features/28-navigate-the-application.md",
+    "widgets": "Related automated suite",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F29.S01",
+    "intent": "Check connection count and whether networking is active.",
+    "page": "features/29-view-application-status.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "pause-network"
+    ],
+    "captures": [
+      "media/widgets/wallet-overview-funded.png",
+      "media/widgets/overview-balances.png",
+      "media/widgets/network-paused.png",
+      "media/qml/qml_test_blockclock/002-click-blockclocktogglearea.png"
+    ]
+  },
+  {
+    "id": "F29.S02",
+    "intent": "Understand synchronization progress and whether wallet information is current.",
+    "page": "features/29-view-application-status.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/startup-sync-status.png",
+      "media/widgets/wallet-overview-funded.png",
+      "media/widgets/overview-balances.png"
+    ]
+  },
+  {
+    "id": "F29.S03",
+    "intent": "Check whether a proxy is in use.",
+    "page": "features/29-view-application-status.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/preferences-network.png",
+      "media/qml/qml_test_proxy/005-wait-for-page-proxysettingspage.png"
+    ]
+  },
+  {
+    "id": "F29.S04",
+    "intent": "Check wallet encryption, lock, and key-generation status.",
+    "page": "features/29-view-application-status.md",
+    "widgets": "Visual evidence only",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/encrypted-wallet-status.png"
+    ]
+  },
+  {
+    "id": "F29.S05",
+    "intent": "Choose the denomination used to display amounts.",
+    "page": "features/29-view-application-status.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/wallet-overview-funded.png",
+      "media/qml/qml_test_activity_filter_export/030-30-activity-details-amount-uses-selected-display-unit.png"
+    ]
+  },
+  {
+    "id": "F29.S06",
+    "intent": "Understand available actions through contextual guidance.",
+    "page": "features/29-view-application-status.md",
+    "widgets": "Source only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F30.S01",
+    "intent": "Understand operation results, warnings, and errors.",
+    "page": "features/30-show-progress-errors-and-confirmations.md",
+    "widgets": "Related automated suite",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/qml/qml_test_wallet_selector_load/008-03-load-error-alert-popup-displayed.png",
+      "media/qml/qml_test_node_runtime_dialogs/003-reindex-question-ok-abort.png"
+    ]
+  },
+  {
+    "id": "F30.S02",
+    "intent": "Review important decisions before committing to an action.",
+    "page": "features/30-show-progress-errors-and-confirmations.md",
+    "widgets": "Visual evidence only",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/encryption-confirmation.png",
+      "media/qml/qml_test_node_runtime_dialogs/003-reindex-question-ok-abort.png"
+    ]
+  },
+  {
+    "id": "F30.S03",
+    "intent": "Inspect additional diagnostic information when available.",
+    "page": "features/30-show-progress-errors-and-confirmations.md",
+    "widgets": "Related automated suite",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/qml/qml_test_wallet_selector_load/008-03-load-error-alert-popup-displayed.png",
+      "media/qml/qml_test_node_runtime_dialogs/003-reindex-question-ok-abort.png"
+    ]
+  },
+  {
+    "id": "F30.S04",
+    "intent": "Receive a prompt when an operation requires attention.",
+    "page": "features/30-show-progress-errors-and-confirmations.md",
+    "widgets": "Related automated suite",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": [
+      "media/qml/qml_test_wallet_selector_load/008-03-load-error-alert-popup-displayed.png",
+      "media/qml/qml_test_node_runtime_dialogs/003-reindex-question-ok-abort.png"
+    ]
+  },
+  {
+    "id": "F30.S05",
+    "intent": "Track long-running operations.",
+    "page": "features/30-show-progress-errors-and-confirmations.md",
+    "widgets": "Related automated suite",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F30.S06",
+    "intent": "Assess synchronization progress, processing rate, and estimated remaining work. [Synchronization feedback](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/modaloverlay.cpp).",
+    "page": "features/30-show-progress-errors-and-confirmations.md",
+    "widgets": "Visual evidence only",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/startup-sync-status.png"
+    ]
+  },
+  {
+    "id": "F30.S07",
+    "intent": "Monitor background synchronization while retaining access to the application.",
+    "page": "features/30-show-progress-errors-and-confirmations.md",
+    "widgets": "Related automated suite",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F31.S01",
+    "intent": "Open Bitcoin payment requests from other applications or by drag and drop.",
+    "page": "features/31-desktop-integration-and-application-help.md",
+    "widgets": "Related automated suite",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F31.S02",
+    "intent": "Distinguish application instances using different Bitcoin networks.",
+    "page": "features/31-desktop-integration-and-application-help.md",
+    "widgets": "Related automated suite",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F31.S03",
+    "intent": "Adapt application visuals to the desktop appearance.",
+    "page": "features/31-desktop-integration-and-application-help.md",
+    "widgets": "Related automated suite",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": [
+      "media/qml/qml_test_settings_display/004-wait-for-page-displaysettingspage.png"
+    ]
+  },
+  {
+    "id": "F31.S04",
+    "intent": "Prevent macOS background throttling from slowing initial synchronization and reindexing.",
+    "page": "features/31-desktop-integration-and-application-help.md",
+    "widgets": "Related automated suite",
+    "qml": "Implementation gap",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F31.S05",
+    "intent": "Use external block explorers to inspect transactions.",
+    "page": "features/31-desktop-integration-and-application-help.md",
+    "widgets": "Related automated suite",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F31.S06",
+    "intent": "Access application information and command-line help.",
+    "page": "features/31-desktop-integration-and-application-help.md",
+    "widgets": "Visual evidence only",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": [
+      "media/widgets/about-application.png",
+      "media/widgets/command-line-help.png",
+      "media/qml/qml_test_disablewallet_boot/006-06-about-settings-opened.png"
+    ]
+  },
+  {
+    "id": "F32.S01",
+    "intent": "Conceal wallet balances and recent activity.",
+    "page": "features/32-mask-wallet-values-privacy-mode.md",
+    "widgets": "Assertions collected",
+    "qml": "Implementation gap",
+    "widgets_assertions": [
+      "privacy-values"
+    ],
+    "captures": [
+      "media/widgets/privacy-masked-overview.png"
+    ]
+  },
+  {
+    "id": "F32.S02",
+    "intent": "Restrict access to transaction history while privacy mode is active. [History privacy](https://github.com/bitcoin-core/gui/blob/f739c7876b81304bdc72e7eaa307702da269ac31/src/qt/bitcoingui.cpp).",
+    "page": "features/32-mask-wallet-values-privacy-mode.md",
+    "widgets": "Assertions collected",
+    "qml": "Implementation gap",
+    "widgets_assertions": [
+      "privacy-history-disabled"
+    ],
+    "captures": [
+      "media/widgets/privacy-masked-overview.png"
+    ]
+  },
+  {
+    "id": "F32.S03",
+    "intent": "Apply the privacy preference across loaded wallets.",
+    "page": "features/32-mask-wallet-values-privacy-mode.md",
+    "widgets": "Source only",
+    "qml": "Implementation gap",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F32.S04",
+    "intent": "Remember the privacy preference between sessions.",
+    "page": "features/32-mask-wallet-values-privacy-mode.md",
+    "widgets": "Source only",
+    "qml": "Implementation gap",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F33.S01",
+    "intent": "Operate a node independently of wallet functionality.",
+    "page": "features/33-run-with-wallet-functionality-disabled.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "runtime-disablewallet"
+    ],
+    "captures": [
+      "media/widgets/node-only-shell.png",
+      "media/qml/qml_test_disablewallet_boot/002-02-node-only-main-screen-reached.png"
+    ]
+  },
+  {
+    "id": "F33.S02",
+    "intent": "Manage node information, networking, traffic, and diagnostics.",
+    "page": "features/33-run-with-wallet-functionality-disabled.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "node-only-diagnostics"
+    ],
+    "captures": [
+      "media/widgets/node-only-diagnostics.png",
+      "media/qml/qml_test_disablewallet_boot/017-17-network-traffic-settings-opened.png",
+      "media/qml/qml_test_disablewallet_boot/005-05-node-settings-opened-without-wallet-ui.png"
+    ]
+  },
+  {
+    "id": "F33.S03",
+    "intent": "Retain application preferences and desktop integration without wallet features.",
+    "page": "features/33-run-with-wallet-functionality-disabled.md",
+    "widgets": "Assertions collected",
+    "qml": "Automated evidence collected",
+    "widgets_assertions": [
+      "wallet-disabled-clean-exit"
+    ],
+    "captures": [
+      "media/widgets/node-only-shell.png",
+      "media/widgets/node-only-preferences.png",
+      "media/qml/qml_test_disablewallet_boot/005-05-node-settings-opened-without-wallet-ui.png"
+    ]
+  },
+  {
+    "id": "F34.S01",
+    "intent": "Rediscover wallet activity from blockchain history.",
+    "page": "features/34-monitor-and-cancel-wallet-rescans.md",
+    "widgets": "Related automated suite",
+    "qml": "Partial / limited evidence",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F34.S02",
+    "intent": "Monitor rescan progress.",
+    "page": "features/34-monitor-and-cancel-wallet-rescans.md",
+    "widgets": "Related automated suite",
+    "qml": "Implementation gap",
+    "widgets_assertions": [],
+    "captures": []
+  },
+  {
+    "id": "F34.S03",
+    "intent": "Request cancellation of an ongoing wallet rescan.",
+    "page": "features/34-monitor-and-cancel-wallet-rescans.md",
+    "widgets": "Related automated suite",
+    "qml": "Implementation gap",
+    "widgets_assertions": [],
+    "captures": []
+  }
+]

@@ -1,0 +1,188 @@
+{"utc": "2026-10-08T19:49:57.752159+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/qml_wallet_restore_bad_format_ozebl8az/gui_node", "-test-automation=/work/tmp/qml_wallet_restore_bad_format_ozebl8az/test_bridge.sock", "-test-settings-dir=/work/tmp/qml_wallet_restore_bad_format_ozebl8az/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 18668, "platform": "xcb"}
+{"utc": "2026-10-08T19:49:58.506343+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:49:58.515969+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-08T19:49:58.517765+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:49:58.990550+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:49:58.992057+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "noWalletLoaded"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:49:59.000490+00:00", "request": {"cmd": "click", "objectName": "walletBadge"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:49:59.005337+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:49:59.058483+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:49:59.111994+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:49:59.165659+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:49:59.219590+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:49:59.272752+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:49:59.325610+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:49:59.378206+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:49:59.429964+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:49:59.483402+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:49:59.535760+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:49:59.588565+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:49:59.641181+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:49:59.694819+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:49:59.748584+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:49:59.802532+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:49:59.856314+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:49:59.910133+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:49:59.963531+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:00.016583+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:00.069335+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:00.122150+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:00.174943+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:00.227896+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:00.280665+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:00.333178+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:00.385545+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:00.438124+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:00.490806+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:00.543492+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:00.595705+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:00.648152+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:00.700630+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:00.753733+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:00.807742+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:00.861742+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:00.916158+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:00.970105+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:01.024247+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:01.026770+00:00", "request": {"cmd": "get_property", "objectName": "walletTypeImport", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:50:01.028847+00:00", "request": {"cmd": "set_text", "objectName": "importWalletPathField", "text": "/work/qml-source/test/functional/fixtures/invalid-wallet-backup.bak"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:50:01.031185+00:00", "request": {"cmd": "click", "objectName": "walletTypeImport"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:50:01.033355+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:01.039842+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:01.045808+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:50:01.523059+00:00", "request": {"cmd": "get_property", "objectName": "importWalletErrorView", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:50:01.524717+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:01.525862+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:01.526934+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:50:02.001615+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "currentItem.objectName"}, "response": {"value": "walletImportErrorPage"}}
+{"utc": "2026-10-08T19:50:02.003198+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "noWalletLoaded"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:50:02.004494+00:00", "request": {"cmd": "get_text", "objectName": "importWalletErrorTitle"}, "response": {"text": "This wallet type is not supported"}}
+{"utc": "2026-10-08T19:50:02.005716+00:00", "request": {"cmd": "get_text", "objectName": "importWalletErrorDescription"}, "response": {"text": "The file looks like a wallet backup, but this application could not verify or open it in a supported format."}}
+{"utc": "2026-10-08T19:50:02.006970+00:00", "request": {"cmd": "get_text", "objectName": "importWalletErrorHelpText"}, "response": {"text": "Wallet file verification failed. Failed to load database path '/work/tmp/qml_wallet_restore_bad_format_ozebl8az/gui_node/regtest/wallets/invalid-wallet-backup'. Data is not in recognized format."}}
+{"utc": "2026-10-08T19:50:03.092656+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/qml_wallet_restore_legacy_failure_ikhmvoh6/gui_node", "-test-automation=/work/tmp/qml_wallet_restore_legacy_failure_ikhmvoh6/test_bridge.sock", "-test-settings-dir=/work/tmp/qml_wallet_restore_legacy_failure_ikhmvoh6/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 18751, "platform": "xcb"}
+{"utc": "2026-10-08T19:50:03.847042+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:03.856233+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-08T19:50:03.857774+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:50:04.331879+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:04.333549+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "noWalletLoaded"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:50:04.341982+00:00", "request": {"cmd": "click", "objectName": "walletBadge"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:50:04.346368+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:04.400172+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:04.453733+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:04.507496+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:04.561505+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:04.615937+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:04.669946+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:04.722678+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:04.775593+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:04.828186+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:04.881380+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:04.933960+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:04.986883+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:05.039437+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:05.091780+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:05.144251+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:05.197193+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:05.250526+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:05.303077+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:05.355979+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:05.408668+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:05.461263+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:05.514082+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:05.566882+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:05.620848+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:05.674876+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:05.728931+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:05.783051+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:05.837286+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:05.891238+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:05.944964+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:05.999022+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:06.052931+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:06.106743+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:06.160754+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:06.213951+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:06.266989+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:06.319860+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:06.372632+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:06.374250+00:00", "request": {"cmd": "get_property", "objectName": "walletTypeImport", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:50:06.375734+00:00", "request": {"cmd": "set_text", "objectName": "importWalletPathField", "text": "/work/tmp/qml_wallet_restore_legacy_failure_ikhmvoh6/legacy_import.bak"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:50:06.377582+00:00", "request": {"cmd": "click", "objectName": "walletTypeImport"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:50:06.379310+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:06.385082+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:06.389380+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:50:06.865994+00:00", "request": {"cmd": "get_property", "objectName": "importWalletErrorView", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:50:06.867597+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:06.868913+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:06.870216+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:50:07.347788+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "currentItem.objectName"}, "response": {"value": "walletImportErrorPage"}}
+{"utc": "2026-10-08T19:50:07.349579+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "noWalletLoaded"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:50:07.351031+00:00", "request": {"cmd": "get_text", "objectName": "importWalletErrorTitle"}, "response": {"text": "This wallet needs to be migrated"}}
+{"utc": "2026-10-08T19:50:07.352384+00:00", "request": {"cmd": "get_text", "objectName": "importWalletErrorDescription"}, "response": {"text": "The selected backup appears to come from a legacy wallet format. It needs to be migrated before it can be used here."}}
+{"utc": "2026-10-08T19:50:07.353710+00:00", "request": {"cmd": "get_text", "objectName": "importWalletErrorHelpText"}, "response": {"text": "If this is a legacy wallet backup, migrate it with the wallet migration tool before importing it here."}}
+{"utc": "2026-10-08T19:50:08.260859+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/qml_wallet_restore_success_otxxmpti/gui_node", "-test-automation=/work/tmp/qml_wallet_restore_success_otxxmpti/test_bridge.sock", "-test-settings-dir=/work/tmp/qml_wallet_restore_success_otxxmpti/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 18846, "platform": "xcb"}
+{"utc": "2026-10-08T19:50:09.015319+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:09.017229+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-08T19:50:09.018468+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:50:09.495718+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:09.499138+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "noWalletLoaded"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:50:09.509376+00:00", "request": {"cmd": "click", "objectName": "walletBadge"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:50:09.513914+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:09.567914+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:09.621925+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:09.675735+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:09.729015+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:09.782595+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:09.835675+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:09.888254+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:09.940910+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:09.993542+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:10.045947+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:10.098325+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:10.150852+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:10.203576+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:10.255706+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:10.308074+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:10.360845+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:10.413541+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:10.465634+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:10.518314+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:10.572399+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:10.626460+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:10.680504+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:10.734308+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:10.787861+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:10.840655+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:10.893711+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:10.946924+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:10.999836+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:11.052509+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:11.105639+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:11.157827+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:11.210532+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:11.262685+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:11.315046+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:11.367486+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:11.419753+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:11.472056+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:11.525433+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:11.527561+00:00", "request": {"cmd": "get_property", "objectName": "walletTypeImport", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:50:11.529012+00:00", "request": {"cmd": "set_text", "objectName": "importWalletPathField", "text": "/work/tmp/qml_wallet_restore_success_otxxmpti/restore_source.bak"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:50:11.530678+00:00", "request": {"cmd": "click", "objectName": "walletTypeImport"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:50:11.532344+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:11.535491+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:11.540476+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:50:12.016832+00:00", "request": {"cmd": "wait_for_page", "page": "importWalletSuccessPage", "timeout": 20000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:50:12.018534+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:12.019698+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:12.020943+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:50:12.496836+00:00", "request": {"cmd": "get_property", "objectName": "importWalletSuccessWalletName", "prop": "text"}, "response": {"value": "restore_source"}}
+{"utc": "2026-10-08T19:50:12.498393+00:00", "request": {"cmd": "get_property", "objectName": "importWalletSuccessKeyScheme", "prop": "text"}, "response": {"value": "Single-key"}}
+{"utc": "2026-10-08T19:50:12.500191+00:00", "request": {"cmd": "click", "objectName": "importWalletSuccessOverviewButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:50:12.505021+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "text"}, "response": {"value": "restore_source"}}
+{"utc": "2026-10-08T19:50:12.506812+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:12.508050+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:50:12.509316+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:50:13.149845+00:00", "application_pid": 18668, "exit_code": 0}
+{"utc": "2026-10-08T19:50:13.149898+00:00", "application_pid": 18751, "exit_code": 0}
+{"utc": "2026-10-08T19:50:13.149919+00:00", "application_pid": 18846, "exit_code": 0}

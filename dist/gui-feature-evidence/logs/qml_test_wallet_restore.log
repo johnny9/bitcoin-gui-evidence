@@ -1,0 +1,35 @@
+Checkpoint screenshots will be saved under: /work/qml-source/test/artifacts/qml_test_wallet_restore-20261008-194957
+[qml_wallet_restore_bad_format] starting
+[qml_wallet_restore_bad_format] checkpoint 01: bad-format fixture located
+[qml_wallet_restore_bad_format] checkpoint 02: GUI launched
+[qml_wallet_restore_bad_format] checkpoint 02: screenshot saved to /evidence/media/qml/qml_test_wallet_restore/001-02-gui-launched.png (800x665)
+[qml_wallet_restore_bad_format] checkpoint 03: bad-format backup submitted
+[qml_wallet_restore_bad_format] checkpoint 03: screenshot saved to /evidence/media/qml/qml_test_wallet_restore/002-03-bad-format-backup-submitted.png (800x665)
+[qml_wallet_restore_bad_format] checkpoint 04: bad-format error screen displayed
+[qml_wallet_restore_bad_format] checkpoint 04: screenshot saved to /evidence/media/qml/qml_test_wallet_restore/003-04-bad-format-error-screen-displayed.png (800x665)
+Bad-format restore failure surfaced expected help text: Wallet file verification failed. Failed to load database path '/work/tmp/qml_wallet_restore_bad_format_ozebl8az/gui_node/regtest/wallets/invalid-wallet-backup'. Data is not in recognized format.
+[qml_wallet_restore_bad_format] completed
+[qml_wallet_restore_legacy_failure] starting
+[qml_wallet_restore_legacy_failure] checkpoint 01: legacy fixture binary located
+[qml_wallet_restore_legacy_failure] checkpoint 02: legacy backup fixture created
+[qml_wallet_restore_legacy_failure] checkpoint 03: GUI launched
+[qml_wallet_restore_legacy_failure] checkpoint 03: screenshot saved to /evidence/media/qml/qml_test_wallet_restore/004-03-gui-launched.png (800x665)
+[qml_wallet_restore_legacy_failure] checkpoint 04: legacy backup submitted
+[qml_wallet_restore_legacy_failure] checkpoint 04: screenshot saved to /evidence/media/qml/qml_test_wallet_restore/005-04-legacy-backup-submitted.png (800x665)
+[qml_wallet_restore_legacy_failure] checkpoint 05: legacy-wallet error screen displayed
+[qml_wallet_restore_legacy_failure] checkpoint 05: screenshot saved to /evidence/media/qml/qml_test_wallet_restore/006-05-legacy-wallet-error-screen-displayed.png (800x665)
+Legacy restore failure surfaced expected migration guidance.
+[qml_wallet_restore_legacy_failure] completed
+[qml_wallet_restore_success] starting
+[qml_wallet_restore_success] checkpoint 01: valid backup fixture created
+[qml_wallet_restore_success] checkpoint 02: GUI launched
+[qml_wallet_restore_success] checkpoint 02: screenshot saved to /evidence/media/qml/qml_test_wallet_restore/007-02-gui-launched.png (800x665)
+[qml_wallet_restore_success] checkpoint 03: valid backup submitted
+[qml_wallet_restore_success] checkpoint 03: screenshot saved to /evidence/media/qml/qml_test_wallet_restore/008-03-valid-backup-submitted.png (800x665)
+[qml_wallet_restore_success] checkpoint 04: import success screen displayed
+[qml_wallet_restore_success] checkpoint 04: screenshot saved to /evidence/media/qml/qml_test_wallet_restore/009-04-import-success-screen-displayed.png (800x665)
+[qml_wallet_restore_success] checkpoint 05: wallet overview reopened
+[qml_wallet_restore_success] checkpoint 05: screenshot saved to /evidence/media/qml/qml_test_wallet_restore/010-05-wallet-overview-reopened.png (800x665)
+Restore success flow passed.
+[qml_wallet_restore_success] completed
+Wallet restore flows passed.

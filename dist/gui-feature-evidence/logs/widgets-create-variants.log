@@ -1,0 +1,4 @@
+{"id": "create-blank-wallet", "features": ["F01.S04"], "description": "Blank wallet has no generated keys.", "actual": 0, "expected": 0, "status": "passed"}
+{"id": "create-watchonly-wallet", "features": ["F01.S03"], "description": "Watch-only wallet has private keys disabled.", "actual": false, "expected": false, "status": "passed"}
+{"id": "multiple-wallets-loaded", "features": ["F02.S01", "F02.S02"], "description": "Several wallets remain loaded.", "actual": true, "expected": true, "status": "passed"}
+{'class': 'QComboBox', 'currentText': 'Blank wallet (empty)', 'enabled': True, 'geometry': [997, 327, 154, 22], 'id': 224, 'name': '', 'statusTip': '', 'title': '', 'toolTip': '', 'visible': True, 'window': 2}

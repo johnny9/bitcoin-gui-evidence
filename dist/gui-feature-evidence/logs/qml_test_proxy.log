@@ -1,0 +1,32 @@
+Starting GUI: /validation/build/bin/bitcoin-core-app -datadir=/work/tmp/qml_test_bridge_y1ed6m9a/node0 -test-automation=/work/tmp/qml_test_bridge_y1ed6m9a/test_bridge.sock -test-settings-dir=/work/tmp/qml_test_bridge_y1ed6m9a/config -qml_onboarded=1 -logtimemicros -debug -debugexclude=leveldb -nolisten
+QmlDriver connected to test bridge.
+  Navigated to Proxy Settings page.
+
+── test_default_proxy_toggle ──────────────────────────────────────
+  Default proxy toggled ON: OK
+  Proxy edit is draft-only before Done: OK
+  Default proxy toggled OFF: OK
+  proxyDraftDirty=False after reverting proxy change: OK
+
+── test_proxy_valid_address ────────────────────────────────────────
+  Valid address accepted: OK
+
+── test_proxy_invalid_address ──────────────────────────────────────
+  Invalid address rejected: OK
+
+── test_tor_proxy_toggle ───────────────────────────────────────────
+  Tor proxy toggled ON: OK
+  Tor proxy toggled OFF: OK
+
+── test_back_discards_proxy_draft ─────────────────────────────────
+  Back cancellation keeps draft changes: OK
+  Back discard leaves persisted settings unchanged: OK
+  Navigated back to runtime settings.
+
+── test_proxy_settings_persist ─────────────────────────────────────
+  settings.json proxy entry '10.0.0.1:9050': OK
+  settings.json onion entry '127.0.0.1:9150': OK
+
+==================================================
+All tests PASSED
+==================================================

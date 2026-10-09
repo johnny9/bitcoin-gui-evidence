@@ -1,0 +1,50 @@
+Checkpoint screenshots will be saved under: /work/qml-source/test/artifacts/qml_test_send_receive-20261008-194644
+[qml_test_send_receive] checkpoint 01: starting source node
+[qml_test_send_receive] checkpoint 02: receiver wallet prepared
+[qml_test_send_receive] checkpoint 03: gui launched
+[qml_test_send_receive] checkpoint 03: screenshot saved to /evidence/media/qml/qml_test_send_receive/001-03-gui-launched.png (800x665)
+[qml_test_send_receive] checkpoint 04: gui wallet created
+[qml_test_send_receive] checkpoint 04: screenshot saved to /evidence/media/qml/qml_test_send_receive/002-04-gui-wallet-created.png (800x665)
+[qml_test_send_receive] checkpoint 05: gui wallet funded
+[qml_test_send_receive] checkpoint 05: screenshot saved to /evidence/media/qml/qml_test_send_receive/003-05-gui-wallet-funded.png (800x665)
+[qml_test_send_receive] checkpoint 06: send page opened
+[qml_test_send_receive] checkpoint 06: screenshot saved to /evidence/media/qml/qml_test_send_receive/004-06-send-page-opened.png (800x665)
+[qml_test_send_receive] checkpoint 07: automatic maximum preserves mode and matches sendall RPC
+[qml_test_send_receive] checkpoint 07: screenshot saved to /evidence/media/qml/qml_test_send_receive/005-07-automatic-maximum-preserves-mode-and-matches-sendall-rpc.png (800x665)
+[qml_test_send_receive] checkpoint 08: both maximum actions exempt self-sends and warn for external recipients
+[qml_test_send_receive] checkpoint 08: screenshot saved to /evidence/media/qml/qml_test_send_receive/006-08-both-maximum-actions-exempt-self-sends-and-warn-for-external-recipients.png (800x665)
+[qml_test_send_receive] checkpoint 09: maximum preserves the fixed amount of another recipient
+[qml_test_send_receive] checkpoint 09: screenshot saved to /evidence/media/qml/qml_test_send_receive/007-09-maximum-preserves-the-fixed-amount-of-another-recipient.png (800x665)
+[qml_test_send_receive] checkpoint 10: automatic maximum excludes locked coins and shows both warnings
+[qml_test_send_receive] checkpoint 10: screenshot saved to /evidence/media/qml/qml_test_send_receive/008-10-automatic-maximum-excludes-locked-coins-and-shows-both-warnings.png (800x665)
+[qml_test_send_receive] checkpoint 11: one input selected
+[qml_test_send_receive] checkpoint 11: screenshot saved to /evidence/media/qml/qml_test_send_receive/009-11-one-input-selected.png (800x665)
+[qml_test_send_receive] checkpoint 12: send form populated
+[qml_test_send_receive] checkpoint 12: screenshot saved to /evidence/media/qml/qml_test_send_receive/010-12-send-form-populated.png (800x665)
+[qml_test_send_receive] checkpoint 13: flexible fee selected
+[qml_test_send_receive] checkpoint 13: screenshot saved to /evidence/media/qml/qml_test_send_receive/011-13-flexible-fee-selected.png (800x665)
+[qml_test_send_receive] checkpoint 14: review page with fixed amount
+[qml_test_send_receive] checkpoint 14: screenshot saved to /evidence/media/qml/qml_test_send_receive/012-14-review-page-with-fixed-amount.png (800x665)
+[qml_test_send_receive] checkpoint 15: returned to send page
+[qml_test_send_receive] checkpoint 15: screenshot saved to /evidence/media/qml/qml_test_send_receive/013-15-returned-to-send-page.png (800x665)
+[qml_test_send_receive] checkpoint 16: maximum from selected input filled after fees
+[qml_test_send_receive] checkpoint 16: screenshot saved to /evidence/media/qml/qml_test_send_receive/014-16-maximum-from-selected-input-filled-after-fees.png (800x665)
+[qml_test_send_receive] checkpoint 17: review page with sendall
+[qml_test_send_receive] checkpoint 17: screenshot saved to /evidence/media/qml/qml_test_send_receive/015-17-review-page-with-sendall.png (800x665)
+[qml_test_send_receive] checkpoint 18: transaction submitted from review
+[qml_test_send_receive] checkpoint 18: screenshot saved to /evidence/media/qml/qml_test_send_receive/016-18-transaction-submitted-from-review.png (800x665)
+[qml_test_send_receive] checkpoint 19: broadcast fee verified
+[qml_test_send_receive] checkpoint 19: screenshot saved to /evidence/media/qml/qml_test_send_receive/017-19-broadcast-fee-verified.png (800x665)
+[qml_test_send_receive] checkpoint 20: view transaction opens the sent activity
+[qml_test_send_receive] checkpoint 20: screenshot saved to /evidence/media/qml/qml_test_send_receive/018-20-view-transaction-opens-the-sent-activity.png (800x665)
+[qml_test_send_receive] checkpoint 21: coin control selection cleared after send
+[qml_test_send_receive] checkpoint 21: screenshot saved to /evidence/media/qml/qml_test_send_receive/019-21-coin-control-selection-cleared-after-send.png (800x665)
+[qml_test_send_receive] checkpoint 22: sent Activity amount and outgoing wallet impact verified
+[qml_test_send_receive] checkpoint 22: screenshot saved to /evidence/media/qml/qml_test_send_receive/020-22-sent-activity-amount-and-outgoing-wallet-impact-verified.png (800x665)
+[qml_test_send_receive] checkpoint 23: one input selected
+[qml_test_send_receive] checkpoint 23: screenshot saved to /evidence/media/qml/qml_test_send_receive/021-23-one-input-selected.png (800x665)
+[qml_test_send_receive] checkpoint 24: sweep warning precedes passphrase and final send confirmation
+[qml_test_send_receive] checkpoint 24: screenshot saved to /evidence/media/qml/qml_test_send_receive/022-24-sweep-warning-precedes-passphrase-and-final-send-confirmation.png (800x665)
+[qml_test_send_receive] checkpoint 25: review remains equal to prepared PSBT after receiving funds
+[qml_test_send_receive] checkpoint 25: screenshot saved to /evidence/media/qml/qml_test_send_receive/023-25-review-remains-equal-to-prepared-psbt-after-receiving-funds.png (800x665)
+Send flow passed: preview totals were correct for fixed amounts and sendall, the broadcast fee matched the sendall preview, and Activity showed the outgoing amount with the correct wallet impact.

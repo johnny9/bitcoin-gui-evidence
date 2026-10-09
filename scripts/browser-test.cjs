@@ -1,0 +1,259 @@
+/* Run with the existing Puppeteer image; all network traffic stays on loopback. */
+const assert = require('node:assert/strict');
+const fs = require('node:fs/promises');
+const path = require('node:path');
+const http = require('node:http');
+const puppeteer = require('/home/pptruser/node_modules/puppeteer');
+const root = '/site/dist';
+const output = '/qa';
+const basePath = process.env.SITE_BASE_PATH || '/';
+assert.match(basePath, /^\/(?:[a-zA-Z0-9_-]+\/)*$/);
+const outcomes = [];
+const errors = [];
+const failedRequests = [];
+let browser, server, currentPage;
+
+async function check(name, callback) {
+  await callback();
+  outcomes.push({name, status:'passed'});
+  console.log('PASS '+name);
+}
+async function main() {
+  await fs.rm(output+'/downloads',{recursive:true,force:true});
+  await fs.mkdir(output+'/downloads',{recursive:true});
+  const types={'.html':'text/html','.css':'text/css','.js':'text/javascript','.svg':'image/svg+xml','.png':'image/png','.json':'application/json'};
+  server=http.createServer(async(req,res)=>{
+    try {
+      const requestPath=decodeURIComponent(new URL(req.url,'http://localhost').pathname);
+      if(!requestPath.startsWith(basePath))throw Error('outside site path');
+      const relative='/'+requestPath.slice(basePath.length);
+      const filename=path.resolve(root,'.'+(relative==='/'?'/index.html':relative));
+      if(!filename.startsWith(root+'/'))throw Error('outside root');
+      const body=await fs.readFile(filename);
+      res.writeHead(200,{'Content-Type':types[path.extname(filename)]||'text/plain'});res.end(body);
+    }catch{res.writeHead(404);res.end('Not found');}
+  });
+  await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
+  const base=`http://127.0.0.1:${server.address().port}${basePath}`;
+  browser=await puppeteer.launch({headless:true,args:['--no-sandbox','--disable-dev-shm-usage'],defaultViewport:{width:1440,height:1000,deviceScaleFactor:1}});
+  const page=await browser.newPage();
+  currentPage=page;
+  page.on('pageerror',error=>errors.push(error.message));
+  page.on('response',response=>{if(response.status()>=400)failedRequests.push({url:response.url(),status:response.status()});});
+  await page.setRequestInterception(true);
+  page.on('request',request=>{const url=request.url();if(url.startsWith(base)||url.startsWith('data:')||url.startsWith('blob:')||url.startsWith('file:'))request.continue();else request.abort();});
+  const cdp=await page.createCDPSession();
+  await cdp.send('Page.setDownloadBehavior',{behavior:'allow',downloadPath:output+'/downloads'});
+  async function go(hash){
+    await page.goto(base+hash,{waitUntil:'networkidle0'});
+    await page.waitForFunction(expected=>location.hash===expected&&document.querySelector('#main').dataset.route===expected,{},hash);
+  }
+  async function value(selector,value){await page.select(selector,value);}
+  await go('#catalog');
+  await check('Catalog has all 34 groups and the pinned totals',async()=>{
+    assert.equal(await page.$$eval('.group-card',els=>els.length),34);
+    assert.match(await page.$eval('#results-count',el=>el.textContent),/203 of 203/);
+    assert.equal(await page.$$eval('[data-group-link]',els=>els.length),34);
+  });
+  await page.screenshot({path:output+'/catalog-desktop.png',fullPage:false});
+  await check('Criterion search and subfeature view return the exact ID',async()=>{
+    await page.type('#catalog-search','F19.S03');
+    assert.equal(await page.$$eval('.group-card',els=>els.length),1);
+    await page.click('[data-view="criteria"]');
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),1);
+    assert.match(await page.$eval('.criterion-result',el=>el.textContent),/Copy the resulting signature/);
+  });
+  await check('Filter state survives a page reload',async()=>{
+    await page.reload({waitUntil:'networkidle0'});
+    assert.equal(await page.$eval('#catalog-search',el=>el.value),'F19.S03');
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),1);
+  });
+  await check('Direct criterion navigation opens the relevant comparison',async()=>{
+    await page.click('.criterion-result');
+    await page.waitForSelector('[id="F19.S03"]');
+    assert.equal(await page.$eval('h1',el=>el.textContent),'Sign and Verify Messages');
+    assert.equal(await page.$$eval('.application-evidence',els=>els.length),6);
+  });
+  await check('Capture viewer opens originals and supports zoom and Escape',async()=>{
+    await page.click('[id="F19.S03"] .capture-preview');
+    await page.waitForFunction(()=>document.querySelector('#capture-image').complete&&document.querySelector('#capture-image').naturalWidth>0);
+    assert.equal(await page.$eval('#capture-dialog',el=>el.open),true);
+    await page.click('#capture-zoom');
+    assert.equal(await page.$eval('#capture-canvas',el=>el.classList.contains('actual-size')),true);
+    await page.keyboard.press('Escape');
+    assert.equal(await page.$eval('#capture-dialog',el=>el.open),false);
+  });
+  await go('#catalog?evidence=full&view=criteria');
+  let fullIds, partialIds;
+  await check('Full evidence requires GUI-QML automation and a capture',async()=>{
+    assert.deepEqual(await page.$$eval('[data-filter="evidence"] option',els=>els.map(el=>el.textContent)),['Any evidence','Full','Partial']);
+    assert.equal(await page.$('[data-filter="app"]'),null);
+    fullIds=await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent));
+    assert.equal(fullIds.length,89);
+    assert.ok(fullIds.includes('F01.S01'));
+    assert.ok(!fullIds.includes('F09.S08')); // Scoped automated tests, but no QML capture.
+    assert.ok(!fullIds.includes('F09.S03')); // Recorded failure.
+    assert.equal(await page.$$eval('.result-statuses',els=>els.every(el=>el.textContent.includes('Qt Widgets')&&el.textContent.includes('GUI-QML'))),true);
+  });
+  await check('Partial evidence includes every incomplete criterion and missing workflow',async()=>{
+    await value('[data-filter="evidence"]','partial');
+    partialIds=await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent));
+    assert.equal(partialIds.length,114);
+    assert.ok(partialIds.includes('F09.S03'));
+    assert.ok(partialIds.includes('F09.S08'));
+    assert.ok(partialIds.includes('F04.S02'));
+    assert.equal(await page.$$eval('.result-statuses .badge-gap',els=>els.length),43);
+    assert.equal(new Set([...fullIds,...partialIds]).size,203);
+    assert.equal(fullIds.some(id=>partialIds.includes(id)),false);
+    await page.reload({waitUntil:'networkidle0'});
+    assert.equal(await page.$eval('[data-filter="evidence"]',el=>el.value),'partial');
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),114);
+  });
+  await check('Capture filters use GUI-QML and preserve the Widgets reference',async()=>{
+    await value('[data-filter="captures"]','yes');
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),26);
+    await value('[data-filter="captures"]','no');
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),88);
+    await page.$eval('#catalog-search',el=>{el.value='F09.S03';el.dispatchEvent(new Event('input',{bubbles:true}));});
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),1); // Widgets has a capture; QML has none.
+    await page.click('.criterion-result');
+    await page.waitForSelector('[id="F09.S03"]');
+    assert.equal(await page.$$eval('[id="F09.S03"] .application-evidence',els=>els.length),2);
+    assert.ok(await page.$('[id="F09.S03"] .application-evidence[aria-label^="Qt Widgets"] .capture-preview'));
+    assert.match(await page.$eval('[id="F09.S03"]',el=>el.textContent),/restoration fails/);
+    await go('#feature/F09');
+    await page.click('[data-action="clear-filters"]');
+    const count=await page.evaluate(()=>window.REVIEW_EVIDENCE.groups.find(g=>g.id==='F09').criteria.length);
+    assert.equal(await page.$$eval('.criterion-card',els=>els.length),count);
+  });
+  await check('Legacy application and evidence links migrate to GUI-QML coverage',async()=>{
+    await page.goto(base+'#catalog?app=widgets&evidence=gap&view=criteria',{waitUntil:'networkidle0'});
+    assert.equal(await page.evaluate(()=>location.hash),'#catalog?evidence=partial&view=criteria');
+    assert.equal(await page.$eval('[data-filter="evidence"]',el=>el.value),'partial');
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),114);
+    assert.equal(await page.$('[data-filter="app"]'),null);
+  });
+  await check('Reset restores the full catalog',async()=>{
+    await page.click('[data-action="clear-filters"]');
+    assert.equal(await page.$$eval('.group-card',els=>els.length),34);
+  });
+  await check('Feature-area navigation filters by the selected area',async()=>{
+    await page.click('[data-area="application"]');
+    assert.equal(await page.$$eval('.group-card',els=>els.length),9);
+    await page.click('[data-area="all"]');
+  });
+  await go('#feature/F19');
+  await check('Personal review notes save literally and survive reload',async()=>{
+    await page.click('[data-review="F19.S01"]');
+    await page.select('#review-state','reviewed');
+    await page.type('#review-note','Checked signing scope. <script>window.noteInjected = true</script>');
+    await page.click('#review-form button[type="submit"]');
+    await page.reload({waitUntil:'networkidle0'});
+    assert.match(await page.$eval('[id="F19.S01"] .saved-note',el=>el.textContent),/<script>/);
+    assert.equal(await page.evaluate(()=>window.noteInjected),undefined);
+    assert.match(await page.$eval('[data-review="F19.S01"]',el=>el.textContent),/Reviewed/);
+    assert.match(await page.$eval('#review-progress-text',el=>el.textContent),/^1 \/ 203$/);
+  });
+  await check('Review export includes the snapshot identity and personal notes',async()=>{
+    await page.click('#export-review');
+    let files=[];
+    for(let tries=0;tries<50&&!files.length;tries++){files=(await fs.readdir(output+'/downloads')).filter(f=>f.endsWith('.json'));if(!files.length)await new Promise(r=>setTimeout(r,100));}
+    assert.equal(files.length,1);
+    const payload=JSON.parse(await fs.readFile(output+'/downloads/'+files[0],'utf8'));
+    assert.equal(payload.schemaVersion,1);assert.equal(payload.reviews['F19.S01'].status,'reviewed');assert.equal(payload.evidenceDate,'2026-10-08');
+    await fs.writeFile(output+'/import.json',JSON.stringify({...payload,reviews:{'F01.S01':{status:'followup',note:'Review import check',updatedAt:new Date().toISOString()}}}));
+    await fs.writeFile(output+'/wrong-snapshot.json',JSON.stringify({...payload,catalogId:'wrong-snapshot'}));
+  });
+  await check('Review import accepts matching snapshots and rejects mismatches',async()=>{
+    await (await page.$('#import-file')).uploadFile(output+'/import.json');
+    await page.waitForFunction(()=>document.querySelector('#review-progress-text').textContent==='2 / 203');
+    await (await page.$('#import-file')).uploadFile(output+'/wrong-snapshot.json');
+    await page.waitForFunction(()=>document.querySelector('#toast').textContent.includes('different evidence snapshot'));
+    assert.equal(await page.$eval('#review-progress-text',el=>el.textContent),'2 / 203');
+  });
+  await go('#catalog?review=reviewed&view=criteria');
+  await check('Review status filters use the saved local decisions',async()=>{
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),1);
+    assert.match(await page.$eval('.criterion-result',el=>el.textContent),/F19.S01/);
+    await value('[data-filter="review"]','followup');
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),1);
+    assert.match(await page.$eval('.criterion-result',el=>el.textContent),/F01.S01/);
+  });
+  await go('#tests?result=failed');
+  await check('Failure view isolates the real failed functional script',async()=>{
+    assert.equal(await page.$$eval('.functional-table tbody tr',els=>els.length),1);
+    assert.match(await page.$eval('.functional-table tbody',el=>el.textContent),/qml_test_send_create/);
+    await page.click('.finding-links a');await page.waitForSelector('[id="F09.S03"]');
+    assert.match(await page.$eval('[id="F09.S03"]',el=>el.textContent),/restoration fails/);
+  });
+  await go('#catalog?evidence=any');
+  await go('#feature/F01');
+  await check('All feature routes expose every original criterion',async()=>{
+    const groups=await page.evaluate(()=>window.REVIEW_EVIDENCE.groups.map(g=>({id:g.id,count:g.criteria.length})));
+    for(const group of groups){
+      await page.evaluate(id=>{location.hash='feature/'+id;},group.id);
+      await page.waitForFunction(id=>document.querySelector('.feature-heading .eyebrow')?.textContent.startsWith(id),{},group.id);
+      assert.equal(await page.$$eval('.criterion-card',els=>els.length),group.count,group.id);
+    }
+  });
+  await go('#feature/F19?tab=tests');
+  await check('Feature test view contains source modules and recorded test logs',async()=>{
+    assert.ok(await page.$('.module-list a[href*="signverifymessagedialog.cpp"]'));
+    assert.ok(await page.$('.tests-table a[href$="qml_test_wallet_settings.log"]'));
+  });
+  await go('#feature/F19?tab=captures');
+  await check('Capture gallery always includes both applications',async()=>{
+    assert.equal(await page.$$eval('.gallery-card',els=>els.length),5);
+    assert.equal(await page.$$eval('.gallery-card .app-dot.widgets',els=>els.length),3);
+    assert.equal(await page.$$eval('.gallery-card .app-dot.qml',els=>els.length),2);
+    assert.equal(await page.$('[data-filter="app"]'),null);
+  });
+  await check('All 116 selected originals decode in the browser',async()=>{
+    const bad=await page.evaluate(async()=>{
+      const results=await Promise.all(window.REVIEW_EVIDENCE.captures.map(photo=>new Promise(resolve=>{
+        const img=new Image();img.onload=()=>resolve(img.naturalWidth===photo.width&&img.naturalHeight===photo.height?null:photo.path);img.onerror=()=>resolve(photo.path);img.src='gui-feature-evidence/'+photo.path;
+      })));return results.filter(Boolean);
+    });
+    assert.deepEqual(bad,[]);
+  });
+  await go('#catalog?evidence=any');
+  await go('#feature/F19');
+  await page.screenshot({path:output+'/feature-desktop.png',fullPage:false});
+  await check('Browser-local file opening also supports the catalog',async()=>{
+    const local=await browser.newPage();
+    await local.goto('file:///site/dist/index.html#catalog',{waitUntil:'load'});
+    assert.equal(await local.$$eval('.group-card',els=>els.length),34);
+    await local.type('#catalog-search','F01.S01');
+    assert.equal(await local.$$eval('.group-card',els=>els.length),1);
+    await local.close();
+    await page.bringToFront();
+  });
+  await page.setViewport({width:390,height:844,deviceScaleFactor:1});
+  await go('#catalog?evidence=any');
+  await check('Mobile catalog fits without horizontal overflow',async()=>{
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+    await page.click('#open-navigation');
+    await page.waitForFunction(()=>document.querySelector('#open-navigation').getAttribute('aria-expanded')==='true');
+    assert.equal(await page.$eval('#open-navigation',el=>el.getAttribute('aria-expanded')),'true');
+    await page.click('[data-group-link="F24"]');await page.waitForSelector('[id="F24.S01"]');
+    assert.equal(await page.$eval('#open-navigation',el=>el.getAttribute('aria-expanded')),'false');
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  });
+  await page.screenshot({path:output+'/feature-mobile.png',fullPage:false});
+  await go('#catalog?evidence=any');
+  await page.screenshot({path:output+'/catalog-mobile.png',fullPage:false});
+  await check('Mobile tests and provenance remain navigable',async()=>{
+    await go('#tests');assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+    await go('#about');assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+    assert.ok(await page.$('a[href="gui-feature-evidence/selected-captures.json"]'));
+  });
+  await check('Keyboard search shortcut focuses the catalog search',async()=>{
+    await page.keyboard.press('/');await page.waitForSelector('#catalog-search');
+    await page.waitForFunction(()=>document.activeElement?.id==='catalog-search');
+  });
+  await check('No JavaScript errors or missing local assets',async()=>{assert.deepEqual(errors,[]);assert.deepEqual(failedRequests,[]);});
+}
+main().catch(async error=>{outcomes.push({name:'Browser verification',status:'failed',error:error.stack});console.error(error);process.exitCode=1;if(currentPage)await currentPage.screenshot({path:output+'/failure.png'});}).finally(async()=>{
+  await fs.writeFile(output+'/browser-results.json',JSON.stringify({checkedAt:new Date().toISOString(),basePath,outcomes,errors,failedRequests},null,2)+'\n');
+  if(browser)await browser.close();if(server)server.close();
+});

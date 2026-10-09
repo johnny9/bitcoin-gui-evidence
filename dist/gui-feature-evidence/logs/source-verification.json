@@ -1,0 +1,15 @@
+{
+  "verified_utc": "2026-10-08T20:24:42.528240+00:00",
+  "widgets": {
+    "revision": "f739c7876b81304bdc72e7eaa307702da269ac31",
+    "tree": "ecda48fc4564756b52d55eeb522577eaf75ec8f8",
+    "status_porcelain": "",
+    "tracked_diff": ""
+  },
+  "qml": {
+    "qt6_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+    "qt6_tree": "7d290492acfd2c25ca2b1d4dd6ed450cc7837405",
+    "cached_build_revision": "4527986d46e1a34710cb77e8d5ffac0a349745f9",
+    "cached_build_tree": "7d290492acfd2c25ca2b1d4dd6ed450cc7837405"
+  }
+}

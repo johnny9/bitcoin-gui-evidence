@@ -1,0 +1,83 @@
+Checkpoint screenshots will be saved under: /work/qml-source/test/artifacts/qml_test_wallet_settings-20261008-194502
+[qml_wallet_settings_read_only_name] starting
+[qml_wallet_settings_read_only_name] checkpoint 01: managed wallet fixture prepared
+[qml_wallet_settings_read_only_name] checkpoint 02: GUI launched
+[qml_wallet_settings_read_only_name] checkpoint 02: screenshot saved to /evidence/media/qml/qml_test_wallet_settings/001-02-gui-launched.png (800x665)
+[qml_wallet_settings_read_only_name] checkpoint 03: onboarding completed
+[qml_wallet_settings_read_only_name] checkpoint 03: screenshot saved to /evidence/media/qml/qml_test_wallet_settings/002-03-onboarding-completed.png (800x665)
+[qml_wallet_settings_read_only_name] checkpoint 04: managed wallet loaded
+[qml_wallet_settings_read_only_name] checkpoint 04: screenshot saved to /evidence/media/qml/qml_test_wallet_settings/003-04-managed-wallet-loaded.png (800x665)
+[qml_wallet_settings_read_only_name] checkpoint 05: wallet settings opened
+[qml_wallet_settings_read_only_name] checkpoint 05: screenshot saved to /evidence/media/qml/qml_test_wallet_settings/004-05-wallet-settings-opened.png (800x665)
+[qml_wallet_settings_read_only_name] checkpoint 06: wallet name shown as read-only
+[qml_wallet_settings_read_only_name] checkpoint 06: screenshot saved to /evidence/media/qml/qml_test_wallet_settings/005-06-wallet-name-shown-as-read-only.png (800x665)
+[qml_wallet_settings_read_only_name] completed
+[qml_wallet_settings_backup] starting
+[qml_wallet_settings_backup] checkpoint 01: managed wallet fixture prepared
+[qml_wallet_settings_backup] checkpoint 02: GUI launched
+[qml_wallet_settings_backup] checkpoint 02: screenshot saved to /evidence/media/qml/qml_test_wallet_settings/006-02-gui-launched.png (800x665)
+[qml_wallet_settings_backup] checkpoint 03: onboarding completed
+[qml_wallet_settings_backup] checkpoint 03: screenshot saved to /evidence/media/qml/qml_test_wallet_settings/007-03-onboarding-completed.png (800x665)
+[qml_wallet_settings_backup] checkpoint 04: managed wallet loaded
+[qml_wallet_settings_backup] checkpoint 04: screenshot saved to /evidence/media/qml/qml_test_wallet_settings/008-04-managed-wallet-loaded.png (800x665)
+[qml_wallet_settings_backup] checkpoint 05: wallet settings opened
+[qml_wallet_settings_backup] checkpoint 05: screenshot saved to /evidence/media/qml/qml_test_wallet_settings/009-05-wallet-settings-opened.png (800x665)
+[qml_wallet_settings_backup] checkpoint 06: wallet backup created
+[qml_wallet_settings_backup] checkpoint 06: screenshot saved to /evidence/media/qml/qml_test_wallet_settings/010-06-wallet-backup-created.png (800x665)
+[qml_wallet_settings_backup] completed
+[qml_wallet_settings_sign_verify_message] starting
+[qml_wallet_settings_sign_verify_message] checkpoint 01: managed wallet fixture prepared
+[qml_wallet_settings_sign_verify_message] checkpoint 02: GUI launched
+[qml_wallet_settings_sign_verify_message] checkpoint 02: screenshot saved to /evidence/media/qml/qml_test_wallet_settings/011-02-gui-launched.png (800x665)
+[qml_wallet_settings_sign_verify_message] checkpoint 03: onboarding completed
+[qml_wallet_settings_sign_verify_message] checkpoint 03: screenshot saved to /evidence/media/qml/qml_test_wallet_settings/012-03-onboarding-completed.png (800x665)
+[qml_wallet_settings_sign_verify_message] checkpoint 04: managed wallet loaded
+[qml_wallet_settings_sign_verify_message] checkpoint 04: screenshot saved to /evidence/media/qml/qml_test_wallet_settings/013-04-managed-wallet-loaded.png (800x665)
+[qml_wallet_settings_sign_verify_message] checkpoint 05: sign verify message page opened
+[qml_wallet_settings_sign_verify_message] checkpoint 05: screenshot saved to /evidence/media/qml/qml_test_wallet_settings/014-05-sign-verify-message-page-opened.png (800x665)
+[qml_wallet_settings_sign_verify_message] checkpoint 06: message signed
+[qml_wallet_settings_sign_verify_message] checkpoint 06: screenshot saved to /evidence/media/qml/qml_test_wallet_settings/015-06-message-signed.png (800x665)
+[qml_wallet_settings_sign_verify_message] checkpoint 07: message verified
+[qml_wallet_settings_sign_verify_message] checkpoint 07: screenshot saved to /evidence/media/qml/qml_test_wallet_settings/016-07-message-verified.png (800x665)
+[qml_wallet_settings_sign_verify_message] checkpoint 08: message verification failure displayed
+[qml_wallet_settings_sign_verify_message] checkpoint 08: screenshot saved to /evidence/media/qml/qml_test_wallet_settings/017-08-message-verification-failure-displayed.png (800x665)
+[qml_wallet_settings_sign_verify_message] completed
+[qml_wallet_settings_subpage_close] starting
+[qml_wallet_settings_subpage_close] checkpoint 01: managed wallet fixture prepared
+[qml_wallet_settings_subpage_close] checkpoint 02: GUI launched
+[qml_wallet_settings_subpage_close] checkpoint 02: screenshot saved to /evidence/media/qml/qml_test_wallet_settings/018-02-gui-launched.png (800x665)
+[qml_wallet_settings_subpage_close] checkpoint 03: onboarding completed
+[qml_wallet_settings_subpage_close] checkpoint 03: screenshot saved to /evidence/media/qml/qml_test_wallet_settings/019-03-onboarding-completed.png (800x665)
+[qml_wallet_settings_subpage_close] checkpoint 04: managed wallet loaded
+[qml_wallet_settings_subpage_close] checkpoint 04: screenshot saved to /evidence/media/qml/qml_test_wallet_settings/020-04-managed-wallet-loaded.png (800x665)
+[qml_wallet_settings_subpage_close] checkpoint 05: password subpage opened
+[qml_wallet_settings_subpage_close] checkpoint 05: screenshot saved to /evidence/media/qml/qml_test_wallet_settings/021-05-password-subpage-opened.png (800x665)
+[qml_wallet_settings_subpage_close] checkpoint 06: password subpage unwound after wallet close
+[qml_wallet_settings_subpage_close] checkpoint 06: screenshot saved to /evidence/media/qml/qml_test_wallet_settings/022-06-password-subpage-unwound-after-wallet-close.png (800x665)
+[qml_wallet_settings_subpage_close] checkpoint 07: wallet reselected from settings page
+[qml_wallet_settings_subpage_close] checkpoint 07: screenshot saved to /evidence/media/qml/qml_test_wallet_settings/023-07-wallet-reselected-from-settings-page.png (800x665)
+[qml_wallet_settings_subpage_close] completed
+[qml_wallet_settings_password_context_change] starting
+[qml_wallet_settings_password_context_change] checkpoint 01: two managed wallets prepared
+[qml_wallet_settings_password_context_change] checkpoint 02: GUI launched
+[qml_wallet_settings_password_context_change] checkpoint 02: screenshot saved to /evidence/media/qml/qml_test_wallet_settings/024-02-gui-launched.png (800x665)
+[qml_wallet_settings_password_context_change] checkpoint 03: onboarding completed
+[qml_wallet_settings_password_context_change] checkpoint 03: screenshot saved to /evidence/media/qml/qml_test_wallet_settings/025-03-onboarding-completed.png (800x665)
+[qml_wallet_settings_password_context_change] checkpoint 04: first wallet selected
+[qml_wallet_settings_password_context_change] checkpoint 04: screenshot saved to /evidence/media/qml/qml_test_wallet_settings/026-04-first-wallet-selected.png (800x665)
+[qml_wallet_settings_password_context_change] checkpoint 05: password subpage opened for first wallet
+[qml_wallet_settings_password_context_change] checkpoint 05: screenshot saved to /evidence/media/qml/qml_test_wallet_settings/027-05-password-subpage-opened-for-first-wallet.png (800x665)
+[qml_wallet_settings_password_context_change] checkpoint 06: password subpage unwound after selecting second wallet
+[qml_wallet_settings_password_context_change] checkpoint 06: screenshot saved to /evidence/media/qml/qml_test_wallet_settings/028-06-password-subpage-unwound-after-selecting-second-wallet.png (800x665)
+[qml_wallet_settings_password_context_change] completed
+[qml_wallet_settings_password_failure_preserves_current] starting
+[qml_wallet_settings_password_failure_preserves_current] checkpoint 01: managed wallet fixture prepared
+[qml_wallet_settings_password_failure_preserves_current] checkpoint 02: GUI launched
+[qml_wallet_settings_password_failure_preserves_current] checkpoint 02: screenshot saved to /evidence/media/qml/qml_test_wallet_settings/029-02-gui-launched.png (800x665)
+[qml_wallet_settings_password_failure_preserves_current] checkpoint 03: onboarding completed
+[qml_wallet_settings_password_failure_preserves_current] checkpoint 03: screenshot saved to /evidence/media/qml/qml_test_wallet_settings/030-03-onboarding-completed.png (800x665)
+[qml_wallet_settings_password_failure_preserves_current] checkpoint 04: managed wallet loaded
+[qml_wallet_settings_password_failure_preserves_current] checkpoint 04: screenshot saved to /evidence/media/qml/qml_test_wallet_settings/031-04-managed-wallet-loaded.png (800x665)
+[qml_wallet_settings_password_failure_preserves_current] checkpoint 05: wrong current password rejected and preserved
+[qml_wallet_settings_password_failure_preserves_current] checkpoint 05: screenshot saved to /evidence/media/qml/qml_test_wallet_settings/032-05-wrong-current-password-rejected-and-preserved.png (800x665)
+[qml_wallet_settings_password_failure_preserves_current] completed

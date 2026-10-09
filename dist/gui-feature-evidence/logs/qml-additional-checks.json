@@ -1,0 +1,53 @@
+[
+  {
+    "id": "multiple-recipients-custom-fee",
+    "features": [
+      "F09.S01",
+      "F11.S02"
+    ],
+    "description": "Two recipients with a custom fee can proceed to review.",
+    "status": "passed"
+  },
+  {
+    "id": "select-specific-coin",
+    "features": [
+      "F12.S01",
+      "F12.S02",
+      "F12.S07"
+    ],
+    "description": "The send form retains the selected input.",
+    "status": "passed"
+  },
+  {
+    "id": "lock-coin",
+    "features": [
+      "F12.S05"
+    ],
+    "description": "Locking a coin through QML changes Core listlockunspent.",
+    "status": "passed"
+  },
+  {
+    "id": "unlock-coin",
+    "features": [
+      "F12.S05"
+    ],
+    "description": "Unlocking the coin clears Core listlockunspent.",
+    "status": "passed"
+  },
+  {
+    "id": "sign-message",
+    "features": [
+      "F19.S01"
+    ],
+    "description": "The live QML signature verifies through RPC.",
+    "status": "passed"
+  },
+  {
+    "id": "verify-message",
+    "features": [
+      "F19.S02"
+    ],
+    "description": "The QML form reports successful signature verification.",
+    "status": "passed"
+  }
+]

@@ -1,0 +1,108 @@
+{
+  "checkedAt": "2026-10-09T22:25:18.885Z",
+  "basePath": "/bitcoin-gui-evidence/",
+  "outcomes": [
+    {
+      "name": "Catalog has all 34 groups and the pinned totals",
+      "status": "passed"
+    },
+    {
+      "name": "Criterion search and subfeature view return the exact ID",
+      "status": "passed"
+    },
+    {
+      "name": "Filter state survives a page reload",
+      "status": "passed"
+    },
+    {
+      "name": "Direct criterion navigation opens the relevant comparison",
+      "status": "passed"
+    },
+    {
+      "name": "Capture viewer opens originals and supports zoom and Escape",
+      "status": "passed"
+    },
+    {
+      "name": "Full evidence requires GUI-QML automation and a capture",
+      "status": "passed"
+    },
+    {
+      "name": "Partial evidence includes every incomplete criterion and missing workflow",
+      "status": "passed"
+    },
+    {
+      "name": "Capture filters use GUI-QML and preserve the Widgets reference",
+      "status": "passed"
+    },
+    {
+      "name": "Legacy application and evidence links migrate to GUI-QML coverage",
+      "status": "passed"
+    },
+    {
+      "name": "Reset restores the full catalog",
+      "status": "passed"
+    },
+    {
+      "name": "Feature-area navigation filters by the selected area",
+      "status": "passed"
+    },
+    {
+      "name": "Personal review notes save literally and survive reload",
+      "status": "passed"
+    },
+    {
+      "name": "Review export includes the snapshot identity and personal notes",
+      "status": "passed"
+    },
+    {
+      "name": "Review import accepts matching snapshots and rejects mismatches",
+      "status": "passed"
+    },
+    {
+      "name": "Review status filters use the saved local decisions",
+      "status": "passed"
+    },
+    {
+      "name": "Failure view isolates the real failed functional script",
+      "status": "passed"
+    },
+    {
+      "name": "All feature routes expose every original criterion",
+      "status": "passed"
+    },
+    {
+      "name": "Feature test view contains source modules and recorded test logs",
+      "status": "passed"
+    },
+    {
+      "name": "Capture gallery always includes both applications",
+      "status": "passed"
+    },
+    {
+      "name": "All 116 selected originals decode in the browser",
+      "status": "passed"
+    },
+    {
+      "name": "Browser-local file opening also supports the catalog",
+      "status": "passed"
+    },
+    {
+      "name": "Mobile catalog fits without horizontal overflow",
+      "status": "passed"
+    },
+    {
+      "name": "Mobile tests and provenance remain navigable",
+      "status": "passed"
+    },
+    {
+      "name": "Keyboard search shortcut focuses the catalog search",
+      "status": "passed"
+    },
+    {
+      "name": "No JavaScript errors or missing local assets",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "failedRequests": []
+}

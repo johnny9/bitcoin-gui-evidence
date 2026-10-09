@@ -1,0 +1,6 @@
+{"utc": "2026-10-08T19:40:27.388882+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/qml_shutdown_close_3g6im9ht/gui_node", "-test-automation=/work/tmp/qml_shutdown_close_3g6im9ht/test_bridge.sock", "-test-settings-dir=/work/tmp/qml_shutdown_close_3g6im9ht/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 14173, "platform": "xcb"}
+{"utc": "2026-10-08T19:40:28.222696+00:00", "request": {"cmd": "close_window"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:40:28.370446+00:00", "request": {"cmd": "wait_for_page", "page": "shutdownPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:40:34.224634+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/qml_shutdown_sigint_osg40zx6/gui_node", "-test-automation=/work/tmp/qml_shutdown_sigint_osg40zx6/test_bridge.sock", "-test-settings-dir=/work/tmp/qml_shutdown_sigint_osg40zx6/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 14279, "platform": "xcb"}
+{"utc": "2026-10-08T19:40:37.633243+00:00", "application_pid": 14173, "exit_code": 0}
+{"utc": "2026-10-08T19:40:37.633289+00:00", "application_pid": 14279, "exit_code": 0}

@@ -1,0 +1,38 @@
+Checkpoint screenshots will be saved under: /work/qml-source/test/artifacts/qml_test_wallet_selector_load-20261008-194439
+[qml_wallet_selector_load_happy_path] starting
+[qml_wallet_selector_load_happy_path] checkpoint 01: closed wallet prepared on disk
+[qml_wallet_selector_load_happy_path] checkpoint 02: GUI launched
+[qml_wallet_selector_load_happy_path] checkpoint 02: screenshot saved to /evidence/media/qml/qml_test_wallet_selector_load/001-02-gui-launched.png (800x665)
+[qml_wallet_selector_load_happy_path] checkpoint 03: no-wallet-loaded badge displayed
+[qml_wallet_selector_load_happy_path] checkpoint 03: screenshot saved to /evidence/media/qml/qml_test_wallet_selector_load/002-03-no-wallet-loaded-badge-displayed.png (800x665)
+[qml_wallet_selector_load_happy_path] checkpoint 04: closed wallet listed in selector
+[qml_wallet_selector_load_happy_path] checkpoint 04: screenshot saved to /evidence/media/qml/qml_test_wallet_selector_load/003-04-closed-wallet-listed-in-selector.png (800x665)
+[qml_wallet_selector_load_happy_path] checkpoint 05: selector auto-closed on load success
+[qml_wallet_selector_load_happy_path] checkpoint 05: screenshot saved to /evidence/media/qml/qml_test_wallet_selector_load/004-05-selector-auto-closed-on-load-success.png (800x665)
+[qml_wallet_selector_load_happy_path] checkpoint 06: badge reflects newly loaded wallet
+[qml_wallet_selector_load_happy_path] checkpoint 06: screenshot saved to /evidence/media/qml/qml_test_wallet_selector_load/005-06-badge-reflects-newly-loaded-wallet.png (800x665)
+[qml_wallet_selector_load_happy_path] checkpoint 07: loaded wallet shows balance in selector
+[qml_wallet_selector_load_happy_path] checkpoint 07: screenshot saved to /evidence/media/qml/qml_test_wallet_selector_load/006-07-loaded-wallet-shows-balance-in-selector.png (800x665)
+[qml_wallet_selector_load_happy_path] completed
+[qml_wallet_selector_load_error] starting
+[qml_wallet_selector_load_error] checkpoint 01: read-only wallet planted on disk
+[qml_wallet_selector_load_error] checkpoint 02: read-only wallet listed as Closed
+[qml_wallet_selector_load_error] checkpoint 02: screenshot saved to /evidence/media/qml/qml_test_wallet_selector_load/007-02-read-only-wallet-listed-as-closed.png (800x665)
+[qml_wallet_selector_load_error] checkpoint 03: load error alert popup displayed
+[qml_wallet_selector_load_error] checkpoint 03: screenshot saved to /evidence/media/qml/qml_test_wallet_selector_load/008-03-load-error-alert-popup-displayed.png (800x665)
+[qml_wallet_selector_load_error] checkpoint 04: inline LoadError persists after popup dismiss
+[qml_wallet_selector_load_error] checkpoint 04: screenshot saved to /evidence/media/qml/qml_test_wallet_selector_load/009-04-inline-loaderror-persists-after-popup-dismiss.png (800x665)
+[qml_wallet_selector_load_error] completed
+[qml_wallet_selector_already_open] starting
+[qml_wallet_selector_already_open] checkpoint 01: two managed wallets prepared
+[qml_wallet_selector_already_open] checkpoint 02: both wallets open via RPC
+[qml_wallet_selector_already_open] checkpoint 02: screenshot saved to /evidence/media/qml/qml_test_wallet_selector_load/010-02-both-wallets-open-via-rpc.png (800x665)
+[qml_wallet_selector_already_open] checkpoint 03: already-open wallet selected synchronously
+[qml_wallet_selector_already_open] checkpoint 03: screenshot saved to /evidence/media/qml/qml_test_wallet_selector_load/011-03-already-open-wallet-selected-synchronously.png (800x665)
+[qml_wallet_selector_already_open] checkpoint 04: row actions open the correct wallet settings
+[qml_wallet_selector_already_open] checkpoint 04: screenshot saved to /evidence/media/qml/qml_test_wallet_selector_load/012-04-row-actions-open-the-correct-wallet-settings.png (800x665)
+[qml_wallet_selector_already_open] checkpoint 05: selected wallet unloads only after confirmation
+[qml_wallet_selector_already_open] checkpoint 05: screenshot saved to /evidence/media/qml/qml_test_wallet_selector_load/013-05-selected-wallet-unloads-only-after-confirmation.png (800x665)
+[qml_wallet_selector_already_open] checkpoint 06: closed wallet uses generic wallet icon
+[qml_wallet_selector_already_open] checkpoint 06: screenshot saved to /evidence/media/qml/qml_test_wallet_selector_load/014-06-closed-wallet-uses-generic-wallet-icon.png (800x665)
+[qml_wallet_selector_already_open] completed

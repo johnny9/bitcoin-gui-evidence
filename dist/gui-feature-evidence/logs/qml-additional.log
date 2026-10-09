@@ -1,0 +1,7 @@
+multiple-recipients-custom-fee : passed
+select-specific-coin : passed
+lock-coin : passed
+unlock-coin : passed
+sign-message : passed
+verify-message : passed
+Additional acceptance checks passed.

@@ -1,0 +1,101 @@
+{"utc": "2026-10-08T19:53:09.240323+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/acceptance_coin_controls_hf0dnhj1/gui_node", "-test-automation=/work/tmp/acceptance_coin_controls_hf0dnhj1/test_bridge.sock", "-test-settings-dir=/work/tmp/acceptance_coin_controls_hf0dnhj1/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 19279, "platform": "xcb"}
+{"utc": "2026-10-08T19:53:09.994582+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:53:10.401322+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "noWalletLoaded"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:53:13.474990+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "width", "value": 1180}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:53:13.492389+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "height", "value": 1000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:53:13.574141+00:00", "request": {"cmd": "click", "objectName": "sendTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:53:14.075597+00:00", "request": {"cmd": "wait_for_page", "page": "sendPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:53:14.570381+00:00", "request": {"cmd": "set_text", "objectName": "sendAddressInput", "text": "bcrt1q6lw7ydr63ytm7y284dxjcm0ylhxfhmhtpca9jd"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:53:14.574561+00:00", "request": {"cmd": "set_text", "objectName": "sendAmountInput", "text": "0.018"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:53:14.582951+00:00", "request": {"cmd": "click", "objectName": "sendAddRecipientButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:53:15.077286+00:00", "request": {"cmd": "set_text", "objectName": "sendAddressInput", "text": "bcrt1qgr58tlh9ahgssn0w5fc7v5t5vc6tcvz9h6tjcv"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:53:15.080829+00:00", "request": {"cmd": "set_text", "objectName": "sendAmountInput", "text": "0.025"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:53:15.084084+00:00", "request": {"cmd": "click", "objectName": "feeSelectionPickerButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:53:15.580135+00:00", "request": {"cmd": "click", "objectName": "feeSelectionOption3"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:53:16.074789+00:00", "request": {"cmd": "set_text", "objectName": "feeSelectionCustomRateInput", "text": "4.2"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:53:16.076961+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:53:16.129824+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:53:16.182950+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:53:16.235587+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:53:16.288423+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:53:16.341853+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:53:16.836274+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:53:16.842379+00:00", "request": {"cmd": "click", "objectName": "sendSelectInputsButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:53:17.338418+00:00", "request": {"cmd": "get_property", "objectName": "coinSelectionPopup", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:53:17.834475+00:00", "request": {"cmd": "click_list_item", "objectName": "coinSelectionListView", "index": 0, "childObjectName": "coinSelectionCheckbox"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:53:17.836885+00:00", "request": {"cmd": "get_property", "objectName": "coinSelectionDoneButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:53:18.333308+00:00", "request": {"cmd": "click", "objectName": "coinSelectionDoneButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:53:18.829234+00:00", "request": {"cmd": "get_property", "objectName": "sendInputsSelectedText", "prop": "text"}, "response": {"value": "1 input selected"}}
+{"utc": "2026-10-08T19:53:18.831072+00:00", "request": {"cmd": "get_text", "objectName": "sendInputsSelectedText"}, "response": {"text": "1 input selected"}}
+{"utc": "2026-10-08T19:53:18.841380+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:53:19.337332+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_wallet"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:53:19.833387+00:00", "request": {"cmd": "wait_for_page", "page": "walletSettingsPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:53:20.351749+00:00", "request": {"cmd": "click", "objectName": "walletCoinsRow"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:53:20.975285+00:00", "request": {"cmd": "wait_for_page", "page": "walletCoinsPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:53:21.967270+00:00", "request": {"cmd": "click", "objectName": "walletCoinsSelectionButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:53:22.464607+00:00", "request": {"cmd": "click_list_item", "objectName": "coinSelectionListView", "index": 0, "childObjectName": "coinSelectionCheckbox"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:53:22.467679+00:00", "request": {"cmd": "get_property", "objectName": "coinsLockButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:53:22.482566+00:00", "request": {"cmd": "click", "objectName": "coinsLockButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:53:23.476955+00:00", "request": {"cmd": "click_list_item", "objectName": "coinSelectionListView", "index": 0, "childObjectName": "coinSelectionCheckbox"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:53:23.480021+00:00", "request": {"cmd": "get_property", "objectName": "coinsUnlockButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:53:23.492822+00:00", "request": {"cmd": "click", "objectName": "coinsUnlockButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:53:24.794931+00:00", "application_pid": 19279, "exit_code": 0}
+{"utc": "2026-10-08T20:05:36.490283+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/acceptance_coin_controls_7ojd8v0g/gui_node", "-test-automation=/work/tmp/acceptance_coin_controls_7ojd8v0g/test_bridge.sock", "-test-settings-dir=/work/tmp/acceptance_coin_controls_7ojd8v0g/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 19475, "platform": "xcb"}
+{"utc": "2026-10-08T20:05:37.244313+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-08T20:05:37.608839+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "noWalletLoaded"}, "response": {"value": false}}
+{"utc": "2026-10-08T20:05:40.731323+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "width", "value": 1180}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:40.744801+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "height", "value": 1000}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:40.818990+00:00", "request": {"cmd": "click", "objectName": "sendTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:41.320360+00:00", "request": {"cmd": "wait_for_page", "page": "sendPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:41.811555+00:00", "request": {"cmd": "set_text", "objectName": "sendAddressInput", "text": "bcrt1qpve8almez26fj65006dvq46pc5regpz6pndhs6"}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:41.814465+00:00", "request": {"cmd": "set_text", "objectName": "sendAmountInput", "text": "0.018"}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:41.823107+00:00", "request": {"cmd": "click", "objectName": "sendAddRecipientButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:42.315375+00:00", "request": {"cmd": "set_text", "objectName": "sendAddressInput", "text": "bcrt1qwtmda8r70uk6wcusye4uvrphu58wrx8zxjzk50"}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:42.318398+00:00", "request": {"cmd": "set_text", "objectName": "sendAmountInput", "text": "0.025"}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:42.321382+00:00", "request": {"cmd": "click", "objectName": "feeSelectionPickerButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:42.818758+00:00", "request": {"cmd": "click", "objectName": "feeSelectionOption3"}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:43.310994+00:00", "request": {"cmd": "set_text", "objectName": "feeSelectionCustomRateInput", "text": "4.2"}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:43.312770+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-08T20:05:43.365321+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-08T20:05:43.417786+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-08T20:05:43.469767+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-08T20:05:43.522085+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-08T20:05:43.574957+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-08T20:05:44.066542+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-08T20:05:44.072230+00:00", "request": {"cmd": "click", "objectName": "sendSelectInputsButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:44.566228+00:00", "request": {"cmd": "get_property", "objectName": "coinSelectionPopup", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-08T20:05:45.058297+00:00", "request": {"cmd": "click_list_item", "objectName": "coinSelectionListView", "index": 0, "childObjectName": "coinSelectionCheckbox"}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:45.060465+00:00", "request": {"cmd": "get_property", "objectName": "coinSelectionDoneButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-08T20:05:45.553574+00:00", "request": {"cmd": "click", "objectName": "coinSelectionDoneButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:46.046976+00:00", "request": {"cmd": "get_property", "objectName": "sendInputsSelectedText", "prop": "text"}, "response": {"value": "1 input selected"}}
+{"utc": "2026-10-08T20:05:46.049964+00:00", "request": {"cmd": "get_text", "objectName": "sendInputsSelectedText"}, "response": {"text": "1 input selected"}}
+{"utc": "2026-10-08T20:05:46.061258+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:46.554206+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_wallet"}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:47.044536+00:00", "request": {"cmd": "wait_for_page", "page": "walletSettingsPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:47.560745+00:00", "request": {"cmd": "click", "objectName": "walletCoinsRow"}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:48.174919+00:00", "request": {"cmd": "wait_for_page", "page": "walletCoinsPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:49.158600+00:00", "request": {"cmd": "click", "objectName": "walletCoinsSelectionButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:49.652421+00:00", "request": {"cmd": "click_list_item", "objectName": "coinSelectionListView", "index": 0, "childObjectName": "coinSelectionCheckbox"}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:49.654973+00:00", "request": {"cmd": "get_property", "objectName": "coinsLockButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-08T20:05:49.668317+00:00", "request": {"cmd": "click", "objectName": "coinsLockButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:50.659101+00:00", "request": {"cmd": "click_list_item", "objectName": "coinSelectionListView", "index": 0, "childObjectName": "coinSelectionCheckbox"}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:50.661675+00:00", "request": {"cmd": "get_property", "objectName": "coinsUnlockButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-08T20:05:50.681076+00:00", "request": {"cmd": "click", "objectName": "coinsUnlockButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:51.668195+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_wallet"}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:52.159476+00:00", "request": {"cmd": "wait_for_page", "page": "walletSettingsPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:52.664270+00:00", "request": {"cmd": "click", "objectName": "walletSignVerifyMessageRow"}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:53.275114+00:00", "request": {"cmd": "wait_for_page", "page": "signVerifyMessagePage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:53.802372+00:00", "request": {"cmd": "set_text", "objectName": "signMessageAddressField", "text": "mna3pE4U6Ctb974KzKX3po9R4mMKnB3W2S"}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:53.804750+00:00", "request": {"cmd": "set_text", "objectName": "signMessageMessageField", "text": "Acceptance evidence: regtest only."}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:53.810327+00:00", "request": {"cmd": "click", "objectName": "signMessageButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:54.309012+00:00", "request": {"cmd": "get_property", "objectName": "signMessageSignatureOutput", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T20:05:54.311043+00:00", "request": {"cmd": "get_text", "objectName": "signMessageSignatureText"}, "response": {"text": "IJkM6NmeL2FCWA3PCM1HvhK48Cf2q3DuexxmmM7MJypvCUEPTexThllIgcsBMyNCmtk4eT61z7HIqDk75qaqmc0="}}
+{"utc": "2026-10-08T20:05:54.808930+00:00", "request": {"cmd": "click", "objectName": "verifyMessageTab"}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:55.304635+00:00", "request": {"cmd": "set_text", "objectName": "verifyMessageAddressField", "text": "mna3pE4U6Ctb974KzKX3po9R4mMKnB3W2S"}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:55.307039+00:00", "request": {"cmd": "set_text", "objectName": "verifyMessageMessageField", "text": "Acceptance evidence: regtest only."}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:55.309958+00:00", "request": {"cmd": "set_text", "objectName": "verifyMessageSignatureField", "text": "IJkM6NmeL2FCWA3PCM1HvhK48Cf2q3DuexxmmM7MJypvCUEPTexThllIgcsBMyNCmtk4eT61z7HIqDk75qaqmc0="}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:55.311974+00:00", "request": {"cmd": "click", "objectName": "verifyMessageButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:55.810368+00:00", "request": {"cmd": "get_text", "objectName": "verifyMessageResultText"}, "response": {"text": "Message verified successfully."}}
+{"utc": "2026-10-08T20:05:56.681981+00:00", "request": {"cmd": "click", "objectName": "walletBadge"}, "response": {"ok": true}}
+{"utc": "2026-10-08T20:05:57.179571+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-08T20:05:57.985314+00:00", "application_pid": 19475, "exit_code": 0}

@@ -1,0 +1,15 @@
+{
+  "command": [
+    "git",
+    "-C",
+    "/work/widgets-source",
+    "diff-index",
+    "--quiet",
+    "HEAD",
+    "--"
+  ],
+  "exit_code": 0,
+  "stderr_excerpt": [
+    "error: object directory /home/codex/workspaces/bitcoin-core-app/bitcoin/.git/objects does not exist; check .git/objects/info/alternates"
+  ]
+}

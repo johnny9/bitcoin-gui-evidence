@@ -1,0 +1,115 @@
+{"utc": "2026-10-08T19:38:36.822770+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/qml_test_debug_log_j2wqx8ya/node0", "-test-automation=/work/tmp/qml_test_debug_log_j2wqx8ya/test_bridge.sock", "-qml_onboarded=1", "-disablewallet", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 12145, "platform": "xcb"}
+{"utc": "2026-10-08T19:38:37.323884+00:00", "request": {"cmd": "wait_for_page", "page": "nodeRunner", "timeout": 10000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:37.816168+00:00", "request": {"cmd": "click", "objectName": "nodeSettingsButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:38.285284+00:00", "request": {"cmd": "wait_for_page", "page": "settingsView", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:38.754875+00:00", "request": {"cmd": "get_property", "objectName": "settingsSidebar_debug-log", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:38.764447+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_debug-log"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:39.237794+00:00", "request": {"cmd": "wait_for_page", "page": "debugLogView", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:39.707686+00:00", "request": {"cmd": "get_current_page"}, "response": {"page": "settingsView"}}
+{"utc": "2026-10-08T19:38:39.708552+00:00", "request": {"cmd": "get_property", "objectName": "debugLogSettingsHeader", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:39.708972+00:00", "request": {"cmd": "get_property", "objectName": "debugLogPageHeading", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:39.709306+00:00", "request": {"cmd": "get_property", "objectName": "debugLogToolsRow", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:39.709652+00:00", "request": {"cmd": "get_property", "objectName": "debugLogSearchField", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:39.709974+00:00", "request": {"cmd": "get_property", "objectName": "debugLogOptionsButton", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:39.710308+00:00", "request": {"cmd": "get_property", "objectName": "debugLogTableSectionCard", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:39.710646+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:39.710921+00:00", "request": {"cmd": "get_property", "objectName": "debugLogTitlesHeader", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:39.711177+00:00", "request": {"cmd": "get_property", "objectName": "debugLogTitlesHeaderDivider", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:39.711447+00:00", "request": {"cmd": "get_property", "objectName": "debugLogTableFooter", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:39.711678+00:00", "request": {"cmd": "get_property", "objectName": "debugLogTableFooterDivider", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:39.711871+00:00", "request": {"cmd": "get_property", "objectName": "debugLogScrollToBottomButton", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:39.712079+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 1000}}
+{"utc": "2026-10-08T19:38:39.712285+00:00", "request": {"cmd": "get_property", "objectName": "debugLogView", "prop": "width"}, "response": {"value": 514}}
+{"utc": "2026-10-08T19:38:39.712493+00:00", "request": {"cmd": "get_property", "objectName": "debugLogContentLayout", "prop": "width"}, "response": {"value": 466}}
+{"utc": "2026-10-08T19:38:39.712690+00:00", "request": {"cmd": "get_property", "objectName": "debugLogView", "prop": "contentHorizontalPadding"}, "response": {"value": 24}}
+{"utc": "2026-10-08T19:38:39.712882+00:00", "request": {"cmd": "get_property", "objectName": "debugLogView", "prop": "maximumContentWidth"}, "response": {"value": 514}}
+{"utc": "2026-10-08T19:38:39.713086+00:00", "request": {"cmd": "get_property", "objectName": "debugLogContentLayout", "prop": "x"}, "response": {"value": 24}}
+{"utc": "2026-10-08T19:38:39.713273+00:00", "request": {"cmd": "get_property", "objectName": "debugLogOptionsButton", "prop": "height"}, "response": {"value": 40}}
+{"utc": "2026-10-08T19:38:39.713463+00:00", "request": {"cmd": "get_property", "objectName": "debugLogOptionsButton", "prop": "iconSource"}, "response": {"value": "image://images/ellipsis"}}
+{"utc": "2026-10-08T19:38:39.713647+00:00", "request": {"cmd": "get_property", "objectName": "debugLogSearchField", "prop": "height"}, "response": {"value": 40}}
+{"utc": "2026-10-08T19:38:39.713819+00:00", "request": {"cmd": "get_property", "objectName": "debugLogTitlesHeader", "prop": "height"}, "response": {"value": 44}}
+{"utc": "2026-10-08T19:38:39.714010+00:00", "request": {"cmd": "get_property", "objectName": "debugLogTitlesHeaderDivider", "prop": "height"}, "response": {"value": 1}}
+{"utc": "2026-10-08T19:38:39.714200+00:00", "request": {"cmd": "get_property", "objectName": "debugLogTableFooter", "prop": "height"}, "response": {"value": 44}}
+{"utc": "2026-10-08T19:38:39.714376+00:00", "request": {"cmd": "get_property", "objectName": "debugLogTableFooterDivider", "prop": "height"}, "response": {"value": 1}}
+{"utc": "2026-10-08T19:38:39.714642+00:00", "request": {"cmd": "invoke", "objectName": "debugLogView", "method": "scrollToTop", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:39.714877+00:00", "request": {"cmd": "get_property", "objectName": "debugLogItemRow_0", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:39.715075+00:00", "request": {"cmd": "get_property", "objectName": "debugLogItemRow_0TypeIndicator", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:39.715261+00:00", "request": {"cmd": "get_property", "objectName": "debugLogItemRow_0Time", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:39.715438+00:00", "request": {"cmd": "get_property", "objectName": "debugLogItemRow_0Message", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:39.715636+00:00", "request": {"cmd": "get_property", "objectName": "debugLogItemRow_0", "prop": "height"}, "response": {"value": 48}}
+{"utc": "2026-10-08T19:38:39.716029+00:00", "request": {"cmd": "set_text", "objectName": "debugLogSearchField", "text": "network microsecond marker"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:39.716257+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 1000}}
+{"utc": "2026-10-08T19:38:39.767552+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 1000}}
+{"utc": "2026-10-08T19:38:39.818906+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 1000}}
+{"utc": "2026-10-08T19:38:39.870291+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 1}}
+{"utc": "2026-10-08T19:38:39.871086+00:00", "request": {"cmd": "get_property", "objectName": "debugLogItemRow_0Time", "prop": "text"}, "response": {"value": "00:00:00"}}
+{"utc": "2026-10-08T19:38:39.871582+00:00", "request": {"cmd": "get_property", "objectName": "debugLogItemRow_0Message", "prop": "text"}, "response": {"value": "test-automation network microsecond marker"}}
+{"utc": "2026-10-08T19:38:39.871979+00:00", "request": {"cmd": "invoke", "objectName": "debugLogItemRow_0Message", "method": "selectAll", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:39.872301+00:00", "request": {"cmd": "get_property", "objectName": "debugLogItemRow_0Message", "prop": "selectedText"}, "response": {"value": "test-automation network microsecond marker"}}
+{"utc": "2026-10-08T19:38:39.873395+00:00", "request": {"cmd": "set_text", "objectName": "debugLogSearchField", "text": "rpc error marker"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:39.873728+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 1}}
+{"utc": "2026-10-08T19:38:39.874244+00:00", "request": {"cmd": "click", "objectName": "debugLogFilterButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:40.344909+00:00", "request": {"cmd": "get_property", "objectName": "debugLogFilterMenu", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:40.346198+00:00", "request": {"cmd": "click", "objectName": "debugLogFilterWarningsAndErrors"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:40.815738+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 1}}
+{"utc": "2026-10-08T19:38:40.816270+00:00", "request": {"cmd": "set_text", "objectName": "debugLogSearchField", "text": "warning marker"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:40.816623+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 1}}
+{"utc": "2026-10-08T19:38:40.817080+00:00", "request": {"cmd": "click", "objectName": "debugLogFilterButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:41.287486+00:00", "request": {"cmd": "get_property", "objectName": "debugLogFilterMenu", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:41.288810+00:00", "request": {"cmd": "click", "objectName": "debugLogFilterAllMessages"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:41.759098+00:00", "request": {"cmd": "set_text", "objectName": "debugLogSearchField", "text": ""}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:41.759529+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 1}}
+{"utc": "2026-10-08T19:38:41.810783+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 1}}
+{"utc": "2026-10-08T19:38:41.862116+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 1}}
+{"utc": "2026-10-08T19:38:41.913961+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 1000}}
+{"utc": "2026-10-08T19:38:41.916459+00:00", "request": {"cmd": "set_text", "objectName": "debugLogSearchField", "text": "ordered-history marker"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:41.918659+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 1000}}
+{"utc": "2026-10-08T19:38:41.969931+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 1000}}
+{"utc": "2026-10-08T19:38:42.021260+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 1000}}
+{"utc": "2026-10-08T19:38:42.072565+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 1000}}
+{"utc": "2026-10-08T19:38:42.123774+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 2}}
+{"utc": "2026-10-08T19:38:42.124484+00:00", "request": {"cmd": "invoke", "objectName": "debugLogView", "method": "scrollToTop", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:42.124835+00:00", "request": {"cmd": "get_property", "objectName": "debugLogItemRow_0Message", "prop": "text"}, "response": {"value": "test-automation ordered-history marker older"}}
+{"utc": "2026-10-08T19:38:42.125051+00:00", "request": {"cmd": "get_property", "objectName": "debugLogItemRow_1Message", "prop": "text"}, "response": {"value": "test-automation ordered-history marker newer"}}
+{"utc": "2026-10-08T19:38:42.125375+00:00", "request": {"cmd": "set_text", "objectName": "debugLogSearchField", "text": ""}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:42.125612+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 2}}
+{"utc": "2026-10-08T19:38:42.176499+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 2}}
+{"utc": "2026-10-08T19:38:42.227492+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 2}}
+{"utc": "2026-10-08T19:38:42.279440+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 1000}}
+{"utc": "2026-10-08T19:38:42.281783+00:00", "request": {"cmd": "set_text", "objectName": "debugLogSearchField", "text": "test-automation live network marker"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:42.283446+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 1000}}
+{"utc": "2026-10-08T19:38:42.334568+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 1000}}
+{"utc": "2026-10-08T19:38:42.385771+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 1000}}
+{"utc": "2026-10-08T19:38:42.437008+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 1000}}
+{"utc": "2026-10-08T19:38:42.488073+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:42.488572+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:42.539824+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:42.590938+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:42.642199+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:42.693379+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:42.744592+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:42.795718+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:42.846928+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:42.897851+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:42.948971+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:43.000143+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:43.051325+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 1}}
+{"utc": "2026-10-08T19:38:43.051931+00:00", "request": {"cmd": "get_property", "objectName": "debugLogItemRow_0Message", "prop": "text"}, "response": {"value": "test-automation live network marker"}}
+{"utc": "2026-10-08T19:38:43.052711+00:00", "request": {"cmd": "set_text", "objectName": "debugLogSearchField", "text": ""}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:43.053158+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 1}}
+{"utc": "2026-10-08T19:38:43.104414+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 1}}
+{"utc": "2026-10-08T19:38:43.155714+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 1}}
+{"utc": "2026-10-08T19:38:43.207399+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 1000}}
+{"utc": "2026-10-08T19:38:43.211588+00:00", "request": {"cmd": "invoke", "objectName": "debugLogView", "method": "scrollToTop", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:43.213336+00:00", "request": {"cmd": "get_property", "objectName": "debugLogLoadMoreButton", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:43.215319+00:00", "request": {"cmd": "click", "objectName": "debugLogLoadMoreButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:43.687253+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 1380}}
+{"utc": "2026-10-08T19:38:43.687768+00:00", "request": {"cmd": "set_text", "objectName": "debugLogSearchField", "text": "oldest-history marker"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:43.688085+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 1380}}
+{"utc": "2026-10-08T19:38:43.739292+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 1380}}
+{"utc": "2026-10-08T19:38:43.790553+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 1380}}
+{"utc": "2026-10-08T19:38:43.841604+00:00", "request": {"cmd": "get_property", "objectName": "debugLogListView", "prop": "count"}, "response": {"value": 1}}
+{"utc": "2026-10-08T19:38:43.842112+00:00", "request": {"cmd": "get_property", "objectName": "debugLogItemRow_0Message", "prop": "text"}, "response": {"value": "test-automation oldest-history marker"}}
+{"utc": "2026-10-08T19:38:43.878514+00:00", "request": {"cmd": "click", "objectName": "settingsDoneButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:44.348308+00:00", "request": {"cmd": "wait_for_page", "page": "nodeSettingsButton", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:44.985003+00:00", "application_pid": 12145, "exit_code": 0}

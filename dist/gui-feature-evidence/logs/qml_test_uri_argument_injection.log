@@ -1,0 +1,18 @@
+
+Test 1: unmodified startup brings up the test bridge
+Starting GUI: /validation/build/bin/bitcoin-core-app -datadir=/work/tmp/qml_test_bridge_puzfr2wx/node0 -test-automation=/work/tmp/qml_test_bridge_puzfr2wx/test_bridge.sock -test-settings-dir=/work/tmp/qml_test_bridge_puzfr2wx/config -qml_onboarded=1 -logtimemicros -debug -debugexclude=leveldb -nolisten
+QmlDriver connected to test bridge.
+  Bridge came up in 1.3s, budget for rejected runs is 15.0s
+  PASSED
+
+Test 2: injected -qwindowtitle does not reach Qt
+Starting GUI: /validation/build/bin/bitcoin-core-app -datadir=/work/tmp/qml_test_uri_argument_injection_ufdivrex/node0 -test-automation=/work/tmp/qml_test_uri_argument_injection_ufdivrex/test_bridge.sock -test-settings-dir=/work/tmp/qml_test_uri_argument_injection_ufdivrex/config -qml_onboarded=1 -nolisten -qwindowtitle injected
+  PASSED
+
+Test 3: injected -platform does not reach Qt
+Starting GUI: /validation/build/bin/bitcoin-core-app -datadir=/work/tmp/qml_test_uri_argument_injection_0z_p2yc1/node0 -test-automation=/work/tmp/qml_test_uri_argument_injection_0z_p2yc1/test_bridge.sock -test-settings-dir=/work/tmp/qml_test_uri_argument_injection_0z_p2yc1/config -qml_onboarded=1 -nolisten -platform nosuchplatform
+  PASSED
+
+==================================================
+All tests PASSED
+==================================================

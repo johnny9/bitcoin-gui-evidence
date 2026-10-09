@@ -1,0 +1,580 @@
+[
+  {
+    "test": "qml_test_external_signer",
+    "started_utc": "2026-10-08T19:38:00.179441+00:00",
+    "seconds": 28.02,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 25,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_external_signer.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_external_signer.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_console",
+    "started_utc": "2026-10-08T19:38:28.204708+00:00",
+    "seconds": 8.58,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 14,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_console.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_console.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_debug_log",
+    "started_utc": "2026-10-08T19:38:36.789148+00:00",
+    "seconds": 8.23,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 12,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_debug_log.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_debug_log.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_peers",
+    "started_utc": "2026-10-08T19:38:45.023231+00:00",
+    "seconds": 33.39,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 53,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_peers.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_peers.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_proxy",
+    "started_utc": "2026-10-08T19:39:18.410315+00:00",
+    "seconds": 11.19,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 19,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_proxy.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_proxy.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_settings_display",
+    "started_utc": "2026-10-08T19:39:29.601496+00:00",
+    "seconds": 20.96,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 40,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_settings_display.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_settings_display.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_tray",
+    "started_utc": "2026-10-08T19:39:50.564409+00:00",
+    "seconds": 5.98,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 11,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_tray.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_tray.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_window_geometry",
+    "started_utc": "2026-10-08T19:39:56.544059+00:00",
+    "seconds": 1.62,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 0,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_window_geometry.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_window_geometry.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_node_runtime_dialogs",
+    "started_utc": "2026-10-08T19:39:58.162190+00:00",
+    "seconds": 3.92,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 5,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_node_runtime_dialogs.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_node_runtime_dialogs.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_disablewallet_boot",
+    "started_utc": "2026-10-08T19:40:02.085863+00:00",
+    "seconds": 19.56,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 29,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_disablewallet_boot.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_disablewallet_boot.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_blockclock",
+    "started_utc": "2026-10-08T19:40:21.646713+00:00",
+    "seconds": 2.37,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 2,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_blockclock.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_blockclock.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_shutdown",
+    "started_utc": "2026-10-08T19:40:24.017358+00:00",
+    "seconds": 13.64,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 1,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_shutdown.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_shutdown.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_resetguisettings",
+    "started_utc": "2026-10-08T19:40:37.662562+00:00",
+    "seconds": 30.53,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 42,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_resetguisettings.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_resetguisettings.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_blocksonly_settings",
+    "started_utc": "2026-10-08T19:41:08.196293+00:00",
+    "seconds": 2.77,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 3,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_blocksonly_settings.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_blocksonly_settings.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_uri_argument_injection",
+    "started_utc": "2026-10-08T19:41:19.100368+00:00",
+    "seconds": 1.67,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 0,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_uri_argument_injection.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_uri_argument_injection.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_create_wallet_name",
+    "started_utc": "2026-10-08T19:43:01.193982+00:00",
+    "seconds": 11.79,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 16,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_create_wallet_name.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_create_wallet_name.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_watchonly_wallet",
+    "started_utc": "2026-10-08T19:43:12.984883+00:00",
+    "seconds": 21.46,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 17,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_watchonly_wallet.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_watchonly_wallet.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_password_wallet",
+    "started_utc": "2026-10-08T19:43:34.446891+00:00",
+    "seconds": 64.95,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 30,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_password_wallet.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_password_wallet.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_wallet_selector_load",
+    "started_utc": "2026-10-08T19:44:39.393703+00:00",
+    "seconds": 23.16,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 14,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_wallet_selector_load.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_wallet_selector_load.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_wallet_settings",
+    "started_utc": "2026-10-08T19:45:02.559321+00:00",
+    "seconds": 48.62,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 32,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_wallet_settings.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_wallet_settings.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_receive",
+    "started_utc": "2026-10-08T19:45:51.179774+00:00",
+    "seconds": 43.06,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 63,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_receive.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_receive.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_send_create",
+    "started_utc": "2026-10-08T19:46:34.237670+00:00",
+    "seconds": 10.19,
+    "exit_code": 1,
+    "timed_out": false,
+    "captures": 10,
+    "status": "failed",
+    "skip_messages": [],
+    "log": "logs/qml_test_send_create.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_send_create.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_send_receive",
+    "started_utc": "2026-10-08T19:46:44.424643+00:00",
+    "seconds": 39.65,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 23,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_send_receive.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_send_receive.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_psbt",
+    "started_utc": "2026-10-08T19:47:24.075946+00:00",
+    "seconds": 16.75,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 16,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_psbt.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_psbt.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_wallet_rbf",
+    "started_utc": "2026-10-08T19:47:40.828011+00:00",
+    "seconds": 9.34,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 7,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_wallet_rbf.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_wallet_rbf.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_activity_filter_export",
+    "started_utc": "2026-10-08T19:47:50.164022+00:00",
+    "seconds": 22.47,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 30,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_activity_filter_export.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_activity_filter_export.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_addresses",
+    "started_utc": "2026-10-08T19:48:12.629969+00:00",
+    "seconds": 15.95,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 22,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_addresses.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_addresses.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_address_label_sync",
+    "started_utc": "2026-10-08T19:48:28.580029+00:00",
+    "seconds": 11.19,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 14,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_address_label_sync.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_address_label_sync.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_uri_import",
+    "started_utc": "2026-10-08T19:48:39.769680+00:00",
+    "seconds": 9.24,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 16,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_uri_import.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_uri_import.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_preinit_onboarding",
+    "started_utc": "2026-10-08T19:48:49.005980+00:00",
+    "seconds": 68.71,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 100,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_preinit_onboarding.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_preinit_onboarding.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_wallet_restore",
+    "started_utc": "2026-10-08T19:49:57.716276+00:00",
+    "seconds": 15.45,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 10,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_wallet_restore.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_wallet_restore.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_wallet_migration",
+    "started_utc": "2026-10-08T19:50:13.162005+00:00",
+    "seconds": 11.29,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 8,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_wallet_migration.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_wallet_migration.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_onboarding",
+    "started_utc": "2026-10-08T19:51:34.059256+00:00",
+    "seconds": 10.44,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 13,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_onboarding.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_onboarding.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  },
+  {
+    "test": "qml_test_wallet_qt_compat",
+    "started_utc": "2026-10-08T19:51:44.497405+00:00",
+    "seconds": 12.09,
+    "exit_code": 0,
+    "timed_out": false,
+    "captures": 12,
+    "status": "passed",
+    "skip_messages": [],
+    "log": "logs/qml_test_wallet_qt_compat.log",
+    "command": [
+      "python3",
+      "/evidence/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_wallet_qt_compat.py"
+    ],
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+  }
+]

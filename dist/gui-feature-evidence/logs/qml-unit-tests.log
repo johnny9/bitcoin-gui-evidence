@@ -1,0 +1,965 @@
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+********* Start testing of ActivityFilterProxyModelTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : ActivityFilterProxyModelTests::initTestCase()
+PASS   : ActivityFilterProxyModelTests::searchMatchesLabelAddressAndTxid()
+PASS   : ActivityFilterProxyModelTests::filtersByDateBuckets()
+PASS   : ActivityFilterProxyModelTests::filtersByCustomDateRange()
+PASS   : ActivityFilterProxyModelTests::customRangeHandlesDstGapDayBoundaries()
+PASS   : ActivityFilterProxyModelTests::rejectsInvalidCustomRange()
+PASS   : ActivityFilterProxyModelTests::appliesCustomRangeWithOneNotification()
+PASS   : ActivityFilterProxyModelTests::filtersByTypeBucketsAndKeepsPendingRequestsExclusive()
+PASS   : ActivityFilterProxyModelTests::paymentRequestFilterIncludesAssociatedTransactions()
+PASS   : ActivityFilterProxyModelTests::filtersByMinimumAmount()
+PASS   : ActivityFilterProxyModelTests::combinesTypeSelections()
+PASS   : ActivityFilterProxyModelTests::filtersByInclusiveAmountRange()
+PASS   : ActivityFilterProxyModelTests::availableMaximumUsesUnfilteredTransactionsAndUpdates()
+PASS   : ActivityFilterProxyModelTests::sortsByTimestampDescending()
+PASS   : ActivityFilterProxyModelTests::exportsCurrentFilteredRowsToCsv()
+PASS   : ActivityFilterProxyModelTests::exportsCsvUsingDisplayUnit()
+PASS   : ActivityFilterProxyModelTests::exportsCsvEscapesSignedRowsAndHandlesFailures()
+PASS   : ActivityFilterProxyModelTests::exportsCsvNeutralizesFormulaInjection()
+PASS   : ActivityFilterProxyModelTests::cleanupTestCase()
+Totals: 19 passed, 0 failed, 0 skipped, 0 blacklisted, 6ms
+********* Finished testing of ActivityFilterProxyModelTests *********
+********* Start testing of AddressListModelTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : AddressListModelTests::initTestCase()
+PASS   : AddressListModelTests::receiveAddressesHideUsedUntilEnabled()
+PASS   : AddressListModelTests::labelsCanBeEdited()
+PASS   : AddressListModelTests::changeAddressesComeFromUnspentChangeOutputs()
+PASS   : AddressListModelTests::cleanupTestCase()
+Totals: 5 passed, 0 failed, 0 skipped, 0 blacklisted, 0ms
+********* Finished testing of AddressListModelTests *********
+********* Start testing of BanListModelTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : BanListModelTests::initTestCase()
+PASS   : BanListModelTests::refreshPopulatesRolesAndRows()
+PASS   : BanListModelTests::unbanAtTargetsSelectedSubnet()
+PASS   : BanListModelTests::unbanAtReturnsFalseWhenNodeRejectsSubnet()
+PASS   : BanListModelTests::unbanAtIgnoresInvalidRows()
+PASS   : BanListModelTests::cleanupTestCase()
+Totals: 6 passed, 0 failed, 0 skipped, 0 blacklisted, 0ms
+********* Finished testing of BanListModelTests *********
+********* Start testing of BitcoinAddressTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : BitcoinAddressTests::initTestCase()
+PASS   : BitcoinAddressTests::setAddress_acceptsSupportedAddressCharacters()
+PASS   : BitcoinAddressTests::setAddress_rejectsUnsupportedCharactersImmediately()
+PASS   : BitcoinAddressTests::formattedAddress_groupsCharactersInFours()
+PASS   : BitcoinAddressTests::ellipsesAddress_keepsVisiblePrefixAndSuffix()
+PASS   : BitcoinAddressTests::cleanupTestCase()
+Totals: 6 passed, 0 failed, 0 skipped, 0 blacklisted, 0ms
+********* Finished testing of BitcoinAddressTests *********
+********* Start testing of BitcoinAmountTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : BitcoinAmountTests::initTestCase()
+PASS   : BitcoinAmountTests::satsToBtcString_basic()
+PASS   : BitcoinAmountTests::satsToBtcString_negative()
+PASS   : BitcoinAmountTests::btcToSats_roundtrip()
+PASS   : BitcoinAmountTests::sanitize_clampsAndFilters()
+PASS   : BitcoinAmountTests::display_flow_btc()
+PASS   : BitcoinAmountTests::display_flow_mbtc_and_ubtc()
+PASS   : BitcoinAmountTests::display_flow_sat()
+PASS   : BitcoinAmountTests::displayWithUnit_formatsAmountAndUnit()
+PASS   : BitcoinAmountTests::localizedDisplayWithUnit_usesLocaleAndKeepsCanonicalDisplay()
+PASS   : BitcoinAmountTests::flipUnit_changesLabelAndDisplaySignal()
+PASS   : BitcoinAmountTests::cleanupTestCase()
+Totals: 12 passed, 0 failed, 0 skipped, 0 blacklisted, 0ms
+********* Finished testing of BitcoinAmountTests *********
+********* Start testing of BitcoinUriTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : BitcoinUriTests::initTestCase()
+PASS   : BitcoinUriTests::parse_valid_uri_with_amount_label_and_message()
+PASS   : BitcoinUriTests::parse_valid_uri_address_only()
+PASS   : BitcoinUriTests::parse_rejects_empty_input()
+PASS   : BitcoinUriTests::parse_rejects_bitcoin_double_slash_scheme()
+PASS   : BitcoinUriTests::parse_rejects_invalid_scheme()
+PASS   : BitcoinUriTests::parse_rejects_invalid_amount()
+PASS   : BitcoinUriTests::parse_rejects_unknown_required_parameter()
+PASS   : BitcoinUriTests::parse_rejects_invalid_address()
+PASS   : BitcoinUriTests::parse_ignores_unknown_optional_parameter()
+PASS   : BitcoinUriTests::parse_valid_uri_with_zero_amount()
+PASS   : BitcoinUriTests::parse_valid_uri_uppercase_scheme()
+PASS   : BitcoinUriTests::parse_valid_uri_with_empty_amount_param()
+PASS   : BitcoinUriTests::parse_valid_uri_legacy_p2pkh_address()
+PASS   : BitcoinUriTests::parse_rejects_comma_in_amount()
+PASS   : BitcoinUriTests::parse_duplicate_amount_last_wins()
+PASS   : BitcoinUriTests::parse_rejects_invalid_duplicate_amount()
+PASS   : BitcoinUriTests::parse_known_required_label()
+PASS   : BitcoinUriTests::parse_known_required_message()
+PASS   : BitcoinUriTests::parse_known_required_amount()
+PASS   : BitcoinUriTests::parse_decodes_percent_encoded_label()
+PASS   : BitcoinUriTests::cleanupTestCase()
+Totals: 22 passed, 0 failed, 0 skipped, 0 blacklisted, 0ms
+********* Finished testing of BitcoinUriTests *********
+********* Start testing of BlockClockDialTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : BlockClockDialTests::initTestCase()
+PASS   : BlockClockDialTests::ibdProgressRendersImmediateHalfArc()
+PASS   : BlockClockDialTests::syncedGradientToggleChangesRenderedColors()
+PASS   : BlockClockDialTests::syncedGradientRunsFromOlderToNewerConfirmationColors()
+PASS   : BlockClockDialTests::syncedGradientSpansCurrentPeriodAndUpdatesWithTime()
+PASS   : BlockClockDialTests::syncedGradientUpdatesWhenConfirmationColorsChange()
+PASS   : BlockClockDialTests::connectingDelayControlsInitialAnimation()
+PASS   : BlockClockDialTests::inactiveDialStopsAnimationAndRetainsLatestState()
+PASS   : BlockClockDialTests::reactivatedStaticDialRequestsRepaint(non-animated)
+PASS   : BlockClockDialTests::reactivatedStaticDialRequestsRepaint(paused)
+PASS   : BlockClockDialTests::paintDoesNotAdvanceAnimationState()
+PASS   : BlockClockDialTests::equalBlockTimestampsPreserveConfirmationDepth()
+PASS   : BlockClockDialTests::distinctBlocksUseExactConfirmationColors()
+PASS   : BlockClockDialTests::futureBlocksPreserveConfirmationDepth(ahead-of-now)
+PASS   : BlockClockDialTests::futureBlocksPreserveConfirmationDepth(equal-future-timestamps)
+PASS   : BlockClockDialTests::futureBlocksPreserveConfirmationDepth(exactly-now)
+PASS   : BlockClockDialTests::futureBlocksPreserveConfirmationDepth(period-end)
+PASS   : BlockClockDialTests::futureBlocksPreserveConfirmationDepth(several-future-blocks)
+PASS   : BlockClockDialTests::futureBlocksPreserveConfirmationDepth(saturated)
+PASS   : BlockClockDialTests::coalescedBlocksUseConfirmationGradient()
+PASS   : BlockClockDialTests::coalescedBlocksSaturateAtHighestConfirmationColor()
+PASS   : BlockClockDialTests::blocksCoalescedWithCurrentTimePreserveConfirmationDepth()
+PASS   : BlockClockDialTests::blocksCoalescedWithPeriodStartDoNotShiftVisibleDepth()
+PASS   : BlockClockDialTests::cleanupTestCase()
+Totals: 24 passed, 0 failed, 0 skipped, 0 blacklisted, 367ms
+********* Finished testing of BlockClockDialTests *********
+********* Start testing of BlockClockModelTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : BlockClockModelTests::initTestCase()
+PASS   : BlockClockModelTests::currentTimeUsesNamedTwelveHourFraction()
+PASS   : BlockClockModelTests::unchangedSecondDoesNotRepublishCurrentTime()
+PASS   : BlockClockModelTests::blockArrivalRefreshesCurrentTime()
+PASS   : BlockClockModelTests::blockHistoryPreservesEqualTimestampsAndPeriodBounds()
+PASS   : BlockClockModelTests::historyLoadsOnInitializationAndPeriodRollover()
+PASS   : BlockClockModelTests::loadedHistoryPreservesEqualTimestamps()
+PASS   : BlockClockModelTests::blockNotificationsRefreshAuthoritativeHistory()
+PASS   : BlockClockModelTests::blockArrivalAtRolloverIsNotCountedTwice()
+PASS   : BlockClockModelTests::emptyHistoryDoesNotEmitRedundantChanges()
+PASS   : BlockClockModelTests::timerHasModelOwnershipAndCanBeDisabledForTests()
+PASS   : BlockClockModelTests::timerAlignsToNextMinute()
+PASS   : BlockClockModelTests::cleanupTestCase()
+Totals: 13 passed, 0 failed, 0 skipped, 0 blacklisted, 0ms
+********* Finished testing of BlockClockModelTests *********
+********* Start testing of BumpTransactionModelTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : BumpTransactionModelTests::initTestCase()
+PASS   : BumpTransactionModelTests::stateIsIdleByDefault()
+PASS   : BumpTransactionModelTests::prepareFeeBump_transitionsToNeedsConfirmation()
+PASS   : BumpTransactionModelTests::prepareFeeBump_populatesFees()
+PASS   : BumpTransactionModelTests::prepareFeeBump_failureSetsErrorState()
+PASS   : BumpTransactionModelTests::prepareFeeBump_invalidTxidFails()
+PASS   : BumpTransactionModelTests::prepareFeeBump_nullWalletFails()
+PASS   : BumpTransactionModelTests::confirmFeeBump_signsAndCommits()
+PASS   : BumpTransactionModelTests::confirmFeeBump_signFailureDoesNotCommit()
+PASS   : BumpTransactionModelTests::confirmFeeBump_rejectsWhenNotReady()
+PASS   : BumpTransactionModelTests::confirmFeeBump_rechecksEligibility()
+PASS   : BumpTransactionModelTests::reset_clearsState()
+PASS   : BumpTransactionModelTests::cleanupTestCase()
+Totals: 13 passed, 0 failed, 0 skipped, 0 blacklisted, 0ms
+********* Finished testing of BumpTransactionModelTests *********
+********* Start testing of CoinsListModelTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : CoinsListModelTests::initTestCase()
+PASS   : CoinsListModelTests::stableIdentitySurvivesReorderAndRejectsRemovedCoin()
+PASS   : CoinsListModelTests::filteringKeepsHiddenSelectionAndCancelRestoresInputs()
+PASS   : CoinsListModelTests::sortingGroupingAndLocksUseStableCoinIdentity()
+PASS   : CoinsListModelTests::cleanupTestCase()
+Totals: 5 passed, 0 failed, 0 skipped, 0 blacklisted, 0ms
+********* Finished testing of CoinsListModelTests *********
+********* Start testing of DebugLogModelTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : DebugLogModelTests::initTestCase()
+PASS   : DebugLogModelTests::inactiveModel_ignoresRefreshUntilActivated()
+PASS   : DebugLogModelTests::parsedRoles_extractStructuredLogLines()
+PASS   : DebugLogModelTests::initialLoad_isSingleBatchAndDetectsHasMore()
+PASS   : DebugLogModelTests::initialLoad_handlesBlankLinesAtBlockBoundaries()
+PASS   : DebugLogModelTests::initialLoad_discardsOversizedPartialAndResynchronizes()
+PASS   : DebugLogModelTests::initialLoad_skipsOversizedCompleteLine()
+PASS   : DebugLogModelTests::deltaAfterEmptyLoad_preservesHasMoreSentinel()
+PASS   : DebugLogModelTests::liveRefresh_appendsWithoutResetAndPrunesHead()
+PASS   : DebugLogModelTests::liveRefresh_canFullyDisplaceCacheWithoutReset()
+PASS   : DebugLogModelTests::liveRefresh_handlesDuplicateRecordsAndPartialWrites()
+PASS   : DebugLogModelTests::liveRefresh_discardsOversizedPartialUntilNewline()
+PASS   : DebugLogModelTests::liveRefresh_skipsOversizedCompleteLine()
+PASS   : DebugLogModelTests::loadMore_insertsOlderRowsAtTop()
+PASS   : DebugLogModelTests::widerTailRequest_survivesRacesAndDeactivation()
+PASS   : DebugLogModelTests::filter_updatesIncrementallyAndWhileInactive()
+PASS   : DebugLogModelTests::rotation_fallsBackToFullSnapshot()
+PASS   : DebugLogModelTests::loadLimit_changesKeepRetainedCacheBounded()
+PASS   : DebugLogModelTests::cleanupTestCase()
+Totals: 19 passed, 0 failed, 0 skipped, 0 blacklisted, 2394ms
+********* Finished testing of DebugLogModelTests *********
+********* Start testing of DesktopTrayIconControllerTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : DesktopTrayIconControllerTests::initTestCase()
+PASS   : DesktopTrayIconControllerTests::initiallyNotVisible()
+PASS   : DesktopTrayIconControllerTests::setVisibleFalseWhenAlreadyHidden_noSignal()
+PASS   : DesktopTrayIconControllerTests::setToolTipIsReadable()
+QWARN  : DesktopTrayIconControllerTests::showRestoresGeometryCapturedAtHide() This plugin does not support raise()
+PASS   : DesktopTrayIconControllerTests::showRestoresGeometryCapturedAtHide()
+PASS   : DesktopTrayIconControllerTests::cleanupTestCase()
+Totals: 6 passed, 0 failed, 0 skipped, 0 blacklisted, 1ms
+********* Finished testing of DesktopTrayIconControllerTests *********
+********* Start testing of DesktopWindowBehaviorModelTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : DesktopWindowBehaviorModelTests::initTestCase()
+PASS   : DesktopWindowBehaviorModelTests::nonDesktopPlatform_allSettingsFalse()
+PASS   : DesktopWindowBehaviorModelTests::desktopPlatform_showTrayIconDefaultsTrue()
+PASS   : DesktopWindowBehaviorModelTests::desktopPlatform_minimizeToTrayDefaultsFalse()
+PASS   : DesktopWindowBehaviorModelTests::desktopPlatform_minimizeOnCloseDefaultsFalse()
+PASS   : DesktopWindowBehaviorModelTests::setShowTrayIconFalse_cascadesToMinimizeToTrayFalse()
+PASS   : DesktopWindowBehaviorModelTests::setShowTrayIconFalse_doesNotCascadeMinimizeOnClose()
+PASS   : DesktopWindowBehaviorModelTests::setMinimizeToTray_noopWhenTrayIconDisabled()
+PASS   : DesktopWindowBehaviorModelTests::setMinimizeOnClose_worksWithoutTrayIcon()
+PASS   : DesktopWindowBehaviorModelTests::shouldHideToTrayOnMinimize_allConditionsRequired()
+PASS   : DesktopWindowBehaviorModelTests::shouldMinimizeWindowOnClose_requiresDesktopAndMinimizeOnClose()
+PASS   : DesktopWindowBehaviorModelTests::loadSettings_clampsMinimizeToTrayWhenTrayHidden()
+PASS   : DesktopWindowBehaviorModelTests::settings_persistAcrossInstances()
+PASS   : DesktopWindowBehaviorModelTests::cleanupTestCase()
+Totals: 14 passed, 0 failed, 0 skipped, 0 blacklisted, 174ms
+********* Finished testing of DesktopWindowBehaviorModelTests *********
+********* Start testing of DisplaySettingsTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : DisplaySettingsTests::initTestCase()
+PASS   : DisplaySettingsTests::displayUnit_defaultIsBtc()
+PASS   : DisplaySettingsTests::displayUnit_persistsToQSettings()
+PASS   : DisplaySettingsTests::language_persistsToQSettings()
+PASS   : DisplaySettingsTests::qmlBitcoinUnits_satFormat_zero()
+PASS   : DisplaySettingsTests::qmlBitcoinUnits_satFormat_positive()
+PASS   : DisplaySettingsTests::qmlBitcoinUnits_satFormat_negative()
+PASS   : DisplaySettingsTests::qmlBitcoinUnits_btcFormat_roundtrip()
+PASS   : DisplaySettingsTests::cleanupTestCase()
+Totals: 9 passed, 0 failed, 0 skipped, 0 blacklisted, 13ms
+********* Finished testing of DisplaySettingsTests *********
+********* Start testing of GuiArgsTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : GuiArgsTests::initTestCase()
+PASS   : GuiArgsTests::qmlGuiArgsParseGuiOnlyFlags()
+PASS   : GuiArgsTests::cleanupTestCase()
+Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 0ms
+********* Finished testing of GuiArgsTests *********
+********* Start testing of ImageProviderTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : ImageProviderTests::initTestCase()
+PASS   : ImageProviderTests::requestPixmap_requiresSizePointer()
+PASS   : ImageProviderTests::requestPixmap_requiresValidRequestedSize()
+PASS   : ImageProviderTests::requestPixmap_appId_setsRequestedOutputSize()
+PASS   : ImageProviderTests::requestPixmap_iconResource_setsRequestedOutputSize()
+PASS   : ImageProviderTests::requestPixmap_unknownId_returnsNullPixmap()
+PASS   : ImageProviderTests::cleanupTestCase()
+Totals: 7 passed, 0 failed, 0 skipped, 0 blacklisted, 12ms
+********* Finished testing of ImageProviderTests *********
+********* Start testing of NetworkStatusModelTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : NetworkStatusModelTests::initTestCase()
+PASS   : NetworkStatusModelTests::unavailableReachabilityIsNotOffline()
+PASS   : NetworkStatusModelTests::disconnectedReachabilityIsOffline()
+PASS   : NetworkStatusModelTests::unknownReachabilityIsNotOffline()
+PASS   : NetworkStatusModelTests::limitedReachabilityIsNotOffline()
+PASS   : NetworkStatusModelTests::cleanupTestCase()
+Totals: 6 passed, 0 failed, 0 skipped, 0 blacklisted, 0ms
+********* Finished testing of NetworkStatusModelTests *********
+********* Start testing of NetworkStyleTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : NetworkStyleTests::initTestCase()
+PASS   : NetworkStyleTests::instantiate_knownNetworks_haveExpectedNames()
+PASS   : NetworkStyleTests::getTitleAddText_perNetwork()
+PASS   : NetworkStyleTests::cleanupTestCase()
+Totals: 4 passed, 0 failed, 0 skipped, 0 blacklisted, 247ms
+********* Finished testing of NetworkStyleTests *********
+********* Start testing of NetworkTrafficTowerTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : NetworkTrafficTowerTests::initTestCase()
+PASS   : NetworkTrafficTowerTests::samplesOffGuiThreadWithoutPublishingWhileInactive()
+PASS   : NetworkTrafficTowerTests::activeControlsPublishingWithoutDiscardingBackgroundHistory()
+PASS   : NetworkTrafficTowerTests::filterWindowChangesPreserveTotalsAndHistory()
+PASS   : NetworkTrafficTowerTests::stopsSamplingWhenDestroyedWhileActive()
+PASS   : NetworkTrafficTowerTests::cleanupTestCase()
+Totals: 6 passed, 0 failed, 0 skipped, 0 blacklisted, 667ms
+********* Finished testing of NetworkTrafficTowerTests *********
+********* Start testing of NodeModelTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : NodeModelTests::initTestCase()
+PASS   : NodeModelTests::refreshMempoolInfoUpdatesProperties()
+PASS   : NodeModelTests::activatingMempoolPollingEmitsSignalsAndRefreshesImmediately()
+PASS   : NodeModelTests::peerCountsInitializeAndRefreshFromDirectionalNodeCounts()
+PASS   : NodeModelTests::disconnectPeerReturnsNodeResult()
+PASS   : NodeModelTests::banPeerRejectsInvalidInputs()
+PASS   : NodeModelTests::banPeerReturnsFalseWithoutDisconnectWhenBackendFails()
+PASS   : NodeModelTests::banPeerDisconnectsAddressAfterSuccessfulBan()
+PASS   : NodeModelTests::requestShutdownEmitsOnlyOnce()
+PASS   : NodeModelTests::initializationFailureRequestsShutdownWhenCoreWasInterrupted()
+PASS   : NodeModelTests::initializationFailureWithoutCoreInterruptOnlySetsErrorState()
+PASS   : NodeModelTests::initializationSuccessDuringCoreShutdownSkipsReadyState()
+PASS   : NodeModelTests::destructorUnsubscribesCoreSignalsBeforeStoppingPolling()
+PASS   : NodeModelTests::nodeNotificationHandlersUpdateModelThroughQueuedSignals()
+PASS   : NodeModelTests::bannedListNotificationFromGuiThreadIsNotDeliveredReentrantly()
+PASS   : NodeModelTests::blockTipUpdatesQueuedAcrossThreadsRetainPayloadValues()
+PASS   : NodeModelTests::initialSyncCompletionIgnoresVerificationEstimateForGenesis()
+PASS   : NodeModelTests::initialSyncCompletionWaitsForStartupCatchUpAndLatches()
+PASS   : NodeModelTests::syncCompletionResetsForLargeHeaderGap(headers-after-sleep)
+PASS   : NodeModelTests::syncCompletionResetsForLargeHeaderGap(active-chain-rewind)
+PASS   : NodeModelTests::blockSyncActiveFollowsInitializationAndBlockTipState()
+PASS   : NodeModelTests::alertNotificationsRefreshWarningList()
+PASS   : NodeModelTests::headerTipNotificationsExposeHeaderSyncProgress()
+PASS   : NodeModelTests::startupWarningsAreShownOnceAndDoNotBecomeCurrentWarnings()
+PASS   : NodeModelTests::runtimeMessageHandlerOpensAfterInitialization()
+PASS   : NodeModelTests::runtimeQuestionHandlerBlocksForAnswerAndReturnsResult()
+PASS   : NodeModelTests::runtimeStartupQuestionFailureLetsInitializeResultRequestShutdown()
+PASS   : NodeModelTests::runtimeStartupErrorDialogLetsInitializeResultRequestShutdown()
+PASS   : NodeModelTests::runtimeDialogDefaultsToOkWhenNoButtonsAreSpecified()
+PASS   : NodeModelTests::runtimeDialogExposesFullCoreButtonMask()
+PASS   : NodeModelTests::runtimeBlockingDialogsAreQueued()
+PASS   : NodeModelTests::runtimeNonBlockingDialogsAreQueued()
+PASS   : NodeModelTests::initializeFailureShowsStartupWarningsWithoutMakingThemCurrentWarnings()
+PASS   : NodeModelTests::initializeFailureUsesNodeErrorMessages()
+PASS   : NodeModelTests::runawayExceptionSetsFatalStartupError()
+PASS   : NodeModelTests::nodeInformationRowsAvoidChainmanBeforeInitialization()
+PASS   : NodeModelTests::nodeInformationRowsExposeDiagnostics()
+PASS   : NodeModelTests::initEmitsRequestedInitialize()
+PASS   : NodeModelTests::initGuardBlocksSecondEmission()
+PASS   : NodeModelTests::shutdownPollingStartsShutdownBeforeEmittingSignal()
+PASS   : NodeModelTests::cleanupTestCase()
+Totals: 41 passed, 0 failed, 0 skipped, 0 blacklisted, 2639ms
+********* Finished testing of NodeModelTests *********
+********* Start testing of OnboardingStorageTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : OnboardingStorageTests::initTestCase()
+PASS   : OnboardingStorageTests::pendingCheckReturnsCheckingStatus()
+PASS   : OnboardingStorageTests::errorReturnsErrorStatus()
+PASS   : OnboardingStorageTests::fullStorageEnoughReturnsOk()
+PASS   : OnboardingStorageTests::prunedSelectionUsesPrunedRequirement()
+PASS   : OnboardingStorageTests::insufficientSelectedStorageWarns()
+PASS   : OnboardingStorageTests::nearMinimumStorageWarns()
+PASS   : OnboardingStorageTests::pruneRecommendationUsesValidityAndMargin()
+PASS   : OnboardingStorageTests::existingProfileDoesNotRecommendPruneOrRequireFreshChainSpace()
+PASS   : OnboardingStorageTests::existingProfileBelowOperationalMinimumWarns()
+PASS   : OnboardingStorageTests::cleanupTestCase()
+Totals: 11 passed, 0 failed, 0 skipped, 0 blacklisted, 1ms
+********* Finished testing of OnboardingStorageTests *********
+********* Start testing of OptionsModelTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : OptionsModelTests::initTestCase()
+PASS   : OptionsModelTests::proxyDisabledRemovesKey()
+PASS   : OptionsModelTests::torDisabledRemovesKey()
+PASS   : OptionsModelTests::proxyEnabledWritesAddress()
+PASS   : OptionsModelTests::proxyDirtySetAtRuntime()
+PASS   : OptionsModelTests::proxyDirtyResetWhenReverted()
+PASS   : OptionsModelTests::mempoolSizeLoadedFromSettings()
+PASS   : OptionsModelTests::mempoolSizeWritesSetting()
+PASS   : OptionsModelTests::mempoolSizeDoesNotRewriteUnchangedSetting()
+PASS   : OptionsModelTests::legacyNumericSettingsWriteStrings()
+PASS   : OptionsModelTests::externalSignerPathWritesSigner()
+PASS   : OptionsModelTests::externalSignerPathClearedRemovesKey()
+PASS   : OptionsModelTests::walletSettingsDirtyTracksExternalSignerPath()
+PASS   : OptionsModelTests::signerPathLoadedFromSettings()
+PASS   : OptionsModelTests::signerPathWritesSetting()
+PASS   : OptionsModelTests::signerDirtySetAtRuntime()
+PASS   : OptionsModelTests::signerDirtyResetWhenReverted()
+PASS   : OptionsModelTests::externalSignerPathValidationRejectsMissingPath()
+PASS   : OptionsModelTests::externalSignerPathValidationAcceptsExecutablePath()
+PASS   : OptionsModelTests::connectionDirtyTracksRestartSettings()
+PASS   : OptionsModelTests::natpmpAppliesLiveWithoutRestartDirty()
+PASS   : OptionsModelTests::storageDirtyIgnoresDisabledPruneSize()
+PASS   : OptionsModelTests::pruneDisabledPreservesPreviousValue()
+PASS   : OptionsModelTests::developerDirtyTracksRestartSettings()
+PASS   : OptionsModelTests::mempoolDirtyTracksRestartSettings()
+PASS   : OptionsModelTests::proxyValidationAndCommit()
+PASS   : OptionsModelTests::proxyDisabledPreservesPreviousValue()
+PASS   : OptionsModelTests::customDataDirValidationRejectsFile()
+PASS   : OptionsModelTests::customDataDirSelectionCreatesDirectoryAndPersists()
+PASS   : OptionsModelTests::customDataDirSelectionPreservesExistingWalletDiscovery()
+PASS   : OptionsModelTests::guiDataDirSettingSoftSetsCustomPath()
+PASS   : OptionsModelTests::guiDataDirSettingAbsolutizesSavedRelativePath()
+PASS   : OptionsModelTests::guiDataDirSettingPreservesExistingWalletDiscovery()
+PASS   : OptionsModelTests::guiDataDirSettingSkipsUnusableConfiguredDir()
+PASS   : OptionsModelTests::guiDataDirSettingSkipsExplicitDatadir()
+PASS   : OptionsModelTests::runtimeDataDirUsesExplicitDatadirOverSavedGuiSetting()
+PASS   : OptionsModelTests::guiDataDirSettingLeavesDefaultOverridable()
+PASS   : OptionsModelTests::legacyQtDataDirFallbackReadsOldQtSetting()
+PASS   : OptionsModelTests::guiDataDirChooserShowsForMissingConfiguredDir()
+PASS   : OptionsModelTests::guiDataDirChooserShowsForUnwritableConfiguredDir()
+PASS   : OptionsModelTests::resetGuiSettingsClearsQSettings()
+PASS   : OptionsModelTests::resetGuiSettingsClearsLegacyQtSettings()
+PASS   : OptionsModelTests::resetGuiSettingsStartsOnboardingFromDefaultDataDir()
+PASS   : OptionsModelTests::resetGuiSettingsClearsSettingsJson()
+PASS   : OptionsModelTests::resetGuiSettingsPreviewIgnoresSelectedCustomDataDirSettingsJson()
+PASS   : OptionsModelTests::resetGuiSettingsApplyClearsSelectedCustomDataDirSettingsJson()
+PASS   : OptionsModelTests::resetGuiSettingsPreservesCommandLineOverrides()
+PASS   : OptionsModelTests::resetGuiSettingsPreservesBitcoinConfOverrides()
+PASS   : OptionsModelTests::resetGuiSettingsExplicitDatadirClearsThatDatadirSettingsJson()
+PASS   : OptionsModelTests::qmlOnboardedProfileSkipsPreInitOnboarding()
+PASS   : OptionsModelTests::qmlOnboardedCommandLineOverrideShowsPreInitOnboarding()
+PASS   : OptionsModelTests::qmlOnboardedConfiguredDatadirProfileSkipsPreInitOnboarding()
+PASS   : OptionsModelTests::configuredDatadirPreviewKeepsConfigSource()
+PASS   : OptionsModelTests::configuredDatadirApplyDoesNotPersistGuiDataDir()
+PASS   : OptionsModelTests::explicitDatadirApplyDoesNotPersistGuiDataDir()
+PASS   : OptionsModelTests::qmlOnboardedResetGuiSettingsShowsPreInitOnboarding()
+PASS   : OptionsModelTests::qmlOnboardedChooseDataDirShowsPreInitOnboarding()
+PASS   : OptionsModelTests::qmlOnboardedCurrentResetFlagShowsPreInitOnboarding()
+PASS   : OptionsModelTests::qmlOnboardedLegacyResetFlagShowsPreInitOnboarding()
+PASS   : OptionsModelTests::existingCoreProfileShowsFullOnboardingWithCurrentSettings()
+PASS   : OptionsModelTests::freshExplicitDatadirPreviewReportsFreshProfile()
+PASS   : OptionsModelTests::onboardingPreviewDetectsSettingsJsonProfile()
+PASS   : OptionsModelTests::onboardingPreviewDetectsChainDataWithoutCreatingBlocksDir()
+PASS   : OptionsModelTests::onboardingPreviewDetectsRootWalletProfile()
+PASS   : OptionsModelTests::onboardingPreviewDetectsExplicitWalletDirProfile()
+PASS   : OptionsModelTests::onboardingPreviewIgnoresEmptyExplicitWalletDir()
+PASS   : OptionsModelTests::onboardingPreviewIgnoresUnrecognizedWalletsEntry()
+PASS   : OptionsModelTests::freshExplicitDatadirShowsFullOnboarding()
+PASS   : OptionsModelTests::onboardingApplyWithoutTouchedSettingsOnlyAddsQmlOnboardedMarker()
+PASS   : OptionsModelTests::onboardingApplyCreatesWalletSubdirectoryForNewNetworkDataDir()
+PASS   : OptionsModelTests::onboardingApplyPreservesExistingNetworkWalletDiscovery()
+PASS   : OptionsModelTests::fullOnboardingApplyWritesQmlOnboardedMarker()
+PASS   : OptionsModelTests::onboardingPreviewAppliesParameterInteractions()
+PASS   : OptionsModelTests::storageSpaceCheckAcceptsExistingDirectory()
+PASS   : OptionsModelTests::storageSpaceCheckRejectsExistingFile()
+PASS   : OptionsModelTests::thirdPartyTransactionLinksParseValidUrls()
+PASS   : OptionsModelTests::moneyFontChoicePersists()
+PASS   : OptionsModelTests::displayUnitUsesQtCompatibleSettingsKey()
+PASS   : OptionsModelTests::displayUnitUsesLegacyQtFallback()
+PASS   : OptionsModelTests::displayUnitPrefersQmlSettingOverLegacyQtFallback()
+PASS   : OptionsModelTests::sharedCoreSettingHelpersDeduplicateOverrides()
+PASS   : OptionsModelTests::parameterInteractionOverridesPersistExplicitValues()
+PASS   : OptionsModelTests::coreSettingsLegacyNumericOverridesWriteStrings()
+PASS   : OptionsModelTests::coreSettingsModelEntryMutatesRuntimeModel()
+PASS   : OptionsModelTests::coreSettingsSessionCommandLineSettingDoesNotWrite()
+PASS   : OptionsModelTests::coreSettingsSessionDoesNotCopyUntouchedConfig()
+PASS   : OptionsModelTests::coreSettingsSessionWritesTouchedConfigOverride()
+PASS   : OptionsModelTests::coreSettingsSessionRevertingToDefaultDeletesOverride()
+PASS   : OptionsModelTests::coreSettingsSessionPruneDisabledPreservesPreviousValue()
+PASS   : OptionsModelTests::coreSettingsSessionPruneEnabledClearsPreviousValue()
+PASS   : OptionsModelTests::coreSettingsSessionProxyDisabledPreservesPreviousValue()
+PASS   : OptionsModelTests::coreSettingsLoadPersistentPrunePreviousValue()
+PASS   : OptionsModelTests::coreSettingsSessionPreviewRefreshPreservesTouchedValues()
+PASS   : OptionsModelTests::coreSettingsSessionChangeReportsFieldDiffs()
+PASS   : OptionsModelTests::coreSettingsSessionProxyCommitAcceptsUnchangedAddressWithoutValueChange()
+PASS   : OptionsModelTests::coreSettingStatusTracksSourcePrecedence()
+PASS   : OptionsModelTests::runtimeCoreSettingStatusesRefreshAfterWrite()
+PASS   : OptionsModelTests::commandLineOverriddenSettingDoesNotWrite()
+PASS   : OptionsModelTests::runtimeCommandLineOverridesDisplayEffectiveValues()
+PASS   : OptionsModelTests::runtimeParameterInteractionsDisplayEffectiveValues()
+PASS   : OptionsModelTests::commandLineOverriddenSettingsPreservePersistentValues()
+PASS   : OptionsModelTests::revertingToConfigValueDeletesRwOverride()
+PASS   : OptionsModelTests::revertingToDefaultValueDeletesRwOverride()
+PASS   : OptionsModelTests::languageCommandLineOverrideDoesNotPersist()
+PASS   : OptionsModelTests::legacyQtSettingsMigrateToCoreSettings()
+PASS   : OptionsModelTests::legacyQtSettingsPreviewDoesNotRemoveQSettings()
+PASS   : OptionsModelTests::legacyQtSettingsCommandLineOverrideStillMigratesPersistentValue()
+PASS   : OptionsModelTests::legacyQtSettingsBitcoinConfBlocksMigration()
+PASS   : OptionsModelTests::onboardingApplyMigratesLegacySettingsBeforeTouchedOverrides()
+PASS   : OptionsModelTests::onboardingPreviewHelperReadsSelectedDatadirConfig()
+PASS   : OptionsModelTests::onboardingPreviewReadsSelectedDatadirConfig()
+PASS   : OptionsModelTests::onboardingApplyDoesNotCopyUntouchedConfig()
+PASS   : OptionsModelTests::onboardingApplyWritesTouchedConfigOverride()
+PASS   : OptionsModelTests::onboardingApplyWritesTouchedParameterInteractionOverride()
+PASS   : OptionsModelTests::cleanupTestCase()
+Totals: 115 passed, 0 failed, 0 skipped, 0 blacklisted, 1048ms
+********* Finished testing of OptionsModelTests *********
+********* Start testing of PeerListModelTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : PeerListModelTests::initTestCase()
+PASS   : PeerListModelTests::mapsRoleData()
+PASS   : PeerListModelTests::refreshUpdatesRows()
+PASS   : PeerListModelTests::refreshHandlesGetNodesStatsFailure()
+PASS   : PeerListModelTests::startStopAutoRefresh()
+PASS   : PeerListModelTests::sortProxySortsByRoles()
+PASS   : PeerListModelTests::cleanupTestCase()
+Totals: 7 passed, 0 failed, 0 skipped, 0 blacklisted, 704ms
+********* Finished testing of PeerListModelTests *********
+********* Start testing of PeerStatsUtilTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : PeerStatsUtilTests::initTestCase()
+PASS   : PeerStatsUtilTests::connectionType_toQString()
+PASS   : PeerStatsUtilTests::network_toQString()
+PASS   : PeerStatsUtilTests::transport_toQString()
+PASS   : PeerStatsUtilTests::formatDuration()
+PASS   : PeerStatsUtilTests::formatPeerAge()
+PASS   : PeerStatsUtilTests::formatServices()
+PASS   : PeerStatsUtilTests::formatPingTime()
+PASS   : PeerStatsUtilTests::formatTimeOffset()
+PASS   : PeerStatsUtilTests::formatBytes()
+PASS   : PeerStatsUtilTests::cleanupTestCase()
+Totals: 11 passed, 0 failed, 0 skipped, 0 blacklisted, 1ms
+********* Finished testing of PeerStatsUtilTests *********
+********* Start testing of PsbtQmlModelTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : PsbtQmlModelTests::initTestCase()
+PASS   : PsbtQmlModelTests::loadsRawAndBase64Psbt()
+PASS   : PsbtQmlModelTests::invalidFileSetsErrorAndClearResetsState()
+PASS   : PsbtQmlModelTests::signUsesInjectedWallet()
+PASS   : PsbtQmlModelTests::savePreservesPsbtMetadata()
+PASS   : PsbtQmlModelTests::broadcastsCompletePsbt()
+PASS   : PsbtQmlModelTests::cleanupTestCase()
+Totals: 7 passed, 0 failed, 0 skipped, 0 blacklisted, 113ms
+********* Finished testing of PsbtQmlModelTests *********
+********* Start testing of QmlBitcoinUnitsTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : QmlBitcoinUnitsTests::initTestCase()
+PASS   : QmlBitcoinUnitsTests::localized_amounts(us-sats)
+PASS   : QmlBitcoinUnitsTests::localized_amounts(german-sats)
+PASS   : QmlBitcoinUnitsTests::localized_amounts(french-sats)
+PASS   : QmlBitcoinUnitsTests::localized_amounts(indian-sats)
+PASS   : QmlBitcoinUnitsTests::localized_amounts(spanish-btc)
+PASS   : QmlBitcoinUnitsTests::localized_amounts(chilean-btc-precision)
+PASS   : QmlBitcoinUnitsTests::localized_amounts(negative-satoshi)
+PASS   : QmlBitcoinUnitsTests::localized_amounts(zero)
+PASS   : QmlBitcoinUnitsTests::localized_amounts(mbtc)
+PASS   : QmlBitcoinUnitsTests::localized_amounts(bits)
+PASS   : QmlBitcoinUnitsTests::localized_amounts(maximum-supply)
+PASS   : QmlBitcoinUnitsTests::localized_amounts(beyond-double-precision)
+PASS   : QmlBitcoinUnitsTests::localized_amounts(minimum-integer)
+PASS   : QmlBitcoinUnitsTests::localized_default_and_canonical_are_independent()
+PASS   : QmlBitcoinUnitsTests::format_btc_basic()
+PASS   : QmlBitcoinUnitsTests::format_btc_negative()
+PASS   : QmlBitcoinUnitsTests::format_btc_thinSpaceSeparators()
+PASS   : QmlBitcoinUnitsTests::format_mbtc_and_ubtc()
+PASS   : QmlBitcoinUnitsTests::format_sat_noDecimals()
+PASS   : QmlBitcoinUnitsTests::display_unit_mapping_and_labels()
+PASS   : QmlBitcoinUnitsTests::cleanupTestCase()
+Totals: 22 passed, 0 failed, 0 skipped, 0 blacklisted, 1ms
+********* Finished testing of QmlBitcoinUnitsTests *********
+********* Start testing of QmlInitExecutorApiTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : QmlInitExecutorApiTests::initTestCase()
+QDEBUG : QmlInitExecutorApiTests::initializeEmitsResultAndRunsOffMainThread() Running initialization in thread
+QDEBUG : QmlInitExecutorApiTests::initializeEmitsResultAndRunsOffMainThread() ~QmlInitExecutor : Stopping thread
+QDEBUG : QmlInitExecutorApiTests::initializeEmitsResultAndRunsOffMainThread() ~QmlInitExecutor : Stopped thread
+PASS   : QmlInitExecutorApiTests::initializeEmitsResultAndRunsOffMainThread()
+QDEBUG : QmlInitExecutorApiTests::initializeEmitsRunawayExceptionOnFailure() Running initialization in thread
+
+
+************************
+EXCEPTION: St13runtime_error       
+init failed       
+bitcoin in Runaway exception       
+
+QDEBUG : QmlInitExecutorApiTests::initializeEmitsRunawayExceptionOnFailure() ~QmlInitExecutor : Stopping thread
+QDEBUG : QmlInitExecutorApiTests::initializeEmitsRunawayExceptionOnFailure() ~QmlInitExecutor : Stopped thread
+PASS   : QmlInitExecutorApiTests::initializeEmitsRunawayExceptionOnFailure()
+QDEBUG : QmlInitExecutorApiTests::shutdownEmitsResultAndRunsOffMainThread() Running shutdown in thread
+QDEBUG : QmlInitExecutorApiTests::shutdownEmitsResultAndRunsOffMainThread() Shutdown finished
+QDEBUG : QmlInitExecutorApiTests::shutdownEmitsResultAndRunsOffMainThread() ~QmlInitExecutor : Stopping thread
+QDEBUG : QmlInitExecutorApiTests::shutdownEmitsResultAndRunsOffMainThread() ~QmlInitExecutor : Stopped thread
+PASS   : QmlInitExecutorApiTests::shutdownEmitsResultAndRunsOffMainThread()
+QDEBUG : QmlInitExecutorApiTests::shutdownEmitsRunawayExceptionOnFailure() Running shutdown in thread
+
+
+************************
+EXCEPTION: St13runtime_error       
+shutdown failed       
+bitcoin in Runaway exception       
+
+QDEBUG : QmlInitExecutorApiTests::shutdownEmitsRunawayExceptionOnFailure() ~QmlInitExecutor : Stopping thread
+QDEBUG : QmlInitExecutorApiTests::shutdownEmitsRunawayExceptionOnFailure() ~QmlInitExecutor : Stopped thread
+PASS   : QmlInitExecutorApiTests::shutdownEmitsRunawayExceptionOnFailure()
+PASS   : QmlInitExecutorApiTests::cleanupTestCase()
+Totals: 6 passed, 0 failed, 0 skipped, 0 blacklisted, 1ms
+********* Finished testing of QmlInitExecutorApiTests *********
+********* Start testing of QtInfoLogTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : QtInfoLogTests::initTestCase()
+PASS   : QtInfoLogTests::logsQtVersionAndPlatform()
+PASS   : QtInfoLogTests::logsPluginsStyleSystemAndScreens()
+PASS   : QtInfoLogTests::cleanupTestCase()
+Totals: 4 passed, 0 failed, 0 skipped, 0 blacklisted, 1ms
+********* Finished testing of QtInfoLogTests *********
+********* Start testing of QtMessageFilterTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : QtMessageFilterTests::initTestCase()
+PASS   : QtMessageFilterTests::benignFontWarning_matches()
+PASS   : QtMessageFilterTests::benignFontWarning_rejectsOther()
+PASS   : QtMessageFilterTests::cleanupTestCase()
+Totals: 4 passed, 0 failed, 0 skipped, 0 blacklisted, 0ms
+********* Finished testing of QtMessageFilterTests *********
+********* Start testing of ReceiveRequestHistoryModelTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : ReceiveRequestHistoryModelTests::initTestCase()
+PASS   : ReceiveRequestHistoryModelTests::buildUriEmptyAddress()
+PASS   : ReceiveRequestHistoryModelTests::buildUriPlainAddress()
+PASS   : ReceiveRequestHistoryModelTests::buildUriWithAmountLabelMessage()
+PASS   : ReceiveRequestHistoryModelTests::buildUriPreservesBech32Case()
+PASS   : ReceiveRequestHistoryModelTests::buildUriUrlEncodesParams()
+PASS   : ReceiveRequestHistoryModelTests::serializeRoundTripWithQmlExtension()
+PASS   : ReceiveRequestHistoryModelTests::serializePaymentReceivedExtension()
+PASS   : ReceiveRequestHistoryModelTests::serializeBaseEntryMatchesQtWidgetsFormat()
+PASS   : ReceiveRequestHistoryModelTests::serializeQmlExtensionDoesNotBreakQtWidgetsFormat()
+QWARN  : ReceiveRequestHistoryModelTests::deserializeSkipsMalformed() ReceiveRequestHistoryModel: skipping malformed receive request entry: DataStream::read(): end of data: iostream error
+QWARN  : ReceiveRequestHistoryModelTests::deserializeSkipsMalformed() ReceiveRequestHistoryModel: skipping malformed receive request entry: DataStream::read(): end of data: iostream error
+PASS   : ReceiveRequestHistoryModelTests::deserializeSkipsMalformed()
+PASS   : ReceiveRequestHistoryModelTests::modelRolesMatchEntry()
+PASS   : ReceiveRequestHistoryModelTests::setEntriesOrdersSameSecondRequestsById()
+PASS   : ReceiveRequestHistoryModelTests::prependInsertsNewRow()
+PASS   : ReceiveRequestHistoryModelTests::removeByRequestIdRemovesRow()
+PASS   : ReceiveRequestHistoryModelTests::entryByIdLookup()
+PASS   : ReceiveRequestHistoryModelTests::matchingEntriesForAddressReturnsAllMatches()
+PASS   : ReceiveRequestHistoryModelTests::maxIdReturnsHighest()
+QWARN  : ReceiveRequestHistoryModelTests::deserializeTruncatedBlob() ReceiveRequestHistoryModel: skipping malformed receive request entry: DataStream::read(): end of data: iostream error
+PASS   : ReceiveRequestHistoryModelTests::deserializeTruncatedBlob()
+PASS   : ReceiveRequestHistoryModelTests::formatAmountBtcEdgeCases()
+PASS   : ReceiveRequestHistoryModelTests::deserializeQtWidgetsRecipientBlob()
+PASS   : ReceiveRequestHistoryModelTests::cleanupTestCase()
+Totals: 22 passed, 0 failed, 0 skipped, 0 blacklisted, 0ms
+********* Finished testing of ReceiveRequestHistoryModelTests *********
+********* Start testing of RpcCommandExecutorTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : RpcCommandExecutorTests::initTestCase()
+PASS   : RpcCommandExecutorTests::parseSpaceSeparated()
+PASS   : RpcCommandExecutorTests::parseFunctionalNotation()
+PASS   : RpcCommandExecutorTests::parseNestedCommands()
+PASS   : RpcCommandExecutorTests::parseQuotedArguments()
+PASS   : RpcCommandExecutorTests::parseSubscriptSyntax()
+PASS   : RpcCommandExecutorTests::parseUnbalancedQuoteFails()
+PASS   : RpcCommandExecutorTests::parseImplicitlyClosedParenSucceeds()
+PASS   : RpcCommandExecutorTests::sensitiveCmdWalletPassphrase()
+PASS   : RpcCommandExecutorTests::sensitiveCmdNestedWalletPassphrase()
+PASS   : RpcCommandExecutorTests::sensitiveCmdSignMessage()
+PASS   : RpcCommandExecutorTests::sensitiveCmdEncryptWallet()
+PASS   : RpcCommandExecutorTests::sensitiveCmdNonSensitiveUnredacted()
+PASS   : RpcCommandExecutorTests::cleanupTestCase()
+Totals: 14 passed, 0 failed, 0 skipped, 0 blacklisted, 0ms
+********* Finished testing of RpcCommandExecutorTests *********
+********* Start testing of RpcConsoleModelTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : RpcConsoleModelTests::initTestCase()
+PASS   : RpcConsoleModelTests::historyNavigationOldestToNewest()
+PASS   : RpcConsoleModelTests::historyNavigationRestoresPendingText()
+PASS   : RpcConsoleModelTests::historyDeduplicatesConsecutiveDuplicates()
+PASS   : RpcConsoleModelTests::historyTruncatesAtMax()
+PASS   : RpcConsoleModelTests::resetHistoryNavigationClearsState()
+PASS   : RpcConsoleModelTests::submitRefusedWhileExecuting()
+PASS   : RpcConsoleModelTests::stopRunsSynchronouslyWhileExecuting()
+PASS   : RpcConsoleModelTests::walletNameScopesRpcToWalletUri()
+PASS   : RpcConsoleModelTests::outputRowsExposeCategoryAndRawTimestamp()
+PASS   : RpcConsoleModelTests::clearRemovesOutput()
+PASS   : RpcConsoleModelTests::outputTruncatedWhenResultTooLong()
+PASS   : RpcConsoleModelTests::jsonReplyKeyColoringSkipsStringsContainingColons()
+PASS   : RpcConsoleModelTests::availableCommandsIncludesHelpVariants()
+PASS   : RpcConsoleModelTests::cleanupTestCase()
+Totals: 15 passed, 0 failed, 0 skipped, 0 blacklisted, 3439ms
+********* Finished testing of RpcConsoleModelTests *********
+********* Start testing of SendRecipientsListModelTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : SendRecipientsListModelTests::initTestCase()
+PASS   : SendRecipientsListModelTests::clearKeepsCurrentRecipientValidForQmlBindings()
+PASS   : SendRecipientsListModelTests::clearToFrontReportsRemovedRows()
+PASS   : SendRecipientsListModelTests::clearToFrontDetachesRecipientsBeforeDestroyingThem()
+PASS   : SendRecipientsListModelTests::unitChangesApplyToEveryRecipient()
+PASS   : SendRecipientsListModelTests::paymentRequestMetadataStaysSeparateFromPrivateNote()
+PASS   : SendRecipientsListModelTests::cleanupTestCase()
+Totals: 7 passed, 0 failed, 0 skipped, 0 blacklisted, 4ms
+********* Finished testing of SendRecipientsListModelTests *********
+********* Start testing of SyncProgressTrackerTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : SyncProgressTrackerTests::initTestCase()
+PASS   : SyncProgressTrackerTests::publishesAtBoundedCadence()
+PASS   : SyncProgressTrackerTests::boundsHistoryWithoutDiscardingTheWindow()
+PASS   : SyncProgressTrackerTests::publishesDespiteFrequentProgressDips()
+PASS   : SyncProgressTrackerTests::nonpositiveWindowProgressDoesNotPublish()
+PASS   : SyncProgressTrackerTests::resetsForClockRegression()
+PASS   : SyncProgressTrackerTests::cleanupTestCase()
+Totals: 7 passed, 0 failed, 0 skipped, 0 blacklisted, 0ms
+********* Finished testing of SyncProgressTrackerTests *********
+********* Start testing of TransactionActivityModelTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : TransactionActivityModelTests::initTestCase()
+PASS   : TransactionActivityModelTests::historyReadsLeaveTheEventLoopFreeAndDiscardStaleSnapshots()
+PASS   : TransactionActivityModelTests::detailReadsDiscardPreviousSelectionsAndHandleMissingTransactions()
+PASS   : TransactionActivityModelTests::largeDetailPreviewDoesNotWaitForInputReads()
+PASS   : TransactionActivityModelTests::bumpEligibilityIsOnlyReadForTheSelectedTransaction()
+PASS   : TransactionActivityModelTests::deletingWalletDoesNotWaitForActivityReads()
+PASS   : TransactionActivityModelTests::readFailuresCanBeRetried()
+PASS   : TransactionActivityModelTests::opensNewTransactionBeforeItsNotification()
+PASS   : TransactionActivityModelTests::confirmationUpdatesAreBatchedAndPreserveAmountCaches()
+PASS   : TransactionActivityModelTests::copiesRawTransactionAndPublicPaymentRequest()
+PASS   : TransactionActivityModelTests::formatsDisplayAmountsForLocale()
+PASS   : TransactionActivityModelTests::exposesParentsAndActionsWithoutAllocatingFees()
+PASS   : TransactionActivityModelTests::savesBatchRecipientNotesWhenSending(local-signing)
+PASS   : TransactionActivityModelTests::savesBatchRecipientNotesWhenSending(external-signing)
+PASS   : TransactionActivityModelTests::filtersWholeTransactionsAndExportsParentImpact()
+PASS   : TransactionActivityModelTests::exportsBatchActionsWithoutDuplicatingFees()
+PASS   : TransactionActivityModelTests::groupsPendingMonthsAndDaysAndCountsParents()
+PASS   : TransactionActivityModelTests::groupsTransactionsInPendingUntilFirstConfirmation()
+PASS   : TransactionActivityModelTests::totalsPendingWalletImpactWithoutRequests()
+PASS   : TransactionActivityModelTests::movesReplacedBatchToHistoryAndKeepsReplacementPending()
+PASS   : TransactionActivityModelTests::associatesRequestsPerOutputAndUpdatesLive()
+PASS   : TransactionActivityModelTests::usesPrivateRequestNotesWithoutChangingStoredData()
+PASS   : TransactionActivityModelTests::restoresRequestsOnConflictAbandonmentReplacementAndDeletion()
+PASS   : TransactionActivityModelTests::sharesAddressAssociationsWithoutDuplicatingParents()
+PASS   : TransactionActivityModelTests::preservesStatusWhenBusyAndRetries()
+PASS   : TransactionActivityModelTests::refreshesOnWalletTipAndSameHeightReorg()
+PASS   : TransactionActivityModelTests::queuesWalletNotificationsAndRetainsStableIndexes()
+PASS   : TransactionActivityModelTests::handlesInternalAndMinedTypes()
+PASS   : TransactionActivityModelTests::recognizesSelfSendToPaymentRequest(single-input)
+PASS   : TransactionActivityModelTests::recognizesSelfSendToPaymentRequest(multiple-inputs)
+PASS   : TransactionActivityModelTests::loadsFlowLazilyAndRefreshesOutputAssociations()
+PASS   : TransactionActivityModelTests::cleanupTestCase()
+Totals: 32 passed, 0 failed, 0 skipped, 0 blacklisted, 5658ms
+********* Finished testing of TransactionActivityModelTests *********
+********* Start testing of TransactionActivityTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : TransactionActivityTests::initTestCase()
+PASS   : TransactionActivityTests::classifiesWalletActivity(send-with-change)
+PASS   : TransactionActivityTests::classifiesWalletActivity(multiple-owned-inputs-are-not-multiple-actions)
+PASS   : TransactionActivityTests::classifiesWalletActivity(batch-send)
+PASS   : TransactionActivityTests::classifiesWalletActivity(receive)
+PASS   : TransactionActivityTests::classifiesWalletActivity(multiple-foreign-inputs-are-not-multiple-actions)
+PASS   : TransactionActivityTests::classifiesWalletActivity(multiple-receives)
+PASS   : TransactionActivityTests::classifiesWalletActivity(consolidation-to-change-address)
+PASS   : TransactionActivityTests::classifiesWalletActivity(consolidation-to-multiple-outputs)
+PASS   : TransactionActivityTests::classifiesWalletActivity(consolidation-to-recipient-and-change)
+PASS   : TransactionActivityTests::classifiesWalletActivity(consolidation-ignores-data-outputs)
+PASS   : TransactionActivityTests::classifiesWalletActivity(self-send-with-change)
+PASS   : TransactionActivityTests::classifiesWalletActivity(split-to-two-recipients)
+PASS   : TransactionActivityTests::classifiesWalletActivity(split-to-two-recipients-with-change)
+PASS   : TransactionActivityTests::classifiesWalletActivity(split-with-multiple-inputs)
+PASS   : TransactionActivityTests::classifiesWalletActivity(one-to-one-internal-transfer)
+PASS   : TransactionActivityTests::classifiesWalletActivity(self-send-with-multiple-inputs-and-change)
+PASS   : TransactionActivityTests::classifiesWalletActivity(consolidation-to-receive-address)
+PASS   : TransactionActivityTests::classifiesWalletActivity(many-to-many-internal-transfer)
+PASS   : TransactionActivityTests::classifiesWalletActivity(external-payment-and-explicit-internal-output)
+PASS   : TransactionActivityTests::classifiesWalletActivity(mixed-net-receive)
+PASS   : TransactionActivityTests::classifiesWalletActivity(mixed-net-send)
+PASS   : TransactionActivityTests::classifiesWalletActivity(mixed-zero-wallet-impact)
+PASS   : TransactionActivityTests::classifiesWalletActivity(mixed-inputs-with-only-one-wallet-action)
+PASS   : TransactionActivityTests::classifiesWalletActivity(coinbase)
+PASS   : TransactionActivityTests::classifiesWalletActivity(coinbase-with-multiple-wallet-outputs)
+PASS   : TransactionActivityTests::classifiesWalletActivity(immature-coinbase-keeps-owned-reward)
+PASS   : TransactionActivityTests::classifiesWalletActivity(fee-only-transaction-keeps-parent)
+PASS   : TransactionActivityTests::batchAmountsExcludeFeesAndChange()
+PASS   : TransactionActivityTests::internalOutputsAreNotDuplicatedOrHidden()
+PASS   : TransactionActivityTests::selfSendExcludesChangeAndKeepsRecipientIdentity()
+PASS   : TransactionActivityTests::incomingChangeAddressIsStillAReceipt()
+PASS   : TransactionActivityTests::mixedContributionDoesNotClaimForeignPayments()
+PASS   : TransactionActivityTests::mixedReceiptsRetainChange()
+PASS   : TransactionActivityTests::repeatedAddressKeepsDistinctOutputIdentities()
+PASS   : TransactionActivityTests::identitiesSurviveMetadataChanges()
+PASS   : TransactionActivityTests::dataOutputsDoNotBecomePayments()
+PASS   : TransactionActivityTests::valueBearingNonAddressOutputRemainsVisible()
+PASS   : TransactionActivityTests::knownZeroFeeDiffersFromUnknownFee()
+PASS   : TransactionActivityTests::ignoresTransactionsWithoutWalletOwnership()
+PASS   : TransactionActivityTests::rejectsIncompleteSnapshots()
+PASS   : TransactionActivityTests::flowKeepsAllInputsOutputsAndUnknownAmounts()
+PASS   : TransactionActivityTests::flowPreviewCollapsesOnlyHiddenOutputs(below-threshold)
+PASS   : TransactionActivityTests::flowPreviewCollapsesOnlyHiddenOutputs(threshold)
+PASS   : TransactionActivityTests::flowPreviewCollapsesOnlyHiddenOutputs(collapsed)
+PASS   : TransactionActivityTests::flowPreviewCollapsesOnlyHiddenOutputs(large-payment)
+PASS   : TransactionActivityTests::flowPreviewCollapsesOnlyHiddenOutputs(all-external)
+PASS   : TransactionActivityTests::flowPreviewCollapsesOnlyHiddenOutputs(all-owned)
+PASS   : TransactionActivityTests::flowPreviewCollapsesOnlyHiddenOutputs(single-external)
+PASS   : TransactionActivityTests::flowHandlesCoinbaseDataOutputsAndZeroFees()
+PASS   : TransactionActivityTests::flowDecodesDataOutputs(text)
+PASS   : TransactionActivityTests::flowDecodesDataOutputs(unicode)
+PASS   : TransactionActivityTests::flowDecodesDataOutputs(multiple_pushes)
+PASS   : TransactionActivityTests::flowDecodesDataOutputs(pushdata1)
+PASS   : TransactionActivityTests::flowDecodesDataOutputs(newlines)
+PASS   : TransactionActivityTests::flowDecodesDataOutputs(empty)
+PASS   : TransactionActivityTests::flowDecodesDataOutputs(empty_push)
+PASS   : TransactionActivityTests::flowDecodesDataOutputs(binary)
+PASS   : TransactionActivityTests::flowDecodesDataOutputs(control_character)
+PASS   : TransactionActivityTests::flowDecodesDataOutputs(invalid_utf8)
+PASS   : TransactionActivityTests::flowDecodesDataOutputs(truncated_push)
+PASS   : TransactionActivityTests::flowDecodesDataOutputs(other_opcodes)
+PASS   : TransactionActivityTests::flowIncludesSerializedTransactionMetadata()
+PASS   : TransactionActivityTests::cleanupTestCase()
+Totals: 64 passed, 0 failed, 0 skipped, 0 blacklisted, 2ms
+********* Finished testing of TransactionActivityTests *********
+********* Start testing of TransactionTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : TransactionTests::initTestCase()
+PASS   : TransactionTests::fromWalletTx_hidesSenderChangeOutput()
+PASS   : TransactionTests::fromWalletTx_mixedDebitKeepsNegativeNetAmount()
+PASS   : TransactionTests::fromWalletTx_showsIncomingPaymentToChangeAddress()
+PASS   : TransactionTests::dateTimeString_usedAddressRequestKeepsDate()
+PASS   : TransactionTests::updateStatus_setsCountsForBalance()
+PASS   : TransactionTests::dateTimeString_localizesMonthNames()
+PASS   : TransactionTests::cleanupTestCase()
+Totals: 8 passed, 0 failed, 0 skipped, 0 blacklisted, 0ms
+********* Finished testing of TransactionTests *********
+********* Start testing of WalletListModelTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : WalletListModelTests::initTestCase()
+PASS   : WalletListModelTests::listWalletDirMapsNameAndLoadStateRoles()
+PASS   : WalletListModelTests::listWalletDirRemovesMissingEntries()
+PASS   : WalletListModelTests::listWalletDirSortsCaseInsensitivelyAndPreservesDuplicateRows()
+PASS   : WalletListModelTests::displayNameRoleUsesStoredAlias()
+PASS   : WalletListModelTests::setWalletLoadStateUpdatesLoadStateRole()
+PASS   : WalletListModelTests::setWalletLoadStateSortsLoadedRowsFirst()
+PASS   : WalletListModelTests::setWalletLoadStateBeforeListWalletDirSeedsInitialRows()
+PASS   : WalletListModelTests::setWalletLoadStateAddsNewLoadedWalletAfterInitialList()
+PASS   : WalletListModelTests::setWalletLoadStateRemovesOpenOnlyWalletOnUnload()
+PASS   : WalletListModelTests::setWalletLoadStateLoadingExposesLoadingRoleAndClearsOnOpen()
+PASS   : WalletListModelTests::setWalletLoadStateLoadErrorExposesErrorMessageRoleAndClearsOnClosed()
+PASS   : WalletListModelTests::setWalletInfoUpdatesBalanceAndKeySchemeRolesForRowOnly()
+PASS   : WalletListModelTests::listWalletDirPreservesBalanceAndKeySchemeAcrossRebuilds()
+PASS   : WalletListModelTests::walletDirLoadedFlipsAfterFirstList()
+PASS   : WalletListModelTests::balancesFollowDisplayUnitAcrossWalletRefreshes()
+PASS   : WalletListModelTests::balancesUseGermanLocale()
+PASS   : WalletListModelTests::cleanupTestCase()
+Totals: 18 passed, 0 failed, 0 skipped, 0 blacklisted, 11ms
+********* Finished testing of WalletListModelTests *********
+********* Start testing of WalletQmlControllerTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : WalletQmlControllerTests::initTestCase()
+PASS   : WalletQmlControllerTests::validateXpubAcceptsValidKey()
+PASS   : WalletQmlControllerTests::validateXpubRejectsGarbage()
+PASS   : WalletQmlControllerTests::validateXpubRejectsEmpty()
+PASS   : WalletQmlControllerTests::validateXpubTrimsWhitespace()
+PASS   : WalletQmlControllerTests::createWatchOnlyInvalidXpubSetsError()
+PASS   : WalletQmlControllerTests::createWatchOnlyCleansUpWhenDescriptorImportFails()
+PASS   : WalletQmlControllerTests::externalSignerCreationRequiresConfiguredPath()
+PASS   : WalletQmlControllerTests::externalSignerCreationRequiresExactlyOneSigner()
+PASS   : WalletQmlControllerTests::externalSignerSuggestionUsesSignerName()
+PASS   : WalletQmlControllerTests::initializedControllerSignalsMigrationForLegacyWallet()
+PASS   : WalletQmlControllerTests::createWalletBeforeInitializationReturnsFalseAndSetsError()
+PASS   : WalletQmlControllerTests::importWalletBeforeInitializationSetsLoadError()
+PASS   : WalletQmlControllerTests::migrateWalletBeforeInitializationSetsMigrationError()
+PASS   : WalletQmlControllerTests::selectWalletBeforeInitializationSetsLoadError()
+PASS   : WalletQmlControllerTests::initializedControllerPropagatesCreateErrors()
+PASS   : WalletQmlControllerTests::initializedControllerForwardsMigrationPassphrase()
+PASS   : WalletQmlControllerTests::initializedControllerForwardsUtf8CreatePassphrase()
+PASS   : WalletQmlControllerTests::initializedControllerEmitsWalletCreateSucceeded()
+PASS   : WalletQmlControllerTests::initializedControllerDoesNotCompleteCreateForUnrelatedLoadNotification()
+PASS   : WalletQmlControllerTests::initializedControllerDoesNotCompleteLoadForUnrelatedLoadNotification()
+PASS   : WalletQmlControllerTests::initializedControllerReportsCreateWarnings()
+PASS   : WalletQmlControllerTests::initializedControllerIgnoresDuplicateCreateWhileInProgress()
+PASS   : WalletQmlControllerTests::watchOnlyCreateBeforeInitializationSetsLoadError()
+PASS   : WalletQmlControllerTests::watchOnlyCreateWhileWalletLoadInProgressIsIgnored()
+PASS   : WalletQmlControllerTests::watchOnlyCreateFailureAfterCreateDoesNotPublishWallet()
+PASS   : WalletQmlControllerTests::initializedControllerRequestsPassphraseBeforeEncryptedMigration()
+PASS   : WalletQmlControllerTests::initializedControllerMigratesUnencryptedWalletWithoutPassphrase()
+PASS   : WalletQmlControllerTests::initializedControllerClosesSelectedWalletAndSelectsRemainingLoadedWallet()
+PASS   : WalletQmlControllerTests::initializedControllerClosesNonSelectedWalletWithoutChangingSelection()
+PASS   : WalletQmlControllerTests::initializedControllerEmitsWalletLoadStateChanged()
+PASS   : WalletQmlControllerTests::initializedControllerHandlesExternalWalletUnload()
+PASS   : WalletQmlControllerTests::initializedControllerUnloadWalletsClearsSelectionAndOpenWallets()
+PASS   : WalletQmlControllerTests::initializedControllerEmitsLoadingThenLoadErrorOnFailedLoad()
+PASS   : WalletQmlControllerTests::publishOpenWalletsInfoEmitsWalletInfoChangedForEachOpenWallet()
+PASS   : WalletQmlControllerTests::walletNameAvailabilityErrorRejectsEmptyAndWhitespace()
+PASS   : WalletQmlControllerTests::walletNameAvailabilityErrorRejectsExistingNameWithSurroundingWhitespace()
+PASS   : WalletQmlControllerTests::walletNameAvailabilityErrorReturnsEmptyForAvailableName()
+PASS   : WalletQmlControllerTests::openSelectedWalletLocationOpensWalletDirectory()
+PASS   : WalletQmlControllerTests::openSelectedWalletLocationReportsOpenFailure()
+PASS   : WalletQmlControllerTests::openSelectedWalletLocationReportsMissingWalletPath()
+PASS   : WalletQmlControllerTests::openSelectedWalletLocationReportsMissingSelectedWallet()
+PASS   : WalletQmlControllerTests::cleanupTestCase()
+Totals: 43 passed, 0 failed, 0 skipped, 0 blacklisted, 414ms
+********* Finished testing of WalletQmlControllerTests *********
+********* Start testing of WalletQmlModelTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : WalletQmlModelTests::initTestCase()
+PASS   : WalletQmlModelTests::feeTargetIndex_mapsStandardTargets()
+PASS   : WalletQmlModelTests::customFeeRateUpdatesEstimatedTarget()
+PASS   : WalletQmlModelTests::maximumKeepsAmountWhenValidAddressCannotBeEstimated()
+PASS   : WalletQmlModelTests::previewExposesFeeInputCountAndTotalDebit()
+PASS   : WalletQmlModelTests::estimatedFeeForTarget_returnsEmptyWhenUnavailable()
+PASS   : WalletQmlModelTests::scheduleFeeEstimates_populatesFormattedEstimates()
+PASS   : WalletQmlModelTests::scheduleFeeEstimates_fallsBackWhenNetworkFeeEstimatesUnavailable()
+PASS   : WalletQmlModelTests::scheduleFeeEstimates_usesStaticRegtestFeeOverride()
+PASS   : WalletQmlModelTests::scheduleFeeEstimates_usesCustomFeeRateWhenEnabled()
+PASS   : WalletQmlModelTests::scheduleFeeEstimates_neverUsesSubtractFeeFallback()
+PASS   : WalletQmlModelTests::sendAmountExhaustsBalance_requiresFeeBuffer()
+PASS   : WalletQmlModelTests::sendAmountExhaustsBalance_usesCoinControlAvailableBalance()
+PASS   : WalletQmlModelTests::scheduleFeeEstimates_usesDummyPreviewChangeDestination()
+PASS   : WalletQmlModelTests::prepareTransaction_usesStaticRegtestFeeOverride()
+PASS   : WalletQmlModelTests::prepareTransaction_usesCustomFeeRateWithoutRegtestOverride()
+PASS   : WalletQmlModelTests::prepareTransaction_neverSubtractsFeeFromRecipient()
+PASS   : WalletQmlModelTests::walletQmlModelTransaction_reassignAmounts_excludesChangeOutput()
+PASS   : WalletQmlModelTests::scheduleFeeEstimates_usesSelectedCoinsInCoinControl()
+PASS   : WalletQmlModelTests::prepareTransaction_disallowsOtherInputsWhenCoinsSelected()
+PASS   : WalletQmlModelTests::scheduleFeeEstimates_debouncesRapidRestarts()
+PASS   : WalletQmlModelTests::scheduleFeeEstimates_invalidatesStalePreviewState()
+PASS   : WalletQmlModelTests::transactionChangedEmitsBalanceChanged()
+PASS   : WalletQmlModelTests::setCurrentPaymentRequestAddressUsesAddressListLabel()
+PASS   : WalletQmlModelTests::commitPaymentRequestUsesSelectedAddressType()
+PASS   : WalletQmlModelTests::updateChangesUnpaidPaymentRequestAmount()
+PASS   : WalletQmlModelTests::paymentArrivalLocksRequestAndPreservesNote()
+PASS   : WalletQmlModelTests::paymentRequestTracksActualReceivedAmount()
+PASS   : WalletQmlModelTests::replacementNotificationRechecksReceiverOriginal()
+PASS   : WalletQmlModelTests::cancelledPaymentWithoutNotificationClearsReceivedAmount()
+PASS   : WalletQmlModelTests::reconciliationBatchesActivityRebuilds()
+PASS   : WalletQmlModelTests::openingRequestRemainsResponsiveDuringLargeHistoryScan()
+PASS   : WalletQmlModelTests::requestDetailEditsPreserveReceiveDraft()
+PASS   : WalletQmlModelTests::setCurrentPaymentRequestAddressEditsExistingRequest()
+PASS   : WalletQmlModelTests::usePaymentRequestAsTemplatePreservesAddressType()
+PASS   : WalletQmlModelTests::commitPaymentRequestOnLockedWalletSignalsNeedsUnlock()
+PASS   : WalletQmlModelTests::commitPaymentRequestWithPassphraseUnlocksRetriesAndRelocks()
+PASS   : WalletQmlModelTests::commitPaymentRequestWithPassphraseWrongPasswordSurfacesError()
+PASS   : WalletQmlModelTests::availableReceiveAddressTypesHideUnavailableTaproot()
+PASS   : WalletQmlModelTests::receiveAddressTypeDefaultPersistsPerWallet()
+PASS   : WalletQmlModelTests::receivingAddressIsStableUntilRotatedOrPaid()
+PASS   : WalletQmlModelTests::receivingAddressCreationAndRequestPersistenceAreSeparate()
+PASS   : WalletQmlModelTests::removeReceiveRequestRemovesPendingActivityRow()
+PASS   : WalletQmlModelTests::editedReceiveRequestNameShownInActivityMetadata()
+PASS   : WalletQmlModelTests::editedRequestSyncsAddressBookLabel()
+PASS   : WalletQmlModelTests::requestSaveLeavesUneditedAddressBookLabelAlone()
+PASS   : WalletQmlModelTests::amountOnlyRequestEditPreservesAddressBookLabel()
+PASS   : WalletQmlModelTests::editedAddressBookLabelSyncsRequestNote()
+PASS   : WalletQmlModelTests::requestSaveLeavesSiblingRequestNotesAlone()
+PASS   : WalletQmlModelTests::labelSyncSkipsInMemoryUpdateWhenPersistFails()
+PASS   : WalletQmlModelTests::editedAddressBookLabelUpdatesHeldRequestObjects()
+PASS   : WalletQmlModelTests::prepareTransactionOnLockedWalletRequiresPassword()
+PASS   : WalletQmlModelTests::prepareTransactionWithPrivateKeysDisabledDoesNotRequirePassword()
+PASS   : WalletQmlModelTests::sendRecipientRejectsDustAmount()
+PASS   : WalletQmlModelTests::sendRecipientUsesNodeDustRelayFee()
+PASS   : WalletQmlModelTests::prepareTransactionRejectsDuplicateRecipientsBeforeUnlock()
+PASS   : WalletQmlModelTests::prepareTransactionWithPassphraseForwardsUtf8Bytes()
+PASS   : WalletQmlModelTests::prepareTransactionWithPassphraseRelocksWhenRecipientsInvalid()
+PASS   : WalletQmlModelTests::prepareTransactionWithPassphraseRequiresCompleteMultiRecipient()
+PASS   : WalletQmlModelTests::prepareTransactionWithPassphraseRelocksWhenCustomFeeInvalid()
+PASS   : WalletQmlModelTests::prepareTransactionWithPassphraseReportsCreateErrorAndRelocks()
+PASS   : WalletQmlModelTests::sendTransactionCommitsPreparedTransactionWithoutUnlockingAgain()
+PASS   : WalletQmlModelTests::sendTransactionClearsSelectedCoins()
+PASS   : WalletQmlModelTests::clearingRecipientsClearsSelectedCoins()
+PASS   : WalletQmlModelTests::saveCurrentTransactionAsPsbt_savesUnsignedPreparedTransaction()
+PASS   : WalletQmlModelTests::importPsbtFromFile_opensOwnedUnsignedPsbtWithoutSigning()
+PASS   : WalletQmlModelTests::importPsbtFromFile_opensWatchOnlyUnsignedPsbtForReviewOnly()
+PASS   : WalletQmlModelTests::saveCurrentTransactionAsPsbt_preservesImportedMetadata()
+PASS   : WalletQmlModelTests::saveReviewOnlyPsbt_preservesOriginalWithoutDerivationMetadata()
+PASS   : WalletQmlModelTests::discardCurrentTransaction_clearsReviewState()
+PASS   : WalletQmlModelTests::sendImportedPsbtWithPassphraseSignsOnceAndRelocks()
+PASS   : WalletQmlModelTests::externalSignerApprovalSignsImportedPsbtOnlyOnce()
+PASS   : WalletQmlModelTests::externalSignerApprovalKeepsIncompleteSignedPsbt()
+PASS   : WalletQmlModelTests::importPsbtFromFile_opensForeignUnsignedPsbtForReviewOnly()
+PASS   : WalletQmlModelTests::importPsbtFromFile_broadcastsCompleteForeignMultisigPsbt()
+PASS   : WalletQmlModelTests::saveCompleteBroadcastableImportedPsbt_preservesOriginalPsbt()
+PASS   : WalletQmlModelTests::importPsbtFromFile_skipsZeroValueOpReturnOutputs()
+PASS   : WalletQmlModelTests::importPsbtFromFile_opensUnsignedMultisigPsbtForReviewOnly()
+PASS   : WalletQmlModelTests::importPsbtFromFile_blocksBroadcastWhenFeeIsInvalid()
+PASS   : WalletQmlModelTests::importPsbtFromFile_returnsTransactionAlreadyKnownWhenTxIsInWallet()
+PASS   : WalletQmlModelTests::sendTransactionWithPrivateKeysDisabledDoesNotCommit()
+PASS   : WalletQmlModelTests::bumpTransactionOnLockedWalletRequiresPassword()
+PASS   : WalletQmlModelTests::bumpTransactionWithPassphraseUnlocksCommitsAndRelocks()
+PASS   : WalletQmlModelTests::bumpTransactionWithWrongPassphraseDoesNotSign()
+PASS   : WalletQmlModelTests::displayNameDefaultsToWalletName()
+PASS   : WalletQmlModelTests::detailPropertiesReflectWalletCapabilities()
+PASS   : WalletQmlModelTests::encryptWalletUpdatesSecurityState()
+PASS   : WalletQmlModelTests::changeWalletPassphraseForwardsPasswords()
+PASS   : WalletQmlModelTests::backupWalletForwardsPath()
+PASS   : WalletQmlModelTests::signVerifyMessageRejectsNonP2PKHAddress()
+PASS   : WalletQmlModelTests::signVerifyMessageSignsWithLegacyP2PKHAddress()
+PASS   : WalletQmlModelTests::signVerifyMessageSignsEmptyMessage()
+PASS   : WalletQmlModelTests::signVerifyMessageWithPassphraseUnlocksSignsAndRelocks()
+PASS   : WalletQmlModelTests::signVerifyMessageWrongPassphraseSurfacesErrorAndDoesNotRelock()
+PASS   : WalletQmlModelTests::signVerifyMessageSurfacesSigningFailure()
+PASS   : WalletQmlModelTests::signVerifyMessageWithoutWalletSurfacesError()
+PASS   : WalletQmlModelTests::signVerifyMessageClearResetsState()
+PASS   : WalletQmlModelTests::signVerifyMessageVerifiesValidSignature()
+PASS   : WalletQmlModelTests::signVerifyMessageVerifyRejectsEmptySignature()
+PASS   : WalletQmlModelTests::cleanupTestCase()
+Totals: 100 passed, 0 failed, 0 skipped, 0 blacklisted, 15468ms
+********* Finished testing of WalletQmlModelTests *********
+********* Start testing of WalletQmlModelTransactionTests *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 static release build; by GCC 13.3.0), ubuntu 24.04
+PASS   : WalletQmlModelTransactionTests::initTestCase()
+PASS   : WalletQmlModelTransactionTests::singleRecipientReviewAmountsInheritRecipientUnit()
+PASS   : WalletQmlModelTransactionTests::multipleRecipientReviewAmountsInheritSharedUnit()
+PASS   : WalletQmlModelTransactionTests::recipientRolesExposeFormattedAddressAndUnitLabel()
+PASS   : WalletQmlModelTransactionTests::reviewDisplayStringsUseLocale()
+PASS   : WalletQmlModelTransactionTests::removingRecipientUpdatesTotalOnce()
+PASS   : WalletQmlModelTransactionTests::txidTracksAssignedTransaction()
+PASS   : WalletQmlModelTransactionTests::reviewedRecipientsStayBoundToPreparedOutputs()
+PASS   : WalletQmlModelTransactionTests::cleanupTestCase()
+Totals: 9 passed, 0 failed, 0 skipped, 0 blacklisted, 0ms
+********* Finished testing of WalletQmlModelTransactionTests *********

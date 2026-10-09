@@ -1,0 +1,27 @@
+Starting GUI: /validation/build/bin/bitcoin-core-app -datadir=/work/tmp/qml_test_debug_log_j2wqx8ya/node0 -test-automation=/work/tmp/qml_test_debug_log_j2wqx8ya/test_bridge.sock -qml_onboarded=1 -disablewallet -logtimemicros -debug -debugexclude=leveldb -nolisten
+QmlDriver connected to test bridge.
+
+Navigating to Debug Log ...
+  -> page: settingsView
+
+── test_page_structure ──────────────────────────────────────────
+  PASSED: redesigned table and capped initial window are visible
+
+── test_structured_columns_and_filters ─────────────────────────
+  PASSED: type, HH:MM:SS time, message, and warning/error filter work
+
+── test_chronological_order ─────────────────────────────────────
+  PASSED: rows are oldest-to-newest
+
+── test_live_append ─────────────────────────────────────────────
+  PASSED: live rows arrive without exceeding the loaded-row cap
+
+── test_load_older ──────────────────────────────────────────────
+  PASSED: older history was prepended (1380 rows loaded)
+
+── test_close_settings ──────────────────────────────────────────
+  PASSED: Done closed node settings
+
+==================================================
+All debug log tests PASSED
+==================================================

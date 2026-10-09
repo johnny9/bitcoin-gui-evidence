@@ -1,0 +1,121 @@
+{"utc": "2026-10-08T19:33:38.669523+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/qml_create_wallet_name_availability_jembg97u/gui_node", "-test-automation=/work/tmp/qml_create_wallet_name_availability_jembg97u/test_bridge.sock", "-test-settings-dir=/work/tmp/qml_create_wallet_name_availability_jembg97u/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 6243, "platform": "xcb"}
+{"utc": "2026-10-08T19:33:40.317910+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:33:40.328273+00:00", "request": {"cmd": "click", "objectName": "walletBadge"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:33:40.415537+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:33:40.469850+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:33:40.524261+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:33:40.578539+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:33:40.633264+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:33:40.688259+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:33:40.702953+00:00", "request": {"cmd": "click", "objectName": "walletSelectAddWalletButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:33:40.793359+00:00", "request": {"cmd": "get_property", "objectName": "walletTypeRegular", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:33:40.810573+00:00", "request": {"cmd": "click", "objectName": "walletTypeRegular"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:33:41.419478+00:00", "request": {"cmd": "wait_for_page", "page": "createWalletFormPage", "timeout": 10000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:33:41.506631+00:00", "request": {"cmd": "set_text", "objectName": "createWalletPasswordInput", "text": "test wallet password"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:33:41.510938+00:00", "request": {"cmd": "set_text", "objectName": "createWalletPasswordRepeatInput", "text": "test wallet password"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:33:41.515691+00:00", "request": {"cmd": "click", "objectName": "createWalletPasswordConfirmToggle"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:33:41.605890+00:00", "request": {"cmd": "set_text", "objectName": "createWalletNameInput", "text": "duplicate_closed"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:33:41.610501+00:00", "request": {"cmd": "get_text", "objectName": "createWalletFormErrorText"}, "response": {"text": ""}}
+{"utc": "2026-10-08T19:33:41.614597+00:00", "request": {"cmd": "get_property", "objectName": "createWalletFormCreateButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:33:41.619169+00:00", "request": {"cmd": "click", "objectName": "createWalletFormCreateButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:33:41.705788+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:33:41.709850+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:33:41.714072+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:33:41.718160+00:00", "request": {"cmd": "wait_for_page", "page": "createWalletFormPage", "timeout": 10000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:33:41.802211+00:00", "request": {"cmd": "get_text", "objectName": "createWalletFormErrorText"}, "response": {"text": "A wallet with this name already exists"}}
+{"utc": "2026-10-08T19:33:41.806202+00:00", "request": {"cmd": "set_text", "objectName": "createWalletNameInput", "text": "duplicate_loaded"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:33:41.811293+00:00", "request": {"cmd": "get_text", "objectName": "createWalletFormErrorText"}, "response": {"text": ""}}
+{"utc": "2026-10-08T19:33:41.815087+00:00", "request": {"cmd": "get_property", "objectName": "createWalletFormCreateButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:33:41.818955+00:00", "request": {"cmd": "click", "objectName": "createWalletFormCreateButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:33:41.906709+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:33:41.910278+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:33:41.913627+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:33:41.916754+00:00", "request": {"cmd": "wait_for_page", "page": "createWalletFormPage", "timeout": 10000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:33:41.996824+00:00", "request": {"cmd": "get_text", "objectName": "createWalletFormErrorText"}, "response": {"text": "A wallet with this name already exists"}}
+{"utc": "2026-10-08T19:33:42.000762+00:00", "request": {"cmd": "set_text", "objectName": "createWalletNameInput", "text": "Savings"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:33:42.004339+00:00", "request": {"cmd": "get_text", "objectName": "createWalletFormErrorText"}, "response": {"text": ""}}
+{"utc": "2026-10-08T19:33:42.007786+00:00", "request": {"cmd": "get_property", "objectName": "createWalletFormCreateButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:33:42.013043+00:00", "request": {"cmd": "click", "objectName": "createWalletFormCreateButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:33:42.095884+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:33:42.099746+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:33:42.103699+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:33:42.108077+00:00", "request": {"cmd": "wait_for_page", "page": "createWalletFormPage", "timeout": 10000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:33:42.192976+00:00", "request": {"cmd": "get_text", "objectName": "createWalletFormErrorText"}, "response": {"text": "A wallet with this name already exists"}}
+{"utc": "2026-10-08T19:33:42.197906+00:00", "request": {"cmd": "set_text", "objectName": "createWalletNameInput", "text": "savings"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:33:42.202311+00:00", "request": {"cmd": "get_text", "objectName": "createWalletFormErrorText"}, "response": {"text": ""}}
+{"utc": "2026-10-08T19:33:42.206302+00:00", "request": {"cmd": "get_property", "objectName": "createWalletFormCreateButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:33:42.211700+00:00", "request": {"cmd": "click", "objectName": "createWalletFormCreateButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:33:42.294009+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:33:42.297588+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:33:42.301229+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:33:42.304863+00:00", "request": {"cmd": "wait_for_page", "page": "createWalletFormPage", "timeout": 10000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:33:42.386403+00:00", "request": {"cmd": "get_text", "objectName": "createWalletFormErrorText"}, "response": {"text": "A wallet with this name already exists"}}
+{"utc": "2026-10-08T19:33:42.390962+00:00", "request": {"cmd": "set_text", "objectName": "createWalletNameInput", "text": "My new wallet"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:33:42.396386+00:00", "request": {"cmd": "get_text", "objectName": "createWalletFormErrorText"}, "response": {"text": ""}}
+{"utc": "2026-10-08T19:33:42.400280+00:00", "request": {"cmd": "get_property", "objectName": "createWalletFormCreateButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:33:42.405157+00:00", "request": {"cmd": "click", "objectName": "createWalletFormCreateButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:33:42.489429+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:33:42.494660+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:33:42.500344+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:33:43.136094+00:00", "request": {"cmd": "wait_for_page", "page": "walletCreationReadyPage", "timeout": 20000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:33:43.237026+00:00", "request": {"cmd": "click", "objectName": "createWalletReadyDoneButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:33:43.329699+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "text"}, "response": {"value": "My new wallet"}}
+{"utc": "2026-10-08T19:33:43.596425+00:00", "application_pid": 6243, "exit_code": 0}
+{"utc": "2026-10-08T19:43:02.767395+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/qml_create_wallet_name_availability_vqdcqzkr/gui_node", "-test-automation=/work/tmp/qml_create_wallet_name_availability_vqdcqzkr/test_bridge.sock", "-test-settings-dir=/work/tmp/qml_create_wallet_name_availability_vqdcqzkr/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 14957, "platform": "xcb"}
+{"utc": "2026-10-08T19:43:04.627341+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:43:04.636028+00:00", "request": {"cmd": "click", "objectName": "walletBadge"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:43:05.112629+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:43:05.121538+00:00", "request": {"cmd": "click", "objectName": "walletSelectAddWalletButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:43:05.597191+00:00", "request": {"cmd": "get_property", "objectName": "walletTypeRegular", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:43:05.609205+00:00", "request": {"cmd": "click", "objectName": "walletTypeRegular"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:43:06.207533+00:00", "request": {"cmd": "wait_for_page", "page": "createWalletFormPage", "timeout": 10000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:43:06.684065+00:00", "request": {"cmd": "set_text", "objectName": "createWalletPasswordInput", "text": "test wallet password"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:43:06.686209+00:00", "request": {"cmd": "set_text", "objectName": "createWalletPasswordRepeatInput", "text": "test wallet password"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:43:06.688228+00:00", "request": {"cmd": "click", "objectName": "createWalletPasswordConfirmToggle"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:43:07.164880+00:00", "request": {"cmd": "set_text", "objectName": "createWalletNameInput", "text": "duplicate_closed"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:43:07.166831+00:00", "request": {"cmd": "get_text", "objectName": "createWalletFormErrorText"}, "response": {"text": ""}}
+{"utc": "2026-10-08T19:43:07.168409+00:00", "request": {"cmd": "get_property", "objectName": "createWalletFormCreateButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:43:07.170757+00:00", "request": {"cmd": "click", "objectName": "createWalletFormCreateButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:43:07.647750+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:43:07.650590+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:43:07.652670+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:43:07.654537+00:00", "request": {"cmd": "wait_for_page", "page": "createWalletFormPage", "timeout": 10000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:43:08.133400+00:00", "request": {"cmd": "get_text", "objectName": "createWalletFormErrorText"}, "response": {"text": "A wallet with this name already exists"}}
+{"utc": "2026-10-08T19:43:08.136201+00:00", "request": {"cmd": "set_text", "objectName": "createWalletNameInput", "text": "duplicate_loaded"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:43:08.139694+00:00", "request": {"cmd": "get_text", "objectName": "createWalletFormErrorText"}, "response": {"text": ""}}
+{"utc": "2026-10-08T19:43:08.141507+00:00", "request": {"cmd": "get_property", "objectName": "createWalletFormCreateButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:43:08.143346+00:00", "request": {"cmd": "click", "objectName": "createWalletFormCreateButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:43:08.620231+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:43:08.622381+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:43:08.624047+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:43:08.625629+00:00", "request": {"cmd": "wait_for_page", "page": "createWalletFormPage", "timeout": 10000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:43:09.104352+00:00", "request": {"cmd": "get_text", "objectName": "createWalletFormErrorText"}, "response": {"text": "A wallet with this name already exists"}}
+{"utc": "2026-10-08T19:43:09.107439+00:00", "request": {"cmd": "set_text", "objectName": "createWalletNameInput", "text": "Savings"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:43:09.112105+00:00", "request": {"cmd": "get_text", "objectName": "createWalletFormErrorText"}, "response": {"text": ""}}
+{"utc": "2026-10-08T19:43:09.115093+00:00", "request": {"cmd": "get_property", "objectName": "createWalletFormCreateButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:43:09.119089+00:00", "request": {"cmd": "click", "objectName": "createWalletFormCreateButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:43:09.597879+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:43:09.600204+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:43:09.602702+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:43:09.604331+00:00", "request": {"cmd": "wait_for_page", "page": "createWalletFormPage", "timeout": 10000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:43:10.083361+00:00", "request": {"cmd": "get_text", "objectName": "createWalletFormErrorText"}, "response": {"text": "A wallet with this name already exists"}}
+{"utc": "2026-10-08T19:43:10.085715+00:00", "request": {"cmd": "set_text", "objectName": "createWalletNameInput", "text": "savings"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:43:10.089461+00:00", "request": {"cmd": "get_text", "objectName": "createWalletFormErrorText"}, "response": {"text": ""}}
+{"utc": "2026-10-08T19:43:10.091096+00:00", "request": {"cmd": "get_property", "objectName": "createWalletFormCreateButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:43:10.093806+00:00", "request": {"cmd": "click", "objectName": "createWalletFormCreateButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:43:10.574535+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:43:10.578290+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:43:10.583504+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:43:10.587559+00:00", "request": {"cmd": "wait_for_page", "page": "createWalletFormPage", "timeout": 10000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:43:11.066942+00:00", "request": {"cmd": "get_text", "objectName": "createWalletFormErrorText"}, "response": {"text": "A wallet with this name already exists"}}
+{"utc": "2026-10-08T19:43:11.069668+00:00", "request": {"cmd": "set_text", "objectName": "createWalletNameInput", "text": "My new wallet"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:43:11.074181+00:00", "request": {"cmd": "get_text", "objectName": "createWalletFormErrorText"}, "response": {"text": ""}}
+{"utc": "2026-10-08T19:43:11.076340+00:00", "request": {"cmd": "get_property", "objectName": "createWalletFormCreateButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:43:11.079042+00:00", "request": {"cmd": "click", "objectName": "createWalletFormCreateButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:43:11.563908+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:43:11.566619+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:43:11.569311+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-08T19:43:11.791970+00:00", "request": {"cmd": "wait_for_page", "page": "walletCreationReadyPage", "timeout": 20000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:43:12.278890+00:00", "request": {"cmd": "click", "objectName": "createWalletReadyDoneButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:43:12.756550+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "text"}, "response": {"value": "My new wallet"}}
+{"utc": "2026-10-08T19:43:12.973163+00:00", "application_pid": 14957, "exit_code": 0}

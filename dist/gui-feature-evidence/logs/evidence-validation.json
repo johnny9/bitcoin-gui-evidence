@@ -1,0 +1,20 @@
+{
+  "checked_utc": "2026-10-08T20:25:12.347287+00:00",
+  "status": "passed",
+  "checks": {
+    "groups": 34,
+    "criteria": 203,
+    "verified_pngs": 116,
+    "live_assertions": 48,
+    "functional_results": 34,
+    "qtest_outcomes": 1421,
+    "python_scripts": 12,
+    "markdown_tables": 311,
+    "local_links": 2001,
+    "source_links": 205,
+    "binary_hashes": 8
+  },
+  "errors": [],
+  "skipped": [],
+  "scope": "Evidence structure/integrity only; does not rerun or replace application tests."
+}

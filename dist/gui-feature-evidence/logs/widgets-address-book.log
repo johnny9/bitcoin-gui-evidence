@@ -1,0 +1,2 @@
+{"id": "save-address-label", "features": ["F18.S01", "F18.S02"], "description": "GUI-created recipient label appears in the wallet address book.", "actual": true, "expected": true, "status": "passed"}
+{"id": "export-address-book", "features": ["F18.S06"], "description": "GUI CSV export contains the saved address and label.", "actual": true, "expected": true, "status": "passed"}

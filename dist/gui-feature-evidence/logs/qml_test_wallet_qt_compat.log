@@ -1,0 +1,7 @@
+[qml_wallet_qt_compat] bitcoin-qt located: /work/widgets-build/bin/bitcoin-qt
+[qml_wallet_qt_compat] QML GUI launched
+[qml_wallet_qt_compat] wallet created in bitcoin-core-app
+[qml_wallet_qt_compat] payment request with all visible fields created
+[qml_wallet_qt_compat] bitcoin-core-app stopped
+[qml_wallet_qt_compat] starting bitcoin-qt: /usr/bin/xvfb-run -a /work/widgets-build/bin/bitcoin-qt -datadir=/work/tmp/qml_wallet_qt_compat_tu4vz4jr/gui_node -nosplash -min -debug -debugexclude=leveldb -printtoconsole=1
+[qml_wallet_qt_compat] bitcoin-qt stayed alive after loading QML-created request metadata

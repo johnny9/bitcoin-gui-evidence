@@ -1,0 +1,61 @@
+Checkpoint screenshots will be saved under: /work/qml-source/test/artifacts/qml_test_external_signer-20261008-193800
+[qml_external_signer] starting
+[qml_external_signer] checkpoint 01: GUI launched
+[qml_external_signer] checkpoint 01: screenshot saved to /evidence/media/qml/qml_test_external_signer/001-01-gui-launched.png (800x665)
+[qml_external_signer] checkpoint 02: onboarding completed
+[qml_external_signer] checkpoint 02: screenshot saved to /evidence/media/qml/qml_test_external_signer/002-02-onboarding-completed.png (800x665)
+[qml_external_signer] checkpoint 03: missing signer setting rejected
+[qml_external_signer] checkpoint 03: screenshot saved to /evidence/media/qml/qml_test_external_signer/003-03-missing-signer-setting-rejected.png (800x665)
+[qml_external_signer] checkpoint 04: wallet settings opened
+[qml_external_signer] checkpoint 04: screenshot saved to /evidence/media/qml/qml_test_external_signer/004-04-wallet-settings-opened.png (800x665)
+[qml_external_signer] checkpoint 05: mock signer path populated
+[qml_external_signer] checkpoint 05: screenshot saved to /evidence/media/qml/qml_test_external_signer/005-05-mock-signer-path-populated.png (800x665)
+[qml_external_signer] checkpoint 06: mock signer detected
+[qml_external_signer] checkpoint 06: screenshot saved to /evidence/media/qml/qml_test_external_signer/006-06-mock-signer-detected.png (800x665)
+[qml_external_signer] signer status: Detected external signer: trezor_t
+[qml_external_signer] checkpoint 07: add wallet flow opened
+[qml_external_signer] checkpoint 07: screenshot saved to /evidence/media/qml/qml_test_external_signer/007-07-add-wallet-flow-opened.png (800x665)
+[qml_external_signer] checkpoint 08: external wallet option available
+[qml_external_signer] checkpoint 08: screenshot saved to /evidence/media/qml/qml_test_external_signer/008-08-external-wallet-option-available.png (800x665)
+[qml_external_signer] checkpoint 09: external wallet form opened
+[qml_external_signer] checkpoint 09: screenshot saved to /evidence/media/qml/qml_test_external_signer/009-09-external-wallet-form-opened.png (800x665)
+[qml_external_signer] suggested wallet name: trezor_t
+[qml_external_signer] checkpoint 10: wallet name prefilled from signer
+[qml_external_signer] checkpoint 10: screenshot saved to /evidence/media/qml/qml_test_external_signer/010-10-wallet-name-prefilled-from-signer.png (800x665)
+[qml_external_signer] checkpoint 11: external wallet created
+[qml_external_signer] checkpoint 11: screenshot saved to /evidence/media/qml/qml_test_external_signer/011-11-external-wallet-created.png (800x665)
+[qml_external_signer] checkpoint 12: wallet overview reopened
+[qml_external_signer] checkpoint 12: screenshot saved to /evidence/media/qml/qml_test_external_signer/012-12-wallet-overview-reopened.png (800x665)
+[qml_external_signer] wallet directory: /work/tmp/qml_external_signer_1bj7syxs/gui_node/regtest/wallets/trezor_t
+[qml_external_signer] wallet info: {"avoid_reuse": false, "birthtime": 1791488287, "blank": false, "descriptors": true, "external_signer": true, "flags": ["last_hardened_xpub_cached", "disable_private_keys", "descriptor_wallet", "external_signer"], "format": "sqlite", "keypoolsize": 4000, "keypoolsize_hd_internal": 4000, "lastprocessedblock": {"hash": "0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206", "height": 0}, "private_keys_enabled": false, "scanning": false, "txcount": 0, "walletname": "trezor_t", "walletversion": 169900}
+[qml_external_signer] first bech32 address: bcrt1qm90ugl4d48jv8n6e5t9ln6t9zlpm5th68x4f8g
+[qml_external_signer] address info: {"address": "bcrt1qm90ugl4d48jv8n6e5t9ln6t9zlpm5th68x4f8g", "desc": "wpkh([00000001/84h/1h/0h/0/0]02c97dc3f4420402e01a113984311bf4a1b8de376cac0bdcfaf1b3ac81f13433c7)#3te6hhy7", "hdkeypath": "m/84h/1h/0h/0/0", "hdmasterfingerprint": "00000001", "hdseedid": "0000000000000000000000000000000000000000", "ischange": false, "ismine": true, "isscript": false, "iswatchonly": false, "iswitness": true, "labels": [""], "parent_desc": "wpkh([00000001/84h/1h/0h]tpubD6NzVbkrYhZ4WaWSyoBvQwbpLkojyoTZPRsgXELWz3Popb3qkjcJyJUGLnL4qHHoQvao8ESaAstxYSnhyswJ76uZPStJRJCTKvosUCJZL5B/0/*)#4qsr3d9n", "pubkey": "02c97dc3f4420402e01a113984311bf4a1b8de376cac0bdcfaf1b3ac81f13433c7", "scriptPubKey": "0014d95fc47eada9e4c3cf59a2cbf9e96517c3ba2efa", "solvable": true, "timestamp": 1791488287, "witness_program": "d95fc47eada9e4c3cf59a2cbf9e96517c3ba2efa", "witness_version": 0}
+[qml_external_signer] checkpoint 13: external wallet rpc descriptors verified
+[qml_external_signer] checkpoint 13: screenshot saved to /evidence/media/qml/qml_test_external_signer/013-13-external-wallet-rpc-descriptors-verified.png (800x665)
+[qml_external_signer] checkpoint 14: external signer wallet hides password settings
+[qml_external_signer] checkpoint 14: screenshot saved to /evidence/media/qml/qml_test_external_signer/014-14-external-signer-wallet-hides-password-settings.png (800x665)
+[qml_external_signer] first bech32m address: bcrt1phw4cgpt6cd30kz9k4wkpwm872cdvhss29jga2xpmftelhqll62ms4e9sqj
+[qml_external_signer] checkpoint 15: signed mock PSBT prepared
+[qml_external_signer] checkpoint 15: screenshot saved to /evidence/media/qml/qml_test_external_signer/015-15-signed-mock-psbt-prepared.png (800x665)
+[qml_external_signer] checkpoint 16: external signer wallet reselected
+[qml_external_signer] checkpoint 16: screenshot saved to /evidence/media/qml/qml_test_external_signer/016-16-external-signer-wallet-reselected.png (800x665)
+[qml_external_signer] checkpoint 17: wallet badge balance updated
+[qml_external_signer] checkpoint 17: screenshot saved to /evidence/media/qml/qml_test_external_signer/017-17-wallet-badge-balance-updated.png (800x665)
+[qml_external_signer] checkpoint 18: wallet badge balance restored after restart
+[qml_external_signer] checkpoint 18: screenshot saved to /evidence/media/qml/qml_test_external_signer/018-18-wallet-badge-balance-restored-after-restart.png (800x665)
+[qml_external_signer] checkpoint 19: wallet badge balance confirmed without signer
+[qml_external_signer] checkpoint 19: screenshot saved to /evidence/media/qml/qml_test_external_signer/019-19-wallet-badge-balance-confirmed-without-signer.png (800x665)
+[qml_external_signer] checkpoint 20: no-signer review displayed
+[qml_external_signer] checkpoint 20: screenshot saved to /evidence/media/qml/qml_test_external_signer/020-20-no-signer-review-displayed.png (800x665)
+[qml_external_signer] checkpoint 21: no-signer review error surfaced
+[qml_external_signer] checkpoint 21: screenshot saved to /evidence/media/qml/qml_test_external_signer/021-21-no-signer-review-error-surfaced.png (800x665)
+[qml_external_signer] checkpoint 22: wallet badge balance confirmed after signer restore
+[qml_external_signer] checkpoint 22: screenshot saved to /evidence/media/qml/qml_test_external_signer/022-22-wallet-badge-balance-confirmed-after-signer-restore.png (800x665)
+[qml_external_signer] checkpoint 23: signer review displayed
+[qml_external_signer] checkpoint 23: screenshot saved to /evidence/media/qml/qml_test_external_signer/023-23-signer-review-displayed.png (800x665)
+[qml_external_signer] checkpoint 24: signer approval completed
+[qml_external_signer] checkpoint 24: screenshot saved to /evidence/media/qml/qml_test_external_signer/024-24-signer-approval-completed.png (800x665)
+[qml_external_signer] checkpoint 25: signed transaction broadcast
+[qml_external_signer] checkpoint 25: screenshot saved to /evidence/media/qml/qml_test_external_signer/025-25-signed-transaction-broadcast.png (800x665)
+[qml_external_signer] completed
+External signer GUI flow passed.

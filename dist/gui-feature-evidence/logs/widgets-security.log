@@ -1,0 +1,3 @@
+{"id": "encrypt-wallet", "features": ["F06.S01"], "description": "After GUI encryption, the backend reports an encrypted, locked wallet.", "actual": 0, "expected": 0, "status": "passed"}
+{"id": "change-passphrase", "features": ["F06.S02"], "description": "The new GUI-supplied passphrase unlocks the wallet through Core RPC.", "actual": true, "expected": true, "status": "passed"}
+{"id": "temporary-unlock-relock", "features": ["F06.S03", "F06.S04"], "description": "The GUI signs successfully and immediately restores the locked wallet state.", "actual": [true, 0], "expected": [true, 0], "status": "passed"}

@@ -1,0 +1,34 @@
+{
+  "widgets_app": {
+    "path": "/home/codex/workspaces/bitcoin-core-app/.validation/gui-feature-evidence-20261008/widgets-build/bin/bitcoin-qt",
+    "sha256": "45f42bea79e43dcba84cf4dd22b51585a293c4ee7f65250da23d024aa53fdee4"
+  },
+  "widgets_tests": {
+    "path": "/home/codex/workspaces/bitcoin-core-app/.validation/gui-feature-evidence-20261008/widgets-build/bin/test_bitcoin-qt",
+    "sha256": "0555cb51a27b0c9eced5c5295ea963c3eb2f2866f3523d22447f435c8103ca6a"
+  },
+  "qml_app": {
+    "path": "/home/codex/workspaces/bitcoin-core-app/.validation/pr937-depends-perf-20260930/build/bin/bitcoin-core-app",
+    "sha256": "a8215c7e45242fdf0e740339733696ec832e362f8306bfbe3bac95dd6bb4fb4c"
+  },
+  "qml_unit_tests": {
+    "path": "/home/codex/workspaces/bitcoin-core-app/.validation/pr937-depends-perf-20260930/build/bin/bitcoinqml_unit_tests",
+    "sha256": "ddd02d0ba2fe68f875fa1e68c1c6b2b8766f749ee444e76caa08201b0c66fe91"
+  },
+  "qml_quick_tests": {
+    "path": "/home/codex/workspaces/bitcoin-core-app/.validation/pr937-depends-perf-20260930/build/bin/bitcoinqml_qmltests",
+    "sha256": "420282251993cfb0feaec59e87e29d90379c5d2c71313b46b6d066c512627f21"
+  },
+  "qml_fixture_daemon": {
+    "path": "/home/codex/workspaces/bitcoin-core-app/.validation/pr937-review/build/bin/bitcoind",
+    "sha256": "0c2667db4e83a12f89e222aa906bbf28b4d45616f7599e83138253ee52046352"
+  },
+  "legacy_fixture_daemon": {
+    "path": "/home/codex/workspaces/bitcoin-core-app/.validation/gui-feature-evidence-20261008/releases/bitcoin-28.0/bin/bitcoind",
+    "sha256": "5d71700bdb7287a9f1cf524c5841be70f76d184648dc19d9c19cf3f2d71130d5"
+  },
+  "widgets_external_driver": {
+    "path": "/home/codex/workspaces/bitcoin-core-app/.validation/gui-feature-evidence-20261008/widgets_bridge_v2.so",
+    "sha256": "55eb05e587d1d761b370bb8eb82b8b24e4447c027f01fd8a2c9eeda5a681584f"
+  }
+}

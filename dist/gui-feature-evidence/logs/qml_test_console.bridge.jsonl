@@ -1,0 +1,284 @@
+{"utc": "2026-10-08T19:38:28.240020+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/qml_test_bridge_hb_9fzxa/node0", "-test-automation=/work/tmp/qml_test_bridge_hb_9fzxa/test_bridge.sock", "-test-settings-dir=/work/tmp/qml_test_bridge_hb_9fzxa/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-disablewallet", "-nolisten"], "pid": 12053, "platform": "xcb"}
+{"utc": "2026-10-08T19:38:29.241619+00:00", "request": {"cmd": "list_objects"}, "response": {"objects": [{"className": "MainWindow_QMLTYPE_397", "depth": 0, "objectName": "appWindow"}, {"className": "QQuickContentItem", "depth": 2, "objectName": "MainWindow"}, {"className": "DesktopMenuActions_QMLTYPE_386", "depth": 3, "objectName": "desktopMenuActions"}, {"className": "NodeRuntimeDialog_QMLTYPE_391", "depth": 3, "objectName": "nodeRuntimeDialog"}, {"className": "QQuickContentItem", "depth": 5, "objectName": "QQuickPopupItem"}, {"className": "CoreText_QMLTYPE_20", "depth": 8, "objectName": "nodeRuntimeDialogTitle"}, {"className": "CoreText_QMLTYPE_20", "depth": 8, "objectName": "nodeRuntimeDialogMessage"}, {"className": "DialogButtonBox_QMLTYPE_392", "depth": 7, "objectName": "nodeRuntimeDialogButtonBox"}, {"className": "NodeFatalErrorPopup_QMLTYPE_10", "depth": 3, "objectName": "nodeFatalErrorPopup"}, {"className": "QQuickContentItem", "depth": 5, "objectName": "QQuickPopupItem"}, {"className": "CoreText_QMLTYPE_20", "depth": 8, "objectName": "nodeFatalErrorText"}, {"className": "ContinueButton_QMLTYPE_12", "depth": 7, "objectName": "nodeFatalShutdownButton"}, {"className": "NodeInformationPopup_QMLTYPE_229", "depth": 3, "objectName": "nodeInformationPopup"}, {"className": "QQuickContentItem", "depth": 5, "objectName": "QQuickPopupItem"}, {"className": "ContinueButton_QMLTYPE_12", "depth": 7, "objectName": "nodeInformationCloseButton"}, {"className": "WalletCreationModal_QMLTYPE_26", "depth": 3, "objectName": "walletCreationModal"}, {"className": "DesktopNativeMenuBar_QMLTYPE_390", "depth": 5, "objectName": "desktopNativeMenuBar"}, {"className": "QPlatformMenu", "depth": 6, "objectName": "fileMenu"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuCreateWallet"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuCloseWallet"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuBackupWallet"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuOpenUri"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuSignMessage"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuVerifyMessage"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuLoadPsbt"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuSettings"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuExit"}, {"className": "QPlatformMenu", "depth": 6, "objectName": "editMenu"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuUndo"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuRedo"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuCopy"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuPaste"}, {"className": "QPlatformMenu", "depth": 6, "objectName": "viewMenu"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuToggleDisplayUnit"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuNode"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuActivity"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuSend"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuReceive"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuInformation"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuConsole"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuNetworkTraffic"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuPeers"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "viewTrailingSeparator"}, {"className": "QPlatformMenu", "depth": 6, "objectName": "windowMenu"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuMinimize"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuZoom"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuMainWindow"}, {"className": "QPlatformMenu", "depth": 6, "objectName": "helpMenu"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuRpcDocumentation"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuAbout"}, {"className": "PageStack_QMLTYPE_52", "depth": 3, "objectName": "mainPageStack"}, {"className": "NodeRunner_QMLTYPE_389", "depth": 5, "objectName": "nodeRunner"}, {"className": "QQuickIconImage", "depth": 15, "objectName": "image"}, {"className": "IconButton_QMLTYPE_118", "depth": 14, "objectName": "nodeWarningsButton"}, {"className": "QQuickIconImage", "depth": 17, "objectName": "image"}, {"className": "IconButton_QMLTYPE_118", "depth": 14, "objectName": "nodeInformationButton"}, {"className": "QQuickIconImage", "depth": 17, "objectName": "image"}, {"className": "NodeWarningsPopup_QMLTYPE_231", "depth": 14, "objectName": "nodeWarningsPopup"}, {"className": "QQuickContentItem", "depth": 16, "objectName": "QQuickPopupItem"}, {"className": "CoreText_QMLTYPE_20", "depth": 20, "objectName": "nodeNoWarningsText"}, {"className": "QQuickIconImage", "depth": 23, "objectName": "image"}, {"className": "CoreText_QMLTYPE_20", "depth": 21, "objectName": "nodeWarningText_0"}, {"className": "ContinueButton_QMLTYPE_12", "depth": 18, "objectName": "nodeWarningsCloseButton"}, {"className": "NodeInformationPopup_QMLTYPE_229", "depth": 14, "objectName": "nodeInformationPopup"}, {"className": "QQuickContentItem", "depth": 16, "objectName": "QQuickPopupItem"}, {"className": "ContinueButton_QMLTYPE_12", "depth": 18, "objectName": "nodeInformationCloseButton"}, {"className": "IconButton_QMLTYPE_118", "depth": 13, "objectName": "peersTabButton"}, {"className": "QQuickIconImage", "depth": 16, "objectName": "image"}, {"className": "IconButton_QMLTYPE_118", "depth": 13, "objectName": "nodeSettingsButton"}, {"className": "QQuickIconImage", "depth": 16, "objectName": "image"}, {"className": "QQuickContentItem", "depth": 6, "objectName": "NodeRunner"}, {"className": "BlockClock_QMLTYPE_368", "depth": 7, "objectName": "blockClock"}, {"className": "BlockClockDial_QML_372", "depth": 8, "objectName": "blockClockDial"}, {"className": "QQuickIconImage", "depth": 10, "objectName": "image"}, {"className": "Label_QMLTYPE_105_QML_374", "depth": 8, "objectName": "blockClockSubText"}, {"className": "QQuickSequentialAnimation", "depth": 9, "objectName": "blockClockEstimatingAnimation"}, {"className": "PeersIndicator_QMLTYPE_369", "depth": 8, "objectName": "blockClockPeersIndicator"}, {"className": "NetworkIndicator_QMLTYPE_315", "depth": 8, "objectName": "blockClockNetworkIndicator"}, {"className": "QQuickMouseArea_QML_375", "depth": 8, "objectName": "blockClockToggleArea"}]}}
+{"utc": "2026-10-08T19:38:29.242120+00:00", "request": {"cmd": "wait_for_page", "page": "nodeSettingsButton", "timeout": 90000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:29.732482+00:00", "request": {"cmd": "click", "objectName": "nodeSettingsButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:30.206676+00:00", "request": {"cmd": "get_property", "objectName": "settingsSidebar_rpc-console", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:30.218101+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_rpc-console"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:30.688798+00:00", "request": {"cmd": "wait_for_page", "page": "rpcConsoleSettingsPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:31.158557+00:00", "request": {"cmd": "wait_for_page", "page": "rpcConsole", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:31.628037+00:00", "request": {"cmd": "get_property", "objectName": "consoleInput", "prop": "activeFocus"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:31.628414+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "width"}, "response": {"value": 466}}
+{"utc": "2026-10-08T19:38:31.628695+00:00", "request": {"cmd": "get_property", "objectName": "consoleInputRow", "prop": "x"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:31.628985+00:00", "request": {"cmd": "get_property", "objectName": "consoleInputRow", "prop": "width"}, "response": {"value": 466}}
+{"utc": "2026-10-08T19:38:31.629227+00:00", "request": {"cmd": "get_property", "objectName": "consoleInputRow", "prop": "height"}, "response": {"value": 64}}
+{"utc": "2026-10-08T19:38:31.629461+00:00", "request": {"cmd": "get_property", "objectName": "consoleInputDivider", "prop": "width"}, "response": {"value": 466}}
+{"utc": "2026-10-08T19:38:31.629695+00:00", "request": {"cmd": "get_property", "objectName": "consoleInputDivider", "prop": "height"}, "response": {"value": 1}}
+{"utc": "2026-10-08T19:38:31.629918+00:00", "request": {"cmd": "get_property", "objectName": "consoleInputContent", "prop": "x"}, "response": {"value": 12}}
+{"utc": "2026-10-08T19:38:31.630104+00:00", "request": {"cmd": "get_property", "objectName": "consoleInputContent", "prop": "y"}, "response": {"value": 12}}
+{"utc": "2026-10-08T19:38:31.630261+00:00", "request": {"cmd": "get_property", "objectName": "consoleInputContent", "prop": "height"}, "response": {"value": 40}}
+{"utc": "2026-10-08T19:38:31.630417+00:00", "request": {"cmd": "get_property", "objectName": "consolePromptIcon", "prop": "width"}, "response": {"value": 16}}
+{"utc": "2026-10-08T19:38:31.630588+00:00", "request": {"cmd": "get_property", "objectName": "consolePromptIcon", "prop": "height"}, "response": {"value": 16}}
+{"utc": "2026-10-08T19:38:31.630753+00:00", "request": {"cmd": "get_property", "objectName": "consoleInput", "prop": "x"}, "response": {"value": 24}}
+{"utc": "2026-10-08T19:38:31.630924+00:00", "request": {"cmd": "get_property", "objectName": "consoleInput", "prop": "placeholderText"}, "response": {"value": "Enter command\u2026"}}
+{"utc": "2026-10-08T19:38:31.631082+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsoleSearchField", "prop": "placeholderText"}, "response": {"value": "Search console"}}
+{"utc": "2026-10-08T19:38:31.631235+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsoleSearchPreviousButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:38:31.631394+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsoleSearchNextButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:38:31.631571+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsoleWarningBanner", "prop": "text"}, "response": {"value": "Beware of scammers who may ask you to enter commands here to steal your funds. Only enter commands you fully understand."}}
+{"utc": "2026-10-08T19:38:31.631959+00:00", "request": {"cmd": "click", "objectName": "consoleFontIncreaseButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:32.101867+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputFontPixelSize"}, "response": {"value": 14}}
+{"utc": "2026-10-08T19:38:32.102215+00:00", "request": {"cmd": "click", "objectName": "consoleFontDecreaseButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:32.572207+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputFontPixelSize"}, "response": {"value": 13}}
+{"utc": "2026-10-08T19:38:32.572587+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:32.572864+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "width"}, "response": {"value": 466}}
+{"utc": "2026-10-08T19:38:32.573132+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_contentColumn", "prop": "x"}, "response": {"value": 16}}
+{"utc": "2026-10-08T19:38:32.573404+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_contentColumn", "prop": "width"}, "response": {"value": 434}}
+{"utc": "2026-10-08T19:38:32.573671+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_contentColumn", "prop": "topPadding"}, "response": {"value": 16}}
+{"utc": "2026-10-08T19:38:32.573941+00:00", "request": {"cmd": "get_text", "objectName": "rpcConsoleHelpFooter"}, "response": {"text": "Use \u2191\u2193 arrows to navigate history. Type help for an overview of available commands. Type help-console for console syntax help."}}
+{"utc": "2026-10-08T19:38:32.574147+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:32.575132+00:00", "request": {"cmd": "set_text", "objectName": "consoleInput", "text": "getblockcount"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:32.577064+00:00", "request": {"cmd": "invoke", "objectName": "rpcConsole", "method": "runHighlightedOrSubmit", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:32.577862+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "executing"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:38:32.578141+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 2}}
+{"utc": "2026-10-08T19:38:32.578346+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_0", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:32.578538+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_0", "prop": "width"}, "response": {"value": 434}}
+{"utc": "2026-10-08T19:38:32.578717+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "x"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:32.578888+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "contentWidth"}, "response": {"value": 62.375}}
+{"utc": "2026-10-08T19:38:32.579051+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "width"}, "response": {"value": 63}}
+{"utc": "2026-10-08T19:38:32.579218+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_content_0", "prop": "x"}, "response": {"value": 83}}
+{"utc": "2026-10-08T19:38:32.579503+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "width"}, "response": {"value": 63}}
+{"utc": "2026-10-08T19:38:32.579762+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_1", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:32.579973+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_1", "prop": "width"}, "response": {"value": 434}}
+{"utc": "2026-10-08T19:38:32.580175+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "x"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:32.581100+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "contentWidth"}, "response": {"value": 62.375}}
+{"utc": "2026-10-08T19:38:32.581318+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "width"}, "response": {"value": 63}}
+{"utc": "2026-10-08T19:38:32.581515+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_content_1", "prop": "x"}, "response": {"value": 83}}
+{"utc": "2026-10-08T19:38:32.581695+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "width"}, "response": {"value": 63}}
+{"utc": "2026-10-08T19:38:32.581893+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_0", "prop": "rowCategory"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:32.582194+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_1", "prop": "rowCategory"}, "response": {"value": 1}}
+{"utc": "2026-10-08T19:38:32.582521+00:00", "request": {"cmd": "get_text", "objectName": "consoleOutputArea_left_0"}, "response": {"text": "19:38:32"}}
+{"utc": "2026-10-08T19:38:32.582927+00:00", "request": {"cmd": "get_text", "objectName": "consoleOutputArea_content_0"}, "response": {"text": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }\nhr { height: 1px; border-width: 0; }\nli.unchecked::marker { content: \"\\2610\"; }\nli.checked::marker { content: \"\\2612\"; }\n</style></head><body style=\" font-family:'Roboto Mono'; font-size:13px; font-weight:400; font-style:normal;\">\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">getblockcount</p></body></html>"}}
+{"utc": "2026-10-08T19:38:32.583210+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 2}}
+{"utc": "2026-10-08T19:38:32.583670+00:00", "request": {"cmd": "set_text", "objectName": "rpcConsoleSearchField", "text": "getblockcount"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:32.584111+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "searchResultCount"}, "response": {"value": 1}}
+{"utc": "2026-10-08T19:38:32.584330+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 2}}
+{"utc": "2026-10-08T19:38:32.584525+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsoleSearchPreviousButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:32.584716+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsoleSearchNextButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:32.584896+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_content_0", "prop": "selectedText"}, "response": {"value": "getblockcount"}}
+{"utc": "2026-10-08T19:38:32.585196+00:00", "request": {"cmd": "click", "objectName": "rpcConsoleSearchNextButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:33.056130+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "currentSearchResultIndex"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:33.056514+00:00", "request": {"cmd": "set_text", "objectName": "rpcConsoleSearchField", "text": ""}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:33.056853+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "searchResultCount"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:33.057055+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputFontPixelSize"}, "response": {"value": 13}}
+{"utc": "2026-10-08T19:38:33.057228+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "minimumOutputFontPixelSize"}, "response": {"value": 10}}
+{"utc": "2026-10-08T19:38:33.057399+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "maximumOutputFontPixelSize"}, "response": {"value": 18}}
+{"utc": "2026-10-08T19:38:33.057947+00:00", "request": {"cmd": "click", "objectName": "consoleFontDecreaseButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:33.528976+00:00", "request": {"cmd": "click", "objectName": "consoleFontDecreaseButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:33.530134+00:00", "request": {"cmd": "click", "objectName": "consoleFontDecreaseButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:33.530756+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputFontPixelSize"}, "response": {"value": 10}}
+{"utc": "2026-10-08T19:38:33.531141+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "font.pixelSize"}, "response": {"value": 10}}
+{"utc": "2026-10-08T19:38:33.531458+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_0", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:33.531779+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_0", "prop": "width"}, "response": {"value": 434}}
+{"utc": "2026-10-08T19:38:33.532086+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "x"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:33.532347+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "contentWidth"}, "response": {"value": 48}}
+{"utc": "2026-10-08T19:38:33.532611+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "width"}, "response": {"value": 60}}
+{"utc": "2026-10-08T19:38:33.532858+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_content_0", "prop": "x"}, "response": {"value": 80}}
+{"utc": "2026-10-08T19:38:33.533048+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "width"}, "response": {"value": 60}}
+{"utc": "2026-10-08T19:38:33.533227+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_1", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:33.533408+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_1", "prop": "width"}, "response": {"value": 434}}
+{"utc": "2026-10-08T19:38:33.534402+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "x"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:33.534763+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "contentWidth"}, "response": {"value": 48}}
+{"utc": "2026-10-08T19:38:33.535071+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "width"}, "response": {"value": 60}}
+{"utc": "2026-10-08T19:38:33.535372+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_content_1", "prop": "x"}, "response": {"value": 80}}
+{"utc": "2026-10-08T19:38:33.535683+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "width"}, "response": {"value": 60}}
+{"utc": "2026-10-08T19:38:33.536351+00:00", "request": {"cmd": "click", "objectName": "consoleFontIncreaseButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:34.006964+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputFontPixelSize"}, "response": {"value": 11}}
+{"utc": "2026-10-08T19:38:34.007323+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "font.pixelSize"}, "response": {"value": 11}}
+{"utc": "2026-10-08T19:38:34.007604+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_0", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:34.007873+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_0", "prop": "width"}, "response": {"value": 434}}
+{"utc": "2026-10-08T19:38:34.008138+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "x"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:34.008404+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "contentWidth"}, "response": {"value": 52.75}}
+{"utc": "2026-10-08T19:38:34.008676+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "width"}, "response": {"value": 60}}
+{"utc": "2026-10-08T19:38:34.008885+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_content_0", "prop": "x"}, "response": {"value": 80}}
+{"utc": "2026-10-08T19:38:34.009092+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "width"}, "response": {"value": 60}}
+{"utc": "2026-10-08T19:38:34.009287+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_1", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:34.009476+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_1", "prop": "width"}, "response": {"value": 434}}
+{"utc": "2026-10-08T19:38:34.009658+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "x"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:34.009832+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "contentWidth"}, "response": {"value": 52.75}}
+{"utc": "2026-10-08T19:38:34.009995+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "width"}, "response": {"value": 60}}
+{"utc": "2026-10-08T19:38:34.010153+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_content_1", "prop": "x"}, "response": {"value": 80}}
+{"utc": "2026-10-08T19:38:34.010303+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "width"}, "response": {"value": 60}}
+{"utc": "2026-10-08T19:38:34.010693+00:00", "request": {"cmd": "click", "objectName": "consoleFontIncreaseButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:34.010891+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputFontPixelSize"}, "response": {"value": 12}}
+{"utc": "2026-10-08T19:38:34.011069+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "font.pixelSize"}, "response": {"value": 12}}
+{"utc": "2026-10-08T19:38:34.011247+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_0", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:34.011399+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_0", "prop": "width"}, "response": {"value": 434}}
+{"utc": "2026-10-08T19:38:34.011562+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "x"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:34.011718+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "contentWidth"}, "response": {"value": 57.5}}
+{"utc": "2026-10-08T19:38:34.011871+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "width"}, "response": {"value": 60}}
+{"utc": "2026-10-08T19:38:34.012036+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_content_0", "prop": "x"}, "response": {"value": 80}}
+{"utc": "2026-10-08T19:38:34.012208+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "width"}, "response": {"value": 60}}
+{"utc": "2026-10-08T19:38:34.012364+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_1", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:34.012523+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_1", "prop": "width"}, "response": {"value": 434}}
+{"utc": "2026-10-08T19:38:34.012677+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "x"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:34.012827+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "contentWidth"}, "response": {"value": 57.5}}
+{"utc": "2026-10-08T19:38:34.012979+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "width"}, "response": {"value": 60}}
+{"utc": "2026-10-08T19:38:34.013146+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_content_1", "prop": "x"}, "response": {"value": 80}}
+{"utc": "2026-10-08T19:38:34.013307+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "width"}, "response": {"value": 60}}
+{"utc": "2026-10-08T19:38:34.013623+00:00", "request": {"cmd": "click", "objectName": "consoleFontIncreaseButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:34.013827+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputFontPixelSize"}, "response": {"value": 13}}
+{"utc": "2026-10-08T19:38:34.014014+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "font.pixelSize"}, "response": {"value": 13}}
+{"utc": "2026-10-08T19:38:34.014205+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_0", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:34.014386+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_0", "prop": "width"}, "response": {"value": 434}}
+{"utc": "2026-10-08T19:38:34.014639+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "x"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:34.014913+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "contentWidth"}, "response": {"value": 62.375}}
+{"utc": "2026-10-08T19:38:34.015149+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "width"}, "response": {"value": 60}}
+{"utc": "2026-10-08T19:38:34.066255+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "width"}, "response": {"value": 63}}
+{"utc": "2026-10-08T19:38:34.066627+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_content_0", "prop": "x"}, "response": {"value": 83}}
+{"utc": "2026-10-08T19:38:34.066910+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "width"}, "response": {"value": 63}}
+{"utc": "2026-10-08T19:38:34.067194+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_1", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:34.067481+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_1", "prop": "width"}, "response": {"value": 434}}
+{"utc": "2026-10-08T19:38:34.067773+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "x"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:34.068051+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "contentWidth"}, "response": {"value": 62.375}}
+{"utc": "2026-10-08T19:38:34.068278+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "width"}, "response": {"value": 63}}
+{"utc": "2026-10-08T19:38:34.068490+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_content_1", "prop": "x"}, "response": {"value": 83}}
+{"utc": "2026-10-08T19:38:34.068694+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "width"}, "response": {"value": 63}}
+{"utc": "2026-10-08T19:38:34.069513+00:00", "request": {"cmd": "click", "objectName": "consoleFontIncreaseButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:34.069784+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputFontPixelSize"}, "response": {"value": 14}}
+{"utc": "2026-10-08T19:38:34.070015+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "font.pixelSize"}, "response": {"value": 14}}
+{"utc": "2026-10-08T19:38:34.070298+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_0", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:34.070539+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_0", "prop": "width"}, "response": {"value": 434}}
+{"utc": "2026-10-08T19:38:34.070752+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "x"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:34.070971+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "contentWidth"}, "response": {"value": 67.125}}
+{"utc": "2026-10-08T19:38:34.071236+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "width"}, "response": {"value": 63}}
+{"utc": "2026-10-08T19:38:34.122381+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "width"}, "response": {"value": 68}}
+{"utc": "2026-10-08T19:38:34.122812+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_content_0", "prop": "x"}, "response": {"value": 88}}
+{"utc": "2026-10-08T19:38:34.123098+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "width"}, "response": {"value": 68}}
+{"utc": "2026-10-08T19:38:34.123376+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_1", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:34.123655+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_1", "prop": "width"}, "response": {"value": 434}}
+{"utc": "2026-10-08T19:38:34.123938+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "x"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:34.124215+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "contentWidth"}, "response": {"value": 67.125}}
+{"utc": "2026-10-08T19:38:34.124497+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "width"}, "response": {"value": 68}}
+{"utc": "2026-10-08T19:38:34.124768+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_content_1", "prop": "x"}, "response": {"value": 88}}
+{"utc": "2026-10-08T19:38:34.125036+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "width"}, "response": {"value": 68}}
+{"utc": "2026-10-08T19:38:34.125880+00:00", "request": {"cmd": "click", "objectName": "consoleFontIncreaseButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:34.126134+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputFontPixelSize"}, "response": {"value": 15}}
+{"utc": "2026-10-08T19:38:34.126404+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "font.pixelSize"}, "response": {"value": 15}}
+{"utc": "2026-10-08T19:38:34.126631+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_0", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:34.126839+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_0", "prop": "width"}, "response": {"value": 434}}
+{"utc": "2026-10-08T19:38:34.127042+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "x"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:34.127227+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "contentWidth"}, "response": {"value": 72}}
+{"utc": "2026-10-08T19:38:34.127400+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "width"}, "response": {"value": 68}}
+{"utc": "2026-10-08T19:38:34.178525+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "width"}, "response": {"value": 72}}
+{"utc": "2026-10-08T19:38:34.179122+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_content_0", "prop": "x"}, "response": {"value": 92}}
+{"utc": "2026-10-08T19:38:34.179567+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "width"}, "response": {"value": 72}}
+{"utc": "2026-10-08T19:38:34.180009+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_1", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:34.180358+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_1", "prop": "width"}, "response": {"value": 434}}
+{"utc": "2026-10-08T19:38:34.180680+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "x"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:34.180985+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "contentWidth"}, "response": {"value": 72}}
+{"utc": "2026-10-08T19:38:34.181281+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "width"}, "response": {"value": 72}}
+{"utc": "2026-10-08T19:38:34.181581+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_content_1", "prop": "x"}, "response": {"value": 92}}
+{"utc": "2026-10-08T19:38:34.181836+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "width"}, "response": {"value": 72}}
+{"utc": "2026-10-08T19:38:34.182895+00:00", "request": {"cmd": "click", "objectName": "consoleFontIncreaseButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:34.183204+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputFontPixelSize"}, "response": {"value": 16}}
+{"utc": "2026-10-08T19:38:34.183500+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "font.pixelSize"}, "response": {"value": 16}}
+{"utc": "2026-10-08T19:38:34.183833+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_0", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:34.184159+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_0", "prop": "width"}, "response": {"value": 434}}
+{"utc": "2026-10-08T19:38:34.184509+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "x"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:34.184844+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "contentWidth"}, "response": {"value": 76.75}}
+{"utc": "2026-10-08T19:38:34.185148+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "width"}, "response": {"value": 72}}
+{"utc": "2026-10-08T19:38:34.236345+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "width"}, "response": {"value": 77}}
+{"utc": "2026-10-08T19:38:34.236845+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_content_0", "prop": "x"}, "response": {"value": 97}}
+{"utc": "2026-10-08T19:38:34.237203+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "width"}, "response": {"value": 77}}
+{"utc": "2026-10-08T19:38:34.237557+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_1", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:34.237848+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_1", "prop": "width"}, "response": {"value": 434}}
+{"utc": "2026-10-08T19:38:34.238112+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "x"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:34.238376+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "contentWidth"}, "response": {"value": 76.75}}
+{"utc": "2026-10-08T19:38:34.238652+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "width"}, "response": {"value": 77}}
+{"utc": "2026-10-08T19:38:34.238930+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_content_1", "prop": "x"}, "response": {"value": 97}}
+{"utc": "2026-10-08T19:38:34.239188+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "width"}, "response": {"value": 77}}
+{"utc": "2026-10-08T19:38:34.240015+00:00", "request": {"cmd": "click", "objectName": "consoleFontIncreaseButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:34.240277+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputFontPixelSize"}, "response": {"value": 17}}
+{"utc": "2026-10-08T19:38:34.240517+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "font.pixelSize"}, "response": {"value": 17}}
+{"utc": "2026-10-08T19:38:34.240737+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_0", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:34.240934+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_0", "prop": "width"}, "response": {"value": 434}}
+{"utc": "2026-10-08T19:38:34.241230+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "x"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:34.241476+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "contentWidth"}, "response": {"value": 81.5}}
+{"utc": "2026-10-08T19:38:34.241682+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "width"}, "response": {"value": 77}}
+{"utc": "2026-10-08T19:38:34.292789+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "width"}, "response": {"value": 82}}
+{"utc": "2026-10-08T19:38:34.293214+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_content_0", "prop": "x"}, "response": {"value": 102}}
+{"utc": "2026-10-08T19:38:34.293520+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "width"}, "response": {"value": 82}}
+{"utc": "2026-10-08T19:38:34.293823+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_1", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:34.294126+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_1", "prop": "width"}, "response": {"value": 434}}
+{"utc": "2026-10-08T19:38:34.294445+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "x"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:34.294745+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "contentWidth"}, "response": {"value": 81.5}}
+{"utc": "2026-10-08T19:38:34.295038+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "width"}, "response": {"value": 82}}
+{"utc": "2026-10-08T19:38:34.295328+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_content_1", "prop": "x"}, "response": {"value": 102}}
+{"utc": "2026-10-08T19:38:34.295577+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "width"}, "response": {"value": 82}}
+{"utc": "2026-10-08T19:38:34.296458+00:00", "request": {"cmd": "click", "objectName": "consoleFontIncreaseButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:34.296726+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputFontPixelSize"}, "response": {"value": 18}}
+{"utc": "2026-10-08T19:38:34.296956+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "font.pixelSize"}, "response": {"value": 18}}
+{"utc": "2026-10-08T19:38:34.297172+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_0", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:34.297372+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_0", "prop": "width"}, "response": {"value": 434}}
+{"utc": "2026-10-08T19:38:34.297575+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "x"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:34.297781+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "contentWidth"}, "response": {"value": 86.375}}
+{"utc": "2026-10-08T19:38:34.297980+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "width"}, "response": {"value": 82}}
+{"utc": "2026-10-08T19:38:34.349143+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "width"}, "response": {"value": 87}}
+{"utc": "2026-10-08T19:38:34.349621+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_content_0", "prop": "x"}, "response": {"value": 107}}
+{"utc": "2026-10-08T19:38:34.349935+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_0", "prop": "width"}, "response": {"value": 87}}
+{"utc": "2026-10-08T19:38:34.350237+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_1", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:34.350537+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_row_1", "prop": "width"}, "response": {"value": 434}}
+{"utc": "2026-10-08T19:38:34.350795+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "x"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:34.351363+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "contentWidth"}, "response": {"value": 86.375}}
+{"utc": "2026-10-08T19:38:34.351640+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "width"}, "response": {"value": 87}}
+{"utc": "2026-10-08T19:38:34.351860+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_content_1", "prop": "x"}, "response": {"value": 107}}
+{"utc": "2026-10-08T19:38:34.352057+00:00", "request": {"cmd": "get_property", "objectName": "consoleOutputArea_left_1", "prop": "width"}, "response": {"value": 87}}
+{"utc": "2026-10-08T19:38:34.352520+00:00", "request": {"cmd": "click", "objectName": "consoleFontDecreaseButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:34.823989+00:00", "request": {"cmd": "click", "objectName": "consoleFontDecreaseButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:34.824459+00:00", "request": {"cmd": "click", "objectName": "consoleFontDecreaseButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:34.824836+00:00", "request": {"cmd": "click", "objectName": "consoleFontDecreaseButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:34.825163+00:00", "request": {"cmd": "click", "objectName": "consoleFontDecreaseButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:34.825423+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 2}}
+{"utc": "2026-10-08T19:38:34.827127+00:00", "request": {"cmd": "set_text", "objectName": "consoleInput", "text": "getblockcount"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:34.828188+00:00", "request": {"cmd": "invoke", "objectName": "rpcConsole", "method": "runHighlightedOrSubmit", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:34.828928+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "executing"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:38:34.829668+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 4}}
+{"utc": "2026-10-08T19:38:34.829935+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 4}}
+{"utc": "2026-10-08T19:38:34.830578+00:00", "request": {"cmd": "set_text", "objectName": "consoleInput", "text": "help"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:34.831224+00:00", "request": {"cmd": "invoke", "objectName": "rpcConsole", "method": "runHighlightedOrSubmit", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:34.831507+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "executing"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:34.882647+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "executing"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:38:34.883579+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 6}}
+{"utc": "2026-10-08T19:38:34.883844+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 6}}
+{"utc": "2026-10-08T19:38:34.884323+00:00", "request": {"cmd": "set_text", "objectName": "consoleInput", "text": "thiscommanddoesnotexist"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:34.885107+00:00", "request": {"cmd": "invoke", "objectName": "rpcConsole", "method": "runHighlightedOrSubmit", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:34.885398+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "executing"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:34.936372+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "executing"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:38:34.936703+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 8}}
+{"utc": "2026-10-08T19:38:34.937606+00:00", "request": {"cmd": "set_text", "objectName": "consoleInput", "text": "getblock"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:34.937880+00:00", "request": {"cmd": "get_property", "objectName": "consoleAutocompletePopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:34.938115+00:00", "request": {"cmd": "get_property", "objectName": "consoleAutocompletePopup", "prop": "x"}, "response": {"value": 36}}
+{"utc": "2026-10-08T19:38:34.938333+00:00", "request": {"cmd": "get_property", "objectName": "consoleInputContent", "prop": "x"}, "response": {"value": 12}}
+{"utc": "2026-10-08T19:38:34.938552+00:00", "request": {"cmd": "get_property", "objectName": "consoleInput", "prop": "x"}, "response": {"value": 24}}
+{"utc": "2026-10-08T19:38:34.938769+00:00", "request": {"cmd": "get_property", "objectName": "consoleAutocomplete_0", "prop": "height"}, "response": {"value": 36}}
+{"utc": "2026-10-08T19:38:34.939096+00:00", "request": {"cmd": "set_text", "objectName": "consoleInput", "text": ""}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:34.939452+00:00", "request": {"cmd": "set_text", "objectName": "consoleInput", "text": "zzzznotacommand"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:34.939677+00:00", "request": {"cmd": "get_property", "objectName": "consoleAutocompletePopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:34.990809+00:00", "request": {"cmd": "get_property", "objectName": "consoleAutocompletePopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:35.041824+00:00", "request": {"cmd": "get_property", "objectName": "consoleAutocompletePopup", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-08T19:38:35.042209+00:00", "request": {"cmd": "set_text", "objectName": "consoleInput", "text": ""}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:35.043319+00:00", "request": {"cmd": "set_text", "objectName": "consoleInput", "text": "getblockcou"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:35.043591+00:00", "request": {"cmd": "get_property", "objectName": "consoleAutocompletePopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:35.044003+00:00", "request": {"cmd": "click", "objectName": "consoleAutocomplete_0"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:35.515878+00:00", "request": {"cmd": "get_text", "objectName": "consoleInput"}, "response": {"text": "getblockcount "}}
+{"utc": "2026-10-08T19:38:35.516310+00:00", "request": {"cmd": "set_text", "objectName": "consoleInput", "text": ""}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:35.517201+00:00", "request": {"cmd": "set_text", "objectName": "consoleInput", "text": "help get"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:35.517521+00:00", "request": {"cmd": "get_property", "objectName": "consoleAutocompletePopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-08T19:38:35.517879+00:00", "request": {"cmd": "set_text", "objectName": "consoleInput", "text": ""}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:35.518111+00:00", "request": {"cmd": "set_text", "objectName": "consoleInput", "text": ""}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:35.518381+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 8}}
+{"utc": "2026-10-08T19:38:35.518814+00:00", "request": {"cmd": "invoke", "objectName": "rpcConsole", "method": "clearInputOrOutput", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:35.519196+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 0}}
+{"utc": "2026-10-08T19:38:35.519419+00:00", "request": {"cmd": "get_text", "objectName": "rpcConsoleHelpFooter"}, "response": {"text": "Use \u2191\u2193 arrows to navigate history. Type help for an overview of available commands. Type help-console for console syntax help."}}
+{"utc": "2026-10-08T19:38:35.556019+00:00", "request": {"cmd": "click", "objectName": "settingsDoneButton"}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:36.025289+00:00", "request": {"cmd": "wait_for_page", "page": "nodeRunner", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-08T19:38:36.760270+00:00", "application_pid": 12053, "exit_code": 0}

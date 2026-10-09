@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-08",
+  "groups": 34,
+  "criteria": 203,
+  "selected_captures": 116,
+  "captures_by_application": {
+    "widgets": 60,
+    "qml": 56
+  },
+  "qml_functional": {
+    "passed": 33,
+    "failed": 1
+  },
+  "qtest": {
+    "qml-unit-tests": {
+      "passed": 766,
+      "failed": 0,
+      "skipped": 0,
+      "exit_code": 0
+    },
+    "qml-quick-tests": {
+      "passed": 634,
+      "failed": 0,
+      "skipped": 0,
+      "exit_code": 0
+    },
+    "widgets-qt-tests": {
+      "passed": 21,
+      "failed": 0,
+      "skipped": 0,
+      "exit_code": 0
+    }
+  },
+  "widgets_live_assertions": {
+    "passed": 39
+  },
+  "qml_additional_assertions": {
+    "passed": 6
+  },
+  "qml_native_shell_assertions": {
+    "passed": 3
+  },
+  "criteria_statuses": {
+    "widgets": {
+      "Assertions collected": 63,
+      "Visual evidence only": 80,
+      "Related automated suite": 43,
+      "Source only": 17
+    },
+    "qml": {
+      "Automated evidence collected": 107,
+      "Implementation gap": 43,
+      "Partial / limited evidence": 49,
+      "Source / related tests only": 3,
+      "Visual evidence only": 1
+    }
+  }
+}

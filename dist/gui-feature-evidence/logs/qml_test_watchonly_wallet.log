@@ -1,0 +1,26 @@
+Generating test xpub from source node...
+  Test xpub: tpubDDpvoXGYVc24T9rC...EJAiy3p1Yf
+[watchonly_creation_flow] starting
+  Type selector opened
+  Wallet created, ready page shown
+  Ready page dismissed
+  Wallet badge: watchonly_test
+  RPC confirms wallet is watch-only (private_keys_enabled=false)
+  Watch-only creation flow PASSED
+[watchonly_creation_flow] completed
+[type_selector_regular] starting
+  Type selector opened
+  Regular wallet form opened
+  Regular wallet type selector flow PASSED
+[type_selector_regular] completed
+[type_selector_import] starting
+  Type selector opened
+  Import error shown directly from type selector
+  Import wallet type selector flow PASSED
+[type_selector_import] completed
+[type_selector_disabled] starting
+  Type selector opened
+  Disabled options check PASSED
+[type_selector_disabled] completed
+
+All watch-only wallet tests PASSED

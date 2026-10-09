@@ -1,0 +1,105 @@
+Starting GUI node: /validation/build/bin/bitcoin-core-app -datadir=/work/tmp/qml_test_peers_iwhup8ww/gui_node -test-automation=/work/tmp/qml_test_peers_iwhup8ww/test_bridge.sock -disablewallet -qml_onboarded=1 -logtimemicros -debug -debugexclude=leveldb
+QmlDriver connected to test bridge.
+Starting peer node: /tools/bitcoind -datadir=/work/tmp/qml_test_peers_iwhup8ww/peer_node
+
+Waiting for peer to connect ...
+  Peer connected: id=1 addr=127.0.0.1:58104
+
+Navigating to Peers page ...
+  Verified: viewBannedPeersButton hidden (no bans)
+
+── test_disconnect_peer ──────────────────────────────────────────
+  Opened PeerDetails for node id=1
+  Clicked Disconnect
+  PASSED: peer is disconnected
+  Verified: viewBannedPeersButton hidden (no bans after disconnect)
+
+Reconnecting peer for ban test (1 hour) ...
+  Restarting peer node ...
+  Peer connected: id=2 addr=127.0.0.1:54840
+  Verified: viewBannedPeersButton hidden (no active ban)
+
+── test_ban_peer (1 hour) ──────────────────────────────
+  Opened PeerDetails for node id=2
+  Confirmed ban (1 hour)
+  PASSED: peer banned (127.0.0.1/32) for ~1 hour
+  Verified: viewBannedPeersButton visible (peer banned)
+
+Reconnecting peer for ban test (1 day) ...
+  Restarting peer node ...
+  Peer connected: id=3 addr=127.0.0.1:54850
+  Verified: viewBannedPeersButton hidden (no active ban)
+
+── test_ban_peer (1 day) ──────────────────────────────
+  Opened PeerDetails for node id=3
+  Confirmed ban (1 day)
+  PASSED: peer banned (127.0.0.1/32) for ~1 day
+  Verified: viewBannedPeersButton visible (peer banned)
+
+Reconnecting peer for ban test (1 week) ...
+  Restarting peer node ...
+  Peer connected: id=4 addr=127.0.0.1:54864
+  Verified: viewBannedPeersButton hidden (no active ban)
+
+── test_ban_peer (1 week) ──────────────────────────────
+  Opened PeerDetails for node id=4
+  Confirmed ban (1 week)
+  PASSED: peer banned (127.0.0.1/32) for ~1 week
+  Verified: viewBannedPeersButton visible (peer banned)
+
+Reconnecting peer for ban test (1 year) ...
+  Restarting peer node ...
+  Peer connected: id=5 addr=127.0.0.1:44898
+  Verified: viewBannedPeersButton hidden (no active ban)
+
+── test_ban_peer (1 year) ──────────────────────────────
+  Opened PeerDetails for node id=5
+  Confirmed ban (1 year)
+  PASSED: peer banned (127.0.0.1/32) for ~1 year
+  Verified: viewBannedPeersButton visible (peer banned)
+
+── test_unban_peer ───────────────────────────────────────────────
+  Opened Banned Peers popup
+  PASSED: ban list is empty
+  Verified: viewBannedPeersButton hidden (ban cleared via UI)
+
+Running ban persistence test ...
+
+── test_ban_persistence ──────────────────────────────────────
+  Restarting peer node ...
+  Peer connected: id=6 addr=127.0.0.1:44914
+
+── test_ban_peer (1 hour) ──────────────────────────────
+  Opened PeerDetails for node id=6
+  Confirmed ban (1 hour)
+  PASSED: peer banned (127.0.0.1/32) for ~1 hour
+  Restarting GUI node ...
+  Restarting GUI: /validation/build/bin/bitcoin-core-app -datadir=/work/tmp/qml_test_peers_iwhup8ww/gui_node -test-automation=/work/tmp/qml_test_peers_iwhup8ww/test_bridge.sock -disablewallet -qml_onboarded=1 -logtimemicros -debug -debugexclude=leveldb
+  QmlDriver reconnected after GUI restart.
+  PASSED: ban for 127.0.0.1/32 persisted across GUI restart
+
+Reconnecting peer for multi-peer disconnect test ...
+  Restarting peer node ...
+  Peer connected: id=0 addr=127.0.0.1:57976
+
+── test_disconnect_specific_peer ────────────────────────────
+  Starting second peer: /tools/bitcoind -datadir=/work/tmp/qml_test_peers_iwhup8ww/peer2_node
+  2 peer(s) connected: ids=[0, 1]
+  Opened PeerDetails for node id=0
+  Clicked Disconnect for peer 0
+  PASSED: peer 0 gone; peer 1 still present
+
+Reconnecting peer for multi-peer ban test ...
+  Restarting peer node ...
+  Peer connected: id=3 addr=127.0.0.1:58006
+
+── test_ban_one_of_two_peers ─────────────────────────────────
+  Starting second peer: /tools/bitcoind -datadir=/work/tmp/qml_test_peers_iwhup8ww/peer2_node
+  2 peer(s) connected: ids=[3, 4]
+  Opened PeerDetails for node id=3
+  Banned peer 3 (subnet: 127.0.0.1/32)
+  PASSED: banning peer 3 disconnected all peers from 127.0.0.1/32 (subnet ban)
+
+============================================================
+All peer management tests PASSED
+============================================================

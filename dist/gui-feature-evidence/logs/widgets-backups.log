@@ -1,0 +1,4 @@
+{"id": "backup-wallet-file", "features": ["F03.S01"], "description": "The GUI writes a nonempty wallet backup file.", "actual": true, "expected": true, "status": "passed"}
+{"id": "export-watchonly-file", "features": ["F05.S02"], "description": "The GUI exports a nonempty watch-only backup.", "actual": true, "expected": true, "status": "passed"}
+{'class': 'BitcoinGUI', 'enabled': True, 'geometry': [400, 300, 830, 483], 'id': 2, 'name': '', 'statusTip': '', 'title': 'Bitcoin Core - Acceptance wallet - [regtest]', 'toolTip': '', 'visible': True, 'window': 2}
+{'class': 'QMessageBox', 'enabled': True, 'geometry': [494, 478, 450, 84], 'id': 784, 'name': '', 'statusTip': '', 'text': 'The wallet has been exported to /work/backups/watch-only.dat', 'title': 'Export Successful', 'toolTip': '', 'visible': True, 'window': 784}

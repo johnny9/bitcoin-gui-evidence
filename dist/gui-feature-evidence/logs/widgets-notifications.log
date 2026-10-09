@@ -1,0 +1,35 @@
+{
+	appname: 'Bitcoin-Qt-regtest'
+	summary: 'Bitcoin Core - Incoming transaction'
+	body: 'Date: 8 Oct 2026 20:11
+Amount: +0.12500000 BTC
+Wallet: Acceptance wallet
+Type: Received with
+Label: Notification evidence
+'
+	icon: 'dialog-information'
+	raw_icon set: true
+	icon_id: 'e5222c97654885741838af4a8aa50836'
+	desktop_entry: ''
+	category: 
+	timeout: 10000
+	urgency: NORMAL
+	transient: 0
+	formatted: '<b>Bitcoin Core - Incoming transaction</b>
+Date: 8 Oct 2026 20:11
+Amount: +0.12500000 BTC
+Wallet: Acceptance wallet
+Type: Received with
+Label: Notification evidence'
+	fg: #ffffff
+	bg: #285577
+	highlight: #1745d1
+	frame: #aaaaaa
+	fullscreen: show
+	format: <b>%s</b>\n%b
+	progress: -1
+	stack_tag: 
+	id: 2
+	actions: {}
+	script_count: 0
+}

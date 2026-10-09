@@ -1,0 +1,15 @@
+{
+  "peer_shutdown_log_tail": [
+    "2026-10-08T20:23:26Z Dumped mempool: 0.000s to copy, 0.002s to dump, 265 bytes dumped to file",
+    "2026-10-08T20:23:26Z prevout.02 thread exit",
+    "2026-10-08T20:23:26Z prevout.01 thread exit",
+    "2026-10-08T20:23:26Z prevout.00 thread exit",
+    "2026-10-08T20:23:26Z prevout.04 thread exit",
+    "2026-10-08T20:23:26Z prevout.05 thread exit",
+    "2026-10-08T20:23:26Z prevout.07 thread exit",
+    "2026-10-08T20:23:26Z prevout.03 thread exit",
+    "2026-10-08T20:23:26Z prevout.06 thread exit",
+    "2026-10-08T20:23:26Z Shutdown done"
+  ],
+  "remaining_application_processes": []
+}
