@@ -19,3 +19,5 @@ dialog{border:1px solid #e0e5ec;border-radius:12px;background:white;color:var(--
 .feature-heading .implementation-summary{margin-bottom:10px}
 .parity-detail{margin:0 0 16px;padding:0 0 14px;border-bottom:1px solid var(--line)}
 .parity-detail p{color:var(--muted);font-size:12px;line-height:1.7;margin-top:8px}
+
+.outcome-assessment h2{margin:10px 0 7px}.outcome-goal{margin-bottom:9px}.implementation-note>p.helper-text{padding:0 18px}

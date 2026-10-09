@@ -86,39 +86,43 @@ async function main() {
   await go('#catalog?parity=parity');
   await check('Group parity filters the whole feature, independently of evidence',async()=>{
     assert.deepEqual(await page.$$eval('[data-filter="parity"] option',els=>els.map(el=>el.textContent)),['Any implementation','Parity','Partial parity','Not implemented']);
-    assert.deepEqual(await page.$$eval('.group-card .group-card-top .criterion-id',els=>els.map(el=>el.textContent)),['F11','F19','F28','F33']);
-    assert.equal(await page.$$eval('.group-card .parity-badge[data-parity="parity"]',els=>els.length),4);
+    assert.deepEqual(await page.$$eval('.group-card .group-card-top .criterion-id',els=>els.map(el=>el.textContent)),['F01','F02','F04','F06','F07','F08','F10','F11','F12','F16','F19','F20','F21','F22','F24','F26','F28','F30','F33']);
+    assert.equal(await page.$$eval('.group-card .parity-badge[data-parity="parity"]',els=>els.length),19);
     assert.match(await page.$eval('#filter-scope',el=>el.textContent),/whole feature groups/);
     await page.reload({waitUntil:'networkidle0'});
     assert.equal(await page.$eval('[data-filter="parity"]',el=>el.value),'parity');
   });
-  await check('Partial and absent groups are distinct, with no mixed groups shown as absent',async()=>{
+  await check('Group filters assess the main goal even when secondary capabilities differ',async()=>{
     await value('[data-filter="parity"]','partial');
-    assert.equal(await page.$$eval('.group-card',els=>els.length),27);
-    assert.ok(await page.$('.group-card[href="#feature/F01"]'));
+    assert.equal(await page.$$eval('.group-card',els=>els.length),12);
+    assert.ok(await page.$('.group-card[href="#feature/F03"]'));
+    assert.equal(await page.$('.group-card[href="#feature/F01"]'),null);
     assert.ok(await page.$('.group-card[href="#feature/F34"]')); // RPC rescan exists; progress/cancel do not.
     await value('[data-filter="parity"]','not-implemented');
     assert.deepEqual(await page.$$eval('.group-card .group-card-top .criterion-id',els=>els.map(el=>el.textContent)),['F05','F25','F32']);
+    assert.match(await page.$eval('.group-card[href="#feature/F25"] .implementation-summary',el=>el.textContent),/Subfeature detail: 1 parity/); // In-app errors do not fulfill desktop notifications.
     assert.equal(await page.$('.group-card[href="#feature/F01"]'),null);
     await page.screenshot({path:output+'/parity-groups.png'});
   });
   await check('Subfeature parity distinguishes partial functionality from absence',async()=>{
     await page.click('[data-view="criteria"]');
     const absent=await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent));
-    assert.equal(absent.length,43);
+    assert.equal(absent.length,38);
     assert.ok(absent.includes('F01.S04'));
     assert.ok(absent.includes('F03.S04'));
     assert.ok(!absent.includes('F15.S03')); // Receiving exists; device verification is missing.
     await value('[data-filter="parity"]','partial');
     const partial=await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent));
-    assert.equal(partial.length,32);
+    assert.equal(partial.length,15);
     assert.ok(partial.includes('F15.S03'));
     assert.ok(partial.includes('F09.S03'));
+    assert.ok(partial.includes('F14.S01')); // File import exists; compatibility still blocks some transactions.
     await value('[data-filter="parity"]','parity');
     const parity=await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent));
-    assert.equal(parity.length,128);
+    assert.equal(parity.length,150);
     assert.ok(parity.includes('F04.S02')); // Source evidence, without a runtime assertion or capture.
     assert.ok(parity.includes('F21.S04')); // Physical router not tested.
+    for(const id of ['F02.S04','F08.S06','F13.S05','F14.S06','F24.S03'])assert.ok(parity.includes(id),id); // Equivalent reachable workflows.
     assert.equal(new Set([...parity,...partial,...absent]).size,203);
     assert.match(await page.$eval('#filter-scope',el=>el.textContent),/individual subfeatures/);
   });
@@ -137,13 +141,25 @@ async function main() {
     assert.match(await page.$eval('[id="F04.S02"] .parity-detail',el=>el.textContent),/automatic backup/);
     await page.screenshot({path:output+'/parity-feature.png'});
   });
-  await go('#catalog?parity=partial');
-  await check('Opening a partial group retains its complete implementation breakdown',async()=>{
+  await go('#catalog?parity=parity');
+  await check('Opening a parity group explains its goal and preserves secondary gaps',async()=>{
     await page.click('.group-card[href="#feature/F01"]');
     await page.waitForSelector('[id="F01.S04"]');
     assert.equal(await page.$$eval('.criterion-card',els=>els.length),6);
     assert.equal(await page.$$eval('.criterion-card .parity-badge[data-parity="parity"]',els=>els.length),5);
     assert.equal(await page.$$eval('.criterion-card .parity-badge[data-parity="not-implemented"]',els=>els.length),1);
+    assert.ok(await page.$('.feature-heading .parity-badge[data-parity="parity"]'));
+    assert.match(await page.$eval('.outcome-assessment',el=>el.textContent),/Create a usable wallet/);
+    assert.match(await page.$eval('.outcome-assessment',el=>el.textContent),/blank-wallet creation remains a secondary gap/);
+    await page.screenshot({path:output+'/outcome-group.png'});
+  });
+  await go('#feature/F08?item=F08.S06');
+  await check('Equivalent sharing workflow reaches parity while original missing-method evidence remains visible',async()=>{
+    assert.ok(await page.$('[id="F08.S06"] .parity-badge[data-parity="parity"]'));
+    assert.match(await page.$eval('[id="F08.S06"] .parity-detail',el=>el.textContent),/copied or saved/);
+    assert.ok(await page.$('[id="F08.S06"] .application-evidence[aria-label^="GUI-QML"] .badge-gap'));
+    assert.equal(await page.$$eval('[id="F08.S06"] .application-evidence',els=>els.length),2);
+    await page.screenshot({path:output+'/outcome-subfeature.png'});
   });
   await go('#catalog?evidence=full&view=criteria');
   let fullIds, partialIds;
@@ -307,7 +323,7 @@ async function main() {
     await value('[data-filter="parity"]','not-implemented');
     assert.equal(await page.$$eval('.group-card',els=>els.length),3);
     await page.click('[data-view="criteria"]');
-    assert.equal(await page.$$eval('.criterion-result',els=>els.length),43);
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),38);
     assert.equal(await page.$$eval('.result-statuses',els=>els.every(el=>el.textContent.includes('Qt Widgets')&&el.textContent.includes('GUI-QML'))),true);
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
     await page.click('[data-action="clear-filters"]');

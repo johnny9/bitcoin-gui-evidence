@@ -36,6 +36,9 @@ def main():
     assert implementation == json.loads((DIST / 'implementation.json').read_text())
     assert implementation['snapshotCatalogId'] == data['catalogId']
     assert implementation['sourceRevisions'] == data['revisions']
+    assert implementation['schemaVersion'] == 2
+    assert implementation['assessmentStyle'] == 'rough-user-outcome'
+    assert set(implementation['groups']) == {g['id'] for g in data['groups']}
     assert set(implementation['criteria']) == set(coverage)
     for criterion in criteria:
         assert criterion['implementation'] == implementation['criteria'][criterion['id']]
@@ -48,6 +51,15 @@ def main():
     assert by_id['F15.S03']['implementation']['status'] == 'partial'
     assert by_id['F03.S04']['implementation']['status'] == 'not-implemented'
     assert by_id['F09.S03']['implementation']['status'] == 'partial'
+    # Alternative workflows can fulfill an outcome without erasing source differences.
+    assert by_id['F08.S06']['implementation']['status'] == 'parity'
+    assert by_id['F08.S06']['applications']['qml']['status'] == 'gap'
+    assert by_id['F13.S05']['implementation']['status'] == 'parity'
+    assert by_id['F14.S01']['implementation']['status'] == 'partial'  # Import compatibility still blocks some PSBTs.
+    assert implementation['groups']['F01']['status'] == 'parity'
+    assert by_id['F01.S04']['implementation']['status'] == 'not-implemented'
+    assert implementation['groups']['F25']['status'] == 'not-implemented'
+    assert by_id['F25.S04']['implementation']['status'] == 'parity'
     assert sum(c['hasFailure'] for c in criteria) == 1
     assert next(c['id'] for c in criteria if c['hasFailure']) == 'F09.S03'
     parser = Links()
@@ -57,9 +69,10 @@ def main():
     for group in data['groups']:
         counts = Counter(c['implementation']['status'] for c in group['criteria'])
         assert group['implementation']['counts'] == {s: counts[s] for s in ('parity', 'partial', 'not-implemented')}
-        expected = ('parity' if counts['parity'] == len(group['criteria']) else
-                    'not-implemented' if counts['not-implemented'] == len(group['criteria']) else 'partial')
-        assert group['implementation']['status'] == expected
+        assessment = implementation['groups'][group['id']]
+        assert {k: v for k, v in group['implementation'].items() if k != 'counts'} == assessment
+        assert assessment['status'] in ('parity', 'partial', 'not-implemented')
+        assert assessment['goal'].strip() and assessment['reason'].strip()
         assert (DIST / group['markdown']).is_file()
         for field in ('modulesHtml', 'comparisonHtml', 'supportHtml'):
             parser.feed(group[field])

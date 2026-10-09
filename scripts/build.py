@@ -61,12 +61,19 @@ def main():
     inventory = load('inventory.json')
     implementation = json.loads((ROOT / 'data/implementation.json').read_text())
     implementation_rows = implementation['criteria']
+    implementation_groups = implementation['groups']
+    if implementation['schemaVersion'] != 2 or implementation['assessmentStyle'] != 'rough-user-outcome':
+        raise ValueError('Expected explicit user-outcome implementation assessments')
+    if implementation_groups.keys() != {f['id'] for f in inventory}:
+        raise ValueError('Implementation assessment must cover exactly the inventory groups')
     criterion_ids = {s['id'] for f in inventory for s in f['subfeatures']}
     if implementation_rows.keys() != criterion_ids:
         raise ValueError('Implementation assessment must cover exactly the inventory criteria')
-    for sid, assessment in implementation_rows.items():
+    for sid, assessment in {**implementation_rows, **implementation_groups}.items():
         if assessment['status'] not in ('parity', 'partial', 'not-implemented') or not assessment['reason'].strip():
             raise ValueError('Invalid implementation assessment: ' + sid)
+    if any(not assessment['goal'].strip() for assessment in implementation_groups.values()):
+        raise ValueError('Every group assessment needs an explicit main user goal')
     coverage = {r['id']: r for r in load('coverage.json')}
     photos = load('selected-captures.json')
     groups_by_slug = {f['slug']: f['id'] for f in inventory}
@@ -149,11 +156,9 @@ def main():
                           'failed': bool(re.search(r'\bfailed\b', cells[2]))})
         implementation_counts = {status: sum(r['implementation']['status'] == status for r in rows)
                                  for status in ('parity', 'partial', 'not-implemented')}
-        group_implementation = ('parity' if implementation_counts['parity'] == len(rows) else
-                                'not-implemented' if implementation_counts['not-implemented'] == len(rows) else 'partial')
         groups.append({
             'id': fid, 'name': feature['name'], 'number': feature['number'], 'slug': feature['slug'], 'area': area,
-            'implementation': {'status': group_implementation, 'counts': implementation_counts},
+            'implementation': {**implementation_groups[fid], 'counts': implementation_counts},
             'comparisonHtml': html(feature['qml_comparison'], fid),
             'modulesHtml': html(section(text, 'Modules'), fid, inline=False),
             'supportHtml': html(' '.join(feature.get('support', [])), fid),
@@ -168,7 +173,7 @@ def main():
         raise ValueError('Reassess implementation parity for the changed evidence snapshot')
     data = {
         'catalogId': digest.hexdigest(), 'summary': load('summary.json'),
-        'implementationAssessment': {k: v for k, v in implementation.items() if k != 'criteria'},
+        'implementationAssessment': {k: v for k, v in implementation.items() if k not in ('criteria', 'groups')},
         'areas': [{'id': key, 'label': label} for key, label, _ in AREAS],
         'groups': groups, 'captures': photos,
         'functional': load('logs/qml-functional-results.json'),

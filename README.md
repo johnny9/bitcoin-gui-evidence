@@ -27,7 +27,9 @@ Reviews are stored only in the browser, keyed to the exact evidence snapshot. Th
 
 Review status is separate from acceptance. Evidence levels, the one known failing QML script, and the original scope limitations remain visible. The site does not turn a screenshot or a related passing test into an acceptance decision.
 
-Implementation parity compares the listed capabilities at the pinned source revisions. Missing captures or untested hardware do not imply missing implementation. Each subfeature has a recorded assessment and reason in [`data/implementation.json`](data/implementation.json). Groups reach parity when every subfeature does; groups with no implemented subfeatures are not implemented; all other groups have partial parity. Rescan initiation through RPC counts where the Widgets baseline also permits RPC, while missing graphical rescan progress and cancellation keep that group at partial parity.
+Implementation parity is a rough assessment of whether the main user goal is achieved at the pinned source revisions. Equivalent workflows count as fully implemented: for example, exporting a file instead of copying to the clipboard, or restoring the main window to reach an action instead of using a tray shortcut. Important missing capabilities, incompatibilities, and broken outcomes remain partial or not implemented. Missing captures or untested hardware do not imply missing implementation.
+
+Each group has an explicit main goal, status, and rationale in [`data/implementation.json`](data/implementation.json), shown on its feature page. Its rating is judged independently of the subfeature tally. Wallet creation can reach parity while standalone blank-wallet creation remains a secondary gap; in-app error dialogs do not fulfill the desktop-notification goal. Each subfeature also has a reasoned assessment. Original detailed comparisons and evidence remain visible and unchanged, so reviewers can inspect exact differences and make their own acceptance decisions.
 
 ## Source and regeneration
 
@@ -44,7 +46,7 @@ The builder regenerates from the bundled snapshot under `dist/gui-feature-eviden
 
 Commit both the source edits and regenerated `dist/` output. CI rebuilds the site and fails if the committed output is stale. The bundled snapshot makes a fresh clone self-contained.
 
-Update `data/implementation.json` when implementation changes are reviewed. The builder requires an explicit status and reason for every inventory criterion and rejects assessments that refer to a different evidence snapshot or source revision. Generated `dist/implementation.json` exposes the assessment for reviewers. Adding these assessments preserves the existing evidence snapshot identity and saved review compatibility.
+Update `data/implementation.json` when implementation changes are reviewed. Schema version 2 requires a status and reason for every group and criterion, plus a main user goal for every group. The builder rejects missing or extra assessments and references to a different evidence snapshot or source revision. Generated `dist/implementation.json` exposes the assessment for reviewers. These assessments preserve the existing evidence snapshot identity and saved review compatibility.
 
 ## Validation
 

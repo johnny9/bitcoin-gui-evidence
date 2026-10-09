@@ -1,13 +1,13 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "assessedAt": "2026-10-09",
   "snapshotCatalogId": "b4b1026b74ad8bf0a1628c9889b82193d33d210c3aa0170e94783f371fe15c0b",
   "sourceRevisions": {
     "widgets": "f739c7876b81304bdc72e7eaa307702da269ac31",
     "qml": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
   },
-  "basis": "Criterion-level assessment of the pinned Qt Widgets / GUI-QML source comparison, with the recorded recipient-note failure included. Implementation parity does not imply runtime acceptance. Missing screenshots, untested hardware and untested platforms do not by themselves reduce implementation parity. RPC capability counts where the Widgets baseline also permits RPC.",
-  "groupRule": "Parity when every subfeature is at parity; not implemented when every subfeature is absent; partial parity for any other combination.",
+  "basis": "Rough user-outcome assessment of the pinned Qt Widgets / GUI-QML comparison, including recorded defects. Parity means the main user goal is achieved through a supported, reasonably usable application workflow. Different control placement, file versus clipboard transfer, or additional straightforward steps do not alone reduce parity. Missing capabilities, incompatible transaction/wallet variants, and broken outcomes remain explicit gaps. Backend RPC availability or an unverified workaround alone is not an equivalent GUI workflow. Evidence coverage and acceptance remain separate.",
+  "groupRule": "Each feature group has an explicit main goal and a reasoned overall assessment. Parity means that main goal is achieved; secondary gaps remain visible in subfeature assessments. Partial parity means an important part of the main goal is missing or broken. Not implemented means the main goal has no supported workflow. Group status is not an all-subfeatures tally.",
   "criteria": {
     "F01.S01": {
       "status": "parity",
@@ -46,8 +46,8 @@
       "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
     },
     "F02.S04": {
-      "status": "partial",
-      "reason": "Individual wallets can be closed; closing all wallets at once is missing."
+      "status": "parity",
+      "reason": "Users can close every loaded wallet by closing them individually. A close-all shortcut changes convenience, not the final wallet state."
     },
     "F03.S01": {
       "status": "parity",
@@ -58,8 +58,8 @@
       "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
     },
     "F03.S03": {
-      "status": "partial",
-      "reason": "The restored wallet name comes from the filename; an independent name cannot be chosen."
+      "status": "parity",
+      "reason": "The recovered name is taken from the backup filename, so choosing that filename before import achieves the naming goal without a separate naming dialog."
     },
     "F03.S04": {
       "status": "not-implemented",
@@ -78,8 +78,8 @@
       "reason": "Core migration preserves wallet contents; funded and watch-only preservation were not exercised by the empty test fixtures."
     },
     "F04.S04": {
-      "status": "partial",
-      "reason": "Migrated wallets open automatically; choosing to open them later is missing."
+      "status": "parity",
+      "reason": "Migration produces an accessible wallet. Automatic opening instead of a defer-open choice changes timing; the wallet can be closed and reopened later."
     },
     "F05.S01": {
       "status": "not-implemented",
@@ -126,8 +126,8 @@
       "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
     },
     "F07.S01": {
-      "status": "partial",
-      "reason": "Balance and pending activity are shown; the complete available, pending, immature and total breakdown is missing."
+      "status": "parity",
+      "reason": "Balance and pending activity provide the main view of wallet funds. The missing full immature/mined/available breakdown remains a reporting difference in this rough assessment."
     },
     "F07.S02": {
       "status": "parity",
@@ -166,8 +166,8 @@
       "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
     },
     "F08.S06": {
-      "status": "not-implemented",
-      "reason": "Payment QR images cannot be shared by drag and drop."
+      "status": "parity",
+      "reason": "QR images can be copied or saved and shared with another application. Drag-and-drop export is absent, but the image-sharing goal is achieved."
     },
     "F08.S07": {
       "status": "parity",
@@ -186,8 +186,8 @@
       "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
     },
     "F09.S02": {
-      "status": "partial",
-      "reason": "Addresses can be entered or pasted; selecting a saved recipient is missing."
+      "status": "parity",
+      "reason": "A recipient can be entered or pasted into a payment. A saved-recipient picker is absent, but choosing the payment destination remains possible."
     },
     "F09.S03": {
       "status": "partial",
@@ -226,8 +226,8 @@
       "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
     },
     "F10.S03": {
-      "status": "not-implemented",
-      "reason": "Operating-system payment-link delivery and forwarding to an already-running application are missing."
+      "status": "parity",
+      "reason": "A payment request from another application can be pasted or imported into the running GUI. Automatic operating-system delivery and forwarding are absent; the request-handling outcome is available through explicit import."
     },
     "F11.S01": {
       "status": "parity",
@@ -258,8 +258,8 @@
       "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
     },
     "F12.S04": {
-      "status": "partial",
-      "reason": "Coin amount, address, label and age are available; confirmation counts are missing."
+      "status": "parity",
+      "reason": "Amount, address, label, age, sorting and grouping let users compare funding coins. Exact confirmation counts are missing, but the main coin-comparison task is available."
     },
     "F12.S05": {
       "status": "parity",
@@ -298,12 +298,12 @@
       "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
     },
     "F13.S05": {
-      "status": "partial",
-      "reason": "Unsigned PSBTs can be saved to a file; clipboard export is missing."
+      "status": "parity",
+      "reason": "Saving an unsigned PSBT file lets the user hand the transaction to another signer. Clipboard export is an alternative transfer method, not a missing signing handoff."
     },
     "F14.S01": {
       "status": "partial",
-      "reason": "PSBT file import is available; clipboard import is missing, and recipient/output-script compatibility is limited."
+      "reason": "File import achieves the transfer intent without clipboard support, but recipient and output-script restrictions still prevent importing some PSBTs."
     },
     "F14.S02": {
       "status": "parity",
@@ -322,8 +322,8 @@
       "reason": "There is no reachable workflow for adding local partial signatures and passing the result to another signer."
     },
     "F14.S06": {
-      "status": "partial",
-      "reason": "PSBT files can be saved, including incomplete external-signer results; clipboard export is missing."
+      "status": "parity",
+      "reason": "A PSBT file, including an incomplete external-signer result, can be saved for another signer. Clipboard export is absent, but the transfer goal is achieved."
     },
     "F14.S07": {
       "status": "parity",
@@ -362,8 +362,8 @@
       "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
     },
     "F16.S03": {
-      "status": "partial",
-      "reason": "History can be searched, but its chronological order cannot be changed by the user."
+      "status": "parity",
+      "reason": "Search and date/type/amount filters let users locate transactions. Fixed chronological ordering replaces configurable sorting for the main history-navigation goal."
     },
     "F16.S04": {
       "status": "parity",
@@ -426,8 +426,8 @@
       "reason": "Address-book search and user-selected sorting are missing."
     },
     "F18.S05": {
-      "status": "partial",
-      "reason": "Receiving addresses can be copied; sending-contact records and their clipboard workflows are missing."
+      "status": "parity",
+      "reason": "Existing addresses can be copied, and editable address notes use a selectable text field. The clipboard goal is available for existing records; missing sending-contact management is assessed separately."
     },
     "F18.S06": {
       "status": "not-implemented",
@@ -454,8 +454,8 @@
       "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
     },
     "F20.S03": {
-      "status": "partial",
-      "reason": "Storage requirements and pruning are explained; pruning consequences for wallet recovery are not."
+      "status": "parity",
+      "reason": "Storage checks and pruning choices let the user plan disk usage. Missing explanation of wallet-recovery consequences is retained as a guidance gap, rather than blocking the main storage-planning goal."
     },
     "F20.S04": {
       "status": "parity",
@@ -518,8 +518,8 @@
       "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
     },
     "F22.S03": {
-      "status": "partial",
-      "reason": "Traffic time ranges can be selected; clearing history to start a fresh observation is missing."
+      "status": "parity",
+      "reason": "Selecting a traffic time range lets the user focus an observation. Clearing the entire history is absent, but the main time-focused monitoring goal is available."
     },
     "F22.S04": {
       "status": "parity",
@@ -582,16 +582,16 @@
       "reason": "Window preferences are implemented; automatic login startup is missing."
     },
     "F23.S10": {
-      "status": "partial",
-      "reason": "Configuration precedence is visible; opening the configuration file from the application is missing."
+      "status": "parity",
+      "reason": "Advanced configuration remains supported through the configuration file and setting precedence. Opening the file with an external editor instead of an in-app action changes the access path."
     },
     "F23.S11": {
       "status": "parity",
       "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
     },
     "F23.S12": {
-      "status": "partial",
-      "reason": "A startup option resets settings with a backup; there is no in-app reset workflow."
+      "status": "parity",
+      "reason": "The supported startup reset restores defaults and retains a settings backup. Starting with that option instead of an in-app reset action achieves the same recovery outcome."
     },
     "F24.S01": {
       "status": "parity",
@@ -602,8 +602,8 @@
       "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
     },
     "F24.S03": {
-      "status": "not-implemented",
-      "reason": "The tray has visibility and quit actions, but no payment, signing, settings or diagnostic shortcuts."
+      "status": "parity",
+      "reason": "Restore the window through the tray or Dock and use application menus for payments, signing, settings and diagnostics. The shortcut location differs, but the tasks remain accessible."
     },
     "F24.S04": {
       "status": "parity",
@@ -626,8 +626,8 @@
       "reason": "The desktop-notification workflow, including its fallback and historical-activity suppression, is not connected. Separate in-app message dialogs are covered by F30."
     },
     "F25.S04": {
-      "status": "not-implemented",
-      "reason": "The desktop-notification workflow, including its fallback and historical-activity suppression, is not connected. Separate in-app message dialogs are covered by F30."
+      "status": "parity",
+      "reason": "Critical in-app error dialogs deliver the required error message when desktop notifications are unavailable. The desktop-notification delivery channel itself remains absent."
     },
     "F25.S05": {
       "status": "not-implemented",
@@ -646,8 +646,8 @@
       "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
     },
     "F26.S04": {
-      "status": "not-implemented",
-      "reason": "Diagnostics share the main application window; there is no separate diagnostics window alongside wallet activity."
+      "status": "parity",
+      "reason": "Wallet activity and diagnostics remain available in the same application. Switching views replaces a separate diagnostics window; simultaneous side-by-side display is not provided."
     },
     "F26.S05": {
       "status": "parity",
@@ -750,24 +750,24 @@
       "reason": "Busy states and node synchronization are shown; general wallet-operation and rescan progress are missing."
     },
     "F30.S06": {
-      "status": "partial",
-      "reason": "Synchronization progress and estimated remaining time are shown; the processing rate is missing."
+      "status": "parity",
+      "reason": "Progress and estimated remaining time let the user assess synchronization. A separate processing-rate number is absent, but the main progress-assessment goal is achieved."
     },
     "F30.S07": {
       "status": "parity",
       "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
     },
     "F31.S01": {
-      "status": "partial",
-      "reason": "In-app payment-request import and drag and drop work; operating-system delivery is missing."
+      "status": "parity",
+      "reason": "A payment request can be imported, pasted or dropped into the application. Automatic operating-system delivery is absent, but transferring a request into a payment is supported."
     },
     "F31.S02": {
       "status": "parity",
       "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
     },
     "F31.S03": {
-      "status": "partial",
-      "reason": "Light/dark appearance can be chosen manually; following the desktop theme automatically is missing."
+      "status": "parity",
+      "reason": "Choosing light or dark mode manually lets the application match the desktop appearance. Automatic following of later desktop-theme changes is absent."
     },
     "F31.S04": {
       "status": "not-implemented",
@@ -820,6 +820,179 @@
     "F34.S03": {
       "status": "not-implemented",
       "reason": "There is no graphical wallet-rescan cancellation workflow."
+    }
+  },
+  "assessmentStyle": "rough-user-outcome",
+  "groups": {
+    "F01": {
+      "status": "parity",
+      "goal": "Create a usable wallet for receiving and spending or monitoring funds.",
+      "reason": "Standard, encrypted, watch-only and external-signer creation achieve the main wallet-creation goal. Standalone blank-wallet creation remains a secondary gap."
+    },
+    "F02": {
+      "status": "parity",
+      "goal": "Open, select and close the wallets the user wants to work with.",
+      "reason": "Opening, keeping several wallets loaded, switching and closing each wallet achieve the goal. Closing all wallets requires repeated individual actions."
+    },
+    "F03": {
+      "status": "partial",
+      "goal": "Protect a wallet with a backup and recover it when needed.",
+      "reason": "Backup and supported-file restoration work, and filename-based naming is equivalent. Recovery of legacy backups still lacks a supported restore-and-migrate flow."
+    },
+    "F04": {
+      "status": "parity",
+      "goal": "Convert an existing legacy wallet into a usable current-format wallet.",
+      "reason": "Migration, backup preservation and access to the migrated wallet are implemented. Automatic opening changes the sequence, not the migration outcome."
+    },
+    "F05": {
+      "status": "not-implemented",
+      "goal": "Export a portable wallet copy that monitors funds without spending keys.",
+      "reason": "Creating a new watch-only wallet does not provide an export of the existing spending wallet. The watch-only wallet-file export outcome is absent."
+    },
+    "F06": {
+      "status": "parity",
+      "goal": "Protect spending keys and authorize temporary access with a passphrase.",
+      "reason": "Encryption, passphrase changes, temporary unlocking and automatic relocking achieve key protection. Missing live lock-status display remains a separate visibility gap."
+    },
+    "F07": {
+      "status": "parity",
+      "goal": "Understand wallet funds and recent activity.",
+      "reason": "Balance, pending activity, recent/full history and synchronization status achieve the overview goal. Detailed balance categories and privacy masking remain visible differences."
+    },
+    "F08": {
+      "status": "parity",
+      "goal": "Generate and share a receiving destination or reusable payment request.",
+      "reason": "Address generation, request details, QR codes and request reuse achieve the receiving goal. File/clipboard sharing replaces dragging; device address verification remains a specific unsupported capability."
+    },
+    "F09": {
+      "status": "partial",
+      "goal": "Prepare and send the intended payment with reliable recipient information.",
+      "reason": "Payment preparation, signing and broadcast work, but recipient-note loss is a recorded defect and selected-recipient fee deduction remains unsupported. These are functional gaps, not control-placement differences."
+    },
+    "F10": {
+      "status": "parity",
+      "goal": "Turn a Bitcoin payment request into a prepared payment.",
+      "reason": "Entering, pasting, importing or dropping a request populates the payment details. Automatic operating-system forwarding is a different entry path, not required for the main request-to-payment outcome."
+    },
+    "F11": {
+      "status": "parity",
+      "goal": "Choose a fee appropriate to the desired confirmation speed.",
+      "reason": "Estimated targets, custom rates, fee review and unavailable-estimate feedback provide the intended fee choice."
+    },
+    "F12": {
+      "status": "parity",
+      "goal": "Choose and control which coins fund a payment.",
+      "reason": "Input selection, grouping, locking and selected-funds review achieve funding control. Clipboard details, explicit confirmation counts and custom change destinations remain secondary limitations."
+    },
+    "F13": {
+      "status": "partial",
+      "goal": "Prepare and transfer an unsigned transaction for later signing.",
+      "reason": "PSBT file export provides the signing handoff without clipboard support. Wallets holding only some required multisig keys still cannot use the unsigned-payment flow, leaving a real wallet-compatibility gap."
+    },
+    "F14": {
+      "status": "partial",
+      "goal": "Review, advance signing and broadcast an imported PSBT.",
+      "reason": "File import/export supplies the transfer paths, but partial local multisig signing and some recipient/output-script cases are unsupported. These block transaction workflows rather than just alternative controls."
+    },
+    "F15": {
+      "status": "partial",
+      "goal": "Use an external device to keep keys separate and authorize wallet activity.",
+      "reason": "External signing and key separation are connected, but users cannot verify receiving addresses on the device. That trusted-device check is a substantive missing capability."
+    },
+    "F16": {
+      "status": "parity",
+      "goal": "Find, inspect and export wallet transaction activity.",
+      "reason": "History search, filters, details and CSV export achieve the review and record-keeping goal. Fixed sorting and limited clipboard/label editing remain secondary differences."
+    },
+    "F17": {
+      "status": "partial",
+      "goal": "Resolve unconfirmed transactions and recover spending flexibility.",
+      "reason": "Fee increases work, but abandonment and fee-bump PSBT export are absent. Users cannot complete those recovery or external-signing paths."
+    },
+    "F18": {
+      "status": "partial",
+      "goal": "Maintain and reuse labeled payment-address records.",
+      "reason": "Receiving addresses can be viewed, labeled and copied. Sending-contact management and address-record export are absent, leaving a substantial part of address-book use unavailable."
+    },
+    "F19": {
+      "status": "parity",
+      "goal": "Sign a message or check that a signature proves control of an address.",
+      "reason": "Message signing, verification, encrypted-wallet access and signature copying achieve the goal for the supported address type."
+    },
+    "F20": {
+      "status": "parity",
+      "goal": "Set up storage and synchronize a usable node.",
+      "reason": "Data-directory selection, pruning, storage checks, network selection and synchronization feedback achieve setup. Missing wallet-recovery guidance does not block the main setup workflow."
+    },
+    "F21": {
+      "status": "parity",
+      "goal": "Configure node connectivity and manage peer access.",
+      "reason": "Network routing/settings, peer inspection, disconnection and bans provide connectivity control. Copying entries from the ban list remains a secondary convenience gap."
+    },
+    "F22": {
+      "status": "parity",
+      "goal": "Inspect node behavior and perform advanced operations.",
+      "reason": "Node/traffic/log views and wallet-aware RPC tools provide diagnostics and command access. Selectable time ranges provide focused observation without clearing traffic history."
+    },
+    "F23": {
+      "status": "partial",
+      "goal": "Adjust and recover application behavior through supported preferences.",
+      "reason": "Many settings and startup reset are available, and an external editor is an equivalent configuration path. Missing spending-policy preferences and startup integration still prevent some requested behavior choices."
+    },
+    "F24": {
+      "status": "parity",
+      "goal": "Keep the node accessible in the background and restore or quit it.",
+      "reason": "Tray/Dock visibility, background operation and quit behavior achieve the shell goal. Restoring the main window before using task menus replaces duplicate tray shortcuts."
+    },
+    "F25": {
+      "status": "not-implemented",
+      "goal": "Receive transaction and application notifications through the desktop.",
+      "reason": "Desktop notification delivery is not connected. Critical in-app dialogs cover a fallback subfeature, but do not implement the main desktop-notification channel."
+    },
+    "F26": {
+      "status": "parity",
+      "goal": "Manage application visibility, placement and access to wallet and node views.",
+      "reason": "Window placement/visibility persist, background operation works, and wallet/node views remain accessible. Switching views replaces a separate diagnostics window."
+    },
+    "F27": {
+      "status": "partial",
+      "goal": "Start and stop the node predictably, including recovery and system shutdown.",
+      "reason": "Normal startup, cancellation and clean exit work. Unreadable-settings recovery and Windows session-shutdown coordination have no equivalent supported flow."
+    },
+    "F28": {
+      "status": "parity",
+      "goal": "Reach common wallet and node tasks and switch active wallets.",
+      "reason": "Application navigation, wallet selection, menus and shortcuts provide the intended task access."
+    },
+    "F29": {
+      "status": "partial",
+      "goal": "Understand the current state of the node and active wallet.",
+      "reason": "Connectivity, sync and amount units are visible, but live wallet lock and key-generation state are missing. These are unavailable state information, not layout differences."
+    },
+    "F30": {
+      "status": "parity",
+      "goal": "Understand application feedback and make informed operation decisions.",
+      "reason": "Messages, confirmations, busy states and sync progress/ETA achieve the main feedback goal. General wallet/rescan progress remains a specific gap; a separate sync-rate number is not required."
+    },
+    "F31": {
+      "status": "partial",
+      "goal": "Integrate wallet use with desktop behavior and application help.",
+      "reason": "Explicit request import and manual theme choice achieve their user outcomes. Missing macOS background-throttling protection and command-line help access remain substantive gaps."
+    },
+    "F32": {
+      "status": "not-implemented",
+      "goal": "Conceal wallet values and activity with a persistent privacy preference.",
+      "reason": "There is no equivalent balance/activity masking or history-restriction workflow."
+    },
+    "F33": {
+      "status": "parity",
+      "goal": "Run and manage a node without enabling wallet features.",
+      "reason": "Wallet-disabled operation retains node tools, preferences and the application shell."
+    },
+    "F34": {
+      "status": "partial",
+      "goal": "Rediscover wallet history while monitoring and controlling a rescan.",
+      "reason": "RPC can initiate rescanning as the baseline allows, but the GUI lacks rescan progress and cancellation. The monitored, controllable rescan outcome is incomplete."
     }
   }
 }
