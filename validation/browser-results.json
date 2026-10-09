@@ -1,9 +1,13 @@
 {
-  "checkedAt": "2026-10-09T23:09:19.753Z",
+  "checkedAt": "2026-10-09T23:39:07.752Z",
   "basePath": "/bitcoin-gui-evidence/",
   "outcomes": [
     {
       "name": "Catalog has all 34 groups and the pinned totals",
+      "status": "passed"
+    },
+    {
+      "name": "Full-parity groups and subfeatures default to merge without assigning partial or missing items",
       "status": "passed"
     },
     {
@@ -99,7 +103,11 @@
       "status": "passed"
     },
     {
-      "name": "Existing browser-local review records keep their notes and start with no requirement",
+      "name": "Older review notes are preserved while full-parity items receive the merge default",
+      "status": "passed"
+    },
+    {
+      "name": "Saved requirements including explicit Unassigned take precedence over automatic merge defaults",
       "status": "passed"
     },
     {

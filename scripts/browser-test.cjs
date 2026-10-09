@@ -61,6 +61,25 @@ async function main() {
     assert.equal(await page.$$eval('[data-group-link]',els=>els.length),34);
   });
   await page.screenshot({path:output+'/catalog-desktop.png',fullPage:false});
+  await check('Full-parity groups and subfeatures default to merge without assigning partial or missing items',async()=>{
+    await value('[data-filter="requirement"]','merge');
+    assert.equal(await page.$$eval('.group-card',els=>els.length),19);
+    await page.click('[data-view="criteria"]');
+    const ids=await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent));
+    assert.equal(ids.length,150);
+    assert.ok(ids.includes('F03.S01')); // Full-parity subfeature inside a partial group.
+    assert.ok(ids.includes('F25.S04')); // Full-parity fallback inside an absent group.
+    assert.ok(!ids.includes('F01.S04')); // Missing subfeature inside a full-parity group.
+    assert.ok(!ids.includes('F09.S03')); // The recorded failure stays partial.
+    await value('[data-filter="requirement"]','unassigned');
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),53);
+    await value('[data-filter="requirement"]','release');
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),0);
+    await value('[data-filter="requirement"]','not-needed');
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),0);
+    assert.equal(await page.$eval('#review-progress-text',el=>el.textContent),'0 / 203');
+    await page.click('[data-action="clear-filters"]');
+  });
   await check('Criterion search and subfeature view return the exact ID',async()=>{
     await page.type('#catalog-search','F19.S03');
     assert.equal(await page.$$eval('.group-card',els=>els.length),1);
@@ -309,16 +328,16 @@ async function main() {
     const imported=await context.newPage();
     imported.on('pageerror',error=>errors.push(error.message));
     await imported.goto(base+'#feature/F19',{waitUntil:'networkidle0'});
-    assert.ok(await imported.$('.group-requirement [data-requirement="unassigned"]'));
+    assert.ok(await imported.$('.group-requirement [data-requirement="merge"]'));
     await (await imported.$('#import-file')).uploadFile(output+'/roundtrip.json');
-    await imported.waitForSelector('.group-requirement [data-requirement="merge"]');
+    await imported.waitForFunction(()=>document.querySelector('#toast').textContent==='Review imported.');
     assert.ok(await imported.$('[id="F19.S01"] [data-requirement="merge"] .requirement-origin'));
     assert.ok(await imported.$('[id="F19.S02"] [data-requirement="release"]'));
     assert.ok(await imported.$('[id="F19.S03"] [data-requirement="not-needed"]'));
     assert.match(await imported.$eval('[id="F19.S01"] .saved-note',el=>el.textContent),/Checked signing scope/);
     await context.close();
   });
-  await check('Existing browser-local review records keep their notes and start with no requirement',async()=>{
+  await check('Older review notes are preserved while full-parity items receive the merge default',async()=>{
     const context=await browser.createBrowserContext();
     const legacy=await context.newPage();
     legacy.on('pageerror',error=>errors.push(error.message));
@@ -326,10 +345,32 @@ async function main() {
     await legacy.evaluate(()=>localStorage.setItem('bitcoin-gui-evidence-review-v1:'+window.REVIEW_EVIDENCE.catalogId,JSON.stringify({'F19.S01':{status:'reviewed',note:'Existing local note',updatedAt:'2026-10-08T12:00:00Z'}})));
     await legacy.reload({waitUntil:'networkidle0'});
     assert.match(await legacy.$eval('[id="F19.S01"] .saved-note',el=>el.textContent),/Existing local note/);
-    assert.ok(await legacy.$('[id="F19.S01"] [data-requirement="unassigned"]'));
+    assert.ok(await legacy.$('[id="F19.S01"] [data-requirement="merge"]'));
     assert.equal(await legacy.$eval('#review-progress-text',el=>el.textContent),'1 / 203');
     await legacy.click('[data-review="F19.S01"]');
     assert.equal(await legacy.$eval('#review-requirement',el=>el.value),'inherit');
+    await context.close();
+  });
+  await check('Saved requirements including explicit Unassigned take precedence over automatic merge defaults',async()=>{
+    const context=await browser.createBrowserContext();
+    const saved=await context.newPage();
+    saved.on('pageerror',error=>errors.push(error.message));
+    await saved.goto(base+'#feature/F19',{waitUntil:'networkidle0'});
+    await saved.evaluate(()=>{
+      const record=requirement=>({status:'unreviewed',note:'Saved choice',requirement,updatedAt:'2026-10-09T12:00:00Z'});
+      localStorage.setItem('bitcoin-gui-evidence-review-v2:'+window.REVIEW_EVIDENCE.catalogId,JSON.stringify({
+        F19:record('release'), 'F19.S01':record('unassigned'), 'F19.S02':record('not-needed'), F02:record('unassigned')
+      }));
+    });
+    await saved.reload({waitUntil:'networkidle0'});
+    assert.ok(await saved.$('.group-requirement [data-requirement="release"]'));
+    assert.ok(await saved.$('[id="F19.S01"] [data-requirement="unassigned"]'));
+    assert.ok(await saved.$('[id="F19.S02"] [data-requirement="not-needed"]'));
+    assert.ok(await saved.$('[id="F19.S03"] [data-requirement="release"]'));
+    await saved.goto(base+'#feature/F02',{waitUntil:'networkidle0'});
+    assert.ok(await saved.$('.group-requirement [data-requirement="unassigned"]'));
+    assert.equal(await saved.$$eval('.criterion-card [data-requirement="merge"]',els=>els.length),0);
+    assert.equal(await saved.$eval('#review-progress-text',el=>el.textContent),'0 / 203');
     await context.close();
   });
   await go('#catalog?review=reviewed&view=criteria');
@@ -340,7 +381,7 @@ async function main() {
     assert.equal(await page.$$eval('.criterion-result',els=>els.length),1);
     assert.match(await page.$eval('.criterion-result',el=>el.textContent),/F01.S01/);
   });
-  await go('#catalog?requirement=merge');
+  await go('#catalog?requirement=merge&q=F19');
   await check('Requirement filters follow group or subfeature scope and persist in links',async()=>{
     assert.deepEqual(await page.$$eval('.group-card .criterion-id',els=>els.map(el=>el.textContent)),['F19']);
     assert.ok(await page.$('.group-card [data-requirement="merge"]'));
@@ -355,9 +396,10 @@ async function main() {
     await page.click('[data-view="groups"]');
     assert.equal(await page.$$eval('.group-card',els=>els.length),0);
     await value('[data-filter="requirement"]','unassigned');
-    assert.equal(await page.$$eval('.group-card',els=>els.length),33);
+    await page.$eval('#catalog-search',el=>{el.value='';el.dispatchEvent(new Event('input',{bubbles:true}));});
+    assert.equal(await page.$$eval('.group-card',els=>els.length),15);
     await page.click('[data-view="criteria"]');
-    assert.equal(await page.$$eval('.criterion-result',els=>els.length),200);
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),53);
   });
   await go('#catalog?requirement=merge&parity=parity&review=reviewed&view=criteria');
   await check('Requirement combines with parity and review filters and clearing filters restores everything',async()=>{
@@ -366,7 +408,7 @@ async function main() {
     await page.click('.criterion-result');
     await page.waitForSelector('[id="F19.S01"]');
     assert.equal(await page.$$eval('.criterion-card',els=>els.length),3); // Direct links retain access to the whole group.
-    await go('#catalog?requirement=merge');
+    await go('#catalog?requirement=merge&q=F19');
     await page.click('.group-card');
     await page.waitForSelector('[id="F19.S03"]');
     assert.equal(await page.$$eval('.criterion-card',els=>els.length),3); // Group filter does not hide overrides.
@@ -450,6 +492,7 @@ async function main() {
   await page.screenshot({path:output+'/catalog-mobile.png',fullPage:false});
   await check('Requirements can be filtered and edited on mobile in both themes without losing review notes',async()=>{
     await value('[data-filter="requirement"]','merge');
+    await page.type('#catalog-search','F19');
     assert.equal(await page.$$eval('.group-card',els=>els.length),1);
     await page.click('[data-view="criteria"]');
     assert.deepEqual(await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent)),['F19.S01']);
