@@ -17,13 +17,17 @@ Visit `http://localhost:8080`. Any ordinary static host can serve the same `dist
 - Dark mode is the default. Use the sun/moon button in the top bar to switch themes; the browser remembers your preference. Original application captures keep their recorded colors.
 - Search feature names, criterion IDs, and evidence descriptions. Press `/` to focus search.
 - Filter GUI-QML by **Parity**, **Partial parity**, or **Not implemented**. In Groups view this applies to the entire feature group; in Subfeatures view it applies to individual capabilities. Qt Widgets stays visible as the reference in comparisons and galleries.
-- Combine implementation parity with evidence coverage, capture availability, feature area, and personal review status. Full evidence requires targeted automated evidence and a matching capture with no recorded failure; partial evidence includes the remaining criteria. Evidence coverage and implementation parity are independent.
+- Combine implementation parity with requirements, evidence coverage, capture availability, feature area, and personal review status. Full evidence requires targeted automated evidence and a matching capture with no recorded failure; partial evidence includes the remaining criteria. Evidence coverage and implementation parity are independent.
 - Switch between feature groups and individual subfeatures. Filter state is included in catalog links.
 - Open a group for per-subfeature application comparisons, modules/tests, or a capture gallery.
 - Inspect original screenshots with full-size zoom, timestamps, hashes, and keyboard navigation.
 - Mark a comparison reviewed or needing follow-up, add notes, and export/import a JSON review record.
+- Mark a feature **Needed for merge**, **Needed for release**, or **Not needed**. **Unassigned** means no decision yet. Set a group default using **My requirement → Change** on its feature page; use a subfeature's review button to override it or restore **Use group choice**. Changing a group preserves individual overrides.
+- Filter **My requirement** in Groups view to match group choices, or in Subfeatures view to match individual choices including inherited defaults. Requirement choices are independent of parity and reviewed/follow-up status; assigning a requirement does not mark anything reviewed.
 
 Reviews are stored only in the browser, keyed to the exact evidence snapshot. They are not submitted to the hosting service or written into the evidence pack. Import preserves existing differing records and reports conflicts. A different snapshot is rejected. If browser storage is unavailable, export before closing the page. Moving between the local file and a hosted origin requires export/import.
+
+Review exports use schema version 2 and include group requirements, individual overrides, review status, and notes. Version 1 review files and previously saved browser notes still load; missing requirements default to the group choice, initially Unassigned. **Not needed** is always an explicit choice. Exported version 2 files require this updated browser to import.
 
 Review status is separate from acceptance. Evidence levels, the one known failing QML script, and the original scope limitations remain visible. The site does not turn a screenshot or a related passing test into an acceptance decision.
 

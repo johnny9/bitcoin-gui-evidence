@@ -2,13 +2,16 @@
 
 Validated October 9, 2026, against evidence snapshot `b4b1026b74ad8bf0a1628c9889b82193d33d210c3aa0170e94783f371fe15c0b`.
 
-- **32 browser checks passed**, using Chromium 139 in the existing Puppeteer 24.16.0 image, with external networking disabled.
+- **40 browser checks passed**, using Chromium 139 in the existing Puppeteer 24.16.0 image, with external networking disabled.
 - All 34 feature routes expose their 203 original criteria; all 116 original images decode at their recorded dimensions.
 - Search, GUI-QML evidence/capture filters, review filters, deep links, galleries, zoom, keyboard search, mobile menus, and local-file access passed.
 - Parity filtering is independent of evidence coverage. Group results are 19 parity, 12 partial parity, and 3 not implemented; subfeature results are 150 parity, 15 partial parity, and 38 not implemented. Each group has an explicit main user goal and a reasoned assessment, independent of its subfeature tally. Browser checks cover group/subfeature scope, combined evidence and parity filters, reload persistence, mobile filtering, and the unchanged Widgets reference.
 - Regression cases include equivalent file/clipboard sharing at parity while the original missing drag-and-drop evidence remains visible, wallet creation at parity despite a secondary blank-wallet gap, and desktop notifications absent despite an in-app error fallback. Source-only automatic-backup evidence stays at implementation parity; device address verification and PSBT import compatibility remain partial, legacy backup restore/migrate remains absent, and the recorded recipient-note failure remains partial.
 - Full evidence selects 89 GUI-QML criteria with targeted automated evidence and a capture; partial selects the remaining 114, including the 43 original missing-workflow records and the known failure. Original evidence records describe the exact methods tested; a supported equivalent workflow can now reach implementation parity without changing those historical records. The evidence sets are disjoint and cover all 203 criteria. Capture filters use QML records even when Widgets has a capture. Widgets remains visible in comparisons and galleries. Legacy application/evidence links migrate to the simplified filters.
 - Personal notes persist locally and render markup as text. Export/import preserves the snapshot identity; import rejects an unrelated snapshot.
+- Requirements support Needed for merge, Needed for release, Not needed, and Unassigned. Group defaults flow to subfeatures; individual overrides survive group edits, and inheritance or Unassigned can be restored. Assigning requirements leaves review progress unchanged. Group/subfeature filter scope, combined parity/review filters, URL persistence, reset, and direct links passed.
+- Version 2 exports retain group defaults, subfeature overrides, notes, and review status when imported into a fresh browser. Version 1 files and existing browser records migrate without losing notes. Invalid requirements are rejected, and conflicting imports preserve existing choices and notes. Versioned browser storage isolates new choices from older open tabs.
+- Requirement editing and filtering passed at a 390-pixel viewport, including dark/light dialogs, preserved notes, and no horizontal overflow. Catalog, group controls, and review dialogs were visually inspected.
 - Mobile catalog, feature, tests, and provenance views fit a 390-pixel viewport without page-level horizontal overflow. Wide test tables scroll within their panels.
 - No JavaScript errors or missing requested local assets were recorded.
 - The Python integrity checker validated all 116 original capture hashes, all status mappings, the known failed criterion, and 70 generated local link targets. JavaScript syntax checks passed.
@@ -22,6 +25,8 @@ Dark-mode QA screenshots are in the workspace's `../.validation/gui-feature-revi
 Filter-update QA screenshots and results are in `../.validation/gui-feature-review-filters-20261009/`.
 
 Outcome-assessment QA screenshots and results are in the ignored `.validation/outcomes/` directory; the earlier parity-filter run is in `.validation/parity/`. Desktop and mobile goal panels and a subfeature with an equivalent sharing workflow were visually inspected. Every assessment is checked against the original group/criterion IDs, source revisions, and snapshot identity; all original evidence statuses and capture hashes are preserved.
+
+Requirement-review QA screenshots and results are in `.validation/requirements/`. The implementation assessments, snapshot identity, original evidence records, and capture bytes are unchanged by this review-workflow update.
 
 The browser run initially exposed a sidebar transition intercepting the menu click during a desktop-to-mobile resize. Removing that transition fixed the interaction; the final full run passed. Chrome cache configuration was adjusted for the container account during setup.
 

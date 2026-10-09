@@ -49,6 +49,11 @@ async function main() {
     await page.waitForFunction(expected=>location.hash===expected&&document.querySelector('#main').dataset.route===expected,{},hash);
   }
   async function value(selector,value){await page.select(selector,value);}
+  async function setRequirement(id, requirement){
+    await page.click(`[data-review="${id}"]`);
+    await page.select('#review-requirement',requirement);
+    await page.click('#review-form button[type="submit"]');
+  }
   await go('#catalog');
   await check('Catalog has all 34 groups and the pinned totals',async()=>{
     assert.equal(await page.$$eval('.group-card',els=>els.length),34);
@@ -221,10 +226,44 @@ async function main() {
     await page.click('[data-area="all"]');
   });
   await go('#feature/F19');
+  await check('A group requirement becomes the default without marking subfeatures reviewed',async()=>{
+    await page.click('[data-review="F19"]');
+    assert.equal(await page.$eval('#review-detail-fields',el=>el.hidden),true);
+    assert.deepEqual(await page.$$eval('#review-requirement option',els=>els.map(el=>el.textContent)),['Needed for merge','Needed for release','Not needed','Unassigned']);
+    await page.select('#review-requirement','merge');
+    await page.click('#review-form button[type="submit"]');
+    assert.ok(await page.$('[id="F19.S01"] [data-requirement="merge"]'));
+    assert.match(await page.$eval('[id="F19.S01"] .requirement-badge',el=>el.textContent),/from group/);
+    assert.equal(await page.$eval('#review-progress-text',el=>el.textContent),'0 / 203');
+    await page.reload({waitUntil:'networkidle0'});
+    assert.ok(await page.$('.group-requirement [data-requirement="merge"]'));
+    await page.screenshot({path:output+'/requirement-group.png'});
+  });
+  await check('Subfeature overrides survive group edits, and inheritance or Unassigned can be restored',async()=>{
+    await setRequirement('F19.S02','release');
+    await setRequirement('F19.S03','not-needed');
+    await setRequirement('F19','release');
+    assert.ok(await page.$('[id="F19.S01"] [data-requirement="release"]'));
+    assert.ok(await page.$('[id="F19.S03"] [data-requirement="not-needed"]'));
+    await setRequirement('F19','merge');
+    assert.ok(await page.$('[id="F19.S02"] [data-requirement="release"]'));
+    await setRequirement('F19.S01','unassigned');
+    assert.ok(await page.$('[id="F19.S01"] [data-requirement="unassigned"]'));
+    await setRequirement('F19.S01','inherit');
+    assert.ok(await page.$('[id="F19.S01"] [data-requirement="merge"]'));
+    await setRequirement('F19','unassigned');
+    assert.ok(await page.$('[id="F19.S01"] [data-requirement="unassigned"]'));
+    assert.ok(await page.$('[id="F19.S02"] [data-requirement="release"]'));
+    await setRequirement('F19','merge');
+    assert.equal(await page.$eval('#review-progress-text',el=>el.textContent),'0 / 203');
+  });
   await check('Personal review notes save literally and survive reload',async()=>{
     await page.click('[data-review="F19.S01"]');
+    assert.equal(await page.$eval('#review-detail-fields',el=>el.hidden),false);
+    assert.equal(await page.$eval('#review-requirement',el=>el.value),'inherit');
     await page.select('#review-state','reviewed');
     await page.type('#review-note','Checked signing scope. <script>window.noteInjected = true</script>');
+    await page.screenshot({path:output+'/requirement-review.png'});
     await page.click('#review-form button[type="submit"]');
     await page.reload({waitUntil:'networkidle0'});
     assert.match(await page.$eval('[id="F19.S01"] .saved-note',el=>el.textContent),/<script>/);
@@ -238,16 +277,60 @@ async function main() {
     for(let tries=0;tries<50&&!files.length;tries++){files=(await fs.readdir(output+'/downloads')).filter(f=>f.endsWith('.json'));if(!files.length)await new Promise(r=>setTimeout(r,100));}
     assert.equal(files.length,1);
     const payload=JSON.parse(await fs.readFile(output+'/downloads/'+files[0],'utf8'));
-    assert.equal(payload.schemaVersion,1);assert.equal(payload.reviews['F19.S01'].status,'reviewed');assert.equal(payload.evidenceDate,'2026-10-08');
-    await fs.writeFile(output+'/import.json',JSON.stringify({...payload,reviews:{'F01.S01':{status:'followup',note:'Review import check',updatedAt:new Date().toISOString()}}}));
+    assert.equal(payload.schemaVersion,2);assert.equal(payload.reviews['F19.S01'].status,'reviewed');assert.equal(payload.evidenceDate,'2026-10-08');
+    assert.equal(payload.reviews.F19.requirement,'merge');
+    assert.equal(payload.reviews['F19.S01'].requirement,'inherit');
+    assert.equal(payload.reviews['F19.S02'].requirement,'release');
+    assert.equal(payload.reviews['F19.S03'].requirement,'not-needed');
+    await fs.writeFile(output+'/roundtrip.json',JSON.stringify(payload));
+    await fs.writeFile(output+'/import.json',JSON.stringify({...payload,schemaVersion:1,reviews:{'F01.S01':{status:'followup',note:'Review import check',updatedAt:new Date().toISOString()}}}));
     await fs.writeFile(output+'/wrong-snapshot.json',JSON.stringify({...payload,catalogId:'wrong-snapshot'}));
+    await fs.writeFile(output+'/conflict.json',JSON.stringify({...payload,reviews:{F19:{...payload.reviews.F19,requirement:'not-needed'},'F19.S01':{...payload.reviews['F19.S01'],note:'Must not replace existing note',requirement:'release'}}}));
+    await fs.writeFile(output+'/invalid.json',JSON.stringify({...payload,reviews:{'F19.S03':{...payload.reviews['F19.S03'],requirement:'urgent'}}}));
   });
-  await check('Review import accepts matching snapshots and rejects mismatches',async()=>{
+  await check('Older review files remain importable and wrong snapshots are rejected',async()=>{
     await (await page.$('#import-file')).uploadFile(output+'/import.json');
     await page.waitForFunction(()=>document.querySelector('#review-progress-text').textContent==='2 / 203');
     await (await page.$('#import-file')).uploadFile(output+'/wrong-snapshot.json');
     await page.waitForFunction(()=>document.querySelector('#toast').textContent.includes('different evidence snapshot'));
     assert.equal(await page.$eval('#review-progress-text',el=>el.textContent),'2 / 203');
+  });
+  await check('Review import preserves conflicting requirements and notes and rejects invalid choices',async()=>{
+    await (await page.$('#import-file')).uploadFile(output+'/conflict.json');
+    await page.waitForFunction(()=>document.querySelector('#toast').textContent.includes('Kept 2 existing records'));
+    assert.ok(await page.$('.group-requirement [data-requirement="merge"]'));
+    assert.match(await page.$eval('[id="F19.S01"] .saved-note',el=>el.textContent),/Checked signing scope/);
+    await (await page.$('#import-file')).uploadFile(output+'/invalid.json');
+    await page.waitForFunction(()=>document.querySelector('#toast').textContent.includes('invalid requirement'));
+    assert.ok(await page.$('[id="F19.S03"] [data-requirement="not-needed"]'));
+  });
+  await check('Exported requirements and notes round-trip into a fresh browser',async()=>{
+    const context=await browser.createBrowserContext();
+    const imported=await context.newPage();
+    imported.on('pageerror',error=>errors.push(error.message));
+    await imported.goto(base+'#feature/F19',{waitUntil:'networkidle0'});
+    assert.ok(await imported.$('.group-requirement [data-requirement="unassigned"]'));
+    await (await imported.$('#import-file')).uploadFile(output+'/roundtrip.json');
+    await imported.waitForSelector('.group-requirement [data-requirement="merge"]');
+    assert.ok(await imported.$('[id="F19.S01"] [data-requirement="merge"] .requirement-origin'));
+    assert.ok(await imported.$('[id="F19.S02"] [data-requirement="release"]'));
+    assert.ok(await imported.$('[id="F19.S03"] [data-requirement="not-needed"]'));
+    assert.match(await imported.$eval('[id="F19.S01"] .saved-note',el=>el.textContent),/Checked signing scope/);
+    await context.close();
+  });
+  await check('Existing browser-local review records keep their notes and start with no requirement',async()=>{
+    const context=await browser.createBrowserContext();
+    const legacy=await context.newPage();
+    legacy.on('pageerror',error=>errors.push(error.message));
+    await legacy.goto(base+'#feature/F19',{waitUntil:'networkidle0'});
+    await legacy.evaluate(()=>localStorage.setItem('bitcoin-gui-evidence-review-v1:'+window.REVIEW_EVIDENCE.catalogId,JSON.stringify({'F19.S01':{status:'reviewed',note:'Existing local note',updatedAt:'2026-10-08T12:00:00Z'}})));
+    await legacy.reload({waitUntil:'networkidle0'});
+    assert.match(await legacy.$eval('[id="F19.S01"] .saved-note',el=>el.textContent),/Existing local note/);
+    assert.ok(await legacy.$('[id="F19.S01"] [data-requirement="unassigned"]'));
+    assert.equal(await legacy.$eval('#review-progress-text',el=>el.textContent),'1 / 203');
+    await legacy.click('[data-review="F19.S01"]');
+    assert.equal(await legacy.$eval('#review-requirement',el=>el.value),'inherit');
+    await context.close();
   });
   await go('#catalog?review=reviewed&view=criteria');
   await check('Review status filters use the saved local decisions',async()=>{
@@ -256,6 +339,42 @@ async function main() {
     await value('[data-filter="review"]','followup');
     assert.equal(await page.$$eval('.criterion-result',els=>els.length),1);
     assert.match(await page.$eval('.criterion-result',el=>el.textContent),/F01.S01/);
+  });
+  await go('#catalog?requirement=merge');
+  await check('Requirement filters follow group or subfeature scope and persist in links',async()=>{
+    assert.deepEqual(await page.$$eval('.group-card .criterion-id',els=>els.map(el=>el.textContent)),['F19']);
+    assert.ok(await page.$('.group-card [data-requirement="merge"]'));
+    await page.click('[data-view="criteria"]');
+    assert.deepEqual(await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent)),['F19.S01']);
+    await value('[data-filter="requirement"]','release');
+    assert.deepEqual(await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent)),['F19.S02']);
+    await value('[data-filter="requirement"]','not-needed');
+    assert.deepEqual(await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent)),['F19.S03']);
+    await page.reload({waitUntil:'networkidle0'});
+    assert.equal(await page.$eval('[data-filter="requirement"]',el=>el.value),'not-needed');
+    await page.click('[data-view="groups"]');
+    assert.equal(await page.$$eval('.group-card',els=>els.length),0);
+    await value('[data-filter="requirement"]','unassigned');
+    assert.equal(await page.$$eval('.group-card',els=>els.length),33);
+    await page.click('[data-view="criteria"]');
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),200);
+  });
+  await go('#catalog?requirement=merge&parity=parity&review=reviewed&view=criteria');
+  await check('Requirement combines with parity and review filters and clearing filters restores everything',async()=>{
+    assert.deepEqual(await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent)),['F19.S01']);
+    assert.equal(await page.$$eval('.result-statuses',els=>els.every(el=>el.textContent.includes('Qt Widgets')&&el.textContent.includes('GUI-QML'))),true);
+    await page.click('.criterion-result');
+    await page.waitForSelector('[id="F19.S01"]');
+    assert.equal(await page.$$eval('.criterion-card',els=>els.length),3); // Direct links retain access to the whole group.
+    await go('#catalog?requirement=merge');
+    await page.click('.group-card');
+    await page.waitForSelector('[id="F19.S03"]');
+    assert.equal(await page.$$eval('.criterion-card',els=>els.length),3); // Group filter does not hide overrides.
+    await page.click('[data-action="clear-filters"]');
+    await go('#catalog');
+    assert.equal(await page.$$eval('.group-card',els=>els.length),34);
+    assert.equal(await page.$eval('[data-filter="requirement"]',el=>el.value),'any');
+    await page.screenshot({path:output+'/requirement-catalog.png'});
   });
   await go('#tests?result=failed');
   await check('Failure view isolates the real failed functional script',async()=>{
@@ -329,6 +448,33 @@ async function main() {
     await page.click('[data-action="clear-filters"]');
   });
   await page.screenshot({path:output+'/catalog-mobile.png',fullPage:false});
+  await check('Requirements can be filtered and edited on mobile in both themes without losing review notes',async()=>{
+    await value('[data-filter="requirement"]','merge');
+    assert.equal(await page.$$eval('.group-card',els=>els.length),1);
+    await page.click('[data-view="criteria"]');
+    assert.deepEqual(await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent)),['F19.S01']);
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+    await page.click('.criterion-result');
+    await page.waitForSelector('[id="F19.S01"]');
+    await page.click('[data-review="F19.S01"]');
+    assert.equal(await page.$eval('#review-state',el=>el.value),'reviewed');
+    assert.match(await page.$eval('#review-note',el=>el.value),/Checked signing scope/);
+    assert.equal(await page.$eval('#review-dialog',el=>el.scrollWidth<=el.clientWidth),true);
+    await page.screenshot({path:output+'/requirement-mobile-dark.png'});
+    await page.select('#review-requirement','release');
+    await page.click('#review-form button[type="submit"]');
+    assert.ok(await page.$('[id="F19.S01"] [data-requirement="release"]'));
+    assert.match(await page.$eval('[id="F19.S01"] .saved-note',el=>el.textContent),/Checked signing scope/);
+    await page.click('#theme-toggle');
+    await page.click('[data-review="F19.S01"]');
+    await page.screenshot({path:output+'/requirement-mobile-light.png'});
+    assert.equal(await page.$eval('#review-dialog',el=>el.scrollWidth<=el.clientWidth),true);
+    await page.select('#review-requirement','inherit');
+    await page.click('#review-form button[type="submit"]');
+    await page.click('#theme-toggle');
+    await go('#catalog');
+    await page.click('[data-action="clear-filters"]');
+  });
   await check('Mobile tests and provenance remain navigable',async()=>{
     await go('#tests');assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
     await go('#about');assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
