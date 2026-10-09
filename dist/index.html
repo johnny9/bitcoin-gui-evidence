@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f7f8fa">
-  <meta name="description" content="Explore Bitcoin Core GUI and GUI-QML feature evidence. Compare real captures, inspect tests, and keep a review record.">
-  <title>Feature evidence · Bitcoin Core</title>
+  <meta name="description" content="Define acceptance criteria for Bitcoin Core GUI-QML: select merge and release requirements, assess parity with Qt Widgets, and review supporting evidence.">
+  <title>GUI-QML acceptance criteria · Bitcoin Core</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <script src="theme.js"></script>
   <link rel="stylesheet" href="styles.css">
@@ -17,12 +17,12 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="app-shell">
     <aside class="sidebar" id="sidebar" aria-label="Feature navigation">
-      <a class="brand" href="#catalog"><span class="bitcoin-mark" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"><path d="M11 8h7c7 0 7 8 0 8h-7m0 0h8c7 0 7 8 0 8h-8V8m3-3v3m4-3v3m-4 16v3m4-3v3M9 8h2M9 24h2"/></svg></span><span>Bitcoin Core<small>Interface review</small></span></a>
+      <a class="brand" href="#catalog"><span class="bitcoin-mark" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"><path d="M11 8h7c7 0 7 8 0 8h-7m0 0h8c7 0 7 8 0 8h-8V8m3-3v3m4-3v3m-4 16v3m4-3v3M9 8h2M9 24h2"/></svg></span><span>Bitcoin Core<small>GUI-QML acceptance</small></span></a>
       <button class="mobile-close icon-button" id="close-navigation" aria-label="Close navigation">×</button>
       <nav class="primary-nav" aria-label="Main">
-        <a href="#catalog" data-nav="catalog"><span data-icon="grid"></span>Feature catalog<span class="nav-count">34</span></a>
+        <a href="#catalog" data-nav="catalog"><span data-icon="grid"></span>Acceptance criteria<span class="nav-count">203</span></a>
         <a href="#tests" data-nav="tests"><span data-icon="check"></span>Test results<span class="issue-dot" title="One failing test"></span></a>
-        <a href="#about" data-nav="about"><span data-icon="info"></span>About this evidence</a>
+        <a href="#about" data-nav="about"><span data-icon="info"></span>Acceptance guide</a>
       </nav>
       <div class="nav-label">FEATURE GROUPS</div>
       <nav id="feature-navigation" class="feature-navigation" aria-label="Feature groups"></nav>
@@ -31,11 +31,11 @@
     <button id="nav-backdrop" class="nav-backdrop" aria-label="Close navigation" hidden></button>
     <div class="workspace">
       <header class="topbar">
-        <div class="topbar-left"><button class="icon-button mobile-menu" id="open-navigation" aria-label="Open navigation" aria-expanded="false"><span data-icon="menu"></span></button><span class="breadcrumb">Bitcoin Core <span>/</span> <span id="breadcrumb-current">Feature catalog</span></span></div>
+        <div class="topbar-left"><button class="icon-button mobile-menu" id="open-navigation" aria-label="Open navigation" aria-expanded="false"><span data-icon="menu"></span></button><span class="breadcrumb">GUI-QML <span>/</span> <span id="breadcrumb-current">Acceptance criteria</span></span></div>
         <div class="topbar-actions"><span class="snapshot"><span class="snapshot-dot"></span>08 Oct 2026 snapshot</span><button class="icon-button" id="theme-toggle" aria-label="Switch to light mode" title="Switch to light mode"><span data-icon="sun"></span></button><button class="button button-small" id="export-review"><span data-icon="download"></span>Export review</button><button class="icon-button" id="import-review" aria-label="Import a review" title="Import a review"><span data-icon="upload"></span></button><input type="file" id="import-file" accept="application/json,.json" hidden></div>
       </header>
       <main id="main" tabindex="-1"></main>
-      <footer class="page-footer"><span>Bitcoin GUI evidence · Linux / regtest</span><a href="#about">Scope & provenance <span aria-hidden="true">↗</span></a></footer>
+      <footer class="page-footer"><span>GUI-QML acceptance · Linux / regtest evidence</span><a href="#about">Acceptance guide <span aria-hidden="true">↗</span></a></footer>
     </div>
   </div>
   <dialog id="capture-dialog" class="capture-dialog" aria-labelledby="capture-title">
@@ -47,9 +47,9 @@
   <dialog id="review-dialog" class="review-dialog" aria-labelledby="review-title">
     <div class="dialog-header"><span class="eyebrow" id="review-criterion-id"></span><button class="icon-button" data-close-dialog="review-dialog" aria-label="Close review">×</button></div>
     <h2 id="review-title"></h2>
-    <form id="review-form"><label for="review-requirement">Requirement</label><select id="review-requirement" aria-describedby="requirement-help"></select><p class="helper-text" id="requirement-help"></p><div id="review-detail-fields"><label for="review-state">Review status</label><select id="review-state"><option value="unreviewed">Not reviewed</option><option value="reviewed">Reviewed</option><option value="followup">Needs follow-up</option></select><label for="review-note">Notes <span class="muted">(optional)</span></label><textarea id="review-note" rows="6" maxlength="10000" placeholder="Record what you checked and what still needs evidence."></textarea></div><p class="helper-text">This records your review of the comparison. It does not change the underlying evidence or mark a feature accepted. Notes and requirements stay in this browser; export to keep or share them.</p><div class="dialog-actions"><button type="button" class="button" data-close-dialog="review-dialog">Cancel</button><button type="submit" class="button button-primary">Save review</button></div></form>
+    <form id="review-form"><label for="review-requirement">Acceptance scope</label><select id="review-requirement" aria-describedby="requirement-help"></select><p class="helper-text" id="requirement-help"></p><div id="review-detail-fields"><label for="review-state">Review status</label><select id="review-state"><option value="unreviewed">Not reviewed</option><option value="reviewed">Reviewed</option><option value="followup">Needs follow-up</option></select><label for="review-note">Notes <span class="muted">(optional)</span></label><textarea id="review-note" rows="6" maxlength="10000" placeholder="Record why this outcome is required, what you checked, and any remaining evidence gaps."></textarea></div><p class="helper-text">Record your proposed acceptance scope and evidence review. Reviewed means you examined the criterion; final acceptance requires project agreement. Your choices stay in this browser; export to share them.</p><div class="dialog-actions"><button type="button" class="button" data-close-dialog="review-dialog">Cancel</button><button type="submit" class="button button-primary">Save review</button></div></form>
   </dialog>
   <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
-  <noscript><div class="noscript">Enable JavaScript to search and review the catalog, or open the <a href="gui-feature-evidence/README.md">original Markdown evidence index</a>.</div></noscript>
+  <noscript><div class="noscript">Enable JavaScript to define and review GUI-QML acceptance criteria, or open the <a href="gui-feature-evidence/README.md">original Markdown evidence index</a>.</div></noscript>
 </body>
 </html>

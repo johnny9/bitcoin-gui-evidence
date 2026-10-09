@@ -1,8 +1,10 @@
-# Bitcoin GUI evidence
+# GUI-QML acceptance criteria
 
-A static review site for the October 8, 2026 evidence snapshot: 34 groups, 203 subfeatures, and 116 original application captures. No server application, database, CDN, or runtime package installation is required.
+A static workspace for defining the acceptance criteria for Bitcoin Core GUI-QML. Review 203 proposed user outcomes across 34 feature groups, decide what is needed for merge or release, and assess implementation and evidence against Qt Widgets as the reference.
 
-Explore the [published evidence browser](https://johnny9.github.io/bitcoin-gui-evidence/) or clone this repository to review it locally.
+The October 8, 2026 evidence snapshot includes 116 original application captures, source modules, and recorded automated tests. These support agreement on acceptance; parity, evidence coverage, scope choices, and review status are distinct. The site records personal proposals and reviews, not a shared project approval. No server application, database, CDN, or runtime package installation is required.
+
+Explore the [published acceptance criteria](https://johnny9.github.io/bitcoin-gui-evidence/) or clone this repository to review it locally.
 
 Open `dist/index.html` directly in a browser, or serve the directory:
 
@@ -12,19 +14,19 @@ python3 -m http.server 8080 --directory dist
 
 Visit `http://localhost:8080`. Any ordinary static host can serve the same `dist/` directory. Hash routes work without a fallback/rewrite rule.
 
-## Explore and review
+## Define acceptance criteria
 
 - Dark mode is the default. Use the sun/moon button in the top bar to switch themes; the browser remembers your preference. Original application captures keep their recorded colors.
 - Search feature names, criterion IDs, and evidence descriptions. Press `/` to focus search.
-- Filter GUI-QML by **Parity**, **Partial parity**, or **Not implemented**. In Groups view this applies to the entire feature group; in Subfeatures view it applies to individual capabilities. Qt Widgets stays visible as the reference in comparisons and galleries.
+- Filter GUI-QML by **Parity**, **Partial parity**, or **Not implemented**. In Groups view this applies to the entire feature group; in Criteria view it applies to individual capabilities. Qt Widgets stays visible as the reference in comparisons and galleries.
 - Combine implementation parity with requirements, evidence coverage, capture availability, feature area, and personal review status. Full evidence requires targeted automated evidence and a matching capture with no recorded failure; partial evidence includes the remaining criteria. Evidence coverage and implementation parity are independent.
-- Switch between feature groups and individual subfeatures. Filter state is included in catalog links.
+- Switch between feature groups and individual acceptance criteria. Filter state is included in catalog links.
 - Open a group for per-subfeature application comparisons, modules/tests, or a capture gallery.
 - Inspect original screenshots with full-size zoom, timestamps, hashes, and keyboard navigation.
-- Mark a comparison reviewed or needing follow-up, add notes, and export/import a JSON review record.
+- Mark a criterion reviewed or needing follow-up, add notes, and export/import a JSON review record.
 - Mark a feature **Needed for merge**, **Needed for release**, or **Not needed**. Full-parity groups and subfeatures default to **Needed for merge**; partial and missing items stay **Unassigned**. These defaults use implementation parity, without marking anything reviewed or accepted.
-- Set a group choice using **My requirement → Change** on its feature page; use a subfeature's review button to override it or restore **Use default**. A saved group choice takes precedence over automatic subfeature defaults; individual overrides take precedence over both. Existing choices, including explicit Unassigned, are preserved. An automatic full-parity group rating alone does not assign missing secondary subfeatures to merge.
-- Filter **My requirement** in Groups view to match group choices, or in Subfeatures view to match individual choices including inherited defaults. Requirement choices are independent of parity and reviewed/follow-up status; assigning a requirement does not mark anything reviewed.
+- Set a group choice using **Acceptance scope → Change** on its feature page; use a subfeature's review button to override it or restore **Use default**. A saved group choice takes precedence over automatic subfeature defaults; individual overrides take precedence over both. Existing choices, including explicit Unassigned, are preserved. An automatic full-parity group rating alone does not assign missing secondary subfeatures to merge.
+- Filter **Acceptance scope** in Groups view to match group choices, or in Criteria view to match individual choices including inherited defaults. Requirement choices are independent of parity and reviewed/follow-up status; assigning a requirement does not mark anything reviewed.
 
 Reviews are stored only in the browser, keyed to the exact evidence snapshot. They are not submitted to the hosting service or written into the evidence pack. Import preserves existing differing records and reports conflicts. A different snapshot is rejected. If browser storage is unavailable, export before closing the page. Moving between the local file and a hosted origin requires export/import.
 

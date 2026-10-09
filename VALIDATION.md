@@ -31,6 +31,8 @@ Requirement-review QA screenshots and results are in `.validation/requirements/`
 
 Automatic merge-default QA screenshots and results are in `.validation/merge-defaults/`; the catalog was visually inspected. The same implementation snapshot supplies the defaults, with no changes to evidence or acceptance decisions.
 
+Acceptance-language QA screenshots and results are in `.validation/acceptance-language/`. The site identifies its purpose as defining GUI-QML acceptance criteria for merge and release, with Qt Widgets as the reference. Catalog, navigation, criterion labels, scope controls, review help, and the acceptance guide use that framing. Desktop catalog and mobile guide layouts were visually inspected. Saved reviews, requirement defaults, implementation assessments, and the evidence snapshot remain unchanged.
+
 The browser run initially exposed a sidebar transition intercepting the menu click during a desktop-to-mobile resize. Removing that transition fixed the interaction; the final full run passed. Chrome cache configuration was adjusted for the container account during setup.
 
 These checks validate the static review site. The historical QML recipient-note test failure remains visible and unchanged. Bitcoin Core application tests were not rerun for this conversion. This standalone static repository has no Bitcoin Core `ci/lint.py`, clang-tidy, or sanitizer CI configurations; those checks are not claimed.

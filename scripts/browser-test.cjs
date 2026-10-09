@@ -124,7 +124,7 @@ async function main() {
     assert.ok(await page.$('.group-card[href="#feature/F34"]')); // RPC rescan exists; progress/cancel do not.
     await value('[data-filter="parity"]','not-implemented');
     assert.deepEqual(await page.$$eval('.group-card .group-card-top .criterion-id',els=>els.map(el=>el.textContent)),['F05','F25','F32']);
-    assert.match(await page.$eval('.group-card[href="#feature/F25"] .implementation-summary',el=>el.textContent),/Subfeature detail: 1 parity/); // In-app errors do not fulfill desktop notifications.
+    assert.match(await page.$eval('.group-card[href="#feature/F25"] .implementation-summary',el=>el.textContent),/Criterion detail: 1 parity/); // In-app errors do not fulfill desktop notifications.
     assert.equal(await page.$('.group-card[href="#feature/F01"]'),null);
     await page.screenshot({path:output+'/parity-groups.png'});
   });
@@ -148,7 +148,7 @@ async function main() {
     assert.ok(parity.includes('F21.S04')); // Physical router not tested.
     for(const id of ['F02.S04','F08.S06','F13.S05','F14.S06','F24.S03'])assert.ok(parity.includes(id),id); // Equivalent reachable workflows.
     assert.equal(new Set([...parity,...partial,...absent]).size,203);
-    assert.match(await page.$eval('#filter-scope',el=>el.textContent),/individual subfeatures/);
+    assert.match(await page.$eval('#filter-scope',el=>el.textContent),/individual criteria/);
   });
   await check('Parity and evidence coverage can be combined without conflating them',async()=>{
     await value('[data-filter="evidence"]','partial');
@@ -521,6 +521,7 @@ async function main() {
   await check('Mobile tests and provenance remain navigable',async()=>{
     await go('#tests');assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
     await go('#about');assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+    await page.screenshot({path:output+'/acceptance-guide-mobile.png'});
     assert.ok(await page.$('a[href="gui-feature-evidence/selected-captures.json"]'));
   });
   await check('Keyboard search shortcut focuses the catalog search',async()=>{
