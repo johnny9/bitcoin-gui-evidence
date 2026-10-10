@@ -1,0 +1,42 @@
+[
+  {
+    "path": "media/qml/qml_evidence_shell/001-manual-light-appearance.png",
+    "caption": "manual-light-appearance",
+    "utc": "2026-10-10T17:39:46.407600+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "0771fdffcd8dfa5b5795b4d8531920daccf00a88fb427503ae08b06170733ec4",
+    "test": "qml_evidence_shell",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_evidence_shell/002-manual-dark-appearance.png",
+    "caption": "manual-dark-appearance",
+    "utc": "2026-10-10T17:39:46.945166+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "4d0b1027565369fe8f7bc89f5fa22fcd6761739dbd7a25c0d6bc2b23196525b7",
+    "test": "qml_evidence_shell",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_evidence_shell/003-window-restored-from-desktop.png",
+    "caption": "window-restored-from-desktop",
+    "utc": "2026-10-10T17:39:47.691898+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "9e3eed996e493fde0a2a1a6c45c196bdfcafaf66bc9ac2628194d24a6a6f5cd1",
+    "test": "qml_evidence_shell",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_evidence_shell/004-all-wallets-closed.png",
+    "caption": "all-wallets-closed",
+    "utc": "2026-10-10T17:39:49.665151+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "4fa836b31f78d8a3463ae721f5f3f7d93e22b4d5e7e44dcad052a64e7bdd1f14",
+    "test": "qml_evidence_shell",
+    "kind": "application-screenshot"
+  }
+]

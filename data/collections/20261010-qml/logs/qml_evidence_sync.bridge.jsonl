@@ -1,0 +1,28 @@
+{"utc": "2026-10-10T17:24:17.323555+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_sync_gf0g23__/gui_node", "-test-automation=/work/tmp/evidence_sync_gf0g23__/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_sync_gf0g23__/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 1929, "platform": "xcb"}
+{"utc": "2026-10-10T17:24:18.077674+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:24:18.445827+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "text"}, "response": {"value": "Sync_observer"}}
+{"utc": "2026-10-10T17:24:18.450459+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "width", "value": 1180}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:24:18.452773+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "height", "value": 1000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:24:18.533710+00:00", "request": {"cmd": "click", "objectName": "blockClockTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:24:18.538251+00:00", "request": {"cmd": "get_property", "objectName": "blockClock", "prop": "state"}, "response": {"value": "IBD"}}
+{"utc": "2026-10-10T17:24:18.541297+00:00", "request": {"cmd": "get_property", "objectName": "blockClock", "prop": "synced"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:24:19.041607+00:00", "request": {"cmd": "click", "objectName": "activityTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:24:19.045970+00:00", "request": {"cmd": "wait_for_page", "page": "activityPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:24:19.048714+00:00", "request": {"cmd": "get_property", "objectName": "activityPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:24:34.023236+00:00", "request": {"cmd": "click", "objectName": "blockClockTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:24:34.027491+00:00", "request": {"cmd": "get_property", "objectName": "blockClock", "prop": "synced"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:24:35.050676+00:00", "application_pid": 1929, "exit_code": 0}
+{"utc": "2026-10-10T17:40:40.929242+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_sync_cx2ttxkf/gui_node", "-test-automation=/work/tmp/evidence_sync_cx2ttxkf/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_sync_cx2ttxkf/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 3964, "platform": "xcb"}
+{"utc": "2026-10-10T17:40:41.683806+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:40:42.057120+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "text"}, "response": {"value": "Sync_observer"}}
+{"utc": "2026-10-10T17:40:42.061720+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "width", "value": 1180}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:40:42.064065+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "height", "value": 1000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:40:42.138731+00:00", "request": {"cmd": "click", "objectName": "blockClockTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:40:42.142870+00:00", "request": {"cmd": "get_property", "objectName": "blockClock", "prop": "state"}, "response": {"value": "IBD"}}
+{"utc": "2026-10-10T17:40:42.145477+00:00", "request": {"cmd": "get_property", "objectName": "blockClock", "prop": "synced"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:40:42.644259+00:00", "request": {"cmd": "click", "objectName": "activityTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:40:42.648482+00:00", "request": {"cmd": "wait_for_page", "page": "activityPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:40:42.650746+00:00", "request": {"cmd": "get_property", "objectName": "activityPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:40:57.628634+00:00", "request": {"cmd": "click", "objectName": "blockClockTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:40:57.631018+00:00", "request": {"cmd": "get_property", "objectName": "blockClock", "prop": "synced"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:40:58.608367+00:00", "application_pid": 3964, "exit_code": 0}

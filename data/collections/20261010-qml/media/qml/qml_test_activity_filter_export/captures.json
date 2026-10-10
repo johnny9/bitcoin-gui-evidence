@@ -1,0 +1,302 @@
+[
+  {
+    "path": "media/qml/qml_test_activity_filter_export/001-01-wallet-imported.png",
+    "caption": "01-wallet-imported",
+    "utc": "2026-10-10T17:18:54.214630+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "6a4d40c5eb9a11bc5ca8afbf5f0857694d53c704afae713e74605ac743f95f19",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/002-02-source-empty-activity-state-shown-syncing-wallet-activity.png",
+    "caption": "02-source-empty-activity-state-shown-syncing-wallet-activity",
+    "utc": "2026-10-10T17:18:54.733995+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "6fe728ab73bb764e5ab38bb2ed7bf50718e9c465f640806e3928974eed5e2b9e",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/003-03-receive-page-opened.png",
+    "caption": "03-receive-page-opened",
+    "utc": "2026-10-10T17:18:55.405229+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "ed6406d49316861b26696e16a72fab826f912160227ae435dbc76bbfa2f8538f",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/004-04-payment-request-created.png",
+    "caption": "04-payment-request-created",
+    "utc": "2026-10-10T17:18:56.374662+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "d9beee3812a8c0c9254ee49f14c31959d7e405c5f4be7b7c2d09cdfa0ef49b4d",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/005-05-block-mined-to-wallet-address.png",
+    "caption": "05-block-mined-to-wallet-address",
+    "utc": "2026-10-10T17:18:56.919010+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "8db820cb2e18794340c055f3e7517b6f70c467f2124f42ad270c95ca8bb27784",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/006-06-activity-shows-payment-request-and-mined-rows.png",
+    "caption": "06-activity-shows-payment-request-and-mined-rows",
+    "utc": "2026-10-10T17:18:57.421470+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "cf5c6c31395def8526553e4b767adbf840aa48656bc748c5460a581000820e0c",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/007-07-activity-search-is-visible.png",
+    "caption": "07-activity-search-is-visible",
+    "utc": "2026-10-10T17:18:57.918218+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "7e44869993c4bc4df6596039d0acb60e331614b30ae69ebe8db5a6f34b7fa194",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/008-08-search-by-request-address-applied.png",
+    "caption": "08-search-by-request-address-applied",
+    "utc": "2026-10-10T17:18:58.425881+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "36363de341c8f59eca8e52fafe8c312617903075880dc72cac4e0cd5e9a27797",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/009-09-date-filter-menu-opened.png",
+    "caption": "09-date-filter-menu-opened",
+    "utc": "2026-10-10T17:18:59.110612+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "71c2ff17461e80d0c81c2703036b2534ba247a0ae60d6fc506166668211e0b8c",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/010-10-today-and-mined-filters-applied.png",
+    "caption": "10-today-and-mined-filters-applied",
+    "utc": "2026-10-10T17:18:59.803977+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "4f919d5290e13c14a08d3d64a939cf2ce370414f6b8eba7252e9dc121a040639",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/011-11-mined-activity-row-exported-to-csv.png",
+    "caption": "11-mined-activity-row-exported-to-csv",
+    "utc": "2026-10-10T17:19:00.490395+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "d0429a61d4c5cc5d60b10e7d8ce836752218b08aac337839a81c09b9a0ebf00e",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/012-12-multiple-activity-types-selected-together.png",
+    "caption": "12-multiple-activity-types-selected-together",
+    "utc": "2026-10-10T17:19:01.207778+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "75552ec7005084b1d0daa6de48334a620c456414b37c4ea11c8724c7f1cdad07",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/013-13-today-and-payment-request-filters-applied.png",
+    "caption": "13-today-and-payment-request-filters-applied",
+    "utc": "2026-10-10T17:19:01.888640+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "509fb73752a6169dec765e4025ec08298cf046b1daa604310a15402e2becf9b9",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/014-14-search-by-request-label-applied.png",
+    "caption": "14-search-by-request-label-applied",
+    "utc": "2026-10-10T17:19:02.390681+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "a7d1523042ad87d425f956013aeccf1c1679222d5fb2dbcd0efa4271134021f3",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/015-15-display-unit-switched-to-sats.png",
+    "caption": "15-display-unit-switched-to-sats",
+    "utc": "2026-10-10T17:19:03.007393+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "bf898796e97fca5ae6ccc8979a8dd2a3afd06ce8e98c6df04cb692604591596b",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/016-16-returned-to-filtered-activity-in-sats.png",
+    "caption": "16-returned-to-filtered-activity-in-sats",
+    "utc": "2026-10-10T17:19:03.524617+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "210388c8009b08b201b21e1245264f13cef9cea4575659b448185cfd88412478",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/017-17-filtered-activity-exported-to-csv.png",
+    "caption": "17-filtered-activity-exported-to-csv",
+    "utc": "2026-10-10T17:19:04.224672+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "6cbbc3c55cc9a67a1dd0e9d42541e368c99dc871ff9b9d4f9759daadec4ea076",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/018-18-filtered-empty-activity-state-shown.png",
+    "caption": "18-filtered-empty-activity-state-shown",
+    "utc": "2026-10-10T17:19:04.747608+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "6c505abcf5c21e1ed41c6a26788b9826f0fa3ceb6c262e157e29ca0789fb2425",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/019-19-filters-and-search-cleared.png",
+    "caption": "19-filters-and-search-cleared",
+    "utc": "2026-10-10T17:19:05.457551+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "f00e853036859b80f4c628d6b6e8d246eb63f4f5c388f9ed8c862e1c41a6eed4",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/020-20-amount-filter-menu-opened.png",
+    "caption": "20-amount-filter-menu-opened",
+    "utc": "2026-10-10T17:19:06.129282+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "b98c3c70c754373655abf9a663f4fd4fe6a1ea553cfde251e1cacb7baf0da447",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/021-21-minimum-amount-filter-applied.png",
+    "caption": "21-minimum-amount-filter-applied",
+    "utc": "2026-10-10T17:19:06.652485+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "73d1792c8098a694c442fdbb95a04daa3f7e24a1efa0351d970bd3c6db4782bc",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/022-22-minimum-amount-filter-cleared.png",
+    "caption": "22-minimum-amount-filter-cleared",
+    "utc": "2026-10-10T17:19:07.538188+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "55b8ee31c91c76d88bfe3d7d5b0c03953e79476a7fde60b83e3596d4317819ec",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/023-23-custom-date-range-calendar-revealed.png",
+    "caption": "23-custom-date-range-calendar-revealed",
+    "utc": "2026-10-10T17:19:08.216817+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "563f8006a4f648d7af15fa43461ac905fc00dc9a9e968d74ee4842ce7f1685f9",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/024-24-past-custom-range-excludes-today-s-rows.png",
+    "caption": "24-past-custom-range-excludes-today-s-rows",
+    "utc": "2026-10-10T17:19:08.784304+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "e7ac30dcd4ad74f2bdee4a30187ed6c70eb324deb247c2d725e3b44d88f0efce",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/025-25-custom-date-range-cleared.png",
+    "caption": "25-custom-date-range-cleared",
+    "utc": "2026-10-10T17:19:09.475188+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "e6fd68498bdbcbd2585d41bc3916d30b46ce9d38a6e7e1aba12043d0325014de",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/026-26-pending-request-shown-under-payment-request-filter.png",
+    "caption": "26-pending-request-shown-under-payment-request-filter",
+    "utc": "2026-10-10T17:19:10.177562+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "f1c0375a89fb6395ba1740a25b405f54e5af3e48ba7f338dc4a83c0436c0bfff",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/027-27-request-address-gained-its-own-mined-transaction-row.png",
+    "caption": "27-request-address-gained-its-own-mined-transaction-row",
+    "utc": "2026-10-10T17:19:10.883872+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "427a020e60b8267e6ca2049a8dd2a4bed8d34587f574babed6f8df490c57c7f2",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/028-28-fulfilled-request-links-to-its-transaction-under-the-filter.png",
+    "caption": "28-fulfilled-request-links-to-its-transaction-under-the-filter",
+    "utc": "2026-10-10T17:19:11.791954+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "02aab4bf9969d8f7f0d34efc9278d7ee6e36f6d65a29b730eb3a2936f20d7f52",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/029-29-fulfilled-request-has-no-duplicate-activity-row.png",
+    "caption": "29-fulfilled-request-has-no-duplicate-activity-row",
+    "utc": "2026-10-10T17:19:12.491868+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "e1fc166114ad6e6024360bb95547d1ce61582249d7abcf1cd49ff64bc400f933",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_activity_filter_export/030-30-activity-details-amount-uses-selected-display-unit.png",
+    "caption": "30-activity-details-amount-uses-selected-display-unit",
+    "utc": "2026-10-10T17:19:13.084734+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "16024907c47e6829ed8b2c52e06ba555a9fc7c29e23b7661efb3073cb64ccc30",
+    "test": "qml_test_activity_filter_export",
+    "kind": "application-screenshot"
+  }
+]

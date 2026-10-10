@@ -1,0 +1,9 @@
+Seeded saved window size 1200x800 -> /work/tmp/qml_test_bridge_99hv9nou/config/BitcoinCore/BitcoinCore-App-regtest.ini
+Starting GUI: /validation/build/bin/bitcoin-core-app -datadir=/work/tmp/qml_test_bridge_99hv9nou/node0 -test-automation=/work/tmp/qml_test_bridge_99hv9nou/test_bridge.sock -test-settings-dir=/work/tmp/qml_test_bridge_99hv9nou/config -qml_onboarded=1 -logtimemicros -debug -debugexclude=leveldb -nolisten
+QmlDriver connected to test bridge.
+Verifying the QML scene loaded without crashing ...
+  -> app started with restored geometry; current page: desktopWalletsPage  ✓
+
+==================================================
+All tests PASSED
+==================================================

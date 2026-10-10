@@ -1,0 +1,402 @@
+[
+  {
+    "path": "media/qml/qml_test_settings_display/001-wait-for-page-nodesettingsbutton.png",
+    "caption": "wait_for_page-nodeSettingsButton",
+    "utc": "2026-10-10T17:19:32.542042+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "d29fbeea662c6f50e6019ee3cc494cfad91f2a615a9b956bb8e3d8616ac9e8da",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/002-click-nodesettingsbutton.png",
+    "caption": "click-nodeSettingsButton",
+    "utc": "2026-10-10T17:19:33.037520+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "347113fdf0e8ac81a3e93abebfd845ce76dda2ce103e7dea6d218ae4fcfc90a0",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/003-click-settingssidebar-display.png",
+    "caption": "click-settingsSidebar_display",
+    "utc": "2026-10-10T17:19:33.509231+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "5a211d502b49a60bb9a36640019c6c647a391017006ecc1e233b2f1a6f0b3975",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/004-wait-for-page-displaysettingspage.png",
+    "caption": "wait_for_page-displaySettingsPage",
+    "utc": "2026-10-10T17:19:33.980198+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "5a211d502b49a60bb9a36640019c6c647a391017006ecc1e233b2f1a6f0b3975",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/005-wait-for-page-displayunitpicker.png",
+    "caption": "wait_for_page-displayUnitPicker",
+    "utc": "2026-10-10T17:19:34.450324+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "5a211d502b49a60bb9a36640019c6c647a391017006ecc1e233b2f1a6f0b3975",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/006-click-displayunitpickerbutton.png",
+    "caption": "click-displayUnitPickerButton",
+    "utc": "2026-10-10T17:19:34.923648+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "2ed41c300d01528b26869616726d06ff92eebe9009068ba4ef8f65c0899c167c",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/007-click-displayunitbtc.png",
+    "caption": "click-displayUnitBTC",
+    "utc": "2026-10-10T17:19:35.398717+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "5a211d502b49a60bb9a36640019c6c647a391017006ecc1e233b2f1a6f0b3975",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/008-click-displayunitpickerbutton.png",
+    "caption": "click-displayUnitPickerButton",
+    "utc": "2026-10-10T17:19:35.871823+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "2ed41c300d01528b26869616726d06ff92eebe9009068ba4ef8f65c0899c167c",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/009-click-displayunitsat.png",
+    "caption": "click-displayUnitSAT",
+    "utc": "2026-10-10T17:19:36.477640+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "bb1b31473f0cc1373e3ecc881ead5d58cb14a1933a367b4429123b7c4d9a3497",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/010-click-displayunitpickerbutton.png",
+    "caption": "click-displayUnitPickerButton",
+    "utc": "2026-10-10T17:19:36.950941+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "e2e876e61540f6d869f51d4fe2ecbbe47fe1636fe639b41546a0134b2217e0f8",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/011-click-displayunitbtc.png",
+    "caption": "click-displayUnitBTC",
+    "utc": "2026-10-10T17:19:37.525645+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "5a211d502b49a60bb9a36640019c6c647a391017006ecc1e233b2f1a6f0b3975",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/012-click-displaylanguagerow.png",
+    "caption": "click-displayLanguageRow",
+    "utc": "2026-10-10T17:19:38.002081+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "7c1adc77458deb5e09ed6261b0f4aa96df451bf135aa3a3f339943fc09ba12e9",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/013-wait-for-page-settingslanguagepage.png",
+    "caption": "wait_for_page-settingsLanguagePage",
+    "utc": "2026-10-10T17:19:38.472263+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "248447f373d9a5ec79692ffed16c5c88d93c6075f765d2a7008d0e669965550a",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/014-wait-for-page-language-es.png",
+    "caption": "wait_for_page-language_es",
+    "utc": "2026-10-10T17:19:38.943602+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "c231b92df4cc387bed6641037868a840a1cfedc45b36f64b9cd71647829c2417",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/015-click-language-es.png",
+    "caption": "click-language_es",
+    "utc": "2026-10-10T17:19:39.424507+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "5ead5a0eca7d6933b40319668d4b4203093306c2868b8a3fe963b5ea7d9c1b2c",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/016-wait-for-page-displaylanguagerow.png",
+    "caption": "wait_for_page-displayLanguageRow",
+    "utc": "2026-10-10T17:19:39.894833+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "bc7cbb278e8c5022020863f3a5dae4995d2ecb08d51b8f2fb5b867521c71e962",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/017-click-displaylanguagerow.png",
+    "caption": "click-displayLanguageRow",
+    "utc": "2026-10-10T17:19:40.368909+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "e74a6d2fd1309ae52a718ad6515e269ba01a49641cb8d43ea6ad2eee325061ae",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/018-wait-for-page-settingslanguagepage.png",
+    "caption": "wait_for_page-settingsLanguagePage",
+    "utc": "2026-10-10T17:19:40.842033+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "cbad7731dc153a0e5c862afbdb2cbcbe84365694c4f548e7a071da68ba255758",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/019-wait-for-page-language.png",
+    "caption": "wait_for_page-language_",
+    "utc": "2026-10-10T17:19:41.312576+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "cbad7731dc153a0e5c862afbdb2cbcbe84365694c4f548e7a071da68ba255758",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/020-click-language.png",
+    "caption": "click-language_",
+    "utc": "2026-10-10T17:19:41.790636+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "b4285f0fea7c98f97da092fe9e77cbe575ab62bcbe93fc75eddca214436ad515",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/021-wait-for-page-displaylanguagerow.png",
+    "caption": "wait_for_page-displayLanguageRow",
+    "utc": "2026-10-10T17:19:42.260723+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "dd195fab78ba4e8b8a0bb9f68d1d671d9ba52f2543c9ac036867031ef0491298",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/022-click-displayunitpickerbutton.png",
+    "caption": "click-displayUnitPickerButton",
+    "utc": "2026-10-10T17:19:42.731066+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "2ed41c300d01528b26869616726d06ff92eebe9009068ba4ef8f65c0899c167c",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/023-click-displayunitsat.png",
+    "caption": "click-displayUnitSAT",
+    "utc": "2026-10-10T17:19:43.207193+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "e625a2b6af158c5566911917338bc1f6998d3ca607665913102fabbb6406c93e",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/024-click-displaylanguagerow.png",
+    "caption": "click-displayLanguageRow",
+    "utc": "2026-10-10T17:19:43.683346+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "d7f720fb0890d5ece798090ba5bf56b6b9bdbe6487cd2f686665fc499d769826",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/025-wait-for-page-settingslanguagepage.png",
+    "caption": "wait_for_page-settingsLanguagePage",
+    "utc": "2026-10-10T17:19:44.154195+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "248447f373d9a5ec79692ffed16c5c88d93c6075f765d2a7008d0e669965550a",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/026-wait-for-page-language-es.png",
+    "caption": "wait_for_page-language_es",
+    "utc": "2026-10-10T17:19:44.625115+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "c231b92df4cc387bed6641037868a840a1cfedc45b36f64b9cd71647829c2417",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/027-click-language-es.png",
+    "caption": "click-language_es",
+    "utc": "2026-10-10T17:19:45.104285+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "1c15a04f8764ff3546d0eb7c03cfd4021666cfb3871ba000c8b3fdcfb8c8c78a",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/028-wait-for-page-displaylanguagerow.png",
+    "caption": "wait_for_page-displayLanguageRow",
+    "utc": "2026-10-10T17:19:45.575327+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "976f4907eccf0b8e7ae6d422c44ee7889344fca0fc7107c8fce3e4cc37bffaac",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/029-wait-for-page-nodesettingsbutton.png",
+    "caption": "wait_for_page-nodeSettingsButton",
+    "utc": "2026-10-10T17:19:46.758203+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "12d68d20a00d30625a4cd6dc962b54ffa33edc3d2a621906b19c3f0424770243",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/030-click-nodesettingsbutton.png",
+    "caption": "click-nodeSettingsButton",
+    "utc": "2026-10-10T17:19:47.251063+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "636dc4ac750dffd77735529f32ad37f3bc0ed57a061d3743771596c629cb5c87",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/031-click-settingssidebar-display.png",
+    "caption": "click-settingsSidebar_display",
+    "utc": "2026-10-10T17:19:47.722791+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "976f4907eccf0b8e7ae6d422c44ee7889344fca0fc7107c8fce3e4cc37bffaac",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/032-wait-for-page-displaysettingspage.png",
+    "caption": "wait_for_page-displaySettingsPage",
+    "utc": "2026-10-10T17:19:48.193576+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "976f4907eccf0b8e7ae6d422c44ee7889344fca0fc7107c8fce3e4cc37bffaac",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/033-wait-for-page-displayunitpicker.png",
+    "caption": "wait_for_page-displayUnitPicker",
+    "utc": "2026-10-10T17:19:48.664504+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "976f4907eccf0b8e7ae6d422c44ee7889344fca0fc7107c8fce3e4cc37bffaac",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/034-click-displayunitpickerbutton.png",
+    "caption": "click-displayUnitPickerButton",
+    "utc": "2026-10-10T17:19:49.136812+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "3c7b11a5854a93a46258e2d865f46fcef226da69319ad2ba2b1a82e6ad5b76aa",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/035-click-displayunitbtc.png",
+    "caption": "click-displayUnitBTC",
+    "utc": "2026-10-10T17:19:49.710386+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "bc7cbb278e8c5022020863f3a5dae4995d2ecb08d51b8f2fb5b867521c71e962",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/036-click-displaylanguagerow.png",
+    "caption": "click-displayLanguageRow",
+    "utc": "2026-10-10T17:19:50.188126+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "e74a6d2fd1309ae52a718ad6515e269ba01a49641cb8d43ea6ad2eee325061ae",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/037-wait-for-page-settingslanguagepage.png",
+    "caption": "wait_for_page-settingsLanguagePage",
+    "utc": "2026-10-10T17:19:50.658333+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "cbad7731dc153a0e5c862afbdb2cbcbe84365694c4f548e7a071da68ba255758",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/038-wait-for-page-language.png",
+    "caption": "wait_for_page-language_",
+    "utc": "2026-10-10T17:19:51.128432+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "cbad7731dc153a0e5c862afbdb2cbcbe84365694c4f548e7a071da68ba255758",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/039-click-language.png",
+    "caption": "click-language_",
+    "utc": "2026-10-10T17:19:51.619800+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "b4285f0fea7c98f97da092fe9e77cbe575ab62bcbe93fc75eddca214436ad515",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_settings_display/040-wait-for-page-displaylanguagerow.png",
+    "caption": "wait_for_page-displayLanguageRow",
+    "utc": "2026-10-10T17:19:52.089744+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "dd195fab78ba4e8b8a0bb9f68d1d671d9ba52f2543c9ac036867031ef0491298",
+    "test": "qml_test_settings_display",
+    "kind": "application-screenshot"
+  }
+]

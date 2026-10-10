@@ -1,0 +1,6 @@
+rescan-fixture: passed
+console-rescan: passed
+watch-only-export: passed
+watch-only-no-keys: passed
+watch-only-unsigned: passed
+external-handoff: passed

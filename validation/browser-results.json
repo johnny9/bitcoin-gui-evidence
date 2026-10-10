@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-10T17:11:44.120Z",
+  "checkedAt": "2026-10-10T17:42:58.080Z",
   "basePath": "/bitcoin-gui-evidence/",
   "outcomes": [
     {
@@ -7,7 +7,7 @@
       "status": "passed"
     },
     {
-      "name": "Acceptance summary separates 52 implementation gaps, 90 accepted and 61 proof gaps",
+      "name": "Acceptance summary separates 53 implementation gaps, 125 accepted and 25 proof gaps",
       "status": "passed"
     },
     {
@@ -159,7 +159,11 @@
       "status": "passed"
     },
     {
-      "name": "All 181 selected captures decode in the browser",
+      "name": "New QML evidence accepts proven outcomes and exposes the cache regression and test backlog",
+      "status": "passed"
+    },
+    {
+      "name": "All 218 selected captures decode in the browser",
       "status": "passed"
     },
     {

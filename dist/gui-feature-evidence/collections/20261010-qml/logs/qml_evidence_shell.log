@@ -1,0 +1,7 @@
+appearance-light: passed
+appearance-dark: passed
+window-minimize: passed
+XGetWindowProperty[_NET_ACTIVE_WINDOW] failed (code=1)
+window-restore: passed
+close-all-wallets: passed
+node-after-close: passed

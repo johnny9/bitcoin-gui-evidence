@@ -1,0 +1,632 @@
+[
+  {
+    "path": "media/qml/qml_test_receive/001-click-walletbadge.png",
+    "caption": "click-walletBadge",
+    "utc": "2026-10-10T17:20:38.642210+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "463e6448a0067dd5cd466697333b8be3d6074fae2a4afb98ba5263dd13677f1c",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/002-click-wallettypeimport.png",
+    "caption": "click-walletTypeImport",
+    "utc": "2026-10-10T17:20:41.193367+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "ee9a29c4278d84f9e5e8cf3188111266db757b408b37d8a41549f98903f67e4d",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/003-wait-for-page-importwalletsuccesspage.png",
+    "caption": "wait_for_page-importWalletSuccessPage",
+    "utc": "2026-10-10T17:20:41.677181+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "507b675d6b616dc3322ffffa6ba6e4bdb32e3b648434019d86043fd939545948",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/004-click-importwalletsuccessoverviewbutton.png",
+    "caption": "click-importWalletSuccessOverviewButton",
+    "utc": "2026-10-10T17:20:42.159719+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "8286029964179dbcd4d7d04b1f6736266b5776eb2e6527b8146d38a3b6e332a0",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/005-click-walletbadge.png",
+    "caption": "click-walletBadge",
+    "utc": "2026-10-10T17:20:42.661321+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "c4ec9ee6d8db75469bff1d3f114daa38fc7047a6072505d92e73eb659d5f578a",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/006-click-walletselectaddwalletbutton.png",
+    "caption": "click-walletSelectAddWalletButton",
+    "utc": "2026-10-10T17:20:43.154343+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "afc3efc9e57e2f1eb625e54460f6a76d321d44b47bfdedbc3fa65cedfd7454fd",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/007-click-wallettypeimport.png",
+    "caption": "click-walletTypeImport",
+    "utc": "2026-10-10T17:20:43.648723+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "cc04f00263fa20ac54ff56751e3dae1445a64586fc1ff67fb4568253b63ca8e5",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/008-wait-for-page-importwalletsuccesspage.png",
+    "caption": "wait_for_page-importWalletSuccessPage",
+    "utc": "2026-10-10T17:20:44.133570+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "c9c2cee37d51757ae0fde0500ae1a1c785f5ea6ef1828492702a23a7c411e7cf",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/009-click-importwalletsuccessoverviewbutton.png",
+    "caption": "click-importWalletSuccessOverviewButton",
+    "utc": "2026-10-10T17:20:44.617086+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "7d2448d6cd6cf82f2808e6ddb5ffa0018438f9b5b52cf8f4a11b226e630652c9",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/010-click-walletbadge.png",
+    "caption": "click-walletBadge",
+    "utc": "2026-10-10T17:20:45.126544+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "b1c5001300879475f052c3f17479ef86dc06546b87729ee3cf780dee4c03a731",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/011-click-walletselectitem-receive-requests.png",
+    "caption": "click-walletSelectItem_receive_requests",
+    "utc": "2026-10-10T17:20:45.623939+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "92c0c374434362974f3092de89e0f029c5da38d466b72310845268133f4b0cf9",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/012-click-receivetabbutton.png",
+    "caption": "click-receiveTabButton",
+    "utc": "2026-10-10T17:20:46.147734+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "c78560fbebabf95f35b4e03f8b0ac9257ccdb332f8353760cbb96b1b481a4c80",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/013-wait-for-page-requestpaymentpage.png",
+    "caption": "wait_for_page-requestPaymentPage",
+    "utc": "2026-10-10T17:20:46.629527+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "e700eeac44da920cc0df5ef461123eeb343832e2a0e809802b935363fa468b6d",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/014-click-paymentrequestmodalclose.png",
+    "caption": "click-paymentRequestModalClose",
+    "utc": "2026-10-10T17:20:47.219478+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "0b3b6a43a56418489ad799e86c427fc78e34685371b23c59ba98519430faa0d8",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/015-click-activitytabbutton.png",
+    "caption": "click-activityTabButton",
+    "utc": "2026-10-10T17:20:47.731781+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "45eb52e67c1c978f202cfa0db2d0aacc0ac47e747bc84248eb57982362a290fc",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/016-click-receivetabbutton.png",
+    "caption": "click-receiveTabButton",
+    "utc": "2026-10-10T17:20:48.251590+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "2316384c9c9641531ed9aee8c54a89f31456d8099f8e55eeee7052a194f1b06b",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/017-wait-for-page-requestpaymentpage.png",
+    "caption": "wait_for_page-requestPaymentPage",
+    "utc": "2026-10-10T17:20:48.753565+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "da068b6710036957fade556b51fa42133bb5f525cc2d8194427eeab031b74429",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/018-receive-draft.png",
+    "caption": "receive-draft",
+    "utc": "2026-10-10T17:20:49.264796+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "4365837762311a662f6d79914011f63cc6902e3376b99180aaa0aa1d7c85da45",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/019-click-receivingaddressqrcontextcopy.png",
+    "caption": "click-receivingAddressQRContextCopy",
+    "utc": "2026-10-10T17:20:49.937506+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "11e790c26b0d133effa2373b2756dd7f8e07e4ed2d19850057cd0455a5e0cf73",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/020-click-receivingaddressqrcontextsave.png",
+    "caption": "click-receivingAddressQRContextSave",
+    "utc": "2026-10-10T17:20:50.634180+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "8f7bf7e4635ce2bdfa72328a38c2dd509cb7fff3e85013d173aa418140ae22cd",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/021-click-requestpaymentgeneratebutton.png",
+    "caption": "click-requestPaymentGenerateButton",
+    "utc": "2026-10-10T17:20:51.376521+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "7231b6378fbe6343f9556e9a698c3836709abaa6a25eb0f1a2fc8ac590e07f57",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/022-receive-created.png",
+    "caption": "receive-created",
+    "utc": "2026-10-10T17:20:51.890698+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "3331bb363d01d9ff86e2e316bb766d6136626c395c5e52e95030bf8bc7dfae9a",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/023-click-paymentrequestmorebutton.png",
+    "caption": "click-paymentRequestMoreButton",
+    "utc": "2026-10-10T17:20:52.400082+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "666b76deb15cc41e95289c3538a44040d26ff880f6b8fdc4afd848f230cbd20e",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/024-receive-menu.png",
+    "caption": "receive-menu",
+    "utc": "2026-10-10T17:20:52.906530+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "781c6b65a1e6042e924d0fe61073eb92a27c995ce911e6d920a4cd75a3a40338",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/025-click-requestpaymentcopyqrmenubutton.png",
+    "caption": "click-requestPaymentCopyQRMenuButton",
+    "utc": "2026-10-10T17:20:53.412660+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "2e802b7efa08cc1b3c588babf8fb8a7c8fc0afeaffe1eb4a0ce8551b2047058e",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/026-click-paymentrequestmorebutton.png",
+    "caption": "click-paymentRequestMoreButton",
+    "utc": "2026-10-10T17:20:53.940511+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "f17476212330adb4330bebdd85e0c0a06edbc1fce9bbf55133b63b4bc3cc3ba0",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/027-click-requestpaymentsaveqrmenubutton.png",
+    "caption": "click-requestPaymentSaveQRMenuButton",
+    "utc": "2026-10-10T17:20:54.452330+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "e24a856af059a0c431b9780133f6636e6f7fecf030de7733a599cc967cd8418a",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/028-click-requestpaymentupdatebutton.png",
+    "caption": "click-requestPaymentUpdateButton",
+    "utc": "2026-10-10T17:20:55.219784+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "b52454aeb20698022aa495998fde85929f7637c64c805f3e28d60bf3652e0f91",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/029-click-requestpaymentcopybutton.png",
+    "caption": "click-requestPaymentCopyButton",
+    "utc": "2026-10-10T17:20:55.734577+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "a48645dfa2534b2a6121dd308436f096a387657d8741e8ad8eafb2434546bf51",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/030-click-paymentrequestmodalclose.png",
+    "caption": "click-paymentRequestModalClose",
+    "utc": "2026-10-10T17:20:56.237589+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "1484e60ac6131d971c19d95c10c1ab5a43c7645f12228d458cc1481ec5e85066",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/031-click-receivetabbutton.png",
+    "caption": "click-receiveTabButton",
+    "utc": "2026-10-10T17:20:56.768223+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "8478dae822bbeb4c7ed681a19d7fa8231e2bfe09a6853898e8b39bd0e8f1e222",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/032-wait-for-page-requestpaymentpage.png",
+    "caption": "wait_for_page-requestPaymentPage",
+    "utc": "2026-10-10T17:20:57.271279+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "0a4fbae00486b3ccad52c2cceed6e441efa8cdab59bec59da1a5c079d89cea5c",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/033-click-paymentrequestmodalclose.png",
+    "caption": "click-paymentRequestModalClose",
+    "utc": "2026-10-10T17:20:57.799448+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "09f7a63938048cac7f841c33d28b725fc4b166d44b51671356e98c22e7aaf6ed",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/034-click-activitytabbutton.png",
+    "caption": "click-activityTabButton",
+    "utc": "2026-10-10T17:20:58.313483+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "77ff9d8f4b1ba17250adc2d0b285070ca201e5432b3eb3d1fdf41b1b3cc905f9",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/035-click-paymentrequestmorebutton.png",
+    "caption": "click-paymentRequestMoreButton",
+    "utc": "2026-10-10T17:20:59.179100+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "aeb02a4048a595737134a3b4ad4f86363de9abc20b061a8795d7bf37449ffa0f",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/036-click-requestpaymentagainmenubutton.png",
+    "caption": "click-requestPaymentAgainMenuButton",
+    "utc": "2026-10-10T17:20:59.683749+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "2df889ce3afdcece8a55f75b59e0c299694d62e129ba998f911649acf869fd83",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/037-click-walletbadge.png",
+    "caption": "click-walletBadge",
+    "utc": "2026-10-10T17:21:03.769927+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "8d19080c45599505cf476f1a3e9a0440f5a7a85511414c92d4515a196aac230b",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/038-click-walletselectitem-receive-requests.png",
+    "caption": "click-walletSelectItem_receive_requests",
+    "utc": "2026-10-10T17:21:04.293223+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "59895949c0501adabe7951ca6e27a8dd8ad833ce76aab8baee11d7f669c68fe4",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/039-click-paymentrequestmodalclose.png",
+    "caption": "click-paymentRequestModalClose",
+    "utc": "2026-10-10T17:21:04.816700+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "9d444f0df5514971eb35d24a80a3a273898ae7df862870084ae3fca574b6b477",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/040-click-activitytabbutton.png",
+    "caption": "click-activityTabButton",
+    "utc": "2026-10-10T17:21:05.328799+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "ad2055839001460520d96904505214614cb65d38e112476ebbf3b81c165db3a5",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/041-click-requestpaymentmessageinput.png",
+    "caption": "click-requestPaymentMessageInput",
+    "utc": "2026-10-10T17:21:06.176805+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "cf0dbdd7c97fbabe7241cf58045df0be058e6e828ce46c69865648b845b8fb62",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/042-click-paymentrequestmorebutton.png",
+    "caption": "click-paymentRequestMoreButton",
+    "utc": "2026-10-10T17:21:06.782766+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "77ce586203ad24fa34c5e51354ede4ac3502dff108e80263465590cce986bbde",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/043-receive-paid.png",
+    "caption": "receive-paid",
+    "utc": "2026-10-10T17:21:07.718706+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "3a24fd8896511092f652debcdcda82110f9f592698b5d99779d32d14b9d2f063",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/044-click-requestpaymentupdatebutton.png",
+    "caption": "click-requestPaymentUpdateButton",
+    "utc": "2026-10-10T17:21:08.267386+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "41ae106f18c0863095deb0811ac98b3e8cce405a9a6b453bdd22639917451e0f",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/045-click-paymentrequestmodalclose.png",
+    "caption": "click-paymentRequestModalClose",
+    "utc": "2026-10-10T17:21:08.778788+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "269c983ca8af4fe28586763853fb2d05b5ed760f28e411818d319b897a297808",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/046-wait-for-page-activitydetailspage.png",
+    "caption": "wait_for_page-activityDetailsPage",
+    "utc": "2026-10-10T17:21:09.344537+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "7f85e176a3478f97b660b7e04444e12f19e7627812d6f03131f96dd2111abc90",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/047-click-transactionflowrequest-1.png",
+    "caption": "click-transactionFlowRequest_1",
+    "utc": "2026-10-10T17:21:09.874349+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "81593eb336f7bb4264f035a96f9455d0a9c30dfd2c5738c5f561075f62ae5fa1",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/048-wait-for-page-activitydetailspage.png",
+    "caption": "wait_for_page-activityDetailsPage",
+    "utc": "2026-10-10T17:21:10.406520+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "ac110d5b60723a9bee92756dfd9c3157df2e8e7414abb81e499b231721f6b412",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/049-click-paymentrequestmodalclose.png",
+    "caption": "click-paymentRequestModalClose",
+    "utc": "2026-10-10T17:21:12.604292+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "5056730a731a6be6ef505447a03fb694d21b554afd19f38e225cad8b249b6b99",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/050-click-activitytabbutton.png",
+    "caption": "click-activityTabButton",
+    "utc": "2026-10-10T17:21:13.115255+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "fa18d84623ce80c2d07765c9db34550e55432b7a0cddc259348e4d07c39e1e70",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/051-wait-for-page-activitydetailspage.png",
+    "caption": "wait_for_page-activityDetailsPage",
+    "utc": "2026-10-10T17:21:13.688810+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "18af067a3334d30723791367a5dada8d307d88600f17121c1721d4d655ac1546",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/052-click-transactionflowrequest-1.png",
+    "caption": "click-transactionFlowRequest_1",
+    "utc": "2026-10-10T17:21:14.214431+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "34ffbe03cb811cf3d98eab1362a9f33561848b59a949deb4c359662d90e8dbfd",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/053-click-paymentrequestmorebutton.png",
+    "caption": "click-paymentRequestMoreButton",
+    "utc": "2026-10-10T17:21:14.741808+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "892fc02458ec9d0d3cc20b133486cb69e379be65a2a4eb6104aef4913eb40353",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/054-click-requestpaymentagainmenubutton.png",
+    "caption": "click-requestPaymentAgainMenuButton",
+    "utc": "2026-10-10T17:21:15.249563+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "cf19b66a4a8fd863fadb4d7ed5026ca21b91b0d6adaef619b4c88f58b60b4c96",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/055-click-receivetabbutton.png",
+    "caption": "click-receiveTabButton",
+    "utc": "2026-10-10T17:21:15.877088+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "ff32a3cc15b972b245ec4a879d9e2dbe48ecc90303a015f01cd454759656152e",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/056-wait-for-page-requestpaymentpage.png",
+    "caption": "wait_for_page-requestPaymentPage",
+    "utc": "2026-10-10T17:21:16.381937+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "745c8acad49ee1af07db2e569c78ff0e0a5921bb75791dd9a142bd3f927230bc",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/057-click-requestpaymentgeneratebutton.png",
+    "caption": "click-requestPaymentGenerateButton",
+    "utc": "2026-10-10T17:21:17.063441+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "8525f7297213c06446c1f1f40199306b1cf682aba3dcf771b7b94c5304ccb6ce",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/058-click-paymentrequestmorebutton.png",
+    "caption": "click-paymentRequestMoreButton",
+    "utc": "2026-10-10T17:21:17.604788+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "29632f82bf42763d0a006af89e3b5697e29feb31d370c1cf067ea6391bfa1a93",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/059-click-requestpaymentdeletemenubutton.png",
+    "caption": "click-requestPaymentDeleteMenuButton",
+    "utc": "2026-10-10T17:21:18.153882+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "9bc4c86b9af2d58cd2d4b813cb2cdf8e80356b9d8cf8e3dfc994b4500802addd",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/060-click-receivetabbutton.png",
+    "caption": "click-receiveTabButton",
+    "utc": "2026-10-10T17:21:18.688998+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "3da57d8fcfee9b086bd67739999e5f81e9fdb1b42f1efce1b5c9ef1e35ce27b4",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/061-wait-for-page-requestpaymentpage.png",
+    "caption": "wait_for_page-requestPaymentPage",
+    "utc": "2026-10-10T17:21:19.191581+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "7202d412da81efce782ccdd4a3c4e5f29f667bcb5451f4257335dc41058069be",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/062-click-receivemorebutton.png",
+    "caption": "click-receiveMoreButton",
+    "utc": "2026-10-10T17:21:19.716274+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "735eca50ca3a2165f2bdd2f603b10dc0b91b4bc6d1d5076adc858a14b2a3d589",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_receive/063-click-requestpaymenthistorybutton.png",
+    "caption": "click-requestPaymentHistoryButton",
+    "utc": "2026-10-10T17:21:20.407861+00:00",
+    "width": 1180,
+    "height": 960,
+    "sha256": "99ec06f7fac55408bf7317ef3b89e930a5fa941a57632f33128b0de3652828bc",
+    "test": "qml_test_receive",
+    "kind": "application-screenshot"
+  }
+]

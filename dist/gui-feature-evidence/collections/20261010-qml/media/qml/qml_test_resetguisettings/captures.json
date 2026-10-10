@@ -1,0 +1,422 @@
+[
+  {
+    "path": "media/qml/qml_test_resetguisettings/001-wait-for-page-onboardingcover.png",
+    "caption": "wait_for_page-onboardingCover",
+    "utc": "2026-10-10T17:19:53.398422+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "e2023989dbfb04ed11628d3210cbdacaa1723ebce6ec26578cdf2adda2c68833",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/002-click-onboardingcoverbutton.png",
+    "caption": "click-onboardingCoverButton",
+    "utc": "2026-10-10T17:19:55.948655+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "fc2c6cd984be34ae1d4f9f738c5e0f34fba117bc8b1fd082da17cfceff55922e",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/003-wait-for-page-onboardingstrengthen.png",
+    "caption": "wait_for_page-onboardingStrengthen",
+    "utc": "2026-10-10T17:19:56.418047+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "88a0d4141d0fed972cf7717bfa54fadad2bb5885fa6a07b8832605180669d15f",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/004-click-onboardingstrengthenbutton.png",
+    "caption": "click-onboardingStrengthenButton",
+    "utc": "2026-10-10T17:19:56.898297+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "406d66d1f90f020767c5a85bcdf7405f978b8486445793fe67ec9bbefc39b991",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/005-wait-for-page-onboardingblockchain.png",
+    "caption": "wait_for_page-onboardingBlockchain",
+    "utc": "2026-10-10T17:19:57.377576+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "62eb1bb010bd8b798948a887c8ebd534560e1dba86392ed9c6b829379d7b91c8",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/006-click-onboardingblockchainbutton.png",
+    "caption": "click-onboardingBlockchainButton",
+    "utc": "2026-10-10T17:19:57.853129+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "728fd6c67cbe2d75b2d363c220146d1c851d705b62b45629f9b93a857db6edad",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/007-wait-for-page-onboardingblockclock.png",
+    "caption": "wait_for_page-onboardingBlockclock",
+    "utc": "2026-10-10T17:19:58.324215+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "52c3abdf1f28968a3eca7db7fd1a8d3d1006915f6ad601931a5269002a8f635f",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/008-click-onboardingblockclockbutton.png",
+    "caption": "click-onboardingBlockclockButton",
+    "utc": "2026-10-10T17:19:58.802472+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "fa1155d17f845b453598b6e071cff3a2e4a5e138b56db3b8c00f349a1a0823ff",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/009-wait-for-page-onboardingstoragelocation.png",
+    "caption": "wait_for_page-onboardingStorageLocation",
+    "utc": "2026-10-10T17:19:59.271881+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "29205f2fb67040b661d44798bdbdbe1ecef2c4bc5fe45e052472284d64a9a5ee",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/010-click-onboardingstoragelocationbutton.png",
+    "caption": "click-onboardingStorageLocationButton",
+    "utc": "2026-10-10T17:19:59.758370+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "e6209f1b2199814b930d7c32e68c4586dd21df9df7be3211ef15385c4e972b5c",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/011-wait-for-page-onboardingstorageamount.png",
+    "caption": "wait_for_page-onboardingStorageAmount",
+    "utc": "2026-10-10T17:20:00.230588+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "6c7b2bd5c9816585b5a0c6c556a73e68bfdfa18189e047ee0ad1263cabb72397",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/012-click-onboardingstorageamountbutton.png",
+    "caption": "click-onboardingStorageAmountButton",
+    "utc": "2026-10-10T17:20:00.711987+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "93b24697cc1f506a37e9dffcc6d626066f4cd26dd23b6a0f90379fa7cd091455",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/013-wait-for-page-onboardingconnection.png",
+    "caption": "wait_for_page-onboardingConnection",
+    "utc": "2026-10-10T17:20:01.181652+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "0095b0e4a877daf05adce59d30e14b1e5c7f5bb2fad0a6d1c1ea26843b716749",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/014-click-connectionsettingsbutton.png",
+    "caption": "click-connectionSettingsButton",
+    "utc": "2026-10-10T17:20:01.651756+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "0260c1d38b5c8e68ead2beefe30f7807bb410c6011d42d04e8ad0c5cb75d43b3",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/015-wait-for-page-proxysettingsrow.png",
+    "caption": "wait_for_page-proxySettingsRow",
+    "utc": "2026-10-10T17:20:02.122378+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "0260c1d38b5c8e68ead2beefe30f7807bb410c6011d42d04e8ad0c5cb75d43b3",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/016-click-listenswitch.png",
+    "caption": "click-listenSwitch",
+    "utc": "2026-10-10T17:20:02.594073+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "5d32ee638ee4e958490316d6deab028b1bff92981692fe24961b414fc04b903b",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/017-click-serverswitch.png",
+    "caption": "click-serverSwitch",
+    "utc": "2026-10-10T17:20:03.066069+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "7f24596c958e8da517429154b6df8dbe6f23cae7d03baf7e2d1363e8b012bb6c",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/018-click-proxysettingsrow.png",
+    "caption": "click-proxySettingsRow",
+    "utc": "2026-10-10T17:20:03.548882+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "867057411001820d8e0112b2c1605d277e7e2e847b5e897d796a9811a439f8cf",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/019-wait-for-page-proxysettingspage.png",
+    "caption": "wait_for_page-proxySettingsPage",
+    "utc": "2026-10-10T17:20:04.019798+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "f591dbb06c88d0cfc7ae154de09117b4e5032c65be70d0a324e1ec258d67bbae",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/020-click-proxyenableswitch.png",
+    "caption": "click-proxyEnableSwitch",
+    "utc": "2026-10-10T17:20:04.492047+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "d8689db7fb640e9931091c78c6aad0cef885893595b29245532e0c0c79485c12",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/021-click-torenableswitch.png",
+    "caption": "click-torEnableSwitch",
+    "utc": "2026-10-10T17:20:04.966412+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "d817d2798d4daf3ba28cf2474d2e7dec0aa5cf32711649ebcb0cf82774603f04",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/022-click-proxysettingssavebutton.png",
+    "caption": "click-proxySettingsSaveButton",
+    "utc": "2026-10-10T17:20:05.443462+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "888a6c438473e473b19b97024ea614789c534e75b0258c398cfa95c25a33c1ea",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/023-wait-for-page-proxysettingsrow.png",
+    "caption": "wait_for_page-proxySettingsRow",
+    "utc": "2026-10-10T17:20:05.913773+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "7f24596c958e8da517429154b6df8dbe6f23cae7d03baf7e2d1363e8b012bb6c",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/024-click-onboardingconnectionsettingsclosebutton.png",
+    "caption": "click-onboardingConnectionSettingsCloseButton",
+    "utc": "2026-10-10T17:20:06.385138+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "0095b0e4a877daf05adce59d30e14b1e5c7f5bb2fad0a6d1c1ea26843b716749",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/025-wait-for-page-onboardingconnectionbutton.png",
+    "caption": "wait_for_page-onboardingConnectionButton",
+    "utc": "2026-10-10T17:20:06.856344+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "0095b0e4a877daf05adce59d30e14b1e5c7f5bb2fad0a6d1c1ea26843b716749",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/026-wait-for-page-onboardingcover.png",
+    "caption": "wait_for_page-onboardingCover",
+    "utc": "2026-10-10T17:20:13.493690+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "51977979038433c8e70110b98c97ff612b0673c54a7664335dea151d9caf95e4",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/027-click-onboardingcoverbutton.png",
+    "caption": "click-onboardingCoverButton",
+    "utc": "2026-10-10T17:20:16.094001+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "fc2c6cd984be34ae1d4f9f738c5e0f34fba117bc8b1fd082da17cfceff55922e",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/028-wait-for-page-onboardingstrengthen.png",
+    "caption": "wait_for_page-onboardingStrengthen",
+    "utc": "2026-10-10T17:20:16.563303+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "8b46f3bf923cb8fc1278375a6118cfd93b7700b3761a2f0dfaa060f6c29ceef6",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/029-click-onboardingstrengthenbutton.png",
+    "caption": "click-onboardingStrengthenButton",
+    "utc": "2026-10-10T17:20:17.037196+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "406d66d1f90f020767c5a85bcdf7405f978b8486445793fe67ec9bbefc39b991",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/030-wait-for-page-onboardingblockchain.png",
+    "caption": "wait_for_page-onboardingBlockchain",
+    "utc": "2026-10-10T17:20:17.505910+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "ff4be7c7bd3ce8e324e5e6346e51ddbbf826dd4d797e54934d615678cce47b0c",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/031-click-onboardingblockchainbutton.png",
+    "caption": "click-onboardingBlockchainButton",
+    "utc": "2026-10-10T17:20:17.979956+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "6876903f2eba4e003d6886dc067ccccd3bf5be5008a168027bf3b25ab9910c1c",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/032-wait-for-page-onboardingblockclock.png",
+    "caption": "wait_for_page-onboardingBlockclock",
+    "utc": "2026-10-10T17:20:18.450333+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "24629df92383a05dac17d6868f95e62f2309a9aaf06754191720c4e8570bf4ef",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/033-click-onboardingblockclockbutton.png",
+    "caption": "click-onboardingBlockclockButton",
+    "utc": "2026-10-10T17:20:18.925303+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "73321f2bfd578c06efcab9cea64f6e2f23f240ed136b1b53e24340efeeae6d84",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/034-wait-for-page-onboardingstoragelocation.png",
+    "caption": "wait_for_page-onboardingStorageLocation",
+    "utc": "2026-10-10T17:20:19.394376+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "57474b4892e8ed4e4a40ff75a58fb99b350ff706edd0e288bee4a925bb461b80",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/035-click-onboardingstoragelocationbutton.png",
+    "caption": "click-onboardingStorageLocationButton",
+    "utc": "2026-10-10T17:20:19.880558+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "3decd9ddcf91ee71950fc9007366575a6af2ee635568f6f177adb375473f2edf",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/036-wait-for-page-onboardingstorageamount.png",
+    "caption": "wait_for_page-onboardingStorageAmount",
+    "utc": "2026-10-10T17:20:20.350515+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "6c7b2bd5c9816585b5a0c6c556a73e68bfdfa18189e047ee0ad1263cabb72397",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/037-click-onboardingstorageamountbutton.png",
+    "caption": "click-onboardingStorageAmountButton",
+    "utc": "2026-10-10T17:20:20.832809+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "93b24697cc1f506a37e9dffcc6d626066f4cd26dd23b6a0f90379fa7cd091455",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/038-wait-for-page-onboardingconnection.png",
+    "caption": "wait_for_page-onboardingConnection",
+    "utc": "2026-10-10T17:20:21.304631+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "0095b0e4a877daf05adce59d30e14b1e5c7f5bb2fad0a6d1c1ea26843b716749",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/039-click-connectionsettingsbutton.png",
+    "caption": "click-connectionSettingsButton",
+    "utc": "2026-10-10T17:20:21.775753+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "0260c1d38b5c8e68ead2beefe30f7807bb410c6011d42d04e8ad0c5cb75d43b3",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/040-wait-for-page-proxysettingsrow.png",
+    "caption": "wait_for_page-proxySettingsRow",
+    "utc": "2026-10-10T17:20:22.247337+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "0260c1d38b5c8e68ead2beefe30f7807bb410c6011d42d04e8ad0c5cb75d43b3",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/041-click-proxysettingsrow.png",
+    "caption": "click-proxySettingsRow",
+    "utc": "2026-10-10T17:20:22.730063+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "867057411001820d8e0112b2c1605d277e7e2e847b5e897d796a9811a439f8cf",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_resetguisettings/042-wait-for-page-proxysettingspage.png",
+    "caption": "wait_for_page-proxySettingsPage",
+    "utc": "2026-10-10T17:20:23.202254+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "f591dbb06c88d0cfc7ae154de09117b4e5032c65be70d0a324e1ec258d67bbae",
+    "test": "qml_test_resetguisettings",
+    "kind": "application-screenshot"
+  }
+]

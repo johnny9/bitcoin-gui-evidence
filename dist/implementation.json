@@ -71,11 +71,11 @@
     },
     "F04.S02": {
       "status": "parity",
-      "reason": "Core migration preserves an automatic backup; no targeted runtime proof was collected for this criterion."
+      "reason": "GUI migration preserves an automatic backup; the October 10 functional pass verifies its creation."
     },
     "F04.S03": {
       "status": "parity",
-      "reason": "Core migration preserves wallet contents; funded and watch-only preservation were not exercised by the empty test fixtures."
+      "reason": "Migration preserves the user\u2019s wallet contents. The October 10 funded fixture verifies spending funds, a transaction, labels and watch-only funds."
     },
     "F04.S04": {
       "status": "parity",
@@ -459,7 +459,7 @@
     },
     "F20.S04": {
       "status": "parity",
-      "reason": "Blockchain download and validation are connected to Core; this snapshot ran regtest rather than a full mainnet initial download."
+      "reason": "Core-backed blockchain download and validation work through the GUI node. A new functional scenario downloads 2,200 regtest blocks from a real peer and verifies the resulting chain tip."
     },
     "F20.S05": {
       "status": "parity",
@@ -546,8 +546,8 @@
       "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
     },
     "F23.S01": {
-      "status": "parity",
-      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+      "status": "partial",
+      "reason": "Script-thread settings and small cache allocations work, but the GUI cache validator incorrectly caps total database cache at 8 MiB. The October 10 functional regression reproduces rejection of 768 MiB even though Core starts with that value. Normal memory allocation needs a fix."
     },
     "F23.S02": {
       "status": "parity",
@@ -937,7 +937,7 @@
     "F23": {
       "status": "partial",
       "goal": "Adjust and recover application behavior through supported preferences.",
-      "reason": "Many settings and startup reset are available, and an external editor is an equivalent configuration path. Missing spending-policy preferences and startup integration still prevent some requested behavior choices."
+      "reason": "Many settings and startup reset are available, and an external editor is an equivalent configuration path. Missing spending-policy preferences and startup integration still prevent some requested behavior choices. The new functional check also found that the database-cache editor rejects normal allocations above 8 MiB."
     },
     "F24": {
       "status": "parity",

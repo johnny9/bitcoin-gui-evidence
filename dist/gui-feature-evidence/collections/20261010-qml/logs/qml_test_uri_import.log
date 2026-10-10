@@ -1,0 +1,16 @@
+Test address: bcrt1q43q009clv90ez0rym5jq525402k70nemc3tgsz
+Send page open.
+Test 1 PASSED: clipboard banner Fill button.
+Test 2 PASSED: manual URI popup.
+Test 3 PASSED: malformed URI shows error.
+Test 4 PASSED: file import.
+Test 5 PASSED: drag-drop simulation.
+Test 6 PASSED: DropArea hasUrls + file:// branch.
+Test 7 PASSED: DropArea hasUrls + non-file URL branch.
+Test 8 PASSED: native paste from recipient fields.
+Test 9 PASSED: non-URI native paste remains unchanged.
+
+==================================================
+All URI import tests PASSED (9/9)
+==================================================
+Preserving test directory: /work/tmp/qml_test_uri_import_v_lihu94

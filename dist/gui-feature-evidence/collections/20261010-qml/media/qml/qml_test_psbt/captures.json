@@ -1,0 +1,162 @@
+[
+  {
+    "path": "media/qml/qml_test_psbt/001-02-gui-launched.png",
+    "caption": "02-gui-launched",
+    "utc": "2026-10-10T17:19:14.774219+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "67314860d9d3ffcca77a0be8c5e4b7d88766d25f6b85e738d8b9f6d25711f994",
+    "test": "qml_test_psbt",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_psbt/002-03-gui-rpc-ready.png",
+    "caption": "03-gui-rpc-ready",
+    "utc": "2026-10-10T17:19:15.269129+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "9072e10abcbb02386b5cf5df9688e22bd0a143199cd7c34ea0901996d2f56bf5",
+    "test": "qml_test_psbt",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_psbt/003-05-wallet-selected-psbt-source.png",
+    "caption": "05-wallet-selected-psbt-source",
+    "utc": "2026-10-10T17:19:23.399667+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "7567c8d30bf6307da82b43e393853e58bf6b5cb060bdb2867b4dd50c87ddc002",
+    "test": "qml_test_psbt",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_psbt/004-06-send-page-opened.png",
+    "caption": "06-send-page-opened",
+    "utc": "2026-10-10T17:19:23.907895+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "1eebe0a1fc58244ce49c41a8d6da283e86b7286cecdac0d970fa6d7cf937ab5e",
+    "test": "qml_test_psbt",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_psbt/005-07-single-recipient-psbt-submitted.png",
+    "caption": "07-single-recipient-psbt-submitted",
+    "utc": "2026-10-10T17:19:24.436544+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "f427958eeca6f1a66aba06dbfe407432970c7fb7da5a3a5eb3878b532115b4b1",
+    "test": "qml_test_psbt",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_psbt/006-08-single-recipient-review-displayed.png",
+    "caption": "08-single-recipient-review-displayed",
+    "utc": "2026-10-10T17:19:24.935366+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "f427958eeca6f1a66aba06dbfe407432970c7fb7da5a3a5eb3878b532115b4b1",
+    "test": "qml_test_psbt",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_psbt/007-09-returned-from-single-review-to-send-page.png",
+    "caption": "09-returned-from-single-review-to-send-page",
+    "utc": "2026-10-10T17:19:25.431528+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "e3e182a7060bff7bd64fdbb80961783d57b238460a36cab97f32e14ea20bb02c",
+    "test": "qml_test_psbt",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_psbt/008-10-multi-recipient-psbt-submitted.png",
+    "caption": "10-multi-recipient-psbt-submitted",
+    "utc": "2026-10-10T17:19:25.983492+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "ca8ded951498a22ac29323aad88ff488568f9df0629a35e489a558b9853123bd",
+    "test": "qml_test_psbt",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_psbt/009-11-multiple-recipient-review-displayed.png",
+    "caption": "11-multiple-recipient-review-displayed",
+    "utc": "2026-10-10T17:19:26.482881+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "ca8ded951498a22ac29323aad88ff488568f9df0629a35e489a558b9853123bd",
+    "test": "qml_test_psbt",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_psbt/010-12-returned-from-multiple-review-to-send-page.png",
+    "caption": "12-returned-from-multiple-review-to-send-page",
+    "utc": "2026-10-10T17:19:26.976754+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "be5afe8a3f3f4f6121e7643747b7e2ad530e569c623c96425185b896391dd9ff",
+    "test": "qml_test_psbt",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_psbt/011-13-review-only-psbt-submitted.png",
+    "caption": "13-review-only-psbt-submitted",
+    "utc": "2026-10-10T17:19:27.524935+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "34e65222f2048394391ce5ee0c8fb68514899c8e1c22a1cc09e72941c9bbd745",
+    "test": "qml_test_psbt",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_psbt/012-14-review-only-transaction-modal-displayed.png",
+    "caption": "14-review-only-transaction-modal-displayed",
+    "utc": "2026-10-10T17:19:28.018444+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "34e65222f2048394391ce5ee0c8fb68514899c8e1c22a1cc09e72941c9bbd745",
+    "test": "qml_test_psbt",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_psbt/013-15-review-only-transaction-modal-dismissed.png",
+    "caption": "15-review-only-transaction-modal-dismissed",
+    "utc": "2026-10-10T17:19:28.865254+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "bb34c6dec0f36a2216292a091d2989fadf21351cf4d13df6f0eb9bba9f463118",
+    "test": "qml_test_psbt",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_psbt/014-16-signed-foreign-psbt-submitted.png",
+    "caption": "16-signed-foreign-psbt-submitted",
+    "utc": "2026-10-10T17:19:29.412506+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "44ed7e0a99dca2b9d5498d828f935007b0e770c97e5070dbd2cfa5c3bcb57925",
+    "test": "qml_test_psbt",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_psbt/015-17-signed-foreign-psbt-ready-to-broadcast.png",
+    "caption": "17-signed-foreign-psbt-ready-to-broadcast",
+    "utc": "2026-10-10T17:19:29.922498+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "44ed7e0a99dca2b9d5498d828f935007b0e770c97e5070dbd2cfa5c3bcb57925",
+    "test": "qml_test_psbt",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_psbt/016-18-signed-foreign-psbt-broadcast-confirmed.png",
+    "caption": "18-signed-foreign-psbt-broadcast-confirmed",
+    "utc": "2026-10-10T17:19:30.775217+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "8355a606b1062d0c931aca3e985ac42462ee9e069a91e0ea59e4f0c50c116f4e",
+    "test": "qml_test_psbt",
+    "kind": "application-screenshot"
+  }
+]

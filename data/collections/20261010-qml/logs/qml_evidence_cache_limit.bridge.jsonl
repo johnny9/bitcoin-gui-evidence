@@ -1,0 +1,58 @@
+{"utc": "2026-10-10T17:31:38.411609+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_cache_limit_bv8uy_4q/gui_node", "-test-automation=/work/tmp/evidence_cache_limit_bv8uy_4q/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_cache_limit_bv8uy_4q/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten", "-dbcache=768"], "pid": 3095, "platform": "xcb"}
+{"utc": "2026-10-10T17:31:39.233962+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:39.239953+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "width", "value": 1180}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:39.247685+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "height", "value": 1000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:39.334647+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:39.348842+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_about"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:39.353590+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:39.355439+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:31:39.356670+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:39.362585+00:00", "request": {"cmd": "click", "objectName": "aboutDeveloperRow"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:39.365976+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:39.367942+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:31:39.369443+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:39.370860+00:00", "request": {"cmd": "get_text", "objectName": "developerDbcacheField"}, "response": {"text": "768"}}
+{"utc": "2026-10-10T17:31:40.283478+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_cache_limit_bv8uy_4q/gui_node", "-test-automation=/work/tmp/evidence_cache_limit_bv8uy_4q/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_cache_limit_bv8uy_4q/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 3152, "platform": "xcb"}
+{"utc": "2026-10-10T17:31:41.038052+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:41.048650+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:41.059744+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_about"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:41.064997+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:41.068947+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:31:41.070759+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:41.076298+00:00", "request": {"cmd": "click", "objectName": "aboutDeveloperRow"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:41.078781+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:41.083408+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:31:41.085553+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:41.087184+00:00", "request": {"cmd": "type_text", "objectName": "developerDbcacheField", "text": ""}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:41.477016+00:00", "request": {"cmd": "get_text", "objectName": "developerDbcacheField"}, "response": {"text": "7"}}
+{"utc": "2026-10-10T17:31:42.184531+00:00", "application_pid": 3095, "exit_code": 0}
+{"utc": "2026-10-10T17:31:42.184884+00:00", "application_pid": 3152, "exit_code": 0}
+{"utc": "2026-10-10T17:40:58.675467+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_cache_limit_66gekbo2/gui_node", "-test-automation=/work/tmp/evidence_cache_limit_66gekbo2/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_cache_limit_66gekbo2/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten", "-dbcache=768"], "pid": 4026, "platform": "xcb"}
+{"utc": "2026-10-10T17:40:59.437299+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:40:59.439194+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "width", "value": 1180}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:40:59.446572+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "height", "value": 1000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:40:59.456594+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:40:59.471012+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_about"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:40:59.475609+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:40:59.477351+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:40:59.478576+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:40:59.484101+00:00", "request": {"cmd": "click", "objectName": "aboutDeveloperRow"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:40:59.486935+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:40:59.488659+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:40:59.490122+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:40:59.491578+00:00", "request": {"cmd": "get_text", "objectName": "developerDbcacheField"}, "response": {"text": "768"}}
+{"utc": "2026-10-10T17:41:00.102377+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_cache_limit_66gekbo2/gui_node", "-test-automation=/work/tmp/evidence_cache_limit_66gekbo2/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_cache_limit_66gekbo2/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 4083, "platform": "xcb"}
+{"utc": "2026-10-10T17:41:00.857125+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:41:00.867003+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:41:00.876971+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_about"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:41:00.882500+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:41:00.884546+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:41:00.886782+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:41:00.892261+00:00", "request": {"cmd": "click", "objectName": "aboutDeveloperRow"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:41:00.895638+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:41:00.897639+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:41:00.899181+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:41:00.900826+00:00", "request": {"cmd": "type_text", "objectName": "developerDbcacheField", "text": ""}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:41:01.291402+00:00", "request": {"cmd": "get_text", "objectName": "developerDbcacheField"}, "response": {"text": "7"}}
+{"utc": "2026-10-10T17:41:01.947846+00:00", "application_pid": 4026, "exit_code": 0}
+{"utc": "2026-10-10T17:41:01.948476+00:00", "application_pid": 4083, "exit_code": 0}

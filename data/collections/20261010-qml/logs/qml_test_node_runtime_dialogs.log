@@ -1,0 +1,13 @@
+Checkpoint screenshots will be saved under: /work/test/artifacts/qml_test_node_runtime_dialogs-20261010-172027
+Starting GUI: /validation/build/bin/bitcoin-core-app -datadir=/work/tmp/qml_test_bridge_8za46lkw/node0 -test-automation=/work/tmp/qml_test_bridge_8za46lkw/test_bridge.sock -test-settings-dir=/work/tmp/qml_test_bridge_8za46lkw/config -qml_onboarded=1 -logtimemicros -debug -debugexclude=leveldb -disablewallet -nolisten
+QmlDriver connected to test bridge.
+[qml_test_node_runtime_dialogs] database-read-error (bitcoin/src/init.cpp coins_error_cb)
+[qml_test_node_runtime_dialogs] screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_node_runtime_dialogs/001-database-read-error.png (800x665)
+[qml_test_node_runtime_dialogs] deprecated-checkpoints-warning (bitcoin/src/init.cpp -checkpoints warning)
+[qml_test_node_runtime_dialogs] screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_node_runtime_dialogs/002-deprecated-checkpoints-warning.png (800x665)
+[qml_test_node_runtime_dialogs] reindex-question-ok-abort (bitcoin/src/init.cpp chainstate load failure retry question)
+[qml_test_node_runtime_dialogs] screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_node_runtime_dialogs/003-reindex-question-ok-abort.png (800x665)
+[qml_test_node_runtime_dialogs] network-options-error (bitcoin/src/net.cpp outgoing connection option conflict)
+[qml_test_node_runtime_dialogs] screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_node_runtime_dialogs/004-network-options-error.png (800x665)
+[qml_test_node_runtime_dialogs] abort-retry-ignore-button-mask (CClientUIInterface BTN_ABORT | BTN_RETRY | BTN_IGNORE contract sample using a net.cpp error message)
+[qml_test_node_runtime_dialogs] screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_node_runtime_dialogs/005-abort-retry-ignore-button-mask.png (800x665)

@@ -1,0 +1,186 @@
+{"utc": "2026-10-10T17:19:52.429300+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-test-automation=/work/tmp/qml_resetguisettings_pw4szkik/test_bridge.sock", "-test-settings-dir=/work/tmp/qml_resetguisettings_pw4szkik/config", "-resetguisettings", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-regtest", "-disablewallet"], "pid": 316, "platform": "xcb"}
+{"utc": "2026-10-10T17:19:52.930396+00:00", "request": {"cmd": "wait_for_page", "page": "onboardingCover", "timeout": 10000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:19:53.399038+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:53.449612+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:53.500125+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:53.550805+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:53.601477+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:53.652136+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:53.702821+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:53.753340+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:53.804011+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:53.854685+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:53.905333+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:53.956024+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:54.006699+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:54.057211+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:54.107898+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:54.158584+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:54.209228+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:54.259769+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:54.310423+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:54.360969+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:54.411645+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:54.462321+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:54.512995+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:54.563519+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:54.614155+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:54.664681+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:54.715264+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:54.765849+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:54.816443+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:54.867035+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:54.917621+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:54.968184+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:55.018766+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:55.069359+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:55.119978+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:55.170602+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:55.221231+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:55.271795+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:55.322435+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:55.373138+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:55.423823+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:55.474530+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:55.474899+00:00", "onboarding_activation_state": {"value": true}, "objectName": "onboardingCoverButton"}
+{"utc": "2026-10-10T17:19:55.478587+00:00", "request": {"cmd": "click", "objectName": "onboardingCoverButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:19:55.949259+00:00", "request": {"cmd": "wait_for_page", "page": "onboardingStrengthen", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:19:56.418705+00:00", "request": {"cmd": "get_property", "objectName": "onboardingStrengthenButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:56.418888+00:00", "onboarding_activation_state": {"value": true}, "objectName": "onboardingStrengthenButton"}
+{"utc": "2026-10-10T17:19:56.422514+00:00", "request": {"cmd": "click", "objectName": "onboardingStrengthenButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:19:56.899071+00:00", "request": {"cmd": "wait_for_page", "page": "onboardingBlockchain", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:19:57.378420+00:00", "request": {"cmd": "get_property", "objectName": "onboardingBlockchainButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:57.378760+00:00", "onboarding_activation_state": {"value": true}, "objectName": "onboardingBlockchainButton"}
+{"utc": "2026-10-10T17:19:57.383362+00:00", "request": {"cmd": "click", "objectName": "onboardingBlockchainButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:19:57.854132+00:00", "request": {"cmd": "wait_for_page", "page": "onboardingBlockclock", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:19:58.325054+00:00", "request": {"cmd": "get_property", "objectName": "onboardingBlockclockButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:58.325243+00:00", "onboarding_activation_state": {"value": true}, "objectName": "onboardingBlockclockButton"}
+{"utc": "2026-10-10T17:19:58.331202+00:00", "request": {"cmd": "click", "objectName": "onboardingBlockclockButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:19:58.803513+00:00", "request": {"cmd": "wait_for_page", "page": "onboardingStorageLocation", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:19:59.272856+00:00", "request": {"cmd": "wait_for_page", "page": "onboardingStorageLocation", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:19:59.275094+00:00", "request": {"cmd": "invoke_property_object", "objectName": "onboardingStorageLocation", "prop": "settingsModel", "method": "selectCustomDataDir", "args": ["/work/tmp/qml_resetguisettings_pw4szkik/custom-data-dir"]}, "response": {"ok": true, "value": true}}
+{"utc": "2026-10-10T17:19:59.275735+00:00", "request": {"cmd": "get_property", "objectName": "onboardingStorageLocationButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:59.276045+00:00", "request": {"cmd": "get_property", "objectName": "onboardingStorageLocationButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:59.276307+00:00", "onboarding_activation_state": {"value": true}, "objectName": "onboardingStorageLocationButton"}
+{"utc": "2026-10-10T17:19:59.288676+00:00", "request": {"cmd": "click", "objectName": "onboardingStorageLocationButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:19:59.759392+00:00", "request": {"cmd": "wait_for_page", "page": "onboardingStorageAmount", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:00.231717+00:00", "request": {"cmd": "get_property", "objectName": "onboardingStorageAmountButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:20:00.232101+00:00", "onboarding_activation_state": {"value": true}, "objectName": "onboardingStorageAmountButton"}
+{"utc": "2026-10-10T17:20:00.241090+00:00", "request": {"cmd": "click", "objectName": "onboardingStorageAmountButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:00.713206+00:00", "request": {"cmd": "wait_for_page", "page": "onboardingConnection", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:01.183276+00:00", "request": {"cmd": "click", "objectName": "connectionSettingsButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:01.653167+00:00", "request": {"cmd": "wait_for_page", "page": "proxySettingsRow", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:02.124026+00:00", "request": {"cmd": "get_property", "objectName": "listenSwitch", "prop": "checked"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:20:02.124654+00:00", "request": {"cmd": "click", "objectName": "listenSwitch"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:02.595602+00:00", "request": {"cmd": "get_property", "objectName": "listenSwitch", "prop": "checked"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:02.596065+00:00", "request": {"cmd": "get_property", "objectName": "natpmpSwitch", "prop": "checked"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:20:02.596470+00:00", "request": {"cmd": "get_property", "objectName": "serverSwitch", "prop": "checked"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:02.597065+00:00", "request": {"cmd": "click", "objectName": "serverSwitch"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:03.067370+00:00", "request": {"cmd": "get_property", "objectName": "serverSwitch", "prop": "checked"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:20:03.076758+00:00", "request": {"cmd": "click", "objectName": "proxySettingsRow"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:03.550275+00:00", "request": {"cmd": "wait_for_page", "page": "proxySettingsPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:04.021410+00:00", "request": {"cmd": "get_property", "objectName": "proxyEnableSwitch", "prop": "checked"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:04.022276+00:00", "request": {"cmd": "click", "objectName": "proxyEnableSwitch"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:04.493727+00:00", "request": {"cmd": "get_property", "objectName": "proxyEnableSwitch", "prop": "checked"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:20:04.494386+00:00", "request": {"cmd": "set_text", "objectName": "proxyAddressInput", "text": "10.0.0.1:9050"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:04.494802+00:00", "request": {"cmd": "get_property", "objectName": "proxySettingsPage", "prop": "draftProxyAddress"}, "response": {"value": "10.0.0.1:9050"}}
+{"utc": "2026-10-10T17:20:04.495183+00:00", "request": {"cmd": "get_property", "objectName": "proxySettingsPage", "prop": "draftProxyValidationError"}, "response": {"value": ""}}
+{"utc": "2026-10-10T17:20:04.495573+00:00", "request": {"cmd": "get_property", "objectName": "torEnableSwitch", "prop": "checked"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:04.496137+00:00", "request": {"cmd": "click", "objectName": "torEnableSwitch"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:04.967829+00:00", "request": {"cmd": "get_property", "objectName": "torEnableSwitch", "prop": "checked"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:20:04.968477+00:00", "request": {"cmd": "set_text", "objectName": "torAddressInput", "text": "127.0.0.1:9150"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:04.969355+00:00", "request": {"cmd": "get_property", "objectName": "proxySettingsPage", "prop": "draftTorAddress"}, "response": {"value": "127.0.0.1:9150"}}
+{"utc": "2026-10-10T17:20:04.970250+00:00", "request": {"cmd": "get_property", "objectName": "proxySettingsPage", "prop": "draftTorValidationError"}, "response": {"value": ""}}
+{"utc": "2026-10-10T17:20:04.970730+00:00", "request": {"cmd": "get_property", "objectName": "proxySettingsSaveButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:20:04.971607+00:00", "request": {"cmd": "click", "objectName": "proxySettingsSaveButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:05.444936+00:00", "request": {"cmd": "wait_for_page", "page": "proxySettingsRow", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:05.915137+00:00", "onboarding_activation_state": {"value": true}, "objectName": "onboardingConnectionSettingsCloseButton"}
+{"utc": "2026-10-10T17:20:05.915813+00:00", "request": {"cmd": "click", "objectName": "onboardingConnectionSettingsCloseButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:06.386719+00:00", "request": {"cmd": "get_property", "objectName": "onboardingConnectionSettingsPopup", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:06.387201+00:00", "request": {"cmd": "wait_for_page", "page": "onboardingConnectionButton", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:06.858035+00:00", "onboarding_activation_state": {"value": true}, "objectName": "onboardingConnectionButton"}
+{"utc": "2026-10-10T17:20:06.858727+00:00", "request": {"cmd": "click", "objectName": "onboardingConnectionButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:07.646028+00:00", "capture_error": "[Errno 104] Connection reset by peer", "after": {"cmd": "click", "objectName": "onboardingConnectionButton"}}
+{"utc": "2026-10-10T17:20:07.897515+00:00", "request": {"cmd": "list_objects"}, "response": {"objects": [{"className": "MainWindow_QMLTYPE_424", "depth": 0, "objectName": "appWindow"}, {"className": "QQuickContentItem", "depth": 2, "objectName": "MainWindow"}, {"className": "DesktopMenuActions_QMLTYPE_400", "depth": 3, "objectName": "desktopMenuActions"}, {"className": "NodeRuntimeDialog_QMLTYPE_271", "depth": 3, "objectName": "nodeRuntimeDialog"}, {"className": "QQuickContentItem", "depth": 5, "objectName": "QQuickPopupItem"}, {"className": "CoreText_QMLTYPE_10", "depth": 8, "objectName": "nodeRuntimeDialogTitle"}, {"className": "CoreText_QMLTYPE_10", "depth": 8, "objectName": "nodeRuntimeDialogMessage"}, {"className": "DialogButtonBox_QMLTYPE_272", "depth": 7, "objectName": "nodeRuntimeDialogButtonBox"}, {"className": "NodeFatalErrorPopup_QMLTYPE_117", "depth": 3, "objectName": "nodeFatalErrorPopup"}, {"className": "QQuickContentItem", "depth": 5, "objectName": "QQuickPopupItem"}, {"className": "CoreText_QMLTYPE_10", "depth": 8, "objectName": "nodeFatalErrorText"}, {"className": "ContinueButton_QMLTYPE_35", "depth": 7, "objectName": "nodeFatalShutdownButton"}, {"className": "NodeInformationPopup_QMLTYPE_167", "depth": 3, "objectName": "nodeInformationPopup"}, {"className": "QQuickContentItem", "depth": 5, "objectName": "QQuickPopupItem"}, {"className": "ContinueButton_QMLTYPE_35", "depth": 7, "objectName": "nodeInformationCloseButton"}, {"className": "WalletCreationModal_QMLTYPE_402", "depth": 3, "objectName": "walletCreationModal"}, {"className": "DesktopNativeMenuBar_QMLTYPE_421", "depth": 5, "objectName": "desktopNativeMenuBar"}, {"className": "QPlatformMenu", "depth": 6, "objectName": "fileMenu"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuCreateWallet"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuCloseWallet"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuBackupWallet"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuOpenUri"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuSignMessage"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuVerifyMessage"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuLoadPsbt"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuSettings"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuExit"}, {"className": "QPlatformMenu", "depth": 6, "objectName": "editMenu"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuUndo"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuRedo"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuCopy"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuPaste"}, {"className": "QPlatformMenu", "depth": 6, "objectName": "viewMenu"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuToggleDisplayUnit"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuNode"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuActivity"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuSend"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuReceive"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuInformation"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuConsole"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuNetworkTraffic"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuPeers"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "viewTrailingSeparator"}, {"className": "QPlatformMenu", "depth": 6, "objectName": "windowMenu"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuMinimize"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuZoom"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuMainWindow"}, {"className": "QPlatformMenu", "depth": 6, "objectName": "helpMenu"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuRpcDocumentation"}, {"className": "QPlatformMenuItem", "depth": 7, "objectName": "menuAbout"}, {"className": "PageStack_QMLTYPE_80", "depth": 3, "objectName": "mainPageStack"}, {"className": "NodeRunner_QMLTYPE_423", "depth": 5, "objectName": "nodeRunner"}, {"className": "QQuickIconImage", "depth": 15, "objectName": "image"}, {"className": "IconButton_QMLTYPE_66", "depth": 14, "objectName": "nodeWarningsButton"}, {"className": "QQuickIconImage", "depth": 17, "objectName": "image"}, {"className": "IconButton_QMLTYPE_66", "depth": 14, "objectName": "nodeInformationButton"}, {"className": "QQuickIconImage", "depth": 17, "objectName": "image"}, {"className": "NodeWarningsPopup_QMLTYPE_386", "depth": 14, "objectName": "nodeWarningsPopup"}, {"className": "QQuickContentItem", "depth": 16, "objectName": "QQuickPopupItem"}, {"className": "CoreText_QMLTYPE_10", "depth": 20, "objectName": "nodeNoWarningsText"}, {"className": "QQuickIconImage", "depth": 23, "objectName": "image"}, {"className": "CoreText_QMLTYPE_10", "depth": 21, "objectName": "nodeWarningText_0"}, {"className": "ContinueButton_QMLTYPE_35", "depth": 18, "objectName": "nodeWarningsCloseButton"}, {"className": "NodeInformationPopup_QMLTYPE_167", "depth": 14, "objectName": "nodeInformationPopup"}, {"className": "QQuickContentItem", "depth": 16, "objectName": "QQuickPopupItem"}, {"className": "ContinueButton_QMLTYPE_35", "depth": 18, "objectName": "nodeInformationCloseButton"}, {"className": "IconButton_QMLTYPE_66", "depth": 13, "objectName": "peersTabButton"}, {"className": "QQuickIconImage", "depth": 16, "objectName": "image"}, {"className": "IconButton_QMLTYPE_66", "depth": 13, "objectName": "nodeSettingsButton"}, {"className": "QQuickIconImage", "depth": 16, "objectName": "image"}, {"className": "QQuickContentItem", "depth": 6, "objectName": "NodeRunner"}, {"className": "BlockClock_QMLTYPE_343", "depth": 7, "objectName": "blockClock"}, {"className": "BlockClockDial_QML_349", "depth": 8, "objectName": "blockClockDial"}, {"className": "QQuickIconImage", "depth": 10, "objectName": "image"}, {"className": "Label_QMLTYPE_74_QML_351", "depth": 8, "objectName": "blockClockSubText"}, {"className": "QQuickSequentialAnimation", "depth": 9, "objectName": "blockClockEstimatingAnimation"}, {"className": "PeersIndicator_QMLTYPE_346", "depth": 8, "objectName": "blockClockPeersIndicator"}, {"className": "NetworkIndicator_QMLTYPE_344", "depth": 8, "objectName": "blockClockNetworkIndicator"}, {"className": "QQuickMouseArea_QML_352", "depth": 8, "objectName": "blockClockToggleArea"}]}}
+{"utc": "2026-10-10T17:20:12.774228+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-test-automation=/work/tmp/qml_resetguisettings_pw4szkik/test_bridge.sock", "-test-settings-dir=/work/tmp/qml_resetguisettings_pw4szkik/config", "-resetguisettings", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-regtest", "-disablewallet"], "pid": 376, "platform": "xcb"}
+{"utc": "2026-10-10T17:20:13.024847+00:00", "request": {"cmd": "wait_for_page", "page": "onboardingCover", "timeout": 10000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:13.494640+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:13.545420+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:13.596256+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:13.646904+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:13.697599+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:13.748285+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:13.798974+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:13.849571+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:13.900262+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:13.950887+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:14.001578+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:14.052298+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:14.103069+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:14.153599+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:14.204143+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:14.254798+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:14.305565+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:14.356212+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:14.406871+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:14.457668+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:14.508321+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:14.558954+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:14.609599+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:14.660203+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:14.710794+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:14.761512+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:14.812204+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:14.862810+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:14.913419+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:14.964017+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:15.014631+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:15.065260+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:15.115873+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:15.166476+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:15.217213+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:15.267911+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:15.318727+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:15.369520+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:15.420310+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:15.470979+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:15.521737+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:15.572369+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:15.623098+00:00", "request": {"cmd": "get_property", "objectName": "onboardingCoverButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:20:15.623469+00:00", "onboarding_activation_state": {"value": true}, "objectName": "onboardingCoverButton"}
+{"utc": "2026-10-10T17:20:15.627108+00:00", "request": {"cmd": "click", "objectName": "onboardingCoverButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:16.094933+00:00", "request": {"cmd": "wait_for_page", "page": "onboardingStrengthen", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:16.564158+00:00", "request": {"cmd": "get_property", "objectName": "onboardingStrengthenButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:20:16.564394+00:00", "onboarding_activation_state": {"value": true}, "objectName": "onboardingStrengthenButton"}
+{"utc": "2026-10-10T17:20:16.568149+00:00", "request": {"cmd": "click", "objectName": "onboardingStrengthenButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:17.038179+00:00", "request": {"cmd": "wait_for_page", "page": "onboardingBlockchain", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:17.506806+00:00", "request": {"cmd": "get_property", "objectName": "onboardingBlockchainButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:20:17.506998+00:00", "onboarding_activation_state": {"value": true}, "objectName": "onboardingBlockchainButton"}
+{"utc": "2026-10-10T17:20:17.510653+00:00", "request": {"cmd": "click", "objectName": "onboardingBlockchainButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:17.981130+00:00", "request": {"cmd": "wait_for_page", "page": "onboardingBlockclock", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:18.451184+00:00", "request": {"cmd": "get_property", "objectName": "onboardingBlockclockButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:20:18.451406+00:00", "onboarding_activation_state": {"value": true}, "objectName": "onboardingBlockclockButton"}
+{"utc": "2026-10-10T17:20:18.456788+00:00", "request": {"cmd": "click", "objectName": "onboardingBlockclockButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:18.926240+00:00", "request": {"cmd": "wait_for_page", "page": "onboardingStorageLocation", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:19.395337+00:00", "request": {"cmd": "wait_for_page", "page": "onboardingStorageLocation", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:19.397357+00:00", "request": {"cmd": "invoke_property_object", "objectName": "onboardingStorageLocation", "prop": "settingsModel", "method": "selectCustomDataDir", "args": ["/work/tmp/qml_resetguisettings_pw4szkik/custom-data-dir"]}, "response": {"ok": true, "value": true}}
+{"utc": "2026-10-10T17:20:19.398004+00:00", "request": {"cmd": "get_property", "objectName": "onboardingStorageLocationButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:20:19.398279+00:00", "request": {"cmd": "get_property", "objectName": "onboardingStorageLocationButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:20:19.398517+00:00", "onboarding_activation_state": {"value": true}, "objectName": "onboardingStorageLocationButton"}
+{"utc": "2026-10-10T17:20:19.408994+00:00", "request": {"cmd": "click", "objectName": "onboardingStorageLocationButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:19.882074+00:00", "request": {"cmd": "wait_for_page", "page": "onboardingStorageAmount", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:20.351639+00:00", "request": {"cmd": "get_property", "objectName": "onboardingStorageAmountButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:20:20.351962+00:00", "onboarding_activation_state": {"value": true}, "objectName": "onboardingStorageAmountButton"}
+{"utc": "2026-10-10T17:20:20.362439+00:00", "request": {"cmd": "click", "objectName": "onboardingStorageAmountButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:20.834370+00:00", "request": {"cmd": "wait_for_page", "page": "onboardingConnection", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:21.306357+00:00", "request": {"cmd": "click", "objectName": "connectionSettingsButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:21.777430+00:00", "request": {"cmd": "wait_for_page", "page": "proxySettingsRow", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:22.248642+00:00", "request": {"cmd": "get_property", "objectName": "listenSwitch", "prop": "checked"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:20:22.249089+00:00", "request": {"cmd": "get_property", "objectName": "natpmpSwitch", "prop": "checked"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:20:22.249415+00:00", "request": {"cmd": "get_property", "objectName": "serverSwitch", "prop": "checked"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:22.257584+00:00", "request": {"cmd": "click", "objectName": "proxySettingsRow"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:22.731689+00:00", "request": {"cmd": "wait_for_page", "page": "proxySettingsPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:20:23.203846+00:00", "request": {"cmd": "get_property", "objectName": "proxyEnableSwitch", "prop": "checked"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:23.204378+00:00", "request": {"cmd": "get_property", "objectName": "torEnableSwitch", "prop": "checked"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:20:23.219243+00:00", "application_pid": 316, "exit_code": 0}
+{"utc": "2026-10-10T17:20:23.219554+00:00", "application_pid": 376, "exit_code": -15}

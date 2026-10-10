@@ -1,0 +1,1276 @@
+[
+  {
+    "id": "F02.S04",
+    "intent": "Close individual wallets or all wallets.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "Individual close is available; close-all is missing.<br>Confirmed individual wallet unload.",
+      "text": "Individual close is available; close-all is missing. Confirmed individual wallet unload.",
+      "captures": [
+        "media/qml/qml_test_wallet_selector_load/013-05-selected-wallet-unloads-only-after-confirmation.png"
+      ]
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_evidence_shell/004-all-wallets-closed.png"
+    ],
+    "checks": [
+      "close-all-wallets",
+      "node-after-close"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": false
+  },
+  {
+    "id": "F03.S03",
+    "intent": "Name a recovered wallet.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "The restored name comes from the filename, without a separate naming step.",
+      "text": "The restored name comes from the filename, without a separate naming step.",
+      "captures": [
+        "media/qml/qml_test_wallet_restore/009-04-import-success-screen-displayed.png"
+      ]
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_test_wallet_restore/009-04-import-success-screen-displayed.png"
+    ],
+    "checks": [
+      "existing-f03-s03"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": false
+  },
+  {
+    "id": "F04.S02",
+    "intent": "Preserve the original wallet with an automatic backup.",
+    "before": {
+      "status": "source",
+      "label": "Source / related tests",
+      "originalStatus": "Source / related tests only",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_evidence_migration/001-migrated-wallet-preserved-funds.png"
+    ],
+    "checks": [
+      "migration-backup"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": true
+  },
+  {
+    "id": "F04.S03",
+    "intent": "Preserve wallet contents, including watch-only information.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "Migration tests use empty legacy fixtures; preservation of funded and watch-only contents was not asserted.<br>No matching screenshot collected.",
+      "text": "Migration tests use empty legacy fixtures; preservation of funded and watch-only contents was not asserted. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_evidence_migration/001-migrated-wallet-preserved-funds.png",
+      "collections/20261010-qml/media/qml/qml_evidence_migration/002-migrated-watch-only-funds.png"
+    ],
+    "checks": [
+      "migration-label",
+      "migration-funds",
+      "migration-history",
+      "migration-watch-label",
+      "migration-watch-funds"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": true
+  },
+  {
+    "id": "F04.S04",
+    "intent": "Open migrated wallets immediately or later.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "The migrated wallet opens automatically; deferred opening is not offered.",
+      "text": "The migrated wallet opens automatically; deferred opening is not offered.",
+      "captures": [
+        "media/qml/qml_test_wallet_migration/003-06-unencrypted-migration-prompt-displayed.png",
+        "media/qml/qml_test_wallet_migration/004-07-unencrypted-wallet-migrated-and-loaded.png"
+      ]
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_evidence_migration/001-migrated-wallet-preserved-funds.png"
+    ],
+    "checks": [
+      "migration-auto-open"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": false
+  },
+  {
+    "id": "F06.S01",
+    "intent": "Protect stored spending keys with passphrase encryption.",
+    "before": {
+      "status": "assertions",
+      "label": "Automated evidence",
+      "originalStatus": "Automated evidence collected",
+      "html": "Encrypted wallets start locked; model encryption state updates.<br>No matching screenshot collected.",
+      "text": "Encrypted wallets start locked; model encryption state updates. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_test_password_wallet/005-05-wallet-restarted-locked.png"
+    ],
+    "checks": [
+      "existing-f06-s01"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": true
+  },
+  {
+    "id": "F07.S01",
+    "intent": "View available, pending, immature mining, and total balances.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "Balance and pending activity are present; the complete available/pending/immature/total breakdown is missing.",
+      "text": "Balance and pending activity are present; the complete available/pending/immature/total breakdown is missing.",
+      "captures": [
+        "media/qml/qml_test_activity_filter_export/006-06-activity-shows-payment-request-and-mined-rows.png"
+      ]
+    },
+    "captures": [],
+    "checks": [],
+    "fullAfter": false,
+    "hasFailure": false,
+    "newCapture": false
+  },
+  {
+    "id": "F07.S02",
+    "intent": "Review recent wallet activity.",
+    "before": {
+      "status": "visual",
+      "label": "Visual evidence only",
+      "originalStatus": "Visual evidence only",
+      "html": "No targeted runtime assertion collected for this exact criterion.",
+      "text": "No targeted runtime assertion collected for this exact criterion.",
+      "captures": [
+        "media/qml/qml_test_activity_filter_export/006-06-activity-shows-payment-request-and-mined-rows.png"
+      ]
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_test_activity_filter_export/006-06-activity-shows-payment-request-and-mined-rows.png"
+    ],
+    "checks": [
+      "existing-f07-s02"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": false
+  },
+  {
+    "id": "F07.S03",
+    "intent": "Find a recent transaction in the full transaction history.",
+    "before": {
+      "status": "source",
+      "label": "Source / related tests",
+      "originalStatus": "Source / related tests only",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_test_activity_filter_export/030-30-activity-details-amount-uses-selected-display-unit.png"
+    ],
+    "checks": [
+      "existing-f07-s03"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": true
+  },
+  {
+    "id": "F07.S04",
+    "intent": "Know when wallet information may be out of date.",
+    "before": {
+      "status": "source",
+      "label": "Source / related tests",
+      "originalStatus": "Source / related tests only",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_test_activity_filter_export/002-02-source-empty-activity-state-shown-syncing-wallet-activity.png"
+    ],
+    "checks": [
+      "existing-f07-s04"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": true
+  },
+  {
+    "id": "F08.S06",
+    "intent": "Share QR images with other applications using drag and drop.",
+    "before": {
+      "status": "gap",
+      "label": "Missing GUI workflow",
+      "originalStatus": "Implementation gap",
+      "html": "No QR image drag-and-drop export.<br>No screenshot: this GUI workflow is absent.",
+      "text": "No QR image drag-and-drop export. No screenshot: this GUI workflow is absent.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_test_receive/024-receive-menu.png"
+    ],
+    "checks": [
+      "existing-f08-s06"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": true
+  },
+  {
+    "id": "F09.S02",
+    "intent": "Enter or paste a recipient address, or use a saved address.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "Entry and paste work; no saved-recipient picker.<br>No matching screenshot collected.",
+      "text": "Entry and paste work; no saved-recipient picker. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_evidence_desktop/005-recipient-entered.png"
+    ],
+    "checks": [
+      "enter-payment-address"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": true
+  },
+  {
+    "id": "F09.S07",
+    "intent": "Sign payments with local spending keys or a compatible external signer.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "Local signing and a mock external signer are exercised; physical hardware is not.<br>Local and mock-signer transactions reach broadcast.",
+      "text": "Local signing and a mock external signer are exercised; physical hardware is not. Local and mock-signer transactions reach broadcast.",
+      "captures": [
+        "media/qml/qml_test_password_wallet/008-08-review-built-and-wallet-relocked.png",
+        "media/qml/qml_test_send_receive/012-14-review-page-with-fixed-amount.png"
+      ]
+    },
+    "captures": [],
+    "checks": [],
+    "fullAfter": false,
+    "hasFailure": false,
+    "newCapture": false
+  },
+  {
+    "id": "F09.S08",
+    "intent": "Prepare a payment from a watch-only wallet for signing elsewhere.",
+    "before": {
+      "status": "assertions",
+      "label": "Automated evidence",
+      "originalStatus": "Automated evidence collected",
+      "html": "Watch-only/imported PSBT review paths are tested; exhaustive watch-only creation is not.<br>No matching screenshot collected.",
+      "text": "Watch-only/imported PSBT review paths are tested; exhaustive watch-only creation is not. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_evidence_watchonly/003-watch-only-unsigned-payment-exported.png"
+    ],
+    "checks": [
+      "watch-only-export",
+      "watch-only-no-keys",
+      "watch-only-unsigned",
+      "external-handoff"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": true
+  },
+  {
+    "id": "F10.S03",
+    "intent": "Handle payment requests from other applications, including while Bitcoin Core is already running.",
+    "before": {
+      "status": "gap",
+      "label": "Missing GUI workflow",
+      "originalStatus": "Implementation gap",
+      "html": "No operating-system URI delivery or forwarding workflow.<br>No screenshot: this GUI workflow is absent.",
+      "text": "No operating-system URI delivery or forwarding workflow. No screenshot: this GUI workflow is absent.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_test_uri_import/006-click-senduriimportapplybutton.png"
+    ],
+    "checks": [
+      "existing-f10-s03"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": true
+  },
+  {
+    "id": "F11.S04",
+    "intent": "Know when a fee estimate is unavailable.",
+    "before": {
+      "status": "assertions",
+      "label": "Automated evidence",
+      "originalStatus": "Automated evidence collected",
+      "html": "Unavailable estimates and missing-recipient feedback are asserted.<br>No matching screenshot collected.",
+      "text": "Unavailable estimates and missing-recipient feedback are asserted. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_evidence_desktop/004-fee-estimate-unavailable.png"
+    ],
+    "checks": [
+      "fee-unavailable"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": true
+  },
+  {
+    "id": "F12.S04",
+    "intent": "Compare coins by amount, address, label, age, and confirmations.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "Amounts, addresses, labels, age, sorting and grouping are supported; confirmation counts are missing.",
+      "text": "Amounts, addresses, labels, age, sorting and grouping are supported; confirmation counts are missing.",
+      "captures": [
+        "media/qml/qml_additional/009-coin-selection-selected.png"
+      ]
+    },
+    "captures": [],
+    "checks": [],
+    "fullAfter": false,
+    "hasFailure": false,
+    "newCapture": false
+  },
+  {
+    "id": "F13.S05",
+    "intent": "Copy an unsigned PSBT to the clipboard or save it to a file for signing elsewhere.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "File export is available; PSBT clipboard export is missing.<br>No matching screenshot collected.",
+      "text": "File export is available; PSBT clipboard export is missing. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_evidence_watchonly/003-watch-only-unsigned-payment-exported.png"
+    ],
+    "checks": [
+      "watch-only-export",
+      "watch-only-unsigned",
+      "external-handoff"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": true
+  },
+  {
+    "id": "F14.S06",
+    "intent": "Copy a partially signed PSBT to the clipboard or save it to a file for further signing.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "File saving is available, including incomplete external-signer results; clipboard export is missing.",
+      "text": "File saving is available, including incomplete external-signer results; clipboard export is missing.",
+      "captures": [
+        "media/qml/qml_test_psbt/012-14-review-only-transaction-modal-displayed.png"
+      ]
+    },
+    "captures": [],
+    "checks": [],
+    "fullAfter": false,
+    "hasFailure": false,
+    "newCapture": false
+  },
+  {
+    "id": "F15.S01",
+    "intent": "Connect a wallet to a compatible external signer.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "An executable mock signer is exercised; no physical device.",
+      "text": "An executable mock signer is exercised; no physical device.",
+      "captures": [
+        "media/qml/qml_test_external_signer/014-14-external-signer-wallet-hides-password-settings.png",
+        "media/qml/qml_test_external_signer/020-20-no-signer-review-displayed.png"
+      ]
+    },
+    "captures": [],
+    "checks": [],
+    "fullAfter": false,
+    "hasFailure": false,
+    "newCapture": false
+  },
+  {
+    "id": "F15.S02",
+    "intent": "Keep spending keys on the signing device.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "Test signer holds the keys externally; physical device custody is not certified.",
+      "text": "Test signer holds the keys externally; physical device custody is not certified.",
+      "captures": [
+        "media/qml/qml_test_external_signer/014-14-external-signer-wallet-hides-password-settings.png",
+        "media/qml/qml_test_external_signer/020-20-no-signer-review-displayed.png"
+      ]
+    },
+    "captures": [],
+    "checks": [],
+    "fullAfter": false,
+    "hasFailure": false,
+    "newCapture": false
+  },
+  {
+    "id": "F15.S04",
+    "intent": "Authorize outgoing payments using the device.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "Mock signer approval, errors and broadcast are tested; physical approval is untested.",
+      "text": "Mock signer approval, errors and broadcast are tested; physical approval is untested.",
+      "captures": [
+        "media/qml/qml_test_external_signer/020-20-no-signer-review-displayed.png",
+        "media/qml/qml_test_external_signer/025-25-signed-transaction-broadcast.png"
+      ]
+    },
+    "captures": [],
+    "checks": [],
+    "fullAfter": false,
+    "hasFailure": false,
+    "newCapture": false
+  },
+  {
+    "id": "F15.S05",
+    "intent": "Continue a signing workflow when additional signatures are needed. Signing workflow.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "An incomplete mock external-signer result can be saved; broad multisigner exchange is not exercised.<br>No matching screenshot collected.",
+      "text": "An incomplete mock external-signer result can be saved; broad multisigner exchange is not exercised. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [],
+    "checks": [],
+    "fullAfter": false,
+    "hasFailure": false,
+    "newCapture": false
+  },
+  {
+    "id": "F16.S03",
+    "intent": "Search by address, transaction ID, or label, and sort transaction history.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "Search is supported; ordering is fixed rather than generally sortable.",
+      "text": "Search is supported; ordering is fixed rather than generally sortable.",
+      "captures": [
+        "media/qml/qml_test_activity_filter_export/010-10-today-and-mined-filters-applied.png"
+      ]
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_test_activity_filter_export/014-14-search-by-request-label-applied.png"
+    ],
+    "checks": [
+      "existing-f16-s03"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": false
+  },
+  {
+    "id": "F16.S09",
+    "intent": "Inspect transactions in external block explorers.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "Explorer URI construction is tested; opening a third-party browser/service was not exercised.<br>No matching screenshot collected.",
+      "text": "Explorer URI construction is tested; opening a third-party browser/service was not exercised. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [],
+    "checks": [],
+    "fullAfter": false,
+    "hasFailure": false,
+    "newCapture": false
+  },
+  {
+    "id": "F18.S05",
+    "intent": "Copy saved addresses and labels to the clipboard.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "Address copying is supported; separate label-copy coverage needs verification.",
+      "text": "Address copying is supported; separate label-copy coverage needs verification.",
+      "captures": [
+        "media/qml/qml_test_addresses/012-click-walletaddressesrow.png"
+      ]
+    },
+    "captures": [],
+    "checks": [],
+    "fullAfter": false,
+    "hasFailure": false,
+    "newCapture": false
+  },
+  {
+    "id": "F20.S03",
+    "intent": "Assess available storage, expected requirements, and the effect of pruning on wallet recovery.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "Storage and pruning information is shown; wallet-recovery consequences are not explained.",
+      "text": "Storage and pruning information is shown; wallet-recovery consequences are not explained.",
+      "captures": [
+        "media/qml/qml_test_preinit_onboarding/015-wait-for-page-onboardingstorageamount.png"
+      ]
+    },
+    "captures": [],
+    "checks": [],
+    "fullAfter": false,
+    "hasFailure": false,
+    "newCapture": false
+  },
+  {
+    "id": "F20.S04",
+    "intent": "Download and validate the blockchain.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "Regtest block validation is exercised; a full mainnet initial download is not.<br>No matching screenshot collected.",
+      "text": "Regtest block validation is exercised; a full mainnet initial download is not. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_evidence_sync/003-real-peer-sync-complete.png"
+    ],
+    "checks": [
+      "download-and-validate"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": true
+  },
+  {
+    "id": "F20.S05",
+    "intent": "Monitor synchronization progress and how far the node is behind.",
+    "before": {
+      "status": "assertions",
+      "label": "Automated evidence",
+      "originalStatus": "Automated evidence collected",
+      "html": "Sync progress/ETA and block-clock states have component/model tests.<br>No matching screenshot collected.",
+      "text": "Sync progress/ETA and block-clock states have component/model tests. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_evidence_sync/001-live-regtest-sync-progress.png",
+      "collections/20261010-qml/media/qml/qml_evidence_sync/003-real-peer-sync-complete.png"
+    ],
+    "checks": [
+      "real-sync-in-progress",
+      "download-and-validate"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": true
+  },
+  {
+    "id": "F20.S07",
+    "intent": "Use mainnet, testnet, testnet4, signet, or regtest. Network support.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "Regtest is executed; other chains are source/configuration evidence only.<br>No matching screenshot collected.",
+      "text": "Regtest is executed; other chains are source/configuration evidence only. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [],
+    "checks": [],
+    "fullAfter": false,
+    "hasFailure": false,
+    "newCapture": false
+  },
+  {
+    "id": "F21.S01",
+    "intent": "Enable or pause peer-to-peer networking.",
+    "before": {
+      "status": "assertions",
+      "label": "Automated evidence",
+      "originalStatus": "Automated evidence collected",
+      "html": "Network pause/resume model and UI wiring are checked.<br>No matching screenshot collected.",
+      "text": "Network pause/resume model and UI wiring are checked. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_evidence_desktop/008-network-paused.png"
+    ],
+    "checks": [
+      "pause-network",
+      "resume-network"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": true
+  },
+  {
+    "id": "F21.S03",
+    "intent": "Route connections through SOCKS5 proxies, with separate routing for Tor. Proxy support.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "Proxy settings and validation are tested; live Tor/SOCKS routing is not.",
+      "text": "Proxy settings and validation are tested; live Tor/SOCKS routing is not.",
+      "captures": [
+        "media/qml/qml_test_proxy/005-wait-for-page-proxysettingspage.png"
+      ]
+    },
+    "captures": [],
+    "checks": [],
+    "fullAfter": false,
+    "hasFailure": false,
+    "newCapture": false
+  },
+  {
+    "id": "F21.S04",
+    "intent": "Automatically configure router access for incoming connections where supported.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "Configuration exists; physical-router mapping is untested.<br>No matching screenshot collected.",
+      "text": "Configuration exists; physical-router mapping is untested. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [],
+    "checks": [],
+    "fullAfter": false,
+    "hasFailure": false,
+    "newCapture": false
+  },
+  {
+    "id": "F22.S03",
+    "intent": "Focus traffic monitoring on a chosen time period or begin a fresh observation.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "Traffic periods are selectable; resetting traffic history is missing.",
+      "text": "Traffic periods are selectable; resetting traffic history is missing.",
+      "captures": [
+        "media/qml/qml_test_disablewallet_boot/017-17-network-traffic-settings-opened.png"
+      ]
+    },
+    "captures": [],
+    "checks": [],
+    "fullAfter": false,
+    "hasFailure": false,
+    "newCapture": false
+  },
+  {
+    "id": "F22.S09",
+    "intent": "Use RPC for descriptor import, multisig setup, wallet rescans, and combining PSBTs.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "RPC is available; this collection does not execute every advanced command listed.",
+      "text": "RPC is available; this collection does not execute every advanced command listed.",
+      "captures": [
+        "media/qml/qml_test_console/004-wait-for-page-rpcconsolesettingspage.png"
+      ]
+    },
+    "captures": [],
+    "checks": [],
+    "fullAfter": false,
+    "hasFailure": false,
+    "newCapture": false
+  },
+  {
+    "id": "F23.S01",
+    "intent": "Allocate memory and processing resources for block validation.",
+    "before": {
+      "status": "assertions",
+      "label": "Automated evidence",
+      "originalStatus": "Automated evidence collected",
+      "html": "Options-model resource settings are tested.<br>No matching screenshot collected.",
+      "text": "Options-model resource settings are tested. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_evidence_desktop/010-resource-settings-restart-guidance.png",
+      "collections/20261010-qml/media/qml/qml_evidence_desktop/013-resource-settings-after-restart.png",
+      "collections/20261010-qml/media/qml/qml_evidence_cache_limit/001-valid-core-cache-allocation.png",
+      "collections/20261010-qml/media/qml/qml_evidence_cache_limit/002-gui-rejects-valid-cache-allocation.png"
+    ],
+    "checks": [
+      "core-accepts-768",
+      "gui-accepts-768",
+      "resource-preferences",
+      "resources-restored"
+    ],
+    "fullAfter": false,
+    "hasFailure": true,
+    "newCapture": true
+  },
+  {
+    "id": "F23.S02",
+    "intent": "Allow external tools to communicate with the node through RPC.",
+    "before": {
+      "status": "assertions",
+      "label": "Automated evidence",
+      "originalStatus": "Automated evidence collected",
+      "html": "Server settings and override precedence are tested.<br>No matching screenshot collected.",
+      "text": "Server settings and override precedence are tested. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_evidence_desktop/009-rpc-server-configured.png"
+    ],
+    "checks": [
+      "rpc-server"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": true
+  },
+  {
+    "id": "F23.S10",
+    "intent": "Manage advanced application configuration.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "Configuration precedence is exposed, but there is no open-configuration-file action.<br>No matching screenshot collected.",
+      "text": "Configuration precedence is exposed, but there is no open-configuration-file action. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_evidence_desktop/015-configuration-file-setting-precedence.png"
+    ],
+    "checks": [
+      "configuration-precedence"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": true
+  },
+  {
+    "id": "F23.S11",
+    "intent": "Understand which settings take precedence and which changes require a restart.",
+    "before": {
+      "status": "assertions",
+      "label": "Automated evidence",
+      "originalStatus": "Automated evidence collected",
+      "html": "Restart-required and overridden settings have tests.<br>No matching screenshot collected.",
+      "text": "Restart-required and overridden settings have tests. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_evidence_desktop/010-resource-settings-restart-guidance.png",
+      "collections/20261010-qml/media/qml/qml_evidence_desktop/014-command-line-setting-precedence.png",
+      "collections/20261010-qml/media/qml/qml_evidence_desktop/015-configuration-file-setting-precedence.png"
+    ],
+    "checks": [
+      "command-line-precedence",
+      "gui-over-config",
+      "configuration-precedence"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": true
+  },
+  {
+    "id": "F23.S12",
+    "intent": "Restore default preferences while retaining a backup of previous settings.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "Startup reset with backup is tested; no in-app reset workflow.<br>No matching screenshot collected.",
+      "text": "Startup reset with backup is tested; no in-app reset workflow. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_test_resetguisettings/040-wait-for-page-proxysettingsrow.png"
+    ],
+    "checks": [],
+    "fullAfter": false,
+    "hasFailure": false,
+    "newCapture": true
+  },
+  {
+    "id": "F24.S01",
+    "intent": "Keep the application accessible while its main window is hidden.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "Native Linux tray Hide/Show passed; macOS Dock and Windows remain untested.<br>Linux tray hides the QML window while RPC still responds. <strong>passed</strong>.<br>Linux tray restores the QML window. <strong>passed</strong>.",
+      "text": "Native Linux tray Hide/Show passed; macOS Dock and Windows remain untested. Linux tray hides the QML window while RPC still responds. passed. Linux tray restores the QML window. passed.",
+      "captures": [
+        "media/qml/linux-tray-menu.png",
+        "media/qml/linux-tray-hidden.png"
+      ]
+    },
+    "captures": [],
+    "checks": [],
+    "fullAfter": false,
+    "hasFailure": false,
+    "newCapture": false
+  },
+  {
+    "id": "F24.S02",
+    "intent": "Control application visibility without interrupting the node.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "Native Linux Hide/Show preserves a responding node; other desktop implementations remain untested.<br>Linux tray hides the QML window while RPC still responds. <strong>passed</strong>.<br>Linux tray restores the QML window. <strong>passed</strong>.",
+      "text": "Native Linux Hide/Show preserves a responding node; other desktop implementations remain untested. Linux tray hides the QML window while RPC still responds. passed. Linux tray restores the QML window. passed.",
+      "captures": [
+        "media/qml/linux-tray-hidden.png"
+      ]
+    },
+    "captures": [],
+    "checks": [],
+    "fullAfter": false,
+    "hasFailure": false,
+    "newCapture": false
+  },
+  {
+    "id": "F24.S03",
+    "intent": "Quickly access payments, message signing and verification, settings, and diagnostics.",
+    "before": {
+      "status": "gap",
+      "label": "Missing GUI workflow",
+      "originalStatus": "Implementation gap",
+      "html": "Tray contains visibility and quit actions, without the listed wallet/settings shortcuts.<br>No screenshot: this GUI workflow is absent.",
+      "text": "Tray contains visibility and quit actions, without the listed wallet/settings shortcuts. No screenshot: this GUI workflow is absent.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_evidence_desktop/007-diagnostics-with-wallet.png"
+    ],
+    "checks": [],
+    "fullAfter": false,
+    "hasFailure": false,
+    "newCapture": true
+  },
+  {
+    "id": "F25.S04",
+    "intent": "Receive critical error messages when desktop notifications are unavailable.",
+    "before": {
+      "status": "gap",
+      "label": "Missing GUI workflow",
+      "originalStatus": "Implementation gap",
+      "html": "No desktop notification delivery is connected.<br>No screenshot: this GUI workflow is absent.",
+      "text": "No desktop notification delivery is connected. No screenshot: this GUI workflow is absent.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_test_node_runtime_dialogs/001-database-read-error.png"
+    ],
+    "checks": [
+      "existing-f25-s04"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": true
+  },
+  {
+    "id": "F26.S01",
+    "intent": "Arrange, hide, and restore application windows.",
+    "before": {
+      "status": "assertions",
+      "label": "Automated evidence",
+      "originalStatus": "Automated evidence collected",
+      "html": "Window-state model and headed geometry behavior are tested.<br>No matching screenshot collected.",
+      "text": "Window-state model and headed geometry behavior are tested. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_evidence_shell/003-window-restored-from-desktop.png"
+    ],
+    "checks": [
+      "window-minimize",
+      "window-restore"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": true
+  },
+  {
+    "id": "F26.S02",
+    "intent": "Remember the main window placement between sessions.",
+    "before": {
+      "status": "assertions",
+      "label": "Automated evidence",
+      "originalStatus": "Automated evidence collected",
+      "html": "Window geometry is restored across launches.<br>No matching screenshot collected.",
+      "text": "Window geometry is restored across launches. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_evidence_desktop/012-window-placement-restored.png"
+    ],
+    "checks": [
+      "window-placement-restored"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": true
+  },
+  {
+    "id": "F26.S04",
+    "intent": "Use diagnostics alongside wallet activity.",
+    "before": {
+      "status": "gap",
+      "label": "Missing GUI workflow",
+      "originalStatus": "Implementation gap",
+      "html": "Diagnostics share the application window; there is no separate node window.<br>No screenshot: this GUI workflow is absent.",
+      "text": "Diagnostics share the application window; there is no separate node window. No screenshot: this GUI workflow is absent.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_evidence_desktop/007-diagnostics-with-wallet.png"
+    ],
+    "checks": [
+      "wallet-diagnostics"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": true
+  },
+  {
+    "id": "F27.S03",
+    "intent": "Monitor initialization progress.",
+    "before": {
+      "status": "assertions",
+      "label": "Automated evidence",
+      "originalStatus": "Automated evidence collected",
+      "html": "Pre-init and node startup states are captured.<br>No matching screenshot collected.",
+      "text": "Pre-init and node startup states are captured. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [],
+    "checks": [],
+    "fullAfter": false,
+    "hasFailure": false,
+    "newCapture": false
+  },
+  {
+    "id": "F27.S04",
+    "intent": "Request an orderly shutdown during startup.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "Initialization shutdown is tested with IPC disabled; IPC-enabled process lifecycle is outside this build.<br>Cancellation during initialization is exercised.<br>No matching screenshot collected.",
+      "text": "Initialization shutdown is tested with IPC disabled; IPC-enabled process lifecycle is outside this build. Cancellation during initialization is exercised. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [],
+    "checks": [],
+    "fullAfter": false,
+    "hasFailure": false,
+    "newCapture": false
+  },
+  {
+    "id": "F28.S03",
+    "intent": "Access address records and node diagnostics.",
+    "before": {
+      "status": "assertions",
+      "label": "Automated evidence",
+      "originalStatus": "Automated evidence collected",
+      "html": "Address, peer and diagnostic pages are opened by functional tests.<br>No matching screenshot collected.",
+      "text": "Address, peer and diagnostic pages are opened by functional tests. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_evidence_desktop/006-address-records.png",
+      "collections/20261010-qml/media/qml/qml_evidence_desktop/007-diagnostics-with-wallet.png"
+    ],
+    "checks": [
+      "open-address-records",
+      "wallet-diagnostics"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": true
+  },
+  {
+    "id": "F28.S04",
+    "intent": "Reach common wallet and application tasks quickly.",
+    "before": {
+      "status": "assertions",
+      "label": "Automated evidence",
+      "originalStatus": "Automated evidence collected",
+      "html": "Menu actions have component tests.<br>No matching screenshot collected.",
+      "text": "Menu actions have component tests. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_evidence_desktop/001-keyboard-sendpage.png",
+      "collections/20261010-qml/media/qml/qml_evidence_desktop/002-keyboard-requestpaymentpage.png"
+    ],
+    "checks": [
+      "shortcut-ctrl+2",
+      "shortcut-ctrl+3",
+      "shortcut-ctrl+1"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": true
+  },
+  {
+    "id": "F28.S05",
+    "intent": "Use keyboard shortcuts for navigation and common actions.",
+    "before": {
+      "status": "assertions",
+      "label": "Automated evidence",
+      "originalStatus": "Automated evidence collected",
+      "html": "Keyboard shortcuts have desktop-menu component tests.<br>No matching screenshot collected.",
+      "text": "Keyboard shortcuts have desktop-menu component tests. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_evidence_desktop/001-keyboard-sendpage.png",
+      "collections/20261010-qml/media/qml/qml_evidence_desktop/002-keyboard-requestpaymentpage.png"
+    ],
+    "checks": [
+      "shortcut-ctrl+2",
+      "shortcut-ctrl+3",
+      "shortcut-ctrl+1"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": true
+  },
+  {
+    "id": "F29.S02",
+    "intent": "Understand synchronization progress and whether wallet information is current.",
+    "before": {
+      "status": "assertions",
+      "label": "Automated evidence",
+      "originalStatus": "Automated evidence collected",
+      "html": "Synchronization states have model/component tests.<br>No matching screenshot collected.",
+      "text": "Synchronization states have model/component tests. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_evidence_sync/001-live-regtest-sync-progress.png",
+      "collections/20261010-qml/media/qml/qml_evidence_sync/003-real-peer-sync-complete.png"
+    ],
+    "checks": [
+      "real-sync-in-progress",
+      "download-and-validate"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": true
+  },
+  {
+    "id": "F29.S06",
+    "intent": "Understand available actions through contextual guidance.",
+    "before": {
+      "status": "assertions",
+      "label": "Automated evidence",
+      "originalStatus": "Automated evidence collected",
+      "html": "Guidance components have QML tests; comprehensive usability is not asserted.<br>No matching screenshot collected.",
+      "text": "Guidance components have QML tests; comprehensive usability is not asserted. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_evidence_desktop/007-diagnostics-with-wallet.png"
+    ],
+    "checks": [
+      "contextual-guidance"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": true
+  },
+  {
+    "id": "F30.S06",
+    "intent": "Assess synchronization progress, processing rate, and estimated remaining work.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "Synchronization progress/ETA is available; an explicit processing-rate display is missing.<br>No matching screenshot collected.",
+      "text": "Synchronization progress/ETA is available; an explicit processing-rate display is missing. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_evidence_sync/001-live-regtest-sync-progress.png"
+    ],
+    "checks": [
+      "real-sync-in-progress"
+    ],
+    "fullAfter": false,
+    "hasFailure": false,
+    "newCapture": true
+  },
+  {
+    "id": "F30.S07",
+    "intent": "Monitor background synchronization while retaining access to the application.",
+    "before": {
+      "status": "assertions",
+      "label": "Automated evidence",
+      "originalStatus": "Automated evidence collected",
+      "html": "Block-clock and shell remain available during synchronization.<br>No matching screenshot collected.",
+      "text": "Block-clock and shell remain available during synchronization. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_evidence_sync/002-wallet-accessible-during-sync.png"
+    ],
+    "checks": [
+      "wallet-access-during-sync"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": true
+  },
+  {
+    "id": "F31.S01",
+    "intent": "Open Bitcoin payment requests from other applications or by drag and drop.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "In-app import/drop is supported; OS-delivered requests are missing.<br>No matching screenshot collected.",
+      "text": "In-app import/drop is supported; OS-delivered requests are missing. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_test_uri_import/006-click-senduriimportapplybutton.png"
+    ],
+    "checks": [
+      "existing-f10-s03"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": true
+  },
+  {
+    "id": "F31.S02",
+    "intent": "Distinguish application instances using different Bitcoin networks.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "Regtest identity is captured; other network identities have source/component coverage.<br>No matching screenshot collected.",
+      "text": "Regtest identity is captured; other network identities have source/component coverage. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [],
+    "checks": [],
+    "fullAfter": false,
+    "hasFailure": false,
+    "newCapture": false
+  },
+  {
+    "id": "F31.S03",
+    "intent": "Adapt application visuals to the desktop appearance.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "Manual light/dark appearance exists; automatic desktop-theme following is missing.",
+      "text": "Manual light/dark appearance exists; automatic desktop-theme following is missing.",
+      "captures": [
+        "media/qml/qml_test_settings_display/004-wait-for-page-displaysettingspage.png"
+      ]
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_evidence_shell/001-manual-light-appearance.png",
+      "collections/20261010-qml/media/qml/qml_evidence_shell/002-manual-dark-appearance.png"
+    ],
+    "checks": [
+      "appearance-light",
+      "appearance-dark"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": false
+  },
+  {
+    "id": "F31.S05",
+    "intent": "Use external block explorers to inspect transactions.",
+    "before": {
+      "status": "assertions",
+      "label": "Automated evidence",
+      "originalStatus": "Automated evidence collected",
+      "html": "Explorer URL generation has tests; browser launch remains manual.<br>No matching screenshot collected.",
+      "text": "Explorer URL generation has tests; browser launch remains manual. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [],
+    "checks": [],
+    "fullAfter": false,
+    "hasFailure": false,
+    "newCapture": false
+  },
+  {
+    "id": "F34.S01",
+    "intent": "Rediscover wallet activity from blockchain history.",
+    "before": {
+      "status": "limited",
+      "label": "Limited evidence",
+      "originalStatus": "Partial / limited evidence",
+      "html": "Rescanning is available through RPC; this run has no rescan scenario.<br>No matching screenshot collected.",
+      "text": "Rescanning is available through RPC; this run has no rescan scenario. No matching screenshot collected.",
+      "captures": []
+    },
+    "captures": [
+      "collections/20261010-qml/media/qml/qml_evidence_watchonly/001-console-rescan-recovers-history.png",
+      "collections/20261010-qml/media/qml/qml_evidence_watchonly/002-watch-only-recovered-activity.png"
+    ],
+    "checks": [
+      "rescan-fixture",
+      "console-rescan"
+    ],
+    "fullAfter": true,
+    "hasFailure": false,
+    "newCapture": true
+  }
+]

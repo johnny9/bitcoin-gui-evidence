@@ -1,0 +1,22 @@
+[
+  {
+    "path": "media/qml/qml_test_blockclock/001-wait-for-page-blockclock.png",
+    "caption": "wait_for_page-blockClock",
+    "utc": "2026-10-10T17:20:26.453803+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "ca0e7c8784b50ca09d4aa3dcbf93c4e3b465c85c8901a66a3cc5eb991b8421a4",
+    "test": "qml_test_blockclock",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_blockclock/002-click-blockclocktogglearea.png",
+    "caption": "click-blockClockToggleArea",
+    "utc": "2026-10-10T17:20:26.922510+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "b36eb8a1e125387fe6fe4d8f02dd02ac9658ab2a3640783f44feb28bd1f4ca25",
+    "test": "qml_test_blockclock",
+    "kind": "application-screenshot"
+  }
+]

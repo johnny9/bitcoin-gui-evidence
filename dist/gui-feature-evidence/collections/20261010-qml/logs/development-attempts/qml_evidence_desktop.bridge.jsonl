@@ -1,0 +1,26 @@
+{"utc": "2026-10-10T17:21:33.595830+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_desktop_wp_ijsio/gui_node", "-test-automation=/work/tmp/evidence_desktop_wp_ijsio/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_desktop_wp_ijsio/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 795, "platform": "xcb"}
+{"utc": "2026-10-10T17:21:34.351215+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:21:34.764735+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "text"}, "response": {"value": "Review wallet"}}
+{"utc": "2026-10-10T17:21:34.770959+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "width", "value": 1180}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:21:34.781912+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "height", "value": 1000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:21:35.098433+00:00", "application_pid": 795, "exit_code": 0}
+{"utc": "2026-10-10T17:23:26.830781+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_desktop_bgvcwb1j/gui_node", "-test-automation=/work/tmp/evidence_desktop_bgvcwb1j/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_desktop_bgvcwb1j/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 1671, "platform": "xcb"}
+{"utc": "2026-10-10T17:23:27.585389+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:23:28.008012+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "text"}, "response": {"value": "Review_wallet"}}
+{"utc": "2026-10-10T17:23:28.013715+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "width", "value": 1180}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:23:28.022606+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "height", "value": 1000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:23:28.112378+00:00", "request": {"cmd": "invoke", "objectName": "appWindow", "method": "requestActivate", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:23:28.348665+00:00", "request": {"cmd": "wait_for_page", "page": "sendPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:23:28.351942+00:00", "request": {"cmd": "get_property", "objectName": "sendPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:23:29.089015+00:00", "request": {"cmd": "wait_for_page", "page": "requestPaymentPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:23:29.092148+00:00", "request": {"cmd": "get_property", "objectName": "requestPaymentPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:23:29.821183+00:00", "request": {"cmd": "wait_for_page", "page": "activityPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:23:29.825156+00:00", "request": {"cmd": "get_property", "objectName": "activityPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:23:30.325589+00:00", "request": {"cmd": "click", "objectName": "sendTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:23:30.331133+00:00", "request": {"cmd": "wait_for_page", "page": "sendPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:23:30.334354+00:00", "request": {"cmd": "get_property", "objectName": "feeSelectionEstimateLabel", "prop": "value"}, "response": {"value": "\u2014"}}
+{"utc": "2026-10-10T17:23:30.337812+00:00", "request": {"cmd": "get_property", "objectName": "feeSelectionEstimateLabel", "prop": "value"}, "response": {"value": "\u2014"}}
+{"utc": "2026-10-10T17:23:30.839708+00:00", "request": {"cmd": "set_clipboard_text", "text": "bcrt1q79qwklshrsqegptlpfuv68vkf9wqdxayhauas4"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:23:30.844004+00:00", "request": {"cmd": "click", "objectName": "sendAddressInput"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:23:31.076601+00:00", "request": {"cmd": "get_text", "objectName": "sendAddressInput"}, "response": {"text": ""}}
+{"utc": "2026-10-10T17:23:31.392632+00:00", "application_pid": 1671, "exit_code": 0}

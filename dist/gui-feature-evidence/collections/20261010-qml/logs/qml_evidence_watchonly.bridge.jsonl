@@ -1,0 +1,127 @@
+{"utc": "2026-10-10T17:23:31.457362+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_watchonly__bdbg_t6/gui_node", "-test-automation=/work/tmp/evidence_watchonly__bdbg_t6/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_watchonly__bdbg_t6/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 1735, "platform": "xcb"}
+{"utc": "2026-10-10T17:23:32.212837+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:23:32.216301+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "width", "value": 1180}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:23:32.220437+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "height", "value": 1000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:23:38.049128+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:23:38.079583+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:23:38.082828+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:23:38.089730+00:00", "request": {"cmd": "click", "objectName": "walletBadge"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:23:38.097815+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:23:38.151925+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:23:38.205757+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:23:38.259870+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:23:38.313831+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:23:38.367629+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:23:38.421723+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:23:38.426001+00:00", "request": {"cmd": "click", "objectName": "walletSelectItem_Watch_only"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:23:38.429400+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "text"}, "response": {"value": "Watch_only"}}
+{"utc": "2026-10-10T17:23:38.433685+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:23:38.488902+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:23:38.543928+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:23:38.597921+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:23:38.652818+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:23:38.707033+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:23:39.074123+00:00", "application_pid": 1735, "exit_code": 0}
+{"utc": "2026-10-10T17:25:15.014179+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_watchonly_a1loxeaz/gui_node", "-test-automation=/work/tmp/evidence_watchonly_a1loxeaz/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_watchonly_a1loxeaz/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 2060, "platform": "xcb"}
+{"utc": "2026-10-10T17:25:15.768300+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:15.770213+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "width", "value": 1180}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:25:15.771598+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "height", "value": 1000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:25:21.474988+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:21.498365+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:21.501746+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:21.508686+00:00", "request": {"cmd": "click", "objectName": "walletBadge"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:25:21.516770+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:21.571340+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:21.625813+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:21.679690+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:21.734420+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:21.788910+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:21.842869+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:25:21.845763+00:00", "request": {"cmd": "click", "objectName": "walletSelectItem_Watch_only"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:25:21.847361+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "text"}, "response": {"value": "Watch_only"}}
+{"utc": "2026-10-10T17:25:21.848638+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:25:21.902414+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:25:21.956184+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:25:22.009967+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:25:22.063594+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:25:22.117891+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:22.782437+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:25:22.794915+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_rpc-console"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:25:22.801183+00:00", "request": {"cmd": "wait_for_page", "page": "rpcConsoleSettingsPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:25:22.805212+00:00", "request": {"cmd": "set_text", "objectName": "consoleInput", "text": "rescanblockchain 0"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:25:22.808689+00:00", "request": {"cmd": "invoke", "objectName": "appWindow", "method": "requestActivate", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:25:23.836502+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 2}}
+{"utc": "2026-10-10T17:25:24.607359+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "executing"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:25:24.661430+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "executing"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:25.160728+00:00", "request": {"cmd": "click", "objectName": "settingsDoneButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:25:25.163541+00:00", "request": {"cmd": "click", "objectName": "activityTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:25:25.191985+00:00", "request": {"cmd": "wait_for_page", "page": "activityPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:25:25.756469+00:00", "request": {"cmd": "click", "objectName": "sendTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:25:25.759783+00:00", "request": {"cmd": "wait_for_page", "page": "sendPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:25:25.764492+00:00", "request": {"cmd": "set_text", "objectName": "sendAddressInput", "text": "bcrt1qsaq9pj2sk6dldkmfvpnzlq3kgklfpmcmndz6t8"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:25:25.773613+00:00", "request": {"cmd": "set_text", "objectName": "sendAmountInput", "text": "0.125"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:25:25.777837+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:25.831942+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:25.885997+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:25.939551+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:25.993819+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:26.048565+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:25:26.077646+00:00", "request": {"cmd": "click", "objectName": "sendReviewButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:25:26.086131+00:00", "request": {"cmd": "wait_for_page", "page": "sendTransactionReviewPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:25:26.090435+00:00", "request": {"cmd": "get_property", "objectName": "sendTransactionReviewSaveButton", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:25:26.094609+00:00", "request": {"cmd": "set_text", "objectName": "sendTransactionReviewSavePsbtPathField", "text": "/work/tmp/evidence_watchonly_a1loxeaz/watch-only-payment.psbt"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:25:26.101181+00:00", "request": {"cmd": "click", "objectName": "sendTransactionReviewSaveButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:25:26.761996+00:00", "application_pid": 2060, "exit_code": 0}
+{"utc": "2026-10-10T17:39:50.036257+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_watchonly_mbqmw5jr/gui_node", "-test-automation=/work/tmp/evidence_watchonly_mbqmw5jr/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_watchonly_mbqmw5jr/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 3774, "platform": "xcb"}
+{"utc": "2026-10-10T17:39:50.790770+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:50.792726+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "width", "value": 1180}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:50.799746+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "height", "value": 1000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:56.467261+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:56.494207+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:56.497360+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:56.503578+00:00", "request": {"cmd": "click", "objectName": "walletBadge"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:56.510851+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:56.564589+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:56.618381+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:56.672066+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:56.725866+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:56.779882+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:56.833283+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:39:56.837105+00:00", "request": {"cmd": "click", "objectName": "walletSelectItem_Watch_only"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:56.838677+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "text"}, "response": {"value": "Watch_only"}}
+{"utc": "2026-10-10T17:39:56.839959+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:39:56.894380+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:39:56.948082+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:39:57.001928+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:39:57.055311+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:39:57.109064+00:00", "request": {"cmd": "get_property", "objectName": "walletSelectPopup", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:57.780392+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:57.792414+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_rpc-console"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:57.798292+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:57.800590+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:39:57.802067+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:57.803425+00:00", "request": {"cmd": "wait_for_page", "page": "rpcConsoleSettingsPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:57.805815+00:00", "request": {"cmd": "set_text", "objectName": "consoleInput", "text": "rescanblockchain 0"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:57.807340+00:00", "request": {"cmd": "invoke", "objectName": "appWindow", "method": "requestActivate", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:58.873369+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 2}}
+{"utc": "2026-10-10T17:39:59.596531+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "executing"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:39:59.650849+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "executing"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:40:00.147806+00:00", "request": {"cmd": "click", "objectName": "settingsDoneButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:40:00.150505+00:00", "request": {"cmd": "click", "objectName": "activityTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:40:00.177859+00:00", "request": {"cmd": "wait_for_page", "page": "activityPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:40:00.702472+00:00", "request": {"cmd": "click", "objectName": "sendTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:40:00.706214+00:00", "request": {"cmd": "wait_for_page", "page": "sendPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:40:00.714881+00:00", "request": {"cmd": "set_text", "objectName": "sendAddressInput", "text": "bcrt1q6qumpx8u767hahvpegf3kfxvmu5h788w0j6tyc"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:40:00.719606+00:00", "request": {"cmd": "set_text", "objectName": "sendAmountInput", "text": "0.125"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:40:00.721902+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:40:00.776198+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:40:00.830152+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:40:00.884202+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:40:00.937804+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:40:00.992308+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:40:01.020501+00:00", "request": {"cmd": "click", "objectName": "sendReviewButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:40:01.028913+00:00", "request": {"cmd": "wait_for_page", "page": "sendTransactionReviewPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:40:01.034586+00:00", "request": {"cmd": "get_property", "objectName": "sendTransactionReviewSaveButton", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:40:01.038359+00:00", "request": {"cmd": "set_text", "objectName": "sendTransactionReviewSavePsbtPathField", "text": "/work/tmp/evidence_watchonly_mbqmw5jr/watch-only-payment.psbt"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:40:01.045144+00:00", "request": {"cmd": "click", "objectName": "sendTransactionReviewSaveButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:40:01.807277+00:00", "application_pid": 3774, "exit_code": 0}

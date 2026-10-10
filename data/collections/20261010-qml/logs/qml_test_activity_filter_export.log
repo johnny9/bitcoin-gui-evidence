@@ -1,0 +1,63 @@
+[qml_activity_filter_export] starting
+[qml_activity_filter_export] checkpoint screenshots will be saved under: /work/test/artifacts/qml_test_activity_filter_export-20261010-171849
+[qml_activity_filter_export] checkpoint 01: wallet imported
+[qml_activity_filter_export] checkpoint 01: screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_activity_filter_export/001-01-wallet-imported.png (800x665)
+[qml_activity_filter_export] checkpoint 02: source-empty Activity state shown: Syncing wallet activity…
+[qml_activity_filter_export] checkpoint 02: screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_activity_filter_export/002-02-source-empty-activity-state-shown-syncing-wallet-activity.png (800x665)
+[qml_activity_filter_export] checkpoint 03: receive page opened
+[qml_activity_filter_export] checkpoint 03: screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_activity_filter_export/003-03-receive-page-opened.png (800x665)
+[qml_activity_filter_export] checkpoint 04: payment request created
+[qml_activity_filter_export] checkpoint 04: screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_activity_filter_export/004-04-payment-request-created.png (800x665)
+[qml_activity_filter_export] checkpoint 05: block mined to wallet address
+[qml_activity_filter_export] checkpoint 05: screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_activity_filter_export/005-05-block-mined-to-wallet-address.png (800x665)
+[qml_activity_filter_export] checkpoint 06: Activity shows payment request and mined rows
+[qml_activity_filter_export] checkpoint 06: screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_activity_filter_export/006-06-activity-shows-payment-request-and-mined-rows.png (800x665)
+[qml_activity_filter_export] checkpoint 07: Activity search is visible
+[qml_activity_filter_export] checkpoint 07: screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_activity_filter_export/007-07-activity-search-is-visible.png (800x665)
+[qml_activity_filter_export] checkpoint 08: search by request address applied
+[qml_activity_filter_export] checkpoint 08: screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_activity_filter_export/008-08-search-by-request-address-applied.png (800x665)
+[qml_activity_filter_export] checkpoint 09: date filter menu opened
+[qml_activity_filter_export] checkpoint 09: screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_activity_filter_export/009-09-date-filter-menu-opened.png (800x665)
+[qml_activity_filter_export] checkpoint 10: Today and Mined filters applied
+[qml_activity_filter_export] checkpoint 10: screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_activity_filter_export/010-10-today-and-mined-filters-applied.png (800x665)
+[qml_activity_filter_export] checkpoint 11: mined Activity row exported to CSV
+[qml_activity_filter_export] checkpoint 11: screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_activity_filter_export/011-11-mined-activity-row-exported-to-csv.png (800x665)
+[qml_activity_filter_export] checkpoint 12: multiple Activity types selected together
+[qml_activity_filter_export] checkpoint 12: screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_activity_filter_export/012-12-multiple-activity-types-selected-together.png (800x665)
+[qml_activity_filter_export] checkpoint 13: Today and Payment request filters applied
+[qml_activity_filter_export] checkpoint 13: screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_activity_filter_export/013-13-today-and-payment-request-filters-applied.png (800x665)
+[qml_activity_filter_export] checkpoint 14: search by request label applied
+[qml_activity_filter_export] checkpoint 14: screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_activity_filter_export/014-14-search-by-request-label-applied.png (800x665)
+[qml_activity_filter_export] checkpoint 15: display unit switched to sats
+[qml_activity_filter_export] checkpoint 15: screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_activity_filter_export/015-15-display-unit-switched-to-sats.png (800x665)
+[qml_activity_filter_export] checkpoint 16: returned to filtered Activity in sats
+[qml_activity_filter_export] checkpoint 16: screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_activity_filter_export/016-16-returned-to-filtered-activity-in-sats.png (800x665)
+[qml_activity_filter_export] checkpoint 17: filtered Activity exported to CSV
+[qml_activity_filter_export] checkpoint 17: screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_activity_filter_export/017-17-filtered-activity-exported-to-csv.png (800x665)
+[qml_activity_filter_export] checkpoint 18: filtered-empty Activity state shown
+[qml_activity_filter_export] checkpoint 18: screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_activity_filter_export/018-18-filtered-empty-activity-state-shown.png (800x665)
+[qml_activity_filter_export] checkpoint 19: filters and search cleared
+[qml_activity_filter_export] checkpoint 19: screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_activity_filter_export/019-19-filters-and-search-cleared.png (800x665)
+[qml_activity_filter_export] checkpoint 20: amount filter menu opened
+[qml_activity_filter_export] checkpoint 20: screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_activity_filter_export/020-20-amount-filter-menu-opened.png (800x665)
+[qml_activity_filter_export] checkpoint 21: minimum amount filter applied
+[qml_activity_filter_export] checkpoint 21: screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_activity_filter_export/021-21-minimum-amount-filter-applied.png (800x665)
+[qml_activity_filter_export] checkpoint 22: minimum amount filter cleared
+[qml_activity_filter_export] checkpoint 22: screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_activity_filter_export/022-22-minimum-amount-filter-cleared.png (800x665)
+[qml_activity_filter_export] checkpoint 23: custom date range calendar revealed
+[qml_activity_filter_export] checkpoint 23: screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_activity_filter_export/023-23-custom-date-range-calendar-revealed.png (800x665)
+[qml_activity_filter_export] checkpoint 24: past custom range excludes today's rows
+[qml_activity_filter_export] checkpoint 24: screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_activity_filter_export/024-24-past-custom-range-excludes-today-s-rows.png (800x665)
+[qml_activity_filter_export] checkpoint 25: custom date range cleared
+[qml_activity_filter_export] checkpoint 25: screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_activity_filter_export/025-25-custom-date-range-cleared.png (800x665)
+[qml_activity_filter_export] checkpoint 26: pending request shown under Payment request filter
+[qml_activity_filter_export] checkpoint 26: screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_activity_filter_export/026-26-pending-request-shown-under-payment-request-filter.png (800x665)
+[qml_activity_filter_export] checkpoint 27: request address gained its own mined transaction row
+[qml_activity_filter_export] checkpoint 27: screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_activity_filter_export/027-27-request-address-gained-its-own-mined-transaction-row.png (800x665)
+[qml_activity_filter_export] checkpoint 28: fulfilled request links to its transaction under the filter
+[qml_activity_filter_export] checkpoint 28: screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_activity_filter_export/028-28-fulfilled-request-links-to-its-transaction-under-the-filter.png (800x665)
+[qml_activity_filter_export] checkpoint 29: fulfilled request has no duplicate Activity row
+[qml_activity_filter_export] checkpoint 29: screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_activity_filter_export/029-29-fulfilled-request-has-no-duplicate-activity-row.png (800x665)
+[qml_activity_filter_export] checkpoint 30: Activity details amount uses selected display unit
+[qml_activity_filter_export] checkpoint 30: screenshot saved to /work/qml-acceptance-20261010/media/qml/qml_test_activity_filter_export/030-30-activity-details-amount-uses-selected-display-unit.png (800x665)
+[qml_activity_filter_export] completed

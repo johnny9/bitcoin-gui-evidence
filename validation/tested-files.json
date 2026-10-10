@@ -1,16 +1,17 @@
 {
-  "src/app.js": "501a521498543ad609d3712fa861cc4e620baaaf3e56d0356b8e9009b82ee1c6",
+  "src/app.js": "49e0972115827b99187f9a00100faca4f99a548a6df8663fedbff78ebe2a370f",
   "src/styles.css": "6ddd1f18b4a78c377d028c34e5664d2cf28d16aa8f20b8f998de530917878868",
   "src/index.html": "cfebedd3ff0f840dd789f9a409403ebcfcbb27657f5b52739221a98cf8d1874a",
   "src/theme.js": "f4f4312f29e3d6177699b7579cc1683848b58381874a1259eac50c0e67a81238",
   "src/theme.css": "d8114d219b75195f44dc9eb4558fd110d960677ed6a5a45519fcfb6706faa55a",
-  "dist/data.js": "093628a6c3df2c10725f6043729aa751d7969f45830458fb731dbb1de69be7d7",
-  "scripts/browser-test.cjs": "c780ed51c9d3a6f26fe31dc8134fb3c99867b475493b55a660183fe2c79bfd58",
-  "scripts/build.py": "10440c76efc1d6dd747cbf486d90380366e31ef47d9cf690819c93fa237012bb",
+  "dist/data.js": "d0069ff8bb11a069451dfa9e7dce85d933c9189413fc90ffa352655152ff2ac6",
+  "scripts/browser-test.cjs": "326a4c75bae15dd5d6bbec320759cd4b14b1a8a5edbfb99d115b5afdb1272ed2",
+  "scripts/build.py": "cd324fa4a1f090a5078d4c8e510628d1e7513c7f94bb364f2b0eb09d71931cb5",
   ".github/workflows/pages.yml": "0cba93594a8ecb3e82aee0706e0cfab7dc416c6cd2e142dfc0e9a29e3806a724",
-  "data/implementation.json": "2294ce087d0feda76fa4301f38c8587467c412a730c8337ed165ed6cb902d93c",
-  "scripts/validate.py": "4832e187d9691f0c814bef80f46a07c144929e09537683befef36fee1f4e1b50",
+  "data/implementation.json": "a52fdd9524718912a12bad5832e32aa4b7a67fdd602c2a5e7c1da3e33e1b0abf",
+  "scripts/validate.py": "213f0778fb94677aaa273343d67266c33c349ed76e531837f5bfe8ca92b2e96d",
   "data/reruns/20261010-send-create/result.json": "9b0e616526bea6a019d845888169cc011e639c336b69f7f3e6d30fb5c3426cfa",
   "data/reruns/20261010-wallet-rbf/result.json": "8fc714257f2442f84666917e9cc62d08151a47f0da5f1a6333a86ee0464f7321",
-  "data/collections/20261010-widgets/result.json": "c0b53dad75ec2ee1c86b289e17fc720cf25c1a78d915d1cd0242ab12b6ef5d4c"
+  "data/collections/20261010-widgets/result.json": "c0b53dad75ec2ee1c86b289e17fc720cf25c1a78d915d1cd0242ab12b6ef5d4c",
+  "data/collections/20261010-qml/result.json": "76459212113d0739a5182df23b60dc0f471b03ea0d5d9c81eceba134ecafee32"
 }

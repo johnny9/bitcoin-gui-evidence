@@ -1,0 +1,1113 @@
+{"utc": "2026-10-10T17:21:33.595830+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_desktop_wp_ijsio/gui_node", "-test-automation=/work/tmp/evidence_desktop_wp_ijsio/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_desktop_wp_ijsio/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 795, "platform": "xcb"}
+{"utc": "2026-10-10T17:21:34.351215+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:21:34.764735+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "text"}, "response": {"value": "Review wallet"}}
+{"utc": "2026-10-10T17:21:34.770959+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "width", "value": 1180}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:21:34.781912+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "height", "value": 1000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:21:35.098433+00:00", "application_pid": 795, "exit_code": 0}
+{"utc": "2026-10-10T17:23:26.830781+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_desktop_bgvcwb1j/gui_node", "-test-automation=/work/tmp/evidence_desktop_bgvcwb1j/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_desktop_bgvcwb1j/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 1671, "platform": "xcb"}
+{"utc": "2026-10-10T17:23:27.585389+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:23:28.008012+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "text"}, "response": {"value": "Review_wallet"}}
+{"utc": "2026-10-10T17:23:28.013715+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "width", "value": 1180}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:23:28.022606+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "height", "value": 1000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:23:28.112378+00:00", "request": {"cmd": "invoke", "objectName": "appWindow", "method": "requestActivate", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:23:28.348665+00:00", "request": {"cmd": "wait_for_page", "page": "sendPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:23:28.351942+00:00", "request": {"cmd": "get_property", "objectName": "sendPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:23:29.089015+00:00", "request": {"cmd": "wait_for_page", "page": "requestPaymentPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:23:29.092148+00:00", "request": {"cmd": "get_property", "objectName": "requestPaymentPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:23:29.821183+00:00", "request": {"cmd": "wait_for_page", "page": "activityPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:23:29.825156+00:00", "request": {"cmd": "get_property", "objectName": "activityPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:23:30.325589+00:00", "request": {"cmd": "click", "objectName": "sendTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:23:30.331133+00:00", "request": {"cmd": "wait_for_page", "page": "sendPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:23:30.334354+00:00", "request": {"cmd": "get_property", "objectName": "feeSelectionEstimateLabel", "prop": "value"}, "response": {"value": "\u2014"}}
+{"utc": "2026-10-10T17:23:30.337812+00:00", "request": {"cmd": "get_property", "objectName": "feeSelectionEstimateLabel", "prop": "value"}, "response": {"value": "\u2014"}}
+{"utc": "2026-10-10T17:23:30.839708+00:00", "request": {"cmd": "set_clipboard_text", "text": "bcrt1q79qwklshrsqegptlpfuv68vkf9wqdxayhauas4"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:23:30.844004+00:00", "request": {"cmd": "click", "objectName": "sendAddressInput"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:23:31.076601+00:00", "request": {"cmd": "get_text", "objectName": "sendAddressInput"}, "response": {"text": ""}}
+{"utc": "2026-10-10T17:23:31.392632+00:00", "application_pid": 1671, "exit_code": 0}
+{"utc": "2026-10-10T17:25:05.779882+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_desktop_ydhh1cue/gui_node", "-test-automation=/work/tmp/evidence_desktop_ydhh1cue/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_desktop_ydhh1cue/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 1997, "platform": "xcb"}
+{"utc": "2026-10-10T17:25:06.537446+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:06.911041+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "text"}, "response": {"value": "Review_wallet"}}
+{"utc": "2026-10-10T17:25:06.915993+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "width", "value": 1180}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:25:06.919132+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "height", "value": 1000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:25:06.997761+00:00", "request": {"cmd": "invoke", "objectName": "appWindow", "method": "requestActivate", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:25:07.230848+00:00", "request": {"cmd": "wait_for_page", "page": "sendPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:25:07.234715+00:00", "request": {"cmd": "get_property", "objectName": "sendPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:25:07.957488+00:00", "request": {"cmd": "wait_for_page", "page": "requestPaymentPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:25:07.960609+00:00", "request": {"cmd": "get_property", "objectName": "requestPaymentPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:25:08.686729+00:00", "request": {"cmd": "wait_for_page", "page": "activityPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:25:08.688922+00:00", "request": {"cmd": "get_property", "objectName": "activityPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:25:09.181048+00:00", "request": {"cmd": "click", "objectName": "sendTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:25:09.185667+00:00", "request": {"cmd": "wait_for_page", "page": "sendPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:25:09.187204+00:00", "request": {"cmd": "get_property", "objectName": "feeSelectionEstimateLabel", "prop": "value"}, "response": {"value": "\u2014"}}
+{"utc": "2026-10-10T17:25:09.188404+00:00", "request": {"cmd": "get_property", "objectName": "feeSelectionEstimateLabel", "prop": "value"}, "response": {"value": "\u2014"}}
+{"utc": "2026-10-10T17:25:09.680740+00:00", "request": {"cmd": "set_clipboard_text", "text": "bcrt1qu25paxmhrxzs4ex4kdutukkv3zjqjf50xenn0u"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:25:09.683635+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:09.736829+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:09.789844+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:09.843079+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:09.895524+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:09.948571+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:10.001617+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:10.055013+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:10.108605+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:10.162507+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:10.215667+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:10.268620+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:10.321261+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:10.373902+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:10.427405+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:10.480740+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:10.533404+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:10.586236+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:10.640525+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:10.694401+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:10.748200+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:10.801734+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:10.855446+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:10.908659+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:10.961518+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:11.014400+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:11.067568+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:11.120834+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:11.173986+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:11.226998+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:11.279643+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:11.332546+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:11.385493+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:11.438207+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:11.491905+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:11.545364+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:11.599103+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:11.652730+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:11.706286+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:11.759785+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:11.813547+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:11.867545+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:11.921399+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:11.975906+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:12.029006+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:12.082007+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:12.135574+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:12.188295+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:12.241130+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:12.293905+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:12.346542+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:12.399605+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:12.452997+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:12.505975+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:12.559068+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:12.611893+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:12.664740+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:12.717705+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:12.771570+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:12.825165+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:12.878886+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:12.932892+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:12.986685+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:13.040599+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:13.094128+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:13.147845+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:13.201230+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:13.254299+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:13.307103+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:13.360379+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:13.413929+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:13.467493+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:13.520587+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:13.573697+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:13.626685+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:13.679407+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:13.732173+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:13.785073+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:13.837964+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:13.890782+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:13.943270+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:13.996404+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:14.049445+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:14.103722+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:14.157551+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:14.211586+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:14.264850+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:14.318337+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:14.371884+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:14.425388+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:14.479022+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:14.532801+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:14.586626+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:14.640760+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:14.694738+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:25:14.959871+00:00", "application_pid": 1997, "exit_code": 0}
+{"utc": "2026-10-10T17:26:00.469380+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_desktop_rsdagwsl/gui_node", "-test-automation=/work/tmp/evidence_desktop_rsdagwsl/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_desktop_rsdagwsl/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 2216, "platform": "xcb"}
+{"utc": "2026-10-10T17:26:01.223124+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:26:01.601349+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "text"}, "response": {"value": "Review_wallet"}}
+{"utc": "2026-10-10T17:26:01.606589+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "width", "value": 1180}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:01.614707+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "height", "value": 1000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:01.696468+00:00", "request": {"cmd": "invoke", "objectName": "appWindow", "method": "requestActivate", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:01.927961+00:00", "request": {"cmd": "wait_for_page", "page": "sendPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:01.931490+00:00", "request": {"cmd": "get_property", "objectName": "sendPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:26:02.656557+00:00", "request": {"cmd": "wait_for_page", "page": "requestPaymentPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:02.659313+00:00", "request": {"cmd": "get_property", "objectName": "requestPaymentPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:26:03.384987+00:00", "request": {"cmd": "wait_for_page", "page": "activityPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:03.387483+00:00", "request": {"cmd": "get_property", "objectName": "activityPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:26:03.879973+00:00", "request": {"cmd": "click", "objectName": "sendTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:03.882165+00:00", "request": {"cmd": "wait_for_page", "page": "sendPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:03.886160+00:00", "request": {"cmd": "get_property", "objectName": "feeSelectionEstimateLabel", "prop": "value"}, "response": {"value": "\u2014"}}
+{"utc": "2026-10-10T17:26:03.887519+00:00", "request": {"cmd": "get_property", "objectName": "feeSelectionEstimateLabel", "prop": "value"}, "response": {"value": "\u2014"}}
+{"utc": "2026-10-10T17:26:04.391739+00:00", "request": {"cmd": "type_text", "objectName": "sendAddressInput", "text": "bcrt1qrgjch39ckkvu9glefg07grqguc5uuzz370avu2"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:04.395744+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:04.448830+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:04.501742+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:04.554716+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:04.607954+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:04.660813+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:04.713700+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:04.766405+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:04.818736+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:04.872109+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:04.924752+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:04.977556+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:05.030417+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:05.083141+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:05.136220+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:05.188937+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:05.242059+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:05.295386+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:05.348802+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:05.402979+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:05.456911+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:05.510604+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:05.564134+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:05.616983+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:05.670233+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:05.722958+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:05.776022+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:05.829111+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:05.881877+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:05.934979+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:05.987274+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:06.040049+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:06.093145+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:06.145904+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:06.198572+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:06.251753+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:06.304572+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:06.357117+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:06.410329+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:06.462807+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:06.516162+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:06.569982+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:06.623607+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:06.677286+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:06.730626+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:06.783852+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:06.836324+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:06.889916+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:06.943407+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:06.996143+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:07.048849+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:07.101335+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:07.154684+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:07.207328+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:07.260060+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:07.313010+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:07.366400+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:07.419622+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:07.472479+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:07.525440+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:07.578233+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:07.630923+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:07.685530+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:07.740191+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:07.793572+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:07.847284+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:07.900828+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:07.954281+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:08.007152+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:08.060883+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:08.114524+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:08.168209+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:08.221918+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:08.274767+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:08.327894+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:08.381023+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:08.434325+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:08.487257+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:08.540340+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:08.594164+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:08.647259+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:08.700070+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:08.752909+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:08.805808+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:08.860344+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:08.914751+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:08.968555+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:09.022693+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:09.075479+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:09.128470+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:09.181060+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:09.234683+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:09.287566+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:09.340666+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:09.393947+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:09.446503+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrg jch3 9ckk vu9g lefg 07gr qguc 5uuz z370 avu2"}}
+{"utc": "2026-10-10T17:26:09.761468+00:00", "application_pid": 2216, "exit_code": 0}
+{"utc": "2026-10-10T17:26:33.080843+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_desktop_xdgn1_ki/gui_node", "-test-automation=/work/tmp/evidence_desktop_xdgn1_ki/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_desktop_xdgn1_ki/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 2345, "platform": "xcb"}
+{"utc": "2026-10-10T17:26:33.835263+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:26:34.202328+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "text"}, "response": {"value": "Review_wallet"}}
+{"utc": "2026-10-10T17:26:34.206969+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "width", "value": 1180}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:34.209697+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "height", "value": 1000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:34.284371+00:00", "request": {"cmd": "invoke", "objectName": "appWindow", "method": "requestActivate", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:34.516149+00:00", "request": {"cmd": "wait_for_page", "page": "sendPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:34.519251+00:00", "request": {"cmd": "get_property", "objectName": "sendPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:26:35.241663+00:00", "request": {"cmd": "wait_for_page", "page": "requestPaymentPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:35.243695+00:00", "request": {"cmd": "get_property", "objectName": "requestPaymentPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:26:35.964548+00:00", "request": {"cmd": "wait_for_page", "page": "activityPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:35.967004+00:00", "request": {"cmd": "get_property", "objectName": "activityPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:26:36.458696+00:00", "request": {"cmd": "click", "objectName": "sendTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:36.460597+00:00", "request": {"cmd": "wait_for_page", "page": "sendPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:36.464560+00:00", "request": {"cmd": "get_property", "objectName": "feeSelectionEstimateLabel", "prop": "value"}, "response": {"value": "\u2014"}}
+{"utc": "2026-10-10T17:26:36.465957+00:00", "request": {"cmd": "get_property", "objectName": "feeSelectionEstimateLabel", "prop": "value"}, "response": {"value": "\u2014"}}
+{"utc": "2026-10-10T17:26:36.971682+00:00", "request": {"cmd": "type_text", "objectName": "sendAddressInput", "text": "bcrt1qwzuzhqt5qq2d8rezded38ssgp442zu0zgm4gwu"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:36.976306+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qwz uzhq t5qq 2d8r ezde d38s sgp4 42zu 0zgm 4gwu"}}
+{"utc": "2026-10-10T17:26:36.979043+00:00", "request": {"cmd": "get_text", "objectName": "sendAddressInput"}, "response": {"text": "bcrt 1qwz uzhq t5qq 2d8r ezde d38s sgp4 42zu 0zgm 4gwu"}}
+{"utc": "2026-10-10T17:26:37.479636+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:37.486051+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_wallet"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:37.501872+00:00", "request": {"cmd": "click", "objectName": "walletAddressesRow"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:37.507095+00:00", "request": {"cmd": "wait_for_page", "page": "addressListPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:37.511160+00:00", "request": {"cmd": "get_property", "objectName": "addressListPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:26:38.122812+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:38.131079+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_rpc-console"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:38.137333+00:00", "request": {"cmd": "wait_for_page", "page": "rpcConsoleSettingsPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:38.141697+00:00", "request": {"cmd": "set_text", "objectName": "consoleInput", "text": "getblockchaininfo"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:38.361981+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "executing"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:26:38.364075+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:38.417138+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:38.470561+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:38.523753+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:38.576602+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:38.630002+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:38.682994+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:38.736844+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:38.790168+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:38.843971+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:38.897999+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:38.952558+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:39.006775+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:39.060935+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:39.115065+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:39.169471+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:39.223683+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:39.277705+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:39.331756+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:39.385545+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:39.438996+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:39.492128+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:39.545460+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:39.599654+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:39.653745+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:39.707519+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:39.761047+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:39.814849+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:39.868617+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:39.921735+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:39.975546+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:40.030204+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:40.084885+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:40.139730+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:40.193554+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:40.247208+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:40.301318+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:40.355529+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:40.409622+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:40.463301+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:40.516857+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:40.570700+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:40.624476+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:40.678077+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:40.731966+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:40.785035+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:40.838492+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:40.892072+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:40.944918+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:40.998070+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:41.051860+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:41.104472+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:41.158683+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:41.213207+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:41.267636+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:41.322086+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:41.376617+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:41.431066+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:41.485859+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:41.539993+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:41.593647+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:41.647257+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:41.701988+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:41.755565+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:41.809019+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:41.862547+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:41.916870+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:41.970634+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:42.023980+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:42.078265+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:42.132737+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:42.186903+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:42.241150+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:42.295185+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:42.349439+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:42.403478+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:42.457002+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:42.510128+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:42.564692+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:42.619651+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:42.673589+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:42.727767+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:42.781893+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:42.835791+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:42.889399+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:42.943912+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:42.998612+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:43.053262+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:43.107305+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:43.161642+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:43.215776+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:43.270040+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:43.324057+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:43.377933+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:26:43.592593+00:00", "application_pid": 2345, "exit_code": 0}
+{"utc": "2026-10-10T17:27:30.285668+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_desktop_cvssz9sn/gui_node", "-test-automation=/work/tmp/evidence_desktop_cvssz9sn/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_desktop_cvssz9sn/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 2415, "platform": "xcb"}
+{"utc": "2026-10-10T17:27:31.039987+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:27:31.414660+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "text"}, "response": {"value": "Review_wallet"}}
+{"utc": "2026-10-10T17:27:31.419227+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "width", "value": 1180}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:27:31.421599+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "height", "value": 1000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:27:31.497537+00:00", "request": {"cmd": "invoke", "objectName": "appWindow", "method": "requestActivate", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:27:31.729070+00:00", "request": {"cmd": "wait_for_page", "page": "sendPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:27:31.731049+00:00", "request": {"cmd": "get_property", "objectName": "sendPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:27:32.454505+00:00", "request": {"cmd": "wait_for_page", "page": "requestPaymentPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:27:32.456385+00:00", "request": {"cmd": "get_property", "objectName": "requestPaymentPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:27:33.176967+00:00", "request": {"cmd": "wait_for_page", "page": "activityPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:27:33.180846+00:00", "request": {"cmd": "get_property", "objectName": "activityPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:27:33.672742+00:00", "request": {"cmd": "click", "objectName": "sendTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:27:33.674784+00:00", "request": {"cmd": "wait_for_page", "page": "sendPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:27:33.678673+00:00", "request": {"cmd": "get_property", "objectName": "feeSelectionEstimateLabel", "prop": "value"}, "response": {"value": "\u2014"}}
+{"utc": "2026-10-10T17:27:33.679889+00:00", "request": {"cmd": "get_property", "objectName": "feeSelectionEstimateLabel", "prop": "value"}, "response": {"value": "\u2014"}}
+{"utc": "2026-10-10T17:27:34.182518+00:00", "request": {"cmd": "type_text", "objectName": "sendAddressInput", "text": "bcrt1qaytyeunhst4jca0t9afxtzmnjqff6qj7zjcujt"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:27:34.186392+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qay tyeu nhst 4jca 0t9a fxtz mnjq ff6q j7zj cujt"}}
+{"utc": "2026-10-10T17:27:34.188387+00:00", "request": {"cmd": "get_text", "objectName": "sendAddressInput"}, "response": {"text": "bcrt 1qay tyeu nhst 4jca 0t9a fxtz mnjq ff6q j7zj cujt"}}
+{"utc": "2026-10-10T17:27:34.694652+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:27:34.701367+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_wallet"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:27:34.718649+00:00", "request": {"cmd": "click", "objectName": "walletAddressesRow"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:27:34.723930+00:00", "request": {"cmd": "wait_for_page", "page": "addressListPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:27:34.727920+00:00", "request": {"cmd": "get_property", "objectName": "addressListPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:27:35.341228+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:27:35.349485+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_rpc-console"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:27:35.355510+00:00", "request": {"cmd": "wait_for_page", "page": "rpcConsoleSettingsPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:27:35.359966+00:00", "request": {"cmd": "set_text", "objectName": "consoleInput", "text": "getblockchaininfo"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:27:35.579590+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "executing"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:27:35.582227+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:27:36.080221+00:00", "request": {"cmd": "click", "objectName": "settingsDoneButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:27:36.083017+00:00", "request": {"cmd": "click", "objectName": "blockClockTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:27:36.087758+00:00", "request": {"cmd": "get_property", "objectName": "blockClock", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:27:36.090191+00:00", "request": {"cmd": "click", "objectName": "blockClockToggleArea"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:27:36.093457+00:00", "request": {"cmd": "get_property", "objectName": "blockClock", "prop": "paused"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:27:36.588154+00:00", "request": {"cmd": "click", "objectName": "blockClockToggleArea"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:27:36.590606+00:00", "request": {"cmd": "get_property", "objectName": "blockClock", "prop": "paused"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:27:36.596465+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:27:36.606144+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_connection"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:27:36.613464+00:00", "request": {"cmd": "wait_for_page", "page": "connectionSettingsPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:27:36.616235+00:00", "request": {"cmd": "get_property", "objectName": "serverSwitch", "prop": "checked"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:27:37.115225+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:27:37.122443+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_about"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:27:37.130501+00:00", "request": {"cmd": "click", "objectName": "aboutDeveloperRow"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:27:37.135117+00:00", "request": {"cmd": "wait_for_page", "page": "settingsDeveloper", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:27:37.137328+00:00", "request": {"cmd": "click", "objectName": "developerDbcacheField"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:27:37.370894+00:00", "request": {"cmd": "type_text", "objectName": "developerDbcacheField", "text": "512"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:27:37.592077+00:00", "request": {"cmd": "click", "objectName": "developerScriptThreadsField"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:27:37.825349+00:00", "request": {"cmd": "type_text", "objectName": "developerScriptThreadsField", "text": "2"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:27:58.339825+00:00", "application_pid": 2415, "exit_code": 0}
+{"utc": "2026-10-10T17:28:34.164697+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_desktop_z42pdy4t/gui_node", "-test-automation=/work/tmp/evidence_desktop_z42pdy4t/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_desktop_z42pdy4t/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 2552, "platform": "xcb"}
+{"utc": "2026-10-10T17:28:34.918994+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:28:35.303562+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "text"}, "response": {"value": "Review_wallet"}}
+{"utc": "2026-10-10T17:28:35.308831+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "width", "value": 1180}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:28:35.316739+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "height", "value": 1000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:28:35.394748+00:00", "request": {"cmd": "invoke", "objectName": "appWindow", "method": "requestActivate", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:28:35.626259+00:00", "request": {"cmd": "wait_for_page", "page": "sendPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:28:35.628288+00:00", "request": {"cmd": "get_property", "objectName": "sendPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:28:36.349659+00:00", "request": {"cmd": "wait_for_page", "page": "requestPaymentPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:28:36.351870+00:00", "request": {"cmd": "get_property", "objectName": "requestPaymentPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:28:37.072207+00:00", "request": {"cmd": "wait_for_page", "page": "activityPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:28:37.074558+00:00", "request": {"cmd": "get_property", "objectName": "activityPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:28:37.566064+00:00", "request": {"cmd": "click", "objectName": "sendTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:28:37.568080+00:00", "request": {"cmd": "wait_for_page", "page": "sendPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:28:37.571914+00:00", "request": {"cmd": "get_property", "objectName": "feeSelectionEstimateLabel", "prop": "value"}, "response": {"value": "\u2014"}}
+{"utc": "2026-10-10T17:28:37.573222+00:00", "request": {"cmd": "get_property", "objectName": "feeSelectionEstimateLabel", "prop": "value"}, "response": {"value": "\u2014"}}
+{"utc": "2026-10-10T17:28:38.075457+00:00", "request": {"cmd": "type_text", "objectName": "sendAddressInput", "text": "bcrt1qlkjdya3dnnsuc4dte5jlmw99l0mu2hk46yeq8u"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:28:38.079016+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qlk jdya 3dnn suc4 dte5 jlmw 99l0 mu2h k46y eq8u"}}
+{"utc": "2026-10-10T17:28:38.080671+00:00", "request": {"cmd": "get_text", "objectName": "sendAddressInput"}, "response": {"text": "bcrt 1qlk jdya 3dnn suc4 dte5 jlmw 99l0 mu2h k46y eq8u"}}
+{"utc": "2026-10-10T17:28:38.582832+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:28:38.589704+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_wallet"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:28:38.605440+00:00", "request": {"cmd": "click", "objectName": "walletAddressesRow"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:28:38.610297+00:00", "request": {"cmd": "wait_for_page", "page": "addressListPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:28:38.612498+00:00", "request": {"cmd": "get_property", "objectName": "addressListPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:28:39.226737+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:28:39.235135+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_rpc-console"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:28:39.241275+00:00", "request": {"cmd": "wait_for_page", "page": "rpcConsoleSettingsPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:28:39.245790+00:00", "request": {"cmd": "set_text", "objectName": "consoleInput", "text": "getblockchaininfo"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:28:39.465761+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "executing"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:28:39.468428+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:28:39.967189+00:00", "request": {"cmd": "click", "objectName": "settingsDoneButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:28:39.969911+00:00", "request": {"cmd": "click", "objectName": "blockClockTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:28:39.974790+00:00", "request": {"cmd": "get_property", "objectName": "blockClock", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:28:39.977328+00:00", "request": {"cmd": "click", "objectName": "blockClockToggleArea"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:28:39.981388+00:00", "request": {"cmd": "get_property", "objectName": "blockClock", "prop": "paused"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:28:40.478168+00:00", "request": {"cmd": "click", "objectName": "blockClockToggleArea"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:28:40.481254+00:00", "request": {"cmd": "get_property", "objectName": "blockClock", "prop": "paused"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:28:40.486130+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:28:40.493096+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_connection"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:28:40.501438+00:00", "request": {"cmd": "wait_for_page", "page": "connectionSettingsPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:28:40.505398+00:00", "request": {"cmd": "get_property", "objectName": "serverSwitch", "prop": "checked"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:28:41.003285+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:28:41.010466+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_about"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:28:41.019859+00:00", "request": {"cmd": "click", "objectName": "aboutDeveloperRow"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:28:41.024741+00:00", "request": {"cmd": "wait_for_page", "page": "settingsDeveloper", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:28:41.027125+00:00", "request": {"cmd": "click", "objectName": "developerDbcacheField"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:28:41.262135+00:00", "request": {"cmd": "type_text", "objectName": "developerDbcacheField", "text": "768"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:28:41.482909+00:00", "request": {"cmd": "click", "objectName": "developerScriptThreadsField"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:28:41.715928+00:00", "request": {"cmd": "type_text", "objectName": "developerScriptThreadsField", "text": "2"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:02.379490+00:00", "application_pid": 2552, "exit_code": 0}
+{"utc": "2026-10-10T17:29:24.507211+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_desktop_k1vzq28_/gui_node", "-test-automation=/work/tmp/evidence_desktop_k1vzq28_/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_desktop_k1vzq28_/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 2750, "platform": "xcb"}
+{"utc": "2026-10-10T17:29:25.261436+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:29:25.629398+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "text"}, "response": {"value": "Review_wallet"}}
+{"utc": "2026-10-10T17:29:25.634998+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "width", "value": 1180}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:25.643691+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "height", "value": 1000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:25.727186+00:00", "request": {"cmd": "invoke", "objectName": "appWindow", "method": "requestActivate", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:25.958247+00:00", "request": {"cmd": "wait_for_page", "page": "sendPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:25.961013+00:00", "request": {"cmd": "get_property", "objectName": "sendPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:29:26.689469+00:00", "request": {"cmd": "wait_for_page", "page": "requestPaymentPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:26.691674+00:00", "request": {"cmd": "get_property", "objectName": "requestPaymentPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:29:27.413167+00:00", "request": {"cmd": "wait_for_page", "page": "activityPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:27.415707+00:00", "request": {"cmd": "get_property", "objectName": "activityPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:29:27.908381+00:00", "request": {"cmd": "click", "objectName": "sendTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:27.910778+00:00", "request": {"cmd": "wait_for_page", "page": "sendPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:27.914921+00:00", "request": {"cmd": "get_property", "objectName": "feeSelectionEstimateLabel", "prop": "value"}, "response": {"value": "\u2014"}}
+{"utc": "2026-10-10T17:29:27.916305+00:00", "request": {"cmd": "get_property", "objectName": "feeSelectionEstimateLabel", "prop": "value"}, "response": {"value": "\u2014"}}
+{"utc": "2026-10-10T17:29:28.418097+00:00", "request": {"cmd": "type_text", "objectName": "sendAddressInput", "text": "bcrt1qlax24005s9fydsssl752x3kxpkxdywjm5a6e7z"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:28.422068+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qla x240 05s9 fyds ssl7 52x3 kxpk xdyw jm5a 6e7z"}}
+{"utc": "2026-10-10T17:29:28.423939+00:00", "request": {"cmd": "get_text", "objectName": "sendAddressInput"}, "response": {"text": "bcrt 1qla x240 05s9 fyds ssl7 52x3 kxpk xdyw jm5a 6e7z"}}
+{"utc": "2026-10-10T17:29:28.932335+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:28.939371+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_wallet"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:28.943345+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:29:28.946772+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:29:28.949561+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:29:28.967563+00:00", "request": {"cmd": "click", "objectName": "walletAddressesRow"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:28.973571+00:00", "request": {"cmd": "wait_for_page", "page": "addressListPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:28.976156+00:00", "request": {"cmd": "get_property", "objectName": "addressListPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:29:29.595074+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:29.603677+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_rpc-console"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:29.609745+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:29:29.613427+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:29:29.615602+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:29:29.617299+00:00", "request": {"cmd": "wait_for_page", "page": "rpcConsoleSettingsPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:29.619675+00:00", "request": {"cmd": "set_text", "objectName": "consoleInput", "text": "getblockchaininfo"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:29.838931+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "executing"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:29:29.842152+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:29:29.845656+00:00", "request": {"cmd": "get_text", "objectName": "rpcConsoleHelpFooter"}, "response": {"text": "Use \u2191\u2193 arrows to navigate history. Type help for an overview of available commands. Type help-console for console syntax help."}}
+{"utc": "2026-10-10T17:29:29.847434+00:00", "request": {"cmd": "get_text", "objectName": "rpcConsoleHelpFooter"}, "response": {"text": "Use \u2191\u2193 arrows to navigate history. Type help for an overview of available commands. Type help-console for console syntax help."}}
+{"utc": "2026-10-10T17:29:30.348847+00:00", "request": {"cmd": "click", "objectName": "settingsDoneButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:30.351440+00:00", "request": {"cmd": "click", "objectName": "blockClockTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:30.356364+00:00", "request": {"cmd": "get_property", "objectName": "blockClock", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:29:30.359131+00:00", "request": {"cmd": "click", "objectName": "blockClockToggleArea"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:30.362588+00:00", "request": {"cmd": "get_property", "objectName": "blockClock", "prop": "paused"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:29:30.859145+00:00", "request": {"cmd": "click", "objectName": "blockClockToggleArea"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:30.862504+00:00", "request": {"cmd": "get_property", "objectName": "blockClock", "prop": "paused"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:29:30.867239+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:30.874612+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_connection"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:30.881470+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:29:30.885046+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:29:30.886999+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:29:30.888540+00:00", "request": {"cmd": "wait_for_page", "page": "connectionSettingsPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:30.891007+00:00", "request": {"cmd": "get_property", "objectName": "serverSwitch", "prop": "checked"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:29:31.387535+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:31.395316+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_about"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:31.401585+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:29:31.406702+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:29:31.409008+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:29:31.413647+00:00", "request": {"cmd": "click", "objectName": "aboutDeveloperRow"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:31.416489+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:29:31.420936+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:29:31.423077+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:29:31.424820+00:00", "request": {"cmd": "wait_for_page", "page": "settingsDeveloper", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:31.426520+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:29:31.428496+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:29:31.430202+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:29:31.431976+00:00", "request": {"cmd": "type_text", "objectName": "developerDbcacheField", "text": ""}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:31.665909+00:00", "request": {"cmd": "type_text", "objectName": "developerDbcacheField", "text": "768"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:31.886268+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:29:31.890491+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:29:31.893015+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:29:31.894868+00:00", "request": {"cmd": "type_text", "objectName": "developerScriptThreadsField", "text": ""}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:32.128938+00:00", "request": {"cmd": "type_text", "objectName": "developerScriptThreadsField", "text": "2"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:52.792611+00:00", "application_pid": 2750, "exit_code": 0}
+{"utc": "2026-10-10T17:30:18.776808+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_desktop_99wzsf9r/gui_node", "-test-automation=/work/tmp/evidence_desktop_99wzsf9r/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_desktop_99wzsf9r/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 2824, "platform": "xcb"}
+{"utc": "2026-10-10T17:30:19.536925+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:30:19.909572+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "text"}, "response": {"value": "Review_wallet"}}
+{"utc": "2026-10-10T17:30:19.914074+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "width", "value": 1180}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:30:19.916294+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "height", "value": 1000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:30:19.990078+00:00", "request": {"cmd": "invoke", "objectName": "appWindow", "method": "requestActivate", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:30:20.222299+00:00", "request": {"cmd": "wait_for_page", "page": "sendPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:30:20.224372+00:00", "request": {"cmd": "get_property", "objectName": "sendPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:30:20.947298+00:00", "request": {"cmd": "wait_for_page", "page": "requestPaymentPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:30:20.949309+00:00", "request": {"cmd": "get_property", "objectName": "requestPaymentPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:30:21.671182+00:00", "request": {"cmd": "wait_for_page", "page": "activityPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:30:21.673337+00:00", "request": {"cmd": "get_property", "objectName": "activityPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:30:22.165206+00:00", "request": {"cmd": "click", "objectName": "sendTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:30:22.170251+00:00", "request": {"cmd": "wait_for_page", "page": "sendPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:30:22.172033+00:00", "request": {"cmd": "get_property", "objectName": "feeSelectionEstimateLabel", "prop": "value"}, "response": {"value": "\u2014"}}
+{"utc": "2026-10-10T17:30:22.173348+00:00", "request": {"cmd": "get_property", "objectName": "feeSelectionEstimateLabel", "prop": "value"}, "response": {"value": "\u2014"}}
+{"utc": "2026-10-10T17:30:22.675308+00:00", "request": {"cmd": "type_text", "objectName": "sendAddressInput", "text": "bcrt1qkn2mpugavewnys53qnpmpdt2vm5fh39ph8lt72"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:30:22.679531+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qkn 2mpu gave wnys 53qn pmpd t2vm 5fh3 9ph8 lt72"}}
+{"utc": "2026-10-10T17:30:22.682007+00:00", "request": {"cmd": "get_text", "objectName": "sendAddressInput"}, "response": {"text": "bcrt 1qkn 2mpu gave wnys 53qn pmpd t2vm 5fh3 9ph8 lt72"}}
+{"utc": "2026-10-10T17:30:23.183423+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:30:23.190025+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_wallet"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:30:23.193408+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:30:23.195426+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:30:23.196884+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:30:23.211062+00:00", "request": {"cmd": "click", "objectName": "walletAddressesRow"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:30:23.216025+00:00", "request": {"cmd": "wait_for_page", "page": "addressListPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:30:23.218463+00:00", "request": {"cmd": "get_property", "objectName": "addressListPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:30:23.835346+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:30:23.844856+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_rpc-console"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:30:23.851142+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:30:23.854834+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:30:23.856828+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:30:23.858393+00:00", "request": {"cmd": "wait_for_page", "page": "rpcConsoleSettingsPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:30:23.860659+00:00", "request": {"cmd": "set_text", "objectName": "consoleInput", "text": "getblockchaininfo"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:30:24.081136+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "executing"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:30:24.084058+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:30:24.087210+00:00", "request": {"cmd": "get_text", "objectName": "rpcConsoleHelpFooter"}, "response": {"text": "Use \u2191\u2193 arrows to navigate history. Type help for an overview of available commands. Type help-console for console syntax help."}}
+{"utc": "2026-10-10T17:30:24.088839+00:00", "request": {"cmd": "get_text", "objectName": "rpcConsoleHelpFooter"}, "response": {"text": "Use \u2191\u2193 arrows to navigate history. Type help for an overview of available commands. Type help-console for console syntax help."}}
+{"utc": "2026-10-10T17:30:24.587847+00:00", "request": {"cmd": "click", "objectName": "settingsDoneButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:30:24.591989+00:00", "request": {"cmd": "click", "objectName": "blockClockTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:30:24.594456+00:00", "request": {"cmd": "get_property", "objectName": "blockClock", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:30:24.596580+00:00", "request": {"cmd": "click", "objectName": "blockClockToggleArea"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:30:24.602168+00:00", "request": {"cmd": "get_property", "objectName": "blockClock", "prop": "paused"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:30:25.098881+00:00", "request": {"cmd": "click", "objectName": "blockClockToggleArea"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:30:25.101844+00:00", "request": {"cmd": "get_property", "objectName": "blockClock", "prop": "paused"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:30:25.106627+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:30:25.113618+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_connection"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:30:25.120769+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:30:25.124345+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:30:25.126586+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:30:25.128620+00:00", "request": {"cmd": "wait_for_page", "page": "connectionSettingsPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:30:25.130875+00:00", "request": {"cmd": "get_property", "objectName": "serverSwitch", "prop": "checked"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:30:25.627540+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:30:25.634575+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_about"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:30:25.640416+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:30:25.643967+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:30:25.646087+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:30:25.650676+00:00", "request": {"cmd": "click", "objectName": "aboutDeveloperRow"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:30:25.653165+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:30:25.656088+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:30:25.657864+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:30:25.659464+00:00", "request": {"cmd": "wait_for_page", "page": "settingsDeveloper", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:30:25.662810+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:30:25.664749+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:30:25.666378+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:30:25.668042+00:00", "request": {"cmd": "type_text", "objectName": "developerDbcacheField", "text": ""}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:30:26.024978+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:26.079583+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:26.134087+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:26.188213+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:26.242442+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:26.296625+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:26.351082+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:26.405892+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:26.460339+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:26.514771+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:26.569588+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:26.624392+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:26.679375+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:26.733853+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:26.788494+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:26.843130+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:26.897476+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:26.952073+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:27.006390+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:27.060993+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:27.115521+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:27.169857+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:27.224588+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:27.279277+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:27.333767+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:27.388985+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:27.443945+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:27.497971+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:27.552394+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:27.607001+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:27.661648+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:27.716187+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:27.770557+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:27.824879+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:27.879798+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:27.934510+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:27.989102+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:28.043761+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:28.098086+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:28.152552+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:28.207533+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:28.262102+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:28.316939+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:28.371406+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:28.425821+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:28.480530+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:28.534846+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:28.589265+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:28.644002+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:28.698459+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:28.753160+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:28.807570+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:28.862348+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:28.916845+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:28.971446+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:29.025377+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:29.079778+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:29.134357+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:29.188432+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:29.242908+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:29.297256+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:29.351917+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:29.406526+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:29.461126+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:29.515587+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:29.569990+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:29.624594+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:29.679318+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:29.733775+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:29.788550+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:29.842983+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:29.897582+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:29.952314+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:30.007049+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:30.061509+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:30.116227+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:30.170758+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:30.225212+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:30.279313+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:30.333974+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:30.388737+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:30.443296+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:30.498067+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:30.552578+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:30.607121+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:30.661528+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:30.716115+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:30.770373+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:30.824777+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:30.879505+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:30.933987+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:30.988684+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:31.043428+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "7"}}
+{"utc": "2026-10-10T17:30:31.408256+00:00", "application_pid": 2824, "exit_code": 0}
+{"utc": "2026-10-10T17:31:24.718232+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_desktop_6enuyimz/gui_node", "-test-automation=/work/tmp/evidence_desktop_6enuyimz/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_desktop_6enuyimz/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 2896, "platform": "xcb"}
+{"utc": "2026-10-10T17:31:25.472605+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:25.838477+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "text"}, "response": {"value": "Review_wallet"}}
+{"utc": "2026-10-10T17:31:25.843758+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "width", "value": 1180}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:25.852227+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "height", "value": 1000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:25.930196+00:00", "request": {"cmd": "invoke", "objectName": "appWindow", "method": "requestActivate", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:26.161585+00:00", "request": {"cmd": "wait_for_page", "page": "sendPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:26.163546+00:00", "request": {"cmd": "get_property", "objectName": "sendPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:31:26.884614+00:00", "request": {"cmd": "wait_for_page", "page": "requestPaymentPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:26.886724+00:00", "request": {"cmd": "get_property", "objectName": "requestPaymentPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:31:27.610229+00:00", "request": {"cmd": "wait_for_page", "page": "activityPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:27.612860+00:00", "request": {"cmd": "get_property", "objectName": "activityPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:31:28.103589+00:00", "request": {"cmd": "click", "objectName": "sendTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:28.105637+00:00", "request": {"cmd": "wait_for_page", "page": "sendPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:28.109564+00:00", "request": {"cmd": "get_property", "objectName": "feeSelectionEstimateLabel", "prop": "value"}, "response": {"value": "\u2014"}}
+{"utc": "2026-10-10T17:31:28.110948+00:00", "request": {"cmd": "get_property", "objectName": "feeSelectionEstimateLabel", "prop": "value"}, "response": {"value": "\u2014"}}
+{"utc": "2026-10-10T17:31:28.614132+00:00", "request": {"cmd": "type_text", "objectName": "sendAddressInput", "text": "bcrt1qzyl53ufej29x2gpvne5592u8wfslwhe3ql3rk2"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:28.617844+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qzy l53u fej2 9x2g pvne 5592 u8wf slwh e3ql 3rk2"}}
+{"utc": "2026-10-10T17:31:28.619808+00:00", "request": {"cmd": "get_text", "objectName": "sendAddressInput"}, "response": {"text": "bcrt 1qzy l53u fej2 9x2g pvne 5592 u8wf slwh e3ql 3rk2"}}
+{"utc": "2026-10-10T17:31:29.120578+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:29.127082+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_wallet"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:29.130200+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:29.131897+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:31:29.133229+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:29.147393+00:00", "request": {"cmd": "click", "objectName": "walletAddressesRow"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:29.152144+00:00", "request": {"cmd": "wait_for_page", "page": "addressListPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:29.154320+00:00", "request": {"cmd": "get_property", "objectName": "addressListPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:31:29.764703+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:29.773249+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_rpc-console"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:29.780111+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:29.783936+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:31:29.786043+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:29.787885+00:00", "request": {"cmd": "wait_for_page", "page": "rpcConsoleSettingsPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:29.790494+00:00", "request": {"cmd": "set_text", "objectName": "consoleInput", "text": "getblockchaininfo"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:30.010703+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "executing"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:30.013410+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:31:30.016184+00:00", "request": {"cmd": "get_text", "objectName": "rpcConsoleHelpFooter"}, "response": {"text": "Use \u2191\u2193 arrows to navigate history. Type help for an overview of available commands. Type help-console for console syntax help."}}
+{"utc": "2026-10-10T17:31:30.017790+00:00", "request": {"cmd": "get_text", "objectName": "rpcConsoleHelpFooter"}, "response": {"text": "Use \u2191\u2193 arrows to navigate history. Type help for an overview of available commands. Type help-console for console syntax help."}}
+{"utc": "2026-10-10T17:31:30.521146+00:00", "request": {"cmd": "click", "objectName": "settingsDoneButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:30.524324+00:00", "request": {"cmd": "click", "objectName": "blockClockTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:30.529592+00:00", "request": {"cmd": "get_property", "objectName": "blockClock", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:31:30.533776+00:00", "request": {"cmd": "click", "objectName": "blockClockToggleArea"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:30.537604+00:00", "request": {"cmd": "get_property", "objectName": "blockClock", "prop": "paused"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:31:31.030986+00:00", "request": {"cmd": "click", "objectName": "blockClockToggleArea"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:31.033704+00:00", "request": {"cmd": "get_property", "objectName": "blockClock", "prop": "paused"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:31.038538+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:31.045985+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_connection"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:31.052562+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:31.055938+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:31:31.057964+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:31.059769+00:00", "request": {"cmd": "wait_for_page", "page": "connectionSettingsPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:31.061713+00:00", "request": {"cmd": "get_property", "objectName": "serverSwitch", "prop": "checked"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:31:31.561166+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:31.568345+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_about"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:31.574406+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:31.578695+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:31:31.582189+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:31.588338+00:00", "request": {"cmd": "click", "objectName": "aboutDeveloperRow"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:31.592025+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:31.597549+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:31:31.601102+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:31.604113+00:00", "request": {"cmd": "wait_for_page", "page": "settingsDeveloper", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:31.606778+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:31.609383+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:31:31.611754+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:31.615356+00:00", "request": {"cmd": "type_text", "objectName": "developerDbcacheField", "text": ""}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:31.894209+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "6"}}
+{"utc": "2026-10-10T17:31:32.114561+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:32.117712+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:31:32.119849+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:32.121711+00:00", "request": {"cmd": "type_text", "objectName": "developerScriptThreadsField", "text": ""}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:32.399924+00:00", "request": {"cmd": "get_property", "objectName": "developerScriptThreadsField", "prop": "text"}, "response": {"value": "2"}}
+{"utc": "2026-10-10T17:31:33.112746+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "x", "value": 145}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:33.116483+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "y", "value": 65}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:33.119796+00:00", "request": {"cmd": "get_property", "objectName": "appWindow", "prop": "width"}, "response": {"value": 1180}}
+{"utc": "2026-10-10T17:31:33.122009+00:00", "request": {"cmd": "get_property", "objectName": "appWindow", "prop": "height"}, "response": {"value": 1000}}
+{"utc": "2026-10-10T17:31:33.123800+00:00", "request": {"cmd": "get_property", "objectName": "appWindow", "prop": "x"}, "response": {"value": 145}}
+{"utc": "2026-10-10T17:31:33.125433+00:00", "request": {"cmd": "get_property", "objectName": "appWindow", "prop": "y"}, "response": {"value": 65}}
+{"utc": "2026-10-10T17:31:33.780823+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_desktop_6enuyimz/gui_node", "-test-automation=/work/tmp/evidence_desktop_6enuyimz/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_desktop_6enuyimz/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 2965, "platform": "xcb"}
+{"utc": "2026-10-10T17:31:34.534841+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:34.537195+00:00", "request": {"cmd": "get_property", "objectName": "appWindow", "prop": "width"}, "response": {"value": 1180}}
+{"utc": "2026-10-10T17:31:34.538662+00:00", "request": {"cmd": "get_property", "objectName": "appWindow", "prop": "height"}, "response": {"value": 1000}}
+{"utc": "2026-10-10T17:31:34.539956+00:00", "request": {"cmd": "get_property", "objectName": "appWindow", "prop": "x"}, "response": {"value": 145}}
+{"utc": "2026-10-10T17:31:34.541166+00:00", "request": {"cmd": "get_property", "objectName": "appWindow", "prop": "y"}, "response": {"value": 65}}
+{"utc": "2026-10-10T17:31:35.041799+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:35.052722+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_about"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:35.057936+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:35.060672+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:31:35.063063+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:35.070152+00:00", "request": {"cmd": "click", "objectName": "aboutDeveloperRow"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:35.074085+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:35.076394+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:31:35.078443+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:35.080676+00:00", "request": {"cmd": "get_text", "objectName": "developerDbcacheField"}, "response": {"text": "6"}}
+{"utc": "2026-10-10T17:31:35.082306+00:00", "request": {"cmd": "get_text", "objectName": "developerScriptThreadsField"}, "response": {"text": "2"}}
+{"utc": "2026-10-10T17:31:35.736168+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_desktop_6enuyimz/gui_node", "-test-automation=/work/tmp/evidence_desktop_6enuyimz/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_desktop_6enuyimz/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten", "-dbcache=256"], "pid": 3008, "platform": "xcb"}
+{"utc": "2026-10-10T17:31:36.490458+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:36.500430+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:36.511109+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_about"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:36.516135+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:36.518354+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:31:36.520261+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:36.525858+00:00", "request": {"cmd": "click", "objectName": "aboutDeveloperRow"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:36.528902+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:36.530670+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:31:36.532027+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:36.534617+00:00", "request": {"cmd": "get_text", "objectName": "developerDbcacheField"}, "response": {"text": "256"}}
+{"utc": "2026-10-10T17:31:36.536136+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:37.190838+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_desktop_6enuyimz/gui_node", "-test-automation=/work/tmp/evidence_desktop_6enuyimz/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_desktop_6enuyimz/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 3051, "platform": "xcb"}
+{"utc": "2026-10-10T17:31:37.945997+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:37.956473+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:37.967833+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_about"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:37.974060+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:37.977534+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:31:37.979217+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:37.984518+00:00", "request": {"cmd": "click", "objectName": "aboutDeveloperRow"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:31:37.986867+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:37.989878+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:31:37.991520+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:31:37.992991+00:00", "request": {"cmd": "get_text", "objectName": "developerDbcacheField"}, "response": {"text": "6"}}
+{"utc": "2026-10-10T17:31:37.995818+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:31:38.361533+00:00", "application_pid": 2896, "exit_code": 0}
+{"utc": "2026-10-10T17:31:38.361807+00:00", "application_pid": 2965, "exit_code": 0}
+{"utc": "2026-10-10T17:31:38.361960+00:00", "application_pid": 3008, "exit_code": 0}
+{"utc": "2026-10-10T17:31:38.362096+00:00", "application_pid": 3051, "exit_code": 0}
+{"utc": "2026-10-10T17:32:41.063457+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_desktop_31wo16mg/gui_node", "-test-automation=/work/tmp/evidence_desktop_31wo16mg/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_desktop_31wo16mg/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 3218, "platform": "xcb"}
+{"utc": "2026-10-10T17:32:41.817847+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:42.180022+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "text"}, "response": {"value": "Review_wallet"}}
+{"utc": "2026-10-10T17:32:42.184664+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "width", "value": 1180}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:42.186996+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "height", "value": 1000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:42.265891+00:00", "request": {"cmd": "invoke", "objectName": "appWindow", "method": "requestActivate", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:42.498095+00:00", "request": {"cmd": "wait_for_page", "page": "sendPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:42.501031+00:00", "request": {"cmd": "get_property", "objectName": "sendPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:32:43.226566+00:00", "request": {"cmd": "wait_for_page", "page": "requestPaymentPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:43.228997+00:00", "request": {"cmd": "get_property", "objectName": "requestPaymentPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:32:43.951088+00:00", "request": {"cmd": "wait_for_page", "page": "activityPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:43.954884+00:00", "request": {"cmd": "get_property", "objectName": "activityPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:32:44.445802+00:00", "request": {"cmd": "click", "objectName": "sendTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:44.447790+00:00", "request": {"cmd": "wait_for_page", "page": "sendPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:44.451730+00:00", "request": {"cmd": "get_property", "objectName": "feeSelectionEstimateLabel", "prop": "value"}, "response": {"value": "\u2014"}}
+{"utc": "2026-10-10T17:32:44.453060+00:00", "request": {"cmd": "get_property", "objectName": "feeSelectionEstimateLabel", "prop": "value"}, "response": {"value": "\u2014"}}
+{"utc": "2026-10-10T17:32:44.956250+00:00", "request": {"cmd": "type_text", "objectName": "sendAddressInput", "text": "bcrt1qrmua49qf8y9ugz6evv76f8xaa97up3wq3xusyg"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:44.960566+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1qrm ua49 qf8y 9ugz 6evv 76f8 xaa9 7up3 wq3x usyg"}}
+{"utc": "2026-10-10T17:32:44.962494+00:00", "request": {"cmd": "get_text", "objectName": "sendAddressInput"}, "response": {"text": "bcrt 1qrm ua49 qf8y 9ugz 6evv 76f8 xaa9 7up3 wq3x usyg"}}
+{"utc": "2026-10-10T17:32:45.470390+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:45.477579+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_wallet"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:45.481018+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:45.482546+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:32:45.483756+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:45.498936+00:00", "request": {"cmd": "click", "objectName": "walletAddressesRow"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:45.503607+00:00", "request": {"cmd": "wait_for_page", "page": "addressListPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:45.505708+00:00", "request": {"cmd": "get_property", "objectName": "addressListPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:32:46.116342+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:46.124584+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_rpc-console"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:46.130638+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:46.134367+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:32:46.136359+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:46.137931+00:00", "request": {"cmd": "wait_for_page", "page": "rpcConsoleSettingsPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:46.140247+00:00", "request": {"cmd": "set_text", "objectName": "consoleInput", "text": "getblockchaininfo"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:46.360250+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "executing"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:46.364528+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:32:46.368236+00:00", "request": {"cmd": "get_text", "objectName": "rpcConsoleHelpFooter"}, "response": {"text": "Use \u2191\u2193 arrows to navigate history. Type help for an overview of available commands. Type help-console for console syntax help."}}
+{"utc": "2026-10-10T17:32:46.370119+00:00", "request": {"cmd": "get_text", "objectName": "rpcConsoleHelpFooter"}, "response": {"text": "Use \u2191\u2193 arrows to navigate history. Type help for an overview of available commands. Type help-console for console syntax help."}}
+{"utc": "2026-10-10T17:32:46.872051+00:00", "request": {"cmd": "click", "objectName": "settingsDoneButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:46.876218+00:00", "request": {"cmd": "click", "objectName": "blockClockTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:46.878639+00:00", "request": {"cmd": "get_property", "objectName": "blockClock", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:32:46.880779+00:00", "request": {"cmd": "click", "objectName": "blockClockToggleArea"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:46.882504+00:00", "request": {"cmd": "get_property", "objectName": "blockClock", "prop": "paused"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:32:47.380332+00:00", "request": {"cmd": "click", "objectName": "blockClockToggleArea"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:47.384012+00:00", "request": {"cmd": "get_property", "objectName": "blockClock", "prop": "paused"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:47.389868+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:47.400291+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_connection"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:47.408153+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:47.411558+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:32:47.414281+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:47.419434+00:00", "request": {"cmd": "wait_for_page", "page": "connectionSettingsPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:47.422367+00:00", "request": {"cmd": "get_property", "objectName": "serverSwitch", "prop": "checked"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:32:47.923647+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:47.932218+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_about"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:47.938102+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:47.943167+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:32:47.946715+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:47.952798+00:00", "request": {"cmd": "click", "objectName": "aboutDeveloperRow"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:47.956233+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:47.960997+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:32:47.963828+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:47.966040+00:00", "request": {"cmd": "wait_for_page", "page": "settingsDeveloper", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:47.968039+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:47.970076+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:32:47.971963+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:47.975053+00:00", "request": {"cmd": "type_text", "objectName": "developerDbcacheField", "text": ""}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:48.252315+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "6"}}
+{"utc": "2026-10-10T17:32:48.473688+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:48.476587+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:32:48.478368+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:48.480115+00:00", "request": {"cmd": "type_text", "objectName": "developerScriptThreadsField", "text": ""}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:48.757748+00:00", "request": {"cmd": "get_property", "objectName": "developerScriptThreadsField", "prop": "text"}, "response": {"value": "2"}}
+{"utc": "2026-10-10T17:32:49.473162+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "x", "value": 145}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:49.476350+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "y", "value": 65}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:49.479932+00:00", "request": {"cmd": "get_property", "objectName": "appWindow", "prop": "width"}, "response": {"value": 1180}}
+{"utc": "2026-10-10T17:32:49.481951+00:00", "request": {"cmd": "get_property", "objectName": "appWindow", "prop": "height"}, "response": {"value": 1000}}
+{"utc": "2026-10-10T17:32:49.483484+00:00", "request": {"cmd": "get_property", "objectName": "appWindow", "prop": "x"}, "response": {"value": 145}}
+{"utc": "2026-10-10T17:32:49.484899+00:00", "request": {"cmd": "get_property", "objectName": "appWindow", "prop": "y"}, "response": {"value": 65}}
+{"utc": "2026-10-10T17:32:50.142124+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_desktop_31wo16mg/gui_node", "-test-automation=/work/tmp/evidence_desktop_31wo16mg/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_desktop_31wo16mg/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 3287, "platform": "xcb"}
+{"utc": "2026-10-10T17:32:50.896017+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:50.897951+00:00", "request": {"cmd": "get_property", "objectName": "appWindow", "prop": "width"}, "response": {"value": 1180}}
+{"utc": "2026-10-10T17:32:50.899224+00:00", "request": {"cmd": "get_property", "objectName": "appWindow", "prop": "height"}, "response": {"value": 1000}}
+{"utc": "2026-10-10T17:32:50.900263+00:00", "request": {"cmd": "get_property", "objectName": "appWindow", "prop": "x"}, "response": {"value": 145}}
+{"utc": "2026-10-10T17:32:50.901392+00:00", "request": {"cmd": "get_property", "objectName": "appWindow", "prop": "y"}, "response": {"value": 65}}
+{"utc": "2026-10-10T17:32:51.399489+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:51.409400+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_about"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:51.414241+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:51.416282+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:32:51.417908+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:51.423151+00:00", "request": {"cmd": "click", "objectName": "aboutDeveloperRow"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:51.426325+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:51.428115+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:32:51.429443+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:51.430755+00:00", "request": {"cmd": "get_text", "objectName": "developerDbcacheField"}, "response": {"text": "6"}}
+{"utc": "2026-10-10T17:32:51.432062+00:00", "request": {"cmd": "get_text", "objectName": "developerScriptThreadsField"}, "response": {"text": "2"}}
+{"utc": "2026-10-10T17:32:52.186139+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_desktop_31wo16mg/gui_node", "-test-automation=/work/tmp/evidence_desktop_31wo16mg/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_desktop_31wo16mg/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten", "-dbcache=256"], "pid": 3330, "platform": "xcb"}
+{"utc": "2026-10-10T17:32:52.940504+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:52.950659+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:52.960691+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_about"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:52.966244+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:52.968399+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:32:52.970007+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:52.975520+00:00", "request": {"cmd": "click", "objectName": "aboutDeveloperRow"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:52.979734+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:52.982063+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:32:52.984027+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:52.985733+00:00", "request": {"cmd": "get_text", "objectName": "developerDbcacheField"}, "response": {"text": "256"}}
+{"utc": "2026-10-10T17:32:52.987308+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:53.743942+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_desktop_31wo16mg/gui_node", "-test-automation=/work/tmp/evidence_desktop_31wo16mg/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_desktop_31wo16mg/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 3373, "platform": "xcb"}
+{"utc": "2026-10-10T17:32:54.498485+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:54.509091+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:54.520442+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_about"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:54.526128+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:54.529300+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:32:54.531324+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:54.537670+00:00", "request": {"cmd": "click", "objectName": "aboutDeveloperRow"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:54.540347+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:54.543400+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:32:54.545096+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:54.546573+00:00", "request": {"cmd": "get_text", "objectName": "developerDbcacheField"}, "response": {"text": "6"}}
+{"utc": "2026-10-10T17:32:54.548016+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:32:54.763940+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_desktop_31wo16mg/gui_node", "-test-automation=/work/tmp/evidence_desktop_31wo16mg/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_desktop_31wo16mg/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 3416, "platform": "xcb"}
+{"utc": "2026-10-10T17:32:55.518172+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:55.528588+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:55.539751+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_about"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:55.545360+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:55.549247+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:32:55.552367+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:55.558994+00:00", "request": {"cmd": "click", "objectName": "aboutDeveloperRow"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:32:55.562762+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:55.567803+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:32:55.570876+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:32:55.573499+00:00", "request": {"cmd": "get_text", "objectName": "developerDbcacheField"}, "response": {"text": "384"}}
+{"utc": "2026-10-10T17:32:55.575752+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:32:56.389279+00:00", "application_pid": 3218, "exit_code": 0}
+{"utc": "2026-10-10T17:32:56.389546+00:00", "application_pid": 3287, "exit_code": 0}
+{"utc": "2026-10-10T17:32:56.389689+00:00", "application_pid": 3330, "exit_code": 0}
+{"utc": "2026-10-10T17:32:56.389816+00:00", "application_pid": 3373, "exit_code": 0}
+{"utc": "2026-10-10T17:32:56.389940+00:00", "application_pid": 3416, "exit_code": 0}
+{"utc": "2026-10-10T17:39:29.010517+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_desktop_zp31b74w/gui_node", "-test-automation=/work/tmp/evidence_desktop_zp31b74w/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_desktop_zp31b74w/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 3467, "platform": "xcb"}
+{"utc": "2026-10-10T17:39:29.764944+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:30.125721+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "text"}, "response": {"value": "Review_wallet"}}
+{"utc": "2026-10-10T17:39:30.130412+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "width", "value": 1180}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:30.132928+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "height", "value": 1000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:30.209819+00:00", "request": {"cmd": "invoke", "objectName": "appWindow", "method": "requestActivate", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:30.441996+00:00", "request": {"cmd": "wait_for_page", "page": "sendPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:30.444302+00:00", "request": {"cmd": "get_property", "objectName": "sendPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:39:31.170535+00:00", "request": {"cmd": "wait_for_page", "page": "requestPaymentPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:31.172668+00:00", "request": {"cmd": "get_property", "objectName": "requestPaymentPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:39:31.897007+00:00", "request": {"cmd": "wait_for_page", "page": "activityPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:31.899574+00:00", "request": {"cmd": "get_property", "objectName": "activityPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:39:32.390941+00:00", "request": {"cmd": "click", "objectName": "sendTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:32.393831+00:00", "request": {"cmd": "wait_for_page", "page": "sendPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:32.398309+00:00", "request": {"cmd": "get_property", "objectName": "feeSelectionEstimateLabel", "prop": "value"}, "response": {"value": "\u2014"}}
+{"utc": "2026-10-10T17:39:32.399691+00:00", "request": {"cmd": "get_property", "objectName": "feeSelectionEstimateLabel", "prop": "value"}, "response": {"value": "\u2014"}}
+{"utc": "2026-10-10T17:39:32.901197+00:00", "request": {"cmd": "type_text", "objectName": "sendAddressInput", "text": "bcrt1q2u0sjgpjcw8xn3vuytw7gwxgt8apq3g2c39c7f"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:32.905325+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": "bcrt 1q2u 0sjg pjcw 8xn3 vuyt w7gw xgt8 apq3 g2c3 9c7f"}}
+{"utc": "2026-10-10T17:39:32.907112+00:00", "request": {"cmd": "get_text", "objectName": "sendAddressInput"}, "response": {"text": "bcrt 1q2u 0sjg pjcw 8xn3 vuyt w7gw xgt8 apq3 g2c3 9c7f"}}
+{"utc": "2026-10-10T17:39:33.411232+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:33.418011+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_wallet"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:33.421819+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:33.424367+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:39:33.426545+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:33.443173+00:00", "request": {"cmd": "click", "objectName": "walletAddressesRow"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:33.449746+00:00", "request": {"cmd": "wait_for_page", "page": "addressListPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:33.453725+00:00", "request": {"cmd": "get_property", "objectName": "addressListPage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:39:34.065684+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:34.074003+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_rpc-console"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:34.080228+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:34.084270+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:39:34.086431+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:34.088257+00:00", "request": {"cmd": "wait_for_page", "page": "rpcConsoleSettingsPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:34.090544+00:00", "request": {"cmd": "set_text", "objectName": "consoleInput", "text": "getblockchaininfo"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:34.310599+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "executing"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:34.313800+00:00", "request": {"cmd": "get_property", "objectName": "rpcConsole", "prop": "outputCount"}, "response": {"value": 3}}
+{"utc": "2026-10-10T17:39:34.317238+00:00", "request": {"cmd": "get_text", "objectName": "rpcConsoleHelpFooter"}, "response": {"text": "Use \u2191\u2193 arrows to navigate history. Type help for an overview of available commands. Type help-console for console syntax help."}}
+{"utc": "2026-10-10T17:39:34.319107+00:00", "request": {"cmd": "get_text", "objectName": "rpcConsoleHelpFooter"}, "response": {"text": "Use \u2191\u2193 arrows to navigate history. Type help for an overview of available commands. Type help-console for console syntax help."}}
+{"utc": "2026-10-10T17:39:34.817917+00:00", "request": {"cmd": "click", "objectName": "settingsDoneButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:34.820679+00:00", "request": {"cmd": "click", "objectName": "blockClockTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:34.825447+00:00", "request": {"cmd": "get_property", "objectName": "blockClock", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:39:34.828973+00:00", "request": {"cmd": "click", "objectName": "blockClockToggleArea"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:34.832669+00:00", "request": {"cmd": "get_property", "objectName": "blockClock", "prop": "paused"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:39:35.327439+00:00", "request": {"cmd": "click", "objectName": "blockClockToggleArea"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:35.330590+00:00", "request": {"cmd": "get_property", "objectName": "blockClock", "prop": "paused"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:35.335132+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:35.341993+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_connection"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:35.348766+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:35.352245+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:39:35.354288+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:35.355927+00:00", "request": {"cmd": "wait_for_page", "page": "connectionSettingsPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:35.357592+00:00", "request": {"cmd": "get_property", "objectName": "serverSwitch", "prop": "checked"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:39:35.853566+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:35.860527+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_about"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:35.866568+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:35.870000+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:39:35.872037+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:35.876523+00:00", "request": {"cmd": "click", "objectName": "aboutDeveloperRow"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:35.878977+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:35.881776+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:39:35.883533+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:35.885111+00:00", "request": {"cmd": "wait_for_page", "page": "settingsDeveloper", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:35.888936+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:35.891080+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:39:35.892735+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:35.894541+00:00", "request": {"cmd": "type_text", "objectName": "developerDbcacheField", "text": ""}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:36.172022+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "text"}, "response": {"value": "6"}}
+{"utc": "2026-10-10T17:39:36.392340+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:36.395191+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:39:36.397000+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:36.398640+00:00", "request": {"cmd": "type_text", "objectName": "developerScriptThreadsField", "text": ""}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:36.676532+00:00", "request": {"cmd": "get_property", "objectName": "developerScriptThreadsField", "prop": "text"}, "response": {"value": "2"}}
+{"utc": "2026-10-10T17:39:37.389096+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "x", "value": 145}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:37.392182+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "y", "value": 65}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:37.395684+00:00", "request": {"cmd": "get_property", "objectName": "appWindow", "prop": "width"}, "response": {"value": 1180}}
+{"utc": "2026-10-10T17:39:37.398035+00:00", "request": {"cmd": "get_property", "objectName": "appWindow", "prop": "height"}, "response": {"value": 1000}}
+{"utc": "2026-10-10T17:39:37.400077+00:00", "request": {"cmd": "get_property", "objectName": "appWindow", "prop": "x"}, "response": {"value": 145}}
+{"utc": "2026-10-10T17:39:37.401931+00:00", "request": {"cmd": "get_property", "objectName": "appWindow", "prop": "y"}, "response": {"value": 65}}
+{"utc": "2026-10-10T17:39:38.158097+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_desktop_zp31b74w/gui_node", "-test-automation=/work/tmp/evidence_desktop_zp31b74w/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_desktop_zp31b74w/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 3536, "platform": "xcb"}
+{"utc": "2026-10-10T17:39:38.912744+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:38.914828+00:00", "request": {"cmd": "get_property", "objectName": "appWindow", "prop": "width"}, "response": {"value": 1180}}
+{"utc": "2026-10-10T17:39:38.916552+00:00", "request": {"cmd": "get_property", "objectName": "appWindow", "prop": "height"}, "response": {"value": 1000}}
+{"utc": "2026-10-10T17:39:38.917749+00:00", "request": {"cmd": "get_property", "objectName": "appWindow", "prop": "x"}, "response": {"value": 145}}
+{"utc": "2026-10-10T17:39:38.918939+00:00", "request": {"cmd": "get_property", "objectName": "appWindow", "prop": "y"}, "response": {"value": 65}}
+{"utc": "2026-10-10T17:39:39.419917+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:39.429919+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_about"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:39.434565+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:39.436550+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:39:39.438060+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:39.443217+00:00", "request": {"cmd": "click", "objectName": "aboutDeveloperRow"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:39.446124+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:39.447896+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:39:39.449295+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:39.450769+00:00", "request": {"cmd": "get_text", "objectName": "developerDbcacheField"}, "response": {"text": "6"}}
+{"utc": "2026-10-10T17:39:39.452188+00:00", "request": {"cmd": "get_text", "objectName": "developerScriptThreadsField"}, "response": {"text": "2"}}
+{"utc": "2026-10-10T17:39:40.105443+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_desktop_zp31b74w/gui_node", "-test-automation=/work/tmp/evidence_desktop_zp31b74w/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_desktop_zp31b74w/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten", "-dbcache=256"], "pid": 3579, "platform": "xcb"}
+{"utc": "2026-10-10T17:39:40.859808+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:40.869681+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:40.880605+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_about"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:40.885502+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:40.887985+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:39:40.889789+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:40.895372+00:00", "request": {"cmd": "click", "objectName": "aboutDeveloperRow"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:40.899036+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:40.901120+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:39:40.902666+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:40.904172+00:00", "request": {"cmd": "get_text", "objectName": "developerDbcacheField"}, "response": {"text": "256"}}
+{"utc": "2026-10-10T17:39:40.905667+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:41.565352+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_desktop_zp31b74w/gui_node", "-test-automation=/work/tmp/evidence_desktop_zp31b74w/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_desktop_zp31b74w/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 3622, "platform": "xcb"}
+{"utc": "2026-10-10T17:39:42.320430+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:42.330297+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:42.340476+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_about"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:42.346113+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:42.348310+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:39:42.350037+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:42.355467+00:00", "request": {"cmd": "click", "objectName": "aboutDeveloperRow"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:42.358824+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:42.360799+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:39:42.362323+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:42.363831+00:00", "request": {"cmd": "get_text", "objectName": "developerDbcacheField"}, "response": {"text": "6"}}
+{"utc": "2026-10-10T17:39:42.365343+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:39:42.581163+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/evidence_desktop_zp31b74w/gui_node", "-test-automation=/work/tmp/evidence_desktop_zp31b74w/test_bridge.sock", "-test-settings-dir=/work/tmp/evidence_desktop_zp31b74w/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 3665, "platform": "xcb"}
+{"utc": "2026-10-10T17:39:43.335980+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:43.347422+00:00", "request": {"cmd": "click", "objectName": "desktopWalletSettingsTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:43.358438+00:00", "request": {"cmd": "click", "objectName": "settingsSidebar_about"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:43.363149+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:43.365119+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:39:43.366570+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:43.371922+00:00", "request": {"cmd": "click", "objectName": "aboutDeveloperRow"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:39:43.375502+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:43.377672+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:39:43.379059+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:39:43.380490+00:00", "request": {"cmd": "get_text", "objectName": "developerDbcacheField"}, "response": {"text": "384"}}
+{"utc": "2026-10-10T17:39:43.381807+00:00", "request": {"cmd": "get_property", "objectName": "developerDbcacheField", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:39:44.240581+00:00", "application_pid": 3467, "exit_code": 0}
+{"utc": "2026-10-10T17:39:44.241182+00:00", "application_pid": 3536, "exit_code": 0}
+{"utc": "2026-10-10T17:39:44.241277+00:00", "application_pid": 3579, "exit_code": 0}
+{"utc": "2026-10-10T17:39:44.241354+00:00", "application_pid": 3622, "exit_code": 0}
+{"utc": "2026-10-10T17:39:44.241426+00:00", "application_pid": 3665, "exit_code": 0}

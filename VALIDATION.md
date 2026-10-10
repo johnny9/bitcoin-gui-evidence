@@ -1,5 +1,18 @@
 # Static site validation
 
+## October 10, 2026 — QML acceptance evidence and missing functional tests
+
+Validated the changes based on site revision `6e26efe2602af785a01f4eb452072edc7b15ba0d`; [tested file hashes](validation/tested-files.json) identify the resulting source. The application remains GUI-QML `a91f4b4774f25de061fe1a7c132a91ddde117fca` with the original binary hash.
+
+- **35 of the 61 QML proof gaps closed**, with 37 new selected screenshots and 50 scoped checks: 49 passed, one failed. Eleven unchanged functional scripts were rerun and six new scenarios were added; 16 pass and one reproduces the cache-range defect. The latest cumulative record is 39 passing scripts and one failing script; the whole upstream suite was not rerun.
+- The database-cache editor rejects a valid 768 MiB allocation, leaving `7` after native keyboard entry. Core starts with the same allocation. F23.S01 is now partial and unaccepted; the failure log, captures, pinned modules and regression are linked. No application fix is included.
+- **125 criteria default to Accepted**, 25 parity criteria need fuller proof, and 53 need implementation (15 partial, 38 absent). The [test plan](data/collections/20261010-qml/missing-functional-tests.md) identifies the remaining 26 items in 19 test/environment workstreams, including the reproduced defect. Existing explicit review choices and the catalog identity are preserved.
+- **52 browser checks passed** under the GitHub Pages project path with external networking disabled. All 218 selected captures decode at their recorded dimensions. Checks cover current counts, acceptance defaults, the failed criterion, criterion-specific evidence and test-plan links, filters, review storage/import/export, and mobile layouts. Desktop catalog, the cache criterion, the mobile evidence report and selected new application captures were visually inspected.
+- Static build, evidence integrity, Python parsing, JavaScript syntax and source/prose whitespace checks passed. Raw logs retain their original whitespace. Original snapshot artifacts remain unchanged; collection manifests verify the new screenshots, scripts, logs and reports. The final six new scenarios were rerun after collector corrections; early diagnostic traces remain explicitly marked as historical.
+- Required native lint, clang-tidy and ASan commands returned 127 because their entry scripts are absent from both the site repository and the pinned QML checkout. The original binary has IPC disabled and is not a sanitizer build. The reset-onboarding harness terminates its second pre-initialization process with SIGTERM (-15); other recorded application exits are 0. No native CI, sanitizer or IPC-enabled lifecycle pass is claimed. See the [application validation record](data/collections/20261010-qml/validation.json).
+
+[Browser outcomes](validation/browser-results.json) · [Integrity results](validation/evidence-integrity.json) · [Evidence report](data/collections/20261010-qml/report.md). Local browser screenshots are in `.validation/qml-evidence/`.
+
 ## October 10, 2026 — remaining implementation and acceptance defaults
 
 Validated the acceptance changes based on revision `53be2676c57cec67a8e809d2805873ab1ef38250`; [tested file hashes](validation/tested-files.json) identify the resulting source.

@@ -1,0 +1,22 @@
+[
+  {
+    "path": "media/qml/qml_evidence_migration/001-migrated-wallet-preserved-funds.png",
+    "caption": "migrated-wallet-preserved-funds",
+    "utc": "2026-10-10T17:40:06.548775+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "28651459e7d63f378482158ace769cd505be543f6fea375c3fab961052ee271f",
+    "test": "qml_evidence_migration",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_evidence_migration/002-migrated-watch-only-funds.png",
+    "caption": "migrated-watch-only-funds",
+    "utc": "2026-10-10T17:40:07.688750+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "0adf992296427bc9382f16a430f432ebb558ee019a3399cc93e5706af315f85a",
+    "test": "qml_evidence_migration",
+    "kind": "application-screenshot"
+  }
+]

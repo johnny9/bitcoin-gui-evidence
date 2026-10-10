@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/work/qml-acceptance-20261010/scripts/qml_capture_test.py", line 123, in <module>
+    runpy.run_path(str(test_path), run_name='__main__')
+  File "<frozen runpy>", line 286, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/work/qml-acceptance-20261010/scripts/qml_evidence_migration.py", line 38, in <module>
+    check('migration-backup','F04.S02','GUI migration automatically preserves a nonempty original wallet backup.',len(backups)==1 and backups[0].stat().st_size>0)
+  File "/work/qml-acceptance-20261010/scripts/evidence_helpers.py", line 18, in check
+    assert actual == expected, item
+           ^^^^^^^^^^^^^^^^^^
+AssertionError: {'id': 'migration-backup', 'features': ['F04.S02'], 'description': 'GUI migration automatically preserves a nonempty original wallet backup.', 'actual': False, 'expected': True, 'status': 'failed'}

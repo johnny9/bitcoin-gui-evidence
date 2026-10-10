@@ -1,0 +1,162 @@
+[
+  {
+    "path": "media/qml/qml_test_uri_import/001-click-sendtabbutton.png",
+    "caption": "click-sendTabButton",
+    "utc": "2026-10-10T17:29:09.913946+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "278ea4d6a9513791b437589fc6cc4d8aa9476995a60e0ec1b202723b19091fb4",
+    "test": "qml_test_uri_import",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_uri_import/002-wait-for-page-sendpage.png",
+    "caption": "wait_for_page-sendPage",
+    "utc": "2026-10-10T17:29:10.390902+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "74676c85da2617d7eb1dee237a92cb3835da03303f477438ca9b13f27c8ac9ac",
+    "test": "qml_test_uri_import",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_uri_import/003-click-clipboarduripastebutton.png",
+    "caption": "click-clipboardUriPasteButton",
+    "utc": "2026-10-10T17:29:10.875547+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "d7e0f4dc7036279bbc438c1a493656653ff2176841bc3f6f4a39788947f0fd39",
+    "test": "qml_test_uri_import",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_uri_import/004-click-sendoptionsbutton.png",
+    "caption": "click-sendOptionsButton",
+    "utc": "2026-10-10T17:29:11.357535+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "bc12dea6fd7a8f3a761f0252c66510d25cdcebde6f9b31581e2fba0410158f9a",
+    "test": "qml_test_uri_import",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_uri_import/005-click-sendoptionsopenpaymentrequestbutton.png",
+    "caption": "click-sendOptionsOpenPaymentRequestButton",
+    "utc": "2026-10-10T17:29:11.835350+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "b72e08cdca706b7fb360518ec5c77bca84455ca9e3ab817a0938676903979eaf",
+    "test": "qml_test_uri_import",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_uri_import/006-click-senduriimportapplybutton.png",
+    "caption": "click-sendUriImportApplyButton",
+    "utc": "2026-10-10T17:29:12.317631+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "709005f380f9d28d06ad8b27128be5749003ea4bbb4036857ccdbbf288f9284a",
+    "test": "qml_test_uri_import",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_uri_import/007-click-sendoptionsbutton.png",
+    "caption": "click-sendOptionsButton",
+    "utc": "2026-10-10T17:29:12.799189+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "a9753b32c6cb03e0993680122c064a21230204e80e9dd61bcc923460a271f2a9",
+    "test": "qml_test_uri_import",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_uri_import/008-click-sendoptionsopenpaymentrequestbutton.png",
+    "caption": "click-sendOptionsOpenPaymentRequestButton",
+    "utc": "2026-10-10T17:29:13.280734+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "9c54063b928a4f4b3e6101196286df2a6b48d9df2c5c0e57aaf9195d0620e34f",
+    "test": "qml_test_uri_import",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_uri_import/009-click-senduriimportapplybutton.png",
+    "caption": "click-sendUriImportApplyButton",
+    "utc": "2026-10-10T17:29:13.762103+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "8ff046134ca123ce683ef94c1863cd3391930069e75642151f590aa08b190d0c",
+    "test": "qml_test_uri_import",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_uri_import/010-click-sendapplypaymentrequestfilepathbutton.png",
+    "caption": "click-sendApplyPaymentRequestFilePathButton",
+    "utc": "2026-10-10T17:29:14.244303+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "be9bbadce953c11dc9f52ef3969c4d6b38a6161e1deb0de1810ce7614ce053b3",
+    "test": "qml_test_uri_import",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_uri_import/011-click-sendapplydropuributton.png",
+    "caption": "click-sendApplyDropUriButton",
+    "utc": "2026-10-10T17:29:14.726087+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "455bad4288acbc59ebb34b079fa71a97b6b70fdeb800ce269f5c60d16fd0056a",
+    "test": "qml_test_uri_import",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_uri_import/012-click-sendapplydropfileurlbutton.png",
+    "caption": "click-sendApplyDropFileUrlButton",
+    "utc": "2026-10-10T17:29:15.209225+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "fcd48402f67beb7085f826167b2a5e0aef365f03b81ddf343720511a66438644",
+    "test": "qml_test_uri_import",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_uri_import/013-click-sendamountinput.png",
+    "caption": "click-sendAmountInput",
+    "utc": "2026-10-10T17:29:15.701582+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "9195be52b537d1f654201683ed7c7a89d9e32c03f47ee5a63c19731570078eda",
+    "test": "qml_test_uri_import",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_uri_import/014-click-sendnoteinput.png",
+    "caption": "click-sendNoteInput",
+    "utc": "2026-10-10T17:29:16.189326+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "b7898ab9ec4ec3bc14e993bef387d7bdd64108a4456f984c1f5fe6369f7a4a98",
+    "test": "qml_test_uri_import",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_uri_import/015-click-sendaddressinput.png",
+    "caption": "click-sendAddressInput",
+    "utc": "2026-10-10T17:29:16.677713+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "eb91e4cf7f3041cc03898d5b4fdedc64c8abc665c7f9e96e15126d532df6981a",
+    "test": "qml_test_uri_import",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_uri_import/016-click-sendnoteinput.png",
+    "caption": "click-sendNoteInput",
+    "utc": "2026-10-10T17:29:17.167305+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "28bdd6ec5b62ee68da9923797cf0f850a314922e97174b3c5b9651bc5549855a",
+    "test": "qml_test_uri_import",
+    "kind": "application-screenshot"
+  }
+]

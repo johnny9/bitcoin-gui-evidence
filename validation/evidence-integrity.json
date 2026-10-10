@@ -4,10 +4,10 @@
   "criteria": 203,
   "originalCapturesVerified": 116,
   "rerunCapturesVerified": 44,
-  "collectionCapturesVerified": 61,
+  "collectionCapturesVerified": 98,
   "widgetsCriteriaWithoutCaptures": 11,
-  "localLinkTargets": 190,
-  "unresolvedFailures": 0,
+  "localLinkTargets": 259,
+  "unresolvedFailures": 1,
   "catalogId": "b4b1026b74ad8bf0a1628c9889b82193d33d210c3aa0170e94783f371fe15c0b",
   "groupParity": {
     "parity": 19,
@@ -15,8 +15,8 @@
     "not-implemented": 3
   },
   "subfeatureParity": {
-    "parity": 151,
+    "parity": 150,
     "not-implemented": 38,
-    "partial": 14
+    "partial": 15
   }
 }

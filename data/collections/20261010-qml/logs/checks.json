@@ -1,0 +1,789 @@
+[
+  {
+    "id": "core-accepts-768",
+    "features": [
+      "F23.S01"
+    ],
+    "description": "Core starts successfully with a 768 MiB total cache allocation.",
+    "actual": "768",
+    "expected": "768",
+    "status": "passed",
+    "test": "qml_evidence_cache_limit",
+    "script": "scripts/qml_evidence_cache_limit.py",
+    "log": "logs/qml_evidence_cache_limit.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "gui-accepts-768",
+    "features": [
+      "F23.S01"
+    ],
+    "description": "The GUI must accept the same valid 768 MiB value as Core.",
+    "actual": "7",
+    "expected": "768",
+    "status": "failed",
+    "test": "qml_evidence_cache_limit",
+    "script": "scripts/qml_evidence_cache_limit.py",
+    "log": "logs/qml_evidence_cache_limit.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "shortcut-ctrl+2",
+    "features": [
+      "F28.S04",
+      "F28.S05"
+    ],
+    "description": "Keyboard shortcut reaches sendPage",
+    "actual": true,
+    "expected": true,
+    "status": "passed",
+    "test": "qml_evidence_desktop",
+    "script": "scripts/qml_evidence_desktop.py",
+    "log": "logs/qml_evidence_desktop.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "shortcut-ctrl+3",
+    "features": [
+      "F28.S04",
+      "F28.S05"
+    ],
+    "description": "Keyboard shortcut reaches requestPaymentPage",
+    "actual": true,
+    "expected": true,
+    "status": "passed",
+    "test": "qml_evidence_desktop",
+    "script": "scripts/qml_evidence_desktop.py",
+    "log": "logs/qml_evidence_desktop.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "shortcut-ctrl+1",
+    "features": [
+      "F28.S04",
+      "F28.S05"
+    ],
+    "description": "Keyboard shortcut reaches activityPage",
+    "actual": true,
+    "expected": true,
+    "status": "passed",
+    "test": "qml_evidence_desktop",
+    "script": "scripts/qml_evidence_desktop.py",
+    "log": "logs/qml_evidence_desktop.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "fee-unavailable",
+    "features": [
+      "F11.S04"
+    ],
+    "description": "An empty payment has no fee estimate and explains the missing recipient.",
+    "actual": "\u2014",
+    "expected": "\u2014",
+    "status": "passed",
+    "test": "qml_evidence_desktop",
+    "script": "scripts/qml_evidence_desktop.py",
+    "log": "logs/qml_evidence_desktop.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "enter-payment-address",
+    "features": [
+      "F09.S02"
+    ],
+    "description": "Entering a recipient preserves the complete address.",
+    "actual": "bcrt1q2u0sjgpjcw8xn3vuytw7gwxgt8apq3g2c39c7f",
+    "expected": "bcrt1q2u0sjgpjcw8xn3vuytw7gwxgt8apq3g2c39c7f",
+    "status": "passed",
+    "test": "qml_evidence_desktop",
+    "script": "scripts/qml_evidence_desktop.py",
+    "log": "logs/qml_evidence_desktop.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "open-address-records",
+    "features": [
+      "F28.S03"
+    ],
+    "description": "Wallet settings opens the address records.",
+    "actual": true,
+    "expected": true,
+    "status": "passed",
+    "test": "qml_evidence_desktop",
+    "script": "scripts/qml_evidence_desktop.py",
+    "log": "logs/qml_evidence_desktop.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "wallet-diagnostics",
+    "features": [
+      "F26.S04",
+      "F28.S03"
+    ],
+    "description": "Node diagnostics execute while the same wallet remains loaded.",
+    "actual": [
+      "Review_wallet"
+    ],
+    "expected": [
+      "Review_wallet"
+    ],
+    "status": "passed",
+    "test": "qml_evidence_desktop",
+    "script": "scripts/qml_evidence_desktop.py",
+    "log": "logs/qml_evidence_desktop.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "contextual-guidance",
+    "features": [
+      "F29.S06"
+    ],
+    "description": "The console explains history navigation and how to discover available commands.",
+    "actual": true,
+    "expected": true,
+    "status": "passed",
+    "test": "qml_evidence_desktop",
+    "script": "scripts/qml_evidence_desktop.py",
+    "log": "logs/qml_evidence_desktop.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "pause-network",
+    "features": [
+      "F21.S01"
+    ],
+    "description": "Pausing from the node view disables Core peer networking.",
+    "actual": false,
+    "expected": false,
+    "status": "passed",
+    "test": "qml_evidence_desktop",
+    "script": "scripts/qml_evidence_desktop.py",
+    "log": "logs/qml_evidence_desktop.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "resume-network",
+    "features": [
+      "F21.S01"
+    ],
+    "description": "Resuming from the node view enables Core peer networking.",
+    "actual": true,
+    "expected": true,
+    "status": "passed",
+    "test": "qml_evidence_desktop",
+    "script": "scripts/qml_evidence_desktop.py",
+    "log": "logs/qml_evidence_desktop.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "rpc-server",
+    "features": [
+      "F23.S02"
+    ],
+    "description": "The displayed RPC server is enabled and serves a real external client.",
+    "actual": true,
+    "expected": true,
+    "status": "passed",
+    "test": "qml_evidence_desktop",
+    "script": "scripts/qml_evidence_desktop.py",
+    "log": "logs/qml_evidence_desktop.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "resource-preferences",
+    "features": [
+      "F23.S01"
+    ],
+    "description": "GUI edits persist cache and script thread allocations.",
+    "actual": [
+      6,
+      2
+    ],
+    "expected": [
+      6,
+      2
+    ],
+    "status": "passed",
+    "test": "qml_evidence_desktop",
+    "script": "scripts/qml_evidence_desktop.py",
+    "log": "logs/qml_evidence_desktop.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "window-placement-restored",
+    "features": [
+      "F26.S02"
+    ],
+    "description": "The real window position and size survive an application restart.",
+    "actual": [
+      1180,
+      1000,
+      145,
+      65
+    ],
+    "expected": [
+      1180,
+      1000,
+      145,
+      65
+    ],
+    "status": "passed",
+    "test": "qml_evidence_desktop",
+    "script": "scripts/qml_evidence_desktop.py",
+    "log": "logs/qml_evidence_desktop.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "resources-restored",
+    "features": [
+      "F23.S01"
+    ],
+    "description": "Resource allocations remain visible after restart.",
+    "actual": [
+      "6",
+      "2"
+    ],
+    "expected": [
+      "6",
+      "2"
+    ],
+    "status": "passed",
+    "test": "qml_evidence_desktop",
+    "script": "scripts/qml_evidence_desktop.py",
+    "log": "logs/qml_evidence_desktop.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "command-line-precedence",
+    "features": [
+      "F23.S11"
+    ],
+    "description": "Command-line settings override configuration and GUI settings and disable editing.",
+    "actual": [
+      "256",
+      false
+    ],
+    "expected": [
+      "256",
+      false
+    ],
+    "status": "passed",
+    "test": "qml_evidence_desktop",
+    "script": "scripts/qml_evidence_desktop.py",
+    "log": "logs/qml_evidence_desktop.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "gui-over-config",
+    "features": [
+      "F23.S11"
+    ],
+    "description": "A persisted GUI override takes precedence over the configuration file.",
+    "actual": [
+      "6",
+      true
+    ],
+    "expected": [
+      "6",
+      true
+    ],
+    "status": "passed",
+    "test": "qml_evidence_desktop",
+    "script": "scripts/qml_evidence_desktop.py",
+    "log": "logs/qml_evidence_desktop.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "configuration-precedence",
+    "features": [
+      "F23.S10",
+      "F23.S11"
+    ],
+    "description": "The configuration-file value is shown when no command-line or GUI override is present.",
+    "actual": [
+      "384",
+      true
+    ],
+    "expected": [
+      "384",
+      true
+    ],
+    "status": "passed",
+    "test": "qml_evidence_desktop",
+    "script": "scripts/qml_evidence_desktop.py",
+    "log": "logs/qml_evidence_desktop.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "migration-backup",
+    "features": [
+      "F04.S02"
+    ],
+    "description": "GUI migration automatically preserves a nonempty original wallet backup.",
+    "actual": true,
+    "expected": true,
+    "status": "passed",
+    "test": "qml_evidence_migration",
+    "script": "scripts/qml_evidence_migration.py",
+    "log": "logs/qml_evidence_migration.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "migration-label",
+    "features": [
+      "F04.S03"
+    ],
+    "description": "The receiving address and its label survive migration.",
+    "actual": [
+      "Preserved label"
+    ],
+    "expected": [
+      "Preserved label"
+    ],
+    "status": "passed",
+    "test": "qml_evidence_migration",
+    "script": "scripts/qml_evidence_migration.py",
+    "log": "logs/qml_evidence_migration.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "migration-funds",
+    "features": [
+      "F04.S03"
+    ],
+    "description": "The migrated spending wallet retains its confirmed balance.",
+    "actual": 199.2499859,
+    "expected": 199.2499859,
+    "status": "passed",
+    "test": "qml_evidence_migration",
+    "script": "scripts/qml_evidence_migration.py",
+    "log": "logs/qml_evidence_migration.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "migration-history",
+    "features": [
+      "F04.S03"
+    ],
+    "description": "The migrated wallet retains the payment transaction.",
+    "actual": "1bfc53a6fe28c9c182f738929c2cd8b302572b7b9a0d5eeae7f12d021e3d6006",
+    "expected": "1bfc53a6fe28c9c182f738929c2cd8b302572b7b9a0d5eeae7f12d021e3d6006",
+    "status": "passed",
+    "test": "qml_evidence_migration",
+    "script": "scripts/qml_evidence_migration.py",
+    "log": "logs/qml_evidence_migration.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "migration-auto-open",
+    "features": [
+      "F04.S04"
+    ],
+    "description": "The migrated wallet is immediately available.",
+    "actual": "Legacy_savings",
+    "expected": "Legacy_savings",
+    "status": "passed",
+    "test": "qml_evidence_migration",
+    "script": "scripts/qml_evidence_migration.py",
+    "log": "logs/qml_evidence_migration.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "migration-watch-label",
+    "features": [
+      "F04.S03"
+    ],
+    "description": "Watch-only address metadata survives in the migrated watch-only wallet.",
+    "actual": [
+      "Preserved watch address"
+    ],
+    "expected": [
+      "Preserved watch address"
+    ],
+    "status": "passed",
+    "test": "qml_evidence_migration",
+    "script": "scripts/qml_evidence_migration.py",
+    "log": "logs/qml_evidence_migration.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "migration-watch-funds",
+    "features": [
+      "F04.S03"
+    ],
+    "description": "The migrated watch-only wallet retains its received funds.",
+    "actual": 0.75,
+    "expected": 0.75,
+    "status": "passed",
+    "test": "qml_evidence_migration",
+    "script": "scripts/qml_evidence_migration.py",
+    "log": "logs/qml_evidence_migration.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "appearance-light",
+    "features": [
+      "F31.S03"
+    ],
+    "description": "The light appearance can be selected from the GUI.",
+    "actual": 0,
+    "expected": 0,
+    "status": "passed",
+    "test": "qml_evidence_shell",
+    "script": "scripts/qml_evidence_shell.py",
+    "log": "logs/qml_evidence_shell.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "appearance-dark",
+    "features": [
+      "F31.S03"
+    ],
+    "description": "The dark appearance can be selected from the GUI.",
+    "actual": 1,
+    "expected": 1,
+    "status": "passed",
+    "test": "qml_evidence_shell",
+    "script": "scripts/qml_evidence_shell.py",
+    "log": "logs/qml_evidence_shell.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "window-minimize",
+    "features": [
+      "F26.S01"
+    ],
+    "description": "Minimizing the GUI leaves the node responding.",
+    "actual": 0,
+    "expected": 0,
+    "status": "passed",
+    "test": "qml_evidence_shell",
+    "script": "scripts/qml_evidence_shell.py",
+    "log": "logs/qml_evidence_shell.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "window-restore",
+    "features": [
+      "F26.S01"
+    ],
+    "description": "The desktop restores the minimized application window.",
+    "actual": true,
+    "expected": true,
+    "status": "passed",
+    "test": "qml_evidence_shell",
+    "script": "scripts/qml_evidence_shell.py",
+    "log": "logs/qml_evidence_shell.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "close-all-wallets",
+    "features": [
+      "F02.S04"
+    ],
+    "description": "Repeating the wallet close action closes every loaded wallet while the node continues.",
+    "actual": [],
+    "expected": [],
+    "status": "passed",
+    "test": "qml_evidence_shell",
+    "script": "scripts/qml_evidence_shell.py",
+    "log": "logs/qml_evidence_shell.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "node-after-close",
+    "features": [
+      "F02.S04"
+    ],
+    "description": "The node remains available after closing all wallets.",
+    "actual": 0,
+    "expected": 0,
+    "status": "passed",
+    "test": "qml_evidence_shell",
+    "script": "scripts/qml_evidence_shell.py",
+    "log": "logs/qml_evidence_shell.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "real-sync-in-progress",
+    "features": [
+      "F20.S05",
+      "F29.S02",
+      "F30.S06"
+    ],
+    "description": "The GUI shows synchronization while its real node remains behind its peer.",
+    "actual": true,
+    "expected": true,
+    "status": "passed",
+    "test": "qml_evidence_sync",
+    "script": "scripts/qml_evidence_sync.py",
+    "log": "logs/qml_evidence_sync.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "wallet-access-during-sync",
+    "features": [
+      "F30.S07"
+    ],
+    "description": "The wallet remains navigable while the connected node is still syncing.",
+    "actual": true,
+    "expected": true,
+    "status": "passed",
+    "test": "qml_evidence_sync",
+    "script": "scripts/qml_evidence_sync.py",
+    "log": "logs/qml_evidence_sync.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "download-and-validate",
+    "features": [
+      "F20.S04",
+      "F20.S05",
+      "F29.S02"
+    ],
+    "description": "The GUI node downloads and validates the same chain tip as its peer.",
+    "actual": "0bfda50e462cf9fdb673370e62ccdc3b283f35c6a84f4e173d13271a43796eb8",
+    "expected": "0bfda50e462cf9fdb673370e62ccdc3b283f35c6a84f4e173d13271a43796eb8",
+    "status": "passed",
+    "test": "qml_evidence_sync",
+    "script": "scripts/qml_evidence_sync.py",
+    "log": "logs/qml_evidence_sync.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "rescan-fixture",
+    "features": [
+      "F34.S01"
+    ],
+    "description": "Removing historical wallet records leaves the monitoring wallet empty before rescan.",
+    "actual": 0.0,
+    "expected": 0,
+    "status": "passed",
+    "test": "qml_evidence_watchonly",
+    "script": "scripts/qml_evidence_watchonly.py",
+    "log": "logs/qml_evidence_watchonly.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "console-rescan",
+    "features": [
+      "F34.S01"
+    ],
+    "description": "A rescan initiated in the GUI recovers the historical wallet funds.",
+    "actual": 150.0,
+    "expected": 150,
+    "status": "passed",
+    "test": "qml_evidence_watchonly",
+    "script": "scripts/qml_evidence_watchonly.py",
+    "log": "logs/qml_evidence_watchonly.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "watch-only-export",
+    "features": [
+      "F09.S08",
+      "F13.S05"
+    ],
+    "description": "The GUI saves an unsigned PSBT with the requested recipient and amount.",
+    "actual": [
+      0.125
+    ],
+    "expected": [
+      0.125
+    ],
+    "status": "passed",
+    "test": "qml_evidence_watchonly",
+    "script": "scripts/qml_evidence_watchonly.py",
+    "log": "logs/qml_evidence_watchonly.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "watch-only-no-keys",
+    "features": [
+      "F09.S08"
+    ],
+    "description": "Preparing the payment does not introduce local spending keys.",
+    "actual": false,
+    "expected": false,
+    "status": "passed",
+    "test": "qml_evidence_watchonly",
+    "script": "scripts/qml_evidence_watchonly.py",
+    "log": "logs/qml_evidence_watchonly.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "watch-only-unsigned",
+    "features": [
+      "F09.S08",
+      "F13.S05"
+    ],
+    "description": "The export still requires external signatures.",
+    "actual": false,
+    "expected": false,
+    "status": "passed",
+    "test": "qml_evidence_watchonly",
+    "script": "scripts/qml_evidence_watchonly.py",
+    "log": "logs/qml_evidence_watchonly.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "external-handoff",
+    "features": [
+      "F09.S08",
+      "F13.S05"
+    ],
+    "description": "The separate signing wallet can finish the exported transaction.",
+    "actual": true,
+    "expected": true,
+    "status": "passed",
+    "test": "qml_evidence_watchonly",
+    "script": "scripts/qml_evidence_watchonly.py",
+    "log": "logs/qml_evidence_watchonly.log",
+    "kind": "live-outcome-assertion"
+  },
+  {
+    "id": "existing-f03-s03",
+    "features": [
+      "F03.S03"
+    ],
+    "description": "A backup is restored with its filename-derived wallet name and the resulting wallet is opened. Naming the file is the supported naming workflow.",
+    "actual": 0,
+    "expected": 0,
+    "status": "passed",
+    "test": "qml_test_wallet_restore",
+    "script": "scripts/qml_test_wallet_restore.py",
+    "log": "logs/qml_test_wallet_restore.log",
+    "kind": "existing-functional-assertion",
+    "assertion": "importWalletSuccessOverviewButton",
+    "line": 233
+  },
+  {
+    "id": "existing-f06-s01",
+    "features": [
+      "F06.S01"
+    ],
+    "description": "The GUI-created encrypted wallet is locked, remains locked after restart, and requires its passphrase for spending.",
+    "actual": 0,
+    "expected": 0,
+    "status": "passed",
+    "test": "qml_test_password_wallet",
+    "script": "scripts/qml_test_password_wallet.py",
+    "log": "logs/qml_test_password_wallet.log",
+    "kind": "existing-functional-assertion",
+    "assertion": "assert_wallet_locked(harness.gui_rpc_port, wallet_name)",
+    "line": 356
+  },
+  {
+    "id": "existing-f07-s02",
+    "features": [
+      "F07.S02"
+    ],
+    "description": "Activity shows the payment request and mined transaction as two distinct records.",
+    "actual": 0,
+    "expected": 0,
+    "status": "passed",
+    "test": "qml_test_activity_filter_export",
+    "script": "scripts/qml_test_activity_filter_export.py",
+    "log": "logs/qml_test_activity_filter_export.log",
+    "kind": "existing-functional-assertion",
+    "assertion": "\"activityFilterProxyModel\", \"count\", 2",
+    "line": 183
+  },
+  {
+    "id": "existing-f07-s03",
+    "features": [
+      "F07.S03"
+    ],
+    "description": "A transaction is opened from the unified activity history and its displayed amount is checked against the selected record.",
+    "actual": 0,
+    "expected": 0,
+    "status": "passed",
+    "test": "qml_test_activity_filter_export",
+    "script": "scripts/qml_test_activity_filter_export.py",
+    "log": "logs/qml_test_activity_filter_export.log",
+    "kind": "existing-functional-assertion",
+    "assertion": "actual_amount = gui.get_property(\"activityDetailsPage\", \"amount\")",
+    "line": 388
+  },
+  {
+    "id": "existing-f07-s04",
+    "features": [
+      "F07.S04"
+    ],
+    "description": "This run displays \u201cSyncing wallet activity\u2026\u201d while wallet history is not yet populated. The functional test checks the empty/loading-state guidance.",
+    "actual": 0,
+    "expected": 0,
+    "status": "passed",
+    "test": "qml_test_activity_filter_export",
+    "script": "scripts/qml_test_activity_filter_export.py",
+    "log": "logs/qml_test_activity_filter_export.log",
+    "kind": "existing-functional-assertion",
+    "assertion": "source_empty_title in (",
+    "line": 157
+  },
+  {
+    "id": "existing-f08-s06",
+    "features": [
+      "F08.S06"
+    ],
+    "description": "QR sharing is demonstrated through the supported copy/save actions. Saving produces a PNG file whose signature is checked. Drag-and-drop export remains absent.",
+    "actual": 0,
+    "expected": 0,
+    "status": "passed",
+    "test": "qml_test_receive",
+    "script": "scripts/qml_test_receive.py",
+    "log": "logs/qml_test_receive.log",
+    "kind": "existing-functional-assertion",
+    "assertion": "assert image.read(8) == b\"\\x89PNG\\r\\n\\x1a\\n\"",
+    "line": 259
+  },
+  {
+    "id": "existing-f10-s03",
+    "features": [
+      "F10.S03",
+      "F31.S01"
+    ],
+    "description": "The running application accepts an explicit payment-request import and populates the payment. This proves the accepted transfer outcome; automatic OS URI delivery remains absent.",
+    "actual": 0,
+    "expected": 0,
+    "status": "passed",
+    "test": "qml_test_uri_import",
+    "script": "scripts/qml_test_uri_import.py",
+    "log": "logs/qml_test_uri_import.log",
+    "kind": "existing-functional-assertion",
+    "assertion": "sendUriImportApplyButton",
+    "line": 99
+  },
+  {
+    "id": "existing-f16-s03",
+    "features": [
+      "F16.S03"
+    ],
+    "description": "Address and label searches plus date/type/amount filters locate activity. Configurable sorting remains absent; the accepted outcome is finding transactions.",
+    "actual": 0,
+    "expected": 0,
+    "status": "passed",
+    "test": "qml_test_activity_filter_export",
+    "script": "scripts/qml_test_activity_filter_export.py",
+    "log": "logs/qml_test_activity_filter_export.log",
+    "kind": "existing-functional-assertion",
+    "assertion": "search by request label applied",
+    "line": 229
+  },
+  {
+    "id": "existing-f25-s04",
+    "features": [
+      "F25.S04"
+    ],
+    "description": "The live QML error dialog displays the supplied critical error and the expected acknowledgement button without desktop notifications. The message is injected through the test bridge; no database corruption is induced.",
+    "actual": 0,
+    "expected": 0,
+    "status": "passed",
+    "test": "qml_test_node_runtime_dialogs",
+    "script": "scripts/qml_test_node_runtime_dialogs.py",
+    "log": "logs/qml_test_node_runtime_dialogs.log",
+    "kind": "existing-functional-assertion",
+    "assertion": "gui.wait_for_property(\"nodeRuntimeDialogMessage\", \"text\", case[\"message\"]",
+    "line": 117
+  }
+]

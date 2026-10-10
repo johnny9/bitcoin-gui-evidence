@@ -1,0 +1,323 @@
+{
+  "applicationRevision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+  "bitcoinRevision": "dc282ff31d1cc97507530a541d9cec8a8f6a6ef4",
+  "applicationSha256": "a8215c7e45242fdf0e740339733696ec832e362f8306bfbe3bac95dd6bb4fb4c",
+  "fixtureBitcoindSha256": "0c2667db4e83a12f89e222aa906bbf28b4d45616f7599e83138253ee52046352",
+  "testedSiteBaseRevision": "6e26efe2602af785a01f4eb452072edc7b15ba0d",
+  "environment": "Linux X11/Xvfb/Openbox, Qt 6.8.3, software renderer, isolated regtest",
+  "binaryChanged": false,
+  "applicationExits": [
+    {
+      "test": "qml_evidence_cache_limit",
+      "utc": "2026-10-10T17:41:01.947846+00:00",
+      "application_pid": 4026,
+      "exit_code": 0
+    },
+    {
+      "test": "qml_evidence_cache_limit",
+      "utc": "2026-10-10T17:41:01.948476+00:00",
+      "application_pid": 4083,
+      "exit_code": 0
+    },
+    {
+      "test": "qml_evidence_desktop",
+      "utc": "2026-10-10T17:39:44.240581+00:00",
+      "application_pid": 3467,
+      "exit_code": 0
+    },
+    {
+      "test": "qml_evidence_desktop",
+      "utc": "2026-10-10T17:39:44.241182+00:00",
+      "application_pid": 3536,
+      "exit_code": 0
+    },
+    {
+      "test": "qml_evidence_desktop",
+      "utc": "2026-10-10T17:39:44.241277+00:00",
+      "application_pid": 3579,
+      "exit_code": 0
+    },
+    {
+      "test": "qml_evidence_desktop",
+      "utc": "2026-10-10T17:39:44.241354+00:00",
+      "application_pid": 3622,
+      "exit_code": 0
+    },
+    {
+      "test": "qml_evidence_desktop",
+      "utc": "2026-10-10T17:39:44.241426+00:00",
+      "application_pid": 3665,
+      "exit_code": 0
+    },
+    {
+      "test": "qml_evidence_migration",
+      "utc": "2026-10-10T17:40:07.970713+00:00",
+      "application_pid": 3863,
+      "exit_code": 0
+    },
+    {
+      "test": "qml_evidence_shell",
+      "utc": "2026-10-10T17:39:49.981564+00:00",
+      "application_pid": 3710,
+      "exit_code": 0
+    },
+    {
+      "test": "qml_evidence_sync",
+      "utc": "2026-10-10T17:40:58.608367+00:00",
+      "application_pid": 3964,
+      "exit_code": 0
+    },
+    {
+      "test": "qml_evidence_watchonly",
+      "utc": "2026-10-10T17:40:01.807277+00:00",
+      "application_pid": 3774,
+      "exit_code": 0
+    },
+    {
+      "test": "qml_test_activity_filter_export",
+      "utc": "2026-10-10T17:19:13.452632+00:00",
+      "application_pid": 77,
+      "exit_code": 0
+    },
+    {
+      "test": "qml_test_blockclock",
+      "utc": "2026-10-10T17:20:27.193687+00:00",
+      "application_pid": 448,
+      "exit_code": 0
+    },
+    {
+      "test": "qml_test_node_runtime_dialogs",
+      "utc": "2026-10-10T17:20:30.826915+00:00",
+      "application_pid": 504,
+      "exit_code": 0
+    },
+    {
+      "test": "qml_test_password_wallet",
+      "utc": "2026-10-10T17:22:54.793750+00:00",
+      "application_pid": 893,
+      "exit_code": 0
+    },
+    {
+      "test": "qml_test_password_wallet",
+      "utc": "2026-10-10T17:22:54.793995+00:00",
+      "application_pid": 952,
+      "exit_code": 0
+    },
+    {
+      "test": "qml_test_password_wallet",
+      "utc": "2026-10-10T17:22:54.794095+00:00",
+      "application_pid": 1087,
+      "exit_code": 0
+    },
+    {
+      "test": "qml_test_password_wallet",
+      "utc": "2026-10-10T17:22:54.794185+00:00",
+      "application_pid": 1184,
+      "exit_code": 0
+    },
+    {
+      "test": "qml_test_password_wallet",
+      "utc": "2026-10-10T17:22:54.794264+00:00",
+      "application_pid": 1269,
+      "exit_code": 0
+    },
+    {
+      "test": "qml_test_password_wallet",
+      "utc": "2026-10-10T17:22:54.794346+00:00",
+      "application_pid": 1366,
+      "exit_code": 0
+    },
+    {
+      "test": "qml_test_psbt",
+      "utc": "2026-10-10T17:19:30.991477+00:00",
+      "application_pid": 141,
+      "exit_code": 0
+    },
+    {
+      "test": "qml_test_receive",
+      "utc": "2026-10-10T17:21:20.581650+00:00",
+      "application_pid": 656,
+      "exit_code": 0
+    },
+    {
+      "test": "qml_test_receive",
+      "utc": "2026-10-10T17:21:20.581840+00:00",
+      "application_pid": 720,
+      "exit_code": 0
+    },
+    {
+      "test": "qml_test_resetguisettings",
+      "utc": "2026-10-10T17:20:23.219243+00:00",
+      "application_pid": 316,
+      "exit_code": 0
+    },
+    {
+      "test": "qml_test_resetguisettings",
+      "utc": "2026-10-10T17:20:23.219554+00:00",
+      "application_pid": 376,
+      "exit_code": -15
+    },
+    {
+      "test": "qml_test_settings_display",
+      "utc": "2026-10-10T17:19:52.359301+00:00",
+      "application_pid": 205,
+      "exit_code": 0
+    },
+    {
+      "test": "qml_test_settings_display",
+      "utc": "2026-10-10T17:19:52.359493+00:00",
+      "application_pid": 260,
+      "exit_code": 0
+    },
+    {
+      "test": "qml_test_uri_import",
+      "utc": "2026-10-10T17:29:17.337471+00:00",
+      "application_pid": 2684,
+      "exit_code": 0
+    },
+    {
+      "test": "qml_test_wallet_restore",
+      "utc": "2026-10-10T17:23:10.820642+00:00",
+      "application_pid": 1427,
+      "exit_code": 0
+    },
+    {
+      "test": "qml_test_wallet_restore",
+      "utc": "2026-10-10T17:23:10.820947+00:00",
+      "application_pid": 1510,
+      "exit_code": 0
+    },
+    {
+      "test": "qml_test_wallet_restore",
+      "utc": "2026-10-10T17:23:10.821112+00:00",
+      "application_pid": 1605,
+      "exit_code": 0
+    },
+    {
+      "test": "qml_test_window_geometry",
+      "utc": "2026-10-10T17:20:24.905282+00:00",
+      "application_pid": 390,
+      "exit_code": 0
+    }
+  ],
+  "applicationExitLimit": "The second reset-onboarding process is terminated by the test harness with SIGTERM (-15). Other recorded processes exit 0. This is not IPC-enabled shutdown certification.",
+  "stderrMessages": [
+    "Fontconfig warning: \"/etc/fonts/conf.d/10-hinting-slight.conf\", line 4: unknown element \"description\"",
+    "Fontconfig warning: \"/etc/fonts/conf.d/10-scale-bitmap-fonts.conf\", line 4: unknown element \"description\"",
+    "Fontconfig warning: \"/etc/fonts/conf.d/10-sub-pixel-rgb.conf\", line 4: unknown element \"description\"",
+    "Fontconfig warning: \"/etc/fonts/conf.d/10-yes-antialias.conf\", line 4: unknown element \"description\"",
+    "Fontconfig warning: \"/etc/fonts/conf.d/11-lcdfilter-default.conf\", line 4: unknown element \"description\"",
+    "Fontconfig warning: \"/etc/fonts/conf.d/20-unhint-small-vera.conf\", line 4: unknown element \"description\"",
+    "Fontconfig warning: \"/etc/fonts/conf.d/30-metric-aliases.conf\", line 4: unknown element \"description\"",
+    "Fontconfig warning: \"/etc/fonts/conf.d/40-nonlatin.conf\", line 4: unknown element \"description\"",
+    "Fontconfig warning: \"/etc/fonts/conf.d/45-generic.conf\", line 4: unknown element \"description\"",
+    "Fontconfig warning: \"/etc/fonts/conf.d/45-latin.conf\", line 4: unknown element \"description\"",
+    "Fontconfig warning: \"/etc/fonts/conf.d/48-spacing.conf\", line 4: unknown element \"description\"",
+    "Fontconfig warning: \"/etc/fonts/conf.d/49-sansserif.conf\", line 4: unknown element \"description\"",
+    "Fontconfig warning: \"/etc/fonts/conf.d/50-user.conf\", line 4: unknown element \"description\"",
+    "Fontconfig warning: \"/etc/fonts/conf.d/51-local.conf\", line 4: unknown element \"description\"",
+    "Fontconfig warning: \"/etc/fonts/conf.d/60-generic.conf\", line 4: unknown element \"description\"",
+    "Fontconfig warning: \"/etc/fonts/conf.d/60-latin.conf\", line 4: unknown element \"description\"",
+    "Fontconfig warning: \"/etc/fonts/conf.d/65-nonlatin.conf\", line 4: unknown element \"description\"",
+    "Fontconfig warning: \"/etc/fonts/conf.d/70-no-bitmaps-except-emoji.conf\", line 4: unknown element \"description\"",
+    "Fontconfig warning: \"/etc/fonts/fonts.conf\", line 5: unknown element \"description\"",
+    "Running initialization in thread",
+    "TestBridge: client connected",
+    "TestBridge: client disconnected",
+    "TestBridge: listening on /work/tmp/evidence_cache_limit_bv8uy_4q/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/evidence_desktop_31wo16mg/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/evidence_desktop_6enuyimz/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/evidence_desktop_99wzsf9r/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/evidence_desktop_bgvcwb1j/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/evidence_desktop_cvssz9sn/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/evidence_desktop_k1vzq28_/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/evidence_desktop_rsdagwsl/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/evidence_desktop_wp_ijsio/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/evidence_desktop_xdgn1_ki/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/evidence_desktop_ydhh1cue/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/evidence_desktop_z42pdy4t/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/evidence_migration_mytyznlb/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/evidence_migration_p8d_80bd/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/evidence_shell_42snkwer/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/evidence_shell_9jzu4ryu/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/evidence_sync_gf0g23__/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/evidence_watchonly__bdbg_t6/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/evidence_watchonly_a1loxeaz/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/qml_activity_filter_export_235mz1oz/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/qml_password_wallet_close_loaded_wallet_k9aeofoy/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/qml_password_wallet_created_send_mxc__9vu/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/qml_password_wallet_import_encrypted_ufl3ozlz/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/qml_password_wallet_managed_legacy_migration_4niv7p0p/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/qml_password_wallet_review_fallback_x5ghdtwk/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/qml_receive_requests_j1671nb6/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/qml_resetguisettings_pw4szkik/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/qml_test_bridge_4ib37g5x/node0/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/qml_test_bridge_4ib37g5x/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/qml_test_bridge_8za46lkw/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/qml_test_bridge_99hv9nou/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/qml_test_bridge__ptfxtkp/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/qml_test_psbt_0zjv6sjw/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/qml_test_uri_import_qzmsj0hf/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/qml_test_uri_import_v_lihu94/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/qml_wallet_restore_bad_format_cufz64vf/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/qml_wallet_restore_bad_format_kri44t55/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/qml_wallet_restore_legacy_failure_l5h1sa_h/test_bridge.sock",
+    "TestBridge: listening on /work/tmp/qml_wallet_restore_success_duxyheut/test_bridge.sock",
+    "qrc:/qml/components/BlockClock.qml:58:5: QML AppSettings: The Settings type from Qt.labs.settings is deprecated and will be removed in a future release. Please use the one from QtCore instead.",
+    "qrc:/qml/controls/Theme.qml:13:5: QML AppSettings: The Settings type from Qt.labs.settings is deprecated and will be removed in a future release. Please use the one from QtCore instead.",
+    "qrc:/qml/pages/MainWindow.qml:119:5: QML AppSettings: The Settings type from Qt.labs.settings is deprecated and will be removed in a future release. Please use the one from QtCore instead.",
+    "qrc:/qml/pages/node/Peers.qml:74:5: QML AppSettings: The Settings type from Qt.labs.settings is deprecated and will be removed in a future release. Please use the one from QtCore instead.",
+    "qrc:/qml/pages/wallet/ActivityListPage.qml:162:5: QML AppSettings: The Settings type from Qt.labs.settings is deprecated and will be removed in a future release. Please use the one from QtCore instead."
+  ],
+  "repositoryCi": [
+    {
+      "checkout": "/home/codex/workspaces/bitcoin-core-app/bitcoin-gui-evidence",
+      "command": "./ci/lint.py",
+      "exitCode": 127,
+      "output": "/bin/sh: 1: ./ci/lint.py: not found",
+      "status": "blocked: checkout has no native CI entry scripts"
+    },
+    {
+      "checkout": "/home/codex/workspaces/bitcoin-core-app/bitcoin-gui-evidence",
+      "command": "FILE_ENV=./ci/test/00_setup_env_native_tidy.sh ./ci/test_run_all.sh",
+      "exitCode": 127,
+      "output": "/bin/sh: 1: ./ci/test_run_all.sh: not found",
+      "status": "blocked: checkout has no native CI entry scripts"
+    },
+    {
+      "checkout": "/home/codex/workspaces/bitcoin-core-app/bitcoin-gui-evidence",
+      "command": "FILE_ENV=./ci/test/00_setup_env_native_asan.sh ./ci/test_run_all.sh",
+      "exitCode": 127,
+      "output": "/bin/sh: 1: ./ci/test_run_all.sh: not found",
+      "status": "blocked: checkout has no native CI entry scripts"
+    },
+    {
+      "checkout": "/home/codex/workspaces/bitcoin-core-app/.validation/gui-feature-evidence-20261008/qml-source",
+      "command": "./ci/lint.py",
+      "exitCode": 127,
+      "output": "/bin/sh: 1: ./ci/lint.py: not found",
+      "status": "blocked: checkout has no native CI entry scripts"
+    },
+    {
+      "checkout": "/home/codex/workspaces/bitcoin-core-app/.validation/gui-feature-evidence-20261008/qml-source",
+      "command": "FILE_ENV=./ci/test/00_setup_env_native_tidy.sh ./ci/test_run_all.sh",
+      "exitCode": 127,
+      "output": "/bin/sh: 1: ./ci/test_run_all.sh: not found",
+      "status": "blocked: checkout has no native CI entry scripts"
+    },
+    {
+      "checkout": "/home/codex/workspaces/bitcoin-core-app/.validation/gui-feature-evidence-20261008/qml-source",
+      "command": "FILE_ENV=./ci/test/00_setup_env_native_asan.sh ./ci/test_run_all.sh",
+      "exitCode": 127,
+      "output": "/bin/sh: 1: ./ci/test_run_all.sh: not found",
+      "status": "blocked: checkout has no native CI entry scripts"
+    }
+  ],
+  "functionalResult": "16 passing scripts; one reproduced application failure in the new cache-allocation regression",
+  "scopeLimits": [
+    "IPC disabled in pinned binary",
+    "No sanitizer coverage; required CI scripts absent",
+    "No physical signer, Windows/macOS, live Tor, physical router or mainnet initial download validation"
+  ],
+  "recordedUtc": "2026-10-10T17:42:30.730489+00:00"
+}

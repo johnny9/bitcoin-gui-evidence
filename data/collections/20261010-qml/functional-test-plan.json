@@ -1,0 +1,651 @@
+[
+  {
+    "id": "F02.S04",
+    "intent": "Close individual wallets or all wallets.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "close-all-wallets",
+      "node-after-close"
+    ]
+  },
+  {
+    "id": "F03.S03",
+    "intent": "Name a recovered wallet.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "existing-f03-s03"
+    ]
+  },
+  {
+    "id": "F04.S02",
+    "intent": "Preserve the original wallet with an automatic backup.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "migration-backup"
+    ]
+  },
+  {
+    "id": "F04.S03",
+    "intent": "Preserve wallet contents, including watch-only information.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "migration-label",
+      "migration-funds",
+      "migration-history",
+      "migration-watch-label",
+      "migration-watch-funds"
+    ]
+  },
+  {
+    "id": "F04.S04",
+    "intent": "Open migrated wallets immediately or later.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "migration-auto-open"
+    ]
+  },
+  {
+    "id": "F06.S01",
+    "intent": "Protect stored spending keys with passphrase encryption.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "existing-f06-s01"
+    ]
+  },
+  {
+    "id": "F07.S01",
+    "intent": "View available, pending, immature mining, and total balances.",
+    "status": "missing-proof",
+    "testGroup": "wallet-balances",
+    "test": "qml_test_wallet_balances.py",
+    "expectedOutcome": "Create available, pending and immature funds, then assert the displayed balances and pending activity agree with RPC before and after confirmation.",
+    "existingChecks": []
+  },
+  {
+    "id": "F07.S02",
+    "intent": "Review recent wallet activity.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "existing-f07-s02"
+    ]
+  },
+  {
+    "id": "F07.S03",
+    "intent": "Find a recent transaction in the full transaction history.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "existing-f07-s03"
+    ]
+  },
+  {
+    "id": "F07.S04",
+    "intent": "Know when wallet information may be out of date.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "existing-f07-s04"
+    ]
+  },
+  {
+    "id": "F08.S06",
+    "intent": "Share QR images with other applications using drag and drop.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "existing-f08-s06"
+    ]
+  },
+  {
+    "id": "F09.S02",
+    "intent": "Enter or paste a recipient address, or use a saved address.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "enter-payment-address"
+    ]
+  },
+  {
+    "id": "F09.S07",
+    "intent": "Sign payments with local spending keys or a compatible external signer.",
+    "status": "missing-proof",
+    "testGroup": "physical-signer",
+    "test": "hardware acceptance run",
+    "expectedOutcome": "Repeat the payment with a compatible physical signer: approve on the device, verify the destination and fee, broadcast, and check the wallet holds no spending keys.",
+    "existingChecks": []
+  },
+  {
+    "id": "F09.S08",
+    "intent": "Prepare a payment from a watch-only wallet for signing elsewhere.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "watch-only-export",
+      "watch-only-no-keys",
+      "watch-only-unsigned",
+      "external-handoff"
+    ]
+  },
+  {
+    "id": "F10.S03",
+    "intent": "Handle payment requests from other applications, including while Bitcoin Core is already running.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "existing-f10-s03"
+    ]
+  },
+  {
+    "id": "F11.S04",
+    "intent": "Know when a fee estimate is unavailable.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "fee-unavailable"
+    ]
+  },
+  {
+    "id": "F12.S04",
+    "intent": "Compare coins by amount, address, label, age, and confirmations.",
+    "status": "missing-proof",
+    "testGroup": "coin-comparison",
+    "test": "qml_test_coin_comparison.py",
+    "expectedOutcome": "Create coins with distinct amounts, labels, ages and confirmations; verify the supported comparison fields, grouping and sorting against listunspent. Document that confirmation counts are not displayed.",
+    "existingChecks": []
+  },
+  {
+    "id": "F13.S05",
+    "intent": "Copy an unsigned PSBT to the clipboard or save it to a file for signing elsewhere.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "watch-only-export",
+      "watch-only-unsigned",
+      "external-handoff"
+    ]
+  },
+  {
+    "id": "F14.S06",
+    "intent": "Copy a partially signed PSBT to the clipboard or save it to a file for further signing.",
+    "status": "missing-proof",
+    "testGroup": "multisigner-psbt",
+    "test": "qml_test_multisigner_psbt.py",
+    "expectedOutcome": "Export a transaction after one signer, assert the signature survives the GUI handoff, then have a second signer complete it.",
+    "existingChecks": []
+  },
+  {
+    "id": "F15.S01",
+    "intent": "Connect a wallet to a compatible external signer.",
+    "status": "missing-proof",
+    "testGroup": "physical-signer",
+    "test": "hardware acceptance run",
+    "expectedOutcome": "Enumerate and connect a real compatible signer; validate identity and wallet descriptors.",
+    "existingChecks": []
+  },
+  {
+    "id": "F15.S02",
+    "intent": "Keep spending keys on the signing device.",
+    "status": "missing-proof",
+    "testGroup": "physical-signer",
+    "test": "hardware acceptance run",
+    "expectedOutcome": "Verify key custody on a real device while the connected wallet exposes only public descriptors.",
+    "existingChecks": []
+  },
+  {
+    "id": "F15.S04",
+    "intent": "Authorize outgoing payments using the device.",
+    "status": "missing-proof",
+    "testGroup": "physical-signer",
+    "test": "hardware acceptance run",
+    "expectedOutcome": "Approve and reject payments on a real device; compare its recipient/fee confirmation and the broadcast transaction.",
+    "existingChecks": []
+  },
+  {
+    "id": "F15.S05",
+    "intent": "Continue a signing workflow when additional signatures are needed. Signing workflow.",
+    "status": "missing-proof",
+    "testGroup": "multisigner-psbt",
+    "test": "qml_test_multisigner_psbt.py",
+    "expectedOutcome": "Save an incomplete signing result and resume it with another signer without losing signatures or changing outputs.",
+    "existingChecks": []
+  },
+  {
+    "id": "F16.S03",
+    "intent": "Search by address, transaction ID, or label, and sort transaction history.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "existing-f16-s03"
+    ]
+  },
+  {
+    "id": "F16.S09",
+    "intent": "Inspect transactions in external block explorers.",
+    "status": "missing-proof",
+    "testGroup": "explorer-handoff",
+    "test": "qml_test_external_explorer.py",
+    "expectedOutcome": "Configure a controlled explorer URL, open a real transaction, confirm the outgoing URL contains its exact transaction ID, and observe browser delivery.",
+    "existingChecks": []
+  },
+  {
+    "id": "F18.S05",
+    "intent": "Copy saved addresses and labels to the clipboard.",
+    "status": "missing-proof",
+    "testGroup": "address-label-copy",
+    "test": "qml_test_addresses.py extension",
+    "expectedOutcome": "Copy a saved address and an editable saved label through the GUI; assert both clipboard values exactly match the records.",
+    "existingChecks": []
+  },
+  {
+    "id": "F20.S03",
+    "intent": "Assess available storage, expected requirements, and the effect of pruning on wallet recovery.",
+    "status": "missing-proof",
+    "testGroup": "storage-planning",
+    "test": "qml_test_storage_planning.py",
+    "expectedOutcome": "Exercise sufficient and insufficient free space and pruning choices; assert displayed requirements and the accepted storage selection. Recovery guidance remains a documented UI difference.",
+    "existingChecks": []
+  },
+  {
+    "id": "F20.S04",
+    "intent": "Download and validate the blockchain.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "download-and-validate"
+    ]
+  },
+  {
+    "id": "F20.S05",
+    "intent": "Monitor synchronization progress and how far the node is behind.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "real-sync-in-progress",
+      "download-and-validate"
+    ]
+  },
+  {
+    "id": "F20.S07",
+    "intent": "Use mainnet, testnet, testnet4, signet, or regtest. Network support.",
+    "status": "missing-proof",
+    "testGroup": "network-matrix",
+    "test": "qml_test_network_identity.py",
+    "expectedOutcome": "Launch isolated offline profiles for mainnet, testnet, testnet4, signet and regtest; assert the active chain and GUI identity for each.",
+    "existingChecks": []
+  },
+  {
+    "id": "F21.S01",
+    "intent": "Enable or pause peer-to-peer networking.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "pause-network",
+      "resume-network"
+    ]
+  },
+  {
+    "id": "F21.S03",
+    "intent": "Route connections through SOCKS5 proxies, with separate routing for Tor. Proxy support.",
+    "status": "missing-proof",
+    "testGroup": "proxy-routing",
+    "test": "qml_test_proxy_routing.py",
+    "expectedOutcome": "Use controlled SOCKS5 and Tor routes, verify connections reach the configured proxy, and prove no unintended direct connection bypasses it.",
+    "existingChecks": []
+  },
+  {
+    "id": "F21.S04",
+    "intent": "Automatically configure router access for incoming connections where supported.",
+    "status": "missing-proof",
+    "testGroup": "router-mapping",
+    "test": "NAT-PMP integration environment",
+    "expectedOutcome": "Enable mapping against a controlled gateway; verify the resulting mapping and its removal/renewal. A settings toggle alone does not prove router behavior.",
+    "existingChecks": []
+  },
+  {
+    "id": "F22.S03",
+    "intent": "Focus traffic monitoring on a chosen time period or begin a fresh observation.",
+    "status": "missing-proof",
+    "testGroup": "traffic-window",
+    "test": "qml_test_traffic_history.py",
+    "expectedOutcome": "Produce deterministic traffic, select different observation periods, and verify displayed samples and totals follow the selected period.",
+    "existingChecks": []
+  },
+  {
+    "id": "F22.S09",
+    "intent": "Use RPC for descriptor import, multisig setup, wallet rescans, and combining PSBTs.",
+    "status": "missing-proof",
+    "testGroup": "advanced-rpc",
+    "test": "qml_test_console_wallet_workflows.py",
+    "expectedOutcome": "Run descriptor import, multisig setup and PSBT combination through the GUI console and validate resulting wallet/PSBT state. Rescan is covered by the new watch-only test.",
+    "existingChecks": []
+  },
+  {
+    "id": "F23.S01",
+    "intent": "Allocate memory and processing resources for block validation.",
+    "status": "failing-regression",
+    "testGroup": "cache-limit-fix",
+    "test": "qml_evidence_cache_limit.py (now failing)",
+    "expectedOutcome": "Fix the GUI total-cache range, then make the new 768 MiB regression pass. Add boundary cases and assert persistence after restart.",
+    "existingChecks": [
+      "core-accepts-768",
+      "gui-accepts-768",
+      "resource-preferences",
+      "resources-restored"
+    ]
+  },
+  {
+    "id": "F23.S02",
+    "intent": "Allow external tools to communicate with the node through RPC.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "rpc-server"
+    ]
+  },
+  {
+    "id": "F23.S10",
+    "intent": "Manage advanced application configuration.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "configuration-precedence"
+    ]
+  },
+  {
+    "id": "F23.S11",
+    "intent": "Understand which settings take precedence and which changes require a restart.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "command-line-precedence",
+      "gui-over-config",
+      "configuration-precedence"
+    ]
+  },
+  {
+    "id": "F23.S12",
+    "intent": "Restore default preferences while retaining a backup of previous settings.",
+    "status": "missing-proof",
+    "testGroup": "settings-backup",
+    "test": "qml_test_resetguisettings.py extension",
+    "expectedOutcome": "Seed nondefault preferences, reset through the supported startup flow, and assert a nonempty backup retains the original settings and can be read back.",
+    "existingChecks": []
+  },
+  {
+    "id": "F24.S01",
+    "intent": "Keep the application accessible while its main window is hidden.",
+    "status": "missing-proof",
+    "testGroup": "desktop-platforms",
+    "test": "qml_test_tray.py + native desktop fixtures",
+    "expectedOutcome": "Repeat native hide/restore on Windows and macOS; assert the process and node remain alive while the window is hidden.",
+    "existingChecks": []
+  },
+  {
+    "id": "F24.S02",
+    "intent": "Control application visibility without interrupting the node.",
+    "status": "missing-proof",
+    "testGroup": "desktop-platforms",
+    "test": "qml_test_tray.py + native desktop fixtures",
+    "expectedOutcome": "Exercise visibility transitions on Windows/macOS and assert node RPC remains responsive. Linux native Hide/Show already has proof.",
+    "existingChecks": []
+  },
+  {
+    "id": "F24.S03",
+    "intent": "Quickly access payments, message signing and verification, settings, and diagnostics.",
+    "status": "missing-proof",
+    "testGroup": "tray-action-routing",
+    "test": "qml_test_tray_navigation.py",
+    "expectedOutcome": "After native tray/Dock restoration, reach payment, message signing/verification, settings and diagnostics while preserving the selected wallet.",
+    "existingChecks": []
+  },
+  {
+    "id": "F25.S04",
+    "intent": "Receive critical error messages when desktop notifications are unavailable.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "existing-f25-s04"
+    ]
+  },
+  {
+    "id": "F26.S01",
+    "intent": "Arrange, hide, and restore application windows.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "window-minimize",
+      "window-restore"
+    ]
+  },
+  {
+    "id": "F26.S02",
+    "intent": "Remember the main window placement between sessions.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "window-placement-restored"
+    ]
+  },
+  {
+    "id": "F26.S04",
+    "intent": "Use diagnostics alongside wallet activity.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "wallet-diagnostics"
+    ]
+  },
+  {
+    "id": "F27.S03",
+    "intent": "Monitor initialization progress.",
+    "status": "missing-proof",
+    "testGroup": "startup-progress",
+    "test": "qml_test_startup_progress.py",
+    "expectedOutcome": "Use a sufficiently long real initialization/reindex fixture, assert progress updates remain visible, and capture a stable initialization frame.",
+    "existingChecks": []
+  },
+  {
+    "id": "F27.S04",
+    "intent": "Request an orderly shutdown during startup.",
+    "status": "missing-proof",
+    "testGroup": "ipc-startup-shutdown",
+    "test": "interface_gui.py + QML startup cancellation",
+    "expectedOutcome": "Run initialization cancellation with IPC enabled; assert GUI and child-node exit status and inspect both stderr streams under the required sanitizer configuration.",
+    "existingChecks": []
+  },
+  {
+    "id": "F28.S03",
+    "intent": "Access address records and node diagnostics.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "open-address-records",
+      "wallet-diagnostics"
+    ]
+  },
+  {
+    "id": "F28.S04",
+    "intent": "Reach common wallet and application tasks quickly.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "shortcut-ctrl+2",
+      "shortcut-ctrl+3",
+      "shortcut-ctrl+1"
+    ]
+  },
+  {
+    "id": "F28.S05",
+    "intent": "Use keyboard shortcuts for navigation and common actions.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "shortcut-ctrl+2",
+      "shortcut-ctrl+3",
+      "shortcut-ctrl+1"
+    ]
+  },
+  {
+    "id": "F29.S02",
+    "intent": "Understand synchronization progress and whether wallet information is current.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "real-sync-in-progress",
+      "download-and-validate"
+    ]
+  },
+  {
+    "id": "F29.S06",
+    "intent": "Understand available actions through contextual guidance.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "contextual-guidance"
+    ]
+  },
+  {
+    "id": "F30.S06",
+    "intent": "Assess synchronization progress, processing rate, and estimated remaining work.",
+    "status": "missing-proof",
+    "testGroup": "sync-estimates",
+    "test": "qml_evidence_sync.py extension",
+    "expectedOutcome": "Extend the controlled peer transfer until a settled ETA appears; assert progress advances and the estimate responds sensibly to throughput changes.",
+    "existingChecks": [
+      "real-sync-in-progress"
+    ]
+  },
+  {
+    "id": "F30.S07",
+    "intent": "Monitor background synchronization while retaining access to the application.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "wallet-access-during-sync"
+    ]
+  },
+  {
+    "id": "F31.S01",
+    "intent": "Open Bitcoin payment requests from other applications or by drag and drop.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "existing-f10-s03"
+    ]
+  },
+  {
+    "id": "F31.S02",
+    "intent": "Distinguish application instances using different Bitcoin networks.",
+    "status": "missing-proof",
+    "testGroup": "network-matrix",
+    "test": "qml_test_network_identity.py",
+    "expectedOutcome": "Capture the identity shown by each of the five supported networks, including simultaneous distinct profiles.",
+    "existingChecks": []
+  },
+  {
+    "id": "F31.S03",
+    "intent": "Adapt application visuals to the desktop appearance.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "appearance-light",
+      "appearance-dark"
+    ]
+  },
+  {
+    "id": "F31.S05",
+    "intent": "Use external block explorers to inspect transactions.",
+    "status": "missing-proof",
+    "testGroup": "explorer-handoff",
+    "test": "qml_test_external_explorer.py",
+    "expectedOutcome": "Assert a configured explorer action delivers the selected transaction ID to a controlled browser target. Current evidence checks URL construction only.",
+    "existingChecks": []
+  },
+  {
+    "id": "F34.S01",
+    "intent": "Rediscover wallet activity from blockchain history.",
+    "status": "proved",
+    "testGroup": null,
+    "test": null,
+    "expectedOutcome": "Targeted proof and matching capture collected.",
+    "existingChecks": [
+      "rescan-fixture",
+      "console-rescan"
+    ]
+  }
+]

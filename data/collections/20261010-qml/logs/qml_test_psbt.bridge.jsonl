@@ -1,0 +1,111 @@
+{"utc": "2026-10-10T17:19:13.523922+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/qml_test_psbt_0zjv6sjw/gui_node", "-test-automation=/work/tmp/qml_test_psbt_0zjv6sjw/test_bridge.sock", "-test-settings-dir=/work/tmp/qml_test_psbt_0zjv6sjw/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 141, "platform": "xcb"}
+{"utc": "2026-10-10T17:19:14.278807+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:14.282679+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:19:14.288056+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-10T17:19:14.781048+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:14.785529+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:19:14.789862+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-10T17:19:22.901346+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:22.904415+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "text"}, "response": {"value": "psbt-source"}}
+{"utc": "2026-10-10T17:19:22.907141+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "noWalletLoaded"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:22.909633+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:22.911741+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:19:22.913960+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-10T17:19:23.406297+00:00", "request": {"cmd": "click", "objectName": "sendTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:19:23.415060+00:00", "request": {"cmd": "get_property", "objectName": "sendOptionsButton", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:23.419928+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:23.424371+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:19:23.427834+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-10T17:19:23.912614+00:00", "request": {"cmd": "click", "objectName": "sendOptionsButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:19:23.915851+00:00", "request": {"cmd": "get_property", "objectName": "sendImportPsbtFromFileButton", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:23.919810+00:00", "request": {"cmd": "set_text", "objectName": "psbtImportPathField", "text": "/work/tmp/qml_test_psbt_0zjv6sjw/single-review.psbt"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:19:23.939717+00:00", "request": {"cmd": "click", "objectName": "sendImportPsbtFromFileButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:19:23.949944+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:23.954191+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:19:23.957464+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-10T17:19:24.440806+00:00", "request": {"cmd": "get_property", "objectName": "transactionReviewPopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:24.444038+00:00", "request": {"cmd": "get_property", "objectName": "sendTransactionReviewRecipient0", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:24.447242+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:24.450161+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:19:24.452949+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-10T17:19:24.939799+00:00", "request": {"cmd": "click", "objectName": "sendTransactionReviewCloseButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:19:24.943395+00:00", "request": {"cmd": "get_property", "objectName": "sendOptionsButton", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:24.947008+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:24.950520+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:19:24.953882+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-10T17:19:25.435621+00:00", "request": {"cmd": "click", "objectName": "sendOptionsButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:19:25.439051+00:00", "request": {"cmd": "get_property", "objectName": "sendImportPsbtFromFileButton", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:25.443569+00:00", "request": {"cmd": "set_text", "objectName": "psbtImportPathField", "text": "/work/tmp/qml_test_psbt_0zjv6sjw/multiple-review.psbt"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:19:25.480811+00:00", "request": {"cmd": "click", "objectName": "sendImportPsbtFromFileButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:19:25.493414+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:25.498045+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:19:25.501844+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-10T17:19:25.987769+00:00", "request": {"cmd": "get_property", "objectName": "transactionReviewPopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:25.991574+00:00", "request": {"cmd": "get_property", "objectName": "sendTransactionReviewRecipient1", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:25.995375+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:25.998873+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:19:26.002433+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-10T17:19:26.486958+00:00", "request": {"cmd": "click", "objectName": "sendTransactionReviewCloseButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:19:26.490268+00:00", "request": {"cmd": "get_property", "objectName": "sendOptionsButton", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:26.493383+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:26.495953+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:19:26.499654+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-10T17:19:26.981079+00:00", "request": {"cmd": "click", "objectName": "sendOptionsButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:19:26.984399+00:00", "request": {"cmd": "get_property", "objectName": "sendImportPsbtFromFileButton", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:26.988301+00:00", "request": {"cmd": "set_text", "objectName": "psbtImportPathField", "text": "/work/tmp/qml_test_psbt_0zjv6sjw/review-only.psbt"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:19:27.019831+00:00", "request": {"cmd": "click", "objectName": "sendImportPsbtFromFileButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:19:27.031841+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:27.037291+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:19:27.041355+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-10T17:19:27.529179+00:00", "request": {"cmd": "get_property", "objectName": "transactionReviewPopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:27.532497+00:00", "request": {"cmd": "get_property", "objectName": "sendTransactionReviewWarning", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:27.535557+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:27.538302+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:19:27.541062+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-10T17:19:28.022574+00:00", "request": {"cmd": "get_property", "objectName": "sendTransactionReviewWarning", "prop": "message"}, "response": {"value": "This wallet does not have the keys to sign this transaction."}}
+{"utc": "2026-10-10T17:19:28.025940+00:00", "request": {"cmd": "get_property", "objectName": "sendTransactionReviewSendButton", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:28.029157+00:00", "request": {"cmd": "get_property", "objectName": "sendTransactionReviewSaveButton", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:28.032356+00:00", "request": {"cmd": "click", "objectName": "sendTransactionReviewCloseButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:19:28.035799+00:00", "request": {"cmd": "get_property", "objectName": "transactionReviewPopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:28.090045+00:00", "request": {"cmd": "get_property", "objectName": "transactionReviewPopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:28.144209+00:00", "request": {"cmd": "get_property", "objectName": "transactionReviewPopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:28.198487+00:00", "request": {"cmd": "get_property", "objectName": "transactionReviewPopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:28.252462+00:00", "request": {"cmd": "get_property", "objectName": "transactionReviewPopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:28.306383+00:00", "request": {"cmd": "get_property", "objectName": "transactionReviewPopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:28.360445+00:00", "request": {"cmd": "get_property", "objectName": "transactionReviewPopup", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:28.363991+00:00", "request": {"cmd": "get_property", "objectName": "sendOptionsButton", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:28.367529+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "text"}, "response": {"value": ""}}
+{"utc": "2026-10-10T17:19:28.370898+00:00", "request": {"cmd": "get_property", "objectName": "sendAmountInput", "prop": "text"}, "response": {"value": ""}}
+{"utc": "2026-10-10T17:19:28.374699+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:28.378394+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:19:28.381983+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-10T17:19:28.869547+00:00", "request": {"cmd": "click", "objectName": "sendOptionsButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:19:28.873004+00:00", "request": {"cmd": "get_property", "objectName": "sendImportPsbtFromFileButton", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:28.877250+00:00", "request": {"cmd": "set_text", "objectName": "psbtImportPathField", "text": "/work/tmp/qml_test_psbt_0zjv6sjw/signed-foreign.psbt"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:19:28.912218+00:00", "request": {"cmd": "click", "objectName": "sendImportPsbtFromFileButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:19:28.924323+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:28.928556+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:19:28.931588+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-10T17:19:29.416876+00:00", "request": {"cmd": "get_property", "objectName": "transactionReviewPopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:29.421000+00:00", "request": {"cmd": "get_property", "objectName": "sendTransactionReviewSendButton", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:29.424796+00:00", "request": {"cmd": "get_property", "objectName": "sendTransactionReviewWarning", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:29.428387+00:00", "request": {"cmd": "get_property", "objectName": "sendTransactionReviewSendButton", "prop": "text"}, "response": {"value": "Broadcast transaction"}}
+{"utc": "2026-10-10T17:19:29.431796+00:00", "request": {"cmd": "get_property", "objectName": "sendTransactionReviewSendButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:29.435076+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:29.438250+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:19:29.441487+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-10T17:19:29.930611+00:00", "request": {"cmd": "click", "objectName": "sendTransactionReviewSendButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:19:29.936778+00:00", "request": {"cmd": "get_property", "objectName": "sendCompletePage", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:29.948733+00:00", "request": {"cmd": "click", "objectName": "sendResultDoneButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:19:29.956879+00:00", "request": {"cmd": "get_property", "objectName": "transactionReviewPopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:30.011017+00:00", "request": {"cmd": "get_property", "objectName": "transactionReviewPopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:30.065295+00:00", "request": {"cmd": "get_property", "objectName": "transactionReviewPopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:30.119505+00:00", "request": {"cmd": "get_property", "objectName": "transactionReviewPopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:30.173725+00:00", "request": {"cmd": "get_property", "objectName": "transactionReviewPopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:30.227905+00:00", "request": {"cmd": "get_property", "objectName": "transactionReviewPopup", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:30.282067+00:00", "request": {"cmd": "get_property", "objectName": "transactionReviewPopup", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:30.285469+00:00", "request": {"cmd": "get_property", "objectName": "sendOptionsButton", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:19:30.289215+00:00", "request": {"cmd": "get_property", "objectName": "mainPageStack", "prop": "busy"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:19:30.292427+00:00", "request": {"cmd": "get_property", "objectName": "createWalletWizard", "prop": "busy"}, "response": {"error": "Object not found: createWalletWizard"}}
+{"utc": "2026-10-10T17:19:30.295783+00:00", "request": {"cmd": "get_property", "objectName": "settingsNavigationStack_wallet", "prop": "busy"}, "response": {"error": "Object not found: settingsNavigationStack_wallet"}}
+{"utc": "2026-10-10T17:19:30.991477+00:00", "application_pid": 141, "exit_code": 0}

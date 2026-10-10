@@ -1,0 +1,13 @@
+core-accepts-768: passed
+Traceback (most recent call last):
+  File "/work/qml-acceptance-20261010/scripts/qml_capture_test.py", line 123, in <module>
+    runpy.run_path(str(test_path), run_name='__main__')
+  File "<frozen runpy>", line 286, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/work/qml-acceptance-20261010/scripts/qml_evidence_cache_limit.py", line 28, in <module>
+    check('gui-accepts-768','F23.S01','The GUI must accept the same valid 768 MiB value as Core.',actual,'768')
+  File "/work/qml-acceptance-20261010/scripts/evidence_helpers.py", line 18, in check
+    assert actual == expected, item
+           ^^^^^^^^^^^^^^^^^^
+AssertionError: {'id': 'gui-accepts-768', 'features': ['F23.S01'], 'description': 'The GUI must accept the same valid 768 MiB value as Core.', 'actual': '7', 'expected': '768', 'status': 'failed'}

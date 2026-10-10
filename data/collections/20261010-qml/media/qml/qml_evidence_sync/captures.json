@@ -1,0 +1,32 @@
+[
+  {
+    "path": "media/qml/qml_evidence_sync/001-live-regtest-sync-progress.png",
+    "caption": "live-regtest-sync-progress",
+    "utc": "2026-10-10T17:40:42.635225+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "0676512d4f835df1ffd512d0dc5332f48b94e7e48a806ea4601796d04c76e32c",
+    "test": "qml_evidence_sync",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_evidence_sync/002-wallet-accessible-during-sync.png",
+    "caption": "wallet-accessible-during-sync",
+    "utc": "2026-10-10T17:40:43.137575+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "3add84b473abdf79ad1eaf93d453e8d8ad85b8caf47433895b0fd1667674e1b0",
+    "test": "qml_evidence_sync",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_evidence_sync/003-real-peer-sync-complete.png",
+    "caption": "real-peer-sync-complete",
+    "utc": "2026-10-10T17:40:58.125368+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "3f2239ae8f6d1c33f11674ff21b4f38f2bdaa8acb84be3aa57208ef8ddcaf394",
+    "test": "qml_evidence_sync",
+    "kind": "application-screenshot"
+  }
+]

@@ -1,0 +1,16 @@
+shortcut-ctrl+2: passed
+shortcut-ctrl+3: passed
+shortcut-ctrl+1: passed
+fee-unavailable: passed
+Traceback (most recent call last):
+  File "/work/qml-acceptance-20261010/scripts/qml_capture_test.py", line 123, in <module>
+    runpy.run_path(str(test_path), run_name='__main__')
+  File "<frozen runpy>", line 286, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/work/qml-acceptance-20261010/scripts/qml_evidence_desktop.py", line 39, in <module>
+    check('paste-payment-address','F09.S02','Pasting a recipient preserves the complete address.',g.get_text('sendAddressInput'),address)
+  File "/work/qml-acceptance-20261010/scripts/evidence_helpers.py", line 18, in check
+    assert actual == expected, item
+           ^^^^^^^^^^^^^^^^^^
+AssertionError: {'id': 'paste-payment-address', 'features': ['F09.S02'], 'description': 'Pasting a recipient preserves the complete address.', 'actual': '', 'expected': 'bcrt1q79qwklshrsqegptlpfuv68vkf9wqdxayhauas4', 'status': 'failed'}

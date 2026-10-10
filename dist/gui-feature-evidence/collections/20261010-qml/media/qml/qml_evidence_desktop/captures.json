@@ -1,0 +1,152 @@
+[
+  {
+    "path": "media/qml/qml_evidence_desktop/001-keyboard-sendpage.png",
+    "caption": "keyboard-sendPage",
+    "utc": "2026-10-10T17:39:30.935329+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "4d1d1ea21c7c1c5ef30d4e67326491f1211846e47fc2ae8de8c1fa4f6aa0ff04",
+    "test": "qml_evidence_desktop",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_evidence_desktop/002-keyboard-requestpaymentpage.png",
+    "caption": "keyboard-requestPaymentPage",
+    "utc": "2026-10-10T17:39:31.664585+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "cb91167f79153630db68fbcfe98ba060d4d5997e814d470d8a77d2386cb395ab",
+    "test": "qml_evidence_desktop",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_evidence_desktop/003-keyboard-activitypage.png",
+    "caption": "keyboard-activityPage",
+    "utc": "2026-10-10T17:39:32.386741+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "aa843501cdb42f96d9378093bad63a9e3366b01ab19b22693e4841c515a2f82f",
+    "test": "qml_evidence_desktop",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_evidence_desktop/004-fee-estimate-unavailable.png",
+    "caption": "fee-estimate-unavailable",
+    "utc": "2026-10-10T17:39:32.887508+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "383a274c79a23c4cd2899911b20a9df516824d96fe50ea8a95b69d9341733935",
+    "test": "qml_evidence_desktop",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_evidence_desktop/005-recipient-entered.png",
+    "caption": "recipient-entered",
+    "utc": "2026-10-10T17:39:33.397585+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "e0c43d9b274a1756b43ce259780654be66d5a569855d465e10f015ab3547c5b7",
+    "test": "qml_evidence_desktop",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_evidence_desktop/006-address-records.png",
+    "caption": "address-records",
+    "utc": "2026-10-10T17:39:34.061711+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "a8433da95c6cb4ef0982b46b0b3902b9173bcc8899c23ce2f801cd1075a931f7",
+    "test": "qml_evidence_desktop",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_evidence_desktop/007-diagnostics-with-wallet.png",
+    "caption": "diagnostics-with-wallet",
+    "utc": "2026-10-10T17:39:34.813727+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "03898406d8098d8f18072edf2499a5a38adf6b5528c21f41089ca09e9d46330c",
+    "test": "qml_evidence_desktop",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_evidence_desktop/008-network-paused.png",
+    "caption": "network-paused",
+    "utc": "2026-10-10T17:39:35.323114+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "f953117daf048480ad8117b4174c09841c0f25d509c7e3706b77f4b275e5d9ac",
+    "test": "qml_evidence_desktop",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_evidence_desktop/009-rpc-server-configured.png",
+    "caption": "rpc-server-configured",
+    "utc": "2026-10-10T17:39:35.849563+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "9fafc7f8634f406ae950dbe8d4cf9d32daeb1c017751dcc11adae60d68b9681c",
+    "test": "qml_evidence_desktop",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_evidence_desktop/010-resource-settings-restart-guidance.png",
+    "caption": "resource-settings-restart-guidance",
+    "utc": "2026-10-10T17:39:37.384567+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "bd94d0c0d3a367e5e2817264d1dac2072f9ad52be28ecb86546170d16946af45",
+    "test": "qml_evidence_desktop",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_evidence_desktop/011-window-placement-before-restart.png",
+    "caption": "window-placement-before-restart",
+    "utc": "2026-10-10T17:39:37.892333+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "c634dc8e4f703a7d09fdeb846aac666115226fcd88d3bcacd0caf4d97c3e8a64",
+    "test": "qml_evidence_desktop",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_evidence_desktop/012-window-placement-restored.png",
+    "caption": "window-placement-restored",
+    "utc": "2026-10-10T17:39:39.408936+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "64ada53903e74170a546a9fcf311b3d5433f787b22bffad462a096a50f180f52",
+    "test": "qml_evidence_desktop",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_evidence_desktop/013-resource-settings-after-restart.png",
+    "caption": "resource-settings-after-restart",
+    "utc": "2026-10-10T17:39:39.939961+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "d12ee79b8c60582caf0340b6f9c29f5e9e1caf87045dbcbb0991dc5a6eb0613c",
+    "test": "qml_evidence_desktop",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_evidence_desktop/014-command-line-setting-precedence.png",
+    "caption": "command-line-setting-precedence",
+    "utc": "2026-10-10T17:39:41.400044+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "65ab349dff181c812a9981dbd03a181b1cb00193045937587fc59f6cf9f76b46",
+    "test": "qml_evidence_desktop",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_evidence_desktop/015-configuration-file-setting-precedence.png",
+    "caption": "configuration-file-setting-precedence",
+    "utc": "2026-10-10T17:39:43.874314+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "81e9a41cbd1a1ac7451b88dd060b9f9c9787e0d00261019dd9b4d2dd793e0f28",
+    "test": "qml_evidence_desktop",
+    "kind": "application-screenshot"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "path": "media/qml/qml_test_node_runtime_dialogs/001-database-read-error.png",
+    "caption": "database-read-error",
+    "utc": "2026-10-10T17:20:28.722509+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "d35c42f40f955b5c044268a7a03b51f3d6de122479a131d4d978634bd5b016ae",
+    "test": "qml_test_node_runtime_dialogs",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_node_runtime_dialogs/002-deprecated-checkpoints-warning.png",
+    "caption": "deprecated-checkpoints-warning",
+    "utc": "2026-10-10T17:20:29.193692+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "697110bcc98deb57bd264dceefb7a22e85e98cb963337d324d21b6740bff5de8",
+    "test": "qml_test_node_runtime_dialogs",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_node_runtime_dialogs/003-reindex-question-ok-abort.png",
+    "caption": "reindex-question-ok-abort",
+    "utc": "2026-10-10T17:20:29.665555+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "e71ddbf4b2fc65ba30520609222e71d1a08bc02bd4391664feca4f74f65d323b",
+    "test": "qml_test_node_runtime_dialogs",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_node_runtime_dialogs/004-network-options-error.png",
+    "caption": "network-options-error",
+    "utc": "2026-10-10T17:20:30.135910+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "5d5946ca83076b9a9a54980797e26923a0d6d525f3bc6eff8f7b0d6429948eb8",
+    "test": "qml_test_node_runtime_dialogs",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_node_runtime_dialogs/005-abort-retry-ignore-button-mask.png",
+    "caption": "abort-retry-ignore-button-mask",
+    "utc": "2026-10-10T17:20:30.606731+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "5d91a502f358eae88fb123a44b09aab4ff818ced0781926cc04c7687b8ba2858",
+    "test": "qml_test_node_runtime_dialogs",
+    "kind": "application-screenshot"
+  }
+]

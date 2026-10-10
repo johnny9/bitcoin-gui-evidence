@@ -1,0 +1,1587 @@
+{
+  "id": "20261010-qml",
+  "date": "2026-10-10",
+  "application": "qml",
+  "title": "GUI-QML: acceptance proof and missing functional tests",
+  "snapshotCatalogId": "b4b1026b74ad8bf0a1628c9889b82193d33d210c3aa0170e94783f371fe15c0b",
+  "sourceRevision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+  "binarySha256": "a8215c7e45242fdf0e740339733696ec832e362f8306bfbe3bac95dd6bb4fb4c",
+  "initialCriteriaWithoutCaptures": 41,
+  "newlyCapturedCriteria": 33,
+  "remainingCriteriaWithoutCaptures": 8,
+  "initialProofGaps": 61,
+  "closedProofGaps": 35,
+  "remainingProofGaps": 26,
+  "assertions": 50,
+  "failedAssertions": 1,
+  "criteria": {
+    "F02.S04": {
+      "status": "Automated evidence collected",
+      "detail": "Repeating the wallet close action closes every loaded wallet while the node continues. The node remains available after closing all wallets.",
+      "checks": [
+        "close-all-wallets",
+        "node-after-close"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F03.S03": {
+      "status": "Automated evidence collected",
+      "detail": "A backup is restored with its filename-derived wallet name and the resulting wallet is opened. Naming the file is the supported naming workflow.",
+      "checks": [
+        "existing-f03-s03"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F04.S02": {
+      "status": "Automated evidence collected",
+      "detail": "GUI migration automatically preserves a nonempty original wallet backup. The screenshot shows the migrated wallet; backup-file creation is established by the filesystem assertion, not by pixels.",
+      "checks": [
+        "migration-backup"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F04.S03": {
+      "status": "Automated evidence collected",
+      "detail": "The receiving address and its label survive migration. The migrated spending wallet retains its confirmed balance. The migrated wallet retains the payment transaction. Watch-only address metadata survives in the migrated watch-only wallet. The migrated watch-only wallet retains its received funds. This fixture covers a funded legacy wallet, a labeled receiving address, a payment, and a separate migrated watch-only wallet.",
+      "checks": [
+        "migration-label",
+        "migration-funds",
+        "migration-history",
+        "migration-watch-label",
+        "migration-watch-funds"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F04.S04": {
+      "status": "Automated evidence collected",
+      "detail": "The migrated wallet is immediately available.",
+      "checks": [
+        "migration-auto-open"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F06.S01": {
+      "status": "Automated evidence collected",
+      "detail": "The GUI-created encrypted wallet is locked, remains locked after restart, and requires its passphrase for spending.",
+      "checks": [
+        "existing-f06-s01"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F07.S01": {
+      "status": "Partial / limited evidence",
+      "detail": "Balance and pending activity are present; the complete available/pending/immature/total breakdown is missing.",
+      "checks": [],
+      "hasFailure": false,
+      "testGap": "Create available, pending and immature funds, then assert the displayed balances and pending activity agree with RPC before and after confirmation. See [functional-test plan](collections/20261010-qml/missing-functional-tests.md#f07-s01)."
+    },
+    "F07.S02": {
+      "status": "Automated evidence collected",
+      "detail": "Activity shows the payment request and mined transaction as two distinct records.",
+      "checks": [
+        "existing-f07-s02"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F07.S03": {
+      "status": "Automated evidence collected",
+      "detail": "A transaction is opened from the unified activity history and its displayed amount is checked against the selected record.",
+      "checks": [
+        "existing-f07-s03"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F07.S04": {
+      "status": "Automated evidence collected",
+      "detail": "This run displays \u201cSyncing wallet activity\u2026\u201d while wallet history is not yet populated. The functional test checks the empty/loading-state guidance.",
+      "checks": [
+        "existing-f07-s04"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F08.S06": {
+      "status": "Automated evidence collected",
+      "detail": "QR sharing is demonstrated through the supported copy/save actions. Saving produces a PNG file whose signature is checked. Drag-and-drop export remains absent.",
+      "checks": [
+        "existing-f08-s06"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F09.S02": {
+      "status": "Automated evidence collected",
+      "detail": "Entering a recipient preserves the complete address. A saved-recipient picker remains absent; the accepted outcome is specifying the payment destination.",
+      "checks": [
+        "enter-payment-address"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F09.S07": {
+      "status": "Partial / limited evidence",
+      "detail": "Local signing and a mock external signer are exercised; physical hardware is not. Local and mock-signer transactions reach broadcast.",
+      "checks": [],
+      "hasFailure": false,
+      "testGap": "Repeat the payment with a compatible physical signer: approve on the device, verify the destination and fee, broadcast, and check the wallet holds no spending keys. See [functional-test plan](collections/20261010-qml/missing-functional-tests.md#f09-s07)."
+    },
+    "F09.S08": {
+      "status": "Automated evidence collected",
+      "detail": "The GUI saves an unsigned PSBT with the requested recipient and amount. Preparing the payment does not introduce local spending keys. The export still requires external signatures. The separate signing wallet can finish the exported transaction.",
+      "checks": [
+        "watch-only-export",
+        "watch-only-no-keys",
+        "watch-only-unsigned",
+        "external-handoff"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F10.S03": {
+      "status": "Automated evidence collected",
+      "detail": "The running application accepts an explicit payment-request import and populates the payment. This proves the accepted transfer outcome; automatic OS URI delivery remains absent.",
+      "checks": [
+        "existing-f10-s03"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F11.S04": {
+      "status": "Automated evidence collected",
+      "detail": "An empty payment has no fee estimate and explains the missing recipient.",
+      "checks": [
+        "fee-unavailable"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F12.S04": {
+      "status": "Partial / limited evidence",
+      "detail": "Amounts, addresses, labels, age, sorting and grouping are supported; confirmation counts are missing.",
+      "checks": [],
+      "hasFailure": false,
+      "testGap": "Create coins with distinct amounts, labels, ages and confirmations; verify the supported comparison fields, grouping and sorting against listunspent. Document that confirmation counts are not displayed. See [functional-test plan](collections/20261010-qml/missing-functional-tests.md#f12-s04)."
+    },
+    "F13.S05": {
+      "status": "Automated evidence collected",
+      "detail": "The GUI saves an unsigned PSBT with the requested recipient and amount. The export still requires external signatures. The separate signing wallet can finish the exported transaction. File export fulfills signing handoff; clipboard export remains absent. The save path is supplied through the existing test bridge hook.",
+      "checks": [
+        "watch-only-export",
+        "watch-only-unsigned",
+        "external-handoff"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F14.S06": {
+      "status": "Partial / limited evidence",
+      "detail": "File saving is available, including incomplete external-signer results; clipboard export is missing.",
+      "checks": [],
+      "hasFailure": false,
+      "testGap": "Export a transaction after one signer, assert the signature survives the GUI handoff, then have a second signer complete it. See [functional-test plan](collections/20261010-qml/missing-functional-tests.md#f14-s06)."
+    },
+    "F15.S01": {
+      "status": "Partial / limited evidence",
+      "detail": "An executable mock signer is exercised; no physical device.",
+      "checks": [],
+      "hasFailure": false,
+      "testGap": "Enumerate and connect a real compatible signer; validate identity and wallet descriptors. See [functional-test plan](collections/20261010-qml/missing-functional-tests.md#f15-s01)."
+    },
+    "F15.S02": {
+      "status": "Partial / limited evidence",
+      "detail": "Test signer holds the keys externally; physical device custody is not certified.",
+      "checks": [],
+      "hasFailure": false,
+      "testGap": "Verify key custody on a real device while the connected wallet exposes only public descriptors. See [functional-test plan](collections/20261010-qml/missing-functional-tests.md#f15-s02)."
+    },
+    "F15.S04": {
+      "status": "Partial / limited evidence",
+      "detail": "Mock signer approval, errors and broadcast are tested; physical approval is untested.",
+      "checks": [],
+      "hasFailure": false,
+      "testGap": "Approve and reject payments on a real device; compare its recipient/fee confirmation and the broadcast transaction. See [functional-test plan](collections/20261010-qml/missing-functional-tests.md#f15-s04)."
+    },
+    "F15.S05": {
+      "status": "Partial / limited evidence",
+      "detail": "An incomplete mock external-signer result can be saved; broad multisigner exchange is not exercised. No matching screenshot collected.",
+      "checks": [],
+      "hasFailure": false,
+      "testGap": "Save an incomplete signing result and resume it with another signer without losing signatures or changing outputs. See [functional-test plan](collections/20261010-qml/missing-functional-tests.md#f15-s05)."
+    },
+    "F16.S03": {
+      "status": "Automated evidence collected",
+      "detail": "Address and label searches plus date/type/amount filters locate activity. Configurable sorting remains absent; the accepted outcome is finding transactions.",
+      "checks": [
+        "existing-f16-s03"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F16.S09": {
+      "status": "Partial / limited evidence",
+      "detail": "Explorer URI construction is tested; opening a third-party browser/service was not exercised. No matching screenshot collected.",
+      "checks": [],
+      "hasFailure": false,
+      "testGap": "Configure a controlled explorer URL, open a real transaction, confirm the outgoing URL contains its exact transaction ID, and observe browser delivery. See [functional-test plan](collections/20261010-qml/missing-functional-tests.md#f16-s09)."
+    },
+    "F18.S05": {
+      "status": "Partial / limited evidence",
+      "detail": "Address copying is supported; separate label-copy coverage needs verification.",
+      "checks": [],
+      "hasFailure": false,
+      "testGap": "Copy a saved address and an editable saved label through the GUI; assert both clipboard values exactly match the records. See [functional-test plan](collections/20261010-qml/missing-functional-tests.md#f18-s05)."
+    },
+    "F20.S03": {
+      "status": "Partial / limited evidence",
+      "detail": "Storage and pruning information is shown; wallet-recovery consequences are not explained.",
+      "checks": [],
+      "hasFailure": false,
+      "testGap": "Exercise sufficient and insufficient free space and pruning choices; assert displayed requirements and the accepted storage selection. Recovery guidance remains a documented UI difference. See [functional-test plan](collections/20261010-qml/missing-functional-tests.md#f20-s03)."
+    },
+    "F20.S04": {
+      "status": "Automated evidence collected",
+      "detail": "The GUI node downloads and validates the same chain tip as its peer. A real peer supplied 2,200 blocks over a rate-limited loopback connection. This is regtest, not a full mainnet initial download.",
+      "checks": [
+        "download-and-validate"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F20.S05": {
+      "status": "Automated evidence collected",
+      "detail": "The GUI shows synchronization while its real node remains behind its peer. The GUI node downloads and validates the same chain tip as its peer.",
+      "checks": [
+        "real-sync-in-progress",
+        "download-and-validate"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F20.S07": {
+      "status": "Partial / limited evidence",
+      "detail": "Regtest is executed; other chains are source/configuration evidence only. No matching screenshot collected.",
+      "checks": [],
+      "hasFailure": false,
+      "testGap": "Launch isolated offline profiles for mainnet, testnet, testnet4, signet and regtest; assert the active chain and GUI identity for each. See [functional-test plan](collections/20261010-qml/missing-functional-tests.md#f20-s07)."
+    },
+    "F21.S01": {
+      "status": "Automated evidence collected",
+      "detail": "Pausing from the node view disables Core peer networking. Resuming from the node view enables Core peer networking.",
+      "checks": [
+        "pause-network",
+        "resume-network"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F21.S03": {
+      "status": "Partial / limited evidence",
+      "detail": "Proxy settings and validation are tested; live Tor/SOCKS routing is not.",
+      "checks": [],
+      "hasFailure": false,
+      "testGap": "Use controlled SOCKS5 and Tor routes, verify connections reach the configured proxy, and prove no unintended direct connection bypasses it. See [functional-test plan](collections/20261010-qml/missing-functional-tests.md#f21-s03)."
+    },
+    "F21.S04": {
+      "status": "Partial / limited evidence",
+      "detail": "Configuration exists; physical-router mapping is untested. No matching screenshot collected.",
+      "checks": [],
+      "hasFailure": false,
+      "testGap": "Enable mapping against a controlled gateway; verify the resulting mapping and its removal/renewal. A settings toggle alone does not prove router behavior. See [functional-test plan](collections/20261010-qml/missing-functional-tests.md#f21-s04)."
+    },
+    "F22.S03": {
+      "status": "Partial / limited evidence",
+      "detail": "Traffic periods are selectable; resetting traffic history is missing.",
+      "checks": [],
+      "hasFailure": false,
+      "testGap": "Produce deterministic traffic, select different observation periods, and verify displayed samples and totals follow the selected period. See [functional-test plan](collections/20261010-qml/missing-functional-tests.md#f22-s03)."
+    },
+    "F22.S09": {
+      "status": "Partial / limited evidence",
+      "detail": "RPC is available; this collection does not execute every advanced command listed.",
+      "checks": [],
+      "hasFailure": false,
+      "testGap": "Run descriptor import, multisig setup and PSBT combination through the GUI console and validate resulting wallet/PSBT state. Rescan is covered by the new watch-only test. See [functional-test plan](collections/20261010-qml/missing-functional-tests.md#f22-s09)."
+    },
+    "F23.S01": {
+      "status": "Partial / limited evidence",
+      "detail": "A new functional regression fails: Core starts with -dbcache=768, but entering 768 in the GUI leaves 7. The GUI maximum is derived from the 8 MiB coins-database sub-cache constant, rather than the total database-cache range. Small allocations and script-thread settings pass; this criterion remains unaccepted.",
+      "checks": [
+        "core-accepts-768",
+        "gui-accepts-768",
+        "resource-preferences",
+        "resources-restored"
+      ],
+      "hasFailure": true,
+      "testGap": "Fix the GUI total-cache range, then make the new 768 MiB regression pass. Add boundary cases and assert persistence after restart. See [functional-test plan](collections/20261010-qml/missing-functional-tests.md#f23-s01)."
+    },
+    "F23.S02": {
+      "status": "Automated evidence collected",
+      "detail": "The displayed RPC server is enabled and serves a real external client.",
+      "checks": [
+        "rpc-server"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F23.S10": {
+      "status": "Automated evidence collected",
+      "detail": "The configuration-file value is shown when no command-line or GUI override is present.",
+      "checks": [
+        "configuration-precedence"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F23.S11": {
+      "status": "Automated evidence collected",
+      "detail": "Command-line settings override configuration and GUI settings and disable editing. A persisted GUI override takes precedence over the configuration file. The configuration-file value is shown when no command-line or GUI override is present.",
+      "checks": [
+        "command-line-precedence",
+        "gui-over-config",
+        "configuration-precedence"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F23.S12": {
+      "status": "Partial / limited evidence",
+      "detail": "A fresh functional rerun restores connection/proxy defaults through startup reset. No functional assertion yet checks that the previous settings file was retained as a recoverable backup.",
+      "checks": [],
+      "hasFailure": false,
+      "testGap": "Seed nondefault preferences, reset through the supported startup flow, and assert a nonempty backup retains the original settings and can be read back. See [functional-test plan](collections/20261010-qml/missing-functional-tests.md#f23-s12)."
+    },
+    "F24.S01": {
+      "status": "Partial / limited evidence",
+      "detail": "Native Linux tray Hide/Show passed; macOS Dock and Windows remain untested. Linux tray hides the QML window while RPC still responds. passed. Linux tray restores the QML window. passed.",
+      "checks": [],
+      "hasFailure": false,
+      "testGap": "Repeat native hide/restore on Windows and macOS; assert the process and node remain alive while the window is hidden. See [functional-test plan](collections/20261010-qml/missing-functional-tests.md#f24-s01)."
+    },
+    "F24.S02": {
+      "status": "Partial / limited evidence",
+      "detail": "Native Linux Hide/Show preserves a responding node; other desktop implementations remain untested. Linux tray hides the QML window while RPC still responds. passed. Linux tray restores the QML window. passed.",
+      "checks": [],
+      "hasFailure": false,
+      "testGap": "Exercise visibility transitions on Windows/macOS and assert node RPC remains responsive. Linux native Hide/Show already has proof. See [functional-test plan](collections/20261010-qml/missing-functional-tests.md#f24-s02)."
+    },
+    "F24.S03": {
+      "status": "Partial / limited evidence",
+      "detail": "Keyboard navigation reaches payments and diagnostics in the main window. The original native Linux tray proof establishes Hide/Show separately. A combined tray-restore-and-actions scenario is still missing.",
+      "checks": [],
+      "hasFailure": false,
+      "testGap": "After native tray/Dock restoration, reach payment, message signing/verification, settings and diagnostics while preserving the selected wallet. See [functional-test plan](collections/20261010-qml/missing-functional-tests.md#f24-s03)."
+    },
+    "F25.S04": {
+      "status": "Automated evidence collected",
+      "detail": "The live QML error dialog displays the supplied critical error and the expected acknowledgement button without desktop notifications. The message is injected through the test bridge; no database corruption is induced.",
+      "checks": [
+        "existing-f25-s04"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F26.S01": {
+      "status": "Automated evidence collected",
+      "detail": "Minimizing the GUI leaves the node responding. The desktop restores the minimized application window.",
+      "checks": [
+        "window-minimize",
+        "window-restore"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F26.S02": {
+      "status": "Automated evidence collected",
+      "detail": "The real window position and size survive an application restart.",
+      "checks": [
+        "window-placement-restored"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F26.S04": {
+      "status": "Automated evidence collected",
+      "detail": "Node diagnostics execute while the same wallet remains loaded. Diagnostics and wallet activity use different views of the same window, without simultaneous side-by-side display.",
+      "checks": [
+        "wallet-diagnostics"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F27.S03": {
+      "status": "Automated evidence collected",
+      "detail": "Pre-init and node startup states are captured. No matching screenshot collected.",
+      "checks": [],
+      "hasFailure": false,
+      "testGap": "Use a sufficiently long real initialization/reindex fixture, assert progress updates remain visible, and capture a stable initialization frame. See [functional-test plan](collections/20261010-qml/missing-functional-tests.md#f27-s03)."
+    },
+    "F27.S04": {
+      "status": "Partial / limited evidence",
+      "detail": "Initialization shutdown is tested with IPC disabled; IPC-enabled process lifecycle is outside this build. Cancellation during initialization is exercised. No matching screenshot collected.",
+      "checks": [],
+      "hasFailure": false,
+      "testGap": "Run initialization cancellation with IPC enabled; assert GUI and child-node exit status and inspect both stderr streams under the required sanitizer configuration. See [functional-test plan](collections/20261010-qml/missing-functional-tests.md#f27-s04)."
+    },
+    "F28.S03": {
+      "status": "Automated evidence collected",
+      "detail": "Wallet settings opens the address records. Node diagnostics execute while the same wallet remains loaded.",
+      "checks": [
+        "open-address-records",
+        "wallet-diagnostics"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F28.S04": {
+      "status": "Automated evidence collected",
+      "detail": "Keyboard shortcut reaches sendPage Keyboard shortcut reaches requestPaymentPage Keyboard shortcut reaches activityPage",
+      "checks": [
+        "shortcut-ctrl+2",
+        "shortcut-ctrl+3",
+        "shortcut-ctrl+1"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F28.S05": {
+      "status": "Automated evidence collected",
+      "detail": "Keyboard shortcut reaches sendPage Keyboard shortcut reaches requestPaymentPage Keyboard shortcut reaches activityPage",
+      "checks": [
+        "shortcut-ctrl+2",
+        "shortcut-ctrl+3",
+        "shortcut-ctrl+1"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F29.S02": {
+      "status": "Automated evidence collected",
+      "detail": "The GUI shows synchronization while its real node remains behind its peer. The GUI node downloads and validates the same chain tip as its peer.",
+      "checks": [
+        "real-sync-in-progress",
+        "download-and-validate"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F29.S06": {
+      "status": "Automated evidence collected",
+      "detail": "The console explains history navigation and how to discover available commands.",
+      "checks": [
+        "contextual-guidance"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F30.S06": {
+      "status": "Partial / limited evidence",
+      "detail": "Real peer synchronization is now captured, including the initial \u201cEstimating\u201d state. A settled ETA and its behavior under changing throughput are not yet exercised.",
+      "checks": [
+        "real-sync-in-progress"
+      ],
+      "hasFailure": false,
+      "testGap": "Extend the controlled peer transfer until a settled ETA appears; assert progress advances and the estimate responds sensibly to throughput changes. See [functional-test plan](collections/20261010-qml/missing-functional-tests.md#f30-s06)."
+    },
+    "F30.S07": {
+      "status": "Automated evidence collected",
+      "detail": "The wallet remains navigable while the connected node is still syncing.",
+      "checks": [
+        "wallet-access-during-sync"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F31.S01": {
+      "status": "Automated evidence collected",
+      "detail": "The running application accepts an explicit payment-request import and populates the payment. This proves the accepted transfer outcome; automatic OS URI delivery remains absent.",
+      "checks": [
+        "existing-f10-s03"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F31.S02": {
+      "status": "Partial / limited evidence",
+      "detail": "Regtest identity is captured; other network identities have source/component coverage. No matching screenshot collected.",
+      "checks": [],
+      "hasFailure": false,
+      "testGap": "Capture the identity shown by each of the five supported networks, including simultaneous distinct profiles. See [functional-test plan](collections/20261010-qml/missing-functional-tests.md#f31-s02)."
+    },
+    "F31.S03": {
+      "status": "Automated evidence collected",
+      "detail": "The light appearance can be selected from the GUI. The dark appearance can be selected from the GUI. Manual theme choice is the accepted outcome; automatic desktop-theme following remains absent.",
+      "checks": [
+        "appearance-light",
+        "appearance-dark"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    },
+    "F31.S05": {
+      "status": "Automated evidence collected",
+      "detail": "Explorer URL generation has tests; browser launch remains manual. No matching screenshot collected.",
+      "checks": [],
+      "hasFailure": false,
+      "testGap": "Assert a configured explorer action delivers the selected transaction ID to a controlled browser target. Current evidence checks URL construction only. See [functional-test plan](collections/20261010-qml/missing-functional-tests.md#f31-s05)."
+    },
+    "F34.S01": {
+      "status": "Automated evidence collected",
+      "detail": "Removing historical wallet records leaves the monitoring wallet empty before rescan. A rescan initiated in the GUI recovers the historical wallet funds.",
+      "checks": [
+        "rescan-fixture",
+        "console-rescan"
+      ],
+      "hasFailure": false,
+      "testGap": ""
+    }
+  },
+  "selectedCaptures": [
+    {
+      "path": "collections/20261010-qml/media/qml/qml_test_wallet_restore/009-04-import-success-screen-displayed.png",
+      "caption": "Recovered wallet named from its backup",
+      "utc": "2026-10-10T17:23:10.042986+00:00",
+      "width": 800,
+      "height": 665,
+      "sha256": "8276531d49f6f2987043a3f62b74fe2c5f6f8ecadb486db963fe63b474578f48",
+      "test": "qml_test_wallet_restore",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F03.S03"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_test_password_wallet/005-05-wallet-restarted-locked.png",
+      "caption": "Encrypted wallet remains locked after restart",
+      "utc": "2026-10-10T17:21:45.322872+00:00",
+      "width": 800,
+      "height": 665,
+      "sha256": "dc3882855bb9e4a291cacf8ce65a7673339d7b2af167f4ca08491c806b9c1db3",
+      "test": "qml_test_password_wallet",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F06.S01"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_test_activity_filter_export/006-06-activity-shows-payment-request-and-mined-rows.png",
+      "caption": "Recent wallet activity",
+      "utc": "2026-10-10T17:18:57.421470+00:00",
+      "width": 800,
+      "height": 665,
+      "sha256": "cf5c6c31395def8526553e4b767adbf840aa48656bc748c5460a581000820e0c",
+      "test": "qml_test_activity_filter_export",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F07.S02"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_test_activity_filter_export/030-30-activity-details-amount-uses-selected-display-unit.png",
+      "caption": "Transaction found in the activity history",
+      "utc": "2026-10-10T17:19:13.084734+00:00",
+      "width": 800,
+      "height": 665,
+      "sha256": "16024907c47e6829ed8b2c52e06ba555a9fc7c29e23b7661efb3073cb64ccc30",
+      "test": "qml_test_activity_filter_export",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F07.S03"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_test_activity_filter_export/002-02-source-empty-activity-state-shown-syncing-wallet-activity.png",
+      "caption": "Wallet history is still synchronizing",
+      "utc": "2026-10-10T17:18:54.733995+00:00",
+      "width": 800,
+      "height": 665,
+      "sha256": "6fe728ab73bb764e5ab38bb2ed7bf50718e9c465f640806e3928974eed5e2b9e",
+      "test": "qml_test_activity_filter_export",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F07.S04"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_test_receive/024-receive-menu.png",
+      "caption": "QR image sharing through copy and save",
+      "utc": "2026-10-10T17:20:52.906530+00:00",
+      "width": 1180,
+      "height": 960,
+      "sha256": "781c6b65a1e6042e924d0fe61073eb92a27c995ce911e6d920a4cd75a3a40338",
+      "test": "qml_test_receive",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F08.S06"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_test_uri_import/006-click-senduriimportapplybutton.png",
+      "caption": "Payment request imported into the running application",
+      "utc": "2026-10-10T17:29:12.317631+00:00",
+      "width": 800,
+      "height": 665,
+      "sha256": "709005f380f9d28d06ad8b27128be5749003ea4bbb4036857ccdbbf288f9284a",
+      "test": "qml_test_uri_import",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F10.S03",
+        "F31.S01"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_test_activity_filter_export/014-14-search-by-request-label-applied.png",
+      "caption": "Locate wallet activity by label",
+      "utc": "2026-10-10T17:19:02.390681+00:00",
+      "width": 800,
+      "height": 665,
+      "sha256": "a7d1523042ad87d425f956013aeccf1c1679222d5fb2dbcd0efa4271134021f3",
+      "test": "qml_test_activity_filter_export",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F16.S03"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_test_node_runtime_dialogs/001-database-read-error.png",
+      "caption": "Critical error delivered inside the application",
+      "utc": "2026-10-10T17:20:28.722509+00:00",
+      "width": 800,
+      "height": 665,
+      "sha256": "d35c42f40f955b5c044268a7a03b51f3d6de122479a131d4d978634bd5b016ae",
+      "test": "qml_test_node_runtime_dialogs",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F25.S04"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_evidence_desktop/001-keyboard-sendpage.png",
+      "caption": "Send reached with its keyboard shortcut",
+      "utc": "2026-10-10T17:39:30.935329+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "4d1d1ea21c7c1c5ef30d4e67326491f1211846e47fc2ae8de8c1fa4f6aa0ff04",
+      "test": "qml_evidence_desktop",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F28.S04",
+        "F28.S05"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_evidence_desktop/002-keyboard-requestpaymentpage.png",
+      "caption": "Receive reached with its keyboard shortcut",
+      "utc": "2026-10-10T17:39:31.664585+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "cb91167f79153630db68fbcfe98ba060d4d5997e814d470d8a77d2386cb395ab",
+      "test": "qml_evidence_desktop",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F28.S04",
+        "F28.S05"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_evidence_desktop/004-fee-estimate-unavailable.png",
+      "caption": "Unavailable fee estimate is clearly shown",
+      "utc": "2026-10-10T17:39:32.887508+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "383a274c79a23c4cd2899911b20a9df516824d96fe50ea8a95b69d9341733935",
+      "test": "qml_evidence_desktop",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F11.S04"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_evidence_desktop/005-recipient-entered.png",
+      "caption": "Payment recipient entered",
+      "utc": "2026-10-10T17:39:33.397585+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "e0c43d9b274a1756b43ce259780654be66d5a569855d465e10f015ab3547c5b7",
+      "test": "qml_evidence_desktop",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F09.S02"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_evidence_desktop/006-address-records.png",
+      "caption": "Address records reached from wallet settings",
+      "utc": "2026-10-10T17:39:34.061711+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "a8433da95c6cb4ef0982b46b0b3902b9173bcc8899c23ce2f801cd1075a931f7",
+      "test": "qml_evidence_desktop",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F28.S03"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_evidence_desktop/007-diagnostics-with-wallet.png",
+      "caption": "Node diagnostics and guidance while a wallet is loaded",
+      "utc": "2026-10-10T17:39:34.813727+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "03898406d8098d8f18072edf2499a5a38adf6b5528c21f41089ca09e9d46330c",
+      "test": "qml_evidence_desktop",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F26.S04",
+        "F28.S03",
+        "F29.S06",
+        "F24.S03"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_evidence_desktop/008-network-paused.png",
+      "caption": "Peer networking paused by the GUI",
+      "utc": "2026-10-10T17:39:35.323114+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "f953117daf048480ad8117b4174c09841c0f25d509c7e3706b77f4b275e5d9ac",
+      "test": "qml_evidence_desktop",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F21.S01"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_evidence_desktop/009-rpc-server-configured.png",
+      "caption": "RPC server configured and serving a client",
+      "utc": "2026-10-10T17:39:35.849563+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "9fafc7f8634f406ae950dbe8d4cf9d32daeb1c017751dcc11adae60d68b9681c",
+      "test": "qml_evidence_desktop",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F23.S02"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_evidence_desktop/010-resource-settings-restart-guidance.png",
+      "caption": "Resource preferences and restart guidance",
+      "utc": "2026-10-10T17:39:37.384567+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "bd94d0c0d3a367e5e2817264d1dac2072f9ad52be28ecb86546170d16946af45",
+      "test": "qml_evidence_desktop",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F23.S01",
+        "F23.S11"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_evidence_desktop/012-window-placement-restored.png",
+      "caption": "Window placement restored after restart",
+      "utc": "2026-10-10T17:39:39.408936+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "64ada53903e74170a546a9fcf311b3d5433f787b22bffad462a096a50f180f52",
+      "test": "qml_evidence_desktop",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F26.S02"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_evidence_desktop/013-resource-settings-after-restart.png",
+      "caption": "Small resource allocations retained after restart",
+      "utc": "2026-10-10T17:39:39.939961+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "d12ee79b8c60582caf0340b6f9c29f5e9e1caf87045dbcbb0991dc5a6eb0613c",
+      "test": "qml_evidence_desktop",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F23.S01"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_evidence_desktop/014-command-line-setting-precedence.png",
+      "caption": "Command-line setting overrides the GUI",
+      "utc": "2026-10-10T17:39:41.400044+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "65ab349dff181c812a9981dbd03a181b1cb00193045937587fc59f6cf9f76b46",
+      "test": "qml_evidence_desktop",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F23.S11"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_evidence_desktop/015-configuration-file-setting-precedence.png",
+      "caption": "Configuration value used when overrides are absent",
+      "utc": "2026-10-10T17:39:43.874314+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "81e9a41cbd1a1ac7451b88dd060b9f9c9787e0d00261019dd9b4d2dd793e0f28",
+      "test": "qml_evidence_desktop",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F23.S10",
+        "F23.S11"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_evidence_watchonly/001-console-rescan-recovers-history.png",
+      "caption": "Console rescan recovers historical wallet funds",
+      "utc": "2026-10-10T17:40:00.143947+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "c18ba289110a226715b1a20d79c37747b989413302cd308631c6788a131b59b2",
+      "test": "qml_evidence_watchonly",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F34.S01"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_evidence_watchonly/002-watch-only-recovered-activity.png",
+      "caption": "Recovered activity in a watch-only wallet",
+      "utc": "2026-10-10T17:40:00.670541+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "fa5ca87cf204c1bb5160724f6aa3fbd082d401118504ea7b7d5cc68826a07327",
+      "test": "qml_evidence_watchonly",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F34.S01"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_evidence_watchonly/003-watch-only-unsigned-payment-exported.png",
+      "caption": "Unsigned watch-only payment exported for another signer",
+      "utc": "2026-10-10T17:40:01.539918+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "7c033240b2527359655f81e915f56c957352ff0ab6a983b8755e5c3656c01262",
+      "test": "qml_evidence_watchonly",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F09.S08",
+        "F13.S05"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_evidence_migration/001-migrated-wallet-preserved-funds.png",
+      "caption": "Migrated wallet retains its spending balance and history",
+      "utc": "2026-10-10T17:40:06.548775+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "28651459e7d63f378482158ace769cd505be543f6fea375c3fab961052ee271f",
+      "test": "qml_evidence_migration",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F04.S02",
+        "F04.S03",
+        "F04.S04"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_evidence_migration/002-migrated-watch-only-funds.png",
+      "caption": "Migrated watch-only wallet retains its funds",
+      "utc": "2026-10-10T17:40:07.688750+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "0adf992296427bc9382f16a430f432ebb558ee019a3399cc93e5706af315f85a",
+      "test": "qml_evidence_migration",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F04.S03"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_evidence_sync/001-live-regtest-sync-progress.png",
+      "caption": "Live peer synchronization in progress",
+      "utc": "2026-10-10T17:40:42.635225+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "0676512d4f835df1ffd512d0dc5332f48b94e7e48a806ea4601796d04c76e32c",
+      "test": "qml_evidence_sync",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F20.S05",
+        "F29.S02",
+        "F30.S06"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_evidence_sync/002-wallet-accessible-during-sync.png",
+      "caption": "Wallet navigation remains available during synchronization",
+      "utc": "2026-10-10T17:40:43.137575+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "3add84b473abdf79ad1eaf93d453e8d8ad85b8caf47433895b0fd1667674e1b0",
+      "test": "qml_evidence_sync",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F30.S07"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_evidence_sync/003-real-peer-sync-complete.png",
+      "caption": "GUI node reaches the peer\u2019s validated chain tip",
+      "utc": "2026-10-10T17:40:58.125368+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "3f2239ae8f6d1c33f11674ff21b4f38f2bdaa8acb84be3aa57208ef8ddcaf394",
+      "test": "qml_evidence_sync",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F20.S04",
+        "F20.S05",
+        "F29.S02"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_evidence_shell/001-manual-light-appearance.png",
+      "caption": "Manual light appearance",
+      "utc": "2026-10-10T17:39:46.407600+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "0771fdffcd8dfa5b5795b4d8531920daccf00a88fb427503ae08b06170733ec4",
+      "test": "qml_evidence_shell",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F31.S03"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_evidence_shell/002-manual-dark-appearance.png",
+      "caption": "Manual dark appearance",
+      "utc": "2026-10-10T17:39:46.945166+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "4d0b1027565369fe8f7bc89f5fa22fcd6761739dbd7a25c0d6bc2b23196525b7",
+      "test": "qml_evidence_shell",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F31.S03"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_evidence_shell/003-window-restored-from-desktop.png",
+      "caption": "Application window restored through the desktop",
+      "utc": "2026-10-10T17:39:47.691898+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "9e3eed996e493fde0a2a1a6c45c196bdfcafaf66bc9ac2628194d24a6a6f5cd1",
+      "test": "qml_evidence_shell",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F26.S01"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_evidence_shell/004-all-wallets-closed.png",
+      "caption": "All wallets closed while the node keeps running",
+      "utc": "2026-10-10T17:39:49.665151+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "4fa836b31f78d8a3463ae721f5f3f7d93e22b4d5e7e44dcad052a64e7bdd1f14",
+      "test": "qml_evidence_shell",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F02.S04"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_evidence_cache_limit/001-valid-core-cache-allocation.png",
+      "caption": "Core accepts a 768 MiB cache allocation",
+      "utc": "2026-10-10T17:40:59.986300+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "76afe718bbf464ea0fdc5ea32f68d0dad9a2d8d8dc79cd33097376fda1f57667",
+      "test": "qml_evidence_cache_limit",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F23.S01"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_evidence_cache_limit/002-gui-rejects-valid-cache-allocation.png",
+      "caption": "GUI incorrectly rejects that allocation and leaves 7",
+      "utc": "2026-10-10T17:41:01.781245+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "460d71b76e1daa9eae76b801bf7dbac49ace6d75bea7c98a1960fb265b10153b",
+      "test": "qml_evidence_cache_limit",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F23.S01"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    },
+    {
+      "path": "collections/20261010-qml/media/qml/qml_test_resetguisettings/040-wait-for-page-proxysettingsrow.png",
+      "caption": "Reset returns connection preferences to defaults",
+      "utc": "2026-10-10T17:20:22.247337+00:00",
+      "width": 800,
+      "height": 665,
+      "sha256": "0260c1d38b5c8e68ead2beefe30f7807bb410c6011d42d04e8ad0c5cb75d43b3",
+      "test": "qml_test_resetguisettings",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F23.S12"
+      ],
+      "note": "Unmodified application frame. Linux X11, synthetic regtest fixtures."
+    }
+  ],
+  "functional": [
+    {
+      "test": "qml_test_password_wallet",
+      "started_utc": "2026-10-10T17:21:35.120300+00:00",
+      "seconds": 79.73,
+      "exit_code": 0,
+      "status": "passed",
+      "command": [
+        "python3",
+        "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+        "/work/qml-source/test/functional/qml_test_password_wallet.py"
+      ],
+      "log": "collections/20261010-qml/logs/qml_test_password_wallet.log",
+      "date": "2026-10-10",
+      "captures": 30,
+      "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+      "testModified": false,
+      "testVariant": "Unchanged pinned test"
+    },
+    {
+      "test": "qml_test_activity_filter_export",
+      "started_utc": "2026-10-10T17:18:49.558365+00:00",
+      "seconds": 23.92,
+      "exit_code": 0,
+      "status": "passed",
+      "command": [
+        "python3",
+        "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+        "/work/qml-acceptance-20261010/scripts/qml_test_activity_filter_export.py"
+      ],
+      "log": "collections/20261010-qml/logs/qml_test_activity_filter_export.log",
+      "date": "2026-10-10",
+      "captures": 30,
+      "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+      "testModified": false,
+      "testVariant": "Unchanged pinned test"
+    },
+    {
+      "test": "qml_test_psbt",
+      "started_utc": "2026-10-10T17:19:13.477425+00:00",
+      "seconds": 17.55,
+      "exit_code": 0,
+      "status": "passed",
+      "command": [
+        "python3",
+        "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+        "/work/qml-acceptance-20261010/scripts/qml_test_psbt.py"
+      ],
+      "log": "collections/20261010-qml/logs/qml_test_psbt.log",
+      "date": "2026-10-10",
+      "captures": 16,
+      "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+      "testModified": false,
+      "testVariant": "Unchanged pinned test"
+    },
+    {
+      "test": "qml_test_settings_display",
+      "started_utc": "2026-10-10T17:19:31.030771+00:00",
+      "seconds": 21.36,
+      "exit_code": 0,
+      "status": "passed",
+      "command": [
+        "python3",
+        "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+        "/work/qml-acceptance-20261010/scripts/qml_test_settings_display.py"
+      ],
+      "log": "collections/20261010-qml/logs/qml_test_settings_display.log",
+      "date": "2026-10-10",
+      "captures": 40,
+      "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+      "testModified": false,
+      "testVariant": "Unchanged pinned test"
+    },
+    {
+      "test": "qml_test_resetguisettings",
+      "started_utc": "2026-10-10T17:19:52.393788+00:00",
+      "seconds": 30.88,
+      "exit_code": 0,
+      "status": "passed",
+      "command": [
+        "python3",
+        "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+        "/work/qml-acceptance-20261010/scripts/qml_test_resetguisettings.py"
+      ],
+      "log": "collections/20261010-qml/logs/qml_test_resetguisettings.log",
+      "date": "2026-10-10",
+      "captures": 42,
+      "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+      "testModified": false,
+      "testVariant": "Unchanged pinned test"
+    },
+    {
+      "test": "qml_test_window_geometry",
+      "started_utc": "2026-10-10T17:20:23.277578+00:00",
+      "seconds": 1.67,
+      "exit_code": 0,
+      "status": "passed",
+      "command": [
+        "python3",
+        "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+        "/work/qml-acceptance-20261010/scripts/qml_test_window_geometry.py"
+      ],
+      "log": "collections/20261010-qml/logs/qml_test_window_geometry.log",
+      "date": "2026-10-10",
+      "captures": 0,
+      "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+      "testModified": false,
+      "testVariant": "Unchanged pinned test"
+    },
+    {
+      "test": "qml_test_blockclock",
+      "started_utc": "2026-10-10T17:20:24.946050+00:00",
+      "seconds": 2.27,
+      "exit_code": 0,
+      "status": "passed",
+      "command": [
+        "python3",
+        "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+        "/work/qml-acceptance-20261010/scripts/qml_test_blockclock.py"
+      ],
+      "log": "collections/20261010-qml/logs/qml_test_blockclock.log",
+      "date": "2026-10-10",
+      "captures": 2,
+      "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+      "testModified": false,
+      "testVariant": "Unchanged pinned test"
+    },
+    {
+      "test": "qml_test_node_runtime_dialogs",
+      "started_utc": "2026-10-10T17:20:27.214916+00:00",
+      "seconds": 3.62,
+      "exit_code": 0,
+      "status": "passed",
+      "command": [
+        "python3",
+        "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+        "/work/qml-acceptance-20261010/scripts/qml_test_node_runtime_dialogs.py"
+      ],
+      "log": "collections/20261010-qml/logs/qml_test_node_runtime_dialogs.log",
+      "date": "2026-10-10",
+      "captures": 5,
+      "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+      "testModified": false,
+      "testVariant": "Unchanged pinned test"
+    },
+    {
+      "test": "qml_test_wallet_restore",
+      "started_utc": "2026-10-10T17:22:54.847925+00:00",
+      "seconds": 16.0,
+      "exit_code": 0,
+      "status": "passed",
+      "command": [
+        "python3",
+        "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+        "/work/qml-source/test/functional/qml_test_wallet_restore.py"
+      ],
+      "log": "collections/20261010-qml/logs/qml_test_wallet_restore.log",
+      "date": "2026-10-10",
+      "captures": 10,
+      "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+      "testModified": false,
+      "testVariant": "Unchanged pinned test"
+    },
+    {
+      "test": "qml_test_receive",
+      "started_utc": "2026-10-10T17:20:36.013428+00:00",
+      "seconds": 44.61,
+      "exit_code": 0,
+      "status": "passed",
+      "command": [
+        "python3",
+        "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+        "/work/qml-acceptance-20261010/scripts/qml_test_receive.py"
+      ],
+      "log": "collections/20261010-qml/logs/qml_test_receive.log",
+      "date": "2026-10-10",
+      "captures": 63,
+      "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+      "testModified": false,
+      "testVariant": "Unchanged pinned test"
+    },
+    {
+      "test": "qml_evidence_desktop",
+      "started_utc": "2026-10-10T17:39:28.972313+00:00",
+      "seconds": 15.3,
+      "exit_code": 0,
+      "status": "passed",
+      "command": [
+        "python3",
+        "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+        "/work/qml-acceptance-20261010/scripts/qml_evidence_desktop.py"
+      ],
+      "log": "collections/20261010-qml/logs/qml_evidence_desktop.log",
+      "date": "2026-10-10",
+      "captures": 15,
+      "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+      "testModified": true,
+      "testVariant": "New acceptance scenario"
+    },
+    {
+      "test": "qml_evidence_watchonly",
+      "started_utc": "2026-10-10T17:39:49.999384+00:00",
+      "seconds": 11.84,
+      "exit_code": 0,
+      "status": "passed",
+      "command": [
+        "python3",
+        "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+        "/work/qml-acceptance-20261010/scripts/qml_evidence_watchonly.py"
+      ],
+      "log": "collections/20261010-qml/logs/qml_evidence_watchonly.log",
+      "date": "2026-10-10",
+      "captures": 3,
+      "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+      "testModified": true,
+      "testVariant": "New acceptance scenario"
+    },
+    {
+      "test": "qml_evidence_migration",
+      "started_utc": "2026-10-10T17:40:01.839483+00:00",
+      "seconds": 6.18,
+      "exit_code": 0,
+      "status": "passed",
+      "command": [
+        "python3",
+        "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+        "/work/qml-acceptance-20261010/scripts/qml_evidence_migration.py"
+      ],
+      "log": "collections/20261010-qml/logs/qml_evidence_migration.log",
+      "date": "2026-10-10",
+      "captures": 2,
+      "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+      "testModified": true,
+      "testVariant": "New acceptance scenario"
+    },
+    {
+      "test": "qml_evidence_sync",
+      "started_utc": "2026-10-10T17:40:08.017915+00:00",
+      "seconds": 50.62,
+      "exit_code": 0,
+      "status": "passed",
+      "command": [
+        "python3",
+        "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+        "/work/qml-acceptance-20261010/scripts/qml_evidence_sync.py"
+      ],
+      "log": "collections/20261010-qml/logs/qml_evidence_sync.log",
+      "date": "2026-10-10",
+      "captures": 3,
+      "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+      "testModified": true,
+      "testVariant": "New acceptance scenario"
+    },
+    {
+      "test": "qml_test_uri_import",
+      "started_utc": "2026-10-10T17:29:08.233089+00:00",
+      "seconds": 9.13,
+      "exit_code": 0,
+      "status": "passed",
+      "command": [
+        "python3",
+        "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+        "/work/qml-source/test/functional/qml_test_uri_import.py"
+      ],
+      "log": "collections/20261010-qml/logs/qml_test_uri_import.log",
+      "date": "2026-10-10",
+      "captures": 16,
+      "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+      "testModified": false,
+      "testVariant": "Unchanged pinned test"
+    },
+    {
+      "test": "qml_evidence_shell",
+      "started_utc": "2026-10-10T17:39:44.271828+00:00",
+      "seconds": 5.73,
+      "exit_code": 0,
+      "status": "passed",
+      "command": [
+        "python3",
+        "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+        "/work/qml-acceptance-20261010/scripts/qml_evidence_shell.py"
+      ],
+      "log": "collections/20261010-qml/logs/qml_evidence_shell.log",
+      "date": "2026-10-10",
+      "captures": 4,
+      "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+      "testModified": true,
+      "testVariant": "New acceptance scenario"
+    },
+    {
+      "test": "qml_evidence_cache_limit",
+      "started_utc": "2026-10-10T17:40:58.640315+00:00",
+      "seconds": 3.32,
+      "exit_code": 1,
+      "status": "failed",
+      "command": [
+        "python3",
+        "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+        "/work/qml-acceptance-20261010/scripts/qml_evidence_cache_limit.py"
+      ],
+      "log": "collections/20261010-qml/logs/qml_evidence_cache_limit.log",
+      "date": "2026-10-10",
+      "captures": 2,
+      "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+      "testModified": true,
+      "testVariant": "New acceptance scenario"
+    }
+  ],
+  "entryScript": "scripts/run_collection.py",
+  "remainingGaps": {
+    "F31.S02": "Capture the identity shown by each of the five supported networks, including simultaneous distinct profiles.",
+    "F24.S03": "After native tray/Dock restoration, reach payment, message signing/verification, settings and diagnostics while preserving the selected wallet.",
+    "F21.S04": "Enable mapping against a controlled gateway; verify the resulting mapping and its removal/renewal. A settings toggle alone does not prove router behavior.",
+    "F20.S07": "Launch isolated offline profiles for mainnet, testnet, testnet4, signet and regtest; assert the active chain and GUI identity for each.",
+    "F15.S02": "Verify key custody on a real device while the connected wallet exposes only public descriptors.",
+    "F15.S01": "Enumerate and connect a real compatible signer; validate identity and wallet descriptors.",
+    "F15.S04": "Approve and reject payments on a real device; compare its recipient/fee confirmation and the broadcast transaction.",
+    "F27.S03": "Use a sufficiently long real initialization/reindex fixture, assert progress updates remain visible, and capture a stable initialization frame.",
+    "F23.S12": "Seed nondefault preferences, reset through the supported startup flow, and assert a nonempty backup retains the original settings and can be read back.",
+    "F22.S09": "Run descriptor import, multisig setup and PSBT combination through the GUI console and validate resulting wallet/PSBT state. Rescan is covered by the new watch-only test.",
+    "F15.S05": "Save an incomplete signing result and resume it with another signer without losing signatures or changing outputs.",
+    "F18.S05": "Copy a saved address and an editable saved label through the GUI; assert both clipboard values exactly match the records.",
+    "F30.S06": "Extend the controlled peer transfer until a settled ETA appears; assert progress advances and the estimate responds sensibly to throughput changes.",
+    "F21.S03": "Use controlled SOCKS5 and Tor routes, verify connections reach the configured proxy, and prove no unintended direct connection bypasses it.",
+    "F31.S05": "Assert a configured explorer action delivers the selected transaction ID to a controlled browser target. Current evidence checks URL construction only.",
+    "F07.S01": "Create available, pending and immature funds, then assert the displayed balances and pending activity agree with RPC before and after confirmation.",
+    "F24.S01": "Repeat native hide/restore on Windows and macOS; assert the process and node remain alive while the window is hidden.",
+    "F14.S06": "Export a transaction after one signer, assert the signature survives the GUI handoff, then have a second signer complete it.",
+    "F16.S09": "Configure a controlled explorer URL, open a real transaction, confirm the outgoing URL contains its exact transaction ID, and observe browser delivery.",
+    "F12.S04": "Create coins with distinct amounts, labels, ages and confirmations; verify the supported comparison fields, grouping and sorting against listunspent. Document that confirmation counts are not displayed.",
+    "F09.S07": "Repeat the payment with a compatible physical signer: approve on the device, verify the destination and fee, broadcast, and check the wallet holds no spending keys.",
+    "F23.S01": "Fix the GUI total-cache range, then make the new 768 MiB regression pass. Add boundary cases and assert persistence after restart.",
+    "F27.S04": "Run initialization cancellation with IPC enabled; assert GUI and child-node exit status and inspect both stderr streams under the required sanitizer configuration.",
+    "F22.S03": "Produce deterministic traffic, select different observation periods, and verify displayed samples and totals follow the selected period.",
+    "F20.S03": "Exercise sufficient and insufficient free space and pruning choices; assert displayed requirements and the accepted storage selection. Recovery guidance remains a documented UI difference.",
+    "F24.S02": "Exercise visibility transitions on Windows/macOS and assert node RPC remains responsive. Linux native Hide/Show already has proof."
+  },
+  "files": {
+    "coverage.json": "64dbb2a872701366a7e48f2eb2a1feb36158ee7c6a2870d559fe1eb1b3593d81",
+    "development-notes.md": "dc19fefcc55412f20389a1f6089602a014097f3975368846db0cdcc953a381ac",
+    "functional-test-plan.json": "cec2619cbf00d1425dae1ebbcb79d1b9b8337b776c43805ebdda943b4791401d",
+    "logs/checks.json": "a46a4bfd50a18f72c3be243fd81faba3fff68a64e7708d542ce01ca06ec989c6",
+    "logs/development-attempts/qml_evidence_desktop.app.stderr": "055bf30f07402594f46d445f08f45e72f42d735d05114a1c13d2d621df4acbe6",
+    "logs/development-attempts/qml_evidence_desktop.app.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/development-attempts/qml_evidence_desktop.bridge.jsonl": "81607b1843ccc35e655feb44c399dc3e01d58fb5a4932e5beb533e47a08521d7",
+    "logs/development-attempts/qml_evidence_desktop.log": "2c098173db942eb868f269145218ae7fa76fb959f9ba334434bdf40422d54b30",
+    "logs/development-attempts/qml_evidence_migration.app.stderr": "f002aa75aada10cbb1605434e33a4cb14e1b23c152c64b4c6bdf5db4e44afb5a",
+    "logs/development-attempts/qml_evidence_migration.app.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/development-attempts/qml_evidence_migration.bridge.jsonl": "0dc578b1cf600a1c637b2bdef92cbcab210d98d2fb296c057dd7ef14d9886413",
+    "logs/development-attempts/qml_evidence_migration.log": "dfd19ee0d33136d4a2b90714e55eb0c60b2d6b44447469dc3633385f03c41134",
+    "logs/development-attempts/qml_evidence_watchonly.app.stderr": "8cd05068b373239ecc7eeb939ddb5ff032bb9bf27303b26455d1c3901566f23d",
+    "logs/development-attempts/qml_evidence_watchonly.app.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/development-attempts/qml_evidence_watchonly.bridge.jsonl": "33d6f3d5c6a0f1304ec63a615d50f200988e2d289a3f884bfa5eb212365cdb3e",
+    "logs/development-attempts/qml_evidence_watchonly.log": "4ea76f63b483b8446f90eece848ff62fc29cc89e1060bf316338ddb540f0882c",
+    "logs/initial-fixture-attempts/qml_test_password_wallet.log": "67d29062274f6446258e5eaff66917fd79038cd473186ff537f7930767222bf4",
+    "logs/initial-fixture-attempts/qml_test_wallet_restore.app.stderr": "f3af07202cee3ee2cdee049fc470356866ff8eb4c432e002819b8a666986a94a",
+    "logs/initial-fixture-attempts/qml_test_wallet_restore.app.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/initial-fixture-attempts/qml_test_wallet_restore.bridge.jsonl": "094b04d49b0b676092137af0516fbd8f858eadb4cfee6990686c6c23cbc49722",
+    "logs/initial-fixture-attempts/qml_test_wallet_restore.log": "f5309b06c59cad3944e0ee2a30779b912e937d5b69e0ada63b8e70a4b64962d9",
+    "logs/qml_evidence_cache_limit.app.stderr": "b7289b430750b49d784b594a88a94ae1a4ddb835ddaf4d121e54fdac5b8b0bc0",
+    "logs/qml_evidence_cache_limit.app.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/qml_evidence_cache_limit.bridge.jsonl": "0a14b0bbe2d019db8670d2d7dfd776256139d7ff19a82fe2cc22ce3b02c1360d",
+    "logs/qml_evidence_cache_limit.log": "8dccde0be8a4349c54a2c4904b46ef9a70e4d4f5242150f3f4790d7e5601dc08",
+    "logs/qml_evidence_desktop.app.stderr": "8716af98080856869398ed236e53b0bd89f69a63d1b4fbfdb7135151acb2a217",
+    "logs/qml_evidence_desktop.app.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/qml_evidence_desktop.bridge.jsonl": "969830f54783e917dc53a94bdb1a15b98e79e9b2d83e0e1d91db62874c2dd826",
+    "logs/qml_evidence_desktop.log": "412ad0f490fcd0611035360536ca5dd9fa0d549bfe4f50db08f6e053dabee1e6",
+    "logs/qml_evidence_migration.app.stderr": "25e5376d558922849e2f56365612ec4850bdcae4dd6ad0bfca83c71858a32a07",
+    "logs/qml_evidence_migration.app.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/qml_evidence_migration.bridge.jsonl": "b237e1b3cc83c0a7b7d258d928ffc7e0de3902040495a544dc28bf2e01a93811",
+    "logs/qml_evidence_migration.log": "e0315bf95716d4595604df1d2ce5d40ad1650dd0338dad77626be798479d16bd",
+    "logs/qml_evidence_shell.app.stderr": "229ade0a4d2ad918552ac5014078c97146a3ac7a626de562ae9ea6d45016a154",
+    "logs/qml_evidence_shell.app.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/qml_evidence_shell.bridge.jsonl": "24fb60ec59c30f3e68b36bb71e5999c7ef6238ad51aab54128c95ce69df58be5",
+    "logs/qml_evidence_shell.log": "84f0e5e6045e143d7af4938a5418df7636aeb5219ccbb9aa03daa01e2a8fde17",
+    "logs/qml_evidence_sync.app.stderr": "83d9d7ed1f63eeaa3bf8b51a707792fdcceb75dddee5d6e49b81430717d86d5b",
+    "logs/qml_evidence_sync.app.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/qml_evidence_sync.bridge.jsonl": "d42fae8b9731ddadfa69857df0042574f9b038cd4c9992d3673e219addbe1a0a",
+    "logs/qml_evidence_sync.log": "6180736fa12d4be47cd7ae52e5758b6b0f4a0492f0f542b59bb2698950f1305f",
+    "logs/qml_evidence_watchonly.app.stderr": "bd7aa83b3527985e1fd438e590c06452441a134517b727c958d1a63d184f27c9",
+    "logs/qml_evidence_watchonly.app.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/qml_evidence_watchonly.bridge.jsonl": "1fa493a4253c3f68e04d10478b62de8da655869906127bc982ddf603e11e977c",
+    "logs/qml_evidence_watchonly.log": "c72a58826c114df33c1994697d559a7387ff9f2181de9e2b549022bbb52ebd0e",
+    "logs/qml_test_activity_filter_export.app.stderr": "4f816aedcd3de7993578acb706d44b87d1241554a06d0eda0c3a608ef0a5ca62",
+    "logs/qml_test_activity_filter_export.app.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/qml_test_activity_filter_export.bridge.jsonl": "55e4d4290a06a287a41c40bdc3668f14ee1476548eb40bc463939af3c7b63835",
+    "logs/qml_test_activity_filter_export.log": "7136ecd635f7c6170f10d285069b7d2d60e3eeb85185bbd04ef93130d68cec21",
+    "logs/qml_test_blockclock.app.stderr": "b365df003418e1d2937b922c4bab5c9e4562a4007a417d7190e803c2f1f1497d",
+    "logs/qml_test_blockclock.app.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/qml_test_blockclock.bridge.jsonl": "821e4dc06cb06b4a7b8a26c0345c3c1b24ae6179acfe473bb57af05e9506c2d0",
+    "logs/qml_test_blockclock.log": "c571fb899bdd2911c34f0b8fca609fbab9e964f34072f4b3cbfc7e7a7c904fb3",
+    "logs/qml_test_node_runtime_dialogs.app.stderr": "a5e49cc55b784832957786fb6b735dbac1801b18042ec689461d1371732b4dd6",
+    "logs/qml_test_node_runtime_dialogs.app.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/qml_test_node_runtime_dialogs.bridge.jsonl": "1313b139f899fcc9765c1688fbfc3e1a7d5a81c10e4c33d2d8b0129331930a25",
+    "logs/qml_test_node_runtime_dialogs.log": "77b69d1cf92672ab18da4838bf9bbaa28dfb42d981f9ce7121d31f4fd0db381f",
+    "logs/qml_test_password_wallet.app.stderr": "dabca0d6e14bbcfcc2f41d6decbed058c167602d11ec53cb56bdf08d503e4885",
+    "logs/qml_test_password_wallet.app.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/qml_test_password_wallet.bridge.jsonl": "10e99934409b64eb598305722ebbafb7c2f5b94b6544d643145bc69204cba93c",
+    "logs/qml_test_password_wallet.log": "4dca57d54e404110e2ee436d6941423ca80f59c8c7ec26cf317e54cf820bd682",
+    "logs/qml_test_psbt.app.stderr": "88c2e5d1bd803c58f186e858c0733f5a172cfbb2879da81ccc8e1997c3fc7f4a",
+    "logs/qml_test_psbt.app.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/qml_test_psbt.bridge.jsonl": "c143397512032b223b72e435a6c4a9e130e9cfc6a44114dc966add07da04d7c4",
+    "logs/qml_test_psbt.log": "614a108e27049e12744ac000784c7f2fbb1bcce36818d0b236a90f03e8ac6661",
+    "logs/qml_test_receive.app.stderr": "7597c733cf7d9c20302198ee74a2a618c8ee2c7a3c9c0d4111886ae114e71b17",
+    "logs/qml_test_receive.app.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/qml_test_receive.bridge.jsonl": "fafdb224f7cc055c0ff867a7c9dc536f206c84805094019d61511d4d48863566",
+    "logs/qml_test_receive.log": "f13580f4c29821d3545627cf1da8eb82993b21663a04067af2e2efaae987209d",
+    "logs/qml_test_resetguisettings.app.stderr": "279f19167feafb109b79672122fb21724c50918abaeee34c31f5950f3683455c",
+    "logs/qml_test_resetguisettings.app.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/qml_test_resetguisettings.bridge.jsonl": "914279b661c26cf6a41b03ce3bc2a3f302261548e7851ab6351fd227a66d6fdb",
+    "logs/qml_test_resetguisettings.log": "6f7baf705669a7c3361b5e0a6cc7502aa8cbe5b2bba3e94c56b94ea2006f52f9",
+    "logs/qml_test_settings_display.app.stderr": "ade87f399798a9e5ea28578fe42747b7e8aa210d13fa53468a09c3c312cff5f7",
+    "logs/qml_test_settings_display.app.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/qml_test_settings_display.bridge.jsonl": "d05bee2dae777ce9cca114d2a3b7aef0b56a93d461eafb933d159230e0489b84",
+    "logs/qml_test_settings_display.log": "b78a0797badeda215427451b79fa93858766b9e7cabb4bd70da28c5c37dd94cf",
+    "logs/qml_test_uri_import.app.stderr": "f2b776aceda2cc5979336a72a6695de6ef123b1466db9299d7e8a21cbbe84580",
+    "logs/qml_test_uri_import.app.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/qml_test_uri_import.bridge.jsonl": "075de49ecb225ba674b74191979e23f74ab3c77cbd5be72b31a6cfa158f549f9",
+    "logs/qml_test_uri_import.log": "8e5c8a664df4dc4fa0c958d392b637c073679549a0268010bc3991d0044bbc34",
+    "logs/qml_test_wallet_restore.app.stderr": "b641fe022307d356a1ac8c2e6383b99ffb9dbf49e957541c0856569c5a79cf62",
+    "logs/qml_test_wallet_restore.app.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/qml_test_wallet_restore.bridge.jsonl": "572f77951dc0365286567c9d448793e8417ed8511b3aaac7b2787d32ef36c17d",
+    "logs/qml_test_wallet_restore.log": "9c05229d6bea34c18c9e11818305f7835bde74342bceb833783e07907fc5af1d",
+    "logs/qml_test_window_geometry.app.stderr": "d492eb1507213502bcb9f79fbc377ee019e3c949e1ffd52d99bdebd698829ee1",
+    "logs/qml_test_window_geometry.app.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/qml_test_window_geometry.bridge.jsonl": "80089cb3166351090eae14d30d4643f5983122802becb22d46662c80fb34384d",
+    "logs/qml_test_window_geometry.log": "ed5a7da0c6d608eb915563b1078c7227ddbeb73f19e739d78991508a01bd3294",
+    "logs/runs.json": "bd839ab0a1b27b115ac0227b1c3b6b181f88b62142a6bad07ae21ef0f736659c",
+    "media/qml/qml_evidence_cache_limit/captures.json": "dd41ba3eff78d8b5653f7cffede72688fa9a52722be884435d4ef0fb5a2f2819",
+    "media/qml/qml_evidence_desktop/captures.json": "545ade2a81d5be909ad1e9eb19005af54392482a704cd561aef02edc2ffe1195",
+    "media/qml/qml_evidence_migration/captures.json": "0ffca427cdf1dce1e4c21e3068517f98be0722d70f21125a819cf421d5d984c8",
+    "media/qml/qml_evidence_shell/captures.json": "6efe4338d6b839a04da5c48dfa9b68181233ae7a5dc820108b4c111cd8dd1dcf",
+    "media/qml/qml_evidence_sync/captures.json": "5566a5ed4933134758994edaaead95460b2aa2a0c35bd8a7dd3952ef6bed65a6",
+    "media/qml/qml_evidence_watchonly/captures.json": "cd2395a360cda9a7f33c182f2e90259a1fc897d4a6849b015f01b6fdf235687a",
+    "media/qml/qml_test_activity_filter_export/captures.json": "800e3e0568caaec8fd9fd43e8fb13ed1d31b4bbee368b8c65d41489534956e33",
+    "media/qml/qml_test_blockclock/captures.json": "6046362c4ad1a853570d5d529f22ce772252c96e1b7fd30143091f547f1d812d",
+    "media/qml/qml_test_node_runtime_dialogs/captures.json": "0110c9151802e8c02f7cb3e4b0b2672b47de1e4bf8e591395866c6d4b5c0e09a",
+    "media/qml/qml_test_password_wallet/captures.json": "bff1d7cf6c63e7db71523034aa0c6e5aa9ea0c7c6a041a823d9ea23964dc5c3e",
+    "media/qml/qml_test_psbt/captures.json": "bffb51904d508d5a598360df3165174a93d86b14277abc088eeb6dc7a794707c",
+    "media/qml/qml_test_receive/captures.json": "5318fdbb1474efd87000fb3591d4621852b5c28f3d5450ed74e0d9bdfad8cc03",
+    "media/qml/qml_test_resetguisettings/captures.json": "2fb27c997c4716db5f0c7dda77cb3015cf4a207994c4c34d6fa1a220cf4b2fa4",
+    "media/qml/qml_test_settings_display/captures.json": "64f018ccd1be2eacf5413c53d5c6571a916cb15ae5def6ae68ec1f07bdeaf5bf",
+    "media/qml/qml_test_uri_import/captures.json": "2ab65052e32a191531902b2035ee80a84381d44a82dcc7b73293f9173d3412e6",
+    "media/qml/qml_test_wallet_restore/captures.json": "b851e71233d3c02e29454d3c0ec591a4ca1cc2aff169d6e278b6d061f6fec9c5",
+    "media/qml/qml_test_window_geometry/captures.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "missing-functional-tests.md": "d1d6c2df9d27eaf5346052364f0653ed369ec0e53c9e4cde42f3bcdd57a4ae41",
+    "report.md": "55a55a8cfa67d26f720d7cd60125c99d162a8850386127aff7820f942d5d9bba",
+    "scripts/evidence_helpers.py": "f6c4907536ad2c4ecdaa4b6e6782f5bcfb100b1341f89471b36039892f54a7c4",
+    "scripts/qml_capture_test.py": "8447eb4a2e3b4f5562761e9be1b832a349ca648650b11e04f1153a10169cbf29",
+    "scripts/qml_evidence_cache_limit.py": "361ca15125d54186a44bf20209e34244ba8d4cda1c71b5ac74e660a54e87ba84",
+    "scripts/qml_evidence_desktop.py": "0b32ee0b696f74310fcdc3e2b16d95148532bce44410fb64eeaabecc7cb3ab4d",
+    "scripts/qml_evidence_migration.py": "415ad7462a2c8dd7033ac56eec935a22d540623c213c8f3b1e7bdeb96594860b",
+    "scripts/qml_evidence_shell.py": "4fa336c3b02b989be6f5c35e5fe237197bff29c899beb243bafd071eb13ca304",
+    "scripts/qml_evidence_sync.py": "4d90e6771ffc8ff48a1541e78e3e219122044ceae33b6468ef868adbbf8d3fdb",
+    "scripts/qml_evidence_watchonly.py": "28bf81b337d88d7d6d9016e74b9fb4a50c8a4debb32b7338a12eb635f6eb4e1a",
+    "scripts/qml_test_activity_filter_export.py": "6edaf49b990577b466001ca7bf203e49d78652d6e79319fcfb35d9c70e53f517",
+    "scripts/qml_test_blockclock.py": "55a747a2739d499efcdd1143c9c748a0ddd219a7155f11d18687129611fd5a46",
+    "scripts/qml_test_node_runtime_dialogs.py": "676731820a0ad654924cf1f85d95203751eca75afbd747588bf5e3cfe5fa8256",
+    "scripts/qml_test_password_wallet.py": "613f91599cfeb815e788f132241fe4282568d943ccaff9a0de25b621c32f6441",
+    "scripts/qml_test_psbt.py": "0b17ccdeba05b5c1088b58e3946ee0e32dac38070f359320be6dc2bad926a166",
+    "scripts/qml_test_receive.py": "2a4a1219f422b39b69e2f9e0e6ebceec35721ef2a51c76c81fd4178bf1318c9a",
+    "scripts/qml_test_resetguisettings.py": "fd06cba6641fddd9a6d97a29a8eaba05ccb0c71cd1a6aff91b888f5f197e308a",
+    "scripts/qml_test_settings_display.py": "dd08a330a04d0cac9b5927c820fdc5b396335d57c84398741263a30b0b663212",
+    "scripts/qml_test_uri_import.py": "6096e38fb966d9517075f8aa9bb09763eedcdc3a82fda42084fd17d0aacdb1d8",
+    "scripts/qml_test_wallet_restore.py": "550a7281ee508257091d75d3127fc8894fdc3d7ab85d04384c5b76c0258a7d80",
+    "scripts/qml_test_window_geometry.py": "7d697dbed1f2c4fb0c3e36580ca9a363062a5cbe4d6e0ca16f6e7abb8ff2a65e",
+    "scripts/run_collection.py": "a1c094491b76ff327ee997e688fd993e51b563d3dc6e4c58fadbe5b48b9e5b69",
+    "validation.json": "9769644c7d1586965464a97b02b82d64c21008263372ee4bd19fb4be11f82c9b"
+  }
+}

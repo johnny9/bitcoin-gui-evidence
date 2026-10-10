@@ -1,0 +1,146 @@
+{"utc": "2026-10-10T17:26:09.851842+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/qml_test_uri_import_qzmsj0hf/gui_node", "-test-automation=/work/tmp/qml_test_uri_import_qzmsj0hf/test_bridge.sock", "-test-settings-dir=/work/tmp/qml_test_uri_import_qzmsj0hf/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 2279, "platform": "xcb"}
+{"utc": "2026-10-10T17:26:10.606148+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:26:10.608008+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:26:10.969963+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "text"}, "response": {"value": "testwallet"}}
+{"utc": "2026-10-10T17:26:10.974585+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "noWalletLoaded"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:26:11.003603+00:00", "request": {"cmd": "click", "objectName": "sendTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.008003+00:00", "request": {"cmd": "wait_for_page", "page": "sendPage", "timeout": 15000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.009680+00:00", "request": {"cmd": "get_property", "objectName": "walletSendTitle", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:26:11.012164+00:00", "request": {"cmd": "set_clipboard_text", "text": "bitcoin:bcrt1q76543fez9fh3ax4mhrs2lgxnrz2vpd0u4che35?amount=0.01234567&label=clip-label&message=clipboard-note"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.013601+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:26:11.016142+00:00", "request": {"cmd": "click", "objectName": "clipboardUriPasteButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.020131+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestStatusText", "prop": "text"}, "response": {"value": "Payment request imported from clipboard"}}
+{"utc": "2026-10-10T17:26:11.021754+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestPayTo", "prop": "value"}, "response": {"value": "clip-label"}}
+{"utc": "2026-10-10T17:26:11.023217+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestMessageText", "prop": "value"}, "response": {"value": "clipboard-note"}}
+{"utc": "2026-10-10T17:26:11.024724+00:00", "request": {"cmd": "click", "objectName": "sendOptionsButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.025990+00:00", "request": {"cmd": "get_property", "objectName": "sendOptionsPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:26:11.079223+00:00", "request": {"cmd": "get_property", "objectName": "sendOptionsPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:26:11.131708+00:00", "request": {"cmd": "get_property", "objectName": "sendOptionsPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:26:11.185714+00:00", "request": {"cmd": "get_property", "objectName": "sendOptionsPopup", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:26:11.189139+00:00", "request": {"cmd": "click", "objectName": "sendOptionsOpenPaymentRequestButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.192049+00:00", "request": {"cmd": "get_property", "objectName": "sendUriImportPopup", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:26:11.194936+00:00", "request": {"cmd": "set_text", "objectName": "sendUriImportInput", "text": "bitcoin:bcrt1q76543fez9fh3ax4mhrs2lgxnrz2vpd0u4che35?amount=0.02000000&label=manual-label&message=manual-note"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.201193+00:00", "request": {"cmd": "click", "objectName": "sendUriImportApplyButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.205367+00:00", "request": {"cmd": "get_property", "objectName": "sendUriImportPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:26:11.208199+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestStatusText", "prop": "text"}, "response": {"value": "Payment request imported from manual entry"}}
+{"utc": "2026-10-10T17:26:11.211174+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestPayTo", "prop": "value"}, "response": {"value": "manual-label"}}
+{"utc": "2026-10-10T17:26:11.213331+00:00", "request": {"cmd": "click", "objectName": "sendOptionsButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.214940+00:00", "request": {"cmd": "get_property", "objectName": "sendOptionsPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:26:11.268758+00:00", "request": {"cmd": "get_property", "objectName": "sendOptionsPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:26:11.322838+00:00", "request": {"cmd": "get_property", "objectName": "sendOptionsPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:26:11.376517+00:00", "request": {"cmd": "get_property", "objectName": "sendOptionsPopup", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:26:11.378583+00:00", "request": {"cmd": "click", "objectName": "sendOptionsOpenPaymentRequestButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.379884+00:00", "request": {"cmd": "get_property", "objectName": "sendUriImportPopup", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:26:11.381233+00:00", "request": {"cmd": "set_text", "objectName": "sendUriImportInput", "text": "bitcoin://bcrt1q76543fez9fh3ax4mhrs2lgxnrz2vpd0u4che35?amount=0.1"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.382599+00:00", "request": {"cmd": "click", "objectName": "sendUriImportApplyButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.383693+00:00", "request": {"cmd": "get_property", "objectName": "sendUriImportPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:26:11.386215+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestStatusText", "prop": "text"}, "response": {"value": "'bitcoin://' is not a valid URI. Use 'bitcoin:' instead."}}
+{"utc": "2026-10-10T17:26:11.387818+00:00", "request": {"cmd": "set_text", "objectName": "sendImportPaymentRequestFilePathInput", "text": "/work/tmp/tmpor6hmb8j.txt"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.389538+00:00", "request": {"cmd": "click", "objectName": "sendApplyPaymentRequestFilePathButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.392531+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestStatusText", "prop": "text"}, "response": {"value": "Payment request imported from file"}}
+{"utc": "2026-10-10T17:26:11.393998+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestPayTo", "prop": "value"}, "response": {"value": "file-label"}}
+{"utc": "2026-10-10T17:26:11.395355+00:00", "request": {"cmd": "set_text", "objectName": "sendDropUriInput", "text": "bitcoin:bcrt1q76543fez9fh3ax4mhrs2lgxnrz2vpd0u4che35?amount=0.04000000&label=drop-label"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.399144+00:00", "request": {"cmd": "click", "objectName": "sendApplyDropUriButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.400436+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestStatusText", "prop": "text"}, "response": {"value": "Payment request imported from drag and drop"}}
+{"utc": "2026-10-10T17:26:11.401550+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestPayTo", "prop": "value"}, "response": {"value": "drop-label"}}
+{"utc": "2026-10-10T17:26:11.402827+00:00", "request": {"cmd": "set_text", "objectName": "sendDropFileUrlInput", "text": "file:///work/tmp/tmpuphlxu99.txt"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.404214+00:00", "request": {"cmd": "click", "objectName": "sendApplyDropFileUrlButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.407208+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestStatusText", "prop": "text"}, "response": {"value": "Payment request imported from file"}}
+{"utc": "2026-10-10T17:26:11.408488+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestPayTo", "prop": "value"}, "response": {"value": "drop-file"}}
+{"utc": "2026-10-10T17:26:11.409675+00:00", "request": {"cmd": "set_text", "objectName": "sendDropFileUrlInput", "text": "bitcoin:bcrt1q76543fez9fh3ax4mhrs2lgxnrz2vpd0u4che35?amount=0.06000000&label=drop-url"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.411523+00:00", "request": {"cmd": "click", "objectName": "sendApplyDropFileUrlButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.412757+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestStatusText", "prop": "text"}, "response": {"value": "Payment request imported from drag and drop"}}
+{"utc": "2026-10-10T17:26:11.413836+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestPayTo", "prop": "value"}, "response": {"value": "drop-url"}}
+{"utc": "2026-10-10T17:26:11.416066+00:00", "request": {"cmd": "set_clipboard_text", "text": "bitcoin:bcrt1q76543fez9fh3ax4mhrs2lgxnrz2vpd0u4che35?amount=0.07000000&label=drop-url"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.419465+00:00", "request": {"cmd": "click", "objectName": "sendAmountInput"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.420988+00:00", "request": {"cmd": "invoke", "objectName": "sendAmountInput", "method": "forceActiveFocus", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.422774+00:00", "request": {"cmd": "get_property", "objectName": "sendAmountInput", "prop": "activeFocus"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:26:11.424974+00:00", "request": {"cmd": "invoke", "objectName": "sendAmountInput", "method": "paste", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.426133+00:00", "request": {"cmd": "get_property", "objectName": "sendAmountInput", "prop": "text"}, "response": {"value": "0.07000000"}}
+{"utc": "2026-10-10T17:26:11.428099+00:00", "request": {"cmd": "set_clipboard_text", "text": "bitcoin:bcrt1q76543fez9fh3ax4mhrs2lgxnrz2vpd0u4che35?amount=0.07000000&label=field-paste"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.430274+00:00", "request": {"cmd": "click", "objectName": "sendNoteInput"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.431712+00:00", "request": {"cmd": "invoke", "objectName": "sendNoteInput", "method": "forceActiveFocus", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.432937+00:00", "request": {"cmd": "get_property", "objectName": "sendNoteInput", "prop": "activeFocus"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:26:11.434517+00:00", "request": {"cmd": "invoke", "objectName": "sendNoteInput", "method": "paste", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.435656+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestPayTo", "prop": "value"}, "response": {"value": "field-paste"}}
+{"utc": "2026-10-10T17:26:11.437523+00:00", "request": {"cmd": "set_clipboard_text", "text": "bitcoin:bcrt1q76543fez9fh3ax4mhrs2lgxnrz2vpd0u4che35?amount=0.07000000&label=field-paste&message=address-field-paste"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.440627+00:00", "request": {"cmd": "click", "objectName": "sendAddressInput"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.442063+00:00", "request": {"cmd": "invoke", "objectName": "sendAddressInput", "method": "forceActiveFocus", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.443354+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "activeFocus"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:26:11.445974+00:00", "request": {"cmd": "invoke", "objectName": "sendAddressInput", "method": "paste", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.447395+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestMessageText", "prop": "value"}, "response": {"value": "address-field-paste"}}
+{"utc": "2026-10-10T17:26:11.449493+00:00", "request": {"cmd": "set_clipboard_text", "text": "-ordinary-paste"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.452323+00:00", "request": {"cmd": "click", "objectName": "sendNoteInput"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.454729+00:00", "request": {"cmd": "invoke", "objectName": "sendNoteInput", "method": "paste", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:26:11.456144+00:00", "request": {"cmd": "get_property", "objectName": "sendNoteInput", "prop": "text"}, "response": {"value": "-ordinary-paste"}}
+{"utc": "2026-10-10T17:26:11.771138+00:00", "application_pid": 2279, "exit_code": 0}
+{"utc": "2026-10-10T17:29:08.268691+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/tmp/qml_test_uri_import_v_lihu94/gui_node", "-test-automation=/work/tmp/qml_test_uri_import_v_lihu94/test_bridge.sock", "-test-settings-dir=/work/tmp/qml_test_uri_import_v_lihu94/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 2684, "platform": "xcb"}
+{"utc": "2026-10-10T17:29:09.022830+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:29:09.025625+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:29:09.406018+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "text"}, "response": {"value": "testwallet"}}
+{"utc": "2026-10-10T17:29:09.410828+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "noWalletLoaded"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:29:09.441549+00:00", "request": {"cmd": "click", "objectName": "sendTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:09.917619+00:00", "request": {"cmd": "wait_for_page", "page": "sendPage", "timeout": 15000}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:10.394410+00:00", "request": {"cmd": "get_property", "objectName": "walletSendTitle", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:29:10.397169+00:00", "request": {"cmd": "set_clipboard_text", "text": "bitcoin:bcrt1q43q009clv90ez0rym5jq525402k70nemc3tgsz?amount=0.01234567&label=clip-label&message=clipboard-note"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:10.400730+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:29:10.403694+00:00", "request": {"cmd": "click", "objectName": "clipboardUriPasteButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:10.879160+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestStatusText", "prop": "text"}, "response": {"value": "Payment request imported from clipboard"}}
+{"utc": "2026-10-10T17:29:10.881157+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestPayTo", "prop": "value"}, "response": {"value": "clip-label"}}
+{"utc": "2026-10-10T17:29:10.882826+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestMessageText", "prop": "value"}, "response": {"value": "clipboard-note"}}
+{"utc": "2026-10-10T17:29:10.884564+00:00", "request": {"cmd": "click", "objectName": "sendOptionsButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:11.360568+00:00", "request": {"cmd": "get_property", "objectName": "sendOptionsPopup", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:29:11.363011+00:00", "request": {"cmd": "click", "objectName": "sendOptionsOpenPaymentRequestButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:11.837486+00:00", "request": {"cmd": "get_property", "objectName": "sendUriImportPopup", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:29:11.839053+00:00", "request": {"cmd": "set_text", "objectName": "sendUriImportInput", "text": "bitcoin:bcrt1q43q009clv90ez0rym5jq525402k70nemc3tgsz?amount=0.02000000&label=manual-label&message=manual-note"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:11.841294+00:00", "request": {"cmd": "click", "objectName": "sendUriImportApplyButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:12.321486+00:00", "request": {"cmd": "get_property", "objectName": "sendUriImportPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:29:12.323487+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestStatusText", "prop": "text"}, "response": {"value": "Payment request imported from manual entry"}}
+{"utc": "2026-10-10T17:29:12.325115+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestPayTo", "prop": "value"}, "response": {"value": "manual-label"}}
+{"utc": "2026-10-10T17:29:12.326611+00:00", "request": {"cmd": "click", "objectName": "sendOptionsButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:12.802407+00:00", "request": {"cmd": "get_property", "objectName": "sendOptionsPopup", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:29:12.804463+00:00", "request": {"cmd": "click", "objectName": "sendOptionsOpenPaymentRequestButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:13.284349+00:00", "request": {"cmd": "get_property", "objectName": "sendUriImportPopup", "prop": "opened"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:29:13.286718+00:00", "request": {"cmd": "set_text", "objectName": "sendUriImportInput", "text": "bitcoin://bcrt1q43q009clv90ez0rym5jq525402k70nemc3tgsz?amount=0.1"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:13.289240+00:00", "request": {"cmd": "click", "objectName": "sendUriImportApplyButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:13.765504+00:00", "request": {"cmd": "get_property", "objectName": "sendUriImportPopup", "prop": "opened"}, "response": {"value": false}}
+{"utc": "2026-10-10T17:29:13.767328+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestStatusText", "prop": "text"}, "response": {"value": "'bitcoin://' is not a valid URI. Use 'bitcoin:' instead."}}
+{"utc": "2026-10-10T17:29:13.769021+00:00", "request": {"cmd": "set_text", "objectName": "sendImportPaymentRequestFilePathInput", "text": "/work/tmp/tmp7n5i_x4h.txt"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:13.770864+00:00", "request": {"cmd": "click", "objectName": "sendApplyPaymentRequestFilePathButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:14.247528+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestStatusText", "prop": "text"}, "response": {"value": "Payment request imported from file"}}
+{"utc": "2026-10-10T17:29:14.249250+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestPayTo", "prop": "value"}, "response": {"value": "file-label"}}
+{"utc": "2026-10-10T17:29:14.250893+00:00", "request": {"cmd": "set_text", "objectName": "sendDropUriInput", "text": "bitcoin:bcrt1q43q009clv90ez0rym5jq525402k70nemc3tgsz?amount=0.04000000&label=drop-label"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:14.253025+00:00", "request": {"cmd": "click", "objectName": "sendApplyDropUriButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:14.729872+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestStatusText", "prop": "text"}, "response": {"value": "Payment request imported from drag and drop"}}
+{"utc": "2026-10-10T17:29:14.732171+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestPayTo", "prop": "value"}, "response": {"value": "drop-label"}}
+{"utc": "2026-10-10T17:29:14.734677+00:00", "request": {"cmd": "set_text", "objectName": "sendDropFileUrlInput", "text": "file:///work/tmp/tmp8v8f7udy.txt"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:14.736534+00:00", "request": {"cmd": "click", "objectName": "sendApplyDropFileUrlButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:15.212474+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestStatusText", "prop": "text"}, "response": {"value": "Payment request imported from file"}}
+{"utc": "2026-10-10T17:29:15.214548+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestPayTo", "prop": "value"}, "response": {"value": "drop-file"}}
+{"utc": "2026-10-10T17:29:15.216454+00:00", "request": {"cmd": "set_text", "objectName": "sendDropFileUrlInput", "text": "bitcoin:bcrt1q43q009clv90ez0rym5jq525402k70nemc3tgsz?amount=0.06000000&label=drop-url"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:15.218512+00:00", "request": {"cmd": "click", "objectName": "sendApplyDropFileUrlButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:15.220158+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestStatusText", "prop": "text"}, "response": {"value": "Payment request imported from drag and drop"}}
+{"utc": "2026-10-10T17:29:15.221498+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestPayTo", "prop": "value"}, "response": {"value": "drop-url"}}
+{"utc": "2026-10-10T17:29:15.224250+00:00", "request": {"cmd": "set_clipboard_text", "text": "bitcoin:bcrt1q43q009clv90ez0rym5jq525402k70nemc3tgsz?amount=0.07000000&label=drop-url"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:15.227723+00:00", "request": {"cmd": "click", "objectName": "sendAmountInput"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:15.705327+00:00", "request": {"cmd": "invoke", "objectName": "sendAmountInput", "method": "forceActiveFocus", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:15.707418+00:00", "request": {"cmd": "get_property", "objectName": "sendAmountInput", "prop": "activeFocus"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:29:15.710707+00:00", "request": {"cmd": "invoke", "objectName": "sendAmountInput", "method": "paste", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:15.712151+00:00", "request": {"cmd": "get_property", "objectName": "sendAmountInput", "prop": "text"}, "response": {"value": "0.07000000"}}
+{"utc": "2026-10-10T17:29:15.714217+00:00", "request": {"cmd": "set_clipboard_text", "text": "bitcoin:bcrt1q43q009clv90ez0rym5jq525402k70nemc3tgsz?amount=0.07000000&label=field-paste"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:15.716320+00:00", "request": {"cmd": "click", "objectName": "sendNoteInput"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:16.192538+00:00", "request": {"cmd": "invoke", "objectName": "sendNoteInput", "method": "forceActiveFocus", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:16.194398+00:00", "request": {"cmd": "get_property", "objectName": "sendNoteInput", "prop": "activeFocus"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:29:16.197600+00:00", "request": {"cmd": "invoke", "objectName": "sendNoteInput", "method": "paste", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:16.198996+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestPayTo", "prop": "value"}, "response": {"value": "field-paste"}}
+{"utc": "2026-10-10T17:29:16.201325+00:00", "request": {"cmd": "set_clipboard_text", "text": "bitcoin:bcrt1q43q009clv90ez0rym5jq525402k70nemc3tgsz?amount=0.07000000&label=field-paste&message=address-field-paste"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:16.203246+00:00", "request": {"cmd": "click", "objectName": "sendAddressInput"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:16.681646+00:00", "request": {"cmd": "invoke", "objectName": "sendAddressInput", "method": "forceActiveFocus", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:16.683781+00:00", "request": {"cmd": "get_property", "objectName": "sendAddressInput", "prop": "activeFocus"}, "response": {"value": true}}
+{"utc": "2026-10-10T17:29:16.686877+00:00", "request": {"cmd": "invoke", "objectName": "sendAddressInput", "method": "paste", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:16.688452+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestMessageText", "prop": "value"}, "response": {"value": "address-field-paste"}}
+{"utc": "2026-10-10T17:29:16.690951+00:00", "request": {"cmd": "set_clipboard_text", "text": "-ordinary-paste"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:16.694688+00:00", "request": {"cmd": "click", "objectName": "sendNoteInput"}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:17.170883+00:00", "request": {"cmd": "invoke", "objectName": "sendNoteInput", "method": "paste", "args": []}, "response": {"ok": true}}
+{"utc": "2026-10-10T17:29:17.172621+00:00", "request": {"cmd": "get_property", "objectName": "sendNoteInput", "prop": "text"}, "response": {"value": "-ordinary-paste"}}
+{"utc": "2026-10-10T17:29:17.337471+00:00", "application_pid": 2684, "exit_code": 0}

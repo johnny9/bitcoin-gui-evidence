@@ -1,0 +1,308 @@
+[
+  {
+    "test": "qml_test_password_wallet",
+    "started_utc": "2026-10-10T17:21:35.120300+00:00",
+    "seconds": 79.73,
+    "exit_code": 0,
+    "status": "passed",
+    "command": [
+      "python3",
+      "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_password_wallet.py"
+    ],
+    "log": "collections/20261010-qml/logs/qml_test_password_wallet.log",
+    "date": "2026-10-10",
+    "captures": 30,
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+    "testModified": false,
+    "testVariant": "Unchanged pinned test"
+  },
+  {
+    "test": "qml_test_activity_filter_export",
+    "started_utc": "2026-10-10T17:18:49.558365+00:00",
+    "seconds": 23.92,
+    "exit_code": 0,
+    "status": "passed",
+    "command": [
+      "python3",
+      "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+      "/work/qml-acceptance-20261010/scripts/qml_test_activity_filter_export.py"
+    ],
+    "log": "collections/20261010-qml/logs/qml_test_activity_filter_export.log",
+    "date": "2026-10-10",
+    "captures": 30,
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+    "testModified": false,
+    "testVariant": "Unchanged pinned test"
+  },
+  {
+    "test": "qml_test_psbt",
+    "started_utc": "2026-10-10T17:19:13.477425+00:00",
+    "seconds": 17.55,
+    "exit_code": 0,
+    "status": "passed",
+    "command": [
+      "python3",
+      "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+      "/work/qml-acceptance-20261010/scripts/qml_test_psbt.py"
+    ],
+    "log": "collections/20261010-qml/logs/qml_test_psbt.log",
+    "date": "2026-10-10",
+    "captures": 16,
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+    "testModified": false,
+    "testVariant": "Unchanged pinned test"
+  },
+  {
+    "test": "qml_test_settings_display",
+    "started_utc": "2026-10-10T17:19:31.030771+00:00",
+    "seconds": 21.36,
+    "exit_code": 0,
+    "status": "passed",
+    "command": [
+      "python3",
+      "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+      "/work/qml-acceptance-20261010/scripts/qml_test_settings_display.py"
+    ],
+    "log": "collections/20261010-qml/logs/qml_test_settings_display.log",
+    "date": "2026-10-10",
+    "captures": 40,
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+    "testModified": false,
+    "testVariant": "Unchanged pinned test"
+  },
+  {
+    "test": "qml_test_resetguisettings",
+    "started_utc": "2026-10-10T17:19:52.393788+00:00",
+    "seconds": 30.88,
+    "exit_code": 0,
+    "status": "passed",
+    "command": [
+      "python3",
+      "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+      "/work/qml-acceptance-20261010/scripts/qml_test_resetguisettings.py"
+    ],
+    "log": "collections/20261010-qml/logs/qml_test_resetguisettings.log",
+    "date": "2026-10-10",
+    "captures": 42,
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+    "testModified": false,
+    "testVariant": "Unchanged pinned test"
+  },
+  {
+    "test": "qml_test_window_geometry",
+    "started_utc": "2026-10-10T17:20:23.277578+00:00",
+    "seconds": 1.67,
+    "exit_code": 0,
+    "status": "passed",
+    "command": [
+      "python3",
+      "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+      "/work/qml-acceptance-20261010/scripts/qml_test_window_geometry.py"
+    ],
+    "log": "collections/20261010-qml/logs/qml_test_window_geometry.log",
+    "date": "2026-10-10",
+    "captures": 0,
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+    "testModified": false,
+    "testVariant": "Unchanged pinned test"
+  },
+  {
+    "test": "qml_test_blockclock",
+    "started_utc": "2026-10-10T17:20:24.946050+00:00",
+    "seconds": 2.27,
+    "exit_code": 0,
+    "status": "passed",
+    "command": [
+      "python3",
+      "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+      "/work/qml-acceptance-20261010/scripts/qml_test_blockclock.py"
+    ],
+    "log": "collections/20261010-qml/logs/qml_test_blockclock.log",
+    "date": "2026-10-10",
+    "captures": 2,
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+    "testModified": false,
+    "testVariant": "Unchanged pinned test"
+  },
+  {
+    "test": "qml_test_node_runtime_dialogs",
+    "started_utc": "2026-10-10T17:20:27.214916+00:00",
+    "seconds": 3.62,
+    "exit_code": 0,
+    "status": "passed",
+    "command": [
+      "python3",
+      "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+      "/work/qml-acceptance-20261010/scripts/qml_test_node_runtime_dialogs.py"
+    ],
+    "log": "collections/20261010-qml/logs/qml_test_node_runtime_dialogs.log",
+    "date": "2026-10-10",
+    "captures": 5,
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+    "testModified": false,
+    "testVariant": "Unchanged pinned test"
+  },
+  {
+    "test": "qml_test_wallet_restore",
+    "started_utc": "2026-10-10T17:22:54.847925+00:00",
+    "seconds": 16.0,
+    "exit_code": 0,
+    "status": "passed",
+    "command": [
+      "python3",
+      "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_wallet_restore.py"
+    ],
+    "log": "collections/20261010-qml/logs/qml_test_wallet_restore.log",
+    "date": "2026-10-10",
+    "captures": 10,
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+    "testModified": false,
+    "testVariant": "Unchanged pinned test"
+  },
+  {
+    "test": "qml_test_receive",
+    "started_utc": "2026-10-10T17:20:36.013428+00:00",
+    "seconds": 44.61,
+    "exit_code": 0,
+    "status": "passed",
+    "command": [
+      "python3",
+      "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+      "/work/qml-acceptance-20261010/scripts/qml_test_receive.py"
+    ],
+    "log": "collections/20261010-qml/logs/qml_test_receive.log",
+    "date": "2026-10-10",
+    "captures": 63,
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+    "testModified": false,
+    "testVariant": "Unchanged pinned test"
+  },
+  {
+    "test": "qml_evidence_desktop",
+    "started_utc": "2026-10-10T17:39:28.972313+00:00",
+    "seconds": 15.3,
+    "exit_code": 0,
+    "status": "passed",
+    "command": [
+      "python3",
+      "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+      "/work/qml-acceptance-20261010/scripts/qml_evidence_desktop.py"
+    ],
+    "log": "collections/20261010-qml/logs/qml_evidence_desktop.log",
+    "date": "2026-10-10",
+    "captures": 15,
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+    "testModified": true,
+    "testVariant": "New acceptance scenario"
+  },
+  {
+    "test": "qml_evidence_watchonly",
+    "started_utc": "2026-10-10T17:39:49.999384+00:00",
+    "seconds": 11.84,
+    "exit_code": 0,
+    "status": "passed",
+    "command": [
+      "python3",
+      "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+      "/work/qml-acceptance-20261010/scripts/qml_evidence_watchonly.py"
+    ],
+    "log": "collections/20261010-qml/logs/qml_evidence_watchonly.log",
+    "date": "2026-10-10",
+    "captures": 3,
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+    "testModified": true,
+    "testVariant": "New acceptance scenario"
+  },
+  {
+    "test": "qml_evidence_migration",
+    "started_utc": "2026-10-10T17:40:01.839483+00:00",
+    "seconds": 6.18,
+    "exit_code": 0,
+    "status": "passed",
+    "command": [
+      "python3",
+      "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+      "/work/qml-acceptance-20261010/scripts/qml_evidence_migration.py"
+    ],
+    "log": "collections/20261010-qml/logs/qml_evidence_migration.log",
+    "date": "2026-10-10",
+    "captures": 2,
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+    "testModified": true,
+    "testVariant": "New acceptance scenario"
+  },
+  {
+    "test": "qml_evidence_sync",
+    "started_utc": "2026-10-10T17:40:08.017915+00:00",
+    "seconds": 50.62,
+    "exit_code": 0,
+    "status": "passed",
+    "command": [
+      "python3",
+      "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+      "/work/qml-acceptance-20261010/scripts/qml_evidence_sync.py"
+    ],
+    "log": "collections/20261010-qml/logs/qml_evidence_sync.log",
+    "date": "2026-10-10",
+    "captures": 3,
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+    "testModified": true,
+    "testVariant": "New acceptance scenario"
+  },
+  {
+    "test": "qml_test_uri_import",
+    "started_utc": "2026-10-10T17:29:08.233089+00:00",
+    "seconds": 9.13,
+    "exit_code": 0,
+    "status": "passed",
+    "command": [
+      "python3",
+      "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+      "/work/qml-source/test/functional/qml_test_uri_import.py"
+    ],
+    "log": "collections/20261010-qml/logs/qml_test_uri_import.log",
+    "date": "2026-10-10",
+    "captures": 16,
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+    "testModified": false,
+    "testVariant": "Unchanged pinned test"
+  },
+  {
+    "test": "qml_evidence_shell",
+    "started_utc": "2026-10-10T17:39:44.271828+00:00",
+    "seconds": 5.73,
+    "exit_code": 0,
+    "status": "passed",
+    "command": [
+      "python3",
+      "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+      "/work/qml-acceptance-20261010/scripts/qml_evidence_shell.py"
+    ],
+    "log": "collections/20261010-qml/logs/qml_evidence_shell.log",
+    "date": "2026-10-10",
+    "captures": 4,
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+    "testModified": true,
+    "testVariant": "New acceptance scenario"
+  },
+  {
+    "test": "qml_evidence_cache_limit",
+    "started_utc": "2026-10-10T17:40:58.640315+00:00",
+    "seconds": 3.32,
+    "exit_code": 1,
+    "status": "failed",
+    "command": [
+      "python3",
+      "/work/qml-acceptance-20261010/scripts/qml_capture_test.py",
+      "/work/qml-acceptance-20261010/scripts/qml_evidence_cache_limit.py"
+    ],
+    "log": "collections/20261010-qml/logs/qml_evidence_cache_limit.log",
+    "date": "2026-10-10",
+    "captures": 2,
+    "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+    "testModified": true,
+    "testVariant": "New acceptance scenario"
+  }
+]

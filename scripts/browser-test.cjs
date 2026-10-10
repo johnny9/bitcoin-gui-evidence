@@ -61,29 +61,29 @@ async function main() {
     assert.equal(await page.$$eval('[data-group-link]',els=>els.length),34);
   });
   await page.screenshot({path:output+'/catalog-desktop.png',fullPage:false});
-  await check('Acceptance summary separates 52 implementation gaps, 90 accepted and 61 proof gaps',async()=>{
-    assert.deepEqual(await page.$$eval('.stats-grid .stat strong',els=>els.map(el=>el.textContent)),['203','52','90','61']);
-    assert.equal(await page.$eval('.nav-count',el=>el.textContent),'52');
-    assert.equal(await page.$eval('#review-progress-text',el=>el.textContent),'90 / 203');
+  await check('Acceptance summary separates 53 implementation gaps, 125 accepted and 25 proof gaps',async()=>{
+    assert.deepEqual(await page.$$eval('.stats-grid .stat strong',els=>els.map(el=>el.textContent)),['203','53','125','25']);
+    assert.equal(await page.$eval('.nav-count',el=>el.textContent),'53');
+    assert.equal(await page.$eval('#review-progress-text',el=>el.textContent),'125 / 203');
     await page.click('[data-stat="implementation"]');
-    await page.waitForFunction(()=>document.querySelectorAll('.criterion-result').length===52);
+    await page.waitForFunction(()=>document.querySelectorAll('.criterion-result').length===53);
     const gaps=await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent));
     assert.ok(gaps.includes('F15.S03'));assert.ok(gaps.includes('F03.S04'));assert.ok(!gaps.includes('F04.S02'));
     await page.reload({waitUntil:'networkidle0'});
     assert.equal(await page.$eval('[data-filter="parity"]',el=>el.value),'incomplete');
-    assert.equal(await page.$$eval('.criterion-result',els=>els.length),52);
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),53);
     await page.click('[data-stat="proof"]');
-    await page.waitForFunction(()=>document.querySelectorAll('.criterion-result').length===61);
+    await page.waitForFunction(()=>document.querySelectorAll('.criterion-result').length===25);
     const proof=await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent));
-    assert.ok(proof.includes('F04.S02'));assert.ok(!proof.includes('F15.S03'));
+    assert.ok(proof.includes('F21.S04'));assert.ok(!proof.includes('F15.S03'));
     await page.click('[data-stat="accepted"]');
-    await page.waitForFunction(()=>document.querySelectorAll('.criterion-result').length===90);
+    await page.waitForFunction(()=>document.querySelectorAll('.criterion-result').length===125);
     const accepted=await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent));
     assert.ok(accepted.includes('F09.S03'));assert.ok(accepted.includes('F19.S01'));
     assert.equal(new Set([...gaps,...proof,...accepted]).size,203);
-    assert.equal(await page.$$eval('[data-acceptance="accepted"]',els=>els.length),90);
+    assert.equal(await page.$$eval('[data-acceptance="accepted"]',els=>els.length),125);
     await value('[data-filter="review"]','pending');
-    assert.equal(await page.$$eval('.criterion-result',els=>els.length),113);
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),78);
     await page.click('[data-action="clear-filters"]');
   });
   await check('Evidence defaults survive scope edits and can be overridden and restored',async()=>{
@@ -100,7 +100,7 @@ async function main() {
     assert.equal((await saved()).status,'unreviewed');
     await acceptance.reload({waitUntil:'networkidle0'});
     assert.equal(await acceptance.$eval(quick,el=>el.getAttribute('aria-pressed')),'false');
-    assert.equal(await acceptance.$eval('#review-progress-text',el=>el.textContent),'89 / 203');
+    assert.equal(await acceptance.$eval('#review-progress-text',el=>el.textContent),'124 / 203');
     await acceptance.click('[data-review="F19.S01"]');
     await acceptance.select('#review-state','default');
     await acceptance.type('#review-note','Keep my scope and note while using evidence defaults.');
@@ -120,9 +120,9 @@ async function main() {
     await acceptance.reload({waitUntil:'networkidle0'});
     assert.equal(await acceptance.$eval(quick,el=>el.getAttribute('aria-pressed')),'true');
     assert.equal(await acceptance.$eval(badge,el=>el.textContent),'Accepted');
-    await acceptance.goto(base+'#feature/F04?item=F04.S02',{waitUntil:'networkidle0'});
-    assert.equal(await acceptance.$eval('[data-quick-review="F04.S02"]',el=>el.getAttribute('aria-pressed')),'false');
-    assert.ok(await acceptance.$('[id="F04.S02"] .application-evidence[aria-label^="Qt Widgets"] .capture-preview'));
+    await acceptance.goto(base+'#feature/F21?item=F21.S04',{waitUntil:'networkidle0'});
+    assert.equal(await acceptance.$eval('[data-quick-review="F21.S04"]',el=>el.getAttribute('aria-pressed')),'false');
+    assert.ok(await acceptance.$('[id="F21.S04"] .application-evidence[aria-label^="Qt Widgets"] .capture-preview'));
     await acceptance.goto(base+'#feature/F15?item=F15.S03',{waitUntil:'networkidle0'});
     assert.equal(await acceptance.$eval('[data-quick-review="F15.S03"]',el=>el.getAttribute('aria-pressed')),'false');
     await context.close();
@@ -133,18 +133,18 @@ async function main() {
     assert.equal(await page.$$eval('.group-card',els=>els.length),19);
     await page.click('[data-view="criteria"]');
     const ids=await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent));
-    assert.equal(ids.length,151);
+    assert.equal(ids.length,150);
     assert.ok(ids.includes('F03.S01')); // Full-parity subfeature inside a partial group.
     assert.ok(ids.includes('F25.S04')); // Full-parity fallback inside an absent group.
     assert.ok(!ids.includes('F01.S04')); // Missing subfeature inside a full-parity group.
     assert.ok(ids.includes('F09.S03')); // Corrected input proves the note outcome.
     await value('[data-filter="requirement"]','unassigned');
-    assert.equal(await page.$$eval('.criterion-result',els=>els.length),52);
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),53);
     await value('[data-filter="requirement"]','release');
     assert.equal(await page.$$eval('.criterion-result',els=>els.length),0);
     await value('[data-filter="requirement"]','not-needed');
     assert.equal(await page.$$eval('.criterion-result',els=>els.length),0);
-    assert.equal(await page.$eval('#review-progress-text',el=>el.textContent),'90 / 203');
+    assert.equal(await page.$eval('#review-progress-text',el=>el.textContent),'125 / 203');
     await page.click('[data-action="clear-filters"]');
   });
   await check('Criterion search and subfeature view return the exact ID',async()=>{
@@ -204,14 +204,14 @@ async function main() {
     assert.ok(!absent.includes('F15.S03')); // Receiving exists; device verification is missing.
     await value('[data-filter="parity"]','partial');
     const partial=await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent));
-    assert.equal(partial.length,14);
+    assert.equal(partial.length,15);
     assert.ok(partial.includes('F15.S03'));
     assert.ok(!partial.includes('F09.S03'));
     assert.ok(partial.includes('F14.S01')); // File import exists; compatibility still blocks some transactions.
     await value('[data-filter="parity"]','parity');
     const parity=await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent));
-    assert.equal(parity.length,151);
-    assert.ok(parity.includes('F04.S02')); // Source evidence, without a runtime assertion or capture.
+    assert.equal(parity.length,150);
+    assert.ok(parity.includes('F04.S02')); // Migration now has direct runtime proof.
     assert.ok(parity.includes('F21.S04')); // Physical router not tested.
     for(const id of ['F02.S04','F08.S06','F13.S05','F14.S06','F24.S03'])assert.ok(parity.includes(id),id); // Equivalent reachable workflows.
     assert.equal(new Set([...parity,...partial,...absent]).size,203);
@@ -219,17 +219,17 @@ async function main() {
   });
   await check('Parity and evidence coverage can be combined without conflating them',async()=>{
     await value('[data-filter="evidence"]','partial');
-    await page.type('#catalog-search','F04.S02');
+    await page.type('#catalog-search','F21.S04');
     assert.equal(await page.$$eval('.criterion-result',els=>els.length),1);
     assert.ok(await page.$('.criterion-result .parity-badge[data-parity="parity"]'));
     await page.reload({waitUntil:'networkidle0'});
     assert.equal(await page.$eval('[data-filter="parity"]',el=>el.value),'parity');
     assert.equal(await page.$eval('[data-filter="evidence"]',el=>el.value),'partial');
     await page.click('.criterion-result');
-    await page.waitForSelector('[id="F04.S02"] .parity-detail');
-    assert.ok(await page.$('[id="F04.S02"] .parity-badge[data-parity="parity"]'));
-    assert.equal(await page.$$eval('[id="F04.S02"] .application-evidence',els=>els.length),2);
-    assert.match(await page.$eval('[id="F04.S02"] .parity-detail',el=>el.textContent),/automatic backup/);
+    await page.waitForSelector('[id="F21.S04"] .parity-detail');
+    assert.ok(await page.$('[id="F21.S04"] .parity-badge[data-parity="parity"]'));
+    assert.equal(await page.$$eval('[id="F21.S04"] .application-evidence',els=>els.length),2);
+    assert.match(await page.$eval('[id="F21.S04"] .parity-detail',el=>el.textContent),/router/);
     await page.screenshot({path:output+'/parity-feature.png'});
   });
   await go('#catalog?parity=parity');
@@ -248,7 +248,7 @@ async function main() {
   await check('Equivalent sharing workflow reaches parity while original missing-method evidence remains visible',async()=>{
     assert.ok(await page.$('[id="F08.S06"] .parity-badge[data-parity="parity"]'));
     assert.match(await page.$eval('[id="F08.S06"] .parity-detail',el=>el.textContent),/copied or saved/);
-    assert.ok(await page.$('[id="F08.S06"] .application-evidence[aria-label^="GUI-QML"] .badge-gap'));
+    assert.ok(await page.$('[id="F08.S06"] .application-evidence[aria-label^="GUI-QML"] .badge-assertions'));
     assert.equal(await page.$$eval('[id="F08.S06"] .application-evidence',els=>els.length),2);
     await page.screenshot({path:output+'/outcome-subfeature.png'});
   });
@@ -258,48 +258,48 @@ async function main() {
     assert.deepEqual(await page.$$eval('[data-filter="evidence"] option',els=>els.map(el=>el.textContent)),['Any evidence','Full','Partial']);
     assert.equal(await page.$('[data-filter="app"]'),null);
     fullIds=await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent));
-    assert.equal(fullIds.length,90);
+    assert.equal(fullIds.length,125);
     assert.ok(fullIds.includes('F01.S01'));
-    assert.ok(!fullIds.includes('F09.S08')); // Scoped automated tests, but no QML capture.
+    assert.ok(fullIds.includes('F09.S08')); // Fresh watch-only export proof and capture.
     assert.ok(fullIds.includes('F09.S03')); // Rerun assertion and matching captures.
     assert.equal(await page.$$eval('.result-statuses',els=>els.every(el=>el.textContent.includes('Qt Widgets')&&el.textContent.includes('GUI-QML'))),true);
   });
   await check('Partial evidence includes every incomplete criterion and missing workflow',async()=>{
     await value('[data-filter="evidence"]','partial');
     partialIds=await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent));
-    assert.equal(partialIds.length,113);
+    assert.equal(partialIds.length,78);
     assert.ok(!partialIds.includes('F09.S03'));
-    assert.ok(partialIds.includes('F09.S08'));
-    assert.ok(partialIds.includes('F04.S02'));
-    assert.equal(await page.$$eval('.result-statuses .badge-gap:not(.parity-badge)',els=>els.length),43);
+    assert.ok(partialIds.includes('F23.S01')); // The new regression must remain unaccepted.
+    assert.ok(partialIds.includes('F21.S04'));
+    assert.equal(await page.$$eval('.result-statuses .badge-gap:not(.parity-badge)',els=>els.length),38);
     assert.equal(new Set([...fullIds,...partialIds]).size,203);
     assert.equal(fullIds.some(id=>partialIds.includes(id)),false);
     await page.reload({waitUntil:'networkidle0'});
     assert.equal(await page.$eval('[data-filter="evidence"]',el=>el.value),'partial');
-    assert.equal(await page.$$eval('.criterion-result',els=>els.length),113);
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),78);
   });
   await check('Capture filters use GUI-QML and preserve the Widgets reference',async()=>{
     await value('[data-filter="captures"]','yes');
-    assert.equal(await page.$$eval('.criterion-result',els=>els.length),26);
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),24);
     await value('[data-filter="captures"]','no');
-    assert.equal(await page.$$eval('.criterion-result',els=>els.length),87);
-    await page.$eval('#catalog-search',el=>{el.value='F09.S02';el.dispatchEvent(new Event('input',{bubbles:true}));});
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),54);
+    await page.$eval('#catalog-search',el=>{el.value='F20.S07';el.dispatchEvent(new Event('input',{bubbles:true}));});
     assert.equal(await page.$$eval('.criterion-result',els=>els.length),1); // Widgets has a capture; QML has none.
     await page.click('.criterion-result');
-    await page.waitForSelector('[id="F09.S02"]');
-    assert.equal(await page.$$eval('[id="F09.S02"] .application-evidence',els=>els.length),2);
-    assert.ok(await page.$('[id="F09.S02"] .application-evidence[aria-label^="Qt Widgets"] .capture-preview'));
-    assert.match(await page.$eval('[id="F09.S02"]',el=>el.textContent),/no saved-recipient picker/);
-    await go('#feature/F09');
+    await page.waitForSelector('[id="F20.S07"]');
+    assert.equal(await page.$$eval('[id="F20.S07"] .application-evidence',els=>els.length),2);
+    assert.ok(await page.$('[id="F20.S07"] .application-evidence[aria-label^="Qt Widgets"] .capture-preview'));
+    assert.match(await page.$eval('[id="F20.S07"]',el=>el.textContent),/other chains/);
+    await go('#feature/F20');
     await page.click('[data-action="clear-filters"]');
-    const count=await page.evaluate(()=>window.REVIEW_EVIDENCE.groups.find(g=>g.id==='F09').criteria.length);
+    const count=await page.evaluate(()=>window.REVIEW_EVIDENCE.groups.find(g=>g.id==='F20').criteria.length);
     assert.equal(await page.$$eval('.criterion-card',els=>els.length),count);
   });
   await check('Legacy application and evidence links migrate to GUI-QML coverage',async()=>{
     await page.goto(base+'#catalog?app=widgets&evidence=gap&view=criteria',{waitUntil:'networkidle0'});
     assert.equal(await page.evaluate(()=>location.hash),'#catalog?evidence=partial&view=criteria');
     assert.equal(await page.$eval('[data-filter="evidence"]',el=>el.value),'partial');
-    assert.equal(await page.$$eval('.criterion-result',els=>els.length),113);
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),78);
     assert.equal(await page.$('[data-filter="app"]'),null);
   });
   await check('Reset restores the full catalog',async()=>{
@@ -320,7 +320,7 @@ async function main() {
     await page.click('#review-form button[type="submit"]');
     assert.ok(await page.$('[id="F19.S01"] [data-requirement="merge"]'));
     assert.match(await page.$eval('[id="F19.S01"] .requirement-badge',el=>el.textContent),/from group/);
-    assert.equal(await page.$eval('#review-progress-text',el=>el.textContent),'90 / 203');
+    assert.equal(await page.$eval('#review-progress-text',el=>el.textContent),'125 / 203');
     await page.reload({waitUntil:'networkidle0'});
     assert.ok(await page.$('.group-requirement [data-requirement="merge"]'));
     await page.screenshot({path:output+'/requirement-group.png'});
@@ -341,7 +341,7 @@ async function main() {
     assert.ok(await page.$('[id="F19.S01"] [data-requirement="unassigned"]'));
     assert.ok(await page.$('[id="F19.S02"] [data-requirement="release"]'));
     await setRequirement('F19','merge');
-    assert.equal(await page.$eval('#review-progress-text',el=>el.textContent),'90 / 203');
+    assert.equal(await page.$eval('#review-progress-text',el=>el.textContent),'125 / 203');
   });
   await check('Personal review notes save literally and survive reload',async()=>{
     await page.click('[data-review="F19.S01"]');
@@ -356,7 +356,7 @@ async function main() {
     assert.equal(await page.evaluate(()=>window.noteInjected),undefined);
     assert.match(await page.$eval('[data-review="F19.S01"]',el=>el.textContent),/Review details/);
     assert.equal(await page.$eval('[data-quick-review="F19.S01"]',el=>el.getAttribute('aria-pressed')),'false');
-    assert.match(await page.$eval('#review-progress-text',el=>el.textContent),/^89 \/ 203$/);
+    assert.match(await page.$eval('#review-progress-text',el=>el.textContent),/^124 \/ 203$/);
   });
   await check('Review export includes the snapshot identity and personal notes',async()=>{
     await page.click('[data-review="F19.S03"]');
@@ -386,10 +386,10 @@ async function main() {
   });
   await check('Older review files remain importable and wrong snapshots are rejected',async()=>{
     await (await page.$('#import-file')).uploadFile(output+'/import.json');
-    await page.waitForFunction(()=>document.querySelector('#review-progress-text').textContent==='88 / 203');
+    await page.waitForFunction(()=>document.querySelector('#review-progress-text').textContent==='123 / 203');
     await (await page.$('#import-file')).uploadFile(output+'/wrong-snapshot.json');
     await page.waitForFunction(()=>document.querySelector('#toast').textContent.includes('different evidence snapshot'));
-    assert.equal(await page.$eval('#review-progress-text',el=>el.textContent),'88 / 203');
+    assert.equal(await page.$eval('#review-progress-text',el=>el.textContent),'123 / 203');
   });
   await check('Review import preserves conflicting requirements and notes and rejects invalid choices',async()=>{
     await (await page.$('#import-file')).uploadFile(output+'/conflict.json');
@@ -426,7 +426,7 @@ async function main() {
     await legacy.reload({waitUntil:'networkidle0'});
     assert.match(await legacy.$eval('[id="F19.S01"] .saved-note',el=>el.textContent),/Existing local note/);
     assert.ok(await legacy.$('[id="F19.S01"] [data-requirement="merge"]'));
-    assert.equal(await legacy.$eval('#review-progress-text',el=>el.textContent),'89 / 203');
+    assert.equal(await legacy.$eval('#review-progress-text',el=>el.textContent),'124 / 203');
     await legacy.click('[data-review="F19.S01"]');
     assert.equal(await legacy.$eval('#review-requirement',el=>el.value),'inherit');
     await context.close();
@@ -450,7 +450,7 @@ async function main() {
     await saved.goto(base+'#feature/F02',{waitUntil:'networkidle0'});
     assert.ok(await saved.$('.group-requirement [data-requirement="unassigned"]'));
     assert.equal(await saved.$$eval('.criterion-card [data-requirement="merge"]',els=>els.length),0);
-    assert.equal(await saved.$eval('#review-progress-text',el=>el.textContent),'88 / 203');
+    assert.equal(await saved.$eval('#review-progress-text',el=>el.textContent),'123 / 203');
     await context.close();
   });
   await go('#catalog?review=reviewed&view=criteria');
@@ -479,7 +479,7 @@ async function main() {
     await page.$eval('#catalog-search',el=>{el.value='';el.dispatchEvent(new Event('input',{bubbles:true}));});
     assert.equal(await page.$$eval('.group-card',els=>els.length),15);
     await page.click('[data-view="criteria"]');
-    assert.equal(await page.$$eval('.criterion-result',els=>els.length),52);
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),53);
   });
   await go('#catalog?requirement=merge&parity=parity&review=reviewed&view=criteria');
   await check('Requirement combines with parity and review filters and clearing filters restores everything',async()=>{
@@ -500,12 +500,12 @@ async function main() {
   });
   await go('#tests?result=failed');
   await check('Resolved failure shows the rerun and retains historical proof',async()=>{
-    assert.match(await page.$eval('.functional-table tbody',el=>el.textContent),/No unresolved failures/);
+    assert.match(await page.$eval('.functional-table tbody',el=>el.textContent),/qml_evidence_cache_limit/);
     assert.equal(await page.$('.finding-panel'),null);
     assert.ok(await page.$('a[href="gui-feature-evidence/logs/qml_test_send_create.log"]'));
     await go('#tests');
-    assert.equal(await page.$$eval('.functional-table tbody tr',els=>els.length),34);
-    assert.equal(await page.$$eval('.functional-table .failed-row',els=>els.length),0);
+    assert.equal(await page.$$eval('.functional-table tbody tr',els=>els.length),40);
+    assert.equal(await page.$$eval('.functional-table .failed-row',els=>els.length),1);
     const rerun = await page.$eval('.functional-table',el=>[...el.querySelectorAll('tr')].find(r=>r.textContent.includes('qml_test_send_create')).textContent);
     assert.match(rerun,/2026-10-10/);
     assert.match(rerun,/Corrected script/);
@@ -565,18 +565,19 @@ async function main() {
     const proof = await page.evaluate(()=>{
       const d=window.REVIEW_EVIDENCE;
       const rows=d.groups.flatMap(g=>g.criteria);
-      return {collection:d.collections[0],missing:rows.filter(c=>!c.applications.widgets.captures.length).map(c=>c.id),
+      return {collection:d.collections.find(c=>c.application==='widgets'),missing:rows.filter(c=>!c.applications.widgets.captures.length).map(c=>c.id),
         backup:rows.find(c=>c.id==='F04.S02'),device:rows.find(c=>c.id==='F15.S03'),total:d.captures.length};
     });
     assert.equal(proof.collection.selectedCaptures.length,61);
     assert.equal(proof.collection.newlyCapturedCriteria,58);
     assert.equal(proof.collection.assertions,44);
     assert.equal(proof.missing.length,11);
-    assert.equal(proof.total,181);
+    assert.equal(proof.total,218);
     assert.equal(proof.backup.applications.widgets.status,'assertions');
     assert.equal(proof.backup.snapshotWidgetsEvidence.captures.length,0);
     assert.ok(proof.backup.applications.widgets.captures.every(p=>p.startsWith('collections/20261010-widgets/')));
-    assert.equal(proof.backup.applications.qml.status,'source');
+    assert.equal(proof.backup.applications.qml.status,'assertions');
+    assert.equal(proof.backup.snapshotQmlEvidence.status,'source');
     assert.equal(proof.backup.implementation.status,'parity');
     assert.equal(proof.device.applications.widgets.captures.length,0);
     assert.equal(proof.device.implementation.status,'partial');
@@ -592,7 +593,35 @@ async function main() {
     assert.ok(report.includes('F27.S04'));
     assert.ok(report.includes('Failed attempts and validation limits'));
   });
-  await check('All 181 selected captures decode in the browser',async()=>{
+  await check('New QML evidence accepts proven outcomes and exposes the cache regression and test backlog',async()=>{
+    await go('#feature/F23?item=F23.S01');
+    assert.equal(await page.$eval('[data-quick-review="F23.S01"]',el=>el.getAttribute('aria-pressed')),'false');
+    assert.ok(await page.$('[id="F23.S01"] .parity-badge[data-parity="partial"]'));
+    assert.match(await page.$eval('[id="F23.S01"]',el=>el.textContent),/768/);
+    assert.ok(await page.$('[id="F23.S01"] a[href$="missing-functional-tests.md#f23-s01"]'));
+    await page.screenshot({path:output+'/qml-cache-regression.png',fullPage:true});
+    await go('#feature/F04?item=F04.S02');
+    assert.equal(await page.$eval('[data-quick-review="F04.S02"]',el=>el.getAttribute('aria-pressed')),'true');
+    const proof=await page.evaluate(()=>{
+      const c=window.REVIEW_EVIDENCE.collections.find(c=>c.application==='qml');
+      return {captures:c.selectedCaptures.length,closed:c.closedProofGaps,remaining:c.remainingProofGaps,checks:c.assertions,failed:c.failedAssertions};
+    });
+    assert.deepEqual(proof,{captures:37,closed:35,remaining:26,checks:50,failed:1});
+    await go('#tests');
+    assert.match(await page.$eval('.assertion-links',el=>el.textContent),/49 passed · 1 failed/);
+    await page.click('[data-collection="20261010-qml"] summary');
+    assert.ok(await page.$('[data-collection="20261010-qml"] a[href$="missing-functional-tests.md"]'));
+    assert.match(await page.$eval('[data-collection="20261010-qml"]',el=>el.textContent),/35 of the 61 proof gaps/);
+    const plan=await page.evaluate(async()=>await (await fetch('gui-feature-evidence/collections/20261010-qml/functional-test-plan.json')).json());
+    assert.equal(plan.length,61);
+    assert.equal(plan.filter(c=>c.status==='proved').length,35);
+    assert.deepEqual(plan.filter(c=>c.status==='failing-regression').map(c=>c.id),['F23.S01']);
+    await page.setViewport({width:390,height:844});
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
+    await page.screenshot({path:output+'/qml-evidence-mobile.png'});
+    await page.setViewport({width:1440,height:1000});
+  });
+  await check('All 218 selected captures decode in the browser',async()=>{
     const bad=await page.evaluate(async()=>{
       const results=await Promise.all(window.REVIEW_EVIDENCE.captures.map(photo=>new Promise(resolve=>{
         const img=new Image();img.onload=()=>resolve(img.naturalWidth===photo.width&&img.naturalHeight===photo.height?null:photo.path);img.onerror=()=>resolve(photo.path);img.src='gui-feature-evidence/'+photo.path;
@@ -707,7 +736,7 @@ async function main() {
     assert.equal(await actionsPage.$eval(quick,el=>el.getAttribute('aria-pressed')),'true');
     assert.equal(await actionsPage.evaluate(()=>document.activeElement.dataset.quickReview),'F19.S01');
     assert.ok(Math.abs(await actionsPage.evaluate(()=>scrollY)-before)<2);
-    assert.equal(await actionsPage.$eval('#review-progress-text',el=>el.textContent),'90 / 203');
+    assert.equal(await actionsPage.$eval('#review-progress-text',el=>el.textContent),'125 / 203');
     let record=await savedAction();
     assert.equal(record.status,'accepted');assert.equal(record.note,reviewNote);assert.equal(record.requirement,'release');
     assert.ok(Number.isFinite(Date.parse(record.updatedAt)));
@@ -717,7 +746,7 @@ async function main() {
     await actionsPage.focus(quick);
     await actionsPage.keyboard.press('Space');
     assert.equal(await actionsPage.$eval(quick,el=>el.getAttribute('aria-pressed')),'false');
-    assert.equal(await actionsPage.$eval('#review-progress-text',el=>el.textContent),'89 / 203');
+    assert.equal(await actionsPage.$eval('#review-progress-text',el=>el.textContent),'124 / 203');
     record=await savedAction();
     assert.equal(record.status,'unreviewed');assert.equal(record.note,reviewNote);assert.equal(record.requirement,'release');
   });

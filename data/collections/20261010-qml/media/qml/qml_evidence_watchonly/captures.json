@@ -1,0 +1,32 @@
+[
+  {
+    "path": "media/qml/qml_evidence_watchonly/001-console-rescan-recovers-history.png",
+    "caption": "console-rescan-recovers-history",
+    "utc": "2026-10-10T17:40:00.143947+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "c18ba289110a226715b1a20d79c37747b989413302cd308631c6788a131b59b2",
+    "test": "qml_evidence_watchonly",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_evidence_watchonly/002-watch-only-recovered-activity.png",
+    "caption": "watch-only-recovered-activity",
+    "utc": "2026-10-10T17:40:00.670541+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "fa5ca87cf204c1bb5160724f6aa3fbd082d401118504ea7b7d5cc68826a07327",
+    "test": "qml_evidence_watchonly",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_evidence_watchonly/003-watch-only-unsigned-payment-exported.png",
+    "caption": "watch-only-unsigned-payment-exported",
+    "utc": "2026-10-10T17:40:01.539918+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "7c033240b2527359655f81e915f56c957352ff0ab6a983b8755e5c3656c01262",
+    "test": "qml_evidence_watchonly",
+    "kind": "application-screenshot"
+  }
+]

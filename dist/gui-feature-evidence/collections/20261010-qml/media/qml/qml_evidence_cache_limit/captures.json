@@ -1,0 +1,22 @@
+[
+  {
+    "path": "media/qml/qml_evidence_cache_limit/001-valid-core-cache-allocation.png",
+    "caption": "valid-core-cache-allocation",
+    "utc": "2026-10-10T17:40:59.986300+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "76afe718bbf464ea0fdc5ea32f68d0dad9a2d8d8dc79cd33097376fda1f57667",
+    "test": "qml_evidence_cache_limit",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_evidence_cache_limit/002-gui-rejects-valid-cache-allocation.png",
+    "caption": "gui-rejects-valid-cache-allocation",
+    "utc": "2026-10-10T17:41:01.781245+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "460d71b76e1daa9eae76b801bf7dbac49ace6d75bea7c98a1960fb265b10153b",
+    "test": "qml_evidence_cache_limit",
+    "kind": "application-screenshot"
+  }
+]

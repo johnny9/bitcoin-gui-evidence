@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/work/qml-acceptance-20261010/scripts/qml_capture_test.py", line 123, in <module>
+    runpy.run_path(str(test_path), run_name='__main__')
+  File "<frozen runpy>", line 286, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/work/qml-acceptance-20261010/scripts/qml_evidence_watchonly.py", line 29, in <module>
+    check('rescan-fixture','F34.S01','Future-dated descriptor import leaves historical funds undiscovered before rescan.',before,0)
+  File "/work/qml-acceptance-20261010/scripts/evidence_helpers.py", line 18, in check
+    assert actual == expected, item
+           ^^^^^^^^^^^^^^^^^^
+AssertionError: {'id': 'rescan-fixture', 'features': ['F34.S01'], 'description': 'Future-dated descriptor import leaves historical funds undiscovered before rescan.', 'actual': 150.0, 'expected': 0, 'status': 'failed'}

@@ -1,0 +1,8 @@
+Starting GUI: /validation/build/bin/bitcoin-core-app -test-automation=/work/tmp/qml_resetguisettings_pw4szkik/test_bridge.sock -test-settings-dir=/work/tmp/qml_resetguisettings_pw4szkik/config -resetguisettings -logtimemicros -debug -debugexclude=leveldb -regtest -disablewallet
+QmlDriver connected to test bridge.
+Starting GUI: /validation/build/bin/bitcoin-core-app -test-automation=/work/tmp/qml_resetguisettings_pw4szkik/test_bridge.sock -test-settings-dir=/work/tmp/qml_resetguisettings_pw4szkik/config -resetguisettings -logtimemicros -debug -debugexclude=leveldb -regtest -disablewallet
+QmlDriver connected to test bridge.
+
+==================================================
+All tests PASSED
+==================================================

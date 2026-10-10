@@ -1,0 +1,17 @@
+shortcut-ctrl+2: passed
+shortcut-ctrl+3: passed
+shortcut-ctrl+1: passed
+fee-unavailable: passed
+enter-payment-address: passed
+open-address-records: passed
+wallet-diagnostics: passed
+contextual-guidance: passed
+pause-network: passed
+resume-network: passed
+rpc-server: passed
+resource-preferences: passed
+window-placement-restored: passed
+resources-restored: passed
+command-line-precedence: passed
+gui-over-config: passed
+configuration-precedence: passed

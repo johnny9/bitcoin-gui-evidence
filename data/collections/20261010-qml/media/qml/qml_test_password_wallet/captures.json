@@ -1,0 +1,302 @@
+[
+  {
+    "path": "media/qml/qml_test_password_wallet/001-01-gui-launched.png",
+    "caption": "01-gui-launched",
+    "utc": "2026-10-10T17:21:37.081900+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "845fd98e01cebf7c7ec129c0d8ae995c44c81f7aad67ee2024423c2301003ce8",
+    "test": "qml_test_password_wallet",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_password_wallet/002-02-onboarding-completed.png",
+    "caption": "02-onboarding-completed",
+    "utc": "2026-10-10T17:21:37.625208+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "463e6448a0067dd5cd466697333b8be3d6074fae2a4afb98ba5263dd13677f1c",
+    "test": "qml_test_password_wallet",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_password_wallet/003-03-encrypted-wallet-created.png",
+    "caption": "03-encrypted-wallet-created",
+    "utc": "2026-10-10T17:21:39.948516+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "d6b96ecf37e598b70b686ad436e1dc6432e9d9ba029c58a492898a6680545f1b",
+    "test": "qml_test_password_wallet",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_password_wallet/004-04-wallet-funded-and-locked.png",
+    "caption": "04-wallet-funded-and-locked",
+    "utc": "2026-10-10T17:21:43.488392+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "24c15d0c2d12fcaf996dba2de647529f4eb3e74788fc6aae20c6afdf7c6cb0df",
+    "test": "qml_test_password_wallet",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_password_wallet/005-05-wallet-restarted-locked.png",
+    "caption": "05-wallet-restarted-locked",
+    "utc": "2026-10-10T17:21:45.322872+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "dc3882855bb9e4a291cacf8ce65a7673339d7b2af167f4ca08491c806b9c1db3",
+    "test": "qml_test_password_wallet",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_password_wallet/006-06-locked-wallet-activity-visible.png",
+    "caption": "06-locked-wallet-activity-visible",
+    "utc": "2026-10-10T17:21:45.849002+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "c96ecb17b71d22e788a7dab89d8b0bb6921bef62afce24d47ced1ca3cb2eafb9",
+    "test": "qml_test_password_wallet",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_password_wallet/007-07-review-passphrase-prompt-displayed.png",
+    "caption": "07-review-passphrase-prompt-displayed",
+    "utc": "2026-10-10T17:21:46.988215+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "336bf0bc867082b0b6fbc753b32e4eb409f8973fba220d55e9c2732d11125dac",
+    "test": "qml_test_password_wallet",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_password_wallet/008-08-review-built-and-wallet-relocked.png",
+    "caption": "08-review-built-and-wallet-relocked",
+    "utc": "2026-10-10T17:21:53.410020+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "c36db16ef991fd1c8e36ae4e4ddbb5f5f7d9fb48626da7dd7fb7db0b227f43eb",
+    "test": "qml_test_password_wallet",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_password_wallet/009-09-prepared-transaction-broadcast.png",
+    "caption": "09-prepared-transaction-broadcast",
+    "utc": "2026-10-10T17:21:53.964183+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "beefff4bfcff3ae26abb3eb990d84b2e8ff710a8d532a2f68e5d4af8565258d7",
+    "test": "qml_test_password_wallet",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_password_wallet/010-02-gui-launched.png",
+    "caption": "02-gui-launched",
+    "utc": "2026-10-10T17:22:09.374045+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "6e069ab90bd7c2c9a5040463720de6bda24a3feb56d683d4d5c4916b79f9ac82",
+    "test": "qml_test_password_wallet",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_password_wallet/011-03-fallback-wallet-selected.png",
+    "caption": "03-fallback-wallet-selected",
+    "utc": "2026-10-10T17:22:12.000143+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "59ba6c7545b3b579ba6427841247882b10ee70fe0476055a2c6e31663815e66e",
+    "test": "qml_test_password_wallet",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_password_wallet/012-04-review-fallback-passphrase-prompt-displayed.png",
+    "caption": "04-review-fallback-passphrase-prompt-displayed",
+    "utc": "2026-10-10T17:22:13.132061+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "27e02d28358ad2d60e3d39f6c0f191ef9ceef4f42b0ef4c63fb7a4c07a3343ac",
+    "test": "qml_test_password_wallet",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_password_wallet/013-05-review-rebuilt-and-wallet-relocked.png",
+    "caption": "05-review-rebuilt-and-wallet-relocked",
+    "utc": "2026-10-10T17:22:18.125837+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "2ce4f209ccec2aed83653d415e44d8bd450b361df800f56e350eab545efde752",
+    "test": "qml_test_password_wallet",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_password_wallet/014-06-fallback-transaction-broadcast.png",
+    "caption": "06-fallback-transaction-broadcast",
+    "utc": "2026-10-10T17:22:18.649260+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "ab1305a4aa1beec018d8bce2886e413d4ea84cc6f1dc66a0c7ec29969e9a5f1c",
+    "test": "qml_test_password_wallet",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_password_wallet/015-02-gui-launched.png",
+    "caption": "02-gui-launched",
+    "utc": "2026-10-10T17:22:23.047918+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "e3736aa96827e01603593ac61348d80ea7f419ec2bcf76fb9aba58f5d44b537c",
+    "test": "qml_test_password_wallet",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_password_wallet/016-03-wallet-file-submitted.png",
+    "caption": "03-wallet-file-submitted",
+    "utc": "2026-10-10T17:22:24.652476+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "476e6c49b5f65c5b6f61fa421f43376674555ba5bbe59a9046785817a0f914b4",
+    "test": "qml_test_password_wallet",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_password_wallet/017-04-encrypted-wallet-imported-locked.png",
+    "caption": "04-encrypted-wallet-imported-locked",
+    "utc": "2026-10-10T17:22:25.780097+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "1385061ea191b4eaff43b6cb11ea76c905a67aae926975875c640b6e3637f5ad",
+    "test": "qml_test_password_wallet",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_password_wallet/018-05-imported-locked-wallet-activity-visible.png",
+    "caption": "05-imported-locked-wallet-activity-visible",
+    "utc": "2026-10-10T17:22:26.285684+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "b3f21b28e79034b0fccfe19adecbb094150bf3b2316330e1cdda7beae094c619",
+    "test": "qml_test_password_wallet",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_password_wallet/019-02-gui-launched.png",
+    "caption": "02-gui-launched",
+    "utc": "2026-10-10T17:22:30.073369+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "802f4e58c6e174eac94a98d5a74645bc0018f485c38f6ee617feced3988f6150",
+    "test": "qml_test_password_wallet",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_password_wallet/020-03-wallet-overview-displayed.png",
+    "caption": "03-wallet-overview-displayed",
+    "utc": "2026-10-10T17:22:32.693818+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "d9288ac017133e85802460a276153185813d5a8374b16d8d7cd006121fd24fb9",
+    "test": "qml_test_password_wallet",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_password_wallet/021-04-legacy-migration-prompt-displayed.png",
+    "caption": "04-legacy-migration-prompt-displayed",
+    "utc": "2026-10-10T17:22:33.549213+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "5c2dc329416adae1b39c9659aa1fab5814254798994f61b1cbceb0ac58d668ff",
+    "test": "qml_test_password_wallet",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_password_wallet/022-05-migration-passphrase-prompt-displayed.png",
+    "caption": "05-migration-passphrase-prompt-displayed",
+    "utc": "2026-10-10T17:22:34.389569+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "a6a02ba4b79b31295bf2131e9d1185b175e6ba05a295ceb9dfcf9008d790febc",
+    "test": "qml_test_password_wallet",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_password_wallet/023-06-wrong-migration-password-rejected.png",
+    "caption": "06-wrong-migration-password-rejected",
+    "utc": "2026-10-10T17:22:39.411951+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "81e5da2baa4ec128078bde03a93c6b7d3d161625497c03e6507337fba88f1f4d",
+    "test": "qml_test_password_wallet",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_password_wallet/024-07-legacy-wallet-migrated-and-loaded.png",
+    "caption": "07-legacy-wallet-migrated-and-loaded",
+    "utc": "2026-10-10T17:22:45.297961+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "3865c8b2d788ccdac16977d7c3b28a59722987b60402c73a43ecc22eab1fba17",
+    "test": "qml_test_password_wallet",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_password_wallet/025-02-gui-launched.png",
+    "caption": "02-gui-launched",
+    "utc": "2026-10-10T17:22:47.974080+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "66f7e11be892ab709f6d79ddeb1d90e2dc36c8f4b8c4f858312e938c9d0397ad",
+    "test": "qml_test_password_wallet",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_password_wallet/026-03-wallet-overview-displayed.png",
+    "caption": "03-wallet-overview-displayed",
+    "utc": "2026-10-10T17:22:50.569664+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "73caf5372fa62b78c8b735611248d73d94bff48dddfd704d80cb608be6be6ea8",
+    "test": "qml_test_password_wallet",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_password_wallet/027-04-wallet-settings-opened.png",
+    "caption": "04-wallet-settings-opened",
+    "utc": "2026-10-10T17:22:51.787938+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "b523585bba5de4bee96a6ecb7a2e4c7fc7f8081a53e7f7dd07f3b8291dd798d1",
+    "test": "qml_test_password_wallet",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_password_wallet/028-05-wallet-selector-open-before-closing-selected-wallet.png",
+    "caption": "05-wallet-selector-open-before-closing-selected-wallet",
+    "utc": "2026-10-10T17:22:52.649276+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "4ccbe7525257c80a60c2677d5552cf606079811ef1b77890b3ad8d2b0dca6494",
+    "test": "qml_test_password_wallet",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_password_wallet/029-06-wallet-selector-after-closing-selected-wallet.png",
+    "caption": "06-wallet-selector-after-closing-selected-wallet",
+    "utc": "2026-10-10T17:22:53.921249+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "b51c815992c738d01306c7a31a4decd398643f1668fefac1fe43c127b31aa68d",
+    "test": "qml_test_password_wallet",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_password_wallet/030-07-selected-wallet-closed-from-selector.png",
+    "caption": "07-selected-wallet-closed-from-selector",
+    "utc": "2026-10-10T17:22:54.427392+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "722ddce734a5f2a5e19435a6d31b832b745228cd23d659d3481da279b94fa6c5",
+    "test": "qml_test_password_wallet",
+    "kind": "application-screenshot"
+  }
+]
