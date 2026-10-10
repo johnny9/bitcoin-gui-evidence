@@ -69,15 +69,18 @@ def main():
     parser.feed((DIST / 'index.html').read_text())
     parser.feed(data['testReportHtml'])
     parser.feed(data['provenanceHtml'])
+    rerun_capture_count = 0
     for rerun in data['reruns']:
         parser.feed(rerun['reportHtml'])
         assert rerun['sourceRevision'] == data['revisions']['qml']
         assert rerun['applicationExitCode'] == 0
         assert all(r['exit_code'] == 0 and r['wrapper'] is False for r in rerun['repeats'])
         folder = original / 'reruns' / rerun['id']
-        assert hashlib.sha256((folder / 'qml_test_send_create.py').read_bytes()).hexdigest() == rerun['testSha256']
-        captures = json.loads((folder / 'media/qml/qml_test_send_create/captures.json').read_text())
-        assert len(captures) == rerun['functional']['captures'] == 31
+        test_name = rerun['functional']['test']
+        assert hashlib.sha256((folder / (test_name + '.py')).read_bytes()).hexdigest() == rerun['testSha256']
+        captures = json.loads((folder / 'media/qml' / test_name / 'captures.json').read_text())
+        assert len(captures) == rerun['functional']['captures']
+        rerun_capture_count += len(captures)
         for capture in captures:
             assert hashlib.sha256((folder / capture['path']).read_bytes()).hexdigest() == capture['sha256']
     for group in data['groups']:
@@ -106,10 +109,13 @@ def main():
         assert path.is_relative_to(DIST), target
         assert path.is_file(), target
         local_links.add(url.path)
-    assert len(data['captures']) == 118
+    assert len(data['captures']) == 120
     archived_captures = json.loads((original / 'selected-captures.json').read_text())
-    assert data['captures'][:116] == archived_captures
-    for photo in data['captures']:
+    superseded = {p for r in data['reruns'] for p in r.get('supersededCaptures', [])}
+    active_originals = [p for p in archived_captures if p['path'] not in superseded]
+    assert data['captures'][:len(active_originals)] == active_originals
+    assert not superseded.intersection(p['path'] for p in data['captures'])
+    for photo in archived_captures + data['captures']:
         asset = original / photo['path']
         assert hashlib.sha256(asset.read_bytes()).hexdigest() == photo['sha256'], photo['path']
     assert Counter(r['status'] for r in data['functional']) == {'passed':34}
@@ -117,13 +123,20 @@ def main():
     rerun_result = next(r for r in data['functional'] if r['test'] == 'qml_test_send_create')
     assert rerun_result['previousResult']['status'] == 'failed'
     assert rerun_result['date'] == '2026-10-10' and rerun_result['testModified']
+    rbf = next(r for r in data['functional'] if r['test'] == 'qml_test_wallet_rbf')
+    assert rbf['previousResult']['status'] == 'passed'
+    assert rbf['date'] == '2026-10-10' and rbf['testVariant'] == 'Capture checkpoints'
+    for sid in ('F17.S01', 'F17.S02', 'F17.S03'):
+        assert by_id[sid]['applications']['qml']['captures']
+        assert all(p.startswith('reruns/20261010-wallet-rbf/') for p in by_id[sid]['applications']['qml']['captures'])
+        assert not by_id[sid]['hasFailure']
     assert data['summary']['qml_functional'] == {'passed':34, 'failed':0}
     assert data['summary']['criteria_statuses']['qml']['Automated evidence collected'] == 108
     assert data['summary']['criteria_statuses']['qml']['Partial / limited evidence'] == 48
     for script in (ROOT / 'scripts').glob('*.py'):
         ast.parse(script.read_text())
     report = {'status':'passed', 'groups':34, 'criteria':203, 'originalCapturesVerified':116,
-              'rerunCapturesVerified':31, 'localLinkTargets':len(local_links), 'unresolvedFailures':0, 'catalogId':data['catalogId'],
+              'rerunCapturesVerified':rerun_capture_count, 'localLinkTargets':len(local_links), 'unresolvedFailures':0, 'catalogId':data['catalogId'],
               'groupParity': dict(Counter(g['implementation']['status'] for g in data['groups'])),
               'subfeatureParity': dict(Counter(c['implementation']['status'] for c in criteria))}
     print(json.dumps(report, indent=2))

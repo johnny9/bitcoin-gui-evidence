@@ -1,5 +1,16 @@
 # Static site validation
 
+## October 10, 2026 — clear unconfirmed-transaction evidence
+
+`qml_test_wallet_rbf` passed a fresh end-to-end run against the unchanged pinned application. Capture checkpoints dismiss the password prompt through Cancel before recording fee review, wait for it to close after authorization, and open the replacement transaction details after successful broadcast. All five original assert statements remain. The GUI and test exit 0; fees, replacement mempool entry, wallet relocking, transaction conflict state and mined confirmation are recorded. See the [capture rerun report](data/reruns/20261010-wallet-rbf/report.md) and [validation limits](data/reruns/20261010-wallet-rbf/validation.json).
+
+- **44 browser checks passed**, including three clear GUI-QML gallery images for F17, criterion-specific capture mappings, the unchanged Widgets reference, and decoding all 120 selected images. The feature page and gallery were visually inspected.
+- The old password-covered frame is superseded in the current gallery and remains byte-for-byte available with its historical links. All earlier evidence artifacts remain unchanged. Integrity checks cover 116 archived original captures and 44 raw images across the two dated reruns.
+- The latest combined functional results are still 34 passed: 32 October 8 results and two October 10 reruns. This was not a fresh full-suite run. No implementation, acceptance or requirement ratings changed; saved review identity is preserved.
+- Build, integrity, JavaScript syntax and whitespace checks passed. The original application binary and fixture hashes were verified. Native lint/tidy/ASan entry scripts are absent from this historical checkout, as recorded in the rerun validation JSON; no native CI or sanitizer pass is claimed.
+
+Current QA artifacts are in `.validation/wallet-rbf-captures/`. The sections below describe earlier validation at the time of each update.
+
 ## October 10, 2026 — functional rerun update
 
 The original failure reproduced at application revision `a91f4b4774f25de061fe1a7c132a91ddde117fca`. A test-only correction uses focused keyboard input for both recipient notes. All original assertions remain. Corrected script revision `19891532b849b1f72fbbc9dfaa2565e7ce50546e` passed three complete runs against the unchanged binary, including two without the evidence wrapper. See the [rerun report](data/reruns/20261010-send-create/report.md), [exact patch](data/reruns/20261010-send-create/test-fix.patch) and [application validation record](data/reruns/20261010-send-create/validation.json).

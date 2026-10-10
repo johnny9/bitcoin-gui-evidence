@@ -1,0 +1,28 @@
+{
+  "applicationRevision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+  "testSha256": "d051f82007f52895979ed93aeb1cb67f302d6f09feb7f59b45dcd1b6072b3768",
+  "originalAssertionsRetained": 5,
+  "pythonCompile": "passed",
+  "applicationExitCode": 0,
+  "capturedPasswordDialogVisible": false,
+  "repositoryCi": [
+    {
+      "command": "./ci/lint.py",
+      "exitCode": 127,
+      "output": "/bin/sh: 1: ./ci/lint.py: not found\n",
+      "status": "blocked: no CI entry scripts in this historical checkout"
+    },
+    {
+      "command": "FILE_ENV=./ci/test/00_setup_env_native_tidy.sh ./ci/test_run_all.sh",
+      "exitCode": 127,
+      "output": "/bin/sh: 1: ./ci/test_run_all.sh: not found\n",
+      "status": "blocked: no CI entry scripts in this historical checkout"
+    },
+    {
+      "command": "FILE_ENV=./ci/test/00_setup_env_native_asan.sh ./ci/test_run_all.sh",
+      "exitCode": 127,
+      "output": "/bin/sh: 1: ./ci/test_run_all.sh: not found\n",
+      "status": "blocked: no CI entry scripts in this historical checkout"
+    }
+  ]
+}

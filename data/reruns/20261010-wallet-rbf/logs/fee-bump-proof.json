@@ -1,0 +1,30 @@
+{
+  "originalTxid": "e3b398ccf12fb98943fd789543880f79da5d98d5c3b7530e77aeb7705490a090",
+  "replacementTxid": "ee79167bb84707216792a4c34609376f7a7e2acc710fe939831d0176b2f682bf",
+  "displayedOriginalFee": "0.00001410 BTC",
+  "displayedNewFee": "0.00002116 BTC",
+  "replacementMempoolEntry": {
+    "vsize": 141,
+    "weight": 561,
+    "time": 1791617185,
+    "height": 101,
+    "descendantcount": 1,
+    "descendantsize": 141,
+    "ancestorcount": 1,
+    "ancestorsize": 141,
+    "wtxid": "76ba2e9b2c2d87859cca6084e2a8061893665d94d10dd9e3153fcc330afc65ea",
+    "chunkweight": 561,
+    "fees": {
+      "base": 2.116e-05,
+      "modified": 2.116e-05,
+      "ancestor": 2.116e-05,
+      "descendant": 2.116e-05,
+      "chunk": 2.116e-05
+    },
+    "depends": [],
+    "spentby": [],
+    "unbroadcast": true
+  },
+  "passwordDialogVisible": false,
+  "walletLockedAfterSigning": true
+}

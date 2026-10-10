@@ -1,0 +1,17 @@
+[rbf] starting source node
+[rbf] starting gui
+[rbf] funding wallet
+[rbf] sending initial transaction
+[rbf] sent txid: e3b398ccf12fb98943fd789543880f79da5d98d5c3b7530e77aeb7705490a090
+[rbf] navigating to activity tab
+[rbf] waiting for unconfirmed tx in activity list
+[rbf] verifying speed up banner
+[rbf] opening speed up overlay
+[rbf] confirming bump
+[rbf] waiting for replacement tx
+[rbf] replacement txid: ee79167bb84707216792a4c34609376f7a7e2acc710fe939831d0176b2f682bf
+[rbf] verifying original tx conflict state
+[rbf] mining replacement tx
+[rbf] verifying confirmed tx is not bumpable
+[rbf] confirmed tx correctly rejected: 4529a7a1f0c923e0aa0ca6424606f4aa5b20674637431372911f28a28819a328:0 is already spent
+[rbf] ALL TESTS PASSED

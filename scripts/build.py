@@ -76,6 +76,7 @@ def main():
         raise ValueError('Every group assessment needs an explicit main user goal')
     coverage = {r['id']: r for r in load('coverage.json')}
     photos = load('selected-captures.json')
+    original_photos = list(photos)
     groups_by_slug = {f['slug']: f['id'] for f in inventory}
     prefix = 'gui-feature-evidence/'
 
@@ -189,17 +190,22 @@ def main():
     data['reruns'] = []
     for record in sorted((ROOT / 'data/reruns').glob('*/result.json')):
         rerun = json.loads(record.read_text())
+        result = rerun['functional']
+        test_filename = result['test'] + '.py'
         if rerun['snapshotCatalogId'] != data['catalogId'] or rerun['sourceRevision'] != data['revisions']['qml']:
             raise ValueError('Rerun does not match the pinned application: ' + str(record))
-        if hashlib.sha256((record.parent / 'qml_test_send_create.py').read_bytes()).hexdigest() != rerun['testSha256']:
+        if hashlib.sha256((record.parent / test_filename).read_bytes()).hexdigest() != rerun['testSha256']:
             raise ValueError('Rerun test hash mismatch')
         base = 'reruns/' + rerun['id'] + '/'
         report = base + 'report.md'
         rerun['report'] = prefix + report
         rerun['reportHtml'] = html((record.parent / 'report.md').read_text(), document=evidence / report, inline=False)
         data['reruns'].append(rerun)
+        superseded = set(rerun.get('supersededCaptures', []))
+        if not superseded.issubset({p['path'] for p in photos}):
+            raise ValueError('Unknown capture to supersede: ' + str(record))
+        photos[:] = [p for p in photos if p['path'] not in superseded]
         photos.extend(rerun['selectedCaptures'])
-        result = rerun['functional']
         previous = next(r for r in data['functional'] if r['test'] == result['test'])
         previous['previousResult'] = dict(previous)
         previous.update(result)
@@ -215,14 +221,16 @@ def main():
                 statuses[update['status']] = statuses.get(update['status'], 0) + 1
                 qml['status'], qml['label'] = STATUS[update['status']]
                 qml['text'] = update['detail']
-                qml['html'] = html(update['detail']) + ' <a href="' + prefix + report + '">Rerun report and test fix</a>.'
+                qml['html'] = html(update['detail']) + ' <a href="' + prefix + report + '">Rerun report and evidence</a>.'
+                qml['captures'] = [p for p in qml['captures'] if p not in superseded]
                 qml['captures'].extend(p['path'] for p in rerun['selectedCaptures'] if row['id'] in p['features'])
                 row['hasFailure'] = update['hasFailure']
                 row['searchText'] = ' '.join([group['id'], row['id'], group['name'], row['intent']] + [a['text'] for a in row['applications'].values()]).lower()
             for test in group['tests']:
                 if result['test'] in test['testHtml']:
-                    test['testHtml'] = '<a href="' + prefix + base + 'qml_test_send_create.py">' + result['test'] + ' (corrected script)</a>'
-                    test['resultHtml'] = '<a href="' + prefix + result['log'] + '">' + result['status'] + ' on ' + rerun['date'] + '</a>; <a href="' + prefix + report + '">rerun, original failure and patch</a>'
+                    variant = result.get('testVariant', 'Corrected script').lower()
+                    test['testHtml'] = '<a href="' + prefix + base + test_filename + '">' + result['test'] + ' (' + variant + ')</a>'
+                    test['resultHtml'] = '<a href="' + prefix + result['log'] + '">' + result['status'] + ' on ' + rerun['date'] + '</a>; <a href="' + prefix + report + '">dated rerun report</a>'
                     test['failed'] = result['status'] == 'failed'
             group['captures'] = [p['path'] for p in photos if any(s.startswith(group['id'] + '.') for s in p['features'])]
     data['summary']['selected_captures'] = len(photos)
@@ -246,7 +254,7 @@ def main():
         shutil.copytree(evidence / dirname, output_evidence / dirname, ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
     if (ROOT / 'data/reruns').is_dir():
         shutil.copytree(ROOT / 'data/reruns', output_evidence / 'reruns')
-    for photo in photos:
+    for photo in original_photos + [p for p in photos if p not in original_photos]:
         source = (ROOT / 'data' if photo['path'].startswith('reruns/') else evidence) / photo['path']
         target = output_evidence / photo['path']
         target.parent.mkdir(parents=True, exist_ok=True)

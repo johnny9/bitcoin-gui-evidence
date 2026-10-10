@@ -466,7 +466,21 @@ async function main() {
     assert.equal(await page.$$eval('.gallery-card .app-dot.qml',els=>els.length),2);
     assert.equal(await page.$('[data-filter="app"]'),null);
   });
-  await check('All 118 selected captures decode in the browser',async()=>{
+  await check('Unconfirmed transaction evidence uses clear rerun captures for each outcome',async()=>{
+    await go('#feature/F17');
+    const captures = await page.evaluate(()=>window.REVIEW_EVIDENCE.groups.find(g=>g.id==='F17').criteria.slice(0,3).map(c=>c.applications.qml.captures));
+    assert.deepEqual(captures.map(c=>c.length),[3,1,2]);
+    assert.ok(captures.every(c=>c.every(p=>p.startsWith('reruns/20261010-wallet-rbf/'))));
+    assert.ok(captures[0][0].endsWith('replacement-details-no-dialog.png'));
+    assert.ok(captures[1][0].endsWith('fee-review-password-dismissed.png'));
+    assert.equal(await page.$$eval('.criterion-card .capture-preview img',images=>images.some(i=>i.src.includes('006-click-updatetransactionbutton'))),false);
+    await page.screenshot({path:output+'/unconfirmed-criteria.png'});
+    await go('#feature/F17?tab=captures');
+    assert.equal(await page.$$eval('.gallery-card .app-dot.qml',els=>els.length),3);
+    assert.equal(await page.$$eval('.gallery-card .app-dot.widgets',els=>els.length),3);
+    await page.screenshot({path:output+'/unconfirmed-gallery.png'});
+  });
+  await check('All 120 selected captures decode in the browser',async()=>{
     const bad=await page.evaluate(async()=>{
       const results=await Promise.all(window.REVIEW_EVIDENCE.captures.map(photo=>new Promise(resolve=>{
         const img=new Image();img.onload=()=>resolve(img.naturalWidth===photo.width&&img.naturalHeight===photo.height?null:photo.path);img.onerror=()=>resolve(photo.path);img.src='gui-feature-evidence/'+photo.path;

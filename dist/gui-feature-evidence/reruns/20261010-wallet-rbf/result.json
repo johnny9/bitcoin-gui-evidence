@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "20261010-wallet-rbf",
+  "date": "2026-10-10",
+  "snapshotCatalogId": "b4b1026b74ad8bf0a1628c9889b82193d33d210c3aa0170e94783f371fe15c0b",
+  "sourceRevision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+  "testRevision": "a91f4b4774f25de061fe1a7c132a91ddde117fca + capture-checkpoints.patch",
+  "testSha256": "d051f82007f52895979ed93aeb1cb67f302d6f09feb7f59b45dcd1b6072b3768",
+  "originalTestSha256": "dae85554e9be745c34efdc3a65bab2f2134d68f69664a698e2d68bdcb85cdf2a",
+  "binarySha256": "a8215c7e45242fdf0e740339733696ec832e362f8306bfbe3bac95dd6bb4fb4c",
+  "functional": {
+    "test": "qml_test_wallet_rbf",
+    "status": "passed",
+    "exit_code": 0,
+    "seconds": 12.73,
+    "captures": 13,
+    "log": "reruns/20261010-wallet-rbf/logs/qml_test_wallet_rbf.log",
+    "date": "2026-10-10",
+    "testModified": true,
+    "testVariant": "Capture checkpoints"
+  },
+  "applicationExitCode": 0,
+  "repeats": [],
+  "selectedCaptures": [
+    {
+      "path": "reruns/20261010-wallet-rbf/media/qml/qml_test_wallet_rbf/013-replacement-details-no-dialog.png",
+      "caption": "Replacement transaction with no dialog",
+      "utc": "2026-10-10T07:26:27.020023+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "3224672c68627e62d6affde5685e7f639086d5b850d342744b314d289743df67",
+      "test": "qml_test_wallet_rbf",
+      "kind": "application-screenshot",
+      "features": [
+        "F17.S01",
+        "F17.S03"
+      ],
+      "application": "qml",
+      "note": "Fresh October 10 capture from the unchanged application. The password prompt is closed; the test verifies replacement broadcast and wallet relocking."
+    },
+    {
+      "path": "reruns/20261010-wallet-rbf/media/qml/qml_test_wallet_rbf/008-fee-review-password-dismissed.png",
+      "caption": "Review the fee increase after dismissing the password prompt",
+      "utc": "2026-10-10T07:26:23.959484+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "5c3505b364403e0925b8ef83c98065fa10f92d9609a6f9b3ea36f27cd9d37a43",
+      "test": "qml_test_wallet_rbf",
+      "kind": "application-screenshot",
+      "features": [
+        "F17.S01",
+        "F17.S02"
+      ],
+      "application": "qml",
+      "note": "Fresh October 10 capture from the unchanged application. The password prompt is closed; the test verifies replacement broadcast and wallet relocking."
+    },
+    {
+      "path": "reruns/20261010-wallet-rbf/media/qml/qml_test_wallet_rbf/011-replacement-broadcast-password-dismissed.png",
+      "caption": "Replacement broadcast confirmed",
+      "utc": "2026-10-10T07:26:25.967215+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "fb2f06052eeafc977b552f6a470e91ed7c266d561a50e65f9654c355d9029e57",
+      "test": "qml_test_wallet_rbf",
+      "kind": "application-screenshot",
+      "features": [
+        "F17.S01",
+        "F17.S03"
+      ],
+      "application": "qml",
+      "note": "Fresh October 10 capture from the unchanged application. The password prompt is closed; the test verifies replacement broadcast and wallet relocking."
+    }
+  ],
+  "supersededCaptures": [
+    "media/qml/qml_test_wallet_rbf/006-click-updatetransactionbutton.png"
+  ],
+  "criteria": {
+    "F17.S01": {
+      "status": "Automated evidence collected",
+      "detail": "An eligible outgoing transaction is replaced at a higher fee. The new transaction enters the mempool and confirms after mining a regtest block. The new capture shows its transaction details with the password and completion dialogs closed.",
+      "hasFailure": false
+    },
+    "F17.S02": {
+      "status": "Automated evidence collected",
+      "detail": "The original fee (0.00001410 BTC) and new fee (0.00002116 BTC) are visible after cancelling the password prompt, before authorizing the increase. The script checks that the new displayed fee is higher.",
+      "hasFailure": false
+    },
+    "F17.S03": {
+      "status": "Automated evidence collected",
+      "detail": "The encrypted wallet signs and submits the replacement after successful authorization, then relocks. The replacement is verified in the mempool; the captures show broadcast confirmation and its transaction details without the password prompt.",
+      "hasFailure": false
+    }
+  }
+}

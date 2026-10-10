@@ -1,0 +1,132 @@
+[
+  {
+    "path": "media/qml/qml_test_wallet_rbf/001-click-activitytabbutton.png",
+    "caption": "click-activityTabButton",
+    "utc": "2026-10-10T07:26:20.332382+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "f4f95baf1802981a77a099cb29aada0e9ac431f53010ab38326045f30312a395",
+    "test": "qml_test_wallet_rbf",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_wallet_rbf/002-click-activitytypefilterbutton.png",
+    "caption": "click-activityTypeFilterButton",
+    "utc": "2026-10-10T07:26:20.842199+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "9cd22617ef08bb4cba1e3425a9348d00b0517ddffa18dbd9fde9a7060221939c",
+    "test": "qml_test_wallet_rbf",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_wallet_rbf/003-click-activitytypesent.png",
+    "caption": "click-activityTypeSent",
+    "utc": "2026-10-10T07:26:21.338196+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "1b8deccc12da9b49a4ca6176161db92eccef973a3e56f6dadec6cd2309dda0ed",
+    "test": "qml_test_wallet_rbf",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_wallet_rbf/004-wait-for-page-activitydetailspage.png",
+    "caption": "wait_for_page-activityDetailsPage",
+    "utc": "2026-10-10T07:26:21.899576+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "780dcfe93443d6499f2aed7f99dd3ff6ab11fffc08dc28719501ddb71ad250cd",
+    "test": "qml_test_wallet_rbf",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_wallet_rbf/005-click-speedupbannerprimarybutton.png",
+    "caption": "click-speedUpBannerPrimaryButton",
+    "utc": "2026-10-10T07:26:22.430465+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "c8cbd11a4069b1441856c280689c9ca2dd20028d4e04b71ee39be33230df79c2",
+    "test": "qml_test_wallet_rbf",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_wallet_rbf/006-click-updatetransactionbutton.png",
+    "caption": "click-updateTransactionButton",
+    "utc": "2026-10-10T07:26:22.948097+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "0177e9a0b9993642ce4dfa2f0e8c1b44fd1f52995fbf783fe850d5ed93cdcab1",
+    "test": "qml_test_wallet_rbf",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_wallet_rbf/007-click-speeduppassphrasecancelbutton.png",
+    "caption": "click-speedUpPassphraseCancelButton",
+    "utc": "2026-10-10T07:26:23.450489+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "9bf9a7cd6f37fa6fab4e941922f5092d625ff8d0eb1409236a69f2f9cd4e86c1",
+    "test": "qml_test_wallet_rbf",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_wallet_rbf/008-fee-review-password-dismissed.png",
+    "caption": "fee-review-password-dismissed",
+    "utc": "2026-10-10T07:26:23.959484+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "5c3505b364403e0925b8ef83c98065fa10f92d9609a6f9b3ea36f27cd9d37a43",
+    "test": "qml_test_wallet_rbf",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_wallet_rbf/009-click-updatetransactionbutton.png",
+    "caption": "click-updateTransactionButton",
+    "utc": "2026-10-10T07:26:24.457916+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "cc1302a3dc26ea1fe8df7e6f048ca0867241fb84df21676ed741737479db204d",
+    "test": "qml_test_wallet_rbf",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_wallet_rbf/010-click-speeduppassphraseconfirmbutton.png",
+    "caption": "click-speedUpPassphraseConfirmButton",
+    "utc": "2026-10-10T07:26:25.061533+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "637a643da38180f83800d25643fa29335ca13c259a86b1203ddff911a5faee04",
+    "test": "qml_test_wallet_rbf",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_wallet_rbf/011-replacement-broadcast-password-dismissed.png",
+    "caption": "replacement-broadcast-password-dismissed",
+    "utc": "2026-10-10T07:26:25.967215+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "fb2f06052eeafc977b552f6a470e91ed7c266d561a50e65f9654c355d9029e57",
+    "test": "qml_test_wallet_rbf",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_wallet_rbf/012-click-speedupcompleteviewtransactionbutton.png",
+    "caption": "click-speedUpCompleteViewTransactionButton",
+    "utc": "2026-10-10T07:26:26.503554+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "28906565110ce58e49513205870c2b7e17ed70221e9552967752caf6aafc9222",
+    "test": "qml_test_wallet_rbf",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_wallet_rbf/013-replacement-details-no-dialog.png",
+    "caption": "replacement-details-no-dialog",
+    "utc": "2026-10-10T07:26:27.020023+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "3224672c68627e62d6affde5685e7f639086d5b850d342744b314d289743df67",
+    "test": "qml_test_wallet_rbf",
+    "kind": "application-screenshot"
+  }
+]

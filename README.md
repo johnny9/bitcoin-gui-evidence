@@ -2,7 +2,7 @@
 
 A static workspace for defining the acceptance criteria for Bitcoin Core GUI-QML. Review 203 proposed user outcomes across 34 feature groups, decide what is needed for merge or release, and assess implementation and evidence against Qt Widgets as the reference.
 
-The October 8, 2026 evidence snapshot includes 116 original application captures, source modules, and recorded automated tests. An [October 10 rerun](data/reruns/20261010-send-create/report.md) corrects the send-create test input and records three passes on the unchanged application, with two additional selected captures. The combined record is 34 passing functional scripts: 33 retained from October 8, plus the rerun. The entire suite was not rerun. These support agreement on acceptance; parity, evidence coverage, scope choices, and review status are distinct. The site records personal proposals and reviews, not a shared project approval. No server application, database, CDN, or runtime package installation is required.
+The October 8, 2026 evidence snapshot includes 116 original application captures, source modules, and recorded automated tests. An [October 10 rerun](data/reruns/20261010-send-create/report.md) corrects the send-create test input and records three passes on the unchanged application, with two additional selected captures. A second [October 10 capture rerun](data/reruns/20261010-wallet-rbf/report.md) replaces the password-covered fee-bump screenshot with three clear captures, bringing the current gallery to 120 images. The combined record is 34 passing functional scripts: 32 retained from October 8, plus the two reruns. The entire suite was not rerun. These support agreement on acceptance; parity, evidence coverage, scope choices, and review status are distinct. The site records personal proposals and reviews, not a shared project approval. No server application, database, CDN, or runtime package installation is required.
 
 Explore the [published acceptance criteria](https://johnny9.github.io/bitcoin-gui-evidence/) or clone this repository to review it locally.
 
@@ -40,7 +40,7 @@ Each group has an explicit main goal, status, and rationale in [`data/implementa
 
 ## Source and regeneration
 
-`src/` contains the application HTML, CSS, JavaScript, and icon. The runtime has no external dependencies. `scripts/build.py` reads the original Markdown and JSON evidence, generates `dist/data.js`, applies the dated addenda in `data/reruns/`, and copies the unmodified original records and rerun artifacts into `dist/gui-feature-evidence/`. The original catalog identity is preserved while current results, captures, and explicitly reassessed criteria are updated. Existing saved reviews and explicit requirements are preserved; parity-based automatic defaults follow the updated assessment.
+`src/` contains the application HTML, CSS, JavaScript, and icon. The runtime has no external dependencies. `scripts/build.py` reads the original Markdown and JSON evidence, generates `dist/data.js`, applies the dated addenda in `data/reruns/`, and copies the unmodified original records and rerun artifacts into `dist/gui-feature-evidence/`. The original catalog identity is preserved while current results, captures, and explicitly reassessed criteria are updated. A rerun can supersede a gallery capture while its original bytes and historical links remain available in the archive. Existing saved reviews and explicit requirements are preserved; parity-based automatic defaults follow the updated assessment.
 
 ```bash
 python3 -m pip install -r requirements-build.txt
@@ -59,7 +59,7 @@ Update `data/implementation.json` when implementation changes are reviewed. Sche
 
 `scripts/browser-test.cjs` exercises the browser interactions using the workspace's existing Puppeteer image. It expects `/site` to contain this project and `/qa` to be a writable, disposable results directory. Run as root with `PUPPETEER_CACHE_DIR=/home/pptruser/.cache/puppeteer`; Chrome runs in the container with `--no-sandbox`. The container may use `--network none`: the test server uses loopback only.
 
-The checks cover filters, direct links, all 34 feature routes, all 118 selected images, local-file access, screenshot zoom, note persistence/escaping, review import/export, current results and historical failure reporting, and mobile navigation/layout. The Pages workflow runs these checks under `/bitcoin-gui-evidence/` to verify project-relative asset links.
+The checks cover filters, direct links, all 34 feature routes, all 120 selected images, local-file access, screenshot zoom, note persistence/escaping, review import/export, current results and historical failure reporting, and mobile navigation/layout. The Pages workflow runs these checks under `/bitcoin-gui-evidence/` to verify project-relative asset links.
 
 Run the same browser checks locally with Docker:
 
