@@ -2,7 +2,7 @@
 
 A static workspace for defining the acceptance criteria for Bitcoin Core GUI-QML. Review 203 proposed user outcomes across 34 feature groups, decide what is needed for merge or release, and assess implementation and evidence against Qt Widgets as the reference.
 
-The October 8, 2026 evidence snapshot includes 116 original application captures, source modules, and recorded automated tests. These support agreement on acceptance; parity, evidence coverage, scope choices, and review status are distinct. The site records personal proposals and reviews, not a shared project approval. No server application, database, CDN, or runtime package installation is required.
+The October 8, 2026 evidence snapshot includes 116 original application captures, source modules, and recorded automated tests. An [October 10 rerun](data/reruns/20261010-send-create/report.md) corrects the send-create test input and records three passes on the unchanged application, with two additional selected captures. The combined record is 34 passing functional scripts: 33 retained from October 8, plus the rerun. The entire suite was not rerun. These support agreement on acceptance; parity, evidence coverage, scope choices, and review status are distinct. The site records personal proposals and reviews, not a shared project approval. No server application, database, CDN, or runtime package installation is required.
 
 Explore the [published acceptance criteria](https://johnny9.github.io/bitcoin-gui-evidence/) or clone this repository to review it locally.
 
@@ -19,7 +19,7 @@ Visit `http://localhost:8080`. Any ordinary static host can serve the same `dist
 - Dark mode is the default. Use the sun/moon button in the top bar to switch themes; the browser remembers your preference. Original application captures keep their recorded colors.
 - Search feature names, criterion IDs, and evidence descriptions. Press `/` to focus search.
 - Filter GUI-QML by **Parity**, **Partial parity**, or **Not implemented**. In Groups view this applies to the entire feature group; in Criteria view it applies to individual capabilities. Qt Widgets stays visible as the reference in comparisons and galleries.
-- Combine implementation parity with requirements, evidence coverage, capture availability, feature area, and personal review status. Full evidence requires targeted automated evidence and a matching capture with no recorded failure; partial evidence includes the remaining criteria. Evidence coverage and implementation parity are independent.
+- Combine implementation parity with requirements, evidence coverage, capture availability, feature area, and personal review status. Full evidence requires targeted automated evidence and a matching capture with no unresolved recorded failure; partial evidence includes the remaining criteria. Evidence coverage and implementation parity are independent.
 - Switch between feature groups and individual acceptance criteria. Filter state is included in catalog links.
 - Open a group for per-subfeature application comparisons, modules/tests, or a capture gallery.
 - Inspect original screenshots with full-size zoom, timestamps, hashes, and keyboard navigation.
@@ -30,17 +30,17 @@ Visit `http://localhost:8080`. Any ordinary static host can serve the same `dist
 
 Reviews are stored only in the browser, keyed to the exact evidence snapshot. They are not submitted to the hosting service or written into the evidence pack. Import preserves existing differing records and reports conflicts. A different snapshot is rejected. If browser storage is unavailable, export before closing the page. Moving between the local file and a hosted origin requires export/import.
 
-Review exports use schema version 2 and include saved group requirements, individual overrides, review status, and notes. Version 1 review files and previously saved browser notes still load; missing requirements use the saved group choice or the parity default. Automatic defaults are derived from the unchanged implementation snapshot, rather than written as personal decisions. **Not needed** is always an explicit choice. Exported version 2 files require this updated browser to import.
+Review exports use schema version 2 and include saved group requirements, individual overrides, review status, and notes. Version 1 review files and previously saved browser notes still load; missing requirements use the saved group choice or the parity default. Automatic defaults are derived from the current implementation assessment, rather than written as personal decisions. **Not needed** is always an explicit choice. Exported version 2 files require this updated browser to import.
 
-Review status is separate from acceptance. Evidence levels, the one known failing QML script, and the original scope limitations remain visible. The site does not turn a screenshot or a related passing test into an acceptance decision.
+Review status is separate from acceptance. Evidence levels, the resolved test failure and its history, and the original scope limitations remain visible. The site does not turn a screenshot or a related passing test into an acceptance decision.
 
 Implementation parity is a rough assessment of whether the main user goal is achieved at the pinned source revisions. Equivalent workflows count as fully implemented: for example, exporting a file instead of copying to the clipboard, or restoring the main window to reach an action instead of using a tray shortcut. Important missing capabilities, incompatibilities, and broken outcomes remain partial or not implemented. Missing captures or untested hardware do not imply missing implementation.
 
-Each group has an explicit main goal, status, and rationale in [`data/implementation.json`](data/implementation.json), shown on its feature page. Its rating is judged independently of the subfeature tally. Wallet creation can reach parity while standalone blank-wallet creation remains a secondary gap; in-app error dialogs do not fulfill the desktop-notification goal. Each subfeature also has a reasoned assessment. Original detailed comparisons and evidence remain visible and unchanged, so reviewers can inspect exact differences and make their own acceptance decisions.
+Each group has an explicit main goal, status, and rationale in [`data/implementation.json`](data/implementation.json), shown on its feature page. Its rating is judged independently of the subfeature tally. Wallet creation can reach parity while standalone blank-wallet creation remains a secondary gap; in-app error dialogs do not fulfill the desktop-notification goal. Each subfeature also has a reasoned assessment. Original detailed comparisons and evidence remain archived, with dated addenda applied to the current view, so reviewers can inspect exact differences and make their own acceptance decisions.
 
 ## Source and regeneration
 
-`src/` contains the application HTML, CSS, JavaScript, and icon. The runtime has no external dependencies. `scripts/build.py` reads the original Markdown and JSON evidence, generates `dist/data.js`, and copies unmodified source records and selected captures into `dist/gui-feature-evidence/`.
+`src/` contains the application HTML, CSS, JavaScript, and icon. The runtime has no external dependencies. `scripts/build.py` reads the original Markdown and JSON evidence, generates `dist/data.js`, applies the dated addenda in `data/reruns/`, and copies the unmodified original records and rerun artifacts into `dist/gui-feature-evidence/`. The original catalog identity is preserved while current results, captures, and explicitly reassessed criteria are updated. Existing saved reviews and explicit requirements are preserved; parity-based automatic defaults follow the updated assessment.
 
 ```bash
 python3 -m pip install -r requirements-build.txt
@@ -59,7 +59,7 @@ Update `data/implementation.json` when implementation changes are reviewed. Sche
 
 `scripts/browser-test.cjs` exercises the browser interactions using the workspace's existing Puppeteer image. It expects `/site` to contain this project and `/qa` to be a writable, disposable results directory. Run as root with `PUPPETEER_CACHE_DIR=/home/pptruser/.cache/puppeteer`; Chrome runs in the container with `--no-sandbox`. The container may use `--network none`: the test server uses loopback only.
 
-The checks cover filters, direct links, all 34 feature routes, all 116 decoded images, local-file access, screenshot zoom, note persistence/escaping, review import/export, failure reporting, and mobile navigation/layout. The Pages workflow runs these checks under `/bitcoin-gui-evidence/` to verify project-relative asset links.
+The checks cover filters, direct links, all 34 feature routes, all 118 selected images, local-file access, screenshot zoom, note persistence/escaping, review import/export, current results and historical failure reporting, and mobile navigation/layout. The Pages workflow runs these checks under `/bitcoin-gui-evidence/` to verify project-relative asset links.
 
 Run the same browser checks locally with Docker:
 
@@ -75,7 +75,7 @@ docker run --rm --init --network none --user 0 --shm-size=256m \
 
 Recorded validation results are in `validation/`. Each Actions run also retains browser screenshots and results as the `browser-validation` artifact for 14 days.
 
-This is a standalone HTML/JavaScript site; it has no Bitcoin Core lint, clang-tidy, or sanitizer CI scripts. No Bitcoin Core application code was changed or retested for the site conversion. The original application-test results and their limits are preserved separately in the evidence snapshot.
+This is a standalone HTML/JavaScript site; it has no Bitcoin Core lint, clang-tidy, or sanitizer CI scripts. No Bitcoin Core application code changed. The October 10 functional rerun uses the original binary with a two-line test input correction; its [validation record](data/reruns/20261010-send-create/validation.json) records the missing historical CI scripts and remaining limits. The original application-test results and their limits are preserved separately in the evidence snapshot.
 
 ## Hosting
 

@@ -50,7 +50,11 @@ def main():
     assert by_id['F04.S02']['applications']['qml']['status'] == 'source'
     assert by_id['F15.S03']['implementation']['status'] == 'partial'
     assert by_id['F03.S04']['implementation']['status'] == 'not-implemented'
-    assert by_id['F09.S03']['implementation']['status'] == 'partial'
+    assert by_id['F09.S03']['implementation']['status'] == 'parity'
+    assert by_id['F09.S03']['applications']['qml']['status'] == 'assertions'
+    assert by_id['F09.S03']['snapshotEvidence']['status'] == 'limited'
+    assert by_id['F09.S03']['snapshotEvidence']['captures'] == []
+    assert len(by_id['F09.S03']['applications']['qml']['captures']) == 2
     # Alternative workflows can fulfill an outcome without erasing source differences.
     assert by_id['F08.S06']['implementation']['status'] == 'parity'
     assert by_id['F08.S06']['applications']['qml']['status'] == 'gap'
@@ -60,12 +64,22 @@ def main():
     assert by_id['F01.S04']['implementation']['status'] == 'not-implemented'
     assert implementation['groups']['F25']['status'] == 'not-implemented'
     assert by_id['F25.S04']['implementation']['status'] == 'parity'
-    assert sum(c['hasFailure'] for c in criteria) == 1
-    assert next(c['id'] for c in criteria if c['hasFailure']) == 'F09.S03'
+    assert sum(c['hasFailure'] for c in criteria) == 0
     parser = Links()
     parser.feed((DIST / 'index.html').read_text())
     parser.feed(data['testReportHtml'])
     parser.feed(data['provenanceHtml'])
+    for rerun in data['reruns']:
+        parser.feed(rerun['reportHtml'])
+        assert rerun['sourceRevision'] == data['revisions']['qml']
+        assert rerun['applicationExitCode'] == 0
+        assert all(r['exit_code'] == 0 and r['wrapper'] is False for r in rerun['repeats'])
+        folder = original / 'reruns' / rerun['id']
+        assert hashlib.sha256((folder / 'qml_test_send_create.py').read_bytes()).hexdigest() == rerun['testSha256']
+        captures = json.loads((folder / 'media/qml/qml_test_send_create/captures.json').read_text())
+        assert len(captures) == rerun['functional']['captures'] == 31
+        for capture in captures:
+            assert hashlib.sha256((folder / capture['path']).read_bytes()).hexdigest() == capture['sha256']
     for group in data['groups']:
         counts = Counter(c['implementation']['status'] for c in group['criteria'])
         assert group['implementation']['counts'] == {s: counts[s] for s in ('parity', 'partial', 'not-implemented')}
@@ -92,15 +106,24 @@ def main():
         assert path.is_relative_to(DIST), target
         assert path.is_file(), target
         local_links.add(url.path)
-    assert len(data['captures']) == 116
+    assert len(data['captures']) == 118
+    archived_captures = json.loads((original / 'selected-captures.json').read_text())
+    assert data['captures'][:116] == archived_captures
     for photo in data['captures']:
         asset = original / photo['path']
         assert hashlib.sha256(asset.read_bytes()).hexdigest() == photo['sha256'], photo['path']
-    assert Counter(r['status'] for r in data['functional']) == {'passed':33, 'failed':1}
+    assert Counter(r['status'] for r in data['functional']) == {'passed':34}
+    assert Counter(r['status'] for r in json.loads((original / 'logs/qml-functional-results.json').read_text())) == {'passed':33, 'failed':1}
+    rerun_result = next(r for r in data['functional'] if r['test'] == 'qml_test_send_create')
+    assert rerun_result['previousResult']['status'] == 'failed'
+    assert rerun_result['date'] == '2026-10-10' and rerun_result['testModified']
+    assert data['summary']['qml_functional'] == {'passed':34, 'failed':0}
+    assert data['summary']['criteria_statuses']['qml']['Automated evidence collected'] == 108
+    assert data['summary']['criteria_statuses']['qml']['Partial / limited evidence'] == 48
     for script in (ROOT / 'scripts').glob('*.py'):
         ast.parse(script.read_text())
     report = {'status':'passed', 'groups':34, 'criteria':203, 'originalCapturesVerified':116,
-              'localLinkTargets':len(local_links), 'knownFailure':'F09.S03', 'catalogId':data['catalogId'],
+              'rerunCapturesVerified':31, 'localLinkTargets':len(local_links), 'unresolvedFailures':0, 'catalogId':data['catalogId'],
               'groupParity': dict(Counter(g['implementation']['status'] for g in data['groups'])),
               'subfeatureParity': dict(Counter(c['implementation']['status'] for c in criteria))}
     print(json.dumps(report, indent=2))

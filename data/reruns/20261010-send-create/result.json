@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "id": "20261010-send-create",
+  "date": "2026-10-10",
+  "snapshotCatalogId": "b4b1026b74ad8bf0a1628c9889b82193d33d210c3aa0170e94783f371fe15c0b",
+  "sourceRevision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+  "testRevision": "19891532b849b1f72fbbc9dfaa2565e7ce50546e",
+  "testSha256": "18b01a9216d55efa9409d9fc7ac6449420b17899c391d816ae31ee1e0c5fbf97",
+  "originalTestSha256": "2ccfab5dd035aa6083874bcb87f0df691f5d24e030820c14dcb92b98a64a3432",
+  "binarySha256": "a8215c7e45242fdf0e740339733696ec832e362f8306bfbe3bac95dd6bb4fb4c",
+  "functional": {
+    "test": "qml_test_send_create",
+    "status": "passed",
+    "exit_code": 0,
+    "seconds": 20.81,
+    "captures": 31,
+    "log": "reruns/20261010-send-create/logs/qml_test_send_create.log",
+    "date": "2026-10-10",
+    "testModified": true
+  },
+  "applicationExitCode": 0,
+  "repeats": [
+    {
+      "run": 2,
+      "wrapper": false,
+      "exit_code": 0,
+      "seconds": 8.18
+    },
+    {
+      "run": 3,
+      "wrapper": false,
+      "exit_code": 0,
+      "seconds": 8.38
+    }
+  ],
+  "selectedCaptures": [
+    {
+      "path": "reruns/20261010-send-create/media/qml/qml_test_send_create/009-03-multiple-custom.png",
+      "caption": "Recipient labels and custom fee",
+      "utc": "2026-10-10T00:36:06.660062+00:00",
+      "width": 1180,
+      "height": 1350,
+      "sha256": "f2e5793f0eb42850a6c40818fbedca4b3134c875721fdf2b53411827f985a788",
+      "test": "qml_test_send_create",
+      "kind": "application-screenshot",
+      "features": [
+        "F09.S03"
+      ],
+      "application": "qml",
+      "note": "October 10 rerun: unchanged application; focused keyboard input fixes the test setup. Original note-preservation assertion passed."
+    },
+    {
+      "path": "reruns/20261010-send-create/media/qml/qml_test_send_create/010-click-sendeditrecipient-0.png",
+      "caption": "First recipient note preserved after reopening",
+      "utc": "2026-10-10T00:36:07.169662+00:00",
+      "width": 1180,
+      "height": 1350,
+      "sha256": "4124b87e347f3453d39dd5cc4abf987276a00ec48272e6425b37304b8e9a6c15",
+      "test": "qml_test_send_create",
+      "kind": "application-screenshot",
+      "features": [
+        "F09.S03"
+      ],
+      "application": "qml",
+      "note": "October 10 rerun: unchanged application; focused keyboard input fixes the test setup. Original note-preservation assertion passed."
+    }
+  ],
+  "criteria": {
+    "F09.S03": {
+      "status": "Automated evidence collected",
+      "detail": "Recipient labels persist after reopening the first recipient. The unchanged note-preservation assertion passes after the script uses focused keyboard input; the original direct text assignment did not save the note on Qt 6.8. Three complete runs passed, including two without the capture wrapper. Scope: this regtest payment workflow; no claim about labels across wallet restarts.",
+      "hasFailure": false
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "assessedAt": "2026-10-09",
+  "assessedAt": "2026-10-10",
   "snapshotCatalogId": "b4b1026b74ad8bf0a1628c9889b82193d33d210c3aa0170e94783f371fe15c0b",
   "sourceRevisions": {
     "widgets": "f739c7876b81304bdc72e7eaa307702da269ac31",
@@ -190,8 +190,8 @@
       "reason": "A recipient can be entered or pasted into a payment. A saved-recipient picker is absent, but choosing the payment destination remains possible."
     },
     "F09.S03": {
-      "status": "partial",
-      "reason": "Recipient notes are implemented, but the recorded functional test loses a note when the recipient is edited again."
+      "status": "parity",
+      "reason": "Recipient notes remain associated with the correct recipient after reopening. The October 10 rerun passed on the unchanged application after correcting test input to use keyboard focus. The original failure was a test setup defect."
     },
     "F09.S04": {
       "status": "parity",
@@ -867,7 +867,7 @@
     "F09": {
       "status": "partial",
       "goal": "Prepare and send the intended payment with reliable recipient information.",
-      "reason": "Payment preparation, signing and broadcast work, but recipient-note loss is a recorded defect and selected-recipient fee deduction remains unsupported. These are functional gaps, not control-placement differences."
+      "reason": "Payment preparation, signing, broadcast and recipient notes work. Selected-recipient fee deduction remains unsupported, so this group stays partial. The note-preservation test failure was resolved by fixing the script input."
     },
     "F10": {
       "status": "parity",

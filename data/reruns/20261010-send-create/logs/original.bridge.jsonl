@@ -1,0 +1,41 @@
+{"utc": "2026-10-10T00:35:10.165167+00:00", "application_start": ["/validation/build/bin/bitcoin-core-app", "-datadir=/work/reruns/20261010/original/tmp/qml_test_send_create_3jd4286s/gui_node", "-test-automation=/work/reruns/20261010/original/tmp/qml_test_send_create_3jd4286s/test_bridge.sock", "-test-settings-dir=/work/reruns/20261010/original/tmp/qml_test_send_create_3jd4286s/config", "-qml_onboarded=1", "-logtimemicros", "-debug", "-debugexclude=leveldb", "-nolisten"], "pid": 74, "platform": "xcb"}
+{"utc": "2026-10-10T00:35:10.919159+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "loading"}, "response": {"value": false}}
+{"utc": "2026-10-10T00:35:11.407702+00:00", "request": {"cmd": "get_property", "objectName": "walletBadge", "prop": "noWalletLoaded"}, "response": {"value": false}}
+{"utc": "2026-10-10T00:35:14.488308+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "width", "value": 1180}, "response": {"ok": true}}
+{"utc": "2026-10-10T00:35:14.502654+00:00", "request": {"cmd": "set_property", "objectName": "appWindow", "prop": "height", "value": 1350}, "response": {"ok": true}}
+{"utc": "2026-10-10T00:35:14.586420+00:00", "request": {"cmd": "click", "objectName": "sendTabButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T00:35:15.099384+00:00", "request": {"cmd": "wait_for_page", "page": "sendPage", "timeout": 5000}, "response": {"ok": true}}
+{"utc": "2026-10-10T00:35:15.601569+00:00", "request": {"cmd": "get_property", "objectName": "sendNetworkFeeSectionFooter", "prop": "text"}, "response": {"value": "Enter a valid recipient address and amount to estimate the fee"}}
+{"utc": "2026-10-10T00:35:15.603398+00:00", "request": {"cmd": "get_property", "objectName": "feeSelectionEstimateLabel", "prop": "value"}, "response": {"value": "\u2014"}}
+{"utc": "2026-10-10T00:35:15.606555+00:00", "request": {"cmd": "set_text", "objectName": "sendAmountInput", "text": "0.018"}, "response": {"ok": true}}
+{"utc": "2026-10-10T00:35:15.607943+00:00", "request": {"cmd": "get_property", "objectName": "sendNetworkFeeSectionFooter", "prop": "text"}, "response": {"value": "Enter a valid recipient address and amount to estimate the fee"}}
+{"utc": "2026-10-10T00:35:15.609172+00:00", "request": {"cmd": "get_property", "objectName": "feeSelectionEstimateLabel", "prop": "value"}, "response": {"value": "\u2014"}}
+{"utc": "2026-10-10T00:35:15.611034+00:00", "request": {"cmd": "set_text", "objectName": "sendAmountInput", "text": ""}, "response": {"ok": true}}
+{"utc": "2026-10-10T00:35:16.112752+00:00", "request": {"cmd": "set_text", "objectName": "sendNoteInput", "text": "My private note"}, "response": {"ok": true}}
+{"utc": "2026-10-10T00:35:16.115689+00:00", "request": {"cmd": "set_clipboard_text", "text": "bitcoin:bcrt1qd3r5wkgqm3vjlzdauk2g2r2er4e8vqrd9tzuvg?amount=0.018&label=Alice&message=September%20rent"}, "response": {"ok": true}}
+{"utc": "2026-10-10T00:35:16.120924+00:00", "request": {"cmd": "get_property", "objectName": "clipboardUriPasteButton", "prop": "visible"}, "response": {"value": true}}
+{"utc": "2026-10-10T00:35:16.125005+00:00", "request": {"cmd": "click", "objectName": "clipboardUriPasteButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T00:35:16.626812+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestPayTo", "prop": "value"}, "response": {"value": "Alice"}}
+{"utc": "2026-10-10T00:35:16.629229+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestMessageText", "prop": "value"}, "response": {"value": "September rent"}}
+{"utc": "2026-10-10T00:35:16.631388+00:00", "request": {"cmd": "get_text", "objectName": "sendNoteInput"}, "response": {"text": "My private note"}}
+{"utc": "2026-10-10T00:35:16.633002+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-10T00:35:16.634308+00:00", "request": {"cmd": "get_property", "objectName": "sendNetworkFeeSectionFooter", "prop": "visible"}, "response": {"value": false}}
+{"utc": "2026-10-10T00:35:16.635579+00:00", "request": {"cmd": "get_property", "objectName": "feeSelectionEstimateLabel", "prop": "value"}, "response": {"value": "0.00000141"}}
+{"utc": "2026-10-10T00:35:17.143718+00:00", "request": {"cmd": "click", "objectName": "sendAddRecipientButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T00:35:17.645544+00:00", "request": {"cmd": "get_property", "objectName": "sendRecipientCard_0", "prop": "expanded"}, "response": {"value": false}}
+{"utc": "2026-10-10T00:35:17.647916+00:00", "request": {"cmd": "set_text", "objectName": "sendAddressInput", "text": "bcrt1qcx2etmfz3mn87kemw23cgfczdrv4r3gzmsd9sd"}, "response": {"ok": true}}
+{"utc": "2026-10-10T00:35:17.651133+00:00", "request": {"cmd": "set_text", "objectName": "sendAmountInput", "text": "0.025"}, "response": {"ok": true}}
+{"utc": "2026-10-10T00:35:17.652670+00:00", "request": {"cmd": "set_text", "objectName": "sendNoteInput", "text": "Donation"}, "response": {"ok": true}}
+{"utc": "2026-10-10T00:35:17.654278+00:00", "request": {"cmd": "click", "objectName": "feeSelectionPickerButton"}, "response": {"ok": true}}
+{"utc": "2026-10-10T00:35:18.157253+00:00", "request": {"cmd": "click", "objectName": "feeSelectionOption3"}, "response": {"ok": true}}
+{"utc": "2026-10-10T00:35:18.658982+00:00", "request": {"cmd": "set_text", "objectName": "feeSelectionCustomRateInput", "text": "4.2"}, "response": {"ok": true}}
+{"utc": "2026-10-10T00:35:18.661759+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T00:35:18.715254+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T00:35:18.768608+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T00:35:18.821380+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T00:35:18.873878+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": false}}
+{"utc": "2026-10-10T00:35:18.926163+00:00", "request": {"cmd": "get_property", "objectName": "sendReviewButton", "prop": "enabled"}, "response": {"value": true}}
+{"utc": "2026-10-10T00:35:19.435200+00:00", "request": {"cmd": "click", "objectName": "sendEditRecipient_0"}, "response": {"ok": true}}
+{"utc": "2026-10-10T00:35:19.937882+00:00", "request": {"cmd": "get_property", "objectName": "sendPaymentRequestPayTo", "prop": "value"}, "response": {"value": "Alice"}}
+{"utc": "2026-10-10T00:35:19.939456+00:00", "request": {"cmd": "get_text", "objectName": "sendNoteInput"}, "response": {"text": ""}}
+{"utc": "2026-10-10T00:35:20.155522+00:00", "application_pid": 74, "exit_code": 0}

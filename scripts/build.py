@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a portable static browser for the original, unmodified evidence pack."""
+"""Build a static browser for the original evidence and dated rerun addenda."""
 import argparse
 import hashlib
 import json
@@ -183,6 +183,52 @@ def main():
     }
     if implementation['sourceRevisions'] != data['revisions']:
         raise ValueError('Implementation assessment source revisions do not match the comparison')
+    # Addenda preserve the original records and catalog identity, so existing
+    # personal reviews remain compatible. Only explicitly reassessed rows change.
+    data['snapshotSummary'] = json.loads(json.dumps(data['summary']))
+    data['reruns'] = []
+    for record in sorted((ROOT / 'data/reruns').glob('*/result.json')):
+        rerun = json.loads(record.read_text())
+        if rerun['snapshotCatalogId'] != data['catalogId'] or rerun['sourceRevision'] != data['revisions']['qml']:
+            raise ValueError('Rerun does not match the pinned application: ' + str(record))
+        if hashlib.sha256((record.parent / 'qml_test_send_create.py').read_bytes()).hexdigest() != rerun['testSha256']:
+            raise ValueError('Rerun test hash mismatch')
+        base = 'reruns/' + rerun['id'] + '/'
+        report = base + 'report.md'
+        rerun['report'] = prefix + report
+        rerun['reportHtml'] = html((record.parent / 'report.md').read_text(), document=evidence / report, inline=False)
+        data['reruns'].append(rerun)
+        photos.extend(rerun['selectedCaptures'])
+        result = rerun['functional']
+        previous = next(r for r in data['functional'] if r['test'] == result['test'])
+        previous['previousResult'] = dict(previous)
+        previous.update(result)
+        for group in groups:
+            for row in group['criteria']:
+                if row['id'] not in rerun['criteria']:
+                    continue
+                update = rerun['criteria'][row['id']]
+                qml = row['applications']['qml']
+                row['snapshotEvidence'] = json.loads(json.dumps(qml))
+                statuses = data['summary']['criteria_statuses']['qml']
+                statuses[qml['originalStatus']] -= 1
+                statuses[update['status']] = statuses.get(update['status'], 0) + 1
+                qml['status'], qml['label'] = STATUS[update['status']]
+                qml['text'] = update['detail']
+                qml['html'] = html(update['detail']) + ' <a href="' + prefix + report + '">Rerun report and test fix</a>.'
+                qml['captures'].extend(p['path'] for p in rerun['selectedCaptures'] if row['id'] in p['features'])
+                row['hasFailure'] = update['hasFailure']
+                row['searchText'] = ' '.join([group['id'], row['id'], group['name'], row['intent']] + [a['text'] for a in row['applications'].values()]).lower()
+            for test in group['tests']:
+                if result['test'] in test['testHtml']:
+                    test['testHtml'] = '<a href="' + prefix + base + 'qml_test_send_create.py">' + result['test'] + ' (corrected script)</a>'
+                    test['resultHtml'] = '<a href="' + prefix + result['log'] + '">' + result['status'] + ' on ' + rerun['date'] + '</a>; <a href="' + prefix + report + '">rerun, original failure and patch</a>'
+                    test['failed'] = result['status'] == 'failed'
+            group['captures'] = [p['path'] for p in photos if any(s.startswith(group['id'] + '.') for s in p['features'])]
+    data['summary']['selected_captures'] = len(photos)
+    data['summary']['captures_by_application'] = {app: sum(p['application'] == app for p in photos) for app in ('widgets', 'qml')}
+    data['summary']['qml_functional'] = {status: sum(r['status'] == status for r in data['functional']) for status in ('passed', 'failed')}
+    data['latestEvidenceDate'] = max([data['summary']['date']] + [r['date'] for r in data['reruns']])
     if DEST.exists():
         shutil.rmtree(DEST)
     DEST.mkdir()
@@ -198,8 +244,10 @@ def main():
             shutil.copy2(file, output_evidence / file.name)
     for dirname in ('features', 'logs', 'scripts'):
         shutil.copytree(evidence / dirname, output_evidence / dirname, ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
+    if (ROOT / 'data/reruns').is_dir():
+        shutil.copytree(ROOT / 'data/reruns', output_evidence / 'reruns')
     for photo in photos:
-        source = evidence / photo['path']
+        source = (ROOT / 'data' if photo['path'].startswith('reruns/') else evidence) / photo['path']
         target = output_evidence / photo['path']
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(source, target)
@@ -209,7 +257,8 @@ def main():
     if comparison.is_file():
         shutil.copy2(comparison, DEST / comparison.name)
     manifest = {'catalogId': data['catalogId'], 'groups': len(groups), 'criteria': sum(len(f['criteria']) for f in groups),
-                'selectedCaptures': len(photos), 'sourceEvidenceDate': data['summary']['date']}
+                'selectedCaptures': len(photos), 'sourceEvidenceDate': data['summary']['date'],
+                'latestEvidenceDate': data['latestEvidenceDate']}
     (DEST / 'build-manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')
     print(json.dumps(manifest, indent=2))
     if snapshot:

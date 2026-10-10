@@ -66,13 +66,13 @@ async function main() {
     assert.equal(await page.$$eval('.group-card',els=>els.length),19);
     await page.click('[data-view="criteria"]');
     const ids=await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent));
-    assert.equal(ids.length,150);
+    assert.equal(ids.length,151);
     assert.ok(ids.includes('F03.S01')); // Full-parity subfeature inside a partial group.
     assert.ok(ids.includes('F25.S04')); // Full-parity fallback inside an absent group.
     assert.ok(!ids.includes('F01.S04')); // Missing subfeature inside a full-parity group.
-    assert.ok(!ids.includes('F09.S03')); // The recorded failure stays partial.
+    assert.ok(ids.includes('F09.S03')); // Corrected input proves the note outcome.
     await value('[data-filter="requirement"]','unassigned');
-    assert.equal(await page.$$eval('.criterion-result',els=>els.length),53);
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),52);
     await value('[data-filter="requirement"]','release');
     assert.equal(await page.$$eval('.criterion-result',els=>els.length),0);
     await value('[data-filter="requirement"]','not-needed');
@@ -137,13 +137,13 @@ async function main() {
     assert.ok(!absent.includes('F15.S03')); // Receiving exists; device verification is missing.
     await value('[data-filter="parity"]','partial');
     const partial=await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent));
-    assert.equal(partial.length,15);
+    assert.equal(partial.length,14);
     assert.ok(partial.includes('F15.S03'));
-    assert.ok(partial.includes('F09.S03'));
+    assert.ok(!partial.includes('F09.S03'));
     assert.ok(partial.includes('F14.S01')); // File import exists; compatibility still blocks some transactions.
     await value('[data-filter="parity"]','parity');
     const parity=await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent));
-    assert.equal(parity.length,150);
+    assert.equal(parity.length,151);
     assert.ok(parity.includes('F04.S02')); // Source evidence, without a runtime assertion or capture.
     assert.ok(parity.includes('F21.S04')); // Physical router not tested.
     for(const id of ['F02.S04','F08.S06','F13.S05','F14.S06','F24.S03'])assert.ok(parity.includes(id),id); // Equivalent reachable workflows.
@@ -191,17 +191,17 @@ async function main() {
     assert.deepEqual(await page.$$eval('[data-filter="evidence"] option',els=>els.map(el=>el.textContent)),['Any evidence','Full','Partial']);
     assert.equal(await page.$('[data-filter="app"]'),null);
     fullIds=await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent));
-    assert.equal(fullIds.length,89);
+    assert.equal(fullIds.length,90);
     assert.ok(fullIds.includes('F01.S01'));
     assert.ok(!fullIds.includes('F09.S08')); // Scoped automated tests, but no QML capture.
-    assert.ok(!fullIds.includes('F09.S03')); // Recorded failure.
+    assert.ok(fullIds.includes('F09.S03')); // Rerun assertion and matching captures.
     assert.equal(await page.$$eval('.result-statuses',els=>els.every(el=>el.textContent.includes('Qt Widgets')&&el.textContent.includes('GUI-QML'))),true);
   });
   await check('Partial evidence includes every incomplete criterion and missing workflow',async()=>{
     await value('[data-filter="evidence"]','partial');
     partialIds=await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent));
-    assert.equal(partialIds.length,114);
-    assert.ok(partialIds.includes('F09.S03'));
+    assert.equal(partialIds.length,113);
+    assert.ok(!partialIds.includes('F09.S03'));
     assert.ok(partialIds.includes('F09.S08'));
     assert.ok(partialIds.includes('F04.S02'));
     assert.equal(await page.$$eval('.result-statuses .badge-gap:not(.parity-badge)',els=>els.length),43);
@@ -209,20 +209,20 @@ async function main() {
     assert.equal(fullIds.some(id=>partialIds.includes(id)),false);
     await page.reload({waitUntil:'networkidle0'});
     assert.equal(await page.$eval('[data-filter="evidence"]',el=>el.value),'partial');
-    assert.equal(await page.$$eval('.criterion-result',els=>els.length),114);
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),113);
   });
   await check('Capture filters use GUI-QML and preserve the Widgets reference',async()=>{
     await value('[data-filter="captures"]','yes');
     assert.equal(await page.$$eval('.criterion-result',els=>els.length),26);
     await value('[data-filter="captures"]','no');
-    assert.equal(await page.$$eval('.criterion-result',els=>els.length),88);
-    await page.$eval('#catalog-search',el=>{el.value='F09.S03';el.dispatchEvent(new Event('input',{bubbles:true}));});
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),87);
+    await page.$eval('#catalog-search',el=>{el.value='F09.S02';el.dispatchEvent(new Event('input',{bubbles:true}));});
     assert.equal(await page.$$eval('.criterion-result',els=>els.length),1); // Widgets has a capture; QML has none.
     await page.click('.criterion-result');
-    await page.waitForSelector('[id="F09.S03"]');
-    assert.equal(await page.$$eval('[id="F09.S03"] .application-evidence',els=>els.length),2);
-    assert.ok(await page.$('[id="F09.S03"] .application-evidence[aria-label^="Qt Widgets"] .capture-preview'));
-    assert.match(await page.$eval('[id="F09.S03"]',el=>el.textContent),/restoration fails/);
+    await page.waitForSelector('[id="F09.S02"]');
+    assert.equal(await page.$$eval('[id="F09.S02"] .application-evidence',els=>els.length),2);
+    assert.ok(await page.$('[id="F09.S02"] .application-evidence[aria-label^="Qt Widgets"] .capture-preview'));
+    assert.match(await page.$eval('[id="F09.S02"]',el=>el.textContent),/no saved-recipient picker/);
     await go('#feature/F09');
     await page.click('[data-action="clear-filters"]');
     const count=await page.evaluate(()=>window.REVIEW_EVIDENCE.groups.find(g=>g.id==='F09').criteria.length);
@@ -232,7 +232,7 @@ async function main() {
     await page.goto(base+'#catalog?app=widgets&evidence=gap&view=criteria',{waitUntil:'networkidle0'});
     assert.equal(await page.evaluate(()=>location.hash),'#catalog?evidence=partial&view=criteria');
     assert.equal(await page.$eval('[data-filter="evidence"]',el=>el.value),'partial');
-    assert.equal(await page.$$eval('.criterion-result',els=>els.length),114);
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),113);
     assert.equal(await page.$('[data-filter="app"]'),null);
   });
   await check('Reset restores the full catalog',async()=>{
@@ -399,7 +399,7 @@ async function main() {
     await page.$eval('#catalog-search',el=>{el.value='';el.dispatchEvent(new Event('input',{bubbles:true}));});
     assert.equal(await page.$$eval('.group-card',els=>els.length),15);
     await page.click('[data-view="criteria"]');
-    assert.equal(await page.$$eval('.criterion-result',els=>els.length),53);
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),52);
   });
   await go('#catalog?requirement=merge&parity=parity&review=reviewed&view=criteria');
   await check('Requirement combines with parity and review filters and clearing filters restores everything',async()=>{
@@ -419,11 +419,30 @@ async function main() {
     await page.screenshot({path:output+'/requirement-catalog.png'});
   });
   await go('#tests?result=failed');
-  await check('Failure view isolates the real failed functional script',async()=>{
-    assert.equal(await page.$$eval('.functional-table tbody tr',els=>els.length),1);
-    assert.match(await page.$eval('.functional-table tbody',el=>el.textContent),/qml_test_send_create/);
+  await check('Resolved failure shows the rerun and retains historical proof',async()=>{
+    assert.match(await page.$eval('.functional-table tbody',el=>el.textContent),/No unresolved failures/);
+    assert.match(await page.$eval('.finding-panel',el=>el.textContent),/three complete runs/);
+    assert.ok(await page.$('a[href="gui-feature-evidence/logs/qml_test_send_create.log"]'));
+    await go('#tests');
+    assert.equal(await page.$$eval('.functional-table tbody tr',els=>els.length),34);
+    assert.equal(await page.$$eval('.functional-table .failed-row',els=>els.length),0);
+    const rerun = await page.$eval('.functional-table',el=>[...el.querySelectorAll('tr')].find(r=>r.textContent.includes('qml_test_send_create')).textContent);
+    assert.match(rerun,/2026-10-10/);
+    assert.match(rerun,/Corrected script/);
     await page.click('.finding-links a');await page.waitForSelector('[id="F09.S03"]');
-    assert.match(await page.$eval('[id="F09.S03"]',el=>el.textContent),/restoration fails/);
+    assert.match(await page.$eval('[id="F09.S03"]',el=>el.textContent),/Three complete runs passed/);
+    assert.ok(await page.$('[id="F09.S03"] .application-evidence[aria-label^="GUI-QML"] .capture-preview'));
+  });
+  await check('Rerun report is readable on desktop and mobile with original capture links',async()=>{
+    await page.screenshot({path:output+'/rerun-criterion.png',fullPage:true});
+    await go('#tests');
+    await page.screenshot({path:output+'/rerun-results.png'});
+    await page.$eval('.detailed-report',el=>{el.open=true;el.scrollIntoView();});
+    assert.ok(await page.$('.detailed-report[open] a[href="gui-feature-evidence/reruns/20261010-send-create/test-fix.patch"]'));
+    await page.setViewport({width:390,height:844});
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
+    await page.screenshot({path:output+'/rerun-report-mobile.png'});
+    await page.setViewport({width:1440,height:1000});
   });
   await go('#catalog?evidence=any');
   await go('#feature/F01');
@@ -447,7 +466,7 @@ async function main() {
     assert.equal(await page.$$eval('.gallery-card .app-dot.qml',els=>els.length),2);
     assert.equal(await page.$('[data-filter="app"]'),null);
   });
-  await check('All 116 selected originals decode in the browser',async()=>{
+  await check('All 118 selected captures decode in the browser',async()=>{
     const bad=await page.evaluate(async()=>{
       const results=await Promise.all(window.REVIEW_EVIDENCE.captures.map(photo=>new Promise(resolve=>{
         const img=new Image();img.onload=()=>resolve(img.naturalWidth===photo.width&&img.naturalHeight===photo.height?null:photo.path);img.onerror=()=>resolve(photo.path);img.src='gui-feature-evidence/'+photo.path;

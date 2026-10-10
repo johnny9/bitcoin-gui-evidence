@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/work/reruns/20261010/scripts/qml_capture_test.py", line 119, in <module>
+    runpy.run_path(str(test_path), run_name='__main__')
+  File "<frozen runpy>", line 286, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/work/qml-source/test/functional/qml_test_send_create.py", line 113, in <module>
+    run_test()
+  File "/work/qml-source/test/functional/qml_test_send_create.py", line 59, in run_test
+    assert gui.get_text("sendNoteInput") == "My private note"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

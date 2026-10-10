@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-09T23:43:47.340Z",
+  "checkedAt": "2026-10-10T00:40:20.429Z",
   "basePath": "/bitcoin-gui-evidence/",
   "outcomes": [
     {
@@ -123,7 +123,11 @@
       "status": "passed"
     },
     {
-      "name": "Failure view isolates the real failed functional script",
+      "name": "Resolved failure shows the rerun and retains historical proof",
+      "status": "passed"
+    },
+    {
+      "name": "Rerun report is readable on desktop and mobile with original capture links",
       "status": "passed"
     },
     {
@@ -139,7 +143,7 @@
       "status": "passed"
     },
     {
-      "name": "All 116 selected originals decode in the browser",
+      "name": "All 118 selected captures decode in the browser",
       "status": "passed"
     },
     {

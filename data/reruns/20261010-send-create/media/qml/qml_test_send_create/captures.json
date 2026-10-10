@@ -1,0 +1,312 @@
+[
+  {
+    "path": "media/qml/qml_test_send_create/001-click-sendtabbutton.png",
+    "caption": "click-sendTabButton",
+    "utc": "2026-10-10T00:36:02.316866+00:00",
+    "width": 1180,
+    "height": 1350,
+    "sha256": "f943cf75d28aa16a2bc0366bad7e7cc6142f4c30afe8e131387819afce2c891d",
+    "test": "qml_test_send_create",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_send_create/002-wait-for-page-sendpage.png",
+    "caption": "wait_for_page-sendPage",
+    "utc": "2026-10-10T00:36:02.817629+00:00",
+    "width": 1180,
+    "height": 1350,
+    "sha256": "e4b5e623f4d2688434ce647c1dedba8cf6555d746494ab6a528db21552a21f7e",
+    "test": "qml_test_send_create",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_send_create/003-01-empty.png",
+    "caption": "01-empty",
+    "utc": "2026-10-10T00:36:03.329677+00:00",
+    "width": 1180,
+    "height": 1350,
+    "sha256": "46bcd5f59853e6a66ea7971cf4e15f335997d89dc94f97398290b9fc93580822",
+    "test": "qml_test_send_create",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_send_create/004-click-clipboarduripastebutton.png",
+    "caption": "click-clipboardUriPasteButton",
+    "utc": "2026-10-10T00:36:03.843331+00:00",
+    "width": 1180,
+    "height": 1350,
+    "sha256": "c93f1bebde038e72efacecfa85f54cc6ab6a7adcf95b6cbc48598107a5caea44",
+    "test": "qml_test_send_create",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_send_create/005-02-request.png",
+    "caption": "02-request",
+    "utc": "2026-10-10T00:36:04.353593+00:00",
+    "width": 1180,
+    "height": 1350,
+    "sha256": "bfa9217663d8b64e6c3832f86feb284bc2572097caa3b3518d09026e39a84168",
+    "test": "qml_test_send_create",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_send_create/006-click-sendaddrecipientbutton.png",
+    "caption": "click-sendAddRecipientButton",
+    "utc": "2026-10-10T00:36:04.866121+00:00",
+    "width": 1180,
+    "height": 1350,
+    "sha256": "a2138d3ceca2e37c19049dbb7dba5753a3c23a7e893b7451bc36468a65fd660e",
+    "test": "qml_test_send_create",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_send_create/007-click-feeselectionpickerbutton.png",
+    "caption": "click-feeSelectionPickerButton",
+    "utc": "2026-10-10T00:36:05.386607+00:00",
+    "width": 1180,
+    "height": 1350,
+    "sha256": "aa9ab0e9e95dc642adec81b4d1fcc68d8099e7c2274e15608a4d111d81666800",
+    "test": "qml_test_send_create",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_send_create/008-click-feeselectionoption3.png",
+    "caption": "click-feeSelectionOption3",
+    "utc": "2026-10-10T00:36:05.890974+00:00",
+    "width": 1180,
+    "height": 1350,
+    "sha256": "2142f1e1b45d3f396332426771fbf1deb7d02ab6c267bb22b2fd88b9aca87db0",
+    "test": "qml_test_send_create",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_send_create/009-03-multiple-custom.png",
+    "caption": "03-multiple-custom",
+    "utc": "2026-10-10T00:36:06.660062+00:00",
+    "width": 1180,
+    "height": 1350,
+    "sha256": "f2e5793f0eb42850a6c40818fbedca4b3134c875721fdf2b53411827f985a788",
+    "test": "qml_test_send_create",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_send_create/010-click-sendeditrecipient-0.png",
+    "caption": "click-sendEditRecipient_0",
+    "utc": "2026-10-10T00:36:07.169662+00:00",
+    "width": 1180,
+    "height": 1350,
+    "sha256": "4124b87e347f3453d39dd5cc4abf987276a00ec48272e6425b37304b8e9a6c15",
+    "test": "qml_test_send_create",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_send_create/011-click-sendselectinputsbutton.png",
+    "caption": "click-sendSelectInputsButton",
+    "utc": "2026-10-10T00:36:07.681001+00:00",
+    "width": 1180,
+    "height": 1350,
+    "sha256": "9e43cf96e71c9a2d2d79d86adf9b4c973756fa1843ca5b0671e22b3aac4abc48",
+    "test": "qml_test_send_create",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_send_create/012-04-coins-empty.png",
+    "caption": "04-coins-empty",
+    "utc": "2026-10-10T00:36:08.185270+00:00",
+    "width": 1180,
+    "height": 1350,
+    "sha256": "60b4762ab2b358b03f160d3fd8492063c921559be76c5ee681b2b5fca6bea1f2",
+    "test": "qml_test_send_create",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_send_create/013-click-coinselectioncancelbutton.png",
+    "caption": "click-coinSelectionCancelButton",
+    "utc": "2026-10-10T00:36:08.702586+00:00",
+    "width": 1180,
+    "height": 1350,
+    "sha256": "70c00c88a0e31430a0919874a08a645769d3031ebbb4dcb5288cd90e4df6369c",
+    "test": "qml_test_send_create",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_send_create/014-click-sendselectinputsbutton.png",
+    "caption": "click-sendSelectInputsButton",
+    "utc": "2026-10-10T00:36:09.210143+00:00",
+    "width": 1180,
+    "height": 1350,
+    "sha256": "e18af7ceb374188b60dc2b3bc0cf5d47558523df9ba99124cb6e1e58ecb8a23b",
+    "test": "qml_test_send_create",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_send_create/015-05-coins-covered.png",
+    "caption": "05-coins-covered",
+    "utc": "2026-10-10T00:36:09.728115+00:00",
+    "width": 1180,
+    "height": 1350,
+    "sha256": "0b67385bf075c45f2d8e899459c33e431cd8597d466b722e7fb1dbc34eadaa00",
+    "test": "qml_test_send_create",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_send_create/016-click-coinselectiondonebutton.png",
+    "caption": "click-coinSelectionDoneButton",
+    "utc": "2026-10-10T00:36:10.231812+00:00",
+    "width": 1180,
+    "height": 1350,
+    "sha256": "4a4ad32baec4ebc3eb9285fe17befcca49d02a8758a2faf442a55afe2f9e8346",
+    "test": "qml_test_send_create",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_send_create/017-click-desktopwalletsettingstabbutton.png",
+    "caption": "click-desktopWalletSettingsTabButton",
+    "utc": "2026-10-10T00:36:10.747901+00:00",
+    "width": 1180,
+    "height": 1350,
+    "sha256": "ba351b75937f2c7f38ba187d631d6625e1b3497f4d9d71f9d3c7714be3bb39be",
+    "test": "qml_test_send_create",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_send_create/018-click-settingssidebar-wallet.png",
+    "caption": "click-settingsSidebar_wallet",
+    "utc": "2026-10-10T00:36:11.248775+00:00",
+    "width": 1180,
+    "height": 1350,
+    "sha256": "9c7a731206333fc72bb245e0bd2bea51ed6301014e0e149be19846b6809c7e38",
+    "test": "qml_test_send_create",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_send_create/019-wait-for-page-walletsettingspage.png",
+    "caption": "wait_for_page-walletSettingsPage",
+    "utc": "2026-10-10T00:36:11.750367+00:00",
+    "width": 1180,
+    "height": 1350,
+    "sha256": "65ca17df3e5a4e42958658143554fa559d87732f0794b4577f694957e15b8647",
+    "test": "qml_test_send_create",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_send_create/020-click-walletcoinsrow.png",
+    "caption": "click-walletCoinsRow",
+    "utc": "2026-10-10T00:36:12.399562+00:00",
+    "width": 1180,
+    "height": 1350,
+    "sha256": "94c3e259a7e9e03f9511b785d6e37c459c1ade6b81607e8195095ce244c5b384",
+    "test": "qml_test_send_create",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_send_create/021-wait-for-page-walletcoinspage.png",
+    "caption": "wait_for_page-walletCoinsPage",
+    "utc": "2026-10-10T00:36:12.906618+00:00",
+    "width": 1180,
+    "height": 1350,
+    "sha256": "cfb8d57ddefb89aeb6bbefc9d432744e187ed1f7f3bcf6572dc3ad1028d619ee",
+    "test": "qml_test_send_create",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_send_create/022-06-settings-coins.png",
+    "caption": "06-settings-coins",
+    "utc": "2026-10-10T00:36:13.408167+00:00",
+    "width": 1180,
+    "height": 1350,
+    "sha256": "3bdc9c88757b96e35cc1b2d454b6c2f31b8bae3923e4d258595cc51a9b14e269",
+    "test": "qml_test_send_create",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_send_create/023-click-walletcoinsselectionbutton.png",
+    "caption": "click-walletCoinsSelectionButton",
+    "utc": "2026-10-10T00:36:13.915729+00:00",
+    "width": 1180,
+    "height": 1350,
+    "sha256": "4461a90a873c2ea26beac14ccbc7c7d9e00160f0da6b7588b9b8534a9d9c5338",
+    "test": "qml_test_send_create",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_send_create/024-click-coinslockbutton.png",
+    "caption": "click-coinsLockButton",
+    "utc": "2026-10-10T00:36:14.436944+00:00",
+    "width": 1180,
+    "height": 1350,
+    "sha256": "96ac772fc4de179feaff84a344bacc8907079b4c096e69a5dec80485fd3dd21f",
+    "test": "qml_test_send_create",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_send_create/025-click-coinsunlockbutton.png",
+    "caption": "click-coinsUnlockButton",
+    "utc": "2026-10-10T00:36:14.957358+00:00",
+    "width": 1180,
+    "height": 1350,
+    "sha256": "e3e390bc509bad0536c00fcec6e5faa41b5538391d6e0d30edda0dc8467d41ac",
+    "test": "qml_test_send_create",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_send_create/026-07-settings-compact.png",
+    "caption": "07-settings-compact",
+    "utc": "2026-10-10T00:36:15.452841+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "2abd443f46396524d5db594b36ba7e4d442ef87b48f4e0b944ffb0751ebf2063",
+    "test": "qml_test_send_create",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_send_create/027-click-settingssidebar-display.png",
+    "caption": "click-settingsSidebar_display",
+    "utc": "2026-10-10T00:36:15.943698+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "0f9f8c4b7a3b1f4bd1aff30d7670df1e8cfa94aa4718f0244297728a01217acb",
+    "test": "qml_test_send_create",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_send_create/028-click-displaythemepickeroption-0.png",
+    "caption": "click-displayThemePickerOption_0",
+    "utc": "2026-10-10T00:36:16.468971+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "3f678d54b65e3ef9d015dbf1038840185b35fed9d21003baa0f79884fbd8072d",
+    "test": "qml_test_send_create",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_send_create/029-click-sendtabbutton.png",
+    "caption": "click-sendTabButton",
+    "utc": "2026-10-10T00:36:16.951789+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "f62cec3e4d14fd7fbd1ce73869e728a59a0c437070d1dff20778c4e8e258fa20",
+    "test": "qml_test_send_create",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_send_create/030-click-sendeditrecipient-0.png",
+    "caption": "click-sendEditRecipient_0",
+    "utc": "2026-10-10T00:36:17.433680+00:00",
+    "width": 800,
+    "height": 665,
+    "sha256": "89420fe534f6df00d584f281a3282b1d1b1d0df45f8ab3660b07193be975ad9d",
+    "test": "qml_test_send_create",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_test_send_create/031-08-send-light.png",
+    "caption": "08-send-light",
+    "utc": "2026-10-10T00:36:17.956765+00:00",
+    "width": 1180,
+    "height": 1350,
+    "sha256": "54d402b335a42b5af0ed02625b9955bd145ce87d5fd17157d7183654bb253e53",
+    "test": "qml_test_send_create",
+    "kind": "application-screenshot"
+  }
+]

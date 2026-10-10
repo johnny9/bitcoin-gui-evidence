@@ -1,0 +1,28 @@
+{
+  "testedApplicationRevision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+  "testedScriptRevision": "19891532b849b1f72fbbc9dfaa2565e7ce50546e",
+  "testSha256": "18b01a9216d55efa9409d9fc7ac6449420b17899c391d816ae31ee1e0c5fbf97",
+  "originalAssertionsRetained": 10,
+  "pythonCompile": "passed",
+  "diffCheck": "passed",
+  "repositoryCi": [
+    {
+      "command": "./ci/lint.py",
+      "exitCode": 127,
+      "output": "/bin/sh: 1: ./ci/lint.py: not found\n",
+      "status": "blocked: script absent in this pinned checkout"
+    },
+    {
+      "command": "FILE_ENV=./ci/test/00_setup_env_native_tidy.sh ./ci/test_run_all.sh",
+      "exitCode": 127,
+      "output": "/bin/sh: 1: ./ci/test_run_all.sh: not found\n",
+      "status": "blocked: script absent in this pinned checkout"
+    },
+    {
+      "command": "FILE_ENV=./ci/test/00_setup_env_native_asan.sh ./ci/test_run_all.sh",
+      "exitCode": 127,
+      "output": "/bin/sh: 1: ./ci/test_run_all.sh: not found\n",
+      "status": "blocked: script absent in this pinned checkout"
+    }
+  ]
+}

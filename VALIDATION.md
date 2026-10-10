@@ -1,5 +1,20 @@
 # Static site validation
 
+## October 10, 2026 — functional rerun update
+
+The original failure reproduced at application revision `a91f4b4774f25de061fe1a7c132a91ddde117fca`. A test-only correction uses focused keyboard input for both recipient notes. All original assertions remain. Corrected script revision `19891532b849b1f72fbbc9dfaa2565e7ce50546e` passed three complete runs against the unchanged binary, including two without the evidence wrapper. See the [rerun report](data/reruns/20261010-send-create/report.md), [exact patch](data/reruns/20261010-send-create/test-fix.patch) and [application validation record](data/reruns/20261010-send-create/validation.json).
+
+- **43 browser checks passed** under the GitHub Pages project path with external networking disabled. Checks include the resolved failure, current versus archived results, both application references, review compatibility, and expanded rerun evidence on mobile. The new criterion comparison, result page and mobile report were visually inspected.
+- Current combined functional results: **34 passed, zero unresolved failures** (33 original October 8 results and one October 10 rerun; not a fresh full-suite run).
+- F09.S03 is now parity with full evidence. Send Bitcoin remains partial because selected-recipient fee deduction is still unsupported. Group totals stay 19 parity / 12 partial / 3 absent; criterion totals are 151 / 14 / 38. Full evidence selects 90 criteria and partial selects 113.
+- All 316 tracked original evidence files are byte-for-byte unchanged, including 116 original selected captures and the failure record. The addendum retains 31 raw screenshots and adds two to the gallery, for 118 selected captures. All original and rerun image hashes passed verification.
+- Catalog identity, saved review decisions and explicit requirements are preserved. Updated parity gives F09.S03 the automatic Needed for merge default only when no saved choice overrides it. No criterion is automatically accepted.
+- Python integrity checks, JavaScript syntax and diff whitespace checks passed. The dated record retains application stdout/stderr and exit status 0. Historical lint/clang-tidy/ASan entry scripts are absent in the pinned GUI-QML top-level checkout, so those attempted checks are explicitly blocked, not passed. IPC-enabled sanitizer lifecycle coverage is not claimed.
+
+Current browser outcomes and tested file hashes are linked below. QA screenshots are in `.validation/send-create-rerun/`. The sections that follow record earlier site validation and describe the evidence as it stood at that time.
+
+## October 9 site validation (historical)
+
 Validated October 9, 2026, against evidence snapshot `b4b1026b74ad8bf0a1628c9889b82193d33d210c3aa0170e94783f371fe15c0b`.
 
 - **42 browser checks passed**, using Chromium 139 in the existing Puppeteer 24.16.0 image, with external networking disabled.
