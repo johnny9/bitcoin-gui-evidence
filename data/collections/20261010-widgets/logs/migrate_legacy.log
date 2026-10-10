@@ -1,0 +1,12 @@
+{"id": "legacy-restore-migrate", "features": ["F03.S04", "F04.S01"], "description": "GUI restores a legacy backup and converts it into a loaded SQLite descriptor wallet.", "actual": [true, "sqlite"], "expected": [true, "sqlite"], "status": "passed", "utc": "2026-10-10T15:29:33.152335+00:00"}
+{"id": "migration-backup", "features": ["F04.S02"], "description": "GUI migration automatically retains a nonempty original-format backup.", "actual": false, "expected": true, "status": "failed", "utc": "2026-10-10T15:29:33.152732+00:00"}
+Traceback (most recent call last):
+  File "/work/reruns/20261010-widgets/scripts/capture_widgets.py", line 247, in <module>
+    try:globals()[scenario]()
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/work/reruns/20261010-widgets/scripts/capture_widgets.py", line 230, in migrate_legacy
+    check('migration-backup',['F04.S02'],'GUI migration automatically retains a nonempty original-format backup.',bool(backups) and all(p.stat().st_size>0 for p in backups))
+  File "/work/reruns/20261010-widgets/scripts/capture_widgets.py", line 31, in check
+    print(json.dumps(row),flush=True);assert actual==expected,description
+                                             ^^^^^^^^^^^^^^^^
+AssertionError: GUI migration automatically retains a nonempty original-format backup.

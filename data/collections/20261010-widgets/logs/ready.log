@@ -1,0 +1,1 @@
+{"id": "fixture-funded", "features": [], "description": "Synthetic reference wallet has spendable regtest coins.", "actual": true, "expected": true, "status": "passed", "utc": "2026-10-10T15:27:17.752692+00:00"}

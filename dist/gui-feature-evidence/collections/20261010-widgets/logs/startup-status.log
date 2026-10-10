@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/work/reruns/20261010-widgets/scripts/capture_widgets.py", line 151, in <module>
+    try:globals()[scenario]()
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/work/reruns/20261010-widgets/scripts/capture_widgets.py", line 75, in startup_status
+    main=gui.find(cls='BitcoinGUI');subprocess.run(['xdotool','search','--name',main['title'],'windowsize','1100','780'],check=True)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['xdotool', 'search', '--name', 'Bitcoin Core - Reference wallet - [regtest]', 'windowsize', '1100', '780']' returned non-zero exit status 1.

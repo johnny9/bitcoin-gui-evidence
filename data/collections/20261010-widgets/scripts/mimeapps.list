@@ -1,0 +1,5 @@
+[Default Applications]
+text/plain=widgets-evidence-viewer.desktop
+text/x-log=widgets-evidence-viewer.desktop
+x-scheme-handler/http=widgets-evidence-viewer.desktop
+x-scheme-handler/https=widgets-evidence-viewer.desktop

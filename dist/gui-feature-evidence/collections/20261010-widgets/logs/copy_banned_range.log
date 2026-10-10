@@ -1,0 +1,1 @@
+{"id": "copy-banned-range", "features": ["F21.S09"], "description": "Copy IP/Netmask writes the selected banned range to the clipboard.", "actual": "192.0.2.0/24", "expected": "192.0.2.0/24", "status": "passed", "utc": "2026-10-10T15:36:28.999589+00:00"}

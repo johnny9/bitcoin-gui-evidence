@@ -1,0 +1,60 @@
+2026-10-10T15:52:20Z [Transferred watch-only monitor] Setting spkMan to active: id = 1159b72a3bead5f70f6311a499817bd83491721e346a7005ff0f318fdef4508b, type = p2sh-segwit, internal = false
+2026-10-10T15:52:20Z [Transferred watch-only monitor] Setting spkMan to active: id = 0a0e0a1cfdd742b6a444d0c42e80d2ce8b594efe919bbcdf173b882ff363dafc, type = bech32, internal = false
+2026-10-10T15:52:20Z [Transferred watch-only monitor] Setting spkMan to active: id = 95c23a57322ccdbe4e507cd906df3d38173eb9045ca0025edf3b500b334c92ff, type = bech32m, internal = false
+2026-10-10T15:52:20Z [Transferred watch-only monitor] Setting spkMan to active: id = 2e9ba7e6b29620c8029fbd4f43b974ceee09e95d0d0dbff85427929f225d14b1, type = legacy, internal = true
+2026-10-10T15:52:20Z [Transferred watch-only monitor] Setting spkMan to active: id = 45e60141ab00638f949fd12fcf8c496ee50f68b36946ba67a000505015476193, type = p2sh-segwit, internal = true
+2026-10-10T15:52:20Z [Transferred watch-only monitor] Setting spkMan to active: id = 8ff56b0186bd2f5428367326d147115b1b13739ab8f2d796947b43457f875cc1, type = bech32, internal = true
+2026-10-10T15:52:20Z [Transferred watch-only monitor] Setting spkMan to active: id = 41802ad06389356c1a4996b6e88c0c342243c7f7005dafec7589f895302e03c4, type = bech32m, internal = true
+2026-10-10T15:52:20Z [Transferred watch-only monitor] Wallet completed loading in             262ms
+2026-10-10T15:52:20Z [Transferred watch-only monitor] setKeyPool.size() = 8000
+2026-10-10T15:52:20Z [Transferred watch-only monitor] mapWallet.size() = 1541
+2026-10-10T15:52:20Z [Transferred watch-only monitor] m_address_book.size() = 4
+2026-10-10T15:52:20Z Setting NODE_NETWORK in non-prune mode
+2026-10-10T15:52:20Z block tree size = 15121
+2026-10-10T15:52:20Z nBestHeight = 15120
+2026-10-10T15:52:20Z init message: Starting network threads…
+2026-10-10T15:52:20Z DNS seeding disabled
+2026-10-10T15:52:20Z initload thread start
+2026-10-10T15:52:20Z net thread start
+2026-10-10T15:52:20Z Loading 0 mempool transactions from file...
+2026-10-10T15:52:20Z Imported mempool transactions from file: 0 succeeded, 0 failed, 0 expired, 0 already there, 0 waiting for initial broadcast
+2026-10-10T15:52:20Z init message: Done loading
+2026-10-10T15:52:20Z initload thread exit
+2026-10-10T15:52:20Z addcon thread start
+2026-10-10T15:52:20Z msghand thread start
+2026-10-10T15:52:20Z GUI: Platform customization: "other"
+2026-10-10T15:52:23Z http.02 thread exit
+2026-10-10T15:52:23Z http.11 thread exit
+2026-10-10T15:52:23Z http.06 thread exit
+2026-10-10T15:52:23Z http.15 thread exit
+2026-10-10T15:52:23Z http.09 thread exit
+2026-10-10T15:52:23Z http.10 thread exit
+2026-10-10T15:52:23Z http.00 thread exit
+2026-10-10T15:52:23Z http.14 thread exit
+2026-10-10T15:52:23Z http.01 thread exit
+2026-10-10T15:52:23Z http.03 thread exit
+2026-10-10T15:52:23Z http.04 thread exit
+2026-10-10T15:52:23Z http.08 thread exit
+2026-10-10T15:52:23Z http.12 thread exit
+2026-10-10T15:52:23Z http.13 thread exit
+2026-10-10T15:52:23Z addcon thread exit
+2026-10-10T15:52:23Z http.05 thread exit
+2026-10-10T15:52:23Z http.07 thread exit
+2026-10-10T15:52:23Z net thread exit
+2026-10-10T15:52:23Z Shutdown in progress...
+2026-10-10T15:52:23Z msghand thread exit
+2026-10-10T15:52:23Z http thread exit
+2026-10-10T15:52:23Z [Transferred watch-only monitor] Releasing wallet Transferred watch-only monitor..
+2026-10-10T15:52:23Z scheduler thread exit
+2026-10-10T15:52:23Z Writing 0 mempool transactions to file...
+2026-10-10T15:52:23Z Writing 0 unbroadcast transactions to file.
+2026-10-10T15:52:23Z Dumped mempool: 0.000s to copy, 0.002s to dump, 27 bytes dumped to file
+2026-10-10T15:52:23Z prevout.04 thread exit
+2026-10-10T15:52:23Z prevout.06 thread exit
+2026-10-10T15:52:23Z prevout.03 thread exit
+2026-10-10T15:52:23Z prevout.00 thread exit
+2026-10-10T15:52:23Z prevout.05 thread exit
+2026-10-10T15:52:23Z prevout.02 thread exit
+2026-10-10T15:52:23Z prevout.01 thread exit
+2026-10-10T15:52:23Z prevout.07 thread exit
+2026-10-10T15:52:23Z Shutdown done

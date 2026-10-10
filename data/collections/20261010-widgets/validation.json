@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-10",
+  "sourceRevision": "f739c7876b81304bdc72e7eaa307702da269ac31",
+  "sourceCheckoutClean": true,
+  "binaryUnchanged": true,
+  "criterionAssertionsPassed": 43,
+  "fixtureAssertionsPassed": 1,
+  "screenshots": 61,
+  "newlyCapturedCriteria": 58,
+  "remainingScreenshotGaps": 11,
+  "applicationSourceModified": false,
+  "instrumentation": "Existing LD_PRELOAD Qt driver plus native X11 input; staged exploratory session. Earlier failed attempts are retained.",
+  "nativeChecks": [
+    {
+      "command": "./ci/lint.py",
+      "exitCode": 127,
+      "status": "blocked",
+      "reason": "Entry script absent from the standalone website checkout."
+    },
+    {
+      "command": "FILE_ENV=./ci/test/00_setup_env_native_tidy.sh ./ci/test_run_all.sh",
+      "exitCode": 127,
+      "status": "blocked",
+      "reason": "Entry script absent from the standalone website checkout."
+    },
+    {
+      "command": "FILE_ENV=./ci/test/00_setup_env_native_asan.sh ./ci/test_run_all.sh",
+      "exitCode": 127,
+      "status": "blocked",
+      "reason": "Entry script absent from the standalone website checkout."
+    }
+  ],
+  "ipcEnabledSanitizerLifecycle": "not run",
+  "fullUpstreamSuite": "not rerun",
+  "containerRestoredToStopped": true,
+  "limitations": "See report.md, per-criterion limits, original provenance and retained failed-attempt logs."
+}

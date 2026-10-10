@@ -1,0 +1,20 @@
+2026-10-10T15:56:49Z addcon thread exit
+2026-10-10T15:56:49Z opencon thread exit
+2026-10-10T15:56:49Z dnsseed thread exit
+2026-10-10T15:56:49Z Shutdown in progress...
+2026-10-10T15:56:49Z msghand thread exit
+2026-10-10T15:56:50Z DumpAnchors: Flush 0 outbound block-relay-only peer addresses to anchors.dat started
+2026-10-10T15:56:50Z DumpAnchors: Flush 0 outbound block-relay-only peer addresses to anchors.dat completed (0.00s)
+2026-10-10T15:56:50Z scheduler thread exit
+2026-10-10T15:56:50Z Writing 0 mempool transactions to file...
+2026-10-10T15:56:50Z Writing 0 unbroadcast transactions to file.
+2026-10-10T15:56:50Z Dumped mempool: 0.000s to copy, 0.002s to dump, 27 bytes dumped to file
+2026-10-10T15:56:50Z prevout.01 thread exit
+2026-10-10T15:56:50Z prevout.03 thread exit
+2026-10-10T15:56:50Z prevout.07 thread exit
+2026-10-10T15:56:50Z prevout.00 thread exit
+2026-10-10T15:56:50Z prevout.05 thread exit
+2026-10-10T15:56:50Z prevout.04 thread exit
+2026-10-10T15:56:50Z prevout.02 thread exit
+2026-10-10T15:56:50Z prevout.06 thread exit
+2026-10-10T15:56:50Z Shutdown done

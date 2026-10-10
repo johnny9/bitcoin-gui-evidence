@@ -1,0 +1,584 @@
+[
+  {
+    "id": "close-selected-wallet",
+    "features": [
+      "F02.S04"
+    ],
+    "description": "GUI closes the selected wallet while other wallets remain loaded.",
+    "actual": true,
+    "expected": true,
+    "status": "passed",
+    "utc": "2026-10-10T15:24:01.087602+00:00"
+  },
+  {
+    "id": "reopen-existing-wallet",
+    "features": [
+      "F02.S01"
+    ],
+    "description": "The GUI reopens the previously closed wallet.",
+    "actual": true,
+    "expected": true,
+    "status": "passed",
+    "utc": "2026-10-10T15:24:25.126115+00:00"
+  },
+  {
+    "id": "watchonly-receive",
+    "features": [
+      "F08.S09"
+    ],
+    "description": "Watch-only wallet generates a receive address from imported public descriptors.",
+    "actual": [
+      false,
+      true
+    ],
+    "expected": [
+      false,
+      true
+    ],
+    "status": "passed",
+    "utc": "2026-10-10T15:24:26.624224+00:00"
+  },
+  {
+    "id": "fixture-funded",
+    "features": [],
+    "description": "Synthetic reference wallet has spendable regtest coins.",
+    "actual": true,
+    "expected": true,
+    "status": "passed",
+    "utc": "2026-10-10T15:27:17.752692+00:00"
+  },
+  {
+    "id": "watchonly-unsigned-psbt",
+    "features": [
+      "F09.S08",
+      "F13.S02",
+      "F13.S03",
+      "F13.S05"
+    ],
+    "description": "Watch-only GUI produces a decodable PSBT in the clipboard without signatures.",
+    "actual": true,
+    "expected": true,
+    "status": "passed",
+    "utc": "2026-10-10T15:28:12.901256+00:00"
+  },
+  {
+    "id": "psbt-file-roundtrip",
+    "features": [
+      "F13.S05"
+    ],
+    "description": "Saved PSBT matches the clipboard transaction.",
+    "actual": "cHNidP8BAgQCAAAAAQMEcQAAAAEEAQEBBQECAfsEAgAAAAABAIMCAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////wJSAP7///8CAPIFKgEAAAAWABSeaOnSzOl8nncWxQRLB7czLi16JwAAAAAAAAAAJmokqiGp7eL2HD9x0d79P6mZ36NpU3VcaQaJeZlitIvr2DaXToz5AQAAAAEBHwDyBSoBAAAAFgAUnmjp0szpfJ53FsUESwe3My4teiciBgMspTf1zOB6e37YVau03/06RPzWtt8FqpuDU8+gwUWb7xj0zEcHVAAAgAEAAIAAAACAAAAAAAEAAAABDiBMTE6CdAzvGwdW9Z9IRwpSOQze1Vog9/M00kp599HOfwEPBAAAAAABEAT9////AAEDCEB4fQEAAAAAAQQWABSjFF8015mNnp6YTqwh2KQB9m5qNQAiAgJGXS2a1MhFCab5QTLdszhd2pmtG2OdP9jK+A+FWp/66xj0zEcHVAAAgAEAAIAAAACAAQAAAAQAAAABAwimeIgoAQAAAAEEFgAU4IISWvPJxw0e4g7mxkUbyhzgxZcA",
+    "expected": "cHNidP8BAgQCAAAAAQMEcQAAAAEEAQEBBQECAfsEAgAAAAABAIMCAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////wJSAP7///8CAPIFKgEAAAAWABSeaOnSzOl8nncWxQRLB7czLi16JwAAAAAAAAAAJmokqiGp7eL2HD9x0d79P6mZ36NpU3VcaQaJeZlitIvr2DaXToz5AQAAAAEBHwDyBSoBAAAAFgAUnmjp0szpfJ53FsUESwe3My4teiciBgMspTf1zOB6e37YVau03/06RPzWtt8FqpuDU8+gwUWb7xj0zEcHVAAAgAEAAIAAAACAAAAAAAEAAAABDiBMTE6CdAzvGwdW9Z9IRwpSOQze1Vog9/M00kp599HOfwEPBAAAAAABEAT9////AAEDCEB4fQEAAAAAAQQWABSjFF8015mNnp6YTqwh2KQB9m5qNQAiAgJGXS2a1MhFCab5QTLdszhd2pmtG2OdP9jK+A+FWp/66xj0zEcHVAAAgAEAAIAAAACAAQAAAAQAAAABAwimeIgoAQAAAAEEFgAU4IISWvPJxw0e4g7mxkUbyhzgxZcA",
+    "status": "passed",
+    "utc": "2026-10-10T15:28:14.426159+00:00"
+  },
+  {
+    "id": "sign-watchonly-proposal",
+    "features": [
+      "F09.S07",
+      "F14.S03",
+      "F14.S06"
+    ],
+    "description": "A wallet with the matching local key signs the watch-only proposal and exports a finalizable PSBT.",
+    "actual": true,
+    "expected": true,
+    "status": "passed",
+    "utc": "2026-10-10T15:28:15.497129+00:00"
+  },
+  {
+    "id": "recent-opens-history",
+    "features": [
+      "F07.S03"
+    ],
+    "description": "Clicking a recent transaction opens the full history.",
+    "actual": true,
+    "expected": true,
+    "status": "passed",
+    "utc": "2026-10-10T15:28:17.309868+00:00"
+  },
+  {
+    "id": "keyboard-overview",
+    "features": [
+      "F28.S05"
+    ],
+    "description": "Alt+1 returns to the overview.",
+    "actual": true,
+    "expected": true,
+    "status": "passed",
+    "utc": "2026-10-10T15:28:17.896621+00:00"
+  },
+  {
+    "id": "legacy-restore-migrate",
+    "features": [
+      "F03.S04",
+      "F04.S01"
+    ],
+    "description": "GUI restores a legacy backup and converts it into a loaded SQLite descriptor wallet.",
+    "actual": [
+      true,
+      "sqlite"
+    ],
+    "expected": [
+      true,
+      "sqlite"
+    ],
+    "status": "passed",
+    "utc": "2026-10-10T15:29:33.152335+00:00"
+  },
+  {
+    "id": "migration-backup",
+    "features": [
+      "F04.S02"
+    ],
+    "description": "GUI migration automatically retains a nonempty original-format backup.",
+    "actual": true,
+    "expected": true,
+    "status": "passed",
+    "utc": "2026-10-10T15:30:13.674878+00:00"
+  },
+  {
+    "id": "migration-contents",
+    "features": [
+      "F04.S03"
+    ],
+    "description": "Original receiving labels and watch-only information survive migration.",
+    "actual": [
+      true,
+      true,
+      false
+    ],
+    "expected": [
+      true,
+      true,
+      false
+    ],
+    "status": "passed",
+    "utc": "2026-10-10T15:30:13.687834+00:00"
+  },
+  {
+    "id": "deferred-migration-unloaded",
+    "features": [
+      "F04.S04"
+    ],
+    "description": "Wallet is migrated on disk and remains unloaded.",
+    "actual": true,
+    "expected": true,
+    "status": "passed",
+    "utc": "2026-10-10T15:30:18.290911+00:00"
+  },
+  {
+    "id": "open-deferred-migrated-wallet",
+    "features": [
+      "F04.S04"
+    ],
+    "description": "Previously deferred migrated wallet can later be opened through the GUI.",
+    "actual": true,
+    "expected": true,
+    "status": "passed",
+    "utc": "2026-10-10T15:30:18.958127+00:00"
+  },
+  {
+    "id": "privacy-across-wallets",
+    "features": [
+      "F32.S03"
+    ],
+    "description": "The mask preference remains enabled after switching wallets.",
+    "actual": true,
+    "expected": true,
+    "status": "passed",
+    "utc": "2026-10-10T15:30:21.403808+00:00"
+  },
+  {
+    "id": "privacy-restored",
+    "features": [
+      "F32.S04"
+    ],
+    "description": "After restart the saved privacy preference still masks balances.",
+    "actual": true,
+    "expected": true,
+    "status": "passed",
+    "utc": "2026-10-10T15:36:17.150272+00:00"
+  },
+  {
+    "id": "window-placement-restored",
+    "features": [
+      "F26.S02"
+    ],
+    "description": "Main window size and position survive a clean restart.",
+    "actual": [
+      80,
+      90,
+      1080,
+      740
+    ],
+    "expected": [
+      80,
+      90,
+      1080,
+      740
+    ],
+    "status": "passed",
+    "utc": "2026-10-10T15:36:17.159726+00:00"
+  },
+  {
+    "id": "copy-banned-range",
+    "features": [
+      "F21.S09"
+    ],
+    "description": "Copy IP/Netmask writes the selected banned range to the clipboard.",
+    "actual": "192.0.2.0/24",
+    "expected": "192.0.2.0/24",
+    "status": "passed",
+    "utc": "2026-10-10T15:36:28.999589+00:00"
+  },
+  {
+    "id": "wallet-rescan-completed",
+    "features": [
+      "F34.S01",
+      "F34.S02"
+    ],
+    "description": "Rescan completes through the current chain tip.",
+    "actual": 15120,
+    "expected": 15120,
+    "status": "passed",
+    "utc": "2026-10-10T15:36:37.397025+00:00"
+  },
+  {
+    "id": "wallet-rescan-cancelled",
+    "features": [
+      "F34.S03"
+    ],
+    "description": "GUI cancellation causes the in-progress rescan to return an abort result.",
+    "actual": true,
+    "expected": true,
+    "status": "passed",
+    "utc": "2026-10-10T15:36:37.691681+00:00"
+  },
+  {
+    "id": "running-uri-handoff",
+    "features": [
+      "F10.S03",
+      "F31.S01"
+    ],
+    "description": "A second process passes its payment URI to the already-running GUI.",
+    "actual": [
+      0,
+      "bcrt1q5v297dxhnxxea85cf6kzrk9yq8mxu634pc2m7g",
+      12500000
+    ],
+    "expected": [
+      0,
+      "bcrt1q5v297dxhnxxea85cf6kzrk9yq8mxu634pc2m7g",
+      12500000
+    ],
+    "status": "passed",
+    "utc": "2026-10-10T15:38:17.860481+00:00"
+  },
+  {
+    "id": "qr-drag-to-external-app",
+    "features": [
+      "F08.S06"
+    ],
+    "description": "Actual drag-and-drop delivers an image to an independent Qt application.",
+    "actual": true,
+    "expected": true,
+    "status": "passed",
+    "utc": "2026-10-10T15:38:49.705436+00:00"
+  },
+  {
+    "id": "open-debug-log",
+    "features": [
+      "F22.S04"
+    ],
+    "description": "The GUI passes its regtest debug.log path to the external viewer.",
+    "actual": "/work/reruns/20261010-widgets/node/regtest/debug.log",
+    "expected": "/work/reruns/20261010-widgets/node/regtest/debug.log",
+    "status": "passed",
+    "utc": "2026-10-10T15:40:49.342668+00:00"
+  },
+  {
+    "id": "open-configuration-file",
+    "features": [
+      "F23.S10"
+    ],
+    "description": "The GUI opens bitcoin.conf using the configured external application.",
+    "actual": "/work/reruns/20261010-widgets/node/bitcoin.conf",
+    "expected": "/work/reruns/20261010-widgets/node/bitcoin.conf",
+    "status": "passed",
+    "utc": "2026-10-10T15:40:51.760220+00:00"
+  },
+  {
+    "id": "multisig-partial-signature-present",
+    "features": [
+      "F14.S03",
+      "F14.S05"
+    ],
+    "description": "The first cosigner adds exactly one partial signature.",
+    "actual": 1,
+    "expected": 1,
+    "status": "passed",
+    "utc": "2026-10-10T15:40:53.396315+00:00"
+  },
+  {
+    "id": "first-multisig-signature",
+    "features": [
+      "F14.S03",
+      "F14.S05",
+      "F14.S06"
+    ],
+    "description": "First local cosigner signs and exports a PSBT that still needs the second signature.",
+    "actual": false,
+    "expected": false,
+    "status": "passed",
+    "utc": "2026-10-10T15:40:53.396709+00:00"
+  },
+  {
+    "id": "second-multisig-signature",
+    "features": [
+      "F14.S03",
+      "F14.S05"
+    ],
+    "description": "Passing the first signer PSBT to the second GUI wallet yields a complete transaction.",
+    "actual": true,
+    "expected": true,
+    "status": "passed",
+    "utc": "2026-10-10T15:40:55.114099+00:00"
+  },
+  {
+    "id": "node-without-wallets",
+    "features": [
+      "F02.S04",
+      "F20.S06"
+    ],
+    "description": "After the GUI closes all wallets, node RPC still responds.",
+    "actual": [
+      [],
+      true
+    ],
+    "expected": [
+      [],
+      true
+    ],
+    "status": "passed",
+    "utc": "2026-10-10T15:40:57.951332+00:00"
+  },
+  {
+    "id": "wallet-free-broadcast",
+    "features": [
+      "F14.S08"
+    ],
+    "description": "GUI broadcasts the fully signed multisig transaction with no loaded wallet.",
+    "actual": [
+      [],
+      true
+    ],
+    "expected": [
+      [],
+      true
+    ],
+    "status": "passed",
+    "utc": "2026-10-10T15:40:59.455557+00:00"
+  },
+  {
+    "id": "network-main",
+    "features": [
+      "F20.S07",
+      "F31.S02"
+    ],
+    "description": "GUI starts on the selected network with peer activity disabled.",
+    "actual": "main",
+    "expected": "main",
+    "status": "passed",
+    "utc": "2026-10-10T15:41:53.904146+00:00"
+  },
+  {
+    "id": "network-test",
+    "features": [
+      "F20.S07",
+      "F31.S02"
+    ],
+    "description": "GUI starts on the selected network with peer activity disabled.",
+    "actual": "test",
+    "expected": "test",
+    "status": "passed",
+    "utc": "2026-10-10T15:41:55.556654+00:00"
+  },
+  {
+    "id": "network-testnet4",
+    "features": [
+      "F20.S07",
+      "F31.S02"
+    ],
+    "description": "GUI starts on the selected network with peer activity disabled.",
+    "actual": "testnet4",
+    "expected": "testnet4",
+    "status": "passed",
+    "utc": "2026-10-10T15:41:57.207672+00:00"
+  },
+  {
+    "id": "network-signet",
+    "features": [
+      "F20.S07",
+      "F31.S02"
+    ],
+    "description": "GUI starts on the selected network with peer activity disabled.",
+    "actual": "signet",
+    "expected": "signet",
+    "status": "passed",
+    "utc": "2026-10-10T15:41:58.911268+00:00"
+  },
+  {
+    "id": "network-regtest",
+    "features": [
+      "F20.S07",
+      "F31.S02"
+    ],
+    "description": "GUI starts on the selected network with peer activity disabled.",
+    "actual": "regtest",
+    "expected": "regtest",
+    "status": "passed",
+    "utc": "2026-10-10T15:42:00.564483+00:00"
+  },
+  {
+    "id": "network-gui-clean-exits",
+    "features": [
+      "F27.S05"
+    ],
+    "description": "All five network GUI sessions exited cleanly through the Exit action.",
+    "actual": true,
+    "expected": true,
+    "status": "passed",
+    "utc": "2026-10-10T15:42:01.859775+00:00"
+  },
+  {
+    "id": "abort-preserves-settings",
+    "features": [
+      "F27.S07"
+    ],
+    "description": "Aborting startup leaves the invalid settings file byte-for-byte unchanged.",
+    "actual": "0152cfd2b19b23a92ae57c0d287504fe167379f159808ff2fcf3f9fa3abba7b1",
+    "expected": "0152cfd2b19b23a92ae57c0d287504fe167379f159808ff2fcf3f9fa3abba7b1",
+    "status": "passed",
+    "utc": "2026-10-10T15:43:22.404685+00:00"
+  },
+  {
+    "id": "start-minimized",
+    "features": [
+      "F27.S02"
+    ],
+    "description": "The -min startup option starts the main window minimized.",
+    "actual": true,
+    "expected": true,
+    "status": "passed",
+    "utc": "2026-10-10T15:46:07.404194+00:00"
+  },
+  {
+    "id": "preferences-reset-backed-up",
+    "features": [
+      "F23.S12"
+    ],
+    "description": "Reset preserves the former preferences in a backup and restores the advanced-control default.",
+    "actual": [
+      true,
+      false,
+      true
+    ],
+    "expected": [
+      true,
+      false,
+      true
+    ],
+    "status": "passed",
+    "utc": "2026-10-10T15:46:08.791248+00:00"
+  },
+  {
+    "id": "passphrase-mismatch",
+    "features": [
+      "F06.S07",
+      "F30.S01"
+    ],
+    "description": "Different repeated passphrases produce a visible validation error.",
+    "actual": true,
+    "expected": true,
+    "status": "passed",
+    "utc": "2026-10-10T15:46:10.938739+00:00"
+  },
+  {
+    "id": "unknown-change-confirmation",
+    "features": [
+      "F12.S09"
+    ],
+    "description": "Application requires confirmation for a change destination outside the selected wallet.",
+    "actual": true,
+    "expected": true,
+    "status": "passed",
+    "utc": "2026-10-10T15:46:14.601655+00:00"
+  },
+  {
+    "id": "local-peer-block-download",
+    "features": [
+      "F20.S04"
+    ],
+    "description": "The second GUI node downloads and validates the local peer chain to the same best block.",
+    "actual": [
+      15120,
+      "50f1540ac2b6dbbd3c03f0e6d8f4ebd3d1e0a83cbee4b2e6a1549dfeaefdb769"
+    ],
+    "expected": [
+      15120,
+      "50f1540ac2b6dbbd3c03f0e6d8f4ebd3d1e0a83cbee4b2e6a1549dfeaefdb769"
+    ],
+    "status": "passed",
+    "utc": "2026-10-10T15:47:03.028803+00:00"
+  },
+  {
+    "id": "external-explorer-transaction-link",
+    "features": [
+      "F16.S09",
+      "F31.S05"
+    ],
+    "description": "Explorer action substitutes the real selected transaction ID and dispatches it to the external handler.",
+    "actual": [
+      true,
+      64,
+      "c0622efb17e8da3bb3370eecb668eb56a7deaf99b1427d29c53941e1982d220c"
+    ],
+    "expected": [
+      true,
+      64,
+      "c0622efb17e8da3bb3370eecb668eb56a7deaf99b1427d29c53941e1982d220c"
+    ],
+    "status": "passed",
+    "utc": "2026-10-10T15:47:33.397711+00:00"
+  },
+  {
+    "id": "exported-monitor-on-second-node",
+    "features": [
+      "F05.S03"
+    ],
+    "description": "Separate node restores the GUI-exported wallet with public monitoring descriptors and no spending keys. Restore is RPC fixture setup.",
+    "actual": [
+      false,
+      true,
+      false
+    ],
+    "expected": [
+      false,
+      true,
+      false
+    ],
+    "status": "passed",
+    "utc": "2026-10-10T15:52:20.206387+00:00"
+  },
+  {
+    "id": "transferred-monitor-visible",
+    "features": [
+      "F05.S03"
+    ],
+    "description": "The independently restored watch-only wallet is loaded in the second GUI and has a rediscovered balance.",
+    "actual": true,
+    "expected": true,
+    "status": "passed",
+    "utc": "2026-10-10T15:52:22.242993+00:00"
+  }
+]

@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-10T07:55:34.140Z",
+  "checkedAt": "2026-10-10T16:01:25.609Z",
   "basePath": "/bitcoin-gui-evidence/",
   "outcomes": [
     {
@@ -147,11 +147,19 @@
       "status": "passed"
     },
     {
-      "name": "All 120 selected captures decode in the browser",
+      "name": "Additional Widgets evidence is criterion-specific and preserves QML assessments",
+      "status": "passed"
+    },
+    {
+      "name": "All 181 selected captures decode in the browser",
       "status": "passed"
     },
     {
       "name": "Browser-local file opening also supports the catalog",
+      "status": "passed"
+    },
+    {
+      "name": "Expanded Widgets capture report fits on mobile",
       "status": "passed"
     },
     {

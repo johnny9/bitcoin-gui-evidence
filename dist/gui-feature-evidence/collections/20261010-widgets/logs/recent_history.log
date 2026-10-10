@@ -1,0 +1,2 @@
+{"id": "recent-opens-history", "features": ["F07.S03"], "description": "Clicking a recent transaction opens the full history.", "actual": true, "expected": true, "status": "passed", "utc": "2026-10-10T15:28:17.309868+00:00"}
+{"id": "keyboard-overview", "features": ["F28.S05"], "description": "Alt+1 returns to the overview.", "actual": true, "expected": true, "status": "passed", "utc": "2026-10-10T15:28:17.896621+00:00"}

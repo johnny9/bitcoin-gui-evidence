@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Widgets evidence external viewer
+Exec=env -u LD_PRELOAD -u WIDGETS_EVIDENCE_SOCKET WIDGETS_PASS_ROOT=/work/reruns/20261010-widgets /work/reruns/20261010-widgets/external-fixture %f
+MimeType=text/plain;text/x-log;

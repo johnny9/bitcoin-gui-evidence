@@ -1,0 +1,1370 @@
+[
+  {
+    "id": "F02.S01",
+    "intent": "Open existing wallets.",
+    "before": {
+      "status": "assertions",
+      "label": "Assertions collected",
+      "originalStatus": "Assertions collected",
+      "html": "Several wallets remain loaded. <strong>passed</strong>.<br>No matching screenshot collected.",
+      "text": "Several wallets remain loaded. passed. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/open-wallet-menu.png",
+      "collections/20261010-widgets/media/widgets/open-existing-wallet.png",
+      "collections/20261010-widgets/media/widgets/reopened-wallet.png"
+    ],
+    "checks": [
+      "reopen-existing-wallet"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F02.S04",
+    "intent": "Close individual wallets or all wallets.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/close-wallet-confirmation.png",
+      "collections/20261010-widgets/media/widgets/close-all-wallets.png"
+    ],
+    "checks": [
+      "close-selected-wallet",
+      "node-without-wallets"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F03.S04",
+    "intent": "Recover and update a legacy wallet backup.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/restore-migrate-legacy-confirmation.png",
+      "collections/20261010-widgets/media/widgets/legacy-migration-success.png"
+    ],
+    "checks": [
+      "legacy-restore-migrate"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F04.S01",
+    "intent": "Update legacy wallets to the current wallet format.",
+    "before": {
+      "status": "source",
+      "label": "Source only",
+      "originalStatus": "Source only",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/restore-migrate-legacy-confirmation.png",
+      "collections/20261010-widgets/media/widgets/legacy-migration-success.png"
+    ],
+    "checks": [
+      "legacy-restore-migrate"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F04.S02",
+    "intent": "Preserve the original wallet with an automatic backup.",
+    "before": {
+      "status": "source",
+      "label": "Source only",
+      "originalStatus": "Source only",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/restore-migrate-legacy-confirmation.png",
+      "collections/20261010-widgets/media/widgets/legacy-migration-success.png"
+    ],
+    "checks": [
+      "migration-backup"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F04.S03",
+    "intent": "Preserve wallet contents, including watch-only information.",
+    "before": {
+      "status": "source",
+      "label": "Source only",
+      "originalStatus": "Source only",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/restore-migrate-legacy-confirmation.png",
+      "collections/20261010-widgets/media/widgets/legacy-migration-success.png",
+      "collections/20261010-widgets/media/widgets/migrated-watchonly-labels.png"
+    ],
+    "checks": [
+      "migration-contents"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F04.S04",
+    "intent": "Open migrated wallets immediately or later.",
+    "before": {
+      "status": "source",
+      "label": "Source only",
+      "originalStatus": "Source only",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/legacy-migration-success.png",
+      "collections/20261010-widgets/media/widgets/migrate-without-opening.png",
+      "collections/20261010-widgets/media/widgets/deferred-migration-success.png",
+      "collections/20261010-widgets/media/widgets/deferred-wallet-opened.png"
+    ],
+    "checks": [
+      "deferred-migration-unloaded",
+      "open-deferred-migrated-wallet"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F05.S03",
+    "intent": "Transfer wallet monitoring to another node.",
+    "before": {
+      "status": "assertions",
+      "label": "Assertions collected",
+      "originalStatus": "Assertions collected",
+      "html": "Exported wallet restores on another node with private keys disabled and public descriptors only. <strong>passed</strong>.<br>No matching screenshot collected.",
+      "text": "Exported wallet restores on another node with private keys disabled and public descriptors only. passed. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/watchonly-monitor-another-node.png"
+    ],
+    "checks": [
+      "exported-monitor-on-second-node",
+      "transferred-monitor-visible"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F06.S07",
+    "intent": "Receive feedback on passphrase mismatches and common entry mistakes.",
+    "before": {
+      "status": "source",
+      "label": "Source only",
+      "originalStatus": "Source only",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/passphrase-mismatch-error.png"
+    ],
+    "checks": [
+      "passphrase-mismatch"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F07.S03",
+    "intent": "Find a recent transaction in the full transaction history.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/recent-transaction-in-history.png"
+    ],
+    "checks": [
+      "recent-opens-history"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F07.S04",
+    "intent": "Know when wallet information may be out of date.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/sync-overlay-wallet-outdated.png",
+      "collections/20261010-widgets/media/widgets/sync-background-wallet-access.png"
+    ],
+    "checks": [],
+    "remainingGap": null
+  },
+  {
+    "id": "F08.S06",
+    "intent": "Share QR images with other applications using drag and drop.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/qr-drag-delivered.png"
+    ],
+    "checks": [
+      "qr-drag-to-external-app"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F08.S08",
+    "intent": "Verify receiving addresses on a compatible signing device.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br><strong>Limit:</strong> No physical signing device was available.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. Limit: No physical signing device was available. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": false,
+    "captures": [],
+    "checks": [],
+    "remainingGap": "No compatible physical signing device was attached; on-device address verification remains unproven."
+  },
+  {
+    "id": "F08.S09",
+    "intent": "Generate receiving addresses for a configured watch-only wallet.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/watchonly-receiving-address.png"
+    ],
+    "checks": [
+      "watchonly-receive"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F09.S07",
+    "intent": "Sign payments with local spending keys or a compatible external signer.",
+    "before": {
+      "status": "assertions",
+      "label": "Assertions collected",
+      "originalStatus": "Assertions collected",
+      "html": "GUI broadcast reaches the node mempool. <strong>passed</strong>.<br><strong>Limit:</strong> The live round trip signs with local keys; no Widgets external signer is exercised.<br>No matching screenshot collected.",
+      "text": "GUI broadcast reaches the node mempool. passed. Limit: The live round trip signs with local keys; no Widgets external signer is exercised. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/signed-psbt-export.png"
+    ],
+    "checks": [
+      "sign-watchonly-proposal"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F09.S08",
+    "intent": "Prepare a payment from a watch-only wallet for signing elsewhere.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/watchonly-prepare-payment.png",
+      "collections/20261010-widgets/media/widgets/watchonly-unsigned-review.png"
+    ],
+    "checks": [
+      "watchonly-unsigned-psbt"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F10.S03",
+    "intent": "Handle payment requests from other applications, including while Bitcoin Core is already running.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/external-payment-uri-received.png"
+    ],
+    "checks": [
+      "running-uri-handoff"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F12.S09",
+    "intent": "Receive a warning when a change destination is not recognized as spendable by the wallet.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/unknown-change-confirmation.png"
+    ],
+    "checks": [
+      "unknown-change-confirmation"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F13.S02",
+    "intent": "Create transactions from watch-only wallets or wallets containing spending keys.",
+    "before": {
+      "status": "assertions",
+      "label": "Assertions collected",
+      "originalStatus": "Assertions collected",
+      "html": "GUI creates a decodable unsigned single-signature PSBT in the system clipboard. <strong>passed</strong>.<br><strong>Limit:</strong> The custom live assertion uses a spending wallet; the existing WalletTests suite also exercises a watch-only PSBT path.<br>No matching screenshot collected.",
+      "text": "GUI creates a decodable unsigned single-signature PSBT in the system clipboard. passed. Limit: The custom live assertion uses a spending wallet; the existing WalletTests suite also exercises a watch-only PSBT path. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/watchonly-prepare-payment.png",
+      "collections/20261010-widgets/media/widgets/watchonly-unsigned-review.png"
+    ],
+    "checks": [
+      "watchonly-unsigned-psbt"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F13.S03",
+    "intent": "Use single-signature or previously configured multisig wallets.",
+    "before": {
+      "status": "assertions",
+      "label": "Assertions collected",
+      "originalStatus": "Assertions collected",
+      "html": "GUI creates a decodable unsigned single-signature PSBT in the system clipboard. <strong>passed</strong>.<br><strong>Limit:</strong> The live proof is single-signature. Multisig creation is not exercised.<br>No matching screenshot collected.",
+      "text": "GUI creates a decodable unsigned single-signature PSBT in the system clipboard. passed. Limit: The live proof is single-signature. Multisig creation is not exercised. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/watchonly-unsigned-review.png"
+    ],
+    "checks": [
+      "watchonly-unsigned-psbt"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F13.S05",
+    "intent": "Copy an unsigned PSBT to the clipboard or save it to a file for signing elsewhere.",
+    "before": {
+      "status": "assertions",
+      "label": "Assertions collected",
+      "originalStatus": "Assertions collected",
+      "html": "GUI creates a decodable unsigned single-signature PSBT in the system clipboard. <strong>passed</strong>.<br><strong>Limit:</strong> Clipboard serialization is checked; GUI file export was not asserted in this Widgets scenario.<br>No matching screenshot collected.",
+      "text": "GUI creates a decodable unsigned single-signature PSBT in the system clipboard. passed. Limit: Clipboard serialization is checked; GUI file export was not asserted in this Widgets scenario. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/unsigned-psbt-clipboard.png",
+      "collections/20261010-widgets/media/widgets/unsigned-psbt-save.png"
+    ],
+    "checks": [
+      "watchonly-unsigned-psbt",
+      "psbt-file-roundtrip"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F14.S03",
+    "intent": "Process single-signature and multisig transactions when the required keys and transaction information are available.",
+    "before": {
+      "status": "assertions",
+      "label": "Assertions collected",
+      "originalStatus": "Assertions collected",
+      "html": "GUI signs an imported PSBT and copies a complete finalizable PSBT. <strong>passed</strong>.<br><strong>Limit:</strong> The live imported PSBT is single-signature; multisig remains unexercised.<br>No matching screenshot collected.",
+      "text": "GUI signs an imported PSBT and copies a complete finalizable PSBT. passed. Limit: The live imported PSBT is single-signature; multisig remains unexercised. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/signed-psbt-export.png",
+      "collections/20261010-widgets/media/widgets/multisig-first-signature.png",
+      "collections/20261010-widgets/media/widgets/multisig-second-signature.png"
+    ],
+    "checks": [
+      "sign-watchonly-proposal",
+      "multisig-partial-signature-present",
+      "first-multisig-signature",
+      "second-multisig-signature"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F14.S05",
+    "intent": "Collect additional signatures by passing a transaction between signers.",
+    "before": {
+      "status": "source",
+      "label": "Source only",
+      "originalStatus": "Source only",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/multisig-first-signature.png",
+      "collections/20261010-widgets/media/widgets/multisig-second-signature.png"
+    ],
+    "checks": [
+      "multisig-partial-signature-present",
+      "first-multisig-signature",
+      "second-multisig-signature"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F14.S06",
+    "intent": "Copy a partially signed PSBT to the clipboard or save it to a file for further signing.",
+    "before": {
+      "status": "assertions",
+      "label": "Assertions collected",
+      "originalStatus": "Assertions collected",
+      "html": "GUI signs an imported PSBT and copies a complete finalizable PSBT. <strong>passed</strong>.<br><strong>Limit:</strong> The checked clipboard result is fully signed. Partially signed exchange and file save remain unexercised.<br>No matching screenshot collected.",
+      "text": "GUI signs an imported PSBT and copies a complete finalizable PSBT. passed. Limit: The checked clipboard result is fully signed. Partially signed exchange and file save remain unexercised. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/signed-psbt-export.png",
+      "collections/20261010-widgets/media/widgets/multisig-first-signature.png"
+    ],
+    "checks": [
+      "sign-watchonly-proposal",
+      "first-multisig-signature"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F14.S08",
+    "intent": "Inspect transactions and broadcast fully signed transactions without opening a wallet.",
+    "before": {
+      "status": "source",
+      "label": "Source only",
+      "originalStatus": "Source only",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/wallet-free-psbt-review.png",
+      "collections/20261010-widgets/media/widgets/wallet-free-psbt-broadcast.png"
+    ],
+    "checks": [
+      "wallet-free-broadcast"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F15.S02",
+    "intent": "Keep spending keys on the signing device.",
+    "before": {
+      "status": "source",
+      "label": "Source only",
+      "originalStatus": "Source only",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br><strong>Limit:</strong> No Widgets external-signer run or physical device test.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. Limit: No Widgets external-signer run or physical device test. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": false,
+    "captures": [],
+    "checks": [],
+    "remainingGap": "No physical signing device was attached; a screenshot of a simulated signer would not prove key custody on a device."
+  },
+  {
+    "id": "F15.S03",
+    "intent": "Generate receiving addresses and verify them on the device.",
+    "before": {
+      "status": "source",
+      "label": "Source only",
+      "originalStatus": "Source only",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br><strong>Limit:</strong> No physical device address-verification test.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. Limit: No physical device address-verification test. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": false,
+    "captures": [],
+    "checks": [],
+    "remainingGap": "Receiving-address generation and verification on a physical signing device remain untested."
+  },
+  {
+    "id": "F15.S04",
+    "intent": "Authorize outgoing payments using the device.",
+    "before": {
+      "status": "source",
+      "label": "Source only",
+      "originalStatus": "Source only",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br><strong>Limit:</strong> No physical device approval test.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. Limit: No physical device approval test. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": false,
+    "captures": [],
+    "checks": [],
+    "remainingGap": "No physical device was available to demonstrate payment authorization."
+  },
+  {
+    "id": "F15.S05",
+    "intent": "Continue a signing workflow when additional signatures are needed. Signing workflow.",
+    "before": {
+      "status": "source",
+      "label": "Source only",
+      "originalStatus": "Source only",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br><strong>Limit:</strong> No Widgets multisigner exchange test.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. Limit: No Widgets multisigner exchange test. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": false,
+    "captures": [],
+    "checks": [],
+    "remainingGap": "Local multisig exchange is captured under F14, but it does not prove continuation through an external signing device."
+  },
+  {
+    "id": "F16.S09",
+    "intent": "Inspect transactions in external block explorers.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/external-explorer-menu.png",
+      "collections/20261010-widgets/media/widgets/external-explorer-dispatch.png"
+    ],
+    "checks": [
+      "external-explorer-transaction-link"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F20.S01",
+    "intent": "Choose where node and wallet data are stored.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/choose-data-directory.png"
+    ],
+    "checks": [],
+    "remainingGap": null
+  },
+  {
+    "id": "F20.S04",
+    "intent": "Download and validate the blockchain.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br><strong>Limit:</strong> Only an isolated regtest chain is used. Mainnet initial download is not exercised.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. Limit: Only an isolated regtest chain is used. Mainnet initial download is not exercised. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/downloaded-validated-regtest-chain.png"
+    ],
+    "checks": [
+      "local-peer-block-download"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F20.S06",
+    "intent": "Operate the node without an open wallet.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/node-running-without-wallets.png"
+    ],
+    "checks": [
+      "node-without-wallets"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F20.S07",
+    "intent": "Use mainnet, testnet, testnet4, signet, or regtest. Network support.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br><strong>Limit:</strong> Only regtest is run; other network variants remain unexercised.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. Limit: Only regtest is run; other network variants remain unexercised. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/network-main.png",
+      "collections/20261010-widgets/media/widgets/network-test.png",
+      "collections/20261010-widgets/media/widgets/network-testnet4.png",
+      "collections/20261010-widgets/media/widgets/network-signet.png",
+      "collections/20261010-widgets/media/widgets/network-regtest.png"
+    ],
+    "checks": [
+      "network-main",
+      "network-test",
+      "network-testnet4",
+      "network-signet",
+      "network-regtest"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F21.S09",
+    "intent": "Copy banned addresses and network ranges to the clipboard.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/banned-range-context-menu.png",
+      "collections/20261010-widgets/media/widgets/banned-range-selected.png"
+    ],
+    "checks": [
+      "copy-banned-range"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F22.S04",
+    "intent": "Inspect logs for troubleshooting.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/debug-log-opened.png"
+    ],
+    "checks": [
+      "open-debug-log"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F22.S09",
+    "intent": "Use RPC for descriptor import, multisig setup, wallet rescans, and combining PSBTs.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/console-import-descriptors-help.png"
+    ],
+    "checks": [],
+    "remainingGap": null
+  },
+  {
+    "id": "F23.S10",
+    "intent": "Manage advanced application configuration.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/advanced-configuration-prompt.png",
+      "collections/20261010-widgets/media/widgets/advanced-configuration-opened.png"
+    ],
+    "checks": [
+      "open-configuration-file"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F23.S12",
+    "intent": "Restore default preferences while retaining a backup of previous settings.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/reset-preferences-backup.png",
+      "collections/20261010-widgets/media/widgets/preferences-restored-defaults.png"
+    ],
+    "checks": [
+      "preferences-reset-backed-up"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F25.S03",
+    "intent": "Receive informational, warning, and critical messages through desktop notifications.",
+    "before": {
+      "status": "source",
+      "label": "Source only",
+      "originalStatus": "Source only",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br><strong>Limit:</strong> The incoming-payment information notification is captured; synthetic warning/critical desktop notifications were not injected.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. Limit: The incoming-payment information notification is captured; synthetic warning/critical desktop notifications were not injected. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": false,
+    "captures": [],
+    "checks": [],
+    "remainingGap": "The existing notification evidence does not demonstrate all informational, warning and critical desktop categories. This pass did not produce a new capture that establishes that scope."
+  },
+  {
+    "id": "F25.S04",
+    "intent": "Receive critical error messages when desktop notifications are unavailable.",
+    "before": {
+      "status": "source",
+      "label": "Source only",
+      "originalStatus": "Source only",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/unreadable-settings-choices.png"
+    ],
+    "checks": [],
+    "remainingGap": null
+  },
+  {
+    "id": "F25.S05",
+    "intent": "Avoid a flood of notifications while historical wallet activity is being loaded.",
+    "before": {
+      "status": "source",
+      "label": "Source only",
+      "originalStatus": "Source only",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": false,
+    "captures": [],
+    "checks": [],
+    "remainingGap": "No controlled notification-service comparison during historical wallet loading was recorded. A silent desktop alone would not prove suppression."
+  },
+  {
+    "id": "F26.S01",
+    "intent": "Arrange, hide, and restore application windows.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/window-position-before-restart.png"
+    ],
+    "checks": [],
+    "remainingGap": null
+  },
+  {
+    "id": "F26.S02",
+    "intent": "Remember the main window placement between sessions.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/window-position-before-restart.png",
+      "collections/20261010-widgets/media/widgets/window-and-privacy-after-restart.png"
+    ],
+    "checks": [
+      "window-placement-restored"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F26.S04",
+    "intent": "Use diagnostics alongside wallet activity.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/diagnostics-alongside-wallet.png",
+      "collections/20261010-widgets/media/widgets/diagnostics-and-wallet-windows.png"
+    ],
+    "checks": [],
+    "remainingGap": null
+  },
+  {
+    "id": "F27.S02",
+    "intent": "Start with the main window minimized.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/started-minimized.png"
+    ],
+    "checks": [
+      "start-minimized"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F27.S03",
+    "intent": "Monitor initialization progress.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/initialization-progress.png"
+    ],
+    "checks": [],
+    "remainingGap": null
+  },
+  {
+    "id": "F27.S04",
+    "intent": "Request an orderly shutdown during startup.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": false,
+    "captures": [],
+    "checks": [],
+    "remainingGap": "The startup-cancellation attempt missed the short-lived splash screen. The remaining GUI was closed normally after startup; that is not proof of cancellation during initialization."
+  },
+  {
+    "id": "F27.S05",
+    "intent": "Shut down the node cleanly.",
+    "before": {
+      "status": "assertions",
+      "label": "Assertions collected",
+      "originalStatus": "Assertions collected",
+      "html": "Native Linux tray Exit terminates the Widgets process successfully. <strong>passed</strong>.<br>The wallet-disabled Widgets process shuts down successfully. <strong>passed</strong>.<br>No matching screenshot collected.",
+      "text": "Native Linux tray Exit terminates the Widgets process successfully. passed. The wallet-disabled Widgets process shuts down successfully. passed. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/shutdown-progress.png"
+    ],
+    "checks": [
+      "network-gui-clean-exits"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F27.S06",
+    "intent": "Know when shutdown is still in progress.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/shutdown-progress.png"
+    ],
+    "checks": [],
+    "remainingGap": null
+  },
+  {
+    "id": "F27.S07",
+    "intent": "Recover unreadable settings or stop startup without changing them.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/unreadable-settings-choices.png",
+      "collections/20261010-widgets/media/widgets/unreadable-settings-details.png"
+    ],
+    "checks": [
+      "abort-preserves-settings"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F27.S08",
+    "intent": "Coordinate application shutdown with Windows session shutdown.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br><strong>Limit:</strong> Windows session shutdown is not exercised on Linux.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. Limit: Windows session shutdown is not exercised on Linux. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": false,
+    "captures": [],
+    "checks": [],
+    "remainingGap": "This pass ran on Linux X11. Windows session-shutdown coordination requires a dedicated Windows run."
+  },
+  {
+    "id": "F28.S05",
+    "intent": "Use keyboard shortcuts for navigation and common actions.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/keyboard-navigation-overview.png"
+    ],
+    "checks": [
+      "keyboard-overview"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F29.S06",
+    "intent": "Understand available actions through contextual guidance.",
+    "before": {
+      "status": "source",
+      "label": "Source only",
+      "originalStatus": "Source only",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/send-contextual-guidance.png"
+    ],
+    "checks": [],
+    "remainingGap": null
+  },
+  {
+    "id": "F30.S01",
+    "intent": "Understand operation results, warnings, and errors.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/unreadable-settings-choices.png",
+      "collections/20261010-widgets/media/widgets/passphrase-mismatch-error.png"
+    ],
+    "checks": [
+      "passphrase-mismatch"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F30.S03",
+    "intent": "Inspect additional diagnostic information when available.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/unreadable-settings-details.png"
+    ],
+    "checks": [],
+    "remainingGap": null
+  },
+  {
+    "id": "F30.S04",
+    "intent": "Receive a prompt when an operation requires attention.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/close-wallet-confirmation.png",
+      "collections/20261010-widgets/media/widgets/unreadable-settings-choices.png",
+      "collections/20261010-widgets/media/widgets/unknown-change-confirmation.png"
+    ],
+    "checks": [],
+    "remainingGap": null
+  },
+  {
+    "id": "F30.S05",
+    "intent": "Track long-running operations.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/rescan-progress.png"
+    ],
+    "checks": [],
+    "remainingGap": null
+  },
+  {
+    "id": "F30.S07",
+    "intent": "Monitor background synchronization while retaining access to the application.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/sync-overlay-wallet-outdated.png",
+      "collections/20261010-widgets/media/widgets/sync-background-wallet-access.png"
+    ],
+    "checks": [],
+    "remainingGap": null
+  },
+  {
+    "id": "F31.S01",
+    "intent": "Open Bitcoin payment requests from other applications or by drag and drop.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/external-payment-uri-received.png"
+    ],
+    "checks": [
+      "running-uri-handoff"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F31.S02",
+    "intent": "Distinguish application instances using different Bitcoin networks.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/network-main.png",
+      "collections/20261010-widgets/media/widgets/network-test.png",
+      "collections/20261010-widgets/media/widgets/network-testnet4.png",
+      "collections/20261010-widgets/media/widgets/network-signet.png",
+      "collections/20261010-widgets/media/widgets/network-regtest.png"
+    ],
+    "checks": [
+      "network-main",
+      "network-test",
+      "network-testnet4",
+      "network-signet",
+      "network-regtest"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F31.S03",
+    "intent": "Adapt application visuals to the desktop appearance.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": false,
+    "captures": [],
+    "checks": [],
+    "remainingGap": "One Linux appearance was used. No controlled desktop-theme change was captured."
+  },
+  {
+    "id": "F31.S04",
+    "intent": "Prevent macOS background throttling from slowing initial synchronization and reindexing.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br><strong>Limit:</strong> macOS App Nap behavior cannot be verified in this Linux run.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. Limit: macOS App Nap behavior cannot be verified in this Linux run. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": false,
+    "captures": [],
+    "checks": [],
+    "remainingGap": "This pass ran on Linux. macOS background-throttling behavior requires macOS runtime measurement."
+  },
+  {
+    "id": "F31.S05",
+    "intent": "Use external block explorers to inspect transactions.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/external-explorer-menu.png",
+      "collections/20261010-widgets/media/widgets/external-explorer-dispatch.png"
+    ],
+    "checks": [
+      "external-explorer-transaction-link"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F32.S03",
+    "intent": "Apply the privacy preference across loaded wallets.",
+    "before": {
+      "status": "source",
+      "label": "Source only",
+      "originalStatus": "Source only",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/privacy-watchonly-wallet.png"
+    ],
+    "checks": [
+      "privacy-across-wallets"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F32.S04",
+    "intent": "Remember the privacy preference between sessions.",
+    "before": {
+      "status": "source",
+      "label": "Source only",
+      "originalStatus": "Source only",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/window-and-privacy-after-restart.png"
+    ],
+    "checks": [
+      "privacy-restored"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F34.S01",
+    "intent": "Rediscover wallet activity from blockchain history.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/rescan-progress.png"
+    ],
+    "checks": [
+      "wallet-rescan-completed"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F34.S02",
+    "intent": "Monitor rescan progress.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/rescan-progress.png"
+    ],
+    "checks": [
+      "wallet-rescan-completed"
+    ],
+    "remainingGap": null
+  },
+  {
+    "id": "F34.S03",
+    "intent": "Request cancellation of an ongoing wallet rescan.",
+    "before": {
+      "status": "source",
+      "label": "Related tests only",
+      "originalStatus": "Related automated suite",
+      "html": "No targeted runtime assertion collected for this exact criterion.<br>No matching screenshot collected.",
+      "text": "No targeted runtime assertion collected for this exact criterion. No matching screenshot collected.",
+      "captures": []
+    },
+    "captured": true,
+    "captures": [
+      "collections/20261010-widgets/media/widgets/rescan-cancel-available.png"
+    ],
+    "checks": [
+      "wallet-rescan-cancelled"
+    ],
+    "remainingGap": null
+  }
+]

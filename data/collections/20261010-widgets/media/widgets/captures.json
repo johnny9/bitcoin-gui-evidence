@@ -1,0 +1,649 @@
+[
+  {
+    "path": "media/widgets/sync-overlay-wallet-outdated.png",
+    "caption": "sync-overlay-wallet-outdated",
+    "features": [
+      "F07.S04",
+      "F30.S07"
+    ],
+    "note": "Synchronization overlay explains that wallet information can be out of date. Synthetic regtest at genesis; not a mainnet IBD run.",
+    "utc": "2026-10-10T15:23:40.370185+00:00",
+    "sha256": "7772ea20fe8998e5c51ee1c89d276dd12d28a44bc01b7703ba3af817b801b42c"
+  },
+  {
+    "path": "media/widgets/sync-background-wallet-access.png",
+    "caption": "sync-background-wallet-access",
+    "features": [
+      "F07.S04",
+      "F30.S07"
+    ],
+    "note": "Wallet remains accessible while the status bar reports incomplete synchronization.",
+    "utc": "2026-10-10T15:23:41.107925+00:00",
+    "sha256": "c041cde2ab99571c0d83e9bc183dec09d0cf380054bfd4b35c9c4c64172960da"
+  },
+  {
+    "path": "media/widgets/close-wallet-confirmation.png",
+    "caption": "close-wallet-confirmation",
+    "features": [
+      "F02.S04",
+      "F30.S04"
+    ],
+    "note": "Closing the selected wallet requires confirmation.",
+    "utc": "2026-10-10T15:24:00.870125+00:00",
+    "sha256": "d51b687392b16516f48ba61aafa318cb9c9f413c54c335495b10ee1ec1cc624f"
+  },
+  {
+    "path": "media/widgets/open-wallet-menu.png",
+    "caption": "File menu offers opening an existing wallet.",
+    "features": [
+      "F02.S01"
+    ],
+    "note": "Original X11 desktop capture.",
+    "utc": "2026-10-10T15:24:01.727648+00:00",
+    "sha256": "0b94ddb2b2cd3bd2fd5c3698877266ff797ac3ed1457e844ea723eaca7c1e229"
+  },
+  {
+    "path": "media/widgets/open-existing-wallet.png",
+    "caption": "Open Wallet lists the closed Recipient wallet for reopening.",
+    "features": [
+      "F02.S01"
+    ],
+    "note": "Original X11 desktop capture.",
+    "utc": "2026-10-10T15:24:24.491659+00:00",
+    "sha256": "f1fcfd78136591d6f2190a265467972437a1c6779c3cbf6eea2b94e3d05e2e88"
+  },
+  {
+    "path": "media/widgets/reopened-wallet.png",
+    "caption": "reopened-wallet",
+    "features": [
+      "F02.S01"
+    ],
+    "note": "Previously closed wallet is open again and active.",
+    "utc": "2026-10-10T15:24:25.670884+00:00",
+    "sha256": "9c7ac0219ffd619db31ff1e2cc9d3b1f559e3ee4efd433cb53cfd8ef512ffc60"
+  },
+  {
+    "path": "media/widgets/watchonly-receiving-address.png",
+    "caption": "watchonly-receiving-address",
+    "features": [
+      "F08.S09"
+    ],
+    "note": "Receiving address generated from a configured wallet with private keys disabled.",
+    "utc": "2026-10-10T15:24:27.157539+00:00",
+    "sha256": "7729029817f0fef279d3f13185999f90540b70588773ef30638de0ed85ba065c"
+  },
+  {
+    "path": "media/widgets/watchonly-prepare-payment.png",
+    "caption": "watchonly-prepare-payment",
+    "features": [
+      "F09.S08",
+      "F13.S02"
+    ],
+    "note": "Configured watch-only wallet prepares a payment without spending keys.",
+    "utc": "2026-10-10T15:28:09.581805+00:00",
+    "sha256": "a5b1082a3990c69f249c8098a2251d4d34e78167c23c84b3db91a42233e79752"
+  },
+  {
+    "path": "media/widgets/unsigned-psbt-clipboard.png",
+    "caption": "unsigned-psbt-clipboard",
+    "features": [
+      "F13.S05"
+    ],
+    "note": "The unsigned transaction has been copied to the clipboard and can be saved.",
+    "utc": "2026-10-10T15:28:13.419122+00:00",
+    "sha256": "8c8ff007065ccd625b7bd0ac89959b3aba058e9ff4c644e0204733a7323ed324"
+  },
+  {
+    "path": "media/widgets/unsigned-psbt-save.png",
+    "caption": "unsigned-psbt-save",
+    "features": [
+      "F13.S05"
+    ],
+    "note": "Save the unsigned PSBT for offline signing.",
+    "utc": "2026-10-10T15:28:14.206761+00:00",
+    "sha256": "059262cd44866a8ea946091bb5625fe26d82f3c7fb91fd6f73274494ca77f15c"
+  },
+  {
+    "path": "media/widgets/signed-psbt-export.png",
+    "caption": "signed-psbt-export",
+    "features": [
+      "F09.S07",
+      "F14.S03",
+      "F14.S06"
+    ],
+    "note": "Matching local wallet signs the imported single-signature PSBT and copies it for further transfer.",
+    "utc": "2026-10-10T15:28:16.020281+00:00",
+    "sha256": "e9ff22bdbc5269f016f04ef775ef6f4d52d06f5dcba3c9e589ea73fa8a0cf1f6"
+  },
+  {
+    "path": "media/widgets/recent-transaction-in-history.png",
+    "caption": "recent-transaction-in-history",
+    "features": [
+      "F07.S03"
+    ],
+    "note": "A recent overview transaction is selected in the full transaction history.",
+    "utc": "2026-10-10T15:28:17.864187+00:00",
+    "sha256": "8ae7f3cd2e78f65970f3cc80e36ae5c18c83131f08c235339359c7330d05b161"
+  },
+  {
+    "path": "media/widgets/keyboard-navigation-overview.png",
+    "caption": "keyboard-navigation-overview",
+    "features": [
+      "F28.S05"
+    ],
+    "note": "Overview reached through the application keyboard shortcut.",
+    "utc": "2026-10-10T15:28:18.432338+00:00",
+    "sha256": "52d486567431c9e257fa881978e66e6c37e3eaab1f38934c4c3381769e3992a6"
+  },
+  {
+    "path": "media/widgets/console-import-descriptors-help.png",
+    "caption": "console-import-descriptors-help",
+    "features": [
+      "F22.S09"
+    ],
+    "note": "The in-app RPC console documents descriptor import, including rescanning. Visual evidence for RPC access and help; not proof of every advanced operation.",
+    "utc": "2026-10-10T15:28:20.392059+00:00",
+    "sha256": "1e91366724504151468fe2465aee9d7a166fe3d41a5a3e8bddd2d7fe24dd0d3b"
+  },
+  {
+    "path": "media/widgets/diagnostics-alongside-wallet.png",
+    "caption": "diagnostics-alongside-wallet",
+    "features": [
+      "F26.S04"
+    ],
+    "note": "Node diagnostics can remain open alongside the wallet.",
+    "utc": "2026-10-10T15:28:21.450398+00:00",
+    "sha256": "da7c57bacce410bbdd3113a8d0347b88ec1b1fb7bee24dbcc8a31b2b6e0c7886"
+  },
+  {
+    "path": "media/widgets/diagnostics-and-wallet-windows.png",
+    "caption": "Independent node and wallet windows are open together.",
+    "features": [
+      "F26.S04"
+    ],
+    "note": "Original X11 desktop capture.",
+    "utc": "2026-10-10T15:28:21.827985+00:00",
+    "sha256": "2be293b99681c6c832e47a4a522f732d9eb391bf37c251f4dea2cd00384926b9"
+  },
+  {
+    "path": "media/widgets/restore-migrate-legacy-confirmation.png",
+    "caption": "restore-migrate-legacy-confirmation",
+    "features": [
+      "F03.S04",
+      "F04.S01",
+      "F04.S02",
+      "F04.S03"
+    ],
+    "note": "Legacy backup restore explains descriptor conversion, the automatic backup, and separate watch-only wallets.",
+    "utc": "2026-10-10T15:29:32.799962+00:00",
+    "sha256": "546cd7afe669154fdc4e33466fbbb2c62b2edf4d5e0a1aa1a04256d4dc5457f1"
+  },
+  {
+    "path": "media/widgets/legacy-migration-success.png",
+    "caption": "legacy-migration-success",
+    "features": [
+      "F03.S04",
+      "F04.S01",
+      "F04.S02",
+      "F04.S03",
+      "F04.S04"
+    ],
+    "note": "Migration reports the converted wallet and the separated watch-only wallet.",
+    "utc": "2026-10-10T15:30:14.230550+00:00",
+    "sha256": "d13e66f6f53b9c26f2241b4a70422e99274354ebfde0b1814e0f043ac9417fcb"
+  },
+  {
+    "path": "media/widgets/migrated-watchonly-labels.png",
+    "caption": "migrated-watchonly-labels",
+    "features": [
+      "F04.S03"
+    ],
+    "note": "The migrated watch-only wallet retains its labeled receiving address.",
+    "utc": "2026-10-10T15:30:15.605672+00:00",
+    "sha256": "192880c952e6e95f0cb91eae56f9bb00091235fe5885bea5fe4497896e14347d"
+  },
+  {
+    "path": "media/widgets/migrate-without-opening.png",
+    "caption": "migrate-without-opening",
+    "features": [
+      "F04.S04"
+    ],
+    "note": "Migration can finish without immediately loading the converted wallet.",
+    "utc": "2026-10-10T15:30:17.274425+00:00",
+    "sha256": "e169da1b424236c36fadbb30e60d7b219bc79a070e785acb63e4a95630e2c9d1"
+  },
+  {
+    "path": "media/widgets/deferred-migration-success.png",
+    "caption": "deferred-migration-success",
+    "features": [
+      "F04.S04"
+    ],
+    "note": "Migration completed with loading disabled.",
+    "utc": "2026-10-10T15:30:18.040374+00:00",
+    "sha256": "479b8dee8489e762ba0756df853ef08f298786a4e15fe9f0cc5549f411448339"
+  },
+  {
+    "path": "media/widgets/deferred-wallet-opened.png",
+    "caption": "deferred-wallet-opened",
+    "features": [
+      "F04.S04"
+    ],
+    "note": "The previously deferred migrated wallet is now open.",
+    "utc": "2026-10-10T15:30:19.828205+00:00",
+    "sha256": "bd7389cd0997a167c8e36f63bf3684ab5fb6b4d88a96b15a0c65e801892fe6b3"
+  },
+  {
+    "path": "media/widgets/privacy-watchonly-wallet.png",
+    "caption": "privacy-watchonly-wallet",
+    "features": [
+      "F32.S03"
+    ],
+    "note": "Values remain masked after switching to another loaded wallet.",
+    "utc": "2026-10-10T15:30:21.943364+00:00",
+    "sha256": "895c7b135eca08d5a6a1545ae5eaff14e17e158aa6a25246d4d83f0b21b3313c"
+  },
+  {
+    "path": "media/widgets/window-position-before-restart.png",
+    "caption": "Window arranged before restarting to verify saved placement.",
+    "features": [
+      "F26.S01",
+      "F26.S02"
+    ],
+    "note": "Original X11 desktop capture.",
+    "utc": "2026-10-10T15:30:22.651640+00:00",
+    "sha256": "6486f0229328ef3646a2014bceb207641311afb368e79207c01dca27ca042f96"
+  },
+  {
+    "path": "media/widgets/initialization-progress.png",
+    "caption": "The real startup splash reports initialization progress.",
+    "features": [
+      "F27.S03"
+    ],
+    "note": "Original application frame captured during the live operation.",
+    "utc": "2026-10-10T15:36:16.057086+00:00",
+    "sha256": "bdd80615c63a2b2a786f0a299df53ee38b6f139ec19b38faf216d37a2de93733"
+  },
+  {
+    "path": "media/widgets/window-and-privacy-after-restart.png",
+    "caption": "Restored window placement and masked balances after restarting the application.",
+    "features": [
+      "F26.S02",
+      "F32.S04"
+    ],
+    "note": "Original X11 desktop capture.",
+    "utc": "2026-10-10T15:36:17.533204+00:00",
+    "sha256": "c8628f4484c27c4f6d23a7024b1a9bfff152b6f610054b6aee847bf0937779df"
+  },
+  {
+    "path": "media/widgets/watchonly-unsigned-review.png",
+    "caption": "watchonly-unsigned-review",
+    "features": [
+      "F09.S08",
+      "F13.S02",
+      "F13.S03"
+    ],
+    "note": "Watch-only single-signature transaction review offers unsigned creation after the review countdown.",
+    "utc": "2026-10-10T15:36:23.153443+00:00",
+    "sha256": "b7a2f7661121f6b400f24ee8438133385d5b21dac97d1237c9f59d2e4546aed4"
+  },
+  {
+    "path": "media/widgets/banned-range-context-menu.png",
+    "caption": "Selected banned network range offers Copy IP/Netmask.",
+    "features": [
+      "F21.S09"
+    ],
+    "note": "Original X11 desktop capture.",
+    "utc": "2026-10-10T15:36:28.723163+00:00",
+    "sha256": "45f3e61841f913419c4671ca254ee8d2cc5622e16d0c40f58636fdca953d710e"
+  },
+  {
+    "path": "media/widgets/banned-range-selected.png",
+    "caption": "banned-range-selected",
+    "features": [
+      "F21.S09"
+    ],
+    "note": "Selected banned range after copying its IP/netmask.",
+    "utc": "2026-10-10T15:36:29.521341+00:00",
+    "sha256": "8090dfa0c5678776395f70474ec62add62a5f0d22d8c8dce2e6d9554bcf7205a"
+  },
+  {
+    "path": "media/widgets/rescan-progress.png",
+    "caption": "Actual wallet rescan progress over a 15,000-block regtest history.",
+    "features": [
+      "F34.S01",
+      "F34.S02",
+      "F30.S05"
+    ],
+    "note": "Original application frame captured during the live operation.",
+    "utc": "2026-10-10T15:36:30.659279+00:00",
+    "sha256": "af13fc98f6768058833e54527b803a9ec19558ae57dbbb94e23bcd0e91d6f5b0"
+  },
+  {
+    "path": "media/widgets/rescan-cancel-available.png",
+    "caption": "The ongoing wallet rescan offers cancellation.",
+    "features": [
+      "F34.S03"
+    ],
+    "note": "Original application frame captured during the live operation.",
+    "utc": "2026-10-10T15:36:37.459423+00:00",
+    "sha256": "af13fc98f6768058833e54527b803a9ec19558ae57dbbb94e23bcd0e91d6f5b0"
+  },
+  {
+    "path": "media/widgets/external-payment-uri-received.png",
+    "caption": "external-payment-uri-received",
+    "features": [
+      "F10.S03",
+      "F31.S01"
+    ],
+    "note": "Payment URI launched from another process populates the running wallet send form. Linux process handoff; OS association and URI dragging are not covered.",
+    "utc": "2026-10-10T15:38:18.407568+00:00",
+    "sha256": "ca72edea55adff9c6adac46645ea2346f7f5f7f239b91454c453f8cd5af71058"
+  },
+  {
+    "path": "media/widgets/send-contextual-guidance.png",
+    "caption": "Hover guidance explains how subtracting fees changes the recipient amount.",
+    "features": [
+      "F29.S06"
+    ],
+    "note": "Original X11 desktop capture.",
+    "utc": "2026-10-10T15:38:20.057698+00:00",
+    "sha256": "ca9c025ea9ed4b7becbac588faebe990b363a9763365fea453a3cece532c2260"
+  },
+  {
+    "path": "media/widgets/qr-drag-delivered.png",
+    "caption": "QR image dragged from Bitcoin Core into an independent image-receiver test application.",
+    "features": [
+      "F08.S06"
+    ],
+    "note": "Original X11 desktop capture.",
+    "utc": "2026-10-10T15:38:50.083286+00:00",
+    "sha256": "0e568644f2645f7df77a7ce1fdf12050ea5c7a4c3c8753a0b63dfc68719bdbcc"
+  },
+  {
+    "path": "media/widgets/debug-log-opened.png",
+    "caption": "Bitcoin Core opens the actual debug log in the configured external document viewer.",
+    "features": [
+      "F22.S04"
+    ],
+    "note": "Original X11 desktop capture.",
+    "utc": "2026-10-10T15:40:49.341311+00:00",
+    "sha256": "2e2b16af81b3ecd549d5eb42b82a3253f19d8946f43a0e7af500515cd1dddd75"
+  },
+  {
+    "path": "media/widgets/advanced-configuration-prompt.png",
+    "caption": "advanced-configuration-prompt",
+    "features": [
+      "F23.S10"
+    ],
+    "note": "Configuration dialog explains that advanced file settings override GUI preferences.",
+    "utc": "2026-10-10T15:40:50.553121+00:00",
+    "sha256": "3e3f58e7de5564c9a952b0523d62d21c8d4c71fe73dd15348585d0f92341286e"
+  },
+  {
+    "path": "media/widgets/advanced-configuration-opened.png",
+    "caption": "Application configuration is opened through the desktop file association. The test viewer is read-only; editing is not exercised.",
+    "features": [
+      "F23.S10"
+    ],
+    "note": "Original X11 desktop capture.",
+    "utc": "2026-10-10T15:40:52.129956+00:00",
+    "sha256": "2e4eaa4204792fea2067d946fab5621db7098e697bc73375e1006d78926a44e3"
+  },
+  {
+    "path": "media/widgets/multisig-first-signature.png",
+    "caption": "multisig-first-signature",
+    "features": [
+      "F14.S03",
+      "F14.S05",
+      "F14.S06"
+    ],
+    "note": "First cosigner has signed; the PSBT still requires another signer.",
+    "utc": "2026-10-10T15:40:53.913376+00:00",
+    "sha256": "56beeac5bedab53eccd5906f86a88d318ce1c8d2f90a70e189bf5cdf105349ab"
+  },
+  {
+    "path": "media/widgets/multisig-second-signature.png",
+    "caption": "multisig-second-signature",
+    "features": [
+      "F14.S03",
+      "F14.S05"
+    ],
+    "note": "Second cosigner completes the 2-of-2 transaction; broadcast becomes available.",
+    "utc": "2026-10-10T15:40:55.626557+00:00",
+    "sha256": "1d282ce529acc5b28b060d673b26f87dde63826c579cb0507f866467597215d4"
+  },
+  {
+    "path": "media/widgets/close-all-wallets.png",
+    "caption": "close-all-wallets",
+    "features": [
+      "F02.S04"
+    ],
+    "note": "Close all loaded wallets while keeping the node running.",
+    "utc": "2026-10-10T15:40:57.730158+00:00",
+    "sha256": "ba7b0b422303fc8833ffcc13c67a3a6bbc9624ccf267a8674ed8e0a38f7572fc"
+  },
+  {
+    "path": "media/widgets/node-running-without-wallets.png",
+    "caption": "node-running-without-wallets",
+    "features": [
+      "F20.S06"
+    ],
+    "note": "Bitcoin Core remains running with no wallet open.",
+    "utc": "2026-10-10T15:40:58.483303+00:00",
+    "sha256": "56f6b821005ea352feb0929d930a4ed7b5d4d0858cceef36ab8ddb92c0dde2df"
+  },
+  {
+    "path": "media/widgets/wallet-free-psbt-review.png",
+    "caption": "wallet-free-psbt-review",
+    "features": [
+      "F14.S08"
+    ],
+    "note": "A fully signed transaction can be inspected with no wallet open.",
+    "utc": "2026-10-10T15:40:59.249553+00:00",
+    "sha256": "f412bfbae758b6ee15ece9fc06090e12797cd6459d59724834a54548e050d155"
+  },
+  {
+    "path": "media/widgets/wallet-free-psbt-broadcast.png",
+    "caption": "wallet-free-psbt-broadcast",
+    "features": [
+      "F14.S08"
+    ],
+    "note": "Successful transaction broadcast from the wallet-free PSBT dialog.",
+    "utc": "2026-10-10T15:40:59.966125+00:00",
+    "sha256": "e6c32505256092dc2951b31ecccf4f816104b1bb98097483aabac0b71957349b"
+  },
+  {
+    "path": "media/widgets/reset-preferences-backup.png",
+    "caption": "reset-preferences-backup",
+    "features": [
+      "F23.S12"
+    ],
+    "note": "Reset confirmation identifies the settings backup and required shutdown.",
+    "utc": "2026-10-10T15:41:01.180168+00:00",
+    "sha256": "8a47c74d250702a91595c08a6d90eabd1390f8a503fc77749a0e5d978b52fd77"
+  },
+  {
+    "path": "media/widgets/network-main.png",
+    "caption": "network-main",
+    "features": [
+      "F20.S07",
+      "F31.S02"
+    ],
+    "note": "Node information identifies main in an isolated offline startup. No public-chain download is claimed.",
+    "utc": "2026-10-10T15:41:54.925067+00:00",
+    "sha256": "231f35956df242b4913cd506aa805465550ddd40894f260aca2e3e800fc11ef5"
+  },
+  {
+    "path": "media/widgets/network-test.png",
+    "caption": "network-test",
+    "features": [
+      "F20.S07",
+      "F31.S02"
+    ],
+    "note": "Node information identifies test in an isolated offline startup. No public-chain download is claimed.",
+    "utc": "2026-10-10T15:41:56.577173+00:00",
+    "sha256": "d9062b908c9cb609d9963d3f91d63749048f460c2416196982ef8c50f3de7637"
+  },
+  {
+    "path": "media/widgets/network-testnet4.png",
+    "caption": "network-testnet4",
+    "features": [
+      "F20.S07",
+      "F31.S02"
+    ],
+    "note": "Node information identifies testnet4 in an isolated offline startup. No public-chain download is claimed.",
+    "utc": "2026-10-10T15:41:58.228855+00:00",
+    "sha256": "8b7bd80536343ae7edb24321cfbbf11c23f3615ac5ed59372d7efdb501c3374c"
+  },
+  {
+    "path": "media/widgets/network-signet.png",
+    "caption": "network-signet",
+    "features": [
+      "F20.S07",
+      "F31.S02"
+    ],
+    "note": "Node information identifies signet in an isolated offline startup. No public-chain download is claimed.",
+    "utc": "2026-10-10T15:41:59.933035+00:00",
+    "sha256": "7f0eca59ad5163736f4a798035dcd4a1220333e57841dbcdba94ce7e81337b72"
+  },
+  {
+    "path": "media/widgets/network-regtest.png",
+    "caption": "network-regtest",
+    "features": [
+      "F20.S07",
+      "F31.S02"
+    ],
+    "note": "Node information identifies regtest in an isolated offline startup. No public-chain download is claimed.",
+    "utc": "2026-10-10T15:42:01.584755+00:00",
+    "sha256": "98b7748551f28d55f38f7c39b767c1aeb4b49a4cf25595ba17fe331fb7da2026"
+  },
+  {
+    "path": "media/widgets/shutdown-progress.png",
+    "caption": "The real application shutdown window explains that shutdown is in progress.",
+    "features": [
+      "F27.S05",
+      "F27.S06"
+    ],
+    "note": "Original application frame captured during the live operation.",
+    "utc": "2026-10-10T15:42:01.795865+00:00",
+    "sha256": "d53574f024baef011a251abc011287526ba1732be92c8ed33379596902d51ca5"
+  },
+  {
+    "path": "media/widgets/choose-data-directory.png",
+    "caption": "First-run dialog offers the default or a custom data directory and explains disk space.",
+    "features": [
+      "F20.S01"
+    ],
+    "note": "Direct X11 window capture, without cropping or image edits.",
+    "utc": "2026-10-10T15:43:20.015672+00:00",
+    "sha256": "6ffdeb0dba702f7b93cf8f36a5a48a7b3d5444accd61eec2d1a5642205317569"
+  },
+  {
+    "path": "media/widgets/unreadable-settings-choices.png",
+    "caption": "Unreadable settings trigger a critical dialog with Reset and Abort in a session without a notification service.",
+    "features": [
+      "F27.S07",
+      "F30.S01",
+      "F30.S04",
+      "F25.S04"
+    ],
+    "note": "Direct X11 window capture, without cropping or image edits.",
+    "utc": "2026-10-10T15:43:21.554401+00:00",
+    "sha256": "a816c314723e359c07beb1e70e52e45bf4feb24c2e2c30d0dcf9a80ea62a8b60"
+  },
+  {
+    "path": "media/widgets/unreadable-settings-details.png",
+    "caption": "Expanded diagnostic details identify the settings parsing error.",
+    "features": [
+      "F27.S07",
+      "F30.S03"
+    ],
+    "note": "Direct X11 window capture, without cropping or image edits.",
+    "utc": "2026-10-10T15:43:21.992260+00:00",
+    "sha256": "1b62f7fa9db184d55172427e0c9bfbdc113bfbe7c770ffd4e28a2669cf75d917"
+  },
+  {
+    "path": "media/widgets/started-minimized.png",
+    "caption": "Application starts minimized with node RPC running; its native tray menu remains available.",
+    "features": [
+      "F27.S02"
+    ],
+    "note": "Original X11 desktop capture.",
+    "utc": "2026-10-10T15:46:08.190738+00:00",
+    "sha256": "658398a0873e702006d66d385ffb4662d90f56c424446e765969ec0e54383a7d"
+  },
+  {
+    "path": "media/widgets/preferences-restored-defaults.png",
+    "caption": "preferences-restored-defaults",
+    "features": [
+      "F23.S12"
+    ],
+    "note": "After reset and restart, advanced controls return to their default unchecked state.",
+    "utc": "2026-10-10T15:46:09.309815+00:00",
+    "sha256": "4dfee8f70b04d1a10f9917b46c428b31a623372991a3bbb1626fac550a392ef6"
+  },
+  {
+    "path": "media/widgets/passphrase-mismatch-error.png",
+    "caption": "passphrase-mismatch-error",
+    "features": [
+      "F06.S07",
+      "F30.S01"
+    ],
+    "note": "The application rejects mismatching repeated passphrases.",
+    "utc": "2026-10-10T15:46:11.455943+00:00",
+    "sha256": "d587f60e0c07fd0b0a90d557933f19f8660f668942076eb6b6980a7c284960ab"
+  },
+  {
+    "path": "media/widgets/unknown-change-confirmation.png",
+    "caption": "unknown-change-confirmation",
+    "features": [
+      "F12.S09",
+      "F30.S04"
+    ],
+    "note": "A destination outside this wallet triggers an explicit warning before using it for change.",
+    "utc": "2026-10-10T15:46:14.590891+00:00",
+    "sha256": "da4013603408d7bb1776f50a21ff64c66b30a9b3f6acfbd5380c225952cdd615"
+  },
+  {
+    "path": "media/widgets/external-explorer-menu.png",
+    "caption": "Transaction context menu includes the configured external explorer link. The endpoint is a recording test fixture.",
+    "features": [
+      "F16.S09",
+      "F31.S05"
+    ],
+    "note": "Original X11 desktop capture.",
+    "utc": "2026-10-10T15:46:18.330886+00:00",
+    "sha256": "a3790fb9bb0b17969e6023787999ec2284a537b6c266a0c0f26530c86a89d507"
+  },
+  {
+    "path": "media/widgets/external-explorer-dispatch.png",
+    "caption": "The external URL handler receives the selected transaction ID. This recording fixture does not contact a public block explorer.",
+    "features": [
+      "F16.S09",
+      "F31.S05"
+    ],
+    "note": "Original X11 desktop capture.",
+    "utc": "2026-10-10T15:47:33.771114+00:00",
+    "sha256": "570222369b3f86e99977c0159cae7155ba045f6b079a9186d3e481a4e11c3616"
+  },
+  {
+    "path": "media/widgets/watchonly-monitor-another-node.png",
+    "caption": "watchonly-monitor-another-node",
+    "features": [
+      "F05.S03"
+    ],
+    "note": "GUI displays the watch-only wallet restored from its export on a second node. Restore preparation used RPC.",
+    "utc": "2026-10-10T15:52:22.242126+00:00",
+    "sha256": "9c14605f949de5c756d3222c45bb55456c35d54828d12bab7bca6a9eb22ca99b"
+  },
+  {
+    "path": "media/widgets/downloaded-validated-regtest-chain.png",
+    "caption": "downloaded-validated-regtest-chain",
+    "features": [
+      "F20.S04"
+    ],
+    "note": "Information from the second node after its recorded download and validation of 15,120 local regtest blocks. GUI was restarted after the live-sync capture timed out.",
+    "utc": "2026-10-10T15:52:23.268111+00:00",
+    "sha256": "df5a41263cf517a756dd71b08997871fdc36c8b3ef266574f8800a9eca2258ef"
+  }
+]

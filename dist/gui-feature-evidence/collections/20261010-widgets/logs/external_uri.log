@@ -1,0 +1,1 @@
+{"id": "running-uri-handoff", "features": ["F10.S03", "F31.S01"], "description": "A second process passes its payment URI to the already-running GUI.", "actual": [0, "bcrt1q5v297dxhnxxea85cf6kzrk9yq8mxu634pc2m7g", 12500000], "expected": [0, "bcrt1q5v297dxhnxxea85cf6kzrk9yq8mxu634pc2m7g", 12500000], "status": "passed", "utc": "2026-10-10T15:38:17.860481+00:00"}

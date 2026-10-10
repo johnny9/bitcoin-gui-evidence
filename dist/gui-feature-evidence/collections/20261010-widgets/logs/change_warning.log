@@ -1,0 +1,20 @@
+{"id": "unknown-change-confirmation", "features": ["F12.S09"], "description": "Application requires confirmation for a change destination outside the selected wallet.", "actual": true, "expected": true, "status": "passed", "utc": "2026-10-10T15:26:18.831892+00:00"}
+Traceback (most recent call last):
+  File "/work/reruns/20261010-widgets/scripts/capture_widgets.py", line 197, in <module>
+    try:globals()[scenario]()
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/work/reruns/20261010-widgets/scripts/capture_widgets.py", line 192, in change_warning
+    if gui.get('checkBoxCoinControlChange','checked'):gui.click(name='checkBoxCoinControlChange')
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/reruns/20261010-widgets/scripts/widgets_driver.py", line 63, in get
+    def get(self,name,prop): return self.send('get',id=self.find(name=name)['id'],property=prop)['value']
+                                                       ^^^^^^^^^^^^^^^^^^^^
+  File "/work/reruns/20261010-widgets/scripts/widgets_driver.py", line 35, in find
+    for obj in self.tree(all=not visible):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/reruns/20261010-widgets/scripts/widgets_driver.py", line 31, in tree
+    return self.send('tree', all=all)['objects']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/reruns/20261010-widgets/scripts/widgets_driver.py", line 22, in send
+    self.socket.sendall((json.dumps(request) + '\n').encode())
+BrokenPipeError: [Errno 32] Broken pipe

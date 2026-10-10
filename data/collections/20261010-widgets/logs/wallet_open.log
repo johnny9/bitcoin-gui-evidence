@@ -1,0 +1,1 @@
+{"id": "reopen-existing-wallet", "features": ["F02.S01"], "description": "The GUI reopens the previously closed wallet.", "actual": true, "expected": true, "status": "passed", "utc": "2026-10-10T15:24:25.126115+00:00"}

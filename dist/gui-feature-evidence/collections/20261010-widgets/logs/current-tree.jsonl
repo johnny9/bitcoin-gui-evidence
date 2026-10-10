@@ -1,0 +1,237 @@
+{"checked": false, "class": "QPushButton", "enabled": false, "geometry": [190, 933, 60, 54], "id": 1, "name": "warningIcon", "statusTip": "", "text": "", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"class": "WalletFrame", "enabled": true, "geometry": [120, 148, 1100, 695], "id": 3, "name": "", "statusTip": "", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"checked": false, "class": "QAction", "id": 1145, "name": "", "statusTip": "", "text": "", "toolTip": ""}
+{"checked": false, "class": "QAction", "id": 1146, "name": "", "statusTip": "", "text": "&Copy address", "toolTip": "Copy address"}
+{"checked": false, "class": "QAction", "id": 1147, "name": "", "statusTip": "", "text": "Copy &label", "toolTip": "Copy label"}
+{"checked": false, "class": "QAction", "id": 1148, "name": "", "statusTip": "", "text": "Copy &amount", "toolTip": "Copy amount"}
+{"checked": false, "class": "QAction", "id": 1149, "name": "", "statusTip": "", "text": "Copy transaction &ID", "toolTip": "Copy transaction ID"}
+{"checked": false, "class": "QAction", "id": 1150, "name": "", "statusTip": "", "text": "Copy &raw transaction", "toolTip": "Copy raw transaction"}
+{"checked": false, "class": "QAction", "id": 1151, "name": "", "statusTip": "", "text": "Copy full transaction &details", "toolTip": "Copy full transaction details"}
+{"checked": false, "class": "QAction", "id": 1152, "name": "", "statusTip": "", "text": "&Show transaction details", "toolTip": "Show transaction details"}
+{"checked": false, "class": "QAction", "id": 1153, "name": "", "statusTip": "", "text": "", "toolTip": ""}
+{"checked": false, "class": "QAction", "id": 1154, "name": "bumpFeeAction", "statusTip": "", "text": "Increase transaction &fee", "toolTip": "Increase transaction fee"}
+{"checked": false, "class": "QAction", "id": 1155, "name": "", "statusTip": "", "text": "A&bandon transaction", "toolTip": "Abandon transaction"}
+{"checked": false, "class": "QAction", "id": 1156, "name": "", "statusTip": "", "text": "&Edit address label", "toolTip": "Edit address label"}
+{"checked": false, "class": "QAction", "id": 1157, "name": "", "statusTip": "", "text": "", "toolTip": ""}
+{"checked": false, "class": "QAction", "id": 1158, "name": "", "statusTip": "", "text": "&Copy Address", "toolTip": "Copy Address"}
+{"checked": false, "class": "QAction", "id": 1159, "name": "", "statusTip": "", "text": "Copy &Label", "toolTip": "Copy Label"}
+{"checked": false, "class": "QAction", "id": 1160, "name": "", "statusTip": "", "text": "&Edit", "toolTip": "Edit"}
+{"checked": false, "class": "QAction", "id": 1161, "name": "", "statusTip": "", "text": "&Delete", "toolTip": "Delete"}
+{"checked": false, "class": "QAction", "id": 1162, "name": "", "statusTip": "", "text": "", "toolTip": ""}
+{"checked": false, "class": "QAction", "id": 1163, "name": "", "statusTip": "", "text": "&Copy Address", "toolTip": "Copy Address"}
+{"checked": false, "class": "QAction", "id": 1164, "name": "", "statusTip": "", "text": "Copy &Label", "toolTip": "Copy Label"}
+{"checked": false, "class": "QAction", "id": 1165, "name": "", "statusTip": "", "text": "&Edit", "toolTip": "Edit"}
+{"checked": false, "class": "QAction", "id": 1139, "name": "", "statusTip": "", "text": "", "toolTip": ""}
+{"checked": false, "class": "QAction", "id": 1140, "name": "", "statusTip": "", "text": "Copy &URI", "toolTip": "Copy URI"}
+{"checked": false, "class": "QAction", "id": 1141, "name": "", "statusTip": "", "text": "&Copy address", "toolTip": "Copy address"}
+{"checked": false, "class": "QAction", "id": 1142, "name": "", "statusTip": "", "text": "Copy &label", "toolTip": "Copy label"}
+{"checked": false, "class": "QAction", "id": 1143, "name": "", "statusTip": "", "text": "Copy &message", "toolTip": "Copy message"}
+{"checked": false, "class": "QAction", "id": 1144, "name": "", "statusTip": "", "text": "Copy &amount", "toolTip": "Copy amount"}
+{"checked": false, "class": "QAction", "id": 1133, "name": "", "statusTip": "", "text": "Copy quantity", "toolTip": "Copy quantity"}
+{"checked": false, "class": "QAction", "id": 1134, "name": "", "statusTip": "", "text": "Copy amount", "toolTip": "Copy amount"}
+{"checked": false, "class": "QAction", "id": 1135, "name": "", "statusTip": "", "text": "Copy fee", "toolTip": "Copy fee"}
+{"checked": false, "class": "QAction", "id": 1136, "name": "", "statusTip": "", "text": "Copy after fee", "toolTip": "Copy after fee"}
+{"checked": false, "class": "QAction", "id": 1137, "name": "", "statusTip": "", "text": "Copy bytes", "toolTip": "Copy bytes"}
+{"checked": false, "class": "QAction", "id": 1138, "name": "", "statusTip": "", "text": "Copy change", "toolTip": "Copy change"}
+{"checked": false, "class": "QAction", "id": 16, "name": "", "statusTip": "", "text": "", "toolTip": ""}
+{"checked": false, "class": "QAction", "id": 17, "name": "", "statusTip": "", "text": "&Copy address", "toolTip": "Copy address"}
+{"checked": false, "class": "QAction", "id": 18, "name": "", "statusTip": "", "text": "Copy &label", "toolTip": "Copy label"}
+{"checked": false, "class": "QAction", "id": 19, "name": "", "statusTip": "", "text": "Copy &amount", "toolTip": "Copy amount"}
+{"checked": false, "class": "QAction", "id": 20, "name": "", "statusTip": "", "text": "Copy transaction &ID", "toolTip": "Copy transaction ID"}
+{"checked": false, "class": "QAction", "id": 21, "name": "", "statusTip": "", "text": "Copy &raw transaction", "toolTip": "Copy raw transaction"}
+{"checked": false, "class": "QAction", "id": 22, "name": "", "statusTip": "", "text": "Copy full transaction &details", "toolTip": "Copy full transaction details"}
+{"checked": false, "class": "QAction", "id": 23, "name": "", "statusTip": "", "text": "&Show transaction details", "toolTip": "Show transaction details"}
+{"checked": false, "class": "QAction", "id": 24, "name": "", "statusTip": "", "text": "", "toolTip": ""}
+{"checked": false, "class": "QAction", "id": 25, "name": "bumpFeeAction", "statusTip": "", "text": "Increase transaction &fee", "toolTip": "Increase transaction fee"}
+{"checked": false, "class": "QAction", "id": 26, "name": "", "statusTip": "", "text": "A&bandon transaction", "toolTip": "Abandon transaction"}
+{"checked": false, "class": "QAction", "id": 27, "name": "", "statusTip": "", "text": "&Edit address label", "toolTip": "Edit address label"}
+{"checked": false, "class": "QAction", "id": 28, "name": "", "statusTip": "", "text": "", "toolTip": ""}
+{"checked": false, "class": "QAction", "id": 29, "name": "", "statusTip": "", "text": "&Copy Address", "toolTip": "Copy Address"}
+{"checked": false, "class": "QAction", "id": 30, "name": "", "statusTip": "", "text": "Copy &Label", "toolTip": "Copy Label"}
+{"checked": false, "class": "QAction", "id": 31, "name": "", "statusTip": "", "text": "&Edit", "toolTip": "Edit"}
+{"checked": false, "class": "QAction", "id": 32, "name": "", "statusTip": "", "text": "&Delete", "toolTip": "Delete"}
+{"checked": false, "class": "QAction", "id": 33, "name": "", "statusTip": "", "text": "", "toolTip": ""}
+{"checked": false, "class": "QAction", "id": 34, "name": "", "statusTip": "", "text": "&Copy Address", "toolTip": "Copy Address"}
+{"checked": false, "class": "QAction", "id": 35, "name": "", "statusTip": "", "text": "Copy &Label", "toolTip": "Copy Label"}
+{"checked": false, "class": "QAction", "id": 36, "name": "", "statusTip": "", "text": "&Edit", "toolTip": "Edit"}
+{"checked": false, "class": "QAction", "id": 10, "name": "", "statusTip": "", "text": "", "toolTip": ""}
+{"checked": false, "class": "QAction", "id": 11, "name": "", "statusTip": "", "text": "Copy &URI", "toolTip": "Copy URI"}
+{"checked": false, "class": "QAction", "id": 12, "name": "", "statusTip": "", "text": "&Copy address", "toolTip": "Copy address"}
+{"checked": false, "class": "QAction", "id": 13, "name": "", "statusTip": "", "text": "Copy &label", "toolTip": "Copy label"}
+{"checked": false, "class": "QAction", "id": 14, "name": "", "statusTip": "", "text": "Copy &message", "toolTip": "Copy message"}
+{"checked": false, "class": "QAction", "id": 15, "name": "", "statusTip": "", "text": "Copy &amount", "toolTip": "Copy amount"}
+{"checked": false, "class": "QAction", "id": 4, "name": "", "statusTip": "", "text": "Copy quantity", "toolTip": "Copy quantity"}
+{"checked": false, "class": "QAction", "id": 5, "name": "", "statusTip": "", "text": "Copy amount", "toolTip": "Copy amount"}
+{"checked": false, "class": "QAction", "id": 6, "name": "", "statusTip": "", "text": "Copy fee", "toolTip": "Copy fee"}
+{"checked": false, "class": "QAction", "id": 7, "name": "", "statusTip": "", "text": "Copy after fee", "toolTip": "Copy after fee"}
+{"checked": false, "class": "QAction", "id": 8, "name": "", "statusTip": "", "text": "Copy bytes", "toolTip": "Copy bytes"}
+{"checked": false, "class": "QAction", "id": 9, "name": "", "statusTip": "", "text": "Copy change", "toolTip": "Copy change"}
+{"checked": false, "class": "QAction", "id": 82, "name": "", "statusTip": "", "text": "", "toolTip": ""}
+{"checked": false, "class": "QAction", "id": 83, "name": "", "statusTip": "", "text": "&Copy address", "toolTip": "Copy address"}
+{"checked": false, "class": "QAction", "id": 84, "name": "", "statusTip": "", "text": "Copy &label", "toolTip": "Copy label"}
+{"checked": false, "class": "QAction", "id": 85, "name": "", "statusTip": "", "text": "Copy &amount", "toolTip": "Copy amount"}
+{"checked": false, "class": "QAction", "id": 86, "name": "", "statusTip": "", "text": "Copy transaction &ID", "toolTip": "Copy transaction ID"}
+{"checked": false, "class": "QAction", "id": 87, "name": "", "statusTip": "", "text": "Copy &raw transaction", "toolTip": "Copy raw transaction"}
+{"checked": false, "class": "QAction", "id": 88, "name": "", "statusTip": "", "text": "Copy full transaction &details", "toolTip": "Copy full transaction details"}
+{"checked": false, "class": "QAction", "id": 89, "name": "", "statusTip": "", "text": "&Show transaction details", "toolTip": "Show transaction details"}
+{"checked": false, "class": "QAction", "id": 90, "name": "", "statusTip": "", "text": "", "toolTip": ""}
+{"checked": false, "class": "QAction", "id": 91, "name": "bumpFeeAction", "statusTip": "", "text": "Increase transaction &fee", "toolTip": "Increase transaction fee"}
+{"checked": false, "class": "QAction", "id": 92, "name": "", "statusTip": "", "text": "A&bandon transaction", "toolTip": "Abandon transaction"}
+{"checked": false, "class": "QAction", "id": 93, "name": "", "statusTip": "", "text": "&Edit address label", "toolTip": "Edit address label"}
+{"checked": false, "class": "QAction", "id": 94, "name": "", "statusTip": "", "text": "", "toolTip": ""}
+{"checked": false, "class": "QAction", "id": 95, "name": "", "statusTip": "", "text": "&Copy Address", "toolTip": "Copy Address"}
+{"checked": false, "class": "QAction", "id": 96, "name": "", "statusTip": "", "text": "Copy &Label", "toolTip": "Copy Label"}
+{"checked": false, "class": "QAction", "id": 97, "name": "", "statusTip": "", "text": "&Edit", "toolTip": "Edit"}
+{"checked": false, "class": "QAction", "id": 98, "name": "", "statusTip": "", "text": "&Delete", "toolTip": "Delete"}
+{"checked": false, "class": "QAction", "id": 99, "name": "", "statusTip": "", "text": "", "toolTip": ""}
+{"checked": false, "class": "QAction", "id": 100, "name": "", "statusTip": "", "text": "&Copy Address", "toolTip": "Copy Address"}
+{"checked": false, "class": "QAction", "id": 101, "name": "", "statusTip": "", "text": "Copy &Label", "toolTip": "Copy Label"}
+{"checked": false, "class": "QAction", "id": 102, "name": "", "statusTip": "", "text": "&Edit", "toolTip": "Edit"}
+{"checked": false, "class": "QAction", "id": 76, "name": "", "statusTip": "", "text": "", "toolTip": ""}
+{"checked": false, "class": "QAction", "id": 77, "name": "", "statusTip": "", "text": "Copy &URI", "toolTip": "Copy URI"}
+{"checked": false, "class": "QAction", "id": 78, "name": "", "statusTip": "", "text": "&Copy address", "toolTip": "Copy address"}
+{"checked": false, "class": "QAction", "id": 79, "name": "", "statusTip": "", "text": "Copy &label", "toolTip": "Copy label"}
+{"checked": false, "class": "QAction", "id": 80, "name": "", "statusTip": "", "text": "Copy &message", "toolTip": "Copy message"}
+{"checked": false, "class": "QAction", "id": 81, "name": "", "statusTip": "", "text": "Copy &amount", "toolTip": "Copy amount"}
+{"checked": false, "class": "QAction", "id": 70, "name": "", "statusTip": "", "text": "Copy quantity", "toolTip": "Copy quantity"}
+{"checked": false, "class": "QAction", "id": 71, "name": "", "statusTip": "", "text": "Copy amount", "toolTip": "Copy amount"}
+{"checked": false, "class": "QAction", "id": 72, "name": "", "statusTip": "", "text": "Copy fee", "toolTip": "Copy fee"}
+{"checked": false, "class": "QAction", "id": 73, "name": "", "statusTip": "", "text": "Copy after fee", "toolTip": "Copy after fee"}
+{"checked": false, "class": "QAction", "id": 74, "name": "", "statusTip": "", "text": "Copy bytes", "toolTip": "Copy bytes"}
+{"checked": false, "class": "QAction", "id": 75, "name": "", "statusTip": "", "text": "Copy change", "toolTip": "Copy change"}
+{"class": "GUIUtil::ClickableLabel", "enabled": true, "geometry": [1182, 846, 16, 22], "id": 103, "name": "", "statusTip": "", "text": "", "title": "", "toolTip": "<nobr>0 active connections to Bitcoin network.<br>Click for more actions.</nobr>", "visible": true, "window": 2}
+{"class": "QLabel", "enabled": true, "geometry": [1096, 816, 115, 14], "id": 256, "name": "labelBalance", "statusTip": "", "text": "648.99999718 BTC", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"checked": false, "class": "QToolButton", "enabled": true, "geometry": [124, 113, 101, 31], "id": 105, "name": "", "statusTip": "Show general overview of wallet", "text": "Overview", "title": "", "toolTip": "Show general overview of wallet", "visible": true, "window": 2}
+{"class": "QLabel", "enabled": true, "geometry": [140, 168, 1070, 14], "id": 269, "name": "labelCoinControlFeatures", "statusTip": "", "text": "Coin Control Features", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"class": "QLabel", "enabled": true, "geometry": [190, 1402, 184, 14], "id": 108, "name": "labelProgressIncrease", "statusTip": "", "text": "Progress increase per hour", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"class": "QLabel", "enabled": true, "geometry": [139, 281, 52, 29], "id": 290, "name": "payToLabel", "statusTip": "", "text": "Pay &To:", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"class": "QLineEdit", "enabled": true, "geometry": [203, 318, 998, 22], "id": 315, "name": "addAsLabel", "statusTip": "", "text": "", "title": "", "toolTip": "Enter a label for this address to add it to the list of used addresses", "visible": true, "window": 2}
+{"class": "QLabel", "enabled": true, "geometry": [140, 780, 112, 14], "id": 324, "name": "labelFeeHeadline", "statusTip": "", "text": "Transaction Fee:", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"class": "QMenuBar", "enabled": true, "geometry": [120, 90, 1100, 19], "id": 110, "name": "", "statusTip": "", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"checked": false, "class": "QAction", "id": 111, "name": "", "statusTip": "", "text": "&File", "toolTip": "File"}
+{"checked": false, "class": "QAction", "id": 112, "name": "", "statusTip": "", "text": "", "toolTip": ""}
+{"checked": false, "class": "QAction", "id": 113, "name": "", "statusTip": "", "text": "", "toolTip": ""}
+{"checked": false, "class": "QAction", "id": 114, "name": "", "statusTip": "", "text": "", "toolTip": ""}
+{"checked": false, "class": "QAction", "id": 115, "name": "", "statusTip": "", "text": "&Settings", "toolTip": "Settings"}
+{"checked": false, "class": "QAction", "id": 116, "name": "", "statusTip": "", "text": "", "toolTip": ""}
+{"checked": false, "class": "QAction", "id": 117, "name": "", "statusTip": "", "text": "", "toolTip": ""}
+{"checked": false, "class": "QAction", "id": 118, "name": "", "statusTip": "", "text": "&Window", "toolTip": "Window"}
+{"checked": false, "class": "QAction", "id": 119, "name": "", "statusTip": "", "text": "&Minimize", "toolTip": "Minimize"}
+{"checked": false, "class": "QAction", "id": 120, "name": "", "statusTip": "", "text": "", "toolTip": ""}
+{"checked": false, "class": "QAction", "id": 121, "name": "", "statusTip": "", "text": "", "toolTip": ""}
+{"checked": false, "class": "QAction", "id": 122, "name": "", "statusTip": "", "text": "&Information", "toolTip": "Information"}
+{"checked": false, "class": "QAction", "id": 123, "name": "", "statusTip": "", "text": "&Console", "toolTip": "Console"}
+{"checked": false, "class": "QAction", "id": 124, "name": "", "statusTip": "", "text": "&Network Traffic", "toolTip": "Network Traffic"}
+{"checked": false, "class": "QAction", "id": 125, "name": "", "statusTip": "", "text": "&Peers", "toolTip": "Peers"}
+{"checked": false, "class": "QAction", "id": 126, "name": "", "statusTip": "", "text": "&Help", "toolTip": "Help"}
+{"checked": false, "class": "QAction", "id": 127, "name": "", "statusTip": "", "text": "", "toolTip": ""}
+{"checked": false, "class": "QAction", "id": 128, "name": "", "statusTip": "", "text": "", "toolTip": ""}
+{"checked": false, "class": "QToolButton", "enabled": true, "geometry": [1141, 281, 30, 29], "id": 351, "name": "pasteButton", "statusTip": "", "text": "", "title": "", "toolTip": "Paste address from clipboard", "visible": true, "window": 2}
+{"class": "QLabel", "enabled": true, "geometry": [190, 1422, 217, 14], "id": 129, "name": "labelEstimatedTimeLeft", "statusTip": "", "text": "Estimated time left until synced", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"checked": false, "class": "QToolButton", "enabled": true, "geometry": [394, 113, 119, 31], "id": 130, "name": "", "statusTip": "Browse transaction history", "text": "Transactions", "title": "", "toolTip": "Browse transaction history", "visible": true, "window": 2}
+{"class": "QLabel", "enabled": true, "geometry": [262, 776, 126, 22], "id": 387, "name": "labelFeeMinimized", "statusTip": "", "text": "0.00002000 BTC/kvB", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"class": "QLabel", "enabled": true, "geometry": [478, 772, 347, 27], "id": 388, "name": "fallbackFeeWarningLabel", "statusTip": "", "text": "Warning: Fee estimation is currently not possible.", "title": "", "toolTip": "<qt>Using the fallbackfee can result in sending a transaction that will take several hours or days (or never) to confirm. Consider choosing your fee manually or wait until you have validated the complete chain.</qt>", "visible": true, "window": 2}
+{"class": "QToolBar", "enabled": true, "geometry": [120, 109, 1100, 39], "id": 134, "name": "", "statusTip": "", "title": "Tabs toolbar", "toolTip": "", "visible": true, "window": 2}
+{"checked": true, "class": "QAction", "id": 135, "name": "", "statusTip": "", "text": "Tabs toolbar", "toolTip": "Tabs toolbar"}
+{"checked": false, "class": "QWidgetAction", "id": 136, "name": "", "statusTip": "", "text": "", "toolTip": ""}
+{"checked": false, "class": "QWidgetAction", "id": 137, "name": "", "statusTip": "", "text": "", "toolTip": ""}
+{"checked": false, "class": "QWidgetAction", "id": 138, "name": "", "statusTip": "", "text": "", "toolTip": ""}
+{"class": "QLabel", "enabled": true, "geometry": [1041, 816, 52, 14], "id": 399, "name": "labelBalanceName", "statusTip": "", "text": "Balance:", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"class": "QDialogButtonBox", "enabled": true, "geometry": [430, 468, 478, 24], "id": 1524, "name": "qt_msgbox_buttonbox", "statusTip": "", "title": "", "toolTip": "", "visible": true, "window": 1525}
+{"checked": false, "class": "QPushButton", "enabled": true, "geometry": [129, 811, 150, 24], "id": 403, "name": "sendButton", "statusTip": "", "text": "S&end", "title": "", "toolTip": "Confirm the send action", "visible": true, "window": 2}
+{"class": "GUIUtil::ThemedLabel", "enabled": true, "geometry": [1163, 846, 16, 22], "id": 139, "name": "", "statusTip": "", "text": "", "title": "", "toolTip": "HD key generation is <b>enabled</b>", "visible": true, "window": 2}
+{"checked": false, "class": "QPushButton", "enabled": true, "geometry": [285, 811, 80, 24], "id": 415, "name": "clearButton", "statusTip": "", "text": "Clear &All", "title": "", "toolTip": "Clear all fields of the form.", "visible": true, "window": 2}
+{"class": "QWidget", "enabled": true, "geometry": [130, 273, 1080, 491], "id": 420, "name": "qt_scrollarea_viewport", "statusTip": "", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"class": "QLabel", "enabled": true, "geometry": [190, 1342, 146, 14], "id": 142, "name": "labelNumberOfBlocksLeft", "statusTip": "", "text": "Number of blocks left", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"checked": false, "class": "QToolButton", "enabled": true, "geometry": [1171, 281, 30, 29], "id": 448, "name": "deleteButton", "statusTip": "", "text": "", "title": "", "toolTip": "Remove this entry", "visible": true, "window": 2}
+{"class": "BitcoinGUI", "enabled": true, "geometry": [120, 90, 1100, 780], "id": 2, "name": "", "statusTip": "", "title": "Bitcoin Core - Reference wallet - [regtest]", "toolTip": "", "visible": true, "window": 2}
+{"checked": false, "class": "QAction", "id": 143, "name": "", "statusTip": "", "text": "", "toolTip": ""}
+{"checked": false, "class": "QAction", "id": 144, "name": "", "statusTip": "", "text": "Show Peers tab", "toolTip": "Show Peers tab"}
+{"checked": false, "class": "QAction", "id": 145, "name": "", "statusTip": "", "text": "Disable network activity", "toolTip": "Disable network activity"}
+{"checked": false, "class": "QAction", "id": 146, "name": "", "statusTip": "Show general overview of wallet", "text": "&Overview", "toolTip": "Show general overview of wallet"}
+{"checked": true, "class": "QAction", "id": 147, "name": "", "statusTip": "Send coins to a Bitcoin address", "text": "&Send", "toolTip": "Send coins to a Bitcoin address"}
+{"checked": false, "class": "QAction", "id": 148, "name": "", "statusTip": "Request payments (generates QR codes and bitcoin: URIs)", "text": "&Receive", "toolTip": "Request payments (generates QR codes and bitcoin: URIs)"}
+{"checked": false, "class": "QAction", "id": 149, "name": "", "statusTip": "Browse transaction history", "text": "&Transactions", "toolTip": "Browse transaction history"}
+{"checked": false, "class": "QAction", "id": 150, "name": "", "statusTip": "Quit application", "text": "E&xit", "toolTip": "Exit"}
+{"checked": false, "class": "QAction", "id": 151, "name": "", "statusTip": "Show information about Bitcoin Core", "text": "&About Bitcoin Core", "toolTip": "About Bitcoin Core"}
+{"checked": false, "class": "QAction", "id": 152, "name": "", "statusTip": "Show information about Qt", "text": "About &Qt", "toolTip": "About Qt"}
+{"checked": false, "class": "QAction", "id": 153, "name": "", "statusTip": "Modify configuration options for Bitcoin Core", "text": "&Options\u2026", "toolTip": "Options\u2026"}
+{"checked": false, "class": "QAction", "id": 154, "name": "", "statusTip": "Encrypt the private keys that belong to your wallet", "text": "&Encrypt Wallet\u2026", "toolTip": "Encrypt Wallet\u2026"}
+{"checked": false, "class": "QAction", "id": 155, "name": "", "statusTip": "Backup wallet to another location", "text": "&Backup Wallet\u2026", "toolTip": "Backup Wallet\u2026"}
+{"checked": false, "class": "QAction", "id": 156, "name": "", "statusTip": "Change the passphrase used for wallet encryption", "text": "&Change Passphrase\u2026", "toolTip": "Change Passphrase\u2026"}
+{"checked": false, "class": "QAction", "id": 157, "name": "", "statusTip": "Sign messages with your Bitcoin addresses to prove you own them", "text": "Sign &message\u2026", "toolTip": "Sign message\u2026"}
+{"checked": false, "class": "QAction", "id": 158, "name": "", "statusTip": "Verify messages to ensure they were signed with specified Bitcoin addresses", "text": "&Verify message\u2026", "toolTip": "Verify message\u2026"}
+{"checked": false, "class": "QAction", "id": 159, "name": "", "statusTip": "Load Partially Signed Bitcoin Transaction", "text": "&Load PSBT from file\u2026", "toolTip": "Load PSBT from file\u2026"}
+{"checked": false, "class": "QAction", "id": 160, "name": "", "statusTip": "Load Partially Signed Bitcoin Transaction from clipboard", "text": "Load PSBT from &clipboard\u2026", "toolTip": "Load PSBT from clipboard\u2026"}
+{"checked": false, "class": "QAction", "id": 161, "name": "openRPCConsoleAction", "statusTip": "Open node debugging and diagnostic console", "text": "Node window", "toolTip": "Node window"}
+{"checked": false, "class": "QAction", "id": 162, "name": "", "statusTip": "Show the list of used sending addresses and labels", "text": "&Sending addresses", "toolTip": "Sending addresses"}
+{"checked": false, "class": "QAction", "id": 163, "name": "", "statusTip": "Show the list of used receiving addresses and labels", "text": "&Receiving addresses", "toolTip": "Receiving addresses"}
+{"checked": false, "class": "QAction", "id": 164, "name": "", "statusTip": "Open a bitcoin: URI", "text": "Open &URI\u2026", "toolTip": "Open URI\u2026"}
+{"checked": false, "class": "QAction", "id": 165, "name": "", "statusTip": "Open a wallet", "text": "Open Wallet", "toolTip": "Open Wallet"}
+{"checked": false, "class": "QAction", "id": 166, "name": "", "statusTip": "", "text": "", "toolTip": ""}
+{"checked": false, "class": "QAction", "id": 1129, "name": "", "statusTip": "", "text": "Recipient wallet", "toolTip": "Recipient wallet"}
+{"checked": false, "class": "QAction", "id": 1130, "name": "", "statusTip": "", "text": "Reference wallet", "toolTip": "Reference wallet"}
+{"checked": false, "class": "QAction", "id": 1131, "name": "", "statusTip": "", "text": "Watch-only monitor", "toolTip": "Watch-only monitor"}
+{"checked": false, "class": "QAction", "id": 167, "name": "", "statusTip": "Close wallet", "text": "Close Wallet\u2026", "toolTip": "Close Wallet\u2026"}
+{"checked": false, "class": "QAction", "id": 168, "name": "", "statusTip": "Create a new wallet", "text": "Create Wallet\u2026", "toolTip": "Create Wallet\u2026"}
+{"checked": false, "class": "QAction", "id": 169, "name": "", "statusTip": "Restore a wallet from a backup file", "text": "Restore Wallet\u2026", "toolTip": "Restore Wallet\u2026"}
+{"checked": false, "class": "QAction", "id": 170, "name": "", "statusTip": "Close all wallets", "text": "Close All Wallets\u2026", "toolTip": "Close All Wallets\u2026"}
+{"checked": false, "class": "QAction", "id": 171, "name": "", "statusTip": "Migrate a wallet", "text": "Migrate Wallet", "toolTip": "Migrate Wallet"}
+{"checked": false, "class": "QAction", "id": 172, "name": "", "statusTip": "", "text": "", "toolTip": ""}
+{"checked": false, "class": "QAction", "id": 173, "name": "", "statusTip": "Show the Bitcoin Core help message to get a list with possible Bitcoin command-line options", "text": "&Command-line options", "toolTip": "Command-line options"}
+{"checked": false, "class": "QAction", "id": 174, "name": "", "statusTip": "Mask the values in the Overview tab", "text": "&Mask values", "toolTip": "Mask values"}
+{"checked": false, "class": "QAction", "id": 175, "name": "", "statusTip": "Export a watch-only version of the current wallet that can be restored onto another node.", "text": "Export watch-only wallet", "toolTip": "Export watch-only wallet"}
+{"checked": false, "class": "QAction", "id": 176, "name": "", "statusTip": "", "text": "", "toolTip": ""}
+{"checked": false, "class": "QAction", "id": 177, "name": "", "statusTip": "", "text": "BTC", "toolTip": "BTC"}
+{"checked": false, "class": "QAction", "id": 178, "name": "", "statusTip": "", "text": "mBTC", "toolTip": "mBTC"}
+{"checked": false, "class": "QAction", "id": 179, "name": "", "statusTip": "", "text": "\u00b5BTC (bits)", "toolTip": "\u00b5BTC (bits)"}
+{"checked": false, "class": "QAction", "id": 180, "name": "", "statusTip": "", "text": "Satoshi (sat)", "toolTip": "Satoshi (sat)"}
+{"class": "QLabel", "enabled": true, "geometry": [190, 1362, 104, 14], "id": 181, "name": "labelLastBlockTime", "statusTip": "", "text": "Last block time", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"checked": false, "class": "QToolButton", "enabled": true, "geometry": [1111, 281, 30, 29], "id": 545, "name": "addressBookButton", "statusTip": "", "text": "", "title": "", "toolTip": "Choose previously used address", "visible": true, "window": 2}
+{"checked": false, "class": "QCheckBox", "enabled": true, "geometry": [489, 349, 572, 20], "id": 571, "name": "checkboxSubtractFeeFromAmount", "statusTip": "", "text": "S&ubtract fee from amount", "title": "", "toolTip": "<qt>The fee will be deducted from the amount being sent. The recipient will receive less bitcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</qt>", "visible": true, "window": 2}
+{"class": "QStackedWidget", "enabled": true, "geometry": [120, 148, 1100, 695], "id": 183, "name": "", "statusTip": "", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"class": "QComboBox", "currentText": "Reference wallet", "enabled": true, "geometry": [1068, 117, 148, 22], "id": 184, "name": "", "statusTip": "", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"class": "QLabel", "enabled": true, "geometry": [250, 933, 900, 28], "id": 185, "name": "infoText", "statusTip": "", "text": "Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitcoin network, as detailed below.", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"class": "QWidget", "enabled": true, "geometry": [120, 843, 1100, 695], "id": 186, "name": "bgWidget", "statusTip": "", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"class": "QStatusBar", "enabled": true, "geometry": [120, 843, 1100, 27], "id": 187, "name": "", "statusTip": "", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"checked": false, "class": "QPushButton", "enabled": true, "geometry": [1070, 1446, 80, 22], "id": 189, "name": "closeButton", "statusTip": "", "text": "Hide", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"class": "QWidget", "enabled": true, "geometry": [514, 113, 506, 31], "id": 191, "name": "", "statusTip": "", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"checked": false, "class": "QPushButton", "enabled": true, "geometry": [828, 468, 80, 24], "id": 1526, "name": "", "statusTip": "", "text": "Cancel", "title": "", "toolTip": "", "visible": true, "window": 1525}
+{"class": "AmountSpinBox", "enabled": true, "geometry": [203, 348, 175, 23], "id": 710, "name": "", "statusTip": "", "text": "", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"class": "QValidatedLineEdit", "enabled": true, "geometry": [322, 236, 653, 22], "id": 733, "name": "lineEditCoinControlChange", "statusTip": "", "text": "bcrt1q5v297dxhnxxea85cf6kzrk9yq8mxu634pc2m7g", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"class": "QLabel", "enabled": true, "geometry": [413, 1382, 54, 14], "id": 192, "name": "percentageProgress", "statusTip": "", "text": "100.00%", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"class": "SendCoinsDialog", "enabled": true, "geometry": [120, 148, 1100, 695], "id": 757, "name": "SendCoinsDialog", "statusTip": "", "title": "Send Coins", "toolTip": "", "visible": true, "window": 2}
+{"class": "QMessageBox", "enabled": true, "geometry": [419, 417, 500, 86], "id": 1525, "name": "", "statusTip": "", "text": "The address you selected for change is not part of this wallet. Any or all funds in your wallet may be sent to this address. Are you sure?", "title": "Confirm custom change address", "toolTip": "", "visible": true, "window": 1525}
+{"class": "GUIUtil::ClickableLabel", "enabled": true, "geometry": [1201, 846, 16, 22], "id": 195, "name": "", "statusTip": "", "text": "", "title": "", "toolTip": "<nobr>Up to date.<br>Processed 113 blocks of transaction history.</nobr>", "visible": true, "window": 2}
+{"class": "QScrollArea", "enabled": true, "geometry": [129, 272, 1082, 493], "id": 792, "name": "scrollArea", "statusTip": "", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"class": "QLabel", "enabled": true, "geometry": [413, 1362, 156, 14], "id": 197, "name": "newestBlockDate", "statusTip": "", "text": "Sat Oct 10 15:24:01 2026", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"checked": true, "class": "QCheckBox", "enabled": true, "geometry": [140, 237, 170, 20], "id": 810, "name": "checkBoxCoinControlChange", "statusTip": "", "text": "Custom change address", "title": "", "toolTip": "<qt>If this is activated, but the change address is empty or invalid, change will be sent to a newly generated address.</qt>", "visible": true, "window": 2}
+{"class": "QLabel", "enabled": true, "geometry": [413, 1402, 61, 14], "id": 198, "name": "progressIncreasePerH", "statusTip": "", "text": "6274.28%", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"checked": false, "class": "QPushButton", "enabled": true, "geometry": [140, 198, 80, 22], "id": 812, "name": "pushButtonCoinControl", "statusTip": "", "text": "Inputs\u2026", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"class": "QLabel", "enabled": true, "geometry": [139, 318, 52, 22], "id": 813, "name": "labellLabel", "statusTip": "", "text": "&Label:", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"checked": false, "class": "QToolButton", "enabled": true, "geometry": [302, 113, 91, 31], "id": 199, "name": "", "statusTip": "Request payments (generates QR codes and bitcoin: URIs)", "text": "Receive", "title": "", "toolTip": "Request payments (generates QR codes and bitcoin: URIs)", "visible": true, "window": 2}
+{"checked": false, "class": "QPushButton", "enabled": true, "geometry": [742, 468, 80, 24], "id": 1527, "name": "", "statusTip": "", "text": "&Yes", "title": "", "toolTip": "", "visible": true, "window": 1525}
+{"class": "QLabel", "enabled": true, "geometry": [190, 1382, 60, 14], "id": 200, "name": "labelSyncDone", "statusTip": "", "text": "Progress", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"class": "QLabel", "enabled": true, "geometry": [430, 428, 32, 32], "id": 1528, "name": "qt_msgboxex_icon_label", "statusTip": "", "text": "", "title": "", "toolTip": "", "visible": true, "window": 1525}
+{"class": "BitcoinAmountField", "enabled": true, "geometry": [203, 348, 286, 23], "id": 826, "name": "payAmount", "statusTip": "", "title": "", "toolTip": "The amount to send in the selected unit", "value": 0, "visible": true, "window": 2}
+{"class": "QLineEdit", "enabled": true, "geometry": [206, 351, 155, 17], "id": 831, "name": "qt_spinbox_lineedit", "statusTip": "", "text": "", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"class": "ModalOverlay", "enabled": true, "geometry": [120, 843, 1100, 695], "id": 201, "name": "ModalOverlay", "statusTip": "", "title": "Form", "toolTip": "", "visible": true, "window": 2}
+{"class": "SendCoinsEntry", "enabled": true, "geometry": [130, 273, 1080, 113], "id": 862, "name": "SendCoinsEntry", "statusTip": "", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"class": "QLabel", "enabled": true, "geometry": [1021, 113, 46, 31], "id": 203, "name": "", "statusTip": "", "text": "Wallet: ", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"class": "QLabel", "enabled": true, "geometry": [139, 348, 52, 23], "id": 888, "name": "amountLabel", "statusTip": "", "text": "A&mount:", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"checked": false, "class": "QPushButton", "enabled": true, "geometry": [398, 776, 80, 22], "id": 902, "name": "buttonChooseFee", "statusTip": "", "text": "Choose\u2026", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"class": "QLabel", "enabled": true, "geometry": [228, 197, 147, 24], "id": 915, "name": "labelCoinControlAutomaticallySelected", "statusTip": "", "text": "automatically selected", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"class": "QValueComboBox", "currentText": "BTC", "enabled": true, "geometry": [384, 348, 105, 22], "id": 942, "name": "", "statusTip": "", "title": "", "toolTip": "Bitcoins", "value": "BTC", "visible": true, "window": 2}
+{"checked": true, "class": "QToolButton", "enabled": true, "geometry": [226, 113, 75, 31], "id": 204, "name": "", "statusTip": "Send coins to a Bitcoin address", "text": "Send", "title": "", "toolTip": "Send coins to a Bitcoin address", "visible": true, "window": 2}
+{"class": "UnitDisplayStatusBarControl", "enabled": true, "geometry": [1084, 846, 76, 22], "id": 205, "name": "", "statusTip": "", "text": "BTC", "title": "", "toolTip": "Unit to show amounts in. Click to select another unit.", "visible": true, "window": 2}
+{"class": "QLabel", "enabled": true, "geometry": [250, 961, 900, 14], "id": 207, "name": "infoTextStrong", "statusTip": "", "text": "Attempting to spend bitcoins that are affected by not-yet-displayed transactions will not be accepted by the network.", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"class": "WalletView", "enabled": true, "geometry": [120, 148, 1100, 695], "id": 208, "name": "", "statusTip": "", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"class": "QValidatedLineEdit", "enabled": true, "geometry": [203, 284, 908, 22], "id": 994, "name": "payTo", "statusTip": "", "text": "", "title": "", "toolTip": "The Bitcoin address to send the payment to", "visible": true, "window": 2}
+{"class": "QLabel", "enabled": true, "geometry": [987, 236, 218, 22], "id": 995, "name": "labelCoinControlChangeLabel", "statusTip": "", "text": "Warning: Unknown change address", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"class": "QLabel", "enabled": true, "geometry": [413, 1422, 61, 14], "id": 209, "name": "expectedTimeLeft", "statusTip": "", "text": "0 seconds", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"class": "QLabel", "enabled": true, "geometry": [413, 1342, 8, 14], "id": 211, "name": "numberOfBlocksLeft", "statusTip": "", "text": "0", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"class": "QWidget", "enabled": true, "geometry": [180, 903, 980, 575], "id": 213, "name": "contentWidget", "statusTip": "", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"class": "QLabel", "enabled": true, "geometry": [481, 428, 427, 28], "id": 1529, "name": "qt_msgbox_label", "statusTip": "", "text": "The address you selected for change is not part of this wallet. Any or all funds in your wallet may be sent to this address. Are you sure?", "title": "", "toolTip": "", "visible": true, "window": 1525}
+{"checked": false, "class": "QPushButton", "enabled": true, "geometry": [1061, 348, 140, 22], "id": 1092, "name": "useAvailableBalanceButton", "statusTip": "", "text": "Use available balance", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"class": "QWidget", "enabled": true, "geometry": [130, 273, 1080, 491], "id": 1115, "name": "scrollAreaWidgetContents", "statusTip": "", "title": "", "toolTip": "", "visible": true, "window": 2}
+{"checked": false, "class": "QPushButton", "enabled": true, "geometry": [371, 811, 111, 24], "id": 1119, "name": "addButton", "statusTip": "", "text": "Add &Recipient", "title": "", "toolTip": "Send to multiple recipients at once", "visible": true, "window": 2}

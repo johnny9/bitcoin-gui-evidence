@@ -1,0 +1,2 @@
+{"id": "passphrase-mismatch", "features": ["F06.S07", "F30.S01"], "description": "Different repeated passphrases produce a visible validation error.", "actual": true, "expected": true, "status": "passed", "utc": "2026-10-10T15:46:10.938739+00:00"}
+{"id": "unknown-change-confirmation", "features": ["F12.S09"], "description": "Application requires confirmation for a change destination outside the selected wallet.", "actual": true, "expected": true, "status": "passed", "utc": "2026-10-10T15:46:14.601655+00:00"}

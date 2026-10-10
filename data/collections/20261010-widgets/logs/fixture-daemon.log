@@ -1,0 +1,191 @@
+2026-10-10T15:22:17Z Bitcoin Core version v32.99.0-f739c7876b81-dirty (release build)
+2026-10-10T15:22:17Z parameter interaction: -listen=0 -> setting -natpmp=0
+2026-10-10T15:22:17Z parameter interaction: -listen=0 -> setting -discover=0
+2026-10-10T15:22:17Z parameter interaction: -listen=0 -> setting -listenonion=0
+2026-10-10T15:22:17Z parameter interaction: -listen=0 -> setting -i2pacceptincoming=0
+2026-10-10T15:22:17Z Log output may contain privacy-sensitive information. Be cautious when sharing logs.
+2026-10-10T15:22:17Z Using the 'x86_shani(1way;2way)' SHA256 implementation
+2026-10-10T15:22:17Z Using RdSeed as an additional entropy source
+2026-10-10T15:22:17Z Using RdRand as an additional entropy source
+2026-10-10T15:22:17Z Default data directory /root/.bitcoin
+2026-10-10T15:22:17Z Using data directory /work/reruns/20261010-widgets/node/regtest
+2026-10-10T15:22:17Z Config file: /work/reruns/20261010-widgets/node/bitcoin.conf (not found, skipping)
+2026-10-10T15:22:17Z Command-line arg: connect="0"
+2026-10-10T15:22:17Z Command-line arg: datadir="/work/reruns/20261010-widgets/node"
+2026-10-10T15:22:17Z Command-line arg: dnsseed="0"
+2026-10-10T15:22:17Z Command-line arg: fallbackfee="0.00002"
+2026-10-10T15:22:17Z Command-line arg: keypool="5"
+2026-10-10T15:22:17Z Command-line arg: listen="0"
+2026-10-10T15:22:17Z Command-line arg: regtest=""
+2026-10-10T15:22:17Z Command-line arg: rpcpassword=****
+2026-10-10T15:22:17Z Command-line arg: rpcport="19643"
+2026-10-10T15:22:17Z Command-line arg: rpcuser=****
+2026-10-10T15:22:17Z Command-line arg: server=""
+2026-10-10T15:22:17Z Command-line arg: wallet="Reference wallet"
+2026-10-10T15:22:17Z Command-line arg: wallet="Recipient wallet"
+2026-10-10T15:22:17Z Command-line arg: wallet="Watch-only monitor"
+2026-10-10T15:22:17Z Using at most 200 automatic connections (524288 file descriptors available)
+2026-10-10T15:22:17Z scheduler thread start
+2026-10-10T15:22:17Z Binding RPC on address ::1 port 19643
+2026-10-10T15:22:17Z Binding RPC on address 127.0.0.1 port 19643
+2026-10-10T15:22:17Z Using rpcuser/rpcpassword authentication.
+2026-10-10T15:22:17Z [warning] The use of rpcuser/rpcpassword is less secure, because credentials are configured in plain text. It is recommended that locally-run instances switch to cookie-based auth, or otherwise to use hashed rpcauth credentials. See share/rpcauth in the source directory for more information.
+2026-10-10T15:22:17Z Starting HTTP server with 16 worker threads
+2026-10-10T15:22:17Z http.09 thread start
+2026-10-10T15:22:17Z http.01 thread start
+2026-10-10T15:22:17Z http.04 thread start
+2026-10-10T15:22:17Z http.03 thread start
+2026-10-10T15:22:17Z http.02 thread start
+2026-10-10T15:22:17Z http.10 thread start
+2026-10-10T15:22:17Z http.07 thread start
+2026-10-10T15:22:17Z http.08 thread start
+2026-10-10T15:22:17Z http.05 thread start
+2026-10-10T15:22:17Z http.12 thread start
+2026-10-10T15:22:17Z http.06 thread start
+2026-10-10T15:22:17Z http.00 thread start
+2026-10-10T15:22:17Z http.13 thread start
+2026-10-10T15:22:17Z http.11 thread start
+2026-10-10T15:22:17Z http.14 thread start
+2026-10-10T15:22:17Z http.15 thread start
+2026-10-10T15:22:17Z Using wallet directory /work/reruns/20261010-widgets/node/regtest/wallets
+2026-10-10T15:22:17Z http thread start
+2026-10-10T15:22:17Z Using SQLite Version 3.45.1
+2026-10-10T15:22:17Z init message: Verifying wallet(s)…
+2026-10-10T15:22:17Z Using /16 prefix for IP bucketing
+2026-10-10T15:22:17Z init message: Loading P2P addresses…
+2026-10-10T15:22:17Z Loaded 0 addresses from peers.dat 0ms
+2026-10-10T15:22:17Z init message: Loading banlist…
+2026-10-10T15:22:17Z SetNetworkActive: true
+2026-10-10T15:22:17Z Cache configuration:
+2026-10-10T15:22:17Z * Using 2.0 MiB for block index database
+2026-10-10T15:22:17Z * Using 8.0 MiB for chain state database
+2026-10-10T15:22:17Z * Using 1014.0 MiB for in-memory UTXO set (plus up to 286.1 MiB of unused mempool space)
+2026-10-10T15:22:17Z Script verification uses 15 additional threads
+2026-10-10T15:22:17Z Using obfuscation key for blocksdir *.dat files (/work/reruns/20261010-widgets/node/regtest/blocks): '5f0333ccd423a78b'
+2026-10-10T15:22:17Z Opening LevelDB in /work/reruns/20261010-widgets/node/regtest/blocks/index
+2026-10-10T15:22:17Z Opened LevelDB successfully
+2026-10-10T15:22:17Z Using obfuscation key for /work/reruns/20261010-widgets/node/regtest/blocks/index: 0000000000000000
+2026-10-10T15:22:17Z Using 16 MiB out of 16 MiB requested for signature cache, able to store 524288 elements
+2026-10-10T15:22:17Z Using 16 MiB out of 16 MiB requested for script execution cache, able to store 524288 elements
+2026-10-10T15:22:17Z init message: Loading block index…
+2026-10-10T15:22:17Z Validating signatures for all blocks.
+2026-10-10T15:22:17Z Setting nMinimumChainWork=0000000000000000000000000000000000000000000000000000000000000000
+2026-10-10T15:22:17Z Loading block index db: last block file = 0
+2026-10-10T15:22:17Z Loading block index db: last block file info: CBlockFileInfo(blocks=0, size=0, heights=0...0, time=1970-01-01...1970-01-01)
+2026-10-10T15:22:17Z Checking all blk files are present...
+2026-10-10T15:22:17Z Initializing chainstate Chainstate [ibd] @ height -1 (null)
+2026-10-10T15:22:17Z Opening LevelDB in /work/reruns/20261010-widgets/node/regtest/chainstate
+2026-10-10T15:22:17Z Opened LevelDB successfully
+2026-10-10T15:22:17Z Using obfuscation key for /work/reruns/20261010-widgets/node/regtest/chainstate: d6892843a3229277
+2026-10-10T15:22:17Z prevout.01 thread start
+2026-10-10T15:22:17Z prevout.00 thread start
+2026-10-10T15:22:17Z prevout.02 thread start
+2026-10-10T15:22:17Z prevout.03 thread start
+2026-10-10T15:22:17Z prevout.04 thread start
+2026-10-10T15:22:17Z prevout.05 thread start
+2026-10-10T15:22:17Z Block input prevout fetching uses 8 additional threads
+2026-10-10T15:22:17Z init message: Verifying blocks…
+2026-10-10T15:22:17Z prevout.06 thread start
+2026-10-10T15:22:17Z prevout.07 thread start
+2026-10-10T15:22:17Z Block index and chainstate loaded
+2026-10-10T15:22:17Z /work/reruns/20261010-widgets/node/regtest/fees/block_policy_estimates.dat is not found. Continue anyway.
+2026-10-10T15:22:17Z init message: Loading wallet…
+2026-10-10T15:22:17Z [Reference wallet] Last client version = 524289
+2026-10-10T15:22:17Z [Reference wallet] Descriptors: 8, Descriptor Keys: 1 plaintext, 0 encrypted, 1 total.
+2026-10-10T15:22:17Z [Reference wallet] Setting spkMan to active: id = 94952362b20c589909c2774dab7ce46c7aac5764aff38eef66c3f1142792a846, type = legacy, internal = false
+2026-10-10T15:22:17Z [Reference wallet] Setting spkMan to active: id = 90d1601584a5d693f832505d26aaa256f2ade51b4c3c0f041a1a870580cdbe8b, type = p2sh-segwit, internal = false
+2026-10-10T15:22:17Z [Reference wallet] Setting spkMan to active: id = c3a61bd463da00cb26ae2255080cdf962fd278f81f7fdb583ad588bc6d2d81cf, type = bech32, internal = false
+2026-10-10T15:22:17Z [Reference wallet] Setting spkMan to active: id = d141d52490885348ad92957cbb88d299e9964cfbdf0c0445427652ed2d5689f3, type = bech32m, internal = false
+2026-10-10T15:22:17Z [Reference wallet] Setting spkMan to active: id = f9e2f5ed3dc0a22bdce481c7f007185af41fe4c53d7a4086e455a44a12198d07, type = legacy, internal = true
+2026-10-10T15:22:17Z [Reference wallet] Setting spkMan to active: id = 70395fcd6cee716d891828f7e7c836b2491b79d00bc2a8aa54f8851905059dac, type = p2sh-segwit, internal = true
+2026-10-10T15:22:17Z [Reference wallet] Setting spkMan to active: id = 41e2d2d41fbb050161ab1eff58109f74cd45591a2f283f01501590916ab6896a, type = bech32, internal = true
+2026-10-10T15:22:17Z [Reference wallet] Setting spkMan to active: id = 41b577ff333ae791856ec190b4d44820b542e76d3e3ce0d76e6bd7d445fbbcba, type = bech32m, internal = true
+2026-10-10T15:22:18Z [Reference wallet] Wallet completed loading in             355ms
+2026-10-10T15:22:18Z [Reference wallet] setKeyPool.size() = 40
+2026-10-10T15:22:18Z [Reference wallet] mapWallet.size() = 112
+2026-10-10T15:22:18Z [Reference wallet] m_address_book.size() = 1
+2026-10-10T15:22:18Z init message: Loading wallet…
+2026-10-10T15:22:18Z [Recipient wallet] Last client version = 524289
+2026-10-10T15:22:18Z [Recipient wallet] Descriptors: 8, Descriptor Keys: 1 plaintext, 0 encrypted, 1 total.
+2026-10-10T15:22:18Z [Recipient wallet] Setting spkMan to active: id = 892846cc94177a39ef3b59f331a2d0594ab529fb37b72041939eb5abc75af961, type = legacy, internal = false
+2026-10-10T15:22:18Z [Recipient wallet] Setting spkMan to active: id = d1f6e6e402d3c802c6efafb1ddc1122046d563c0ef2b2c082ab12974a8a3f403, type = p2sh-segwit, internal = false
+2026-10-10T15:22:18Z [Recipient wallet] Setting spkMan to active: id = 364b62d227647f52bd2b2fd1f87cd8a6c9f79368574e77558c7bdda31e87b6b4, type = bech32, internal = false
+2026-10-10T15:22:18Z [Recipient wallet] Setting spkMan to active: id = c743e6fc08232c44b3977d44306237b71eb932c7ca462e58d5d4f4d456f9abc8, type = bech32m, internal = false
+2026-10-10T15:22:18Z [Recipient wallet] Setting spkMan to active: id = d4432998c492aeab6198c6f838016dbe1b5a0e1b481a681deb23bf752a1fbef9, type = legacy, internal = true
+2026-10-10T15:22:18Z [Recipient wallet] Setting spkMan to active: id = d1fa473feb710fdb1b7713fea2c715aea227769f02e8d03291c7887cacba7cb5, type = p2sh-segwit, internal = true
+2026-10-10T15:22:18Z [Recipient wallet] Setting spkMan to active: id = aeb461f6e573d5cb09c26790c0890c02c45774a24400e23cfe325bc8e96de471, type = bech32, internal = true
+2026-10-10T15:22:18Z [Recipient wallet] Setting spkMan to active: id = d7e46a44809d1049200541034f8b91dfc41453628b64f8bd6a4bcf20b80bba89, type = bech32m, internal = true
+2026-10-10T15:22:18Z [Recipient wallet] Wallet completed loading in               2ms
+2026-10-10T15:22:18Z [Recipient wallet] setKeyPool.size() = 40
+2026-10-10T15:22:18Z [Recipient wallet] mapWallet.size() = 1
+2026-10-10T15:22:18Z [Recipient wallet] m_address_book.size() = 1
+2026-10-10T15:22:18Z init message: Loading wallet…
+2026-10-10T15:22:18Z [Watch-only monitor] Last client version = 524289
+2026-10-10T15:22:18Z [Watch-only monitor] Descriptors: 0, Descriptor Keys: 0 plaintext, 0 encrypted, 0 total.
+2026-10-10T15:22:18Z [Watch-only monitor] Wallet completed loading in               0ms
+2026-10-10T15:22:18Z [Watch-only monitor] setKeyPool.size() = 0
+2026-10-10T15:22:18Z [Watch-only monitor] mapWallet.size() = 0
+2026-10-10T15:22:18Z [Watch-only monitor] m_address_book.size() = 0
+2026-10-10T15:22:18Z Setting NODE_NETWORK in non-prune mode
+2026-10-10T15:22:18Z initload thread start
+2026-10-10T15:22:18Z UpdateTip: new best=0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206 height=0 version=0x00000001 log2_work=1.000000 tx=1 date='2011-02-02T23:16:42Z' progress=0.000002 cache=0.3MiB(0txo)
+2026-10-10T15:22:18Z Failed to open mempool file. Continuing anyway.
+2026-10-10T15:22:18Z initload thread exit
+2026-10-10T15:22:18Z block tree size = 1
+2026-10-10T15:22:18Z nBestHeight = 0
+2026-10-10T15:22:18Z init message: Starting network threads…
+2026-10-10T15:22:18Z DNS seeding disabled
+2026-10-10T15:22:18Z net thread start
+2026-10-10T15:22:18Z addcon thread start
+2026-10-10T15:22:18Z init message: Done loading
+2026-10-10T15:22:18Z [Recipient wallet] Submitting wtx fa59d7d0d564464a38541519367878118137b7a53dcecc2fae1fa7f55c634354 to mempool without broadcast
+2026-10-10T15:22:18Z msghand thread start
+2026-10-10T15:22:26Z [Watch-only monitor] Setting spkMan to active: id = a0d053a870360a7757dfd889d0160ad9f2f10b1e3ec310c3cb2cbc2cb01e72b1, type = legacy, internal = false
+2026-10-10T15:22:26Z [Watch-only monitor] Setting spkMan to active: id = 2e9ba7e6b29620c8029fbd4f43b974ceee09e95d0d0dbff85427929f225d14b1, type = legacy, internal = true
+2026-10-10T15:22:26Z [Watch-only monitor] Setting spkMan to active: id = 1159b72a3bead5f70f6311a499817bd83491721e346a7005ff0f318fdef4508b, type = p2sh-segwit, internal = false
+2026-10-10T15:22:26Z [Watch-only monitor] Setting spkMan to active: id = 45e60141ab00638f949fd12fcf8c496ee50f68b36946ba67a000505015476193, type = p2sh-segwit, internal = true
+2026-10-10T15:22:26Z [Watch-only monitor] Setting spkMan to active: id = 95c23a57322ccdbe4e507cd906df3d38173eb9045ca0025edf3b500b334c92ff, type = bech32m, internal = false
+2026-10-10T15:22:26Z [Watch-only monitor] Setting spkMan to active: id = 41802ad06389356c1a4996b6e88c0c342243c7f7005dafec7589f895302e03c4, type = bech32m, internal = true
+2026-10-10T15:22:26Z [Watch-only monitor] Setting spkMan to active: id = 0a0e0a1cfdd742b6a444d0c42e80d2ce8b594efe919bbcdf173b882ff363dafc, type = bech32, internal = false
+2026-10-10T15:22:26Z [Watch-only monitor] Setting spkMan to active: id = 8ff56b0186bd2f5428367326d147115b1b13739ab8f2d796947b43457f875cc1, type = bech32, internal = true
+2026-10-10T15:22:26Z [Watch-only monitor] ScanFromTime: Rescanning last 1 blocks
+2026-10-10T15:22:26Z [Watch-only monitor] Rescan started from block 0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206... (slow variant inspecting all blocks)
+2026-10-10T15:22:26Z [Watch-only monitor] Scanning current mempool transactions.
+2026-10-10T15:22:26Z [Watch-only monitor] Rescan completed in               0ms
+2026-10-10T15:22:26Z http.10 thread exit
+2026-10-10T15:22:26Z http.14 thread exit
+2026-10-10T15:22:26Z http.12 thread exit
+2026-10-10T15:22:26Z http.05 thread exit
+2026-10-10T15:22:26Z Shutdown in progress...
+2026-10-10T15:22:26Z http.00 thread exit
+2026-10-10T15:22:26Z http.15 thread exit
+2026-10-10T15:22:26Z http.09 thread exit
+2026-10-10T15:22:26Z http.01 thread exit
+2026-10-10T15:22:26Z http.03 thread exit
+2026-10-10T15:22:26Z net thread exit
+2026-10-10T15:22:26Z http.11 thread exit
+2026-10-10T15:22:26Z http.07 thread exit
+2026-10-10T15:22:26Z http.06 thread exit
+2026-10-10T15:22:26Z http.13 thread exit
+2026-10-10T15:22:26Z addcon thread exit
+2026-10-10T15:22:26Z http.02 thread exit
+2026-10-10T15:22:26Z http.08 thread exit
+2026-10-10T15:22:26Z http.04 thread exit
+2026-10-10T15:22:27Z msghand thread exit
+2026-10-10T15:22:27Z http thread exit
+2026-10-10T15:22:27Z [Watch-only monitor] Releasing wallet Watch-only monitor..
+2026-10-10T15:22:27Z [Recipient wallet] Releasing wallet Recipient wallet..
+2026-10-10T15:22:27Z [Reference wallet] Releasing wallet Reference wallet..
+2026-10-10T15:22:27Z scheduler thread exit
+2026-10-10T15:22:27Z Writing 0 mempool transactions to file...
+2026-10-10T15:22:27Z Writing 0 unbroadcast transactions to file.
+2026-10-10T15:22:27Z Dumped mempool: 0.000s to copy, 0.002s to dump, 27 bytes dumped to file
+2026-10-10T15:22:27Z prevout.00 thread exit
+2026-10-10T15:22:27Z prevout.06 thread exit
+2026-10-10T15:22:27Z prevout.02 thread exit
+2026-10-10T15:22:27Z prevout.07 thread exit
+2026-10-10T15:22:27Z prevout.05 thread exit
+2026-10-10T15:22:27Z prevout.03 thread exit
+2026-10-10T15:22:27Z prevout.01 thread exit
+2026-10-10T15:22:27Z prevout.04 thread exit
+2026-10-10T15:22:27Z Shutdown done

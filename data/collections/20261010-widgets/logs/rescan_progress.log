@@ -1,0 +1,2 @@
+{"id": "wallet-rescan-completed", "features": ["F34.S01", "F34.S02"], "description": "Rescan completes through the current chain tip.", "actual": 15120, "expected": 15120, "status": "passed", "utc": "2026-10-10T15:36:37.397025+00:00"}
+{"id": "wallet-rescan-cancelled", "features": ["F34.S03"], "description": "GUI cancellation causes the in-progress rescan to return an abort result.", "actual": true, "expected": true, "status": "passed", "utc": "2026-10-10T15:36:37.691681+00:00"}

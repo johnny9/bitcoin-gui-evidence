@@ -1,0 +1,129 @@
+2026-10-10T15:28:38Z Bitcoin Core version v28.0.0 (release build)
+2026-10-10T15:28:38Z parameter interaction: -listen=0 -> setting -upnp=0
+2026-10-10T15:28:38Z parameter interaction: -listen=0 -> setting -natpmp=0
+2026-10-10T15:28:38Z parameter interaction: -listen=0 -> setting -discover=0
+2026-10-10T15:28:38Z parameter interaction: -listen=0 -> setting -listenonion=0
+2026-10-10T15:28:38Z parameter interaction: -listen=0 -> setting -i2pacceptincoming=0
+2026-10-10T15:28:38Z Script verification uses 15 additional threads
+2026-10-10T15:28:38Z Using the 'x86_shani(1way,2way)' SHA256 implementation
+2026-10-10T15:28:38Z Using RdSeed as an additional entropy source
+2026-10-10T15:28:38Z Using RdRand as an additional entropy source
+2026-10-10T15:28:38Z Default data directory /root/.bitcoin
+2026-10-10T15:28:38Z Using data directory /work/reruns/20261010-widgets/legacy-node/regtest
+2026-10-10T15:28:38Z Config file: /work/reruns/20261010-widgets/legacy-node/bitcoin.conf (not found, skipping)
+2026-10-10T15:28:38Z Command-line arg: connect="0"
+2026-10-10T15:28:38Z Command-line arg: datadir="/work/reruns/20261010-widgets/legacy-node"
+2026-10-10T15:28:38Z Command-line arg: deprecatedrpc="create_bdb"
+2026-10-10T15:28:38Z Command-line arg: dnsseed="0"
+2026-10-10T15:28:38Z Command-line arg: keypool="5"
+2026-10-10T15:28:38Z Command-line arg: listen="0"
+2026-10-10T15:28:38Z Command-line arg: regtest=""
+2026-10-10T15:28:38Z Command-line arg: rpcpassword=****
+2026-10-10T15:28:38Z Command-line arg: rpcport="19743"
+2026-10-10T15:28:38Z Command-line arg: rpcuser=****
+2026-10-10T15:28:38Z Command-line arg: server=""
+2026-10-10T15:28:38Z Using at most 125 automatic connections (524288 file descriptors available)
+2026-10-10T15:28:38Z scheduler thread start
+2026-10-10T15:28:38Z Binding RPC on address ::1 port 19743
+2026-10-10T15:28:38Z [libevent:warning] getaddrinfo: address family for nodename not supported
+2026-10-10T15:28:38Z Binding RPC on address ::1 port 19743 failed.
+2026-10-10T15:28:38Z Binding RPC on address 127.0.0.1 port 19743
+2026-10-10T15:28:38Z Config options rpcuser and rpcpassword will soon be deprecated. Locally-run instances may remove rpcuser to use cookie-based auth, or may be replaced with rpcauth. Please see share/rpcauth for rpcauth auth generation.
+2026-10-10T15:28:38Z Starting HTTP server with 4 worker threads
+2026-10-10T15:28:38Z Using wallet directory /work/reruns/20261010-widgets/legacy-node/regtest/wallets
+2026-10-10T15:28:38Z init message: Verifying wallet(s)…
+2026-10-10T15:28:38Z Using /16 prefix for IP bucketing
+2026-10-10T15:28:38Z init message: Loading P2P addresses…
+2026-10-10T15:28:38Z Creating peers.dat because the file was not found ("/work/reruns/20261010-widgets/legacy-node/regtest/peers.dat")
+2026-10-10T15:28:38Z init message: Loading banlist…
+2026-10-10T15:28:38Z Recreating the banlist database
+2026-10-10T15:28:38Z SetNetworkActive: true
+2026-10-10T15:28:38Z /work/reruns/20261010-widgets/legacy-node/regtest/fee_estimates.dat is not found. Continue anyway.
+2026-10-10T15:28:38Z Script verification uses 15 additional threads
+2026-10-10T15:28:38Z Cache configuration:
+2026-10-10T15:28:38Z * Using 2.0 MiB for block index database
+2026-10-10T15:28:38Z * Using 8.0 MiB for chain state database
+2026-10-10T15:28:38Z * Using 440.0 MiB for in-memory UTXO set (plus up to 286.1 MiB of unused mempool space)
+2026-10-10T15:28:38Z Using obfuscation key for blocksdir *.dat files (/work/reruns/20261010-widgets/legacy-node/regtest/blocks): '117e18f3b33bdcba'
+2026-10-10T15:28:38Z Using 16 MiB out of 16 MiB requested for signature cache, able to store 524288 elements
+2026-10-10T15:28:38Z Using 16 MiB out of 16 MiB requested for script execution cache, able to store 524288 elements
+2026-10-10T15:28:38Z init message: Loading block index…
+2026-10-10T15:28:38Z Validating signatures for all blocks.
+2026-10-10T15:28:38Z Setting nMinimumChainWork=0000000000000000000000000000000000000000000000000000000000000000
+2026-10-10T15:28:38Z Opening LevelDB in /work/reruns/20261010-widgets/legacy-node/regtest/blocks/index
+2026-10-10T15:28:38Z Opened LevelDB successfully
+2026-10-10T15:28:38Z Using obfuscation key for /work/reruns/20261010-widgets/legacy-node/regtest/blocks/index: 0000000000000000
+2026-10-10T15:28:38Z LoadBlockIndexDB: last block file = 0
+2026-10-10T15:28:38Z LoadBlockIndexDB: last block file info: CBlockFileInfo(blocks=0, size=0, heights=0...0, time=1970-01-01...1970-01-01)
+2026-10-10T15:28:38Z Checking all blk files are present...
+2026-10-10T15:28:38Z Initializing chainstate Chainstate [ibd] @ height -1 (null)
+2026-10-10T15:28:38Z Opening LevelDB in /work/reruns/20261010-widgets/legacy-node/regtest/chainstate
+2026-10-10T15:28:38Z Opened LevelDB successfully
+2026-10-10T15:28:38Z Wrote new obfuscate key for /work/reruns/20261010-widgets/legacy-node/regtest/chainstate: 913d3686fe36911e
+2026-10-10T15:28:38Z Using obfuscation key for /work/reruns/20261010-widgets/legacy-node/regtest/chainstate: 913d3686fe36911e
+2026-10-10T15:28:38Z Opening LevelDB in /work/reruns/20261010-widgets/legacy-node/regtest/chainstate
+2026-10-10T15:28:38Z Opened LevelDB successfully
+2026-10-10T15:28:38Z Using obfuscation key for /work/reruns/20261010-widgets/legacy-node/regtest/chainstate: 913d3686fe36911e
+2026-10-10T15:28:38Z [Chainstate [ibd] @ height -1 (null)] resized coinsdb cache to 8.0 MiB
+2026-10-10T15:28:38Z [Chainstate [ibd] @ height -1 (null)] resized coinstip cache to 440.0 MiB
+2026-10-10T15:28:38Z init message: Verifying blocks…
+2026-10-10T15:28:38Z  block index              25ms
+2026-10-10T15:28:38Z Setting NODE_NETWORK on non-prune mode
+2026-10-10T15:28:38Z initload thread start
+2026-10-10T15:28:38Z UpdateTip: new best=0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206 height=0 version=0x00000001 log2_work=1.000000 tx=1 date='2011-02-02T23:16:42Z' progress=1.000000 cache=0.3MiB(0txo)
+2026-10-10T15:28:38Z block tree size = 1
+2026-10-10T15:28:38Z nBestHeight = 0
+2026-10-10T15:28:38Z Failed to open mempool file. Continuing anyway.
+2026-10-10T15:28:38Z initload thread exit
+2026-10-10T15:28:38Z init message: Starting network threads…
+2026-10-10T15:28:38Z DNS seeding disabled
+2026-10-10T15:28:38Z net thread start
+2026-10-10T15:28:38Z init message: Done loading
+2026-10-10T15:28:38Z addcon thread start
+2026-10-10T15:28:38Z msghand thread start
+2026-10-10T15:28:38Z Using BerkeleyDB version Berkeley DB 4.8.30: (April  9, 2010)
+2026-10-10T15:28:38Z Using wallet /work/reruns/20261010-widgets/legacy-node/regtest/wallets/Legacy savings/wallet.dat
+2026-10-10T15:28:38Z BerkeleyEnvironment::Open: LogDir=/work/reruns/20261010-widgets/legacy-node/regtest/wallets/Legacy savings/database ErrorFile=/work/reruns/20261010-widgets/legacy-node/regtest/wallets/Legacy savings/db.log
+2026-10-10T15:28:38Z init message: Loading wallet…
+2026-10-10T15:28:38Z [Legacy savings] Wallet file version = 10500, last client version = 280000
+2026-10-10T15:28:38Z [Legacy savings] Legacy Wallet Keys: 0 plaintext, 0 encrypted, 0 w/ metadata, 0 total.
+2026-10-10T15:28:38Z [Legacy savings] Descriptors: 0, Descriptor Keys: 0 plaintext, 0 encrypted, 0 total.
+2026-10-10T15:28:38Z [Legacy savings] Setting minversion to 169900
+2026-10-10T15:28:38Z [Legacy savings] keypool added 10 keys (5 internal), size=10 (5 internal)
+2026-10-10T15:28:38Z [Legacy savings] LegacyScriptPubKeyMan::NewKeyPool rewrote keypool
+2026-10-10T15:28:38Z [Legacy savings] Wallet completed loading in              39ms
+2026-10-10T15:28:38Z [Legacy savings] setKeyPool.size() = 10
+2026-10-10T15:28:38Z [Legacy savings] mapWallet.size() = 0
+2026-10-10T15:28:38Z [Legacy savings] m_address_book.size() = 0
+2026-10-10T15:28:38Z [Legacy savings] keypool reserve 1
+2026-10-10T15:28:38Z [Legacy savings] keypool keep 1
+2026-10-10T15:28:38Z copied wallet.dat to /work/reruns/20261010-widgets/Legacy-savings.dat
+2026-10-10T15:28:38Z Using BerkeleyDB version Berkeley DB 4.8.30: (April  9, 2010)
+2026-10-10T15:28:38Z Using wallet /work/reruns/20261010-widgets/legacy-node/regtest/wallets/Legacy deferred/wallet.dat
+2026-10-10T15:28:38Z BerkeleyEnvironment::Open: LogDir=/work/reruns/20261010-widgets/legacy-node/regtest/wallets/Legacy deferred/database ErrorFile=/work/reruns/20261010-widgets/legacy-node/regtest/wallets/Legacy deferred/db.log
+2026-10-10T15:28:38Z init message: Loading wallet…
+2026-10-10T15:28:38Z [Legacy deferred] Wallet file version = 10500, last client version = 280000
+2026-10-10T15:28:38Z [Legacy deferred] Legacy Wallet Keys: 0 plaintext, 0 encrypted, 0 w/ metadata, 0 total.
+2026-10-10T15:28:38Z [Legacy deferred] Descriptors: 0, Descriptor Keys: 0 plaintext, 0 encrypted, 0 total.
+2026-10-10T15:28:38Z [Legacy deferred] Setting minversion to 169900
+2026-10-10T15:28:38Z [Legacy deferred] keypool added 10 keys (5 internal), size=10 (5 internal)
+2026-10-10T15:28:38Z [Legacy deferred] LegacyScriptPubKeyMan::NewKeyPool rewrote keypool
+2026-10-10T15:28:38Z [Legacy deferred] Wallet completed loading in              36ms
+2026-10-10T15:28:38Z [Legacy deferred] setKeyPool.size() = 10
+2026-10-10T15:28:38Z [Legacy deferred] mapWallet.size() = 0
+2026-10-10T15:28:38Z [Legacy deferred] m_address_book.size() = 0
+2026-10-10T15:28:38Z [Legacy deferred] keypool reserve 1
+2026-10-10T15:28:38Z [Legacy deferred] keypool keep 1
+2026-10-10T15:28:38Z copied wallet.dat to /work/reruns/20261010-widgets/Legacy-deferred.dat
+2026-10-10T15:28:38Z Shutdown: In progress...
+2026-10-10T15:28:38Z net thread exit
+2026-10-10T15:28:38Z addcon thread exit
+2026-10-10T15:28:38Z msghand thread exit
+2026-10-10T15:28:38Z scheduler thread exit
+2026-10-10T15:28:38Z Writing 0 mempool transactions to file...
+2026-10-10T15:28:38Z Writing 0 unbroadcast transactions to file.
+2026-10-10T15:28:38Z Dumped mempool: 0.000s to copy, 0.002s to dump, 27 bytes dumped to file
+2026-10-10T15:28:38Z Flushed fee estimates to fee_estimates.dat.
+2026-10-10T15:28:38Z [Legacy deferred] Releasing wallet Legacy deferred..
+2026-10-10T15:28:38Z [Legacy savings] Releasing wallet Legacy savings..
+2026-10-10T15:28:38Z Shutdown: done

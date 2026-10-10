@@ -1,0 +1,2 @@
+{"id": "privacy-restored", "features": ["F32.S04"], "description": "After restart the saved privacy preference still masks balances.", "actual": true, "expected": true, "status": "passed", "utc": "2026-10-10T15:36:17.150272+00:00"}
+{"id": "window-placement-restored", "features": ["F26.S02"], "description": "Main window size and position survive a clean restart.", "actual": [80, 90, 1080, 740], "expected": [80, 90, 1080, 740], "status": "passed", "utc": "2026-10-10T15:36:17.159726+00:00"}

@@ -1,0 +1,1 @@
+{"id": "watchonly-receive", "features": ["F08.S09"], "description": "Watch-only wallet generates a receive address from imported public descriptors.", "actual": [false, true], "expected": [false, true], "status": "passed", "utc": "2026-10-10T15:24:26.624224+00:00"}

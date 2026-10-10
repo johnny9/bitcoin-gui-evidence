@@ -438,7 +438,7 @@ async function main() {
     await page.screenshot({path:output+'/rerun-criterion.png',fullPage:true});
     await go('#tests');
     await page.screenshot({path:output+'/rerun-results.png'});
-    await page.$eval('.detailed-report',el=>{el.open=true;el.scrollIntoView();});
+    await page.$eval('[data-rerun="20261010-send-create"]',el=>{el.open=true;el.scrollIntoView();});
     assert.ok(await page.$('.detailed-report[open] a[href="gui-feature-evidence/reruns/20261010-send-create/test-fix.patch"]'));
     await page.setViewport({width:390,height:844});
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
@@ -481,7 +481,39 @@ async function main() {
     assert.equal(await page.$$eval('.gallery-card .app-dot.widgets',els=>els.length),3);
     await page.screenshot({path:output+'/unconfirmed-gallery.png'});
   });
-  await check('All 120 selected captures decode in the browser',async()=>{
+  await check('Additional Widgets evidence is criterion-specific and preserves QML assessments',async()=>{
+    await go('#feature/F04');
+    const proof = await page.evaluate(()=>{
+      const d=window.REVIEW_EVIDENCE;
+      const rows=d.groups.flatMap(g=>g.criteria);
+      return {collection:d.collections[0],missing:rows.filter(c=>!c.applications.widgets.captures.length).map(c=>c.id),
+        backup:rows.find(c=>c.id==='F04.S02'),device:rows.find(c=>c.id==='F15.S03'),total:d.captures.length};
+    });
+    assert.equal(proof.collection.selectedCaptures.length,61);
+    assert.equal(proof.collection.newlyCapturedCriteria,58);
+    assert.equal(proof.collection.assertions,44);
+    assert.equal(proof.missing.length,11);
+    assert.equal(proof.total,181);
+    assert.equal(proof.backup.applications.widgets.status,'assertions');
+    assert.equal(proof.backup.snapshotWidgetsEvidence.captures.length,0);
+    assert.ok(proof.backup.applications.widgets.captures.every(p=>p.startsWith('collections/20261010-widgets/')));
+    assert.equal(proof.backup.applications.qml.status,'source');
+    assert.equal(proof.backup.implementation.status,'parity');
+    assert.equal(proof.device.applications.widgets.captures.length,0);
+    assert.equal(proof.device.implementation.status,'partial');
+    assert.ok(await page.$('.criterion-card a[href="gui-feature-evidence/collections/20261010-widgets/report.md"]'));
+    await page.screenshot({path:output+'/widgets-migration-criteria.png'});
+    await go('#feature/F04?tab=tests');
+    assert.ok(await page.$('.module-list a[href*="walletcontroller.cpp"]'));
+    assert.ok(await page.$('.tests-table a[href$="collections/20261010-widgets/logs/checks.json"]'));
+    await go('#tests');
+    await page.click('[data-collection="20261010-widgets"] summary');
+    const report=await page.$eval('[data-collection="20261010-widgets"]',el=>el.textContent);
+    assert.ok(report.includes('Remaining screenshot gaps'));
+    assert.ok(report.includes('F27.S04'));
+    assert.ok(report.includes('Failed attempts and validation limits'));
+  });
+  await check('All 181 selected captures decode in the browser',async()=>{
     const bad=await page.evaluate(async()=>{
       const results=await Promise.all(window.REVIEW_EVIDENCE.captures.map(photo=>new Promise(resolve=>{
         const img=new Image();img.onload=()=>resolve(img.naturalWidth===photo.width&&img.naturalHeight===photo.height?null:photo.path);img.onerror=()=>resolve(photo.path);img.src='gui-feature-evidence/'+photo.path;
@@ -502,6 +534,13 @@ async function main() {
     await page.bringToFront();
   });
   await page.setViewport({width:390,height:844,deviceScaleFactor:1});
+  await check('Expanded Widgets capture report fits on mobile',async()=>{
+    await go('#tests');
+    await page.click('[data-collection="20261010-widgets"] summary');
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+    await page.$eval('[data-collection="20261010-widgets"]',el=>el.scrollIntoView());
+    await page.screenshot({path:output+'/widgets-report-mobile.png'});
+  });
   await go('#catalog?evidence=any');
   await check('Mobile catalog fits without horizontal overflow',async()=>{
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);

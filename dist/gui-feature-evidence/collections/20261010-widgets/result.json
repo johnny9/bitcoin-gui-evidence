@@ -1,0 +1,1514 @@
+{
+  "id": "20261010-widgets",
+  "date": "2026-10-10",
+  "application": "widgets",
+  "title": "Qt Widgets: additional reference evidence",
+  "snapshotCatalogId": "b4b1026b74ad8bf0a1628c9889b82193d33d210c3aa0170e94783f371fe15c0b",
+  "sourceRevision": "f739c7876b81304bdc72e7eaa307702da269ac31",
+  "binarySha256": "45f42bea79e43dcba84cf4dd22b51585a293c4ee7f65250da23d024aa53fdee4",
+  "driverSha256": "55eb05e587d1d761b370bb8eb82b8b24e4447c027f01fd8a2c9eeda5a681584f",
+  "initialCriteriaWithoutCaptures": 69,
+  "newlyCapturedCriteria": 58,
+  "remainingCriteriaWithoutCaptures": 11,
+  "assertions": 44,
+  "criteria": {
+    "F02.S01": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: The GUI reopens the previously closed wallet.",
+      "checks": [
+        "reopen-existing-wallet"
+      ],
+      "limit": ""
+    },
+    "F02.S04": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: GUI closes the selected wallet while other wallets remain loaded. After the GUI closes all wallets, node RPC still responds.",
+      "checks": [
+        "close-selected-wallet",
+        "node-without-wallets"
+      ],
+      "limit": ""
+    },
+    "F03.S04": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: GUI restores a legacy backup and converts it into a loaded SQLite descriptor wallet.",
+      "checks": [
+        "legacy-restore-migrate"
+      ],
+      "limit": ""
+    },
+    "F04.S01": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: GUI restores a legacy backup and converts it into a loaded SQLite descriptor wallet.",
+      "checks": [
+        "legacy-restore-migrate"
+      ],
+      "limit": ""
+    },
+    "F04.S02": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: GUI migration automatically retains a nonempty original-format backup.",
+      "checks": [
+        "migration-backup"
+      ],
+      "limit": ""
+    },
+    "F04.S03": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: Original receiving labels and watch-only information survive migration. Limit: Checks cover receiving labels and watch-only addresses; not every historical transaction or script type.",
+      "checks": [
+        "migration-contents"
+      ],
+      "limit": "Checks cover receiving labels and watch-only addresses; not every historical transaction or script type."
+    },
+    "F04.S04": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: Wallet is migrated on disk and remains unloaded. Previously deferred migrated wallet can later be opened through the GUI.",
+      "checks": [
+        "deferred-migration-unloaded",
+        "open-deferred-migrated-wallet"
+      ],
+      "limit": ""
+    },
+    "F05.S03": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: Separate node restores the GUI-exported wallet with public monitoring descriptors and no spending keys. Restore is RPC fixture setup. The independently restored watch-only wallet is loaded in the second GUI and has a rediscovered balance. Limit: Export uses the GUI; restoring the export on the second node is RPC fixture setup. The final screenshot shows the restored monitoring wallet.",
+      "checks": [
+        "exported-monitor-on-second-node",
+        "transferred-monitor-visible"
+      ],
+      "limit": "Export uses the GUI; restoring the export on the second node is RPC fixture setup. The final screenshot shows the restored monitoring wallet."
+    },
+    "F06.S07": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: Different repeated passphrases produce a visible validation error. Limit: Repeated-passphrase mismatch is covered; Caps Lock and other entry mistakes were not exercised.",
+      "checks": [
+        "passphrase-mismatch"
+      ],
+      "limit": "Repeated-passphrase mismatch is covered; Caps Lock and other entry mistakes were not exercised."
+    },
+    "F07.S03": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: Clicking a recent transaction opens the full history.",
+      "checks": [
+        "recent-opens-history"
+      ],
+      "limit": ""
+    },
+    "F07.S04": {
+      "status": "Visual evidence only",
+      "detail": "October 10 capture pass: Synchronization overlay explains that wallet information can be out of date. Synthetic regtest at genesis; not a mainnet IBD run. Wallet remains accessible while the status bar reports incomplete synchronization. Limit: Captured on isolated regtest with incomplete synchronization; full public-network initial synchronization was not run.",
+      "checks": [],
+      "limit": "Captured on isolated regtest with incomplete synchronization; full public-network initial synchronization was not run."
+    },
+    "F08.S06": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: Actual drag-and-drop delivers an image to an independent Qt application. Limit: The receiver is a separate Qt test application accepting the actual dragged image. Other desktop applications were not tested.",
+      "checks": [
+        "qr-drag-to-external-app"
+      ],
+      "limit": "The receiver is a separate Qt test application accepting the actual dragged image. Other desktop applications were not tested."
+    },
+    "F08.S09": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: Watch-only wallet generates a receive address from imported public descriptors.",
+      "checks": [
+        "watchonly-receive"
+      ],
+      "limit": ""
+    },
+    "F09.S07": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: A wallet with the matching local key signs the watch-only proposal and exports a finalizable PSBT. Limit: Local spending keys are covered; a physical external signer was not used.",
+      "checks": [
+        "sign-watchonly-proposal"
+      ],
+      "limit": "Local spending keys are covered; a physical external signer was not used."
+    },
+    "F09.S08": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: Watch-only GUI produces a decodable PSBT in the clipboard without signatures.",
+      "checks": [
+        "watchonly-unsigned-psbt"
+      ],
+      "limit": ""
+    },
+    "F10.S03": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: A second process passes its payment URI to the already-running GUI. Limit: A second Bitcoin process hands a URI to the running GUI. OS URL registration and dragging URIs were not tested.",
+      "checks": [
+        "running-uri-handoff"
+      ],
+      "limit": "A second Bitcoin process hands a URI to the running GUI. OS URL registration and dragging URIs were not tested."
+    },
+    "F12.S09": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: Application requires confirmation for a change destination outside the selected wallet.",
+      "checks": [
+        "unknown-change-confirmation"
+      ],
+      "limit": ""
+    },
+    "F13.S02": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: Watch-only GUI produces a decodable PSBT in the clipboard without signatures. Limit: This pass covers a configured watch-only wallet; the original targeted assertion covers a spending wallet.",
+      "checks": [
+        "watchonly-unsigned-psbt"
+      ],
+      "limit": "This pass covers a configured watch-only wallet; the original targeted assertion covers a spending wallet."
+    },
+    "F13.S03": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: Watch-only GUI produces a decodable PSBT in the clipboard without signatures. Limit: GUI transaction creation is single-signature. The multisig PSBT used below was prepared by RPC, so it does not prove GUI multisig creation.",
+      "checks": [
+        "watchonly-unsigned-psbt"
+      ],
+      "limit": "GUI transaction creation is single-signature. The multisig PSBT used below was prepared by RPC, so it does not prove GUI multisig creation."
+    },
+    "F13.S05": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: Watch-only GUI produces a decodable PSBT in the clipboard without signatures. Saved PSBT matches the clipboard transaction.",
+      "checks": [
+        "watchonly-unsigned-psbt",
+        "psbt-file-roundtrip"
+      ],
+      "limit": ""
+    },
+    "F14.S03": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: A wallet with the matching local key signs the watch-only proposal and exports a finalizable PSBT. The first cosigner adds exactly one partial signature. First local cosigner signs and exports a PSBT that still needs the second signature. Passing the first signer PSBT to the second GUI wallet yields a complete transaction.",
+      "checks": [
+        "sign-watchonly-proposal",
+        "multisig-partial-signature-present",
+        "first-multisig-signature",
+        "second-multisig-signature"
+      ],
+      "limit": ""
+    },
+    "F14.S05": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: The first cosigner adds exactly one partial signature. First local cosigner signs and exports a PSBT that still needs the second signature. Passing the first signer PSBT to the second GUI wallet yields a complete transaction.",
+      "checks": [
+        "multisig-partial-signature-present",
+        "first-multisig-signature",
+        "second-multisig-signature"
+      ],
+      "limit": ""
+    },
+    "F14.S06": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: A wallet with the matching local key signs the watch-only proposal and exports a finalizable PSBT. First local cosigner signs and exports a PSBT that still needs the second signature. Limit: The partially signed 2-of-2 PSBT is transferred through the clipboard. Saving a partially signed PSBT to a file was not checked.",
+      "checks": [
+        "sign-watchonly-proposal",
+        "first-multisig-signature"
+      ],
+      "limit": "The partially signed 2-of-2 PSBT is transferred through the clipboard. Saving a partially signed PSBT to a file was not checked."
+    },
+    "F14.S08": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: GUI broadcasts the fully signed multisig transaction with no loaded wallet.",
+      "checks": [
+        "wallet-free-broadcast"
+      ],
+      "limit": ""
+    },
+    "F16.S09": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: Explorer action substitutes the real selected transaction ID and dispatches it to the external handler. Limit: An independent recording handler receives the substituted transaction URL; it does not contact or validate a public block explorer.",
+      "checks": [
+        "external-explorer-transaction-link"
+      ],
+      "limit": "An independent recording handler receives the substituted transaction URL; it does not contact or validate a public block explorer."
+    },
+    "F20.S01": {
+      "status": "Visual evidence only",
+      "detail": "October 10 capture pass: First-run dialog offers the default or a custom data directory and explains disk space. Limit: The real chooser is shown and cancelled. This pass does not assert persistence of a newly chosen data directory.",
+      "checks": [],
+      "limit": "The real chooser is shown and cancelled. This pass does not assert persistence of a newly chosen data directory."
+    },
+    "F20.S04": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: The second GUI node downloads and validates the local peer chain to the same best block. Limit: A second node downloads and validates 15,120 blocks from a local regtest peer. The information screenshot was taken after restarting its GUI following a live-capture timeout; this is not mainnet IBD coverage.",
+      "checks": [
+        "local-peer-block-download"
+      ],
+      "limit": "A second node downloads and validates 15,120 blocks from a local regtest peer. The information screenshot was taken after restarting its GUI following a live-capture timeout; this is not mainnet IBD coverage."
+    },
+    "F20.S06": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: After the GUI closes all wallets, node RPC still responds.",
+      "checks": [
+        "node-without-wallets"
+      ],
+      "limit": ""
+    },
+    "F20.S07": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: GUI starts on the selected network with peer activity disabled. Limit: All five networks start in isolated offline mode and report the requested chain. Public peer routing and full network synchronization were not exercised.",
+      "checks": [
+        "network-main",
+        "network-test",
+        "network-testnet4",
+        "network-signet",
+        "network-regtest"
+      ],
+      "limit": "All five networks start in isolated offline mode and report the requested chain. Public peer routing and full network synchronization were not exercised."
+    },
+    "F21.S09": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: Copy IP/Netmask writes the selected banned range to the clipboard.",
+      "checks": [
+        "copy-banned-range"
+      ],
+      "limit": ""
+    },
+    "F22.S04": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: The GUI passes its regtest debug.log path to the external viewer.",
+      "checks": [
+        "open-debug-log"
+      ],
+      "limit": ""
+    },
+    "F22.S09": {
+      "status": "Visual evidence only",
+      "detail": "October 10 capture pass: The in-app RPC console documents descriptor import, including rescanning. Visual evidence for RPC access and help; not proof of every advanced operation. Limit: The screenshot shows descriptor-import help in the live RPC console. It does not prove completion of every listed advanced RPC operation.",
+      "checks": [],
+      "limit": "The screenshot shows descriptor-import help in the live RPC console. It does not prove completion of every listed advanced RPC operation."
+    },
+    "F23.S10": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: The GUI opens bitcoin.conf using the configured external application. Limit: The GUI opens its configuration file in an independent read-only test viewer. Editing and applying an advanced setting were not exercised.",
+      "checks": [
+        "open-configuration-file"
+      ],
+      "limit": "The GUI opens its configuration file in an independent read-only test viewer. Editing and applying an advanced setting were not exercised."
+    },
+    "F23.S12": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: Reset preserves the former preferences in a backup and restores the advanced-control default. Limit: The previous preferences are backed up and the advanced-control default is checked after restart; not every preference is asserted.",
+      "checks": [
+        "preferences-reset-backed-up"
+      ],
+      "limit": "The previous preferences are backed up and the advanced-control default is checked after restart; not every preference is asserted."
+    },
+    "F25.S04": {
+      "status": "Visual evidence only",
+      "detail": "October 10 capture pass: Unreadable settings trigger a critical dialog with Reset and Abort in a session without a notification service. Limit: The critical startup dialog is captured with an unavailable D-Bus address. Other notification-backend failures were not exercised.",
+      "checks": [],
+      "limit": "The critical startup dialog is captured with an unavailable D-Bus address. Other notification-backend failures were not exercised."
+    },
+    "F26.S01": {
+      "status": "Visual evidence only",
+      "detail": "October 10 capture pass: Window arranged before restarting to verify saved placement. Limit: A positioned main window is visible; all hide/restore paths are not demonstrated by this frame.",
+      "checks": [],
+      "limit": "A positioned main window is visible; all hide/restore paths are not demonstrated by this frame."
+    },
+    "F26.S02": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: Main window size and position survive a clean restart.",
+      "checks": [
+        "window-placement-restored"
+      ],
+      "limit": ""
+    },
+    "F26.S04": {
+      "status": "Visual evidence only",
+      "detail": "October 10 capture pass: Node diagnostics can remain open alongside the wallet. Independent node and wallet windows are open together.",
+      "checks": [],
+      "limit": ""
+    },
+    "F27.S02": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: The -min startup option starts the main window minimized. Limit: The screenshot deliberately shows the desktop tray while the main window is minimized; the window state is asserted separately.",
+      "checks": [
+        "start-minimized"
+      ],
+      "limit": "The screenshot deliberately shows the desktop tray while the main window is minimized; the window state is asserted separately."
+    },
+    "F27.S03": {
+      "status": "Visual evidence only",
+      "detail": "October 10 capture pass: The real startup splash reports initialization progress.",
+      "checks": [],
+      "limit": ""
+    },
+    "F27.S05": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: All five network GUI sessions exited cleanly through the Exit action.",
+      "checks": [
+        "network-gui-clean-exits"
+      ],
+      "limit": ""
+    },
+    "F27.S06": {
+      "status": "Visual evidence only",
+      "detail": "October 10 capture pass: The real application shutdown window explains that shutdown is in progress.",
+      "checks": [],
+      "limit": ""
+    },
+    "F27.S07": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: Aborting startup leaves the invalid settings file byte-for-byte unchanged. Limit: Abort is exercised and preserves the invalid settings file byte-for-byte. Reset is visible, but recovery through that button was not exercised.",
+      "checks": [
+        "abort-preserves-settings"
+      ],
+      "limit": "Abort is exercised and preserves the invalid settings file byte-for-byte. Reset is visible, but recovery through that button was not exercised."
+    },
+    "F28.S05": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: Alt+1 returns to the overview. Limit: Alt+1 navigation is checked; the complete shortcut set was not tested.",
+      "checks": [
+        "keyboard-overview"
+      ],
+      "limit": "Alt+1 navigation is checked; the complete shortcut set was not tested."
+    },
+    "F29.S06": {
+      "status": "Visual evidence only",
+      "detail": "October 10 capture pass: Hover guidance explains how subtracting fees changes the recipient amount.",
+      "checks": [],
+      "limit": ""
+    },
+    "F30.S01": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: Different repeated passphrases produce a visible validation error. Limit: Passphrase mismatch and unreadable-settings errors are captured; this is not exhaustive coverage of every operation result.",
+      "checks": [
+        "passphrase-mismatch"
+      ],
+      "limit": "Passphrase mismatch and unreadable-settings errors are captured; this is not exhaustive coverage of every operation result."
+    },
+    "F30.S03": {
+      "status": "Visual evidence only",
+      "detail": "October 10 capture pass: Expanded diagnostic details identify the settings parsing error.",
+      "checks": [],
+      "limit": ""
+    },
+    "F30.S04": {
+      "status": "Visual evidence only",
+      "detail": "October 10 capture pass: Closing the selected wallet requires confirmation. Unreadable settings trigger a critical dialog with Reset and Abort in a session without a notification service. A destination outside this wallet triggers an explicit warning before using it for change.",
+      "checks": [],
+      "limit": ""
+    },
+    "F30.S05": {
+      "status": "Visual evidence only",
+      "detail": "October 10 capture pass: Actual wallet rescan progress over a 15,000-block regtest history.",
+      "checks": [],
+      "limit": ""
+    },
+    "F30.S07": {
+      "status": "Visual evidence only",
+      "detail": "October 10 capture pass: Synchronization overlay explains that wallet information can be out of date. Synthetic regtest at genesis; not a mainnet IBD run. Wallet remains accessible while the status bar reports incomplete synchronization. Limit: The overlay can be hidden while incomplete-sync status remains visible on isolated regtest.",
+      "checks": [],
+      "limit": "The overlay can be hidden while incomplete-sync status remains visible on isolated regtest."
+    },
+    "F31.S01": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: A second process passes its payment URI to the already-running GUI. Limit: Process-to-process URI handoff is checked. Desktop URL registration and URI drag and drop were not exercised.",
+      "checks": [
+        "running-uri-handoff"
+      ],
+      "limit": "Process-to-process URI handoff is checked. Desktop URL registration and URI drag and drop were not exercised."
+    },
+    "F31.S02": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: GUI starts on the selected network with peer activity disabled. Limit: Distinct network names are captured in each instance; simultaneous multi-network desktop appearance was not tested.",
+      "checks": [
+        "network-main",
+        "network-test",
+        "network-testnet4",
+        "network-signet",
+        "network-regtest"
+      ],
+      "limit": "Distinct network names are captured in each instance; simultaneous multi-network desktop appearance was not tested."
+    },
+    "F31.S05": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: Explorer action substitutes the real selected transaction ID and dispatches it to the external handler. Limit: The recording handler proves URL dispatch and transaction-ID substitution, not availability of a public block explorer.",
+      "checks": [
+        "external-explorer-transaction-link"
+      ],
+      "limit": "The recording handler proves URL dispatch and transaction-ID substitution, not availability of a public block explorer."
+    },
+    "F32.S03": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: The mask preference remains enabled after switching wallets.",
+      "checks": [
+        "privacy-across-wallets"
+      ],
+      "limit": ""
+    },
+    "F32.S04": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: After restart the saved privacy preference still masks balances.",
+      "checks": [
+        "privacy-restored"
+      ],
+      "limit": ""
+    },
+    "F34.S01": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: Rescan completes through the current chain tip. Limit: A real rescan completes through the current chain tip. The check does not compare every rediscovered transaction with an independent history oracle.",
+      "checks": [
+        "wallet-rescan-completed"
+      ],
+      "limit": "A real rescan completes through the current chain tip. The check does not compare every rediscovered transaction with an independent history oracle."
+    },
+    "F34.S02": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: Rescan completes through the current chain tip. Limit: A real progress dialog is captured at 1% and completion is asserted separately; intermediate percentages were not exhaustively checked.",
+      "checks": [
+        "wallet-rescan-completed"
+      ],
+      "limit": "A real progress dialog is captured at 1% and completion is asserted separately; intermediate percentages were not exhaustively checked."
+    },
+    "F34.S03": {
+      "status": "Assertions collected",
+      "detail": "October 10 capture pass: GUI cancellation causes the in-progress rescan to return an abort result.",
+      "checks": [
+        "wallet-rescan-cancelled"
+      ],
+      "limit": ""
+    }
+  },
+  "remainingGaps": {
+    "F08.S08": "No compatible physical signing device was attached; on-device address verification remains unproven.",
+    "F15.S02": "No physical signing device was attached; a screenshot of a simulated signer would not prove key custody on a device.",
+    "F15.S03": "Receiving-address generation and verification on a physical signing device remain untested.",
+    "F15.S04": "No physical device was available to demonstrate payment authorization.",
+    "F15.S05": "Local multisig exchange is captured under F14, but it does not prove continuation through an external signing device.",
+    "F25.S03": "The existing notification evidence does not demonstrate all informational, warning and critical desktop categories. This pass did not produce a new capture that establishes that scope.",
+    "F25.S05": "No controlled notification-service comparison during historical wallet loading was recorded. A silent desktop alone would not prove suppression.",
+    "F27.S04": "The startup-cancellation attempt missed the short-lived splash screen. The remaining GUI was closed normally after startup; that is not proof of cancellation during initialization.",
+    "F27.S08": "This pass ran on Linux X11. Windows session-shutdown coordination requires a dedicated Windows run.",
+    "F31.S03": "One Linux appearance was used. No controlled desktop-theme change was captured.",
+    "F31.S04": "This pass ran on Linux. macOS background-throttling behavior requires macOS runtime measurement."
+  },
+  "selectedCaptures": [
+    {
+      "path": "collections/20261010-widgets/media/widgets/sync-overlay-wallet-outdated.png",
+      "caption": "Synchronization overlay explains that wallet information can be out of date. Synthetic regtest at genesis; not a mainnet IBD run.",
+      "features": [
+        "F07.S04",
+        "F30.S07"
+      ],
+      "note": "Synchronization overlay explains that wallet information can be out of date. Synthetic regtest at genesis; not a mainnet IBD run.",
+      "utc": "2026-10-10T15:23:40.370185+00:00",
+      "sha256": "7772ea20fe8998e5c51ee1c89d276dd12d28a44bc01b7703ba3af817b801b42c",
+      "application": "widgets",
+      "width": 755,
+      "height": 483
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/sync-background-wallet-access.png",
+      "caption": "Wallet remains accessible while the status bar reports incomplete synchronization.",
+      "features": [
+        "F07.S04",
+        "F30.S07"
+      ],
+      "note": "Wallet remains accessible while the status bar reports incomplete synchronization.",
+      "utc": "2026-10-10T15:23:41.107925+00:00",
+      "sha256": "c041cde2ab99571c0d83e9bc183dec09d0cf380054bfd4b35c9c4c64172960da",
+      "application": "widgets",
+      "width": 755,
+      "height": 483
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/close-wallet-confirmation.png",
+      "caption": "Closing the selected wallet requires confirmation.",
+      "features": [
+        "F02.S04",
+        "F30.S04"
+      ],
+      "note": "Closing the selected wallet requires confirmation.",
+      "utc": "2026-10-10T15:24:00.870125+00:00",
+      "sha256": "d51b687392b16516f48ba61aafa318cb9c9f413c54c335495b10ee1ec1cc624f",
+      "application": "widgets",
+      "width": 395,
+      "height": 114
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/open-wallet-menu.png",
+      "caption": "File menu offers opening an existing wallet.",
+      "features": [
+        "F02.S01"
+      ],
+      "note": "Original X11 desktop capture.",
+      "utc": "2026-10-10T15:24:01.727648+00:00",
+      "sha256": "0b94ddb2b2cd3bd2fd5c3698877266ff797ac3ed1457e844ea723eaca7c1e229",
+      "application": "widgets",
+      "width": 1440,
+      "height": 1080
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/open-existing-wallet.png",
+      "caption": "Open Wallet lists the closed Recipient wallet for reopening.",
+      "features": [
+        "F02.S01"
+      ],
+      "note": "Original X11 desktop capture.",
+      "utc": "2026-10-10T15:24:24.491659+00:00",
+      "sha256": "f1fcfd78136591d6f2190a265467972437a1c6779c3cbf6eea2b94e3d05e2e88",
+      "application": "widgets",
+      "width": 1440,
+      "height": 1080
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/reopened-wallet.png",
+      "caption": "Previously closed wallet is open again and active.",
+      "features": [
+        "F02.S01"
+      ],
+      "note": "Previously closed wallet is open again and active.",
+      "utc": "2026-10-10T15:24:25.670884+00:00",
+      "sha256": "9c7ac0219ffd619db31ff1e2cc9d3b1f559e3ee4efd433cb53cfd8ef512ffc60",
+      "application": "widgets",
+      "width": 1100,
+      "height": 780
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/watchonly-receiving-address.png",
+      "caption": "Receiving address generated from a configured wallet with private keys disabled.",
+      "features": [
+        "F08.S09"
+      ],
+      "note": "Receiving address generated from a configured wallet with private keys disabled.",
+      "utc": "2026-10-10T15:24:27.157539+00:00",
+      "sha256": "7729029817f0fef279d3f13185999f90540b70588773ef30638de0ed85ba065c",
+      "application": "widgets",
+      "width": 487,
+      "height": 506
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/watchonly-prepare-payment.png",
+      "caption": "Configured watch-only wallet prepares a payment without spending keys.",
+      "features": [
+        "F09.S08",
+        "F13.S02"
+      ],
+      "note": "Configured watch-only wallet prepares a payment without spending keys.",
+      "utc": "2026-10-10T15:28:09.581805+00:00",
+      "sha256": "a5b1082a3990c69f249c8098a2251d4d34e78167c23c84b3db91a42233e79752",
+      "application": "widgets",
+      "width": 1100,
+      "height": 780
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/unsigned-psbt-clipboard.png",
+      "caption": "The unsigned transaction has been copied to the clipboard and can be saved.",
+      "features": [
+        "F13.S05"
+      ],
+      "note": "The unsigned transaction has been copied to the clipboard and can be saved.",
+      "utc": "2026-10-10T15:28:13.419122+00:00",
+      "sha256": "8c8ff007065ccd625b7bd0ac89959b3aba058e9ff4c644e0204733a7323ed324",
+      "application": "widgets",
+      "width": 188,
+      "height": 128
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/unsigned-psbt-save.png",
+      "caption": "Save the unsigned PSBT for offline signing.",
+      "features": [
+        "F13.S05"
+      ],
+      "note": "Save the unsigned PSBT for offline signing.",
+      "utc": "2026-10-10T15:28:14.206761+00:00",
+      "sha256": "059262cd44866a8ea946091bb5625fe26d82f3c7fb91fd6f73274494ca77f15c",
+      "application": "widgets",
+      "width": 624,
+      "height": 412
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/signed-psbt-export.png",
+      "caption": "Matching local wallet signs the imported single-signature PSBT and copies it for further transfer.",
+      "features": [
+        "F09.S07",
+        "F14.S03",
+        "F14.S06"
+      ],
+      "note": "Matching local wallet signs the imported single-signature PSBT and copies it for further transfer.",
+      "utc": "2026-10-10T15:28:16.020281+00:00",
+      "sha256": "e9ff22bdbc5269f016f04ef775ef6f4d52d06f5dcba3c9e589ea73fa8a0cf1f6",
+      "application": "widgets",
+      "width": 585,
+      "height": 327
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/recent-transaction-in-history.png",
+      "caption": "A recent overview transaction is selected in the full transaction history.",
+      "features": [
+        "F07.S03"
+      ],
+      "note": "A recent overview transaction is selected in the full transaction history.",
+      "utc": "2026-10-10T15:28:17.864187+00:00",
+      "sha256": "8ae7f3cd2e78f65970f3cc80e36ae5c18c83131f08c235339359c7330d05b161",
+      "application": "widgets",
+      "width": 1100,
+      "height": 780
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/keyboard-navigation-overview.png",
+      "caption": "Overview reached through the application keyboard shortcut.",
+      "features": [
+        "F28.S05"
+      ],
+      "note": "Overview reached through the application keyboard shortcut.",
+      "utc": "2026-10-10T15:28:18.432338+00:00",
+      "sha256": "52d486567431c9e257fa881978e66e6c37e3eaab1f38934c4c3381769e3992a6",
+      "application": "widgets",
+      "width": 1100,
+      "height": 780
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/console-import-descriptors-help.png",
+      "caption": "The in-app RPC console documents descriptor import, including rescanning. Visual evidence for RPC access and help; not proof of every advanced operation.",
+      "features": [
+        "F22.S09"
+      ],
+      "note": "The in-app RPC console documents descriptor import, including rescanning. Visual evidence for RPC access and help; not proof of every advanced operation.",
+      "utc": "2026-10-10T15:28:20.392059+00:00",
+      "sha256": "1e91366724504151468fe2465aee9d7a166fe3d41a5a3e8bddd2d7fe24dd0d3b",
+      "application": "widgets",
+      "width": 740,
+      "height": 430
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/diagnostics-alongside-wallet.png",
+      "caption": "Node diagnostics can remain open alongside the wallet.",
+      "features": [
+        "F26.S04"
+      ],
+      "note": "Node diagnostics can remain open alongside the wallet.",
+      "utc": "2026-10-10T15:28:21.450398+00:00",
+      "sha256": "da7c57bacce410bbdd3113a8d0347b88ec1b1fb7bee24dbcc8a31b2b6e0c7886",
+      "application": "widgets",
+      "width": 740,
+      "height": 430
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/diagnostics-and-wallet-windows.png",
+      "caption": "Independent node and wallet windows are open together.",
+      "features": [
+        "F26.S04"
+      ],
+      "note": "Original X11 desktop capture.",
+      "utc": "2026-10-10T15:28:21.827985+00:00",
+      "sha256": "2be293b99681c6c832e47a4a522f732d9eb391bf37c251f4dea2cd00384926b9",
+      "application": "widgets",
+      "width": 1440,
+      "height": 1080
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/restore-migrate-legacy-confirmation.png",
+      "caption": "Legacy backup restore explains descriptor conversion, the automatic backup, and separate watch-only wallets.",
+      "features": [
+        "F03.S04",
+        "F04.S01",
+        "F04.S02",
+        "F04.S03"
+      ],
+      "note": "Legacy backup restore explains descriptor conversion, the automatic backup, and separate watch-only wallets.",
+      "utc": "2026-10-10T15:29:32.799962+00:00",
+      "sha256": "546cd7afe669154fdc4e33466fbbb2c62b2edf4d5e0a1aa1a04256d4dc5457f1",
+      "application": "widgets",
+      "width": 500,
+      "height": 324
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/legacy-migration-success.png",
+      "caption": "Migration reports the converted wallet and the separated watch-only wallet.",
+      "features": [
+        "F03.S04",
+        "F04.S01",
+        "F04.S02",
+        "F04.S03",
+        "F04.S04"
+      ],
+      "note": "Migration reports the converted wallet and the separated watch-only wallet.",
+      "utc": "2026-10-10T15:30:14.230550+00:00",
+      "sha256": "d13e66f6f53b9c26f2241b4a70422e99274354ebfde0b1814e0f043ac9417fcb",
+      "application": "widgets",
+      "width": 500,
+      "height": 100
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/migrated-watchonly-labels.png",
+      "caption": "The migrated watch-only wallet retains its labeled receiving address.",
+      "features": [
+        "F04.S03"
+      ],
+      "note": "The migrated watch-only wallet retains its labeled receiving address.",
+      "utc": "2026-10-10T15:30:15.605672+00:00",
+      "sha256": "192880c952e6e95f0cb91eae56f9bb00091235fe5885bea5fe4497896e14347d",
+      "application": "widgets",
+      "width": 760,
+      "height": 380
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/migrate-without-opening.png",
+      "caption": "Migration can finish without immediately loading the converted wallet.",
+      "features": [
+        "F04.S04"
+      ],
+      "note": "Migration can finish without immediately loading the converted wallet.",
+      "utc": "2026-10-10T15:30:17.274425+00:00",
+      "sha256": "e169da1b424236c36fadbb30e60d7b219bc79a070e785acb63e4a95630e2c9d1",
+      "application": "widgets",
+      "width": 422,
+      "height": 301
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/deferred-migration-success.png",
+      "caption": "Migration completed with loading disabled.",
+      "features": [
+        "F04.S04"
+      ],
+      "note": "Migration completed with loading disabled.",
+      "utc": "2026-10-10T15:30:18.040374+00:00",
+      "sha256": "479b8dee8489e762ba0756df853ef08f298786a4e15fe9f0cc5549f411448339",
+      "application": "widgets",
+      "width": 500,
+      "height": 114
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/deferred-wallet-opened.png",
+      "caption": "The previously deferred migrated wallet is now open.",
+      "features": [
+        "F04.S04"
+      ],
+      "note": "The previously deferred migrated wallet is now open.",
+      "utc": "2026-10-10T15:30:19.828205+00:00",
+      "sha256": "bd7389cd0997a167c8e36f63bf3684ab5fb6b4d88a96b15a0c65e801892fe6b3",
+      "application": "widgets",
+      "width": 1100,
+      "height": 780
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/privacy-watchonly-wallet.png",
+      "caption": "Values remain masked after switching to another loaded wallet.",
+      "features": [
+        "F32.S03"
+      ],
+      "note": "Values remain masked after switching to another loaded wallet.",
+      "utc": "2026-10-10T15:30:21.943364+00:00",
+      "sha256": "895c7b135eca08d5a6a1545ae5eaff14e17e158aa6a25246d4d83f0b21b3313c",
+      "application": "widgets",
+      "width": 1100,
+      "height": 780
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/window-position-before-restart.png",
+      "caption": "Window arranged before restarting to verify saved placement.",
+      "features": [
+        "F26.S01",
+        "F26.S02"
+      ],
+      "note": "Original X11 desktop capture.",
+      "utc": "2026-10-10T15:30:22.651640+00:00",
+      "sha256": "6486f0229328ef3646a2014bceb207641311afb368e79207c01dca27ca042f96",
+      "application": "widgets",
+      "width": 1440,
+      "height": 1080
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/initialization-progress.png",
+      "caption": "The real startup splash reports initialization progress.",
+      "features": [
+        "F27.S03"
+      ],
+      "note": "Original application frame captured during the live operation.",
+      "utc": "2026-10-10T15:36:16.057086+00:00",
+      "sha256": "bdd80615c63a2b2a786f0a299df53ee38b6f139ec19b38faf216d37a2de93733",
+      "application": "widgets",
+      "width": 480,
+      "height": 320
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/window-and-privacy-after-restart.png",
+      "caption": "Restored window placement and masked balances after restarting the application.",
+      "features": [
+        "F26.S02",
+        "F32.S04"
+      ],
+      "note": "Original X11 desktop capture.",
+      "utc": "2026-10-10T15:36:17.533204+00:00",
+      "sha256": "c8628f4484c27c4f6d23a7024b1a9bfff152b6f610054b6aee847bf0937779df",
+      "application": "widgets",
+      "width": 1440,
+      "height": 1080
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/watchonly-unsigned-review.png",
+      "caption": "Watch-only single-signature transaction review offers unsigned creation after the review countdown.",
+      "features": [
+        "F09.S08",
+        "F13.S02",
+        "F13.S03"
+      ],
+      "note": "Watch-only single-signature transaction review offers unsigned creation after the review countdown.",
+      "utc": "2026-10-10T15:36:23.153443+00:00",
+      "sha256": "b7a2f7661121f6b400f24ee8438133385d5b21dac97d1237c9f59d2e4546aed4",
+      "application": "widgets",
+      "width": 500,
+      "height": 268
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/banned-range-context-menu.png",
+      "caption": "Selected banned network range offers Copy IP/Netmask.",
+      "features": [
+        "F21.S09"
+      ],
+      "note": "Original X11 desktop capture.",
+      "utc": "2026-10-10T15:36:28.723163+00:00",
+      "sha256": "45f3e61841f913419c4671ca254ee8d2cc5622e16d0c40f58636fdca953d710e",
+      "application": "widgets",
+      "width": 1440,
+      "height": 1080
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/banned-range-selected.png",
+      "caption": "Selected banned range after copying its IP/netmask.",
+      "features": [
+        "F21.S09"
+      ],
+      "note": "Selected banned range after copying its IP/netmask.",
+      "utc": "2026-10-10T15:36:29.521341+00:00",
+      "sha256": "8090dfa0c5678776395f70474ec62add62a5f0d22d8c8dce2e6d9554bcf7205a",
+      "application": "widgets",
+      "width": 740,
+      "height": 430
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/rescan-progress.png",
+      "caption": "Actual wallet rescan progress over a 15,000-block regtest history.",
+      "features": [
+        "F34.S01",
+        "F34.S02",
+        "F30.S05"
+      ],
+      "note": "Original application frame captured during the live operation.",
+      "utc": "2026-10-10T15:36:30.659279+00:00",
+      "sha256": "af13fc98f6768058833e54527b803a9ec19558ae57dbbb94e23bcd0e91d6f5b0",
+      "application": "widgets",
+      "width": 235,
+      "height": 92
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/rescan-cancel-available.png",
+      "caption": "The ongoing wallet rescan offers cancellation.",
+      "features": [
+        "F34.S03"
+      ],
+      "note": "Original application frame captured during the live operation.",
+      "utc": "2026-10-10T15:36:37.459423+00:00",
+      "sha256": "af13fc98f6768058833e54527b803a9ec19558ae57dbbb94e23bcd0e91d6f5b0",
+      "application": "widgets",
+      "width": 235,
+      "height": 92
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/external-payment-uri-received.png",
+      "caption": "Payment URI launched from another process populates the running wallet send form. Linux process handoff; OS association and URI dragging are not covered.",
+      "features": [
+        "F10.S03",
+        "F31.S01"
+      ],
+      "note": "Payment URI launched from another process populates the running wallet send form. Linux process handoff; OS association and URI dragging are not covered.",
+      "utc": "2026-10-10T15:38:18.407568+00:00",
+      "sha256": "ca72edea55adff9c6adac46645ea2346f7f5f7f239b91454c453f8cd5af71058",
+      "application": "widgets",
+      "width": 1080,
+      "height": 740
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/send-contextual-guidance.png",
+      "caption": "Hover guidance explains how subtracting fees changes the recipient amount.",
+      "features": [
+        "F29.S06"
+      ],
+      "note": "Original X11 desktop capture.",
+      "utc": "2026-10-10T15:38:20.057698+00:00",
+      "sha256": "ca9c025ea9ed4b7becbac588faebe990b363a9763365fea453a3cece532c2260",
+      "application": "widgets",
+      "width": 1440,
+      "height": 1080
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/qr-drag-delivered.png",
+      "caption": "QR image dragged from Bitcoin Core into an independent image-receiver test application.",
+      "features": [
+        "F08.S06"
+      ],
+      "note": "Original X11 desktop capture.",
+      "utc": "2026-10-10T15:38:50.083286+00:00",
+      "sha256": "0e568644f2645f7df77a7ce1fdf12050ea5c7a4c3c8753a0b63dfc68719bdbcc",
+      "application": "widgets",
+      "width": 1440,
+      "height": 1080
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/debug-log-opened.png",
+      "caption": "Bitcoin Core opens the actual debug log in the configured external document viewer.",
+      "features": [
+        "F22.S04"
+      ],
+      "note": "Original X11 desktop capture.",
+      "utc": "2026-10-10T15:40:49.341311+00:00",
+      "sha256": "2e2b16af81b3ecd549d5eb42b82a3253f19d8946f43a0e7af500515cd1dddd75",
+      "application": "widgets",
+      "width": 1440,
+      "height": 1080
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/advanced-configuration-prompt.png",
+      "caption": "Configuration dialog explains that advanced file settings override GUI preferences.",
+      "features": [
+        "F23.S10"
+      ],
+      "note": "Configuration dialog explains that advanced file settings override GUI preferences.",
+      "utc": "2026-10-10T15:40:50.553121+00:00",
+      "sha256": "3e3f58e7de5564c9a952b0523d62d21c8d4c71fe73dd15348585d0f92341286e",
+      "application": "widgets",
+      "width": 500,
+      "height": 100
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/advanced-configuration-opened.png",
+      "caption": "Application configuration is opened through the desktop file association. The test viewer is read-only; editing is not exercised.",
+      "features": [
+        "F23.S10"
+      ],
+      "note": "Original X11 desktop capture.",
+      "utc": "2026-10-10T15:40:52.129956+00:00",
+      "sha256": "2e4eaa4204792fea2067d946fab5621db7098e697bc73375e1006d78926a44e3",
+      "application": "widgets",
+      "width": 1440,
+      "height": 1080
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/multisig-first-signature.png",
+      "caption": "First cosigner has signed; the PSBT still requires another signer.",
+      "features": [
+        "F14.S03",
+        "F14.S05",
+        "F14.S06"
+      ],
+      "note": "First cosigner has signed; the PSBT still requires another signer.",
+      "utc": "2026-10-10T15:40:53.913376+00:00",
+      "sha256": "56beeac5bedab53eccd5906f86a88d318ce1c8d2f90a70e189bf5cdf105349ab",
+      "application": "widgets",
+      "width": 585,
+      "height": 327
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/multisig-second-signature.png",
+      "caption": "Second cosigner completes the 2-of-2 transaction; broadcast becomes available.",
+      "features": [
+        "F14.S03",
+        "F14.S05"
+      ],
+      "note": "Second cosigner completes the 2-of-2 transaction; broadcast becomes available.",
+      "utc": "2026-10-10T15:40:55.626557+00:00",
+      "sha256": "1d282ce529acc5b28b060d673b26f87dde63826c579cb0507f866467597215d4",
+      "application": "widgets",
+      "width": 585,
+      "height": 327
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/close-all-wallets.png",
+      "caption": "Close all loaded wallets while keeping the node running.",
+      "features": [
+        "F02.S04"
+      ],
+      "note": "Close all loaded wallets while keeping the node running.",
+      "utc": "2026-10-10T15:40:57.730158+00:00",
+      "sha256": "ba7b0b422303fc8833ffcc13c67a3a6bbc9624ccf267a8674ed8e0a38f7572fc",
+      "application": "widgets",
+      "width": 327,
+      "height": 84
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/node-running-without-wallets.png",
+      "caption": "Bitcoin Core remains running with no wallet open.",
+      "features": [
+        "F20.S06"
+      ],
+      "note": "Bitcoin Core remains running with no wallet open.",
+      "utc": "2026-10-10T15:40:58.483303+00:00",
+      "sha256": "56f6b821005ea352feb0929d930a4ed7b5d4d0858cceef36ab8ddb92c0dde2df",
+      "application": "widgets",
+      "width": 1080,
+      "height": 740
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/wallet-free-psbt-review.png",
+      "caption": "A fully signed transaction can be inspected with no wallet open.",
+      "features": [
+        "F14.S08"
+      ],
+      "note": "A fully signed transaction can be inspected with no wallet open.",
+      "utc": "2026-10-10T15:40:59.249553+00:00",
+      "sha256": "f412bfbae758b6ee15ece9fc06090e12797cd6459d59724834a54548e050d155",
+      "application": "widgets",
+      "width": 585,
+      "height": 327
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/wallet-free-psbt-broadcast.png",
+      "caption": "Successful transaction broadcast from the wallet-free PSBT dialog.",
+      "features": [
+        "F14.S08"
+      ],
+      "note": "Successful transaction broadcast from the wallet-free PSBT dialog.",
+      "utc": "2026-10-10T15:40:59.966125+00:00",
+      "sha256": "e6c32505256092dc2951b31ecccf4f816104b1bb98097483aabac0b71957349b",
+      "application": "widgets",
+      "width": 899,
+      "height": 327
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/reset-preferences-backup.png",
+      "caption": "Reset confirmation identifies the settings backup and required shutdown.",
+      "features": [
+        "F23.S12"
+      ],
+      "note": "Reset confirmation identifies the settings backup and required shutdown.",
+      "utc": "2026-10-10T15:41:01.180168+00:00",
+      "sha256": "8a47c74d250702a91595c08a6d90eabd1390f8a503fc77749a0e5d978b52fd77",
+      "application": "widgets",
+      "width": 500,
+      "height": 142
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/network-main.png",
+      "caption": "Node information identifies main in an isolated offline startup. No public-chain download is claimed.",
+      "features": [
+        "F20.S07",
+        "F31.S02"
+      ],
+      "note": "Node information identifies main in an isolated offline startup. No public-chain download is claimed.",
+      "utc": "2026-10-10T15:41:54.925067+00:00",
+      "sha256": "231f35956df242b4913cd506aa805465550ddd40894f260aca2e3e800fc11ef5",
+      "application": "widgets",
+      "width": 740,
+      "height": 430
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/network-test.png",
+      "caption": "Node information identifies test in an isolated offline startup. No public-chain download is claimed.",
+      "features": [
+        "F20.S07",
+        "F31.S02"
+      ],
+      "note": "Node information identifies test in an isolated offline startup. No public-chain download is claimed.",
+      "utc": "2026-10-10T15:41:56.577173+00:00",
+      "sha256": "d9062b908c9cb609d9963d3f91d63749048f460c2416196982ef8c50f3de7637",
+      "application": "widgets",
+      "width": 740,
+      "height": 430
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/network-testnet4.png",
+      "caption": "Node information identifies testnet4 in an isolated offline startup. No public-chain download is claimed.",
+      "features": [
+        "F20.S07",
+        "F31.S02"
+      ],
+      "note": "Node information identifies testnet4 in an isolated offline startup. No public-chain download is claimed.",
+      "utc": "2026-10-10T15:41:58.228855+00:00",
+      "sha256": "8b7bd80536343ae7edb24321cfbbf11c23f3615ac5ed59372d7efdb501c3374c",
+      "application": "widgets",
+      "width": 740,
+      "height": 430
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/network-signet.png",
+      "caption": "Node information identifies signet in an isolated offline startup. No public-chain download is claimed.",
+      "features": [
+        "F20.S07",
+        "F31.S02"
+      ],
+      "note": "Node information identifies signet in an isolated offline startup. No public-chain download is claimed.",
+      "utc": "2026-10-10T15:41:59.933035+00:00",
+      "sha256": "7f0eca59ad5163736f4a798035dcd4a1220333e57841dbcdba94ce7e81337b72",
+      "application": "widgets",
+      "width": 740,
+      "height": 430
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/network-regtest.png",
+      "caption": "Node information identifies regtest in an isolated offline startup. No public-chain download is claimed.",
+      "features": [
+        "F20.S07",
+        "F31.S02"
+      ],
+      "note": "Node information identifies regtest in an isolated offline startup. No public-chain download is claimed.",
+      "utc": "2026-10-10T15:42:01.584755+00:00",
+      "sha256": "98b7748551f28d55f38f7c39b767c1aeb4b49a4cf25595ba17fe331fb7da2026",
+      "application": "widgets",
+      "width": 740,
+      "height": 430
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/shutdown-progress.png",
+      "caption": "The real application shutdown window explains that shutdown is in progress.",
+      "features": [
+        "F27.S05",
+        "F27.S06"
+      ],
+      "note": "Original application frame captured during the live operation.",
+      "utc": "2026-10-10T15:42:01.795865+00:00",
+      "sha256": "d53574f024baef011a251abc011287526ba1732be92c8ed33379596902d51ca5",
+      "application": "widgets",
+      "width": 392,
+      "height": 64
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/choose-data-directory.png",
+      "caption": "First-run dialog offers the default or a custom data directory and explains disk space.",
+      "features": [
+        "F20.S01"
+      ],
+      "note": "Direct X11 window capture, without cropping or image edits.",
+      "utc": "2026-10-10T15:43:20.015672+00:00",
+      "sha256": "6ffdeb0dba702f7b93cf8f36a5a48a7b3d5444accd61eec2d1a5642205317569",
+      "application": "widgets",
+      "width": 637,
+      "height": 404
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/unreadable-settings-choices.png",
+      "caption": "Unreadable settings trigger a critical dialog with Reset and Abort in a session without a notification service.",
+      "features": [
+        "F27.S07",
+        "F30.S01",
+        "F30.S04",
+        "F25.S04"
+      ],
+      "note": "Direct X11 window capture, without cropping or image edits.",
+      "utc": "2026-10-10T15:43:21.554401+00:00",
+      "sha256": "a816c314723e359c07beb1e70e52e45bf4feb24c2e2c30d0dcf9a80ea62a8b60",
+      "application": "widgets",
+      "width": 292,
+      "height": 128
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/unreadable-settings-details.png",
+      "caption": "Expanded diagnostic details identify the settings parsing error.",
+      "features": [
+        "F27.S07",
+        "F30.S03"
+      ],
+      "note": "Direct X11 window capture, without cropping or image edits.",
+      "utc": "2026-10-10T15:43:21.992260+00:00",
+      "sha256": "1b62f7fa9db184d55172427e0c9bfbdc113bfbe7c770ffd4e28a2669cf75d917",
+      "application": "widgets",
+      "width": 292,
+      "height": 243
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/started-minimized.png",
+      "caption": "Application starts minimized with node RPC running; its native tray menu remains available.",
+      "features": [
+        "F27.S02"
+      ],
+      "note": "Original X11 desktop capture.",
+      "utc": "2026-10-10T15:46:08.190738+00:00",
+      "sha256": "658398a0873e702006d66d385ffb4662d90f56c424446e765969ec0e54383a7d",
+      "application": "widgets",
+      "width": 1440,
+      "height": 1080
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/preferences-restored-defaults.png",
+      "caption": "After reset and restart, advanced controls return to their default unchecked state.",
+      "features": [
+        "F23.S12"
+      ],
+      "note": "After reset and restart, advanced controls return to their default unchecked state.",
+      "utc": "2026-10-10T15:46:09.309815+00:00",
+      "sha256": "4dfee8f70b04d1a10f9917b46c428b31a623372991a3bbb1626fac550a392ef6",
+      "application": "widgets",
+      "width": 601,
+      "height": 440
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/passphrase-mismatch-error.png",
+      "caption": "The application rejects mismatching repeated passphrases.",
+      "features": [
+        "F06.S07",
+        "F30.S01"
+      ],
+      "note": "The application rejects mismatching repeated passphrases.",
+      "utc": "2026-10-10T15:46:11.455943+00:00",
+      "sha256": "d587f60e0c07fd0b0a90d557933f19f8660f668942076eb6b6980a7c284960ab",
+      "application": "widgets",
+      "width": 317,
+      "height": 84
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/unknown-change-confirmation.png",
+      "caption": "A destination outside this wallet triggers an explicit warning before using it for change.",
+      "features": [
+        "F12.S09",
+        "F30.S04"
+      ],
+      "note": "A destination outside this wallet triggers an explicit warning before using it for change.",
+      "utc": "2026-10-10T15:46:14.590891+00:00",
+      "sha256": "da4013603408d7bb1776f50a21ff64c66b30a9b3f6acfbd5380c225952cdd615",
+      "application": "widgets",
+      "width": 500,
+      "height": 86
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/external-explorer-menu.png",
+      "caption": "Transaction context menu includes the configured external explorer link. The endpoint is a recording test fixture.",
+      "features": [
+        "F16.S09",
+        "F31.S05"
+      ],
+      "note": "Original X11 desktop capture.",
+      "utc": "2026-10-10T15:46:18.330886+00:00",
+      "sha256": "a3790fb9bb0b17969e6023787999ec2284a537b6c266a0c0f26530c86a89d507",
+      "application": "widgets",
+      "width": 1440,
+      "height": 1080
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/external-explorer-dispatch.png",
+      "caption": "The external URL handler receives the selected transaction ID. This recording fixture does not contact a public block explorer.",
+      "features": [
+        "F16.S09",
+        "F31.S05"
+      ],
+      "note": "Original X11 desktop capture.",
+      "utc": "2026-10-10T15:47:33.771114+00:00",
+      "sha256": "570222369b3f86e99977c0159cae7155ba045f6b079a9186d3e481a4e11c3616",
+      "application": "widgets",
+      "width": 1440,
+      "height": 1080
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/watchonly-monitor-another-node.png",
+      "caption": "GUI displays the watch-only wallet restored from its export on a second node. Restore preparation used RPC.",
+      "features": [
+        "F05.S03"
+      ],
+      "note": "GUI displays the watch-only wallet restored from its export on a second node. Restore preparation used RPC.",
+      "utc": "2026-10-10T15:52:22.242126+00:00",
+      "sha256": "9c14605f949de5c756d3222c45bb55456c35d54828d12bab7bca6a9eb22ca99b",
+      "application": "widgets",
+      "width": 755,
+      "height": 483
+    },
+    {
+      "path": "collections/20261010-widgets/media/widgets/downloaded-validated-regtest-chain.png",
+      "caption": "Information from the second node after its recorded download and validation of 15,120 local regtest blocks. GUI was restarted after the live-sync capture timed out.",
+      "features": [
+        "F20.S04"
+      ],
+      "note": "Information from the second node after its recorded download and validation of 15,120 local regtest blocks. GUI was restarted after the live-sync capture timed out.",
+      "utc": "2026-10-10T15:52:23.268111+00:00",
+      "sha256": "df5a41263cf517a756dd71b08997871fdc36c8b3ef266574f8800a9eca2258ef",
+      "application": "widgets",
+      "width": 740,
+      "height": 430
+    }
+  ],
+  "files": {
+    "coverage.json": "5fb82c82f6e7b1f7d7199e4fa68d57f280b6f7aae11d90568c4874356befc3c3",
+    "logs/banned_clipboard.log": "70c075720deacc4572735868ab64c4f78f5dc08e19a441f987b7d692199a6fd3",
+    "logs/capture.command.json": "68ca527d15b6f6629e4b81df83b30b1c603668db6a9d368a8b2e64e8490106ab",
+    "logs/capture.exit": "0d30a47b87915d4d0555189c00b0543b164ec3c7ce7f97117c37794565b286d0",
+    "logs/capture.stderr": "293366de426441d567ee4a1add2b76715f0b8200d539dc3872951fd56e8ef69a",
+    "logs/capture.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/capture2.command.json": "68ca527d15b6f6629e4b81df83b30b1c603668db6a9d368a8b2e64e8490106ab",
+    "logs/capture2.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "logs/capture2.stderr": "293366de426441d567ee4a1add2b76715f0b8200d539dc3872951fd56e8ef69a",
+    "logs/capture2.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/capture3.command.json": "289a9ed03f8dd37ac5768eea9e40fc528ca74d7b7d8064437031b08abe7ecfad",
+    "logs/capture3.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "logs/capture3.stderr": "5eb50ec5cd2208dc29fd593f97a12dcc0784d2bea7fd6250d36d6f6d12393a42",
+    "logs/capture3.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/capture4.command.json": "4a47ea6c659dced52c2f28959961567ab9d58e0cbcfc9b520316a7d2bfbfdfc6",
+    "logs/capture4.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "logs/capture4.stderr": "c00b324737018a233ebc047617baaae128fb5eab7ea926f8d0b97d2ba734b383",
+    "logs/capture4.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/capture5.command.json": "608e0b6039419ac6b2a05fb9abab4b736be727496b43a75f0c8117446a8d8c10",
+    "logs/capture5.exit": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "logs/capture5.stderr": "89f9c4bb553a816f6a6d68169d759d2050d9fe323de84c60cdacb85e012a8af4",
+    "logs/capture5.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/capture6.command.json": "608e0b6039419ac6b2a05fb9abab4b736be727496b43a75f0c8117446a8d8c10",
+    "logs/capture6.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "logs/capture6.stderr": "12e415e80ef48cb01a441f4a58bae441c3ae69d812835713df165ec86b723bc7",
+    "logs/capture6.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/change_warning.log": "42aa67a740e41952f318c358cdc910372d6c1a54a894dbdd28037e1c78073e22",
+    "logs/checks.json": "6aac968224fce933796ae2384efa74daf54634e88ffcad412356e9e4cdf64bb8",
+    "logs/choose-data-directory.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "logs/choose-data-directory.stderr": "293366de426441d567ee4a1add2b76715f0b8200d539dc3872951fd56e8ef69a",
+    "logs/choose-data-directory.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/copy_banned_range.log": "05799bf4201f01ec8250365bab84c212758145aa70ffbfa72ab8a4836179019a",
+    "logs/current-tree.jsonl": "2a174db23364a81d4b0bada2cec9fafae1b1cd9bd3ff70c85ce919f4f528801e",
+    "logs/desktop_files-failure-tree.json.gz": "cf850e525ac879eb0922d7e6dde7aae6bc55ffa14c59e18deabca595b29fb3e3",
+    "logs/desktop_files.log": "6f10cf6005a1c24238e371851b561f4b9196b03140e0930b3dcc7ac63f3679e6",
+    "logs/drag_qr-failure-tree.json.gz": "d8144ce81316ce0b80955577b51f26ff80b93a076c5cb669bce53100a431778d",
+    "logs/drag_qr.log": "e1eab1c76dddf64c546f26453eaef6f8421d9606b3e863ef1edde902fb172e48",
+    "logs/explorer_configure.log": "50a05f2fa68a201664f498d74646791c78ea22fa1d0a648e538ddbfd31298beb",
+    "logs/explorer_open-failure-tree.json.gz": "bccd13dca182931a44c57a02fcbc2a9a029d070efed706d31d8ca48517c2022e",
+    "logs/explorer_open.log": "de706500336389ea2c9dbc1be2c6c4e28fe1219fdafe0978a5350644d245ae8c",
+    "logs/export_monitor.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/external-opens.jsonl": "3937166c8a360add7e564613a1d654d09a93f83fd3e866d1df3fa199e6dc569a",
+    "logs/external_uri.log": "b2de042ca541e0d6647c49c75d1a851f77ae567ebd215d8b43bdaab8e0813580",
+    "logs/extra-fixture-daemon.log.gz": "ae431ff02fc70590ad8fddc3960679a4c7dca3cf339156fbd7730d0c2685bcb2",
+    "logs/fixture-daemon.log": "50c064c33f41950124f4c19f3825b66fdfa89e8a22f8114bc13a9b1aa6bd7cc3",
+    "logs/fixture.log": "ee5a90f292f0a9416daf56c276c7ddaa948d274e1af0e80d02099f7db96c4814",
+    "logs/initial.command.json": "306d1c1c27488c168cce16fa1cd749a174ca68f1629e9567f6d8e4eb72bd1969",
+    "logs/initial.exit": "cfeb3721a817579ed0f8bf7235b8b586be2d1f6426e5f7e4c3d3d62a3015f8d7",
+    "logs/initial.stderr": "293366de426441d567ee4a1add2b76715f0b8200d539dc3872951fd56e8ef69a",
+    "logs/initial.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/input_warnings-failure-tree.json.gz": "e17e0026efa753446d0dd5515c876ee62f3cd1b08784ca90beb59b65bef9f65b",
+    "logs/input_warnings.log": "95230ca07f9dc99ba8cebde073b88c7d35c9b4445e13a27a203c303c3fb59c9f",
+    "logs/legacy-fixture.log": "c0335da04150178ce8bb55ce77aebadcee97c1c625f5ced1472cebe5ab553623",
+    "logs/migrate_finish.log": "e88d29e673afda4df05d902e5674638f9dd42f6c33b0e3562ea1b2cf65917832",
+    "logs/migrate_legacy-failure-tree.json.gz": "d02b0d557779456f779f2107b178a7ce03ddd5c85299a43e097015445da3f6e0",
+    "logs/migrate_legacy.log": "c48547b5f78207628e9321d3943919448b9b6144717a078bc6ba6ee41244cbf1",
+    "logs/monitor-node.stderr": "293366de426441d567ee4a1add2b76715f0b8200d539dc3872951fd56e8ef69a",
+    "logs/monitor-node.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/monitor-prepare.log": "8d9f462ef00e128852fd6f9249198d2143ad95c77748a87d354d2543c9083c86",
+    "logs/monitor-recovered.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "logs/monitor-recovered.stderr": "293366de426441d567ee4a1add2b76715f0b8200d539dc3872951fd56e8ef69a",
+    "logs/monitor-recovered.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/monitor-shutdown.log": "ba28def6a75cffc3cfcca06a5bbc2560caa17ce4a19a46cbf648cde374f9d1fc",
+    "logs/multisig_signing.log": "7b7e707c5bf8a1bd6348a63dc5968895c4c86e90affaaaafe4c3901525245d6f",
+    "logs/network-main.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "logs/network-main.stderr": "293366de426441d567ee4a1add2b76715f0b8200d539dc3872951fd56e8ef69a",
+    "logs/network-main.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/network-regtest.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "logs/network-regtest.stderr": "293366de426441d567ee4a1add2b76715f0b8200d539dc3872951fd56e8ef69a",
+    "logs/network-regtest.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/network-signet.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "logs/network-signet.stderr": "293366de426441d567ee4a1add2b76715f0b8200d539dc3872951fd56e8ef69a",
+    "logs/network-signet.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/network-test.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "logs/network-test.stderr": "293366de426441d567ee4a1add2b76715f0b8200d539dc3872951fd56e8ef69a",
+    "logs/network-test.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/network-testnet4.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "logs/network-testnet4.stderr": "293366de426441d567ee4a1add2b76715f0b8200d539dc3872951fd56e8ef69a",
+    "logs/network-testnet4.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/no_wallet_psbt.log": "29bc628fc5840a312c6ac5a25a5e7db38d8b5ac89a53a770504871ded06d661e",
+    "logs/openbox.log": "6f748c3cd02a858c087697c3afac639205c62b7b206558bd40d1bcbd98165a5c",
+    "logs/post_reset_minimized-failure-tree.json.gz": "da34c6692279872d4270c31a4609d5f011a4ab1dc1a730e1119c59df27de4c63",
+    "logs/post_reset_minimized.log": "d06f1764b395f610af574682754385ef98d359d328de0142ce416eb8b8b4dbf4",
+    "logs/privacy_windows.log": "7a914b24f6b3715e3eb2e2ade9eb84178130440a7f1bc7823b87215bcba83be2",
+    "logs/psbt_watchonly-failure-tree.json.gz": "e0614599acdf958d52b4e43853b8bf88988d7fd09b733ab6d1b768ce62fe08bf",
+    "logs/psbt_watchonly.log": "f39d8786ef7d2072600e8a140990b1f7d82e8f36094955b61542e22ef551971d",
+    "logs/qr-drop.json": "940912ca11b63dd1ac0ccfb00d794d4ecc29cbf8a05018edc0d34bb22bc746e3",
+    "logs/ready.log": "a99d94fbdff85dda471f346ef13facfec79afcbac65e9781a8d3db3428f1555f",
+    "logs/recent_history.log": "6051a56580609d26b3976349d4cceaf556d3235bd21a7ff14a63a6bd4396e9ea",
+    "logs/refresh_psbt_review.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/rescan-cancel-result.txt": "3f9c1fe3bfa598dc462af148ee707afcbc13a8314af1b0470e59347dac4cc5cf",
+    "logs/rescan_progress.log": "729fc356b5378825be9f1b498d0ad3f191892d695da16fd9eb99b75b2a4a2bb3",
+    "logs/reset_preferences.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/restart_proof.log": "5e4b4bb5b24683ee5926f02418803b2190050508c22c71e4f6d7a5aaad672919",
+    "logs/rpc_tools.log": "3f36a6c85bfa9e6a2f9462a51e840b59a8bb1ec39b82893055cc2bed81156df9",
+    "logs/settings-abort.exit": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "logs/settings-abort.stderr": "6d4c2f0c5ef50f61921eedcc3ebf2567238cf8f7ad4a62ee9313702d503a2d5b",
+    "logs/settings-abort.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/setup-backtrace.txt": "87802bcdba9c487d89ba606bfb257d45a05258747a3a888885635724cfadf716",
+    "logs/shutdown.log": "0277ba422081eed67ca50f39ff6e49110a61f5fecd1b77e2472c44f85faf7bd3",
+    "logs/startup-cancel-cleanup.log": "55709db081014685afc662c85c19fe97a7d7060aef691988d1f4da2a3d4a8a87",
+    "logs/startup-cancel.stderr": "293366de426441d567ee4a1add2b76715f0b8200d539dc3872951fd56e8ef69a",
+    "logs/startup-cancel.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/startup-capture.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/startup-status.log": "77576a1360f332896f52c55143707a3ea215593207d633523b85bf3e9667ee86",
+    "logs/startup_status-failure-tree.json.gz": "b285709b3ea488232b4156d70df1bdecd07421948ba4408ed6806248c742823f",
+    "logs/tooltip_guidance.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/trayer.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/uri-handoff.stderr": "293366de426441d567ee4a1add2b76715f0b8200d539dc3872951fd56e8ef69a",
+    "logs/wallet-basics.log": "6ff37ed6df4cca61b2dcc5b6b1a35b3fbb52ebe4121ddb7a89aa353aff5cc391",
+    "logs/wallet_open.log": "47d7254b855ccad8b0a2d7339c649ded022af26a92199feedb4382bad7e2cd7d",
+    "logs/watch_receive.log": "5d178666cc0c7bcc8b1cfdfe73fc87a6abddad24586b8a164b1baa71fba5a4cf",
+    "logs/widgets-bridge.jsonl.gz": "5b9e13538ea0e4f2fcfb9fd5ca5edc9c0eacc88c50b467e0efd197b6ff1ea615",
+    "logs/xvfb.log": "f172a1b0f5cf2a0d462c51dfc335af1a1dfc8e873cb66f61d018c8b1b35fe416",
+    "media/widgets/advanced-configuration-opened.png": "2e4eaa4204792fea2067d946fab5621db7098e697bc73375e1006d78926a44e3",
+    "media/widgets/advanced-configuration-prompt.png": "3e3f58e7de5564c9a952b0523d62d21c8d4c71fe73dd15348585d0f92341286e",
+    "media/widgets/banned-range-context-menu.png": "45f3e61841f913419c4671ca254ee8d2cc5622e16d0c40f58636fdca953d710e",
+    "media/widgets/banned-range-selected.png": "8090dfa0c5678776395f70474ec62add62a5f0d22d8c8dce2e6d9554bcf7205a",
+    "media/widgets/captures.json": "ab621801a68273c94baf2448f84e4a3441f3cd6347cb7a6100aaf8a8d9385f2b",
+    "media/widgets/choose-data-directory.png": "6ffdeb0dba702f7b93cf8f36a5a48a7b3d5444accd61eec2d1a5642205317569",
+    "media/widgets/close-all-wallets.png": "ba7b0b422303fc8833ffcc13c67a3a6bbc9624ccf267a8674ed8e0a38f7572fc",
+    "media/widgets/close-wallet-confirmation.png": "d51b687392b16516f48ba61aafa318cb9c9f413c54c335495b10ee1ec1cc624f",
+    "media/widgets/console-import-descriptors-help.png": "1e91366724504151468fe2465aee9d7a166fe3d41a5a3e8bddd2d7fe24dd0d3b",
+    "media/widgets/debug-log-opened.png": "2e2b16af81b3ecd549d5eb42b82a3253f19d8946f43a0e7af500515cd1dddd75",
+    "media/widgets/deferred-migration-success.png": "479b8dee8489e762ba0756df853ef08f298786a4e15fe9f0cc5549f411448339",
+    "media/widgets/deferred-wallet-opened.png": "bd7389cd0997a167c8e36f63bf3684ab5fb6b4d88a96b15a0c65e801892fe6b3",
+    "media/widgets/diagnostics-alongside-wallet.png": "da7c57bacce410bbdd3113a8d0347b88ec1b1fb7bee24dbcc8a31b2b6e0c7886",
+    "media/widgets/diagnostics-and-wallet-windows.png": "2be293b99681c6c832e47a4a522f732d9eb391bf37c251f4dea2cd00384926b9",
+    "media/widgets/downloaded-validated-regtest-chain.png": "df5a41263cf517a756dd71b08997871fdc36c8b3ef266574f8800a9eca2258ef",
+    "media/widgets/external-explorer-dispatch.png": "570222369b3f86e99977c0159cae7155ba045f6b079a9186d3e481a4e11c3616",
+    "media/widgets/external-explorer-menu.png": "a3790fb9bb0b17969e6023787999ec2284a537b6c266a0c0f26530c86a89d507",
+    "media/widgets/external-payment-uri-received.png": "ca72edea55adff9c6adac46645ea2346f7f5f7f239b91454c453f8cd5af71058",
+    "media/widgets/initialization-progress.png": "bdd80615c63a2b2a786f0a299df53ee38b6f139ec19b38faf216d37a2de93733",
+    "media/widgets/keyboard-navigation-overview.png": "52d486567431c9e257fa881978e66e6c37e3eaab1f38934c4c3381769e3992a6",
+    "media/widgets/legacy-migration-success.png": "d13e66f6f53b9c26f2241b4a70422e99274354ebfde0b1814e0f043ac9417fcb",
+    "media/widgets/migrate-without-opening.png": "e169da1b424236c36fadbb30e60d7b219bc79a070e785acb63e4a95630e2c9d1",
+    "media/widgets/migrated-watchonly-labels.png": "192880c952e6e95f0cb91eae56f9bb00091235fe5885bea5fe4497896e14347d",
+    "media/widgets/multisig-first-signature.png": "56beeac5bedab53eccd5906f86a88d318ce1c8d2f90a70e189bf5cdf105349ab",
+    "media/widgets/multisig-second-signature.png": "1d282ce529acc5b28b060d673b26f87dde63826c579cb0507f866467597215d4",
+    "media/widgets/network-main.png": "231f35956df242b4913cd506aa805465550ddd40894f260aca2e3e800fc11ef5",
+    "media/widgets/network-regtest.png": "98b7748551f28d55f38f7c39b767c1aeb4b49a4cf25595ba17fe331fb7da2026",
+    "media/widgets/network-signet.png": "7f0eca59ad5163736f4a798035dcd4a1220333e57841dbcdba94ce7e81337b72",
+    "media/widgets/network-test.png": "d9062b908c9cb609d9963d3f91d63749048f460c2416196982ef8c50f3de7637",
+    "media/widgets/network-testnet4.png": "8b7bd80536343ae7edb24321cfbbf11c23f3615ac5ed59372d7efdb501c3374c",
+    "media/widgets/node-running-without-wallets.png": "56f6b821005ea352feb0929d930a4ed7b5d4d0858cceef36ab8ddb92c0dde2df",
+    "media/widgets/open-existing-wallet.png": "f1fcfd78136591d6f2190a265467972437a1c6779c3cbf6eea2b94e3d05e2e88",
+    "media/widgets/open-wallet-menu.png": "0b94ddb2b2cd3bd2fd5c3698877266ff797ac3ed1457e844ea723eaca7c1e229",
+    "media/widgets/passphrase-mismatch-error.png": "d587f60e0c07fd0b0a90d557933f19f8660f668942076eb6b6980a7c284960ab",
+    "media/widgets/preferences-restored-defaults.png": "4dfee8f70b04d1a10f9917b46c428b31a623372991a3bbb1626fac550a392ef6",
+    "media/widgets/privacy-watchonly-wallet.png": "895c7b135eca08d5a6a1545ae5eaff14e17e158aa6a25246d4d83f0b21b3313c",
+    "media/widgets/qr-drag-delivered.png": "0e568644f2645f7df77a7ce1fdf12050ea5c7a4c3c8753a0b63dfc68719bdbcc",
+    "media/widgets/recent-transaction-in-history.png": "8ae7f3cd2e78f65970f3cc80e36ae5c18c83131f08c235339359c7330d05b161",
+    "media/widgets/reopened-wallet.png": "9c7ac0219ffd619db31ff1e2cc9d3b1f559e3ee4efd433cb53cfd8ef512ffc60",
+    "media/widgets/rescan-cancel-available.png": "af13fc98f6768058833e54527b803a9ec19558ae57dbbb94e23bcd0e91d6f5b0",
+    "media/widgets/rescan-progress.png": "af13fc98f6768058833e54527b803a9ec19558ae57dbbb94e23bcd0e91d6f5b0",
+    "media/widgets/reset-preferences-backup.png": "8a47c74d250702a91595c08a6d90eabd1390f8a503fc77749a0e5d978b52fd77",
+    "media/widgets/restore-migrate-legacy-confirmation.png": "546cd7afe669154fdc4e33466fbbb2c62b2edf4d5e0a1aa1a04256d4dc5457f1",
+    "media/widgets/send-contextual-guidance.png": "ca9c025ea9ed4b7becbac588faebe990b363a9763365fea453a3cece532c2260",
+    "media/widgets/shutdown-progress.png": "d53574f024baef011a251abc011287526ba1732be92c8ed33379596902d51ca5",
+    "media/widgets/signed-psbt-export.png": "e9ff22bdbc5269f016f04ef775ef6f4d52d06f5dcba3c9e589ea73fa8a0cf1f6",
+    "media/widgets/started-minimized.png": "658398a0873e702006d66d385ffb4662d90f56c424446e765969ec0e54383a7d",
+    "media/widgets/sync-background-wallet-access.png": "c041cde2ab99571c0d83e9bc183dec09d0cf380054bfd4b35c9c4c64172960da",
+    "media/widgets/sync-overlay-wallet-outdated.png": "7772ea20fe8998e5c51ee1c89d276dd12d28a44bc01b7703ba3af817b801b42c",
+    "media/widgets/unknown-change-confirmation.png": "da4013603408d7bb1776f50a21ff64c66b30a9b3f6acfbd5380c225952cdd615",
+    "media/widgets/unreadable-settings-choices.png": "a816c314723e359c07beb1e70e52e45bf4feb24c2e2c30d0dcf9a80ea62a8b60",
+    "media/widgets/unreadable-settings-details.png": "1b62f7fa9db184d55172427e0c9bfbdc113bfbe7c770ffd4e28a2669cf75d917",
+    "media/widgets/unsigned-psbt-clipboard.png": "8c8ff007065ccd625b7bd0ac89959b3aba058e9ff4c644e0204733a7323ed324",
+    "media/widgets/unsigned-psbt-save.png": "059262cd44866a8ea946091bb5625fe26d82f3c7fb91fd6f73274494ca77f15c",
+    "media/widgets/wallet-free-psbt-broadcast.png": "e6c32505256092dc2951b31ecccf4f816104b1bb98097483aabac0b71957349b",
+    "media/widgets/wallet-free-psbt-review.png": "f412bfbae758b6ee15ece9fc06090e12797cd6459d59724834a54548e050d155",
+    "media/widgets/watchonly-monitor-another-node.png": "9c14605f949de5c756d3222c45bb55456c35d54828d12bab7bca6a9eb22ca99b",
+    "media/widgets/watchonly-prepare-payment.png": "a5b1082a3990c69f249c8098a2251d4d34e78167c23c84b3db91a42233e79752",
+    "media/widgets/watchonly-receiving-address.png": "7729029817f0fef279d3f13185999f90540b70588773ef30638de0ed85ba065c",
+    "media/widgets/watchonly-unsigned-review.png": "b7a2f7661121f6b400f24ee8438133385d5b21dac97d1237c9f59d2e4546aed4",
+    "media/widgets/window-and-privacy-after-restart.png": "c8628f4484c27c4f6d23a7024b1a9bfff152b6f610054b6aee847bf0937779df",
+    "media/widgets/window-position-before-restart.png": "6486f0229328ef3646a2014bceb207641311afb368e79207c01dca27ca042f96",
+    "report.md": "7411d50a21d45736e7c029afe18ca596f9d00af959d7a70ea67411e105243cd7",
+    "scripts/auxiliary.py": "635de1dd17722d4ef2a5277e2e5f56ec5b9931b8c411e8a99b46bed203fd5c55",
+    "scripts/capture_widgets.py": "9c28e107d3560ae423885245f54c3648d7b1e94022a9c6d5fc21a412d30c2a35",
+    "scripts/external_fixture.cpp": "f7af2010a6f03d30ec99948253b58613ab49748fdf291b460272487b0230adfc",
+    "scripts/launch.py": "0ba412addfec427b9faf2e5735d7655dba47e9d7c5af8b7e30570235ef59add8",
+    "scripts/mimeapps.list": "bb37784016225a969b07bbaefa7094db94257df22015054aff6e22a995cefad2",
+    "scripts/monitor_recovery.py": "9346f7f995666774616e2904e552a6359032cdc8742aad58edc2858479afdbaf",
+    "scripts/networks.py": "8e4ce2a63f3fb47468b3dadc3d7996bf4bdbdc81e5e65eb541ca46ee8ada292a",
+    "scripts/prepare.py": "f9e01358eee673fffd0db19d310c5636a07036c0807ad109ba9852b56392f618",
+    "scripts/prepare_extra.py": "c00c49be50e48f189557a26678b54be326cf4182cc93845d6807c18acc26b9a9",
+    "scripts/prepare_legacy.py": "7ea34b925b0a811a1dd4e10e83d528b61f9eb91c9942d2a8f3d0f19372901960",
+    "scripts/startup_cancel.py": "23d8cb39455f94254bdb10f071d8426021e0a6f158e52015bf45eff2e5a55964",
+    "scripts/startup_capture.py": "b85718874903eab4959560ddfb67b05ad37c18fae9e535f3c6fad46068d03a50",
+    "scripts/transfer_monitor.py": "9ae29f94bdda1a05254b7576fa1b5801c22a259887e5efc325c58a6acfd71882",
+    "scripts/widgets-evidence-viewer.desktop": "0b0585ad802aaed5520a08b54625532fcf73a991545bf097fe80815f6af2bef6",
+    "scripts/widgets_driver.py": "d3db5ed6c2e4c430f82100fad3588f5134d5be30b836ea290432d109869a36e5",
+    "validation.json": "c3e5ee0fb8a13c7d766459fccbc3244970e8bdac0e1320a52751417936407b83"
+  },
+  "criterionAssertions": 43,
+  "fixtureAssertions": 1
+}

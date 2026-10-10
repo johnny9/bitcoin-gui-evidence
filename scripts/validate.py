@@ -83,6 +83,39 @@ def main():
         rerun_capture_count += len(captures)
         for capture in captures:
             assert hashlib.sha256((folder / capture['path']).read_bytes()).hexdigest() == capture['sha256']
+    collection_capture_count = 0
+    for collection in data['collections']:
+        parser.feed(collection['reportHtml'])
+        assert collection['application'] == 'widgets'
+        assert collection['sourceRevision'] == data['revisions']['widgets']
+        assert collection['snapshotCatalogId'] == data['catalogId']
+        folder = original / 'collections' / collection['id']
+        for filename, expected in collection['files'].items():
+            assert hashlib.sha256((folder / filename).read_bytes()).hexdigest() == expected, filename
+        checks = json.loads((folder / 'logs/checks.json').read_text())
+        assert len(checks) == collection['assertions'] == 44
+        assert all(c['status'] == 'passed' and c['actual'] == c['expected'] for c in checks)
+        history = json.loads((folder / 'coverage.json').read_text())
+        assert len(history) == collection['initialCriteriaWithoutCaptures'] == 69
+        assert sum(c['captured'] for c in history) == collection['newlyCapturedCriteria'] == 58
+        assert sum(not c['captured'] for c in history) == collection['remainingCriteriaWithoutCaptures'] == 11
+        assert {c['id'] for c in history if c['captured']} == set(collection['criteria'])
+        assert {c['id'] for c in history if not c['captured']} == set(collection['remainingGaps'])
+        collection_capture_count += len(collection['selectedCaptures'])
+        for previous in history:
+            assert previous['before']['captures'] == []
+            current = by_id[previous['id']]
+            if previous['captured']:
+                assert current['snapshotWidgetsEvidence'] == previous['before']
+                assert current['applications']['widgets']['captures'] == previous['captures']
+                update = collection['criteria'][previous['id']]
+                assert update['checks'] == previous['checks']
+                assert all(any(c['id'] == cid and previous['id'] in c['features'] for c in checks) for cid in update['checks'])
+            else:
+                assert current['applications']['widgets'] == previous['before']
+        for capture in collection['selectedCaptures']:
+            assert capture['application'] == 'widgets'
+            assert set(capture['features']).issubset(collection['criteria'])
     for group in data['groups']:
         counts = Counter(c['implementation']['status'] for c in group['criteria'])
         assert group['implementation']['counts'] == {s: counts[s] for s in ('parity', 'partial', 'not-implemented')}
@@ -109,7 +142,8 @@ def main():
         assert path.is_relative_to(DIST), target
         assert path.is_file(), target
         local_links.add(url.path)
-    assert len(data['captures']) == 120
+    assert len(data['captures']) == 120 + collection_capture_count == 181
+    assert sum(not c['applications']['widgets']['captures'] for c in criteria) == 11
     archived_captures = json.loads((original / 'selected-captures.json').read_text())
     superseded = {p for r in data['reruns'] for p in r.get('supersededCaptures', [])}
     active_originals = [p for p in archived_captures if p['path'] not in superseded]
@@ -136,7 +170,8 @@ def main():
     for script in (ROOT / 'scripts').glob('*.py'):
         ast.parse(script.read_text())
     report = {'status':'passed', 'groups':34, 'criteria':203, 'originalCapturesVerified':116,
-              'rerunCapturesVerified':rerun_capture_count, 'localLinkTargets':len(local_links), 'unresolvedFailures':0, 'catalogId':data['catalogId'],
+              'rerunCapturesVerified':rerun_capture_count, 'collectionCapturesVerified':collection_capture_count,
+              'widgetsCriteriaWithoutCaptures':11, 'localLinkTargets':len(local_links), 'unresolvedFailures':0, 'catalogId':data['catalogId'],
               'groupParity': dict(Counter(g['implementation']['status'] for g in data['groups'])),
               'subfeatureParity': dict(Counter(c['implementation']['status'] for c in criteria))}
     print(json.dumps(report, indent=2))

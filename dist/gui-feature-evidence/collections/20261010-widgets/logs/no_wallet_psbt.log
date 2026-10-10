@@ -1,0 +1,2 @@
+{"id": "node-without-wallets", "features": ["F02.S04", "F20.S06"], "description": "After the GUI closes all wallets, node RPC still responds.", "actual": [[], true], "expected": [[], true], "status": "passed", "utc": "2026-10-10T15:40:57.951332+00:00"}
+{"id": "wallet-free-broadcast", "features": ["F14.S08"], "description": "GUI broadcasts the fully signed multisig transaction with no loaded wallet.", "actual": [[], true], "expected": [[], true], "status": "passed", "utc": "2026-10-10T15:40:59.455557+00:00"}

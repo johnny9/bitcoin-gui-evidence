@@ -1,5 +1,17 @@
 # Static site validation
 
+## October 10, 2026 — Qt Widgets evidence gaps
+
+Validated the website changes based on revision `ac890e6c14aadd58eabc5336594016d68ca34e3b`; [tested file hashes](validation/tested-files.json) identify the resulting source. The application remains at `f739c7876b81304bdc72e7eaa307702da269ac31` with the original executable and driver hashes.
+
+- **61 original screenshots** add captures for **58 of 69** previously uncovered Widgets criteria; **11 remain**, with reasons in the [capture report](data/collections/20261010-widgets/report.md). Each new criterion record links its captures, checks, module references and limitations. The latest 44 checks pass: 43 criterion assertions and one fixture check. Failed exploratory attempts and instrumentation limits are retained; this is not a fresh full upstream suite pass.
+- **49 browser checks passed** under the GitHub Pages project path with external networking disabled. All 181 gallery images decode at their recorded dimensions. Checks cover new reference mappings, report/source/check links, remaining gaps, mobile report layout, and existing filters and review controls. The new desktop criterion page, mobile report, and all 61 capture frames were visually inspected.
+- Build, evidence integrity, JavaScript syntax and whitespace checks passed. All original evidence files and prior QML reruns remain byte-for-byte unchanged. All 203 GUI-QML records, implementation assessments, functional results and the saved-review catalog identity were compared with the base and are unchanged.
+- The three requested native CI commands were attempted from this standalone repository and returned 127 because `ci/lint.py` and `ci/test_run_all.sh` are absent. No native lint, clang-tidy, sanitizer or IPC-enabled lifecycle pass is claimed. No Bitcoin Core application source changed; [validation details](data/collections/20261010-widgets/validation.json) record the limits.
+- An initial browser check assumed the first detailed report was the QML send-create rerun. Adding the Widgets collection exposed that ordering assumption; the check now identifies the intended report explicitly. The final complete browser run passed.
+
+[Browser outcomes](validation/browser-results.json) · [Integrity results](validation/evidence-integrity.json). Local visual QA is retained in `.validation/widgets-pass/`; the disposable capture container was returned to its original stopped state.
+
 ## October 10, 2026 — direct criterion review controls
 
 Validated the card-action changes based on revision `7d814cc13afb72db2813c29793d32a6723f3bcea`; [tested file hashes](validation/tested-files.json) identify the exact source tested. The checkmark toggles Reviewed, the scope label opens a native selector, and Review details retains the full dialog.

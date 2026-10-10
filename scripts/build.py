@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a static browser for the original evidence and dated rerun addenda."""
+"""Build a static browser for the original evidence and dated evidence addenda."""
 import argparse
 import hashlib
 import json
@@ -233,10 +233,52 @@ def main():
                     test['resultHtml'] = '<a href="' + prefix + result['log'] + '">' + result['status'] + ' on ' + rerun['date'] + '</a>; <a href="' + prefix + report + '">dated rerun report</a>'
                     test['failed'] = result['status'] == 'failed'
             group['captures'] = [p['path'] for p in photos if any(s.startswith(group['id'] + '.') for s in p['features'])]
+    # Reference capture collections add proof without changing the QML
+    # assessment, original snapshot, or browser-local review identity.
+    data['collections'] = []
+    for record in sorted((ROOT / 'data/collections').glob('*/result.json')):
+        collection = json.loads(record.read_text())
+        app = collection['application']
+        if app != 'widgets' or collection['snapshotCatalogId'] != data['catalogId'] or collection['sourceRevision'] != data['revisions'][app]:
+            raise ValueError('Collection does not match the pinned Widgets reference: ' + str(record))
+        for filename, expected in collection['files'].items():
+            if hashlib.sha256((record.parent / filename).read_bytes()).hexdigest() != expected:
+                raise ValueError('Collection file hash mismatch: ' + filename)
+        base = 'collections/' + collection['id'] + '/'
+        report = base + 'report.md'
+        collection['report'] = prefix + report
+        collection['reportHtml'] = html((record.parent / 'report.md').read_text(), document=evidence / report, inline=False)
+        data['collections'].append(collection)
+        photos.extend(collection['selectedCaptures'])
+        for group in groups:
+            updated = False
+            for row in group['criteria']:
+                if row['id'] not in collection['criteria']:
+                    continue
+                update = collection['criteria'][row['id']]
+                reference = row['applications'][app]
+                row['snapshotWidgetsEvidence'] = json.loads(json.dumps(reference))
+                statuses = data['summary']['criteria_statuses'][app]
+                statuses[reference['originalStatus']] -= 1
+                statuses[update['status']] = statuses.get(update['status'], 0) + 1
+                reference['status'], reference['label'] = STATUS[update['status']]
+                reference['text'] = update['detail']
+                reference['html'] = html(update['detail']) + ' <a href="' + prefix + report + '">Capture report, checks and limits</a>.'
+                reference['captures'].extend(p['path'] for p in collection['selectedCaptures'] if row['id'] in p['features'])
+                row['searchText'] = ' '.join([group['id'], row['id'], group['name'], row['intent']] + [a['text'] for a in row['applications'].values()]).lower()
+                updated = True
+            if updated:
+                group['tests'].append({
+                    'application': 'Qt Widgets',
+                    'testHtml': '<a href="' + prefix + base + 'scripts/capture_widgets.py">Additional capture scenarios</a>',
+                    'resultHtml': '<a href="' + prefix + report + '">October 10: criterion-specific proof and limits</a>; <a href="' + prefix + base + 'logs/checks.json">targeted assertions</a>',
+                    'failed': False,
+                })
+            group['captures'] = [p['path'] for p in photos if any(s.startswith(group['id'] + '.') for s in p['features'])]
     data['summary']['selected_captures'] = len(photos)
     data['summary']['captures_by_application'] = {app: sum(p['application'] == app for p in photos) for app in ('widgets', 'qml')}
     data['summary']['qml_functional'] = {status: sum(r['status'] == status for r in data['functional']) for status in ('passed', 'failed')}
-    data['latestEvidenceDate'] = max([data['summary']['date']] + [r['date'] for r in data['reruns']])
+    data['latestEvidenceDate'] = max([data['summary']['date']] + [r['date'] for r in data['reruns'] + data['collections']])
     if DEST.exists():
         shutil.rmtree(DEST)
     DEST.mkdir()
@@ -254,8 +296,10 @@ def main():
         shutil.copytree(evidence / dirname, output_evidence / dirname, ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
     if (ROOT / 'data/reruns').is_dir():
         shutil.copytree(ROOT / 'data/reruns', output_evidence / 'reruns')
+    if (ROOT / 'data/collections').is_dir():
+        shutil.copytree(ROOT / 'data/collections', output_evidence / 'collections')
     for photo in original_photos + [p for p in photos if p not in original_photos]:
-        source = (ROOT / 'data' if photo['path'].startswith('reruns/') else evidence) / photo['path']
+        source = (ROOT / 'data' if photo['path'].startswith(('reruns/', 'collections/')) else evidence) / photo['path']
         target = output_evidence / photo['path']
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(source, target)

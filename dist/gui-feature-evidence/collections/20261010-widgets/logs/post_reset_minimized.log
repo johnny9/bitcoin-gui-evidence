@@ -1,0 +1,2 @@
+{"id": "start-minimized", "features": ["F27.S02"], "description": "The -min startup option starts the main window minimized.", "actual": true, "expected": true, "status": "passed", "utc": "2026-10-10T15:46:07.404194+00:00"}
+{"id": "preferences-reset-backed-up", "features": ["F23.S12"], "description": "Reset preserves the former preferences in a backup and restores the advanced-control default.", "actual": [true, false, true], "expected": [true, false, true], "status": "passed", "utc": "2026-10-10T15:46:08.791248+00:00"}

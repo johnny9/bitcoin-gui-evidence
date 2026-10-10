@@ -1,0 +1,15 @@
+{"id": "external-explorer-transaction-link", "features": ["F16.S09", "F31.S05"], "description": "Explorer action substitutes the real selected transaction ID and dispatches it to the external handler.", "actual": [true, 64, "c0622efb17e8da3bb3370eecb668eb56a7deaf99b1427d29c53941e1982d220c"], "expected": [true, 64, "c0622efb17e8da3bb3370eecb668eb56a7deaf99b1427d29c53941e1982d220c"], "status": "passed", "utc": "2026-10-10T15:47:33.397711+00:00"}
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  25 (X_SendEvent)
+  Resource id in failed request:  0xe00006
+  Serial number of failed request:  1226
+  Current serial number in output stream:  1227
+Traceback (most recent call last):
+  File "/work/reruns/20261010-widgets/scripts/capture_widgets.py", line 368, in <module>
+    try:globals()[scenario]()
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/work/reruns/20261010-widgets/scripts/capture_widgets.py", line 363, in explorer_open
+    subprocess.run(['xdotool','search','--onlyvisible','--name','External document / URL viewer','windowactivate','--sync','key','alt+F4'],check=True)
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['xdotool', 'search', '--onlyvisible', '--name', 'External document / URL viewer', 'windowactivate', '--sync', 'key', 'alt+F4']' returned non-zero exit status 1.

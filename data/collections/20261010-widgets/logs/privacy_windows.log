@@ -1,0 +1,1 @@
+{"id": "privacy-across-wallets", "features": ["F32.S03"], "description": "The mask preference remains enabled after switching wallets.", "actual": true, "expected": true, "status": "passed", "utc": "2026-10-10T15:30:21.403808+00:00"}

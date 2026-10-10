@@ -1,0 +1,2 @@
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+{"id": "qr-drag-to-external-app", "features": ["F08.S06"], "description": "Actual drag-and-drop delivers an image to an independent Qt application.", "actual": true, "expected": true, "status": "passed", "utc": "2026-10-10T15:38:49.705436+00:00"}
