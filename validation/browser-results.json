@@ -1,9 +1,17 @@
 {
-  "checkedAt": "2026-10-10T17:02:55.072Z",
+  "checkedAt": "2026-10-10T17:11:44.120Z",
   "basePath": "/bitcoin-gui-evidence/",
   "outcomes": [
     {
       "name": "Catalog has all 34 groups and the pinned totals",
+      "status": "passed"
+    },
+    {
+      "name": "Acceptance summary separates 52 implementation gaps, 90 accepted and 61 proof gaps",
+      "status": "passed"
+    },
+    {
+      "name": "Evidence defaults survive scope edits and can be overridden and restored",
       "status": "passed"
     },
     {
@@ -75,7 +83,7 @@
       "status": "passed"
     },
     {
-      "name": "A group requirement becomes the default without marking subfeatures reviewed",
+      "name": "A group requirement becomes the default without changing acceptance",
       "status": "passed"
     },
     {
@@ -183,7 +191,7 @@
       "status": "passed"
     },
     {
-      "name": "Quick review toggles immediately and preserves notes, scope, focus and scroll",
+      "name": "Quick acceptance toggles immediately and preserves notes, scope, focus and scroll",
       "status": "passed"
     },
     {

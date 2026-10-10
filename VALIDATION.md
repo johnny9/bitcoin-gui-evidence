@@ -1,5 +1,17 @@
 # Static site validation
 
+## October 10, 2026 — remaining implementation and acceptance defaults
+
+Validated the acceptance changes based on revision `53be2676c57cec67a8e809d2805873ab1ef38250`; [tested file hashes](validation/tested-files.json) identify the resulting source.
+
+- The catalog and navigation show **52 criteria to implement**: 14 partial and 38 not implemented. The full catalog remains 203 subfeatures across 34 groups. **90 default to Accepted** from parity plus Full GUI-QML evidence; **61 parity items need fuller proof**. Summary links open the corresponding subfeature filters. Explicit saved decisions can change the Accepted total without changing implementation/evidence ratings.
+- **51 browser checks passed** under the GitHub Pages project path. New checks cover the exact count/filter sets, acceptance defaults, withdrawal of an automatic acceptance when evidence fails, explicit overrides, restoring defaults, and retaining defaults during scope/note edits. Existing checks cover v1/v2 migration, v3 acceptance/default export and import, conflict preservation, notes, scope inheritance, keyboard actions, mobile layouts, and all 181 original capture files. Desktop catalog, mobile acceptance guide and card controls were visually inspected.
+- The checkmark now accepts or reopens a subfeature. Accepted defaults are labeled; previous Reviewed, Not reviewed, and Needs follow-up records remain explicit overrides. Storage and export move to v3 so older open tabs cannot overwrite the new states. Default records remain `default`, rather than becoming fixed acceptances when only scope or notes change.
+- Build, integrity, JavaScript syntax and whitespace checks passed. All evidence, captures, source and implementation assessments, and catalog identity remain unchanged. The initial browser run exposed an old expected list of parity-filter choices; the assertion now includes the combined Partial or not implemented choice, and the complete run passed.
+- Native lint, clang-tidy and sanitizer commands were attempted from this standalone website repository and returned 127 because their entry scripts are absent. No Bitcoin Core application code changed and no native CI or sanitizer pass is claimed.
+
+[Browser outcomes](validation/browser-results.json). Visual QA is in `.validation/accepted-defaults/`.
+
 ## October 10, 2026 — subfeature counts and acceptance explanation
 
 Validated the wording changes based on revision `d2fd5c416bc95954722cf6a364f121944cad6949`; [tested file hashes](validation/tested-files.json) identify the resulting source. The catalog prominently names **203 subfeatures across 34 feature groups**, with subfeature labels on the view switch, result counts and group pages. The acceptance guide defines a criterion, illustrates it with PSBT export, and explains scope, supporting evidence and project agreement.

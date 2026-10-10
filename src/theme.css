@@ -66,7 +66,7 @@
   [data-theme="dark"] :is(.capture-strip button,.no-capture) { background: #17212d; border-color: #415067; }
   [data-theme="dark"] .capture-caption>span { color: #9baec5; }
   [data-theme="dark"] .criterion-footer { background: #161f2b; }
-  [data-theme="dark"] .review-button.review-reviewed { background: #233d2f; color: #b1d5b8; }
+  [data-theme="dark"] .review-button.review-reviewed, [data-theme="dark"] .review-button.review-accepted { background: #233d2f; color: #b1d5b8; }
   [data-theme="dark"] .review-button.review-followup { background: #443221; color: #edc38f; }
   [data-theme="dark"] .saved-note { background: #2a2b23; }
   [data-theme="dark"] :is(.saved-note .small-label,.saved-note p) { color: #d0cbb1; }

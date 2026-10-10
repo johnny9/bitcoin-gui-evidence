@@ -20,13 +20,13 @@
       <a class="brand" href="#catalog"><span class="bitcoin-mark" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"><path d="M11 8h7c7 0 7 8 0 8h-7m0 0h8c7 0 7 8 0 8h-8V8m3-3v3m4-3v3m-4 16v3m4-3v3M9 8h2M9 24h2"/></svg></span><span>Bitcoin Core<small>GUI-QML acceptance</small></span></a>
       <button class="mobile-close icon-button" id="close-navigation" aria-label="Close navigation">×</button>
       <nav class="primary-nav" aria-label="Main">
-        <a href="#catalog" data-nav="catalog"><span data-icon="grid"></span>Acceptance criteria<span class="nav-count">203</span></a>
+        <a href="#catalog" data-nav="catalog"><span data-icon="grid"></span>Acceptance criteria<span class="nav-count" title="Subfeatures partially or not implemented"></span></a>
         <a href="#tests" data-nav="tests"><span data-icon="check"></span>Test results</a>
         <a href="#about" data-nav="about"><span data-icon="info"></span>Acceptance guide</a>
       </nav>
       <div class="nav-label">FEATURE GROUPS</div>
       <nav id="feature-navigation" class="feature-navigation" aria-label="Feature groups"></nav>
-      <div class="sidebar-footer"><div class="review-progress-label"><span>My review</span><strong id="review-progress-text">0 / 203</strong></div><div class="review-progress-track"><span id="review-progress-bar"></span></div><span class="local-label" id="storage-status">Saved in this browser</span></div>
+      <div class="sidebar-footer"><div class="review-progress-label"><span>Accepted</span><strong id="review-progress-text"></strong></div><div class="review-progress-track"><span id="review-progress-bar"></span></div><span class="local-label" id="storage-status">Saved in this browser</span></div>
     </aside>
     <button id="nav-backdrop" class="nav-backdrop" aria-label="Close navigation" hidden></button>
     <div class="workspace">
@@ -47,7 +47,7 @@
   <dialog id="review-dialog" class="review-dialog" aria-labelledby="review-title">
     <div class="dialog-header"><span class="eyebrow" id="review-criterion-id"></span><button class="icon-button" data-close-dialog="review-dialog" aria-label="Close review">×</button></div>
     <h2 id="review-title"></h2>
-    <form id="review-form"><label for="review-requirement">Acceptance scope</label><select id="review-requirement" aria-describedby="requirement-help"></select><p class="helper-text" id="requirement-help"></p><div id="review-detail-fields"><label for="review-state">Review status</label><select id="review-state"><option value="unreviewed">Not reviewed</option><option value="reviewed">Reviewed</option><option value="followup">Needs follow-up</option></select><label for="review-note">Notes <span class="muted">(optional)</span></label><textarea id="review-note" rows="6" maxlength="10000" placeholder="Record why this outcome is required, what you checked, and any remaining evidence gaps."></textarea></div><p class="helper-text">Record your proposed acceptance scope and evidence review. Reviewed means you examined the criterion; final acceptance requires project agreement. Your choices stay in this browser; export to share them.</p><div class="dialog-actions"><button type="button" class="button" data-close-dialog="review-dialog">Cancel</button><button type="submit" class="button button-primary">Save review</button></div></form>
+    <form id="review-form"><label for="review-requirement">Acceptance scope</label><select id="review-requirement" aria-describedby="requirement-help"></select><p class="helper-text" id="requirement-help"></p><div id="review-detail-fields"><label for="review-state">Acceptance status</label><select id="review-state"></select><label for="review-note">Notes <span class="muted">(optional)</span></label><textarea id="review-note" rows="6" maxlength="10000" placeholder="Record why this outcome is required, what you checked, and any remaining evidence gaps."></textarea></div><p class="helper-text">Parity with full GUI-QML evidence defaults to Accepted. Saved decisions override the default. Use the checkmark to accept or reopen an item; choose Use evidence default to restore automatic acceptance. Your choices stay in this browser; export to share them.</p><div class="dialog-actions"><button type="button" class="button" data-close-dialog="review-dialog">Cancel</button><button type="submit" class="button button-primary">Save review</button></div></form>
   </dialog>
   <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
   <noscript><div class="noscript">Enable JavaScript to define and review GUI-QML acceptance criteria, or open the <a href="gui-feature-evidence/README.md">original Markdown evidence index</a>.</div></noscript>
