@@ -421,7 +421,7 @@ async function main() {
   await go('#tests?result=failed');
   await check('Resolved failure shows the rerun and retains historical proof',async()=>{
     assert.match(await page.$eval('.functional-table tbody',el=>el.textContent),/No unresolved failures/);
-    assert.match(await page.$eval('.finding-panel',el=>el.textContent),/three complete runs/);
+    assert.equal(await page.$('.finding-panel'),null);
     assert.ok(await page.$('a[href="gui-feature-evidence/logs/qml_test_send_create.log"]'));
     await go('#tests');
     assert.equal(await page.$$eval('.functional-table tbody tr',els=>els.length),34);
@@ -429,7 +429,7 @@ async function main() {
     const rerun = await page.$eval('.functional-table',el=>[...el.querySelectorAll('tr')].find(r=>r.textContent.includes('qml_test_send_create')).textContent);
     assert.match(rerun,/2026-10-10/);
     assert.match(rerun,/Corrected script/);
-    await page.click('.finding-links a');await page.waitForSelector('[id="F09.S03"]');
+    await go('#feature/F09?item=F09.S03');await page.waitForSelector('[id="F09.S03"]');
     assert.match(await page.$eval('[id="F09.S03"]',el=>el.textContent),/Three complete runs passed/);
     assert.ok(await page.$('[id="F09.S03"] .application-evidence[aria-label^="GUI-QML"] .capture-preview'));
   });
