@@ -27,3 +27,23 @@ dialog{border:1px solid #e0e5ec;border-radius:12px;background:white;color:var(--
 
 /* Dated rerun evidence, including large original application captures. */
 .prose{overflow-wrap:anywhere}.prose img{display:block;max-width:100%;height:auto}.finding-panel.is-resolved{background:var(--green-soft);border-color:var(--green)}.finding-panel.is-resolved .finding-icon{color:var(--green);border-color:var(--green)}.finding-panel.is-resolved .eyebrow,.finding-panel.is-resolved h2,.finding-panel.is-resolved .finding-links{color:var(--green)}.finding-panel.is-resolved p{color:var(--ink)}
+
+/* Direct review actions keep scope, review status and detailed notes separate. */
+.criterion-review-actions{gap:8px;margin-left:auto}
+.quick-review{display:inline-flex;align-items:center;justify-content:center;flex:none;width:34px;height:34px;padding:0;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--muted);cursor:pointer}
+.criterion-footer .quick-review .icon{width:17px;height:17px}
+.quick-review:hover{border-color:var(--green);color:var(--green)}
+.quick-review[aria-pressed="true"]{background:var(--green-soft);color:var(--green);border-color:var(--green)}
+.requirement-picker{position:relative;display:inline-flex;flex:none;align-items:center;min-height:34px;cursor:pointer}
+.requirement-picker-label{display:flex;align-items:center;position:relative;pointer-events:none}
+.requirement-picker .requirement-badge{min-height:34px;padding:6px 27px 6px 10px;white-space:nowrap;font-size:10px;box-sizing:border-box}
+.requirement-picker .requirement-origin{display:none}
+.requirement-picker-label>.icon{position:absolute;right:9px;color:var(--muted);width:12px;height:12px}
+.requirement-picker select{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+.requirement-picker select option{color:var(--ink);background:var(--panel)}
+.requirement-picker:hover .requirement-badge{background:var(--orange-soft)}
+.requirement-picker:focus-within{outline:3px solid var(--orange);outline-offset:3px;border-radius:5px}
+.criterion-review-actions .review-button{min-height:34px;font-size:10px;white-space:nowrap;padding:6px 10px}
+@media(max-width:650px){.criterion-review-actions{gap:6px;justify-content:flex-end;width:100%}.criterion-review-actions .review-button{padding:6px 8px}.criterion-footer .subtle-link{flex-basis:100%}}
+@media(max-width:360px){.criterion-review-actions{gap:5px}.criterion-review-actions .review-button{font-size:9px;padding:6px}.requirement-picker .requirement-badge{font-size:9px;padding-left:7px;padding-right:24px}.quick-review{width:30px}}
+@media print{.quick-review,.requirement-picker select,.requirement-picker-label>.icon{display:none!important}}

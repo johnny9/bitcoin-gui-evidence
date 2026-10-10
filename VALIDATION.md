@@ -1,5 +1,16 @@
 # Static site validation
 
+## October 10, 2026 — direct criterion review controls
+
+Validated the card-action changes based on revision `7d814cc13afb72db2813c29793d32a6723f3bcea`; [tested file hashes](validation/tested-files.json) identify the exact source tested. The checkmark toggles Reviewed, the scope label opens a native selector, and Review details retains the full dialog.
+
+- **47 browser checks passed** under the GitHub Pages project path in Chromium with external networking disabled. New checks cover immediate saving, reloading, preserving notes and scope, quick-review progress and filtering, requirement overrides and inheritance, native dropdown selection, keyboard focus and scrolling at a criterion deep link.
+- All three controls fit on one row at 390 and 320 pixels in both themes. Keyboard navigation reaches each control and opens the existing dialog with its saved values intact. Desktop dark and mobile dark/light screenshots were visually inspected.
+- Static build, evidence integrity, JavaScript syntax and whitespace checks passed. No evidence records, application captures, implementation assessments or snapshot identity changed.
+- This standalone repository has no `ci/lint.py`, `ci/test_run_all.sh`, clang-tidy or sanitizer configurations. Those native checks could not run and no native CI or sanitizer pass is claimed; no Bitcoin Core application code or binaries changed.
+
+[Browser outcomes](validation/browser-results.json) and screenshots in `.validation/card-actions/` record this run.
+
 ## October 10, 2026 — clear unconfirmed-transaction evidence
 
 `qml_test_wallet_rbf` passed a fresh end-to-end run against the unchanged pinned application. Capture checkpoints dismiss the password prompt through Cancel before recording fee review, wait for it to close after authorization, and open the replacement transaction details after successful broadcast. All five original assert statements remain. The GUI and test exit 0; fees, replacement mempool entry, wallet relocking, transaction conflict state and mined confirmation are recorded. See the [capture rerun report](data/reruns/20261010-wallet-rbf/report.md) and [validation limits](data/reruns/20261010-wallet-rbf/validation.json).

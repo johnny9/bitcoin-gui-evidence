@@ -287,7 +287,8 @@ async function main() {
     await page.reload({waitUntil:'networkidle0'});
     assert.match(await page.$eval('[id="F19.S01"] .saved-note',el=>el.textContent),/<script>/);
     assert.equal(await page.evaluate(()=>window.noteInjected),undefined);
-    assert.match(await page.$eval('[data-review="F19.S01"]',el=>el.textContent),/Reviewed/);
+    assert.match(await page.$eval('[data-review="F19.S01"]',el=>el.textContent),/Review details/);
+    assert.equal(await page.$eval('[data-quick-review="F19.S01"]',el=>el.getAttribute('aria-pressed')),'true');
     assert.match(await page.$eval('#review-progress-text',el=>el.textContent),/^1 \/ 203$/);
   });
   await check('Review export includes the snapshot identity and personal notes',async()=>{
@@ -561,6 +562,106 @@ async function main() {
     await page.keyboard.press('/');await page.waitForSelector('#catalog-search');
     await page.waitForFunction(()=>document.activeElement?.id==='catalog-search');
   });
+  const actionsContext=await browser.createBrowserContext();
+  const actionsPage=await actionsContext.newPage();
+  currentPage=actionsPage;
+  actionsPage.on('pageerror',error=>errors.push(error.message));
+  actionsPage.on('response',response=>{if(response.status()>=400)failedRequests.push({url:response.url(),status:response.status()});});
+  const quick='[data-quick-review="F19.S01"]';
+  const scope='[data-set-requirement="F19.S01"]';
+  const details='[data-review="F19.S01"]';
+  const reviewNote='Keep the signing evidence note when reviewing quickly.';
+  const savedAction=()=>actionsPage.evaluate(()=>JSON.parse(localStorage.getItem('bitcoin-gui-evidence-review-v2:'+window.REVIEW_EVIDENCE.catalogId))['F19.S01']);
+  const settleActions=()=>actionsPage.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+  await check('Quick review toggles immediately and preserves notes, scope, focus and scroll',async()=>{
+    await actionsPage.goto(base+'#feature/F19?item=F19.S01',{waitUntil:'networkidle0'});
+    await actionsPage.click(details);
+    await actionsPage.select('#review-state','followup');
+    await actionsPage.select('#review-requirement','release');
+    await actionsPage.type('#review-note',reviewNote);
+    await actionsPage.click('#review-form button[type="submit"]');
+    await settleActions();
+    await actionsPage.$eval(quick,el=>el.scrollIntoView({block:'center'}));
+    const before=await actionsPage.evaluate(()=>scrollY);
+    await actionsPage.click(quick);
+    await settleActions();
+    assert.equal(await actionsPage.$eval('#review-dialog',el=>el.open),false);
+    assert.equal(await actionsPage.$eval(quick,el=>el.getAttribute('aria-pressed')),'true');
+    assert.equal(await actionsPage.evaluate(()=>document.activeElement.dataset.quickReview),'F19.S01');
+    assert.ok(Math.abs(await actionsPage.evaluate(()=>scrollY)-before)<2);
+    assert.equal(await actionsPage.$eval('#review-progress-text',el=>el.textContent),'1 / 203');
+    let record=await savedAction();
+    assert.equal(record.status,'reviewed');assert.equal(record.note,reviewNote);assert.equal(record.requirement,'release');
+    assert.ok(Number.isFinite(Date.parse(record.updatedAt)));
+    await actionsPage.screenshot({path:output+'/card-actions-desktop-dark.png'});
+    await actionsPage.reload({waitUntil:'networkidle0'});
+    assert.equal(await actionsPage.$eval(quick,el=>el.getAttribute('aria-pressed')),'true');
+    await actionsPage.focus(quick);
+    await actionsPage.keyboard.press('Space');
+    assert.equal(await actionsPage.$eval(quick,el=>el.getAttribute('aria-pressed')),'false');
+    assert.equal(await actionsPage.$eval('#review-progress-text',el=>el.textContent),'0 / 203');
+    record=await savedAction();
+    assert.equal(record.status,'unreviewed');assert.equal(record.note,reviewNote);assert.equal(record.requirement,'release');
+  });
+  await check('Scope labels open a direct selector with persistent overrides, inheritance and filtering',async()=>{
+    assert.deepEqual(await actionsPage.$$eval(scope+' option',els=>els.map(el=>el.textContent)),['Use default (Needed for merge)','Needed for merge','Needed for release','Not needed','Unassigned']);
+    await actionsPage.click('[id="F19.S01"] .requirement-picker');
+    await actionsPage.keyboard.press('End');
+    await actionsPage.keyboard.press('Enter');
+    await settleActions();
+    assert.equal(await actionsPage.$eval(scope,el=>el.value),'unassigned');
+    assert.equal(await actionsPage.$eval('#review-dialog',el=>el.open),false);
+    assert.equal(await actionsPage.evaluate(()=>document.activeElement.dataset.setRequirement),'F19.S01');
+    assert.ok(await actionsPage.$('[id="F19.S01"] [data-requirement="unassigned"]'));
+    let record=await savedAction();
+    assert.equal(record.status,'unreviewed');assert.equal(record.note,reviewNote);assert.equal(record.requirement,'unassigned');
+    await actionsPage.click('[data-review="F19"]');
+    await actionsPage.select('#review-requirement','not-needed');
+    await actionsPage.click('#review-form button[type="submit"]');
+    await actionsPage.select(scope,'inherit');
+    assert.ok(await actionsPage.$('[id="F19.S01"] [data-requirement="not-needed"]'));
+    assert.equal((await savedAction()).requirement,'inherit');
+    for(const requirement of ['merge','not-needed','release']){
+      await actionsPage.select(scope,requirement);
+      assert.ok(await actionsPage.$(`[id="F19.S01"] [data-requirement="${requirement}"]`));
+    }
+    await actionsPage.click(quick);
+    await actionsPage.reload({waitUntil:'networkidle0'});
+    record=await savedAction();
+    assert.equal(record.status,'reviewed');assert.equal(record.note,reviewNote);assert.equal(record.requirement,'release');
+    await actionsPage.goto(base+'#catalog?view=criteria&requirement=release&review=reviewed&q=F19.S01',{waitUntil:'networkidle0'});
+    assert.deepEqual(await actionsPage.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent)),['F19.S01']);
+    await actionsPage.goto(base+'#feature/F19?item=F19.S01',{waitUntil:'networkidle0'});
+  });
+  await check('Three card actions fit mobile in both themes and retain keyboard access to the full dialog',async()=>{
+    for(const width of [390,320]){
+      await actionsPage.setViewport({width,height:844,deviceScaleFactor:1});
+      for(const theme of ['dark','light']){
+        await actionsPage.evaluate(theme=>window.EvidenceTheme.set(theme),theme);
+        await actionsPage.$eval(quick,el=>el.scrollIntoView({block:'center'}));
+        const boxes=await actionsPage.$$eval('[id="F19.S01"] .criterion-review-actions > *',els=>els.map(el=>{const r=el.getBoundingClientRect();return {x:r.x,y:r.y,right:r.right,height:r.height};}));
+        assert.equal(boxes.length,3);
+        assert.ok(boxes.every(r=>r.x>=0&&r.right<=width&&r.height>=30));
+        assert.ok(boxes[0].right<=boxes[1].x&&boxes[1].right<=boxes[2].x);
+        assert.ok(boxes.every(r=>Math.abs(r.y-boxes[0].y)<2));
+        assert.equal(await actionsPage.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+        await actionsPage.focus(quick);
+        await actionsPage.keyboard.press('Tab');
+        assert.equal(await actionsPage.evaluate(()=>document.activeElement.dataset.setRequirement),'F19.S01');
+        await actionsPage.keyboard.press('Tab');
+        assert.equal(await actionsPage.evaluate(()=>document.activeElement.dataset.review),'F19.S01');
+        await actionsPage.screenshot({path:output+`/card-actions-mobile-${width}-${theme}.png`});
+        await actionsPage.keyboard.press('Enter');
+        assert.equal(await actionsPage.$eval('#review-dialog',el=>el.open),true);
+        assert.equal(await actionsPage.$eval('#review-state',el=>el.value),'reviewed');
+        assert.equal(await actionsPage.$eval('#review-note',el=>el.value),reviewNote);
+        assert.equal(await actionsPage.$eval('#review-requirement',el=>el.value),'release');
+        await actionsPage.keyboard.press('Escape');
+      }
+    }
+  });
+  await actionsContext.close();
+  currentPage=page;
   await check('No JavaScript errors or missing local assets',async()=>{assert.deepEqual(errors,[]);assert.deepEqual(failedRequests,[]);});
 }
 main().catch(async error=>{outcomes.push({name:'Browser verification',status:'failed',error:error.stack});console.error(error);process.exitCode=1;if(currentPage)await currentPage.screenshot({path:output+'/failure.png'});}).finally(async()=>{

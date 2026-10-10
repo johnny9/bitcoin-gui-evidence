@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-10T07:28:59.648Z",
+  "checkedAt": "2026-10-10T07:55:34.140Z",
   "basePath": "/bitcoin-gui-evidence/",
   "outcomes": [
     {
@@ -172,6 +172,18 @@
     },
     {
       "name": "Keyboard search shortcut focuses the catalog search",
+      "status": "passed"
+    },
+    {
+      "name": "Quick review toggles immediately and preserves notes, scope, focus and scroll",
+      "status": "passed"
+    },
+    {
+      "name": "Scope labels open a direct selector with persistent overrides, inheritance and filtering",
+      "status": "passed"
+    },
+    {
+      "name": "Three card actions fit mobile in both themes and retain keyboard access to the full dialog",
       "status": "passed"
     },
     {
