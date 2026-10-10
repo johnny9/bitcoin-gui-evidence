@@ -1,5 +1,15 @@
 # Static site validation
 
+## October 10, 2026 — subfeature counts and acceptance explanation
+
+Validated the wording changes based on revision `d2fd5c416bc95954722cf6a364f121944cad6949`; [tested file hashes](validation/tested-files.json) identify the resulting source. The catalog prominently names **203 subfeatures across 34 feature groups**, with subfeature labels on the view switch, result counts and group pages. The acceptance guide defines a criterion, illustrates it with PSBT export, and explains scope, supporting evidence and project agreement.
+
+- **49 existing browser checks passed** under the Pages project path, including mobile layouts, filters, review storage, import/export, direct review controls and all 181 captures. Two existing wording expectations were updated for the Subfeatures label. Desktop catalog and mobile acceptance-guide screenshots were visually inspected.
+- Build, evidence integrity, JavaScript syntax and whitespace checks passed. Catalog data, source evidence, captures, parity assessments and saved-review identity are byte-for-byte unchanged.
+- Native lint, clang-tidy and sanitizer commands were attempted from this standalone repository; each returned 127 because the entry scripts are absent. No Bitcoin Core application code changed and no native CI or sanitizer pass is claimed.
+
+[Browser outcomes](validation/browser-results.json). Visual QA is in `.validation/acceptance-explanation/`.
+
 ## October 10, 2026 — Qt Widgets evidence gaps
 
 Validated the website changes based on revision `ac890e6c14aadd58eabc5336594016d68ca34e3b`; [tested file hashes](validation/tested-files.json) identify the resulting source. The application remains at `f739c7876b81304bdc72e7eaa307702da269ac31` with the original executable and driver hashes.
