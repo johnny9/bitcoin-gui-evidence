@@ -1,8 +1,8 @@
 # GUI-QML acceptance criteria
 
-202 current subfeatures across 34 feature groups. F05.S02 is combined into F05.S01; the original IDs and evidence remain archived. Other audit recommendations have not been applied.
+183 current subfeatures across 34 feature groups. All duplicate-audit findings are implemented; the original IDs, evidence and review history remain available.
 
-[Duplicate audit](catalog-audit.md) · [Original evidence index](gui-feature-evidence/README.md)
+[Implemented audit](catalog-audit.md) · [Original evidence index](gui-feature-evidence/README.md)
 
 ## F01 — Create Wallet
 
@@ -48,7 +48,6 @@
 | --- | --- | --- |
 | F05.S01 | Export a watch-only copy of a wallet for monitoring without spending access. | not-implemented |
 | F05.S03 | Transfer wallet monitoring to another node. | not-implemented |
-| F05.S04 | Keep spending keys separate from a wallet used for monitoring. | not-implemented |
 
 ## F06 — Encrypt Wallet and Manage Passphrase
 
@@ -70,7 +69,8 @@
 | F07.S02 | Review recent wallet activity. | parity |
 | F07.S03 | Find a recent transaction in the full transaction history. | parity |
 | F07.S04 | Know when wallet information may be out of date. | parity |
-| F07.S05 | Conceal balances and recent activity with privacy mode. | not-implemented |
+
+**Related criteria, counted in their owning groups:** F32.S01 — Conceal wallet balances and recent activity.
 
 ## F08 — Receive Bitcoin / Request Payment
 
@@ -83,8 +83,9 @@
 | F08.S05 | Copy payment QR codes to the clipboard or save them as images. | parity |
 | F08.S06 | Share QR images with other applications using drag and drop. | parity |
 | F08.S07 | Review, reuse, and remove saved payment requests. | parity |
-| F08.S08 | Verify receiving addresses on a compatible signing device. | not-implemented |
 | F08.S09 | Generate receiving addresses for a configured watch-only wallet. | parity |
+
+**Related criteria, counted in their owning groups:** F15.S03 — Verify a receiving address on a compatible signing device.
 
 ## F09 — Send Bitcoin
 
@@ -96,9 +97,11 @@
 | F09.S04 | Send the available balance. | parity |
 | F09.S05 | Deduct fees from selected recipient amounts. | not-implemented |
 | F09.S06 | Review payment details and total costs before authorizing a transaction. | parity |
-| F09.S07 | Sign payments with local spending keys or a compatible external signer. | parity |
+| F09.S07 | Sign payments with local spending keys. | parity |
 | F09.S08 | Prepare a payment from a watch-only wallet for signing elsewhere. | parity |
 | F09.S09 | Check payment details and available funds before sending. | parity |
+
+**Related criteria, counted in their owning groups:** F15.S04 — Authorize outgoing payments using the device.
 
 ## F10 — Open Payment URI
 
@@ -106,23 +109,21 @@
 | --- | --- | --- |
 | F10.S01 | Open or paste Bitcoin payment links. | parity |
 | F10.S02 | Prepare a payment using the requested recipient, amount, and descriptive information. | parity |
-| F10.S03 | Handle payment requests from other applications, including while Bitcoin Core is already running. | parity |
+| F10.S03 | Handle Bitcoin payment requests transferred from other applications, including while the application is already running. | parity |
 
 ## F11 — Choose Transaction Fee
 
 | Criterion | User outcome | GUI-QML implementation |
 | --- | --- | --- |
-| F11.S01 | Choose an estimated fee based on the desired confirmation speed. | parity |
+| F11.S01 | Choose an estimated fee based on the desired confirmation speed and understand its expected timing. | parity |
 | F11.S02 | Set a custom fee rate. | parity |
-| F11.S03 | Assess expected confirmation timing. | parity |
 | F11.S04 | Know when a fee estimate is unavailable. | parity |
 
 ## F12 — Select Coins / Coin Control
 
 | Criterion | User outcome | GUI-QML implementation |
 | --- | --- | --- |
-| F12.S01 | Choose which coins fund a transaction. | parity |
-| F12.S02 | Select individual coins or groups of coins. | parity |
+| F12.S01 | Choose which coins fund a transaction, individually or in groups. | parity |
 | F12.S03 | Inspect coins individually or grouped by address. | parity |
 | F12.S04 | Compare coins by amount, address, label, age, and confirmations. | parity |
 | F12.S05 | Control spending eligibility by locking or unlocking coins. | parity |
@@ -160,9 +161,10 @@
 | --- | --- | --- |
 | F15.S01 | Connect a wallet to a compatible external signer. | parity |
 | F15.S02 | Keep spending keys on the signing device. | parity |
-| F15.S03 | Generate receiving addresses and verify them on the device. | partial |
+| F15.S03 | Verify a receiving address on a compatible signing device. | not-implemented |
 | F15.S04 | Authorize outgoing payments using the device. | parity |
-| F15.S05 | Continue a signing workflow when additional signatures are needed. Signing workflow. | parity |
+
+**Related criteria, counted in their owning groups:** F08.S01 — Generate receiving addresses using legacy, wrapped SegWit, native SegWit, or Taproot formats supported by the wallet.; F14.S06 — Copy a partially signed PSBT to the clipboard or save it to a file for further signing.
 
 ## F16 — Browse and Export Transaction History
 
@@ -182,9 +184,8 @@
 
 | Criterion | User outcome | GUI-QML implementation |
 | --- | --- | --- |
-| F17.S01 | Increase the fee of an eligible transaction to improve its confirmation prospects. | parity |
+| F17.S01 | Increase the fee of an eligible transaction by signing and submitting a replacement. | parity |
 | F17.S02 | Review the additional cost before authorizing a fee increase. | parity |
-| F17.S03 | Sign and submit a replacement transaction. | parity |
 | F17.S04 | Create a fee-bump PSBT and copy it to the clipboard for signing elsewhere. | not-implemented |
 | F17.S05 | Abandon eligible transactions so their inputs can be used for another spend. | not-implemented |
 
@@ -215,7 +216,7 @@
 | F20.S02 | Limit blockchain storage through pruning. | parity |
 | F20.S03 | Assess available storage, expected requirements, and the effect of pruning on wallet recovery. | parity |
 | F20.S04 | Download and validate the blockchain. | parity |
-| F20.S05 | Monitor synchronization progress and how far the node is behind. | parity |
+| F20.S05 | Assess synchronization progress, how far the node is behind, and the estimated remaining work. | parity |
 | F20.S06 | Operate the node without an open wallet. | parity |
 | F20.S07 | Use mainnet, testnet, testnet4, signet, or regtest. Network support. | parity |
 
@@ -245,7 +246,6 @@
 | F22.S06 | Choose which wallet an advanced operation applies to. | parity |
 | F22.S07 | Use command history, completion, and help. | parity |
 | F22.S08 | Adjust console readability and clear previous output. | parity |
-| F22.S09 | Use RPC for descriptor import, multisig setup, wallet rescans, and combining PSBTs. | parity |
 
 ## F23 — Configure Application Preferences
 
@@ -256,30 +256,29 @@
 | F23.S03 | Choose whether unconfirmed change is available for spending. | not-implemented |
 | F23.S04 | Set the default treatment of fees in recipient amounts. | not-implemented |
 | F23.S05 | Choose whether advanced transaction controls are available. | not-implemented |
-| F23.S06 | Choose the interface language and amount units: BTC, mBTC, bits, or satoshis. | parity |
+| F23.S06 | Choose the interface language. | parity |
 | F23.S07 | Customize the font used to display wallet balances. | parity |
 | F23.S08 | Choose external services for inspecting transactions. | parity |
-| F23.S09 | Configure startup and window behavior. | partial |
 | F23.S10 | Manage advanced application configuration. | parity |
 | F23.S11 | Understand which settings take precedence and which changes require a restart. | parity |
 | F23.S12 | Restore default preferences while retaining a backup of previous settings. | parity |
+
+**Related criteria, counted in their owning groups:** F29.S05 — Choose the denomination used to display amounts: BTC, mBTC, bits, or satoshis.; F27.S01 — Start automatically at system login on Windows and Linux.; F27.S02 — Start with the main window minimized.; F26.S03 — Keep the node running while the main window is hidden, minimized, or closed, where supported.; F24.S05 — Choose whether to display a tray icon on supported desktops.
 
 ## F24 — System Tray / macOS Dock
 
 | Criterion | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F24.S01 | Keep the application accessible while its main window is hidden. | parity |
-| F24.S02 | Control application visibility without interrupting the node. | parity |
-| F24.S03 | Quickly access payments, message signing and verification, settings, and diagnostics. | parity |
-| F24.S04 | Quit the application. | parity |
 | F24.S05 | Choose whether to display a tray icon on supported desktops. | parity |
+
+**Related criteria, counted in their owning groups:** F26.S03 — Keep the node running while the main window is hidden, minimized, or closed, where supported.; F28.S01 — Move between wallet balances, payments, and transaction history.; F28.S03 — Access address records, message signing and verification, application settings, and node diagnostics.; F27.S05 — Quit the application and shut down the node cleanly.
 
 ## F25 — Desktop Notifications
 
 | Criterion | User outcome | GUI-QML implementation |
 | --- | --- | --- |
-| F25.S01 | Receive updates about incoming and outgoing payments. | not-implemented |
-| F25.S02 | Identify the affected transaction and wallet, including amounts and recipient information. | not-implemented |
+| F25.S01 | Receive payment notifications that identify the transaction, wallet, amount, and recipient. | not-implemented |
 | F25.S03 | Receive informational, warning, and critical messages through desktop notifications. | not-implemented |
 | F25.S04 | Receive critical error messages when desktop notifications are unavailable. | parity |
 | F25.S05 | Avoid a flood of notifications while historical wallet activity is being loaded. | not-implemented |
@@ -290,9 +289,11 @@
 | --- | --- | --- |
 | F26.S01 | Arrange, hide, and restore application windows. | parity |
 | F26.S02 | Remember the main window placement between sessions. | parity |
-| F26.S03 | Keep the node running while the main window is minimized or closed, where supported. | parity |
+| F26.S03 | Keep the node running while the main window is hidden, minimized, or closed, where supported. | parity |
 | F26.S04 | Use diagnostics alongside wallet activity. | parity |
-| F26.S05 | Identify the active wallet and network. | parity |
+| F26.S05 | Identify the active wallet. | parity |
+
+**Related criteria, counted in their owning groups:** F31.S02 — Identify the active Bitcoin network and distinguish instances using different networks.
 
 ## F27 — Start and Exit Application
 
@@ -302,7 +303,7 @@
 | F27.S02 | Start with the main window minimized. | not-implemented |
 | F27.S03 | Monitor initialization progress. | parity |
 | F27.S04 | Request an orderly shutdown during startup. | parity |
-| F27.S05 | Shut down the node cleanly. | parity |
+| F27.S05 | Quit the application and shut down the node cleanly. | parity |
 | F27.S06 | Know when shutdown is still in progress. | parity |
 | F27.S07 | Recover unreadable settings or stop startup without changing them. | not-implemented |
 | F27.S08 | Coordinate application shutdown with Windows session shutdown. | not-implemented |
@@ -312,21 +313,22 @@
 | Criterion | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F28.S01 | Move between wallet balances, payments, and transaction history. | parity |
-| F28.S02 | Switch between available wallets. | parity |
-| F28.S03 | Access address records and node diagnostics. | parity |
-| F28.S04 | Reach common wallet and application tasks quickly. | parity |
+| F28.S03 | Access address records, message signing and verification, application settings, and node diagnostics. | parity |
 | F28.S05 | Use keyboard shortcuts for navigation and common actions. | parity |
+
+**Related criteria, counted in their owning groups:** F02.S03 — Choose which wallet to use.
 
 ## F29 — View Application Status
 
 | Criterion | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F29.S01 | Check connection count and whether networking is active. | parity |
-| F29.S02 | Understand synchronization progress and whether wallet information is current. | parity |
 | F29.S03 | Check whether a proxy is in use. | parity |
-| F29.S04 | Check wallet encryption, lock, and key-generation status. | partial |
-| F29.S05 | Choose the denomination used to display amounts. | parity |
+| F29.S04 | Check the wallet’s key-generation status. | not-implemented |
+| F29.S05 | Choose the denomination used to display amounts: BTC, mBTC, bits, or satoshis. | parity |
 | F29.S06 | Understand available actions through contextual guidance. | parity |
+
+**Related criteria, counted in their owning groups:** F20.S05 — Assess synchronization progress, how far the node is behind, and the estimated remaining work.; F07.S04 — Know when wallet information may be out of date.; F06.S05 — Check whether a wallet is encrypted and locked.
 
 ## F30 — Show Progress, Errors, and Confirmations
 
@@ -337,19 +339,20 @@
 | F30.S03 | Inspect additional diagnostic information when available. | parity |
 | F30.S04 | Receive a prompt when an operation requires attention. | parity |
 | F30.S05 | Track long-running operations. | partial |
-| F30.S06 | Assess synchronization progress, processing rate, and estimated remaining work. | parity |
 | F30.S07 | Monitor background synchronization while retaining access to the application. | parity |
+
+**Related criteria, counted in their owning groups:** F20.S05 — Assess synchronization progress, how far the node is behind, and the estimated remaining work.
 
 ## F31 — Desktop Integration and Application Help
 
 | Criterion | User outcome | GUI-QML implementation |
 | --- | --- | --- |
-| F31.S01 | Open Bitcoin payment requests from other applications or by drag and drop. | parity |
-| F31.S02 | Distinguish application instances using different Bitcoin networks. | parity |
+| F31.S02 | Identify the active Bitcoin network and distinguish instances using different networks. | parity |
 | F31.S03 | Adapt application visuals to the desktop appearance. | parity |
 | F31.S04 | Prevent macOS background throttling from slowing initial synchronization and reindexing. | not-implemented |
-| F31.S05 | Use external block explorers to inspect transactions. | parity |
 | F31.S06 | Access application information and command-line help. | partial |
+
+**Related criteria, counted in their owning groups:** F10.S03 — Handle Bitcoin payment requests transferred from other applications, including while the application is already running.; F16.S09 — Inspect transactions in external block explorers.
 
 ## F32 — Mask Wallet Values / Privacy Mode
 

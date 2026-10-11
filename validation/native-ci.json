@@ -1,0 +1,26 @@
+{
+  "baseRevision": "148aed7778e93d05a24f796edd361cad7dff4abf",
+  "checks": [
+    {
+      "command": "./ci/lint.py",
+      "exitCode": 127,
+      "stdout": "",
+      "stderr": "/bin/sh: 1: ./ci/lint.py: not found\n"
+    },
+    {
+      "command": "FILE_ENV=./ci/test/00_setup_env_native_tidy.sh ./ci/test_run_all.sh",
+      "exitCode": 127,
+      "stdout": "",
+      "stderr": "/bin/sh: 1: ./ci/test_run_all.sh: not found\n"
+    },
+    {
+      "command": "FILE_ENV=./ci/test/00_setup_env_native_asan.sh ./ci/test_run_all.sh",
+      "exitCode": 127,
+      "stdout": "",
+      "stderr": "/bin/sh: 1: ./ci/test_run_all.sh: not found\n"
+    }
+  ],
+  "scope": "Static website only. No application source, binaries or test artifacts changed.",
+  "branchAfterLint": "main",
+  "revisionAfterLint": "148aed7778e93d05a24f796edd361cad7dff4abf"
+}

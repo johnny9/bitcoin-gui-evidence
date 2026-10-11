@@ -49,3 +49,8 @@ dialog{border:1px solid #e0e5ec;border-radius:12px;background:white;color:var(--
 @media print{.quick-review,.requirement-picker select,.requirement-picker-label>.icon{display:none!important}}
 
 .acceptance-badge{vertical-align:middle}.criterion-card-heading .acceptance-badge{margin-left:8px}.criterion-result .requirement-summary{flex-wrap:wrap;gap:8px}
+
+.criterion-checks { padding: 16px 24px; border-top: 1px solid var(--line); font-size: 12px; color: var(--muted); }
+.criterion-checks ul, .related-criteria ul, .replacement-links { padding-left: 20px; }
+.criterion-checks li, .related-criteria li, .replacement-links li { margin: 8px 0; }
+.criterion-checks p { margin-bottom: 0; }

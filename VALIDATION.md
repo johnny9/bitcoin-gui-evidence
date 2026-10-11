@@ -1,5 +1,18 @@
 # Static site validation
 
+## October 11, 2026 — implement the approved duplicate audit
+
+Validated the final website changes based on revision `148aed7778e93d05a24f796edd361cad7dff4abf`; [tested file hashes](validation/tested-files.json) identify the resulting source.
+
+- All 22 change findings are applied and eight reviewed distinctions remain separate. The catalog now has **183 criteria** across 34 groups: **136 parity, 12 partial, 35 not implemented**. It counts **47 implementation gaps**, **114 evidence-default Accepted**, and **22 parity criteria needing fuller evidence** in a fresh browser. The 20 retired original rows have direct aliases (16) or replacement-outcome pages (4).
+- Combined evidence retains incomplete proof. Device verification and key-generation status are now assessed alone as absent; local-key signing is now fully proved with device approval assessed separately. Wallet identity uses the existing wallet-selection capture; the node-only network capture remains with network identity. Cross-group outcomes link to their owning criteria and source modules/tests. No application feature was implemented and no application test was rerun for this catalog edit.
+- **60 browser checks passed** under the GitHub Pages project path with external networking disabled. Checks cover all retired links, search and related-outcome navigation, all 34 groups and 218 image decodes, merged/split review migration, conflicting choices, inherited source-group scope, preserved original notes, v4 export/import, atomic invalid-import rejection, new-tab synchronization and older-tab isolation. Existing filtering, quick review, keyboard and mobile checks pass. Desktop catalog/audit and mobile replacement, related-outcome and review-history layouts were visually inspected.
+- Build, evidence integrity, JavaScript syntax and whitespace checks passed. Regeneration is deterministic across Python hash seeds. Every one of the 203 original in-memory criterion records is unchanged, as are the archived application evidence, dated capture/test artifacts, source assessments, snapshot identity and functional results. The [integrity record](validation/evidence-integrity.json) includes the file count and capture/hash checks.
+- The lint, clang-tidy and ASan CI commands were attempted from this checkout. They return 127 because `ci/lint.py` and `ci/test_run_all.sh` are absent. [Command results](validation/native-ci.json) record the base revision and unchanged branch after lint. No native lint, tidy, sanitizer or IPC-enabled lifecycle pass is claimed. The known application cache regression remains visible.
+- The first new migration test omitted a page reload after seeding old browser storage. Correcting the fixture made the scenario exercise migration as intended; the final complete run passed. Visual QA also replaced a node-only image with the existing selected-wallet image for the narrowed wallet-identity scope.
+
+[Browser outcomes](validation/browser-results.json) · [Integrity results](validation/evidence-integrity.json). Local screenshots are in `.validation/audit-implemented/`. Earlier sections below retain the counts and validation limits at the time of each prior update.
+
 ## October 11, 2026 — combine watch-only export and audit all subfeatures
 
 Validated changes based on site revision `07793efda85cc8f637ce4f5b072a302745ec7b8d`; [tested file hashes](validation/tested-files.json) identify the resulting source.

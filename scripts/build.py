@@ -303,6 +303,7 @@ def main():
     (DEST / 'data.js').write_text('window.REVIEW_EVIDENCE = ' + json.dumps(data, ensure_ascii=False).replace('</', '<\\/') + ';\n')
     (DEST / 'catalog-audit.md').write_text(audit_text)
     (DEST / 'current-catalog.md').write_text(current_catalog_markdown(data))
+    (DEST / 'current-assessments.json').write_text(json.dumps({'catalogId': data['catalogId'], 'catalogRevision': data['catalogRevision'], 'criteria': {c['id']: c['implementation'] for g in groups for c in g['criteria']}, 'groups': {g['id']: g['implementation'] for g in groups}}, indent=2) + '\n')
     shutil.copy2(ROOT / 'data/catalog-audit.json', DEST / 'catalog-audit.json')
     shutil.copy2(ROOT / 'data/implementation.json', DEST / 'implementation.json')
     output_evidence = DEST / 'gui-feature-evidence'

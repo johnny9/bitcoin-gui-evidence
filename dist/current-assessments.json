@@ -1,0 +1,1080 @@
+{
+  "catalogId": "b4b1026b74ad8bf0a1628c9889b82193d33d210c3aa0170e94783f371fe15c0b",
+  "catalogRevision": "2026-10-11-all-findings",
+  "criteria": {
+    "F01.S01": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F01.S02": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F01.S03": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F01.S04": {
+      "status": "not-implemented",
+      "reason": "There is no standalone blank-wallet creation workflow."
+    },
+    "F01.S05": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F01.S06": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F02.S01": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F02.S02": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F02.S03": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F02.S04": {
+      "status": "parity",
+      "reason": "Users can close every loaded wallet by closing them individually. A close-all shortcut changes convenience, not the final wallet state."
+    },
+    "F03.S01": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F03.S02": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F03.S03": {
+      "status": "parity",
+      "reason": "The recovered name is taken from the backup filename, so choosing that filename before import achieves the naming goal without a separate naming dialog."
+    },
+    "F03.S04": {
+      "status": "not-implemented",
+      "reason": "Legacy backup import reports migration guidance but does not restore and migrate the backup."
+    },
+    "F04.S01": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F04.S02": {
+      "status": "parity",
+      "reason": "GUI migration preserves an automatic backup; the October 10 functional pass verifies its creation."
+    },
+    "F04.S03": {
+      "status": "parity",
+      "reason": "Migration preserves the user\u2019s wallet contents. The October 10 funded fixture verifies spending funds, a transaction, labels and watch-only funds."
+    },
+    "F04.S04": {
+      "status": "parity",
+      "reason": "Migration produces an accessible wallet. Automatic opening instead of a defer-open choice changes timing; the wallet can be closed and reopened later."
+    },
+    "F05.S01": {
+      "status": "not-implemented",
+      "reason": "There is no spending-wallet to watch-only wallet-file export workflow."
+    },
+    "F05.S03": {
+      "status": "not-implemented",
+      "reason": "There is no spending-wallet to watch-only wallet-file export workflow."
+    },
+    "F06.S01": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F06.S02": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F06.S03": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F06.S04": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F06.S05": {
+      "status": "partial",
+      "reason": "Encryption is visible in settings; the current locked/unlocked state is not displayed."
+    },
+    "F06.S06": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F06.S07": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F07.S01": {
+      "status": "parity",
+      "reason": "Balance and pending activity provide the main view of wallet funds. The missing full immature/mined/available breakdown remains a reporting difference in this rough assessment."
+    },
+    "F07.S02": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F07.S03": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F07.S04": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F08.S01": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F08.S02": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F08.S03": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F08.S04": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F08.S05": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F08.S06": {
+      "status": "parity",
+      "reason": "QR images can be copied or saved and shared with another application. Drag-and-drop export is absent, but the image-sharing goal is achieved."
+    },
+    "F08.S07": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F08.S09": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F09.S01": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F09.S02": {
+      "status": "parity",
+      "reason": "A recipient can be entered or pasted into a payment. A saved-recipient picker is absent, but choosing the payment destination remains possible."
+    },
+    "F09.S03": {
+      "status": "parity",
+      "reason": "Recipient notes remain associated with the correct recipient after reopening. The October 10 rerun passed on the unchanged application after correcting test input to use keyboard focus. The original failure was a test setup defect."
+    },
+    "F09.S04": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F09.S05": {
+      "status": "not-implemented",
+      "reason": "There is no general control for deducting fees from selected recipient amounts."
+    },
+    "F09.S06": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F09.S07": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F09.S08": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F09.S09": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F10.S01": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F10.S02": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F10.S03": {
+      "status": "parity",
+      "reason": "A payment request from another application can be pasted or imported into the running GUI. Automatic operating-system delivery and forwarding are absent; the request-handling outcome is available through explicit import."
+    },
+    "F11.S01": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F11.S02": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F11.S04": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F12.S01": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F12.S03": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F12.S04": {
+      "status": "parity",
+      "reason": "Amount, address, label, age, sorting and grouping let users compare funding coins. Exact confirmation counts are missing, but the main coin-comparison task is available."
+    },
+    "F12.S05": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F12.S06": {
+      "status": "not-implemented",
+      "reason": "Coin details and transaction estimates have no clipboard export workflow."
+    },
+    "F12.S07": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F12.S08": {
+      "status": "not-implemented",
+      "reason": "A custom change destination cannot be selected."
+    },
+    "F12.S09": {
+      "status": "not-implemented",
+      "reason": "There is no custom change destination or corresponding wallet-ownership warning."
+    },
+    "F13.S01": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F13.S02": {
+      "status": "partial",
+      "reason": "Single-signature and configured watch-only payments can be prepared; wallets holding only some required multisig keys cannot use the unsigned-payment workflow."
+    },
+    "F13.S03": {
+      "status": "partial",
+      "reason": "Configured watch-only multisig can prepare transactions; incomplete local multisig signing is limited."
+    },
+    "F13.S04": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F13.S05": {
+      "status": "parity",
+      "reason": "Saving an unsigned PSBT file lets the user hand the transaction to another signer. Clipboard export is an alternative transfer method, not a missing signing handoff."
+    },
+    "F14.S01": {
+      "status": "partial",
+      "reason": "File import achieves the transfer intent without clipboard support, but recipient and output-script restrictions still prevent importing some PSBTs."
+    },
+    "F14.S02": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F14.S03": {
+      "status": "partial",
+      "reason": "Single-signature and completed foreign multisig transactions are supported; incomplete local multisig is review-only."
+    },
+    "F14.S04": {
+      "status": "partial",
+      "reason": "Eligible local wallets can sign and encrypted wallets can unlock; incomplete local multisig cannot add partial signatures."
+    },
+    "F14.S05": {
+      "status": "not-implemented",
+      "reason": "There is no reachable workflow for adding local partial signatures and passing the result to another signer."
+    },
+    "F14.S06": {
+      "status": "parity",
+      "reason": "A PSBT file, including an incomplete external-signer result, can be saved for another signer. Clipboard export is absent, but the transfer goal is achieved."
+    },
+    "F14.S07": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F14.S08": {
+      "status": "not-implemented",
+      "reason": "The PSBT workflow requires an open wallet."
+    },
+    "F15.S01": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F15.S02": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F15.S03": {
+      "status": "not-implemented",
+      "reason": "Receiving-address verification on the signing device is absent; address generation is assessed under F08.S01."
+    },
+    "F15.S04": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F16.S01": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F16.S02": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F16.S03": {
+      "status": "parity",
+      "reason": "Search and date/type/amount filters let users locate transactions. Fixed chronological ordering replaces configurable sorting for the main history-navigation goal."
+    },
+    "F16.S04": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F16.S05": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F16.S06": {
+      "status": "partial",
+      "reason": "Addresses, transaction IDs and raw transactions can be copied; amount and full-detail copying are missing."
+    },
+    "F16.S07": {
+      "status": "partial",
+      "reason": "Receiving labels can be updated; outgoing-recipient labels cannot be edited."
+    },
+    "F16.S08": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F16.S09": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F17.S01": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F17.S02": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F17.S04": {
+      "status": "not-implemented",
+      "reason": "There is no graphical fee-bump PSBT export workflow."
+    },
+    "F17.S05": {
+      "status": "not-implemented",
+      "reason": "There is no graphical transaction-abandonment action."
+    },
+    "F18.S01": {
+      "status": "partial",
+      "reason": "Receiving and change addresses are listed; a managed sending-address book is missing."
+    },
+    "F18.S02": {
+      "status": "not-implemented",
+      "reason": "Saved sending recipients cannot be added, edited or removed."
+    },
+    "F18.S03": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F18.S04": {
+      "status": "not-implemented",
+      "reason": "Address-book search and user-selected sorting are missing."
+    },
+    "F18.S05": {
+      "status": "parity",
+      "reason": "Existing addresses can be copied, and editable address notes use a selectable text field. The clipboard goal is available for existing records; missing sending-contact management is assessed separately."
+    },
+    "F18.S06": {
+      "status": "not-implemented",
+      "reason": "Address records cannot be exported as CSV."
+    },
+    "F19.S01": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F19.S02": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F19.S03": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F20.S01": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F20.S02": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F20.S03": {
+      "status": "parity",
+      "reason": "Storage checks and pruning choices let the user plan disk usage. Missing explanation of wallet-recovery consequences is retained as a guidance gap, rather than blocking the main storage-planning goal."
+    },
+    "F20.S04": {
+      "status": "parity",
+      "reason": "Core-backed blockchain download and validation work through the GUI node. A new functional scenario downloads 2,200 regtest blocks from a real peer and verifies the resulting chain tip."
+    },
+    "F20.S05": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F20.S06": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F20.S07": {
+      "status": "parity",
+      "reason": "The listed networks are supported by source configuration; only regtest was exercised in this snapshot."
+    },
+    "F21.S01": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F21.S02": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F21.S03": {
+      "status": "parity",
+      "reason": "SOCKS5 and separate Tor routing configuration are implemented; live routing was not exercised."
+    },
+    "F21.S04": {
+      "status": "parity",
+      "reason": "Automatic router mapping configuration is implemented; physical router behavior was not exercised."
+    },
+    "F21.S05": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F21.S06": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F21.S07": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F21.S08": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F21.S09": {
+      "status": "not-implemented",
+      "reason": "Banned addresses and network ranges have no clipboard action."
+    },
+    "F22.S01": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F22.S02": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F22.S03": {
+      "status": "parity",
+      "reason": "Selecting a traffic time range lets the user focus an observation. Clearing the entire history is absent, but the main time-focused monitoring goal is available."
+    },
+    "F22.S04": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F22.S05": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F22.S06": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F22.S07": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F22.S08": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F23.S01": {
+      "status": "partial",
+      "reason": "Script-thread settings and small cache allocations work, but the GUI cache validator incorrectly caps total database cache at 8 MiB. The October 10 functional regression reproduces rejection of 768 MiB even though Core starts with that value. Normal memory allocation needs a fix."
+    },
+    "F23.S02": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F23.S03": {
+      "status": "not-implemented",
+      "reason": "There is no preference for spending unconfirmed change."
+    },
+    "F23.S04": {
+      "status": "not-implemented",
+      "reason": "There is no default fee-subtraction preference."
+    },
+    "F23.S05": {
+      "status": "not-implemented",
+      "reason": "Advanced transaction controls are always available; there is no enable/disable preference."
+    },
+    "F23.S06": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F23.S07": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F23.S08": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F23.S10": {
+      "status": "parity",
+      "reason": "Advanced configuration remains supported through the configuration file and setting precedence. Opening the file with an external editor instead of an in-app action changes the access path."
+    },
+    "F23.S11": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F23.S12": {
+      "status": "parity",
+      "reason": "The supported startup reset restores defaults and retains a settings backup. Starting with that option instead of an in-app reset action achieves the same recovery outcome."
+    },
+    "F24.S01": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F24.S05": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F25.S01": {
+      "status": "not-implemented",
+      "reason": "The desktop-notification workflow, including its fallback and historical-activity suppression, is not connected. Separate in-app message dialogs are covered by F30."
+    },
+    "F25.S03": {
+      "status": "not-implemented",
+      "reason": "The desktop-notification workflow, including its fallback and historical-activity suppression, is not connected. Separate in-app message dialogs are covered by F30."
+    },
+    "F25.S04": {
+      "status": "parity",
+      "reason": "Critical in-app error dialogs deliver the required error message when desktop notifications are unavailable. The desktop-notification delivery channel itself remains absent."
+    },
+    "F25.S05": {
+      "status": "not-implemented",
+      "reason": "The desktop-notification workflow, including its fallback and historical-activity suppression, is not connected. Separate in-app message dialogs are covered by F30."
+    },
+    "F26.S01": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F26.S02": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F26.S03": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F26.S04": {
+      "status": "parity",
+      "reason": "Wallet activity and diagnostics remain available in the same application. Switching views replaces a separate diagnostics window; simultaneous side-by-side display is not provided."
+    },
+    "F26.S05": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F27.S01": {
+      "status": "not-implemented",
+      "reason": "Automatic login startup integration is missing."
+    },
+    "F27.S02": {
+      "status": "not-implemented",
+      "reason": "The minimized-startup argument is not connected to QML window behavior."
+    },
+    "F27.S03": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F27.S04": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F27.S05": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F27.S06": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F27.S07": {
+      "status": "not-implemented",
+      "reason": "There is no interactive repair-or-abort choice for unreadable settings."
+    },
+    "F27.S08": {
+      "status": "not-implemented",
+      "reason": "Windows session-shutdown coordination is missing."
+    },
+    "F28.S01": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F28.S03": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F28.S05": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F29.S01": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F29.S03": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F29.S04": {
+      "status": "not-implemented",
+      "reason": "Key-generation status is not displayed. Encryption and lock status are assessed separately under F06.S05."
+    },
+    "F29.S05": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F29.S06": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F30.S01": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F30.S02": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F30.S03": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F30.S04": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F30.S05": {
+      "status": "partial",
+      "reason": "Busy states and node synchronization are shown; general wallet-operation and rescan progress are missing."
+    },
+    "F30.S07": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F31.S02": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F31.S03": {
+      "status": "parity",
+      "reason": "Choosing light or dark mode manually lets the application match the desktop appearance. Automatic following of later desktop-theme changes is absent."
+    },
+    "F31.S04": {
+      "status": "not-implemented",
+      "reason": "Protection against macOS background throttling is missing."
+    },
+    "F31.S06": {
+      "status": "partial",
+      "reason": "Application information and RPC help are available; graphical command-line help is missing."
+    },
+    "F32.S01": {
+      "status": "not-implemented",
+      "reason": "There is no balance/activity privacy mode or persistent masking preference."
+    },
+    "F32.S02": {
+      "status": "not-implemented",
+      "reason": "There is no balance/activity privacy mode or persistent masking preference."
+    },
+    "F32.S03": {
+      "status": "not-implemented",
+      "reason": "There is no balance/activity privacy mode or persistent masking preference."
+    },
+    "F32.S04": {
+      "status": "not-implemented",
+      "reason": "There is no balance/activity privacy mode or persistent masking preference."
+    },
+    "F33.S01": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F33.S02": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F33.S03": {
+      "status": "parity",
+      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+    },
+    "F34.S01": {
+      "status": "parity",
+      "reason": "Wallet rescans can be initiated through the RPC console, as allowed by the Widgets baseline. Graphical progress and cancellation are separate subfeatures."
+    },
+    "F34.S02": {
+      "status": "not-implemented",
+      "reason": "There is no wallet-rescan progress display."
+    },
+    "F34.S03": {
+      "status": "not-implemented",
+      "reason": "There is no graphical wallet-rescan cancellation workflow."
+    }
+  },
+  "groups": {
+    "F01": {
+      "status": "parity",
+      "goal": "Create a usable wallet for receiving and spending or monitoring funds.",
+      "reason": "Standard, encrypted, watch-only and external-signer creation achieve the main wallet-creation goal. Standalone blank-wallet creation remains a secondary gap.",
+      "counts": {
+        "parity": 5,
+        "partial": 0,
+        "not-implemented": 1
+      }
+    },
+    "F02": {
+      "status": "parity",
+      "goal": "Open, select and close the wallets the user wants to work with.",
+      "reason": "Opening, keeping several wallets loaded, switching and closing each wallet achieve the goal. Closing all wallets requires repeated individual actions.",
+      "counts": {
+        "parity": 4,
+        "partial": 0,
+        "not-implemented": 0
+      }
+    },
+    "F03": {
+      "status": "partial",
+      "goal": "Protect a wallet with a backup and recover it when needed.",
+      "reason": "Backup and supported-file restoration work, and filename-based naming is equivalent. Recovery of legacy backups still lacks a supported restore-and-migrate flow.",
+      "counts": {
+        "parity": 3,
+        "partial": 0,
+        "not-implemented": 1
+      }
+    },
+    "F04": {
+      "status": "parity",
+      "goal": "Convert an existing legacy wallet into a usable current-format wallet.",
+      "reason": "Migration, backup preservation and access to the migrated wallet are implemented. Automatic opening changes the sequence, not the migration outcome.",
+      "counts": {
+        "parity": 4,
+        "partial": 0,
+        "not-implemented": 0
+      }
+    },
+    "F05": {
+      "status": "not-implemented",
+      "goal": "Export a portable wallet copy that monitors funds without spending keys.",
+      "reason": "Creating a new watch-only wallet does not provide an export of the existing spending wallet. The watch-only wallet-file export outcome is absent.",
+      "counts": {
+        "parity": 0,
+        "partial": 0,
+        "not-implemented": 2
+      }
+    },
+    "F06": {
+      "status": "parity",
+      "goal": "Protect spending keys and authorize temporary access with a passphrase.",
+      "reason": "Encryption, passphrase changes, temporary unlocking and automatic relocking achieve key protection. Missing live lock-status display remains a separate visibility gap.",
+      "counts": {
+        "parity": 6,
+        "partial": 1,
+        "not-implemented": 0
+      }
+    },
+    "F07": {
+      "status": "parity",
+      "goal": "Understand wallet funds and recent activity.",
+      "reason": "Balance, pending activity, recent/full history and synchronization status achieve the overview goal. Detailed balance categories and privacy masking remain visible differences.",
+      "counts": {
+        "parity": 4,
+        "partial": 0,
+        "not-implemented": 0
+      }
+    },
+    "F08": {
+      "status": "parity",
+      "goal": "Generate and share a receiving destination or reusable payment request.",
+      "reason": "Address generation, request details, QR codes and request reuse achieve the receiving goal. File/clipboard sharing replaces dragging; device address verification remains a specific unsupported capability.",
+      "counts": {
+        "parity": 8,
+        "partial": 0,
+        "not-implemented": 0
+      }
+    },
+    "F09": {
+      "status": "partial",
+      "goal": "Prepare and send the intended payment with reliable recipient information.",
+      "reason": "Payment preparation, signing, broadcast and recipient notes work. Selected-recipient fee deduction remains unsupported, so this group stays partial. The note-preservation test failure was resolved by fixing the script input.",
+      "counts": {
+        "parity": 8,
+        "partial": 0,
+        "not-implemented": 1
+      }
+    },
+    "F10": {
+      "status": "parity",
+      "goal": "Turn a Bitcoin payment request into a prepared payment.",
+      "reason": "Entering, pasting, importing or dropping a request populates the payment details. Automatic operating-system forwarding is a different entry path, not required for the main request-to-payment outcome.",
+      "counts": {
+        "parity": 3,
+        "partial": 0,
+        "not-implemented": 0
+      }
+    },
+    "F11": {
+      "status": "parity",
+      "goal": "Choose a fee appropriate to the desired confirmation speed.",
+      "reason": "Estimated targets, custom rates, fee review and unavailable-estimate feedback provide the intended fee choice.",
+      "counts": {
+        "parity": 3,
+        "partial": 0,
+        "not-implemented": 0
+      }
+    },
+    "F12": {
+      "status": "parity",
+      "goal": "Choose and control which coins fund a payment.",
+      "reason": "Input selection, grouping, locking and selected-funds review achieve funding control. Clipboard details, explicit confirmation counts and custom change destinations remain secondary limitations.",
+      "counts": {
+        "parity": 5,
+        "partial": 0,
+        "not-implemented": 3
+      }
+    },
+    "F13": {
+      "status": "partial",
+      "goal": "Prepare and transfer an unsigned transaction for later signing.",
+      "reason": "PSBT file export provides the signing handoff without clipboard support. Wallets holding only some required multisig keys still cannot use the unsigned-payment flow, leaving a real wallet-compatibility gap.",
+      "counts": {
+        "parity": 3,
+        "partial": 2,
+        "not-implemented": 0
+      }
+    },
+    "F14": {
+      "status": "partial",
+      "goal": "Review, advance signing and broadcast an imported PSBT.",
+      "reason": "File import/export supplies the transfer paths, but partial local multisig signing and some recipient/output-script cases are unsupported. These block transaction workflows rather than just alternative controls.",
+      "counts": {
+        "parity": 3,
+        "partial": 3,
+        "not-implemented": 2
+      }
+    },
+    "F15": {
+      "status": "partial",
+      "goal": "Use an external device to keep keys separate and authorize wallet activity.",
+      "reason": "External signing and key separation are connected, but users cannot verify receiving addresses on the device. That trusted-device check is a substantive missing capability.",
+      "counts": {
+        "parity": 3,
+        "partial": 0,
+        "not-implemented": 1
+      }
+    },
+    "F16": {
+      "status": "parity",
+      "goal": "Find, inspect and export wallet transaction activity.",
+      "reason": "History search, filters, details and CSV export achieve the review and record-keeping goal. Fixed sorting and limited clipboard/label editing remain secondary differences.",
+      "counts": {
+        "parity": 7,
+        "partial": 2,
+        "not-implemented": 0
+      }
+    },
+    "F17": {
+      "status": "partial",
+      "goal": "Resolve unconfirmed transactions and recover spending flexibility.",
+      "reason": "Fee increases work, but abandonment and fee-bump PSBT export are absent. Users cannot complete those recovery or external-signing paths.",
+      "counts": {
+        "parity": 2,
+        "partial": 0,
+        "not-implemented": 2
+      }
+    },
+    "F18": {
+      "status": "partial",
+      "goal": "Maintain and reuse labeled payment-address records.",
+      "reason": "Receiving addresses can be viewed, labeled and copied. Sending-contact management and address-record export are absent, leaving a substantial part of address-book use unavailable.",
+      "counts": {
+        "parity": 2,
+        "partial": 1,
+        "not-implemented": 3
+      }
+    },
+    "F19": {
+      "status": "parity",
+      "goal": "Sign a message or check that a signature proves control of an address.",
+      "reason": "Message signing, verification, encrypted-wallet access and signature copying achieve the goal for the supported address type.",
+      "counts": {
+        "parity": 3,
+        "partial": 0,
+        "not-implemented": 0
+      }
+    },
+    "F20": {
+      "status": "parity",
+      "goal": "Set up storage and synchronize a usable node.",
+      "reason": "Data-directory selection, pruning, storage checks, network selection and synchronization feedback achieve setup. Missing wallet-recovery guidance does not block the main setup workflow.",
+      "counts": {
+        "parity": 7,
+        "partial": 0,
+        "not-implemented": 0
+      }
+    },
+    "F21": {
+      "status": "parity",
+      "goal": "Configure node connectivity and manage peer access.",
+      "reason": "Network routing/settings, peer inspection, disconnection and bans provide connectivity control. Copying entries from the ban list remains a secondary convenience gap.",
+      "counts": {
+        "parity": 8,
+        "partial": 0,
+        "not-implemented": 1
+      }
+    },
+    "F22": {
+      "status": "parity",
+      "goal": "Inspect node behavior and perform advanced operations.",
+      "reason": "Node/traffic/log views and wallet-aware RPC tools provide diagnostics and command access. Selectable time ranges provide focused observation without clearing traffic history.",
+      "counts": {
+        "parity": 8,
+        "partial": 0,
+        "not-implemented": 0
+      }
+    },
+    "F23": {
+      "status": "partial",
+      "goal": "Adjust and recover application behavior through supported preferences.",
+      "reason": "Many settings and startup reset are available, and an external editor is an equivalent configuration path. Missing spending-policy preferences and startup integration still prevent some requested behavior choices. The new functional check also found that the database-cache editor rejects normal allocations above 8 MiB.",
+      "counts": {
+        "parity": 7,
+        "partial": 1,
+        "not-implemented": 3
+      }
+    },
+    "F24": {
+      "status": "parity",
+      "goal": "Keep the node accessible in the background and restore or quit it.",
+      "reason": "Tray/Dock visibility, background operation and quit behavior achieve the shell goal. Restoring the main window before using task menus replaces duplicate tray shortcuts.",
+      "counts": {
+        "parity": 2,
+        "partial": 0,
+        "not-implemented": 0
+      }
+    },
+    "F25": {
+      "status": "not-implemented",
+      "goal": "Receive transaction and application notifications through the desktop.",
+      "reason": "Desktop notification delivery is not connected. Critical in-app dialogs cover a fallback subfeature, but do not implement the main desktop-notification channel.",
+      "counts": {
+        "parity": 1,
+        "partial": 0,
+        "not-implemented": 3
+      }
+    },
+    "F26": {
+      "status": "parity",
+      "goal": "Manage application visibility, placement and access to wallet and node views.",
+      "reason": "Window placement/visibility persist, background operation works, and wallet/node views remain accessible. Switching views replaces a separate diagnostics window.",
+      "counts": {
+        "parity": 5,
+        "partial": 0,
+        "not-implemented": 0
+      }
+    },
+    "F27": {
+      "status": "partial",
+      "goal": "Start and stop the node predictably, including recovery and system shutdown.",
+      "reason": "Normal startup, cancellation and clean exit work. Unreadable-settings recovery and Windows session-shutdown coordination have no equivalent supported flow.",
+      "counts": {
+        "parity": 4,
+        "partial": 0,
+        "not-implemented": 4
+      }
+    },
+    "F28": {
+      "status": "parity",
+      "goal": "Reach common wallet and node tasks and switch active wallets.",
+      "reason": "Application navigation, wallet selection, menus and shortcuts provide the intended task access.",
+      "counts": {
+        "parity": 3,
+        "partial": 0,
+        "not-implemented": 0
+      }
+    },
+    "F29": {
+      "status": "partial",
+      "goal": "Understand the current state of the node and active wallet.",
+      "reason": "Connectivity, sync and amount units are visible, but live wallet lock and key-generation state are missing. These are unavailable state information, not layout differences.",
+      "counts": {
+        "parity": 4,
+        "partial": 0,
+        "not-implemented": 1
+      }
+    },
+    "F30": {
+      "status": "parity",
+      "goal": "Understand application feedback and make informed operation decisions.",
+      "reason": "Messages, confirmations, busy states and sync progress/ETA achieve the main feedback goal. General wallet/rescan progress remains a specific gap; a separate sync-rate number is not required.",
+      "counts": {
+        "parity": 5,
+        "partial": 1,
+        "not-implemented": 0
+      }
+    },
+    "F31": {
+      "status": "partial",
+      "goal": "Integrate wallet use with desktop behavior and application help.",
+      "reason": "Explicit request import and manual theme choice achieve their user outcomes. Missing macOS background-throttling protection and command-line help access remain substantive gaps.",
+      "counts": {
+        "parity": 2,
+        "partial": 1,
+        "not-implemented": 1
+      }
+    },
+    "F32": {
+      "status": "not-implemented",
+      "goal": "Conceal wallet values and activity with a persistent privacy preference.",
+      "reason": "There is no equivalent balance/activity masking or history-restriction workflow.",
+      "counts": {
+        "parity": 0,
+        "partial": 0,
+        "not-implemented": 4
+      }
+    },
+    "F33": {
+      "status": "parity",
+      "goal": "Run and manage a node without enabling wallet features.",
+      "reason": "Wallet-disabled operation retains node tools, preferences and the application shell.",
+      "counts": {
+        "parity": 3,
+        "partial": 0,
+        "not-implemented": 0
+      }
+    },
+    "F34": {
+      "status": "partial",
+      "goal": "Rediscover wallet history while monitoring and controlling a rescan.",
+      "reason": "RPC can initiate rescanning as the baseline allows, but the GUI lacks rescan progress and cancellation. The monitored, controllable rescan outcome is incomplete.",
+      "counts": {
+        "parity": 1,
+        "partial": 0,
+        "not-implemented": 2
+      }
+    }
+  }
+}

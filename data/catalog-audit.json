@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "date": "2026-10-11",
   "snapshotCatalogId": "b4b1026b74ad8bf0a1628c9889b82193d33d210c3aa0170e94783f371fe15c0b",
   "method": "Compare user outcomes across all groups, asking whether one outcome can work while another fails. Shared screenshots, source modules or controls alone do not establish a duplicate. Preserve distinct wallet types, security requirements, lifecycle stages and interoperability checks.",
@@ -7,10 +7,138 @@
     {
       "target": "F05.S01",
       "sources": [
-        "F05.S02"
+        "F05.S02",
+        "F05.S04"
       ],
       "intent": "Export a watch-only copy of a wallet for monitoring without spending access.",
-      "reason": "One export outcome; file creation is a verification step."
+      "reason": "File creation and exclusion of private spending keys are checks for the same export outcome.",
+      "reviewMode": "equivalent"
+    },
+    {
+      "target": "F32.S01",
+      "sources": [
+        "F07.S05"
+      ],
+      "intent": "Conceal wallet balances and recent activity.",
+      "reason": "Privacy concealment is counted under Privacy Mode.",
+      "reviewMode": "equivalent"
+    },
+    {
+      "target": "F02.S03",
+      "sources": [
+        "F28.S02"
+      ],
+      "intent": "Choose which wallet to use.",
+      "reason": "Wallet switching is counted once under wallet management.",
+      "reviewMode": "equivalent"
+    },
+    {
+      "target": "F16.S09",
+      "sources": [
+        "F31.S05"
+      ],
+      "intent": "Inspect transactions in external block explorers.",
+      "reason": "Explorer handoff is counted once; choosing the service remains F23.S08.",
+      "reviewMode": "equivalent"
+    },
+    {
+      "target": "F12.S01",
+      "sources": [
+        "F12.S02"
+      ],
+      "intent": "Choose which coins fund a transaction, individually or in groups.",
+      "reason": "Individual and group selection are variants of selecting funding coins.",
+      "reviewMode": "equivalent"
+    },
+    {
+      "target": "F26.S03",
+      "sources": [
+        "F24.S02"
+      ],
+      "intent": "Keep the node running while the main window is hidden, minimized, or closed, where supported.",
+      "reason": "Visibility changes must leave the node running. Desktop variants remain part of the evidence scope.",
+      "reviewMode": "equivalent"
+    },
+    {
+      "target": "F27.S05",
+      "sources": [
+        "F24.S04"
+      ],
+      "intent": "Quit the application and shut down the node cleanly.",
+      "reason": "Tray or Dock Quit is a shutdown path, with the same clean-exit outcome.",
+      "reviewMode": "equivalent"
+    },
+    {
+      "target": "F17.S01",
+      "sources": [
+        "F17.S03"
+      ],
+      "intent": "Increase the fee of an eligible transaction by signing and submitting a replacement.",
+      "reason": "Submitting the replacement completes the fee increase; cost review and unsigned export remain separate.",
+      "reviewMode": "equivalent"
+    },
+    {
+      "target": "F10.S03",
+      "sources": [
+        "F31.S01"
+      ],
+      "intent": "Handle Bitcoin payment requests transferred from other applications, including while the application is already running.",
+      "reason": "Import, paste and drag-and-drop are supported handoff paths. Automatic OS forwarding remains an explicit implementation difference.",
+      "reviewMode": "equivalent"
+    },
+    {
+      "target": "F15.S03",
+      "sources": [
+        "F08.S08"
+      ],
+      "intent": "Verify a receiving address on a compatible signing device.",
+      "reason": "Receiving-address generation remains under Receive; this criterion now covers device verification alone.",
+      "reviewMode": "reassess"
+    },
+    {
+      "target": "F20.S05",
+      "sources": [
+        "F30.S06"
+      ],
+      "intent": "Assess synchronization progress, how far the node is behind, and the estimated remaining work.",
+      "reason": "Processing rate and remaining-time behavior are verification details of synchronization status; wallet freshness remains F07.S04.",
+      "reviewMode": "reassess"
+    },
+    {
+      "target": "F22.S05",
+      "sources": [
+        "F22.S09"
+      ],
+      "intent": "Run advanced node and wallet commands.",
+      "reason": "Descriptor import, multisig setup, rescans and PSBT combination remain explicit functional scenarios for the console.",
+      "reviewMode": "reassess"
+    },
+    {
+      "target": "F11.S01",
+      "sources": [
+        "F11.S03"
+      ],
+      "intent": "Choose an estimated fee based on the desired confirmation speed and understand its expected timing.",
+      "reason": "Confirmation timing is part of choosing an estimated fee; custom rates and unavailable estimates remain separate.",
+      "reviewMode": "equivalent"
+    },
+    {
+      "target": "F25.S01",
+      "sources": [
+        "F25.S02"
+      ],
+      "intent": "Receive payment notifications that identify the transaction, wallet, amount, and recipient.",
+      "reason": "The contents of a payment notification are checks on that notification outcome.",
+      "reviewMode": "equivalent"
+    },
+    {
+      "target": "F14.S06",
+      "sources": [
+        "F15.S05"
+      ],
+      "intent": "Copy a partially signed PSBT to the clipboard or save it to a file for further signing.",
+      "reason": "Local and external-signer results are cases of the same partial-PSBT handoff. Collecting additional signatures remains F14.S05.",
+      "reviewMode": "equivalent"
     }
   ],
   "findings": [
@@ -23,7 +151,12 @@
         "F05.S02"
       ],
       "reason": "Creating a watch-only copy and writing that copy to a file describe one export outcome.",
-      "recommendation": "Combined as F05.S01. File creation and absence of private spending keys are verification steps; cross-node use remains F05.S03."
+      "recommendation": "Combined as F05.S01. File creation and absence of private spending keys are verification steps; cross-node use remains F05.S03.",
+      "status": "applied",
+      "outcomes": [
+        "F05.S01"
+      ],
+      "resolution": "Combined file export and creation of the watch-only copy."
     },
     {
       "id": "D02",
@@ -34,7 +167,12 @@
         "F05.S04"
       ],
       "reason": "A copy without spending access already requires spending keys to remain separate. S04 repeats a defining property of S01.",
-      "recommendation": "Fold S04 into the merged S01 and retain the public-descriptor/private-key assertions as its security checks."
+      "recommendation": "Fold S04 into the merged S01 and retain the public-descriptor/private-key assertions as its security checks.",
+      "status": "applied",
+      "outcomes": [
+        "F05.S01"
+      ],
+      "resolution": "Added key separation to the same export outcome and retained its security evidence."
     },
     {
       "id": "D03",
@@ -45,7 +183,12 @@
         "F32.S01"
       ],
       "reason": "Both criteria ask privacy mode to conceal balances and recent activity. Their placement in different groups adds no user outcome.",
-      "recommendation": "Keep F32.S01 as the counted criterion and cross-reference it from Wallet Overview."
+      "recommendation": "Keep F32.S01 as the counted criterion and cross-reference it from Wallet Overview.",
+      "status": "applied",
+      "outcomes": [
+        "F32.S01"
+      ],
+      "resolution": "Concealment is counted under Privacy Mode and linked from Wallet Overview."
     },
     {
       "id": "D04",
@@ -56,7 +199,12 @@
         "F28.S02"
       ],
       "reason": "Choosing which wallet to use and switching between available wallets are the same user action.",
-      "recommendation": "Keep F02.S03 and cross-reference it from Navigation."
+      "recommendation": "Keep F02.S03 and cross-reference it from Navigation.",
+      "status": "applied",
+      "outcomes": [
+        "F02.S03"
+      ],
+      "resolution": "Wallet switching is counted under wallet management and linked from Navigation."
     },
     {
       "id": "D05",
@@ -67,7 +215,12 @@
         "F31.S05"
       ],
       "reason": "Both criteria open transaction information in an external block explorer.",
-      "recommendation": "Keep F16.S09 and reference it from Desktop Integration. Keep configuration of the explorer service, F23.S08, separate."
+      "recommendation": "Keep F16.S09 and reference it from Desktop Integration. Keep configuration of the explorer service, F23.S08, separate.",
+      "status": "applied",
+      "outcomes": [
+        "F16.S09"
+      ],
+      "resolution": "Explorer handoff is counted under transaction history and linked from Desktop Integration."
     },
     {
       "id": "D06",
@@ -78,7 +231,12 @@
         "F12.S02"
       ],
       "reason": "Selecting individual coins or groups is already a way of choosing which coins fund a transaction.",
-      "recommendation": "Combine as choosing the funding coins individually or in groups. Keep coin inspection, locking and custom change separate."
+      "recommendation": "Combine as choosing the funding coins individually or in groups. Keep coin inspection, locking and custom change separate.",
+      "status": "applied",
+      "outcomes": [
+        "F12.S01"
+      ],
+      "resolution": "Individual and group selection are combined in the funding-coins criterion."
     },
     {
       "id": "D07",
@@ -89,7 +247,12 @@
         "F26.S03"
       ],
       "reason": "Both require visibility changes to leave the node running. Minimize, close-to-tray and restore are scenarios for the same outcome.",
-      "recommendation": "Keep F26.S03, retain supported desktop variants in its test matrix, and link from the tray group."
+      "recommendation": "Keep F26.S03, retain supported desktop variants in its test matrix, and link from the tray group.",
+      "status": "applied",
+      "outcomes": [
+        "F26.S03"
+      ],
+      "resolution": "Visibility changes that preserve the node are counted under application windows; desktop limits remain visible."
     },
     {
       "id": "D08",
@@ -100,7 +263,12 @@
         "F27.S05"
       ],
       "reason": "A tray/dock Quit entry is an activation path for orderly application and node shutdown.",
-      "recommendation": "Keep F27.S05, with tray/dock Quit as a test path. Keep startup cancellation and Windows session shutdown as distinct cases."
+      "recommendation": "Keep F27.S05, with tray/dock Quit as a test path. Keep startup cancellation and Windows session shutdown as distinct cases.",
+      "status": "applied",
+      "outcomes": [
+        "F27.S05"
+      ],
+      "resolution": "Tray/Dock Quit is retained as a clean-shutdown test path."
     },
     {
       "id": "D09",
@@ -111,7 +279,12 @@
         "F17.S03"
       ],
       "reason": "Signing and submitting the replacement completes the fee increase described by S01. Neither wording establishes a separate user objective.",
-      "recommendation": "Combine into increasing the fee of an eligible transaction and submitting its replacement. Retain cost review and unsigned fee-bump export separately."
+      "recommendation": "Combine into increasing the fee of an eligible transaction and submitting its replacement. Retain cost review and unsigned fee-bump export separately.",
+      "status": "applied",
+      "outcomes": [
+        "F17.S01"
+      ],
+      "resolution": "Fee increase and signed replacement submission are one outcome."
     },
     {
       "id": "D10",
@@ -122,7 +295,12 @@
         "F31.S01"
       ],
       "reason": "Both provide desktop handoff of Bitcoin payment requests into the application. Running-instance delivery and drag-and-drop are supported variants.",
-      "recommendation": "Keep one handoff criterion under Open Payment URI, preserving both startup/running-instance and drag-and-drop checks."
+      "recommendation": "Keep one handoff criterion under Open Payment URI, preserving both startup/running-instance and drag-and-drop checks.",
+      "status": "applied",
+      "outcomes": [
+        "F10.S03"
+      ],
+      "resolution": "Desktop payment-request handoff is counted under Open Payment URI, retaining delivery variants."
     },
     {
       "id": "O01",
@@ -133,7 +311,13 @@
         "F15.S03"
       ],
       "reason": "F08.S08 repeats the verification part of F15.S03, which also includes generating addresses.",
-      "recommendation": "Give device verification one criterion under External Signer; keep address generation under Receive and reference that coverage."
+      "recommendation": "Give device verification one criterion under External Signer; keep address generation under Receive and reference that coverage.",
+      "status": "applied",
+      "outcomes": [
+        "F15.S03",
+        "F08.S01"
+      ],
+      "resolution": "Device verification is assessed alone under External Signer; receiving-address generation remains under Receive."
     },
     {
       "id": "O02",
@@ -144,7 +328,13 @@
         "F29.S04"
       ],
       "reason": "Encryption and lock status are repeated; F29.S04 additionally covers key-generation status.",
-      "recommendation": "Keep encryption/lock status under F06 and narrow F29.S04 to key-generation status, with a link to F06."
+      "recommendation": "Keep encryption/lock status under F06 and narrow F29.S04 to key-generation status, with a link to F06.",
+      "status": "applied",
+      "outcomes": [
+        "F06.S05",
+        "F29.S04"
+      ],
+      "resolution": "Encryption/lock status stays under F06; F29.S04 now covers only key-generation status."
     },
     {
       "id": "O03",
@@ -155,7 +345,13 @@
         "F29.S05"
       ],
       "reason": "Choosing the displayed denomination is contained in F23.S06 along with language selection.",
-      "recommendation": "Keep units in one place and narrow the other criterion to language. Preserve both as separately assessable outcomes."
+      "recommendation": "Keep units in one place and narrow the other criterion to language. Preserve both as separately assessable outcomes.",
+      "status": "applied",
+      "outcomes": [
+        "F23.S06",
+        "F29.S05"
+      ],
+      "resolution": "Language selection and amount-unit selection are separate, single-owner criteria."
     },
     {
       "id": "O04",
@@ -168,7 +364,13 @@
         "F07.S04"
       ],
       "reason": "Synchronization progress is repeated in three criteria. Processing rate, remaining work and stale wallet information add distinct conditions.",
-      "recommendation": "Define one synchronization-status criterion with rate/remaining-work checks and a separate wallet-freshness warning criterion. Replace the other occurrences with references."
+      "recommendation": "Define one synchronization-status criterion with rate/remaining-work checks and a separate wallet-freshness warning criterion. Replace the other occurrences with references.",
+      "status": "applied",
+      "outcomes": [
+        "F20.S05",
+        "F07.S04"
+      ],
+      "resolution": "Synchronization status and estimates are consolidated; wallet-freshness warnings remain separate."
     },
     {
       "id": "O05",
@@ -179,7 +381,14 @@
         "F22.S09"
       ],
       "reason": "S09 lists command examples within S05, including descriptor import, multisig setup, rescan and PSBT combination.",
-      "recommendation": "Keep command execution as the capability and retain the examples as functional test cases. Keep wallet selection and rescan recovery outcomes independently visible."
+      "recommendation": "Keep command execution as the capability and retain the examples as functional test cases. Keep wallet selection and rescan recovery outcomes independently visible.",
+      "status": "applied",
+      "outcomes": [
+        "F22.S05",
+        "F22.S06",
+        "F34.S01"
+      ],
+      "resolution": "Advanced commands are one console capability with explicit workflow test cases; wallet context and rescan recovery remain distinct."
     },
     {
       "id": "O06",
@@ -193,7 +402,15 @@
         "F27.S02"
       ],
       "reason": "The general startup/window preference row overlaps named outcomes for login startup, minimized startup, background operation and tray visibility.",
-      "recommendation": "Replace the broad preference row with references to the specific outcomes so each requirement can be accepted separately."
+      "recommendation": "Replace the broad preference row with references to the specific outcomes so each requirement can be accepted separately.",
+      "status": "applied",
+      "outcomes": [
+        "F27.S01",
+        "F27.S02",
+        "F26.S03",
+        "F24.S05"
+      ],
+      "resolution": "Removed the broad preference row and linked the four specific startup/window outcomes."
     },
     {
       "id": "O07",
@@ -206,7 +423,14 @@
         "F28.S04"
       ],
       "reason": "Tray access and general quick-access wording repeat navigation to payments, records and diagnostics. The tray location alone does not add a user goal.",
-      "recommendation": "Use the concrete navigation outcomes and keep keyboard access separate. Remove broad quick-access rows or turn them into group descriptions."
+      "recommendation": "Use the concrete navigation outcomes and keep keyboard access separate. Remove broad quick-access rows or turn them into group descriptions.",
+      "status": "applied",
+      "outcomes": [
+        "F28.S01",
+        "F28.S03",
+        "F28.S05"
+      ],
+      "resolution": "Removed generic quick-access rows; concrete task navigation and keyboard access remain explicit."
     },
     {
       "id": "O08",
@@ -217,7 +441,12 @@
         "F11.S03"
       ],
       "reason": "Confirmation timing is both an input to fee selection and information the user can assess. The current short wording does not clearly distinguish them.",
-      "recommendation": "Either combine them or narrow S03 to showing the estimated timing for the chosen fee, including a custom rate; retain that only if it is an independent requirement."
+      "recommendation": "Either combine them or narrow S03 to showing the estimated timing for the chosen fee, including a custom rate; retain that only if it is an independent requirement.",
+      "status": "applied",
+      "outcomes": [
+        "F11.S01"
+      ],
+      "resolution": "Expected timing is part of choosing an estimated fee; no separate custom-fee timing capability was introduced."
     },
     {
       "id": "O09",
@@ -228,7 +457,12 @@
         "F25.S02"
       ],
       "reason": "S02 specifies the identifying information inside the payment notifications of S01.",
-      "recommendation": "Fold transaction/wallet/amount context into the acceptance checks for payment notifications. Keep notification fallback and flood prevention separate."
+      "recommendation": "Fold transaction/wallet/amount context into the acceptance checks for payment notifications. Keep notification fallback and flood prevention separate.",
+      "status": "applied",
+      "outcomes": [
+        "F25.S01"
+      ],
+      "resolution": "Transaction, wallet, amount and recipient context are part of the payment-notification criterion."
     },
     {
       "id": "O10",
@@ -239,7 +473,13 @@
         "F31.S02"
       ],
       "reason": "Network identification is repeated, but F26.S05 also identifies the active wallet and F31.S02 calls out multiple instances.",
-      "recommendation": "Separate active-wallet identity from active-network identity, with multiple instances as a network-identity scenario."
+      "recommendation": "Separate active-wallet identity from active-network identity, with multiple instances as a network-identity scenario.",
+      "status": "applied",
+      "outcomes": [
+        "F26.S05",
+        "F31.S02"
+      ],
+      "resolution": "Wallet identity and network identity now have separate criteria; multiple instances are a network-identity test case."
     },
     {
       "id": "O11",
@@ -250,7 +490,13 @@
         "F15.S04"
       ],
       "reason": "The external-signer part of Send repeats authorization on the signing device. Local signing is a separate part of F09.S07.",
-      "recommendation": "Narrow the Send criterion to local-key signing and reference device authorization under External Signer, retaining physical-device proof requirements."
+      "recommendation": "Narrow the Send criterion to local-key signing and reference device authorization under External Signer, retaining physical-device proof requirements.",
+      "status": "applied",
+      "outcomes": [
+        "F09.S07",
+        "F15.S04"
+      ],
+      "resolution": "Send covers local-key signing; physical-device authorization remains under External Signer."
     },
     {
       "id": "O12",
@@ -261,7 +507,13 @@
         "F15.S05"
       ],
       "reason": "Both preserve an incompletely signed transaction for further signing; F15.S05 is the external-device variant.",
-      "recommendation": "Use one partial-PSBT handoff criterion with local and external-signer cases. Keep actually combining additional signatures (F14.S05) distinct; successful export alone does not prove it."
+      "recommendation": "Use one partial-PSBT handoff criterion with local and external-signer cases. Keep actually combining additional signatures (F14.S05) distinct; successful export alone does not prove it.",
+      "status": "applied",
+      "outcomes": [
+        "F14.S06",
+        "F14.S05"
+      ],
+      "resolution": "Incomplete-PSBT handoff is consolidated with local and device cases; actually collecting additional signatures remains distinct."
     },
     {
       "id": "K01",
@@ -272,7 +524,13 @@
         "F05.S03"
       ],
       "reason": "Producing a file does not establish that another node can restore it and monitor the same funds.",
-      "recommendation": "Keep cross-node interoperability independently checked."
+      "recommendation": "Keep cross-node interoperability independently checked.",
+      "status": "retained",
+      "outcomes": [
+        "F05.S01",
+        "F05.S03"
+      ],
+      "resolution": "Keep cross-node interoperability independently checked."
     },
     {
       "id": "K02",
@@ -283,7 +541,13 @@
         "F06.S01"
       ],
       "reason": "Protecting an existing wallet can fail independently of creating an encrypted wallet.",
-      "recommendation": "Keep both lifecycle outcomes."
+      "recommendation": "Keep both lifecycle outcomes.",
+      "status": "retained",
+      "outcomes": [
+        "F01.S02",
+        "F06.S01"
+      ],
+      "resolution": "Keep both lifecycle outcomes."
     },
     {
       "id": "K03",
@@ -295,7 +559,14 @@
         "F22.S06"
       ],
       "reason": "Keeping wallets loaded, choosing the wallet for normal activity, and targeting an RPC command have different state and failure conditions.",
-      "recommendation": "Keep concurrency, active-wallet selection and RPC execution context separate."
+      "recommendation": "Keep concurrency, active-wallet selection and RPC execution context separate.",
+      "status": "retained",
+      "outcomes": [
+        "F02.S02",
+        "F02.S03",
+        "F22.S06"
+      ],
+      "resolution": "Keep concurrency, active-wallet selection and RPC execution context separate."
     },
     {
       "id": "K04",
@@ -308,7 +579,15 @@
         "F33.S03"
       ],
       "reason": "A node with no open wallet still has wallet functionality available. A wallet-disabled run must retain node controls and application behavior without that subsystem.",
-      "recommendation": "Keep the disabled-mode acceptance cases; shared screenshots are not enough to merge them."
+      "recommendation": "Keep the disabled-mode acceptance cases; shared screenshots are not enough to merge them.",
+      "status": "retained",
+      "outcomes": [
+        "F20.S06",
+        "F33.S01",
+        "F33.S02",
+        "F33.S03"
+      ],
+      "resolution": "Keep the disabled-mode acceptance cases; shared screenshots are not enough to merge them."
     },
     {
       "id": "K05",
@@ -325,7 +604,19 @@
         "F14.S06"
       ],
       "reason": "Preparing a payment, choosing supported wallet/signature types, exporting unsigned data, preserving existing signatures and collecting additional signatures are independently fallible outcomes.",
-      "recommendation": "Keep their contract boundaries. Use cross-references for shared payment-entry controls instead of treating a common PSBT screenshot as duplicate proof."
+      "recommendation": "Keep their contract boundaries. Use cross-references for shared payment-entry controls instead of treating a common PSBT screenshot as duplicate proof.",
+      "status": "retained",
+      "outcomes": [
+        "F09.S08",
+        "F13.S01",
+        "F13.S02",
+        "F13.S03",
+        "F13.S05",
+        "F14.S03",
+        "F14.S05",
+        "F14.S06"
+      ],
+      "resolution": "Keep their contract boundaries. Use cross-references for shared payment-entry controls instead of treating a common PSBT screenshot as duplicate proof."
     },
     {
       "id": "K06",
@@ -340,7 +631,17 @@
         "F19.S03"
       ],
       "reason": "Generating a request, copying its text, exporting its QR image and sharing it are different usable capabilities. Clipboard copies of addresses or signatures involve different data contracts.",
-      "recommendation": "Keep copying as a capability, as requested. Do not create extra criteria for the location of a Copy button."
+      "recommendation": "Keep copying as a capability, as requested. Do not create extra criteria for the location of a Copy button.",
+      "status": "retained",
+      "outcomes": [
+        "F08.S03",
+        "F08.S04",
+        "F08.S05",
+        "F08.S06",
+        "F18.S05",
+        "F19.S03"
+      ],
+      "resolution": "Keep copying as a capability, as requested. Do not create extra criteria for the location of a Copy button."
     },
     {
       "id": "K07",
@@ -360,7 +661,22 @@
         "F34.S03"
       ],
       "reason": "Initial application startup, chain download, shutdown and wallet rescans operate at different lifecycle stages. Reporting progress, remaining usable and cancellation can fail independently.",
-      "recommendation": "Keep stage-specific outcomes. Treat the broad long-running-operation row as a scoped summary, not proof of every operation."
+      "recommendation": "Keep stage-specific outcomes. Treat the broad long-running-operation row as a scoped summary, not proof of every operation.",
+      "status": "retained",
+      "outcomes": [
+        "F20.S04",
+        "F27.S03",
+        "F27.S04",
+        "F27.S05",
+        "F27.S06",
+        "F27.S08",
+        "F30.S05",
+        "F30.S07",
+        "F34.S01",
+        "F34.S02",
+        "F34.S03"
+      ],
+      "resolution": "Keep stage-specific outcomes. Treat the broad long-running-operation row as a scoped summary, not proof of every operation."
     },
     {
       "id": "K08",
@@ -371,7 +687,13 @@
         "F16.S09"
       ],
       "reason": "Selecting an explorer service does not prove that a transaction is handed off using the correct ID.",
-      "recommendation": "Keep configuration and actual explorer handoff separate."
+      "recommendation": "Keep configuration and actual explorer handoff separate.",
+      "status": "retained",
+      "outcomes": [
+        "F23.S08",
+        "F16.S09"
+      ],
+      "resolution": "Keep configuration and actual explorer handoff separate."
     }
   ],
   "groups": [
@@ -782,5 +1104,238 @@
       ],
       "conclusion": "Rediscovery, progress reporting and cancellation are distinct rescan outcomes."
     }
-  ]
+  ],
+  "revision": "2026-10-11-all-findings",
+  "status": "implemented",
+  "replacements": {
+    "F29.S02": [
+      "F20.S05",
+      "F07.S04"
+    ],
+    "F23.S09": [
+      "F27.S01",
+      "F27.S02",
+      "F26.S03",
+      "F24.S05"
+    ],
+    "F24.S03": [
+      "F28.S01",
+      "F28.S03"
+    ],
+    "F28.S04": [
+      "F28.S01",
+      "F28.S03"
+    ]
+  },
+  "scopeTransfers": {
+    "F15.S03": [
+      "F15.S03",
+      "F08.S01"
+    ],
+    "F29.S04": [
+      "F29.S04",
+      "F06.S05"
+    ],
+    "F23.S06": [
+      "F23.S06",
+      "F29.S05"
+    ],
+    "F26.S05": [
+      "F26.S05",
+      "F31.S02"
+    ],
+    "F09.S07": [
+      "F09.S07",
+      "F15.S04"
+    ]
+  },
+  "rewrites": {
+    "F15.S03": {
+      "reviewMode": "reassess",
+      "implementation": {
+        "status": "not-implemented",
+        "reason": "Receiving-address verification on the signing device is absent; address generation is assessed under F08.S01."
+      },
+      "qml": {
+        "detail": "Receiving addresses cannot be verified on a signing device. Address generation is reviewed separately under Receive.",
+        "status": "gap"
+      },
+      "related": [
+        "F08.S01"
+      ],
+      "checks": [
+        "Confirm the generated address on a compatible physical signer."
+      ]
+    },
+    "F06.S05": {
+      "reviewMode": "equivalent",
+      "related": [
+        "F29.S04"
+      ]
+    },
+    "F29.S04": {
+      "reviewMode": "reassess",
+      "intent": "Check the wallet’s key-generation status.",
+      "implementation": {
+        "status": "not-implemented",
+        "reason": "Key-generation status is not displayed. Encryption and lock status are assessed separately under F06.S05."
+      },
+      "qml": {
+        "detail": "No key-generation status is displayed in the QML interface. Earlier encryption evidence applies to F06.S05.",
+        "status": "gap"
+      },
+      "related": [
+        "F06.S05"
+      ]
+    },
+    "F23.S06": {
+      "reviewMode": "reassess",
+      "intent": "Choose the interface language.",
+      "qml": {
+        "detail": "The display-settings functional test verifies that the selected language persists after restart. Amount-unit selection is assessed under F29.S05.",
+        "status": "assertions"
+      },
+      "related": [
+        "F29.S05"
+      ]
+    },
+    "F29.S05": {
+      "reviewMode": "equivalent",
+      "intent": "Choose the denomination used to display amounts: BTC, mBTC, bits, or satoshis.",
+      "related": [
+        "F23.S06"
+      ],
+      "proofFrom": [
+        "F23.S06"
+      ]
+    },
+    "F20.S05": {
+      "reviewMode": "reassess",
+      "related": [
+        "F07.S04"
+      ],
+      "checks": [
+        "Observe real peer synchronization and compare the displayed progress with the node’s chain state.",
+        "Check the remaining-time estimate after it settles and when throughput changes; a separate processing-rate number is an implementation difference."
+      ],
+      "proofFrom": [
+        "F29.S02"
+      ]
+    },
+    "F07.S04": {
+      "reviewMode": "equivalent",
+      "related": [
+        "F20.S05"
+      ],
+      "proofFrom": [
+        "F29.S02"
+      ]
+    },
+    "F22.S05": {
+      "reviewMode": "reassess",
+      "related": [
+        "F22.S06",
+        "F34.S01"
+      ],
+      "checks": [
+        "Run descriptor import, multisig setup, wallet rescanning and PSBT combination through the console, checking the resulting state."
+      ]
+    },
+    "F28.S01": {
+      "reviewMode": "equivalent",
+      "related": [
+        "F02.S03",
+        "F28.S03",
+        "F28.S05"
+      ],
+      "proofFrom": [
+        "F28.S04"
+      ]
+    },
+    "F28.S03": {
+      "reviewMode": "reassess",
+      "intent": "Access address records, message signing and verification, application settings, and node diagnostics.",
+      "qml": {
+        "detail": "The recorded desktop scenario opens address records and node diagnostics, while signing and verification scenarios open their forms. A targeted navigation scenario covering all named tasks has not yet been recorded.",
+        "status": "limited"
+      },
+      "related": [
+        "F28.S01",
+        "F28.S05",
+        "F19.S01",
+        "F19.S02"
+      ],
+      "checks": [
+        "Reach each named task through the application and confirm it is usable. Shortcut location is not an additional criterion."
+      ],
+      "proofFrom": [
+        "F19.S01",
+        "F19.S02",
+        "F24.S03"
+      ]
+    },
+    "F26.S05": {
+      "reviewMode": "reassess",
+      "intent": "Identify the active wallet.",
+      "qml": {
+        "detail": "The wallet-switching check verifies the active wallet and its settings; its capture shows the selected wallet name. The earlier node-only capture supports network identity under F31.S02.",
+        "status": "assertions",
+        "captureFrom": [
+          "F02.S03"
+        ]
+      },
+      "related": [
+        "F31.S02"
+      ],
+      "proofFrom": [
+        "F02.S03"
+      ]
+    },
+    "F31.S02": {
+      "reviewMode": "reassess",
+      "intent": "Identify the active Bitcoin network and distinguish instances using different networks.",
+      "qml": {
+        "detail": "The existing capture identifies regtest. Other network identities and simultaneous instances still need targeted runtime proof.",
+        "status": "limited"
+      },
+      "related": [
+        "F26.S05"
+      ],
+      "checks": [
+        "Run profiles for the supported Bitcoin networks and distinguish simultaneously open instances."
+      ],
+      "proofFrom": [
+        "F26.S05"
+      ]
+    },
+    "F09.S07": {
+      "reviewMode": "reassess",
+      "intent": "Sign payments with local spending keys.",
+      "qml": {
+        "detail": "Recorded local-wallet payment tests exercise signing and broadcast, including encrypted-wallet authorization and relocking. Physical-device approval is assessed separately under F15.S04.",
+        "status": "assertions"
+      },
+      "related": [
+        "F15.S04"
+      ],
+      "checks": [
+        "Authorize a payment with local spending keys and verify the broadcast transaction; include an encrypted wallet."
+      ]
+    },
+    "F15.S04": {
+      "reviewMode": "equivalent",
+      "related": [
+        "F09.S07"
+      ]
+    },
+    "F14.S06": {
+      "reviewMode": "reassess",
+      "related": [
+        "F14.S05"
+      ],
+      "checks": [
+        "Export an incomplete result from local and external-signing workflows, verify that existing signatures and outputs are preserved, and resume signing elsewhere."
+      ]
+    }
+  }
 }

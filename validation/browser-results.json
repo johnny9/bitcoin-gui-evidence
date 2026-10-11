@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-11T12:40:55.379Z",
+  "checkedAt": "2026-10-11T13:18:35.876Z",
   "basePath": "/bitcoin-gui-evidence/",
   "outcomes": [
     {
@@ -7,7 +7,7 @@
       "status": "passed"
     },
     {
-      "name": "Acceptance summary separates 52 implementation gaps, 125 accepted and 25 proof gaps",
+      "name": "Acceptance summary separates 47 implementation gaps, 114 accepted and 22 proof gaps",
       "status": "passed"
     },
     {
@@ -20,6 +20,26 @@
     },
     {
       "name": "Duplicate audit covers every original criterion and remains readable on mobile",
+      "status": "passed"
+    },
+    {
+      "name": "All retired links reach their replacement outcomes without adding counted rows",
+      "status": "passed"
+    },
+    {
+      "name": "Moved outcomes preserve inherited scope and expose conflicting source-group decisions",
+      "status": "passed"
+    },
+    {
+      "name": "Broad and narrowed approvals require reassessment, while resolved duplicate approvals survive",
+      "status": "passed"
+    },
+    {
+      "name": "Current review storage ignores older tabs, synchronizes new tabs and rejects invalid imports atomically",
+      "status": "passed"
+    },
+    {
+      "name": "Applied scope changes retain proof limits, scenario checks and modules from both source groups",
       "status": "passed"
     },
     {
