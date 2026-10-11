@@ -1,5 +1,17 @@
 # Static site validation
 
+## October 11, 2026 — feature parity and supporting evidence language
+
+Validated changes based on site revision `47733363cdfb8eea2e798e3e22b47659a12d1ebe`; [tested file hashes](validation/tested-files.json) identify the resulting source.
+
+- Reframed the site as **GUI-QML feature parity**, with application captures, source modules and test results supporting acceptance reviews. Updated the catalog, navigation, feature pages, review controls, guide, README and downloadable feature catalog. The guide explains feature parity, evidence and acceptance as distinct parts of the review process.
+- Renamed the remaining-work card **Parity gaps**, scope controls **Merge / release scope**, and decision filters **Review status**. Replaced criterion labels with subfeature labels and corrected the stale subfeature count in the page metadata by using a count-independent description.
+- **64 existing browser checks pass**, including filters, review defaults, saved review compatibility, deep links, all 221 capture images and mobile layouts. Catalog, guide and review-dialog previews were inspected on desktop and mobile. Build, evidence integrity, JavaScript syntax, local links and whitespace checks pass.
+- All parity ratings, acceptance defaults, review identity, source pins, functional results and capture records are unchanged. All 1,740 archived evidence files are unchanged. The generated source-and-test review report has wording updates only; its assessments and source/test references are identical. No application source or tests changed.
+- Native lint, clang-tidy and ASan commands returned 127 because this standalone website checkout lacks their CI entry scripts. [Command results](validation/native-ci.json) record the unchanged branch and revision after lint. No native, sanitizer or IPC-enabled lifecycle pass is claimed.
+
+[Browser outcomes](validation/browser-results.json) · [Evidence integrity](validation/evidence-integrity.json) · [Tested file hashes](validation/tested-files.json)
+
 ## October 11, 2026 — remove the needs-evidence summary card
 
 Validated changes based on site revision `9320d884a2909775eaba523de25f17cabd2d9c67`; [tested file hashes](validation/tested-files.json) identify the resulting source.

@@ -1,16 +1,16 @@
-# Acceptance review using existing tests
+# Evidence review using existing tests
 
 Assessed 2026-10-11 against GUI-QML `a91f4b4774f25de061fe1a7c132a91ddde117fca`.
 
 Connected QML user functionality plus relevant existing unit, component or functional tests is sufficient for acceptance when their combined coverage demonstrates the main user outcome. Confirm the connection between the tested code and the visible workflow. Repeating every backend command, environment or variant through a new GUI run, and collecting a matching screenshot for transient states, are not prerequisites. Missing user functionality and recorded failures remain gaps.
 
-These are acceptance assessments using existing source and recorded test results. No new application test, physical-device run or operating-system run is claimed. Original runtime records and captures are unchanged. Saved reviewer decisions still take precedence.
+These evidence assessments use existing source and recorded test results to support acceptance. No new application test, physical-device run or operating-system run is claimed. Original runtime records and captures are unchanged. Saved reviewer decisions still take precedence.
 
-The 17 reviewed criteria below have sufficient proof for this review. Device address verification, desktop notification delivery, login startup, Windows session shutdown and macOS background-throttling protection still lack the required connected user functionality. F27.S03 also remains partial: the startup busy indicator does not expose Core initialization progress. The six additional assessments cover storage planning, synchronization estimates, traffic periods, advanced console commands, settings reset and cancellation during startup.
+The 17 reviewed subfeatures below have sufficient proof for this review. Device address verification, desktop notification delivery, login startup, Windows session shutdown and macOS background-throttling protection still lack the required connected user functionality. F27.S03 also remains partial: the startup busy indicator does not expose Core initialization progress. The six additional assessments cover storage planning, synchronization estimates, traffic periods, advanced console commands, settings reset and cancellation during startup.
 
 ## F14.S06 — Copy a partially signed PSBT to the clipboard or save it to a file for further signing.
 
-[Open criterion](#feature/F14?item=F14.S06)
+[Open subfeature](#feature/F14?item=F14.S06)
 
 The review page lets the user save a transaction for further signing. Model tests preserve an incomplete external-signer result and imported PSBT metadata; component tests expose the more-signatures-required state. These satisfy the signing-handoff outcome.
 
@@ -31,7 +31,7 @@ Coverage limits: Assessment trusts the existing signer/model tests and QML save 
 
 ## F15.S01 — Connect a wallet to a compatible external signer.
 
-[Open criterion](#feature/F15?item=F15.S01)
+[Open subfeature](#feature/F15?item=F15.S01)
 
 The user can configure compatible signer software, check for a device, and create a signer-backed wallet. The recorded functional test drives those QML controls and discovers the mock signer.
 
@@ -48,7 +48,7 @@ Coverage limits: The executable mock stands in for the compatible physical signe
 
 ## F15.S02 — Keep spending keys on the signing device.
 
-[Open criterion](#feature/F15?item=F15.S02)
+[Open subfeature](#feature/F15?item=F15.S02)
 
 Signer-backed wallet creation disables local private keys, and the QML wallet settings omit local-key password controls. The recorded functional test checks private_keys_enabled is false; signing remains delegated to the external signer.
 
@@ -65,7 +65,7 @@ Coverage limits: This accepts the application key-separation workflow. It does n
 
 ## F15.S04 — Authorize outgoing payments using the device.
 
-[Open criterion](#feature/F15?item=F15.S04)
+[Open subfeature](#feature/F15?item=F15.S04)
 
 The payment review offers device approval, a waiting state, errors/retry, and sending after approval. The mock-signer functional test exercises failure recovery, approval and broadcast through that QML flow.
 
@@ -84,7 +84,7 @@ Coverage limits: Physical button presses are represented by the signer hook and 
 
 ## F16.S09 — Inspect transactions in external block explorers.
 
-[Open criterion](#feature/F16?item=F16.S09)
+[Open subfeature](#feature/F16?item=F16.S09)
 
 Transaction details provide an explorer action whose URL is built by the tested options model and passed to Qt.openUrlExternally. The connected user action and browser handoff meet the outcome.
 
@@ -101,7 +101,7 @@ Coverage limits: The operating-system browser launcher and remote explorer are t
 
 ## F20.S07 — Use mainnet, testnet, testnet4, signet, or regtest. Network support.
 
-[Open criterion](#feature/F20?item=F20.S07)
+[Open subfeature](#feature/F20?item=F20.S07)
 
 Startup selects the configured Core chain, supplies its chain model to QML, and exposes a network-aware wallet/node shell. Network-style tests cover mainnet, testnet, testnet4, signet and regtest; the existing application scenarios exercise regtest.
 
@@ -118,7 +118,7 @@ Coverage limits: Core chain selection and the common QML integration are trusted
 
 ## F21.S03 — Route connections through SOCKS5 proxies, with separate routing for Tor. Proxy support.
 
-[Open criterion](#feature/F21?item=F21.S03)
+[Open subfeature](#feature/F21?item=F21.S03)
 
 The user can configure and validate a default SOCKS5 proxy and a separate Tor proxy. The QML settings page commits them to Core, and the functional test checks toggles, validation, cancellation and persisted proxy/onion settings.
 
@@ -135,7 +135,7 @@ Coverage limits: Core routing is trusted once the settings are connected. Live T
 
 ## F21.S04 — Automatically configure router access for incoming connections where supported.
 
-[Open criterion](#feature/F21?item=F21.S04)
+[Open subfeature](#feature/F21?item=F21.S04)
 
 Connection settings expose automatic NAT-PMP port mapping. The setting reaches the node mapPort hook; the recorded model test verifies live enable/disable calls and persisted settings. This gives users the required router-mapping control.
 
@@ -152,7 +152,7 @@ Coverage limits: A physical router and a matching screenshot are not required. A
 
 ## F24.S01 — Keep the application accessible while its main window is hidden.
 
-[Open criterion](#feature/F24?item=F24.S01)
+[Open subfeature](#feature/F24?item=F24.S01)
 
 The QML window responds to tray Show/Hide and the macOS Dock reopen hook. The controller uses Qt system-tray integration on supported desktops. Existing functional/model tests and native Linux captures demonstrate hide/restore behavior.
 
@@ -171,7 +171,7 @@ Coverage limits: Windows and macOS execution is not newly certified; their conne
 
 ## F26.S03 — Keep the node running while the main window is hidden, minimized, or closed, where supported.
 
-[Open criterion](#feature/F26?item=F26.S03)
+[Open subfeature](#feature/F26?item=F26.S03)
 
 Window settings let the user choose minimize-to-tray and minimize-on-close. MainWindow routes those actions to window visibility instead of shutdown, while tray/Dock hooks restore it. Functional/model tests and native Linux RPC checks support continued node operation.
 
@@ -190,7 +190,7 @@ Coverage limits: The existing platform hooks are trusted. Additional operating-s
 
 ## F31.S02 — Identify the active Bitcoin network and distinguish instances using different networks.
 
-[Open criterion](#feature/F31?item=F31.S02)
+[Open subfeature](#feature/F31?item=F31.S02)
 
 QML labels non-mainnet networks, and the shell uses network-specific application names, settings and tray/window identities. Network-style tests check the known chains and their title suffixes; the regtest identity is already captured.
 
@@ -207,7 +207,7 @@ Coverage limits: Simultaneous public-network instances are not newly run. The te
 
 ## F20.S03 — Assess available storage and the requirements for full or pruned storage.
 
-[Open criterion](#feature/F20?item=F20.S03)
+[Open subfeature](#feature/F20?item=F20.S03)
 
 The storage-planning outcome is covered by tests for full and pruned disk requirements, insufficient space, and the visible selection controls. QML displays these same model values and prevents unsuitable choices. Additional wallet-recovery guidance is useful documentation, but is not required to plan disk use.
 
@@ -230,7 +230,7 @@ Coverage limits: Accepted for storage planning. Pruning and wallet-recovery cons
 
 ## F20.S05 — Assess synchronization progress, how far the node is behind, and the estimated remaining work.
 
-[Open criterion](#feature/F20?item=F20.S05)
+[Open subfeature](#feature/F20?item=F20.S05)
 
 The real-peer capture already demonstrates synchronization. Model tests verify ETA publication, progress dips and clock regression; component tests verify that reported progress reaches the clock display. QML binds the remaining-time display to the tested tracker through NodeModel. Together these cover the progress-and-estimate outcome.
 
@@ -253,7 +253,7 @@ Coverage limits: A stable live ETA screenshot and a new throttled-transfer run a
 
 ## F22.S03 — Focus traffic monitoring on a chosen observation period.
 
-[Open criterion](#feature/F22?item=F22.S03)
+[Open subfeature](#feature/F22?item=F22.S03)
 
 The QML period controls call the tested traffic-window method. Its unit test changes short and longer windows, checks the displayed sample history size, and preserves cumulative byte totals. This supports focusing the traffic graph on a chosen observation period.
 
@@ -270,7 +270,7 @@ Coverage limits: Clearing all traffic history is not required for choosing an ob
 
 ## F22.S05 — Run advanced node and wallet commands.
 
-[Open criterion](#feature/F22?item=F22.S05)
+[Open subfeature](#feature/F22?item=F22.S05)
 
 The live console test demonstrates command submission and replies. Model tests verify wallet scoping, and parser tests cover nested commands and quoted arguments. The QML console forwards commands through the same Core RPC dispatcher, so its access to advanced commands can be inferred without replaying every backend operation in the GUI.
 
@@ -293,7 +293,7 @@ Coverage limits: This accepts the console interface to advanced RPCs. It does no
 
 ## F23.S12 — Restore default preferences while retaining a backup of previous settings.
 
-[Open criterion](#feature/F23?item=F23.S12)
+[Open subfeature](#feature/F23?item=F23.S12)
 
 The existing functional reset test verifies restored preferences. Unit tests seed nondefault Core settings, invoke the supported reset paths, assert a backup file exists, and verify cleared settings. The implementation writes the loaded settings to the backup before clearing them. Together these support reset with backup retention.
 
@@ -314,7 +314,7 @@ Coverage limits: Backup retention is inferred from the tested file creation and 
 
 ## F27.S04 — Request an orderly shutdown during startup.
 
-[Open criterion](#feature/F27?item=F27.S04)
+[Open subfeature](#feature/F27?item=F27.S04)
 
 The recorded shutdown scenario requests cancellation during initialization and checks a successful process exit. It also exercises closing the GUI through the shutdown page. NodeModel tests cover interruption during initialization; the connected QML close action and application shutdown wiring provide the user path.
 

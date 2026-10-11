@@ -146,12 +146,12 @@ def audit_markdown(data):
 
 def current_catalog_markdown(data):
     by_id = {c['id']: c for g in data['groups'] for c in g['criteria']}
-    lines = ['# GUI-QML acceptance criteria', '', f'{len(by_id)} current subfeatures across {len(data["groups"])} feature groups. All duplicate-audit findings are implemented; the original IDs, evidence and review history remain available.', '', '[Implemented audit](catalog-audit.md) · [Original evidence index](gui-feature-evidence/README.md)', '']
+    lines = ['# GUI-QML feature parity and evidence', '', f'{len(by_id)} current subfeatures across {len(data["groups"])} feature groups, comparing GUI-QML with the Qt Widgets reference. Implementation assessments and supporting evidence inform acceptance reviews. Original IDs, evidence and review history remain available.', '', '[Implemented audit](catalog-audit.md) · [Original evidence index](gui-feature-evidence/README.md)', '']
     for group in data['groups']:
-        lines.extend([f'## {group["id"]} — {group["name"]}', '', '| Criterion | User outcome | GUI-QML implementation |', '| --- | --- | --- |'])
+        lines.extend([f'## {group["id"]} — {group["name"]}', '', '| Subfeature | User outcome | GUI-QML implementation |', '| --- | --- | --- |'])
         for row in group['criteria']:
             lines.append(f'| {row["id"]} | {row["intent"]} | {row["implementation"]["status"]} |')
         if group['relatedCriteria']:
-            lines.extend(['', '**Related criteria, counted in their owning groups:** ' + '; '.join(sid + ' — ' + by_id[sid]['intent'] for sid in group['relatedCriteria'])])
+            lines.extend(['', '**Related subfeatures, counted in their owning groups:** ' + '; '.join(sid + ' — ' + by_id[sid]['intent'] for sid in group['relatedCriteria'])])
         lines.append('')
     return '\n'.join(lines).rstrip() + '\n'

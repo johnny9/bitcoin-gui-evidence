@@ -30,7 +30,7 @@
     "not-implemented": 35,
     "partial": 14
   },
-  "baseRevision": "9320d884a2909775eaba523de25f17cabd2d9c67",
+  "baseRevision": "47733363cdfb8eea2e798e3e22b47659a12d1ebe",
   "unchangedPriorEvidenceFiles": 1740,
   "originalRecordsUnchanged": true,
   "newFunctionalScripts": 0,
@@ -39,5 +39,6 @@
     "total",
     "implementation",
     "accepted"
-  ]
+  ],
+  "presentationScope": "Feature parity and evidence supporting acceptance reviews; assessments and saved-review schema unchanged"
 }

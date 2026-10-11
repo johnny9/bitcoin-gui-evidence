@@ -61,7 +61,7 @@ async function main() {
     assert.equal(await page.$$eval('[data-group-link]',els=>els.length),34);
   });
   await page.screenshot({path:output+'/catalog-desktop.png',fullPage:false});
-  await check('Acceptance summary shows total subfeatures, implementation gaps and accepted items',async()=>{
+  await check('Parity summary shows total subfeatures, gaps and accepted items',async()=>{
     assert.deepEqual(await page.$$eval('.stats-grid .stat strong',els=>els.map(el=>el.textContent)),['182','49','133']);
     assert.equal(await page.$eval('.nav-count',el=>el.textContent),'49');
     assert.equal(await page.$eval('#review-progress-text',el=>el.textContent),'133 / 182');
@@ -339,7 +339,7 @@ async function main() {
     await removed.reload({waitUntil:'networkidle0'});
     assert.deepEqual((await read()).reviews,saved.reviews);
     await removed.goto(base+'#feature/F28?item=F28.S03',{waitUntil:'networkidle0'});
-    assert.match(await removed.$eval('.removed-criterion',el=>el.textContent),/REMOVED CRITERION/);
+    assert.match(await removed.$eval('.removed-criterion',el=>el.textContent),/REMOVED SUBFEATURE/);
     assert.match(await removed.$eval('#main',el=>el.textContent),/Saved navigation note <keep>/);
     assert.match(await removed.$eval('#main',el=>el.textContent),/Original navigation note/);
     assert.equal(await removed.$('[data-review="F28.S03"]'),null);

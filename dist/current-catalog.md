@@ -1,12 +1,12 @@
-# GUI-QML acceptance criteria
+# GUI-QML feature parity and evidence
 
-182 current subfeatures across 34 feature groups. All duplicate-audit findings are implemented; the original IDs, evidence and review history remain available.
+182 current subfeatures across 34 feature groups, comparing GUI-QML with the Qt Widgets reference. Implementation assessments and supporting evidence inform acceptance reviews. Original IDs, evidence and review history remain available.
 
 [Implemented audit](catalog-audit.md) · [Original evidence index](gui-feature-evidence/README.md)
 
 ## F01 — Create Wallet
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F01.S01 | Create a standard single-signature wallet. | parity |
 | F01.S02 | Create an encrypted or unencrypted wallet containing spending keys. | parity |
@@ -17,7 +17,7 @@
 
 ## F02 — Open, Switch, and Close Wallets
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F02.S01 | Open existing wallets. | parity |
 | F02.S02 | Keep multiple wallets available at the same time. | parity |
@@ -26,7 +26,7 @@
 
 ## F03 — Back Up and Restore Wallet
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F03.S01 | Save a wallet backup to a file. | parity |
 | F03.S02 | Restore a wallet from a backup file. | parity |
@@ -35,7 +35,7 @@
 
 ## F04 — Migrate Legacy Wallet
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F04.S01 | Update legacy wallets to the current wallet format. | parity |
 | F04.S02 | Preserve the original wallet with an automatic backup. | parity |
@@ -44,14 +44,14 @@
 
 ## F05 — Export Watch-Only Wallet
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F05.S01 | Export a watch-only copy of a wallet for monitoring without spending access. | not-implemented |
 | F05.S03 | Transfer wallet monitoring to another node. | not-implemented |
 
 ## F06 — Encrypt Wallet and Manage Passphrase
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F06.S01 | Protect stored spending keys with passphrase encryption. | parity |
 | F06.S02 | Change the wallet passphrase. | parity |
@@ -63,18 +63,18 @@
 
 ## F07 — View Wallet Overview
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F07.S01 | View available, pending, immature mining, and total balances. | partial |
 | F07.S02 | Review recent wallet activity. | parity |
 | F07.S03 | Find a recent transaction in the full transaction history. | parity |
 | F07.S04 | Know when wallet information may be out of date. | parity |
 
-**Related criteria, counted in their owning groups:** F32.S01 — Conceal wallet balances and recent activity.
+**Related subfeatures, counted in their owning groups:** F32.S01 — Conceal wallet balances and recent activity.
 
 ## F08 — Receive Bitcoin / Request Payment
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F08.S01 | Generate receiving addresses using legacy, wrapped SegWit, native SegWit, or Taproot formats supported by the wallet. | parity |
 | F08.S02 | Request a payment with an optional amount, label, and message. | parity |
@@ -85,11 +85,11 @@
 | F08.S07 | Review, reuse, and remove saved payment requests. | parity |
 | F08.S09 | Generate receiving addresses for a configured watch-only wallet. | parity |
 
-**Related criteria, counted in their owning groups:** F15.S03 — Verify a receiving address on a compatible signing device.
+**Related subfeatures, counted in their owning groups:** F15.S03 — Verify a receiving address on a compatible signing device.
 
 ## F09 — Send Bitcoin
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F09.S01 | Pay one recipient or multiple recipients in a single transaction. | parity |
 | F09.S02 | Enter or paste a recipient address, or use a saved address. | parity |
@@ -101,11 +101,11 @@
 | F09.S08 | Prepare a payment from a watch-only wallet for signing elsewhere. | parity |
 | F09.S09 | Check payment details and available funds before sending. | parity |
 
-**Related criteria, counted in their owning groups:** F15.S04 — Authorize outgoing payments using the device.
+**Related subfeatures, counted in their owning groups:** F15.S04 — Authorize outgoing payments using the device.
 
 ## F10 — Open Payment URI
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F10.S01 | Open or paste Bitcoin payment links. | parity |
 | F10.S02 | Prepare a payment using the requested recipient, amount, and descriptive information. | parity |
@@ -113,7 +113,7 @@
 
 ## F11 — Choose Transaction Fee
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F11.S01 | Choose an estimated fee based on the desired confirmation speed and understand its expected timing. | parity |
 | F11.S02 | Set a custom fee rate. | parity |
@@ -121,7 +121,7 @@
 
 ## F12 — Select Coins / Coin Control
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F12.S01 | Choose which coins fund a transaction, individually or in groups. | parity |
 | F12.S03 | Inspect coins individually or grouped by address. | parity |
@@ -134,7 +134,7 @@
 
 ## F13 — Create and Export PSBT
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F13.S01 | Prepare a transaction for later signing. | parity |
 | F13.S02 | Create transactions from watch-only wallets or wallets containing spending keys. | partial |
@@ -144,7 +144,7 @@
 
 ## F14 — Import, Sign, and Broadcast PSBT
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F14.S01 | Import a PSBT from a file or the clipboard. | partial |
 | F14.S02 | Review recipients, amounts, available fee information, and signing progress. | parity |
@@ -157,18 +157,18 @@
 
 ## F15 — Use Hardware Wallet / External Signer
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F15.S01 | Connect a wallet to a compatible external signer. | parity |
 | F15.S02 | Keep spending keys on the signing device. | parity |
 | F15.S03 | Verify a receiving address on a compatible signing device. | not-implemented |
 | F15.S04 | Authorize outgoing payments using the device. | parity |
 
-**Related criteria, counted in their owning groups:** F08.S01 — Generate receiving addresses using legacy, wrapped SegWit, native SegWit, or Taproot formats supported by the wallet.; F14.S06 — Copy a partially signed PSBT to the clipboard or save it to a file for further signing.
+**Related subfeatures, counted in their owning groups:** F08.S01 — Generate receiving addresses using legacy, wrapped SegWit, native SegWit, or Taproot formats supported by the wallet.; F14.S06 — Copy a partially signed PSBT to the clipboard or save it to a file for further signing.
 
 ## F16 — Browse and Export Transaction History
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F16.S01 | Review incoming, outgoing, mined, and other transactions. | parity |
 | F16.S02 | Filter transactions by date, type, or minimum amount. | parity |
@@ -182,7 +182,7 @@
 
 ## F17 — Manage Unconfirmed Transactions
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F17.S01 | Increase the fee of an eligible transaction by signing and submitting a replacement. | parity |
 | F17.S02 | Review the additional cost before authorizing a fee increase. | parity |
@@ -191,7 +191,7 @@
 
 ## F18 — Manage Address Book
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F18.S01 | Keep records of sending and receiving addresses. | partial |
 | F18.S02 | Add, update, and remove saved recipients. | not-implemented |
@@ -202,7 +202,7 @@
 
 ## F19 — Sign and Verify Messages
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F19.S01 | Sign a message to demonstrate control of a Bitcoin address. | parity |
 | F19.S02 | Verify that a message was signed by the holder of the corresponding key. | parity |
@@ -210,7 +210,7 @@
 
 ## F20 — Set Up and Synchronize Node
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F20.S01 | Choose where node and wallet data are stored. | parity |
 | F20.S02 | Limit blockchain storage through pruning. | parity |
@@ -222,7 +222,7 @@
 
 ## F21 — Configure Network and Manage Peers
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F21.S01 | Enable or pause peer-to-peer networking. | parity |
 | F21.S02 | Allow incoming peer connections. | parity |
@@ -236,7 +236,7 @@
 
 ## F22 — Inspect Node and Use RPC Console
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F22.S01 | Inspect node identity, network, synchronization, and mempool information. | parity |
 | F22.S02 | Monitor network traffic and data usage over time. | parity |
@@ -249,7 +249,7 @@
 
 ## F23 — Configure Application Preferences
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F23.S01 | Allocate memory and processing resources for block validation. | partial |
 | F23.S02 | Allow external tools to communicate with the node through RPC. | parity |
@@ -263,20 +263,20 @@
 | F23.S11 | Understand which settings take precedence and which changes require a restart. | parity |
 | F23.S12 | Restore default preferences while retaining a backup of previous settings. | parity |
 
-**Related criteria, counted in their owning groups:** F29.S05 — Choose the denomination used to display amounts: BTC, mBTC, bits, or satoshis.; F27.S01 — Start automatically at system login on Windows and Linux.; F27.S02 — Start with the main window minimized.; F26.S03 — Keep the node running while the main window is hidden, minimized, or closed, where supported.; F24.S05 — Choose whether to display a tray icon on supported desktops.
+**Related subfeatures, counted in their owning groups:** F29.S05 — Choose the denomination used to display amounts: BTC, mBTC, bits, or satoshis.; F27.S01 — Start automatically at system login on Windows and Linux.; F27.S02 — Start with the main window minimized.; F26.S03 — Keep the node running while the main window is hidden, minimized, or closed, where supported.; F24.S05 — Choose whether to display a tray icon on supported desktops.
 
 ## F24 — System Tray / macOS Dock
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F24.S01 | Keep the application accessible while its main window is hidden. | parity |
 | F24.S05 | Choose whether to display a tray icon on supported desktops. | parity |
 
-**Related criteria, counted in their owning groups:** F26.S03 — Keep the node running while the main window is hidden, minimized, or closed, where supported.; F28.S01 — Move between wallet balances, payments, and transaction history.; F27.S05 — Quit the application and shut down the node cleanly.
+**Related subfeatures, counted in their owning groups:** F26.S03 — Keep the node running while the main window is hidden, minimized, or closed, where supported.; F28.S01 — Move between wallet balances, payments, and transaction history.; F27.S05 — Quit the application and shut down the node cleanly.
 
 ## F25 — Desktop Notifications
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F25.S01 | Receive payment notifications that identify the transaction, wallet, amount, and recipient. | not-implemented |
 | F25.S03 | Receive informational, warning, and critical messages through desktop notifications. | not-implemented |
@@ -285,7 +285,7 @@
 
 ## F26 — Manage Application Windows
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F26.S01 | Arrange, hide, and restore application windows. | parity |
 | F26.S02 | Remember the main window placement between sessions. | parity |
@@ -293,11 +293,11 @@
 | F26.S04 | Use diagnostics alongside wallet activity. | parity |
 | F26.S05 | Identify the active wallet. | parity |
 
-**Related criteria, counted in their owning groups:** F31.S02 — Identify the active Bitcoin network and distinguish instances using different networks.
+**Related subfeatures, counted in their owning groups:** F31.S02 — Identify the active Bitcoin network and distinguish instances using different networks.
 
 ## F27 — Start and Exit Application
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F27.S01 | Start automatically at system login on Windows and Linux. | not-implemented |
 | F27.S02 | Start with the main window minimized. | not-implemented |
@@ -310,16 +310,16 @@
 
 ## F28 — Navigate the Application
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F28.S01 | Move between wallet balances, payments, and transaction history. | parity |
 | F28.S05 | Use keyboard shortcuts for navigation and common actions. | parity |
 
-**Related criteria, counted in their owning groups:** F02.S03 — Choose which wallet to use.
+**Related subfeatures, counted in their owning groups:** F02.S03 — Choose which wallet to use.
 
 ## F29 — View Application Status
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F29.S01 | Check connection count and whether networking is active. | parity |
 | F29.S03 | Check whether a proxy is in use. | parity |
@@ -327,11 +327,11 @@
 | F29.S05 | Choose the denomination used to display amounts: BTC, mBTC, bits, or satoshis. | parity |
 | F29.S06 | Understand available actions through contextual guidance. | parity |
 
-**Related criteria, counted in their owning groups:** F20.S05 — Assess synchronization progress, how far the node is behind, and the estimated remaining work.; F07.S04 — Know when wallet information may be out of date.; F06.S05 — Check whether a wallet is encrypted and locked.
+**Related subfeatures, counted in their owning groups:** F20.S05 — Assess synchronization progress, how far the node is behind, and the estimated remaining work.; F07.S04 — Know when wallet information may be out of date.; F06.S05 — Check whether a wallet is encrypted and locked.
 
 ## F30 — Show Progress, Errors, and Confirmations
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F30.S01 | Understand operation results, warnings, and errors. | parity |
 | F30.S02 | Review important decisions before committing to an action. | parity |
@@ -340,22 +340,22 @@
 | F30.S05 | Track long-running operations. | partial |
 | F30.S07 | Monitor background synchronization while retaining access to the application. | parity |
 
-**Related criteria, counted in their owning groups:** F20.S05 — Assess synchronization progress, how far the node is behind, and the estimated remaining work.
+**Related subfeatures, counted in their owning groups:** F20.S05 — Assess synchronization progress, how far the node is behind, and the estimated remaining work.
 
 ## F31 — Desktop Integration and Application Help
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F31.S02 | Identify the active Bitcoin network and distinguish instances using different networks. | parity |
 | F31.S03 | Adapt application visuals to the desktop appearance. | parity |
 | F31.S04 | Prevent macOS background throttling from slowing initial synchronization and reindexing. | not-implemented |
 | F31.S06 | Access application information and command-line help. | partial |
 
-**Related criteria, counted in their owning groups:** F10.S03 — Handle Bitcoin payment requests transferred from other applications, including while the application is already running.; F16.S09 — Inspect transactions in external block explorers.
+**Related subfeatures, counted in their owning groups:** F10.S03 — Handle Bitcoin payment requests transferred from other applications, including while the application is already running.; F16.S09 — Inspect transactions in external block explorers.
 
 ## F32 — Mask Wallet Values / Privacy Mode
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F32.S01 | Conceal wallet balances and recent activity. | not-implemented |
 | F32.S02 | Restrict access to transaction history while privacy mode is active. | not-implemented |
@@ -364,7 +364,7 @@
 
 ## F33 — Run with Wallet Functionality Disabled
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F33.S01 | Operate a node independently of wallet functionality. | parity |
 | F33.S02 | Manage node information, networking, traffic, and diagnostics. | parity |
@@ -372,7 +372,7 @@
 
 ## F34 — Monitor and Cancel Wallet Rescans
 
-| Criterion | User outcome | GUI-QML implementation |
+| Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F34.S01 | Rediscover wallet activity from blockchain history. | parity |
 | F34.S02 | Monitor rescan progress. | not-implemented |
