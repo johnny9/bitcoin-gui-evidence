@@ -214,7 +214,7 @@
 | --- | --- | --- |
 | F20.S01 | Choose where node and wallet data are stored. | parity |
 | F20.S02 | Limit blockchain storage through pruning. | parity |
-| F20.S03 | Assess available storage, expected requirements, and the effect of pruning on wallet recovery. | parity |
+| F20.S03 | Assess available storage and the requirements for full or pruned storage. | parity |
 | F20.S04 | Download and validate the blockchain. | parity |
 | F20.S05 | Assess synchronization progress, how far the node is behind, and the estimated remaining work. | parity |
 | F20.S06 | Operate the node without an open wallet. | parity |
@@ -240,7 +240,7 @@
 | --- | --- | --- |
 | F22.S01 | Inspect node identity, network, synchronization, and mempool information. | parity |
 | F22.S02 | Monitor network traffic and data usage over time. | parity |
-| F22.S03 | Focus traffic monitoring on a chosen time period or begin a fresh observation. | parity |
+| F22.S03 | Focus traffic monitoring on a chosen observation period. | parity |
 | F22.S04 | Inspect logs for troubleshooting. | parity |
 | F22.S05 | Run advanced node and wallet commands. | parity |
 | F22.S06 | Choose which wallet an advanced operation applies to. | parity |
@@ -301,7 +301,7 @@
 | --- | --- | --- |
 | F27.S01 | Start automatically at system login on Windows and Linux. | not-implemented |
 | F27.S02 | Start with the main window minimized. | not-implemented |
-| F27.S03 | Monitor initialization progress. | parity |
+| F27.S03 | Monitor initialization progress. | partial |
 | F27.S04 | Request an orderly shutdown during startup. | parity |
 | F27.S05 | Quit the application and shut down the node cleanly. | parity |
 | F27.S06 | Know when shutdown is still in progress. | parity |

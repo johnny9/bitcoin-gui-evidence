@@ -1,12 +1,12 @@
-# Hardware and platform acceptance review
+# Acceptance review using existing tests
 
 Assessed 2026-10-11 against GUI-QML `a91f4b4774f25de061fe1a7c132a91ddde117fca`.
 
-For hardware and platform integrations, connected QML user functionality plus existing tests and integration hooks is sufficient for acceptance. Physical-device runs, every operating system, external-service runs and matching captures are not prerequisites. Missing user workflows and recorded failures remain gaps.
+Connected QML user functionality plus relevant existing unit, component or functional tests is sufficient for acceptance when their combined coverage demonstrates the main user outcome. Confirm the connection between the tested code and the visible workflow. Repeating every backend command, environment or variant through a new GUI run, and collecting a matching screenshot for transient states, are not prerequisites. Missing user functionality and recorded failures remain gaps.
 
 These are acceptance assessments using existing source and recorded test results. No new application test, physical-device run or operating-system run is claimed. Original runtime records and captures are unchanged. Saved reviewer decisions still take precedence.
 
-The 11 reviewed criteria below now have sufficient proof for this review. Device address verification, desktop notification delivery, login startup, Windows session shutdown and macOS background-throttling protection still lack the required connected user functionality.
+The 17 reviewed criteria below have sufficient proof for this review. Device address verification, desktop notification delivery, login startup, Windows session shutdown and macOS background-throttling protection still lack the required connected user functionality. F27.S03 also remains partial: the startup busy indicator does not expose Core initialization progress. The six additional assessments cover storage planning, synchronization estimates, traffic periods, advanced console commands, settings reset and cancellation during startup.
 
 ## F14.S06 — Copy a partially signed PSBT to the clipboard or save it to a file for further signing.
 
@@ -188,5 +188,115 @@ Existing tests:
 - [Known network identities](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/test/test_networkstyle.cpp): [PASS   : NetworkStyleTests::getTitleAddText_perNetwork()](gui-feature-evidence/logs/qml-unit-tests.log).
 
 Scope: Simultaneous public-network instances are not newly run. The tested identities and connected QML display are sufficient for review.
+
+## F20.S03 — Assess available storage and the requirements for full or pruned storage.
+
+[Open criterion](#feature/F20?item=F20.S03)
+
+The storage-planning outcome is covered by tests for full and pruned disk requirements, insufficient space, and the visible selection controls. QML displays these same model values and prevents unsuitable choices. Additional wallet-recovery guidance is useful documentation, but is not required to plan disk use.
+
+QML: [qml/pages/onboarding/OnboardingStorageAmount.qml](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/onboarding/OnboardingStorageAmount.qml), [qml/pages/onboarding/OnboardingStorageLocation.qml](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/onboarding/OnboardingStorageLocation.qml).
+
+Hooks: [qml/onboarding_storage.cpp](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/onboarding_storage.cpp), [qml/models/onboardingoptionsmodel.cpp](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/models/onboardingoptionsmodel.cpp).
+
+Existing tests:
+
+- [Pruned storage requirements](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/test/test_onboarding_storage.cpp): [OnboardingStorageTests::prunedSelectionUsesPrunedRequirement()](gui-feature-evidence/logs/qml-unit-tests.log).
+- [Insufficient disk space](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/test/test_onboarding_storage.cpp): [OnboardingStorageTests::insufficientSelectedStorageWarns()](gui-feature-evidence/logs/qml-unit-tests.log).
+- [Storage information reaches QML](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/test/qml/tst_onboarding_datadir.qml): [OnboardingDataDir::test_storage_amount_uses_detected_available_space()](gui-feature-evidence/logs/qml-quick-tests.log).
+- [QML rejects insufficient full storage](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/test/qml/tst_onboarding_datadir.qml): [OnboardingDataDir::test_storage_amount_disables_full_storage_when_space_is_insufficient()](gui-feature-evidence/logs/qml-quick-tests.log).
+
+Scope: Accepted for storage planning. Pruning and wallet-recovery consequences are not explained in the UI. The existing capture and recorded model/component tests are reused; no new disk-space scenario was run.
+
+## F20.S05 — Assess synchronization progress, how far the node is behind, and the estimated remaining work.
+
+[Open criterion](#feature/F20?item=F20.S05)
+
+The real-peer capture already demonstrates synchronization. Model tests verify ETA publication, progress dips and clock regression; component tests verify that reported progress reaches the clock display. QML binds the remaining-time display to the tested tracker through NodeModel. Together these cover the progress-and-estimate outcome.
+
+QML: [qml/components/BlockClock.qml](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/components/BlockClock.qml), [qml/controls/utils.js](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/controls/utils.js).
+
+Hooks: [qml/models/nodemodel.cpp](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/models/nodemodel.cpp), [qml/models/syncprogresstracker.cpp](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/models/syncprogresstracker.cpp).
+
+Existing tests:
+
+- [ETA remains valid through progress dips](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/test/test_syncprogresstracker.cpp): [SyncProgressTrackerTests::publishesDespiteFrequentProgressDips()](gui-feature-evidence/logs/qml-unit-tests.log).
+- [Clock regression resets the estimator](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/test/test_syncprogresstracker.cpp): [SyncProgressTrackerTests::resetsForClockRegression()](gui-feature-evidence/logs/qml-unit-tests.log).
+- [Progress is displayed during catch-up](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/test/qml/tst_blockclock.qml): [BlockClock::test_startup_catch_up_uses_reported_progress()](gui-feature-evidence/logs/qml-quick-tests.log).
+- [Header progress reaches QML](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/test/test_nodemodel.cpp): [NodeModelTests::headerTipNotificationsExposeHeaderSyncProgress()](gui-feature-evidence/logs/qml-unit-tests.log).
+
+Scope: A stable live ETA screenshot and a new throttled-transfer run are not prerequisites. Numerical estimate behavior is supported by the existing tracker tests; the visible binding and actual peer-sync capture supply the integration evidence. No new application run is claimed.
+
+## F22.S03 — Focus traffic monitoring on a chosen observation period.
+
+[Open criterion](#feature/F22?item=F22.S03)
+
+The QML period controls call the tested traffic-window method. Its unit test changes short and longer windows, checks the displayed sample history size, and preserves cumulative byte totals. This supports focusing the traffic graph on a chosen observation period.
+
+QML: [qml/pages/node/NetworkTraffic.qml](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/node/NetworkTraffic.qml).
+
+Hooks: [qml/models/networktraffictower.cpp](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/models/networktraffictower.cpp).
+
+Existing tests:
+
+- [Time-window selection preserves history and totals](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/test/test_networktraffictower.cpp): [NetworkTrafficTowerTests::filterWindowChangesPreserveTotalsAndHistory()](gui-feature-evidence/logs/qml-unit-tests.log).
+
+Scope: Clearing all traffic history is not required for choosing an observation period. Totals remain cumulative; the selected period controls graph history. Existing test coverage and the traffic-page capture suffice without another deterministic-traffic GUI run.
+
+## F22.S05 — Run advanced node and wallet commands.
+
+[Open criterion](#feature/F22?item=F22.S05)
+
+The live console test demonstrates command submission and replies. Model tests verify wallet scoping, and parser tests cover nested commands and quoted arguments. The QML console forwards commands through the same Core RPC dispatcher, so its access to advanced commands can be inferred without replaying every backend operation in the GUI.
+
+QML: [qml/pages/node/CommandConsole.qml](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/node/CommandConsole.qml), [qml/components/SettingsView.qml](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/components/SettingsView.qml).
+
+Hooks: [qml/models/rpcconsolemodel.cpp](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/models/rpcconsolemodel.cpp), [qml/models/rpccommandexecutor.cpp](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/models/rpccommandexecutor.cpp).
+
+Existing tests:
+
+- [Live console submission and output](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/test/functional/qml_test_console.py): [All console tests passed.](gui-feature-evidence/logs/qml_test_console.log).
+- [Commands use the selected wallet context](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/test/test_rpcconsolemodel.cpp): [RpcConsoleModelTests::walletNameScopesRpcToWalletUri()](gui-feature-evidence/logs/qml-unit-tests.log).
+- [Nested command parsing](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/test/test_rpccommandexecutor.cpp): [RpcCommandExecutorTests::parseNestedCommands()](gui-feature-evidence/logs/qml-unit-tests.log).
+- [Quoted argument parsing](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/test/test_rpccommandexecutor.cpp): [RpcCommandExecutorTests::parseQuotedArguments()](gui-feature-evidence/logs/qml-unit-tests.log).
+
+Scope: This accepts the console interface to advanced RPCs. It does not claim a fresh GUI run of descriptor import, multisig creation or PSBT combination, or independently certify every backend command. Their availability follows the shared dispatcher and selected wallet context.
+
+## F23.S12 — Restore default preferences while retaining a backup of previous settings.
+
+[Open criterion](#feature/F23?item=F23.S12)
+
+The existing functional reset test verifies restored preferences. Unit tests seed nondefault Core settings, invoke the supported reset paths, assert a backup file exists, and verify cleared settings. The implementation writes the loaded settings to the backup before clearing them. Together these support reset with backup retention.
+
+QML: [qml/pages/preinit.qml](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/preinit.qml), [qml/pages/onboarding/OnboardingWizard.qml](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/onboarding/OnboardingWizard.qml).
+
+Hooks: [qml/datadir.cpp](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/datadir.cpp), [qml/onboarding_settings.cpp](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/onboarding_settings.cpp).
+
+Existing tests:
+
+- [Startup reset restores visible defaults](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/test/functional/qml_test_resetguisettings.py): [All tests PASSED](gui-feature-evidence/collections/20261010-qml/logs/qml_test_resetguisettings.log).
+- [Reset keeps a backup before clearing Core settings](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/test/test_options_model.cpp): [OptionsModelTests::resetGuiSettingsClearsSettingsJson()](gui-feature-evidence/logs/qml-unit-tests.log).
+- [Reset of a selected profile keeps a backup](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/test/test_options_model.cpp): [OptionsModelTests::resetGuiSettingsApplyClearsSelectedCustomDataDirSettingsJson()](gui-feature-evidence/logs/qml-unit-tests.log).
+
+Scope: Backup retention is inferred from the tested file creation and write-before-clear code path. No new backup-restore round trip was run. The backup covers Core settings.json; GUI-only QSettings are cleared. Startup invocation remains an accepted equivalent workflow.
+
+## F27.S04 — Request an orderly shutdown during startup.
+
+[Open criterion](#feature/F27?item=F27.S04)
+
+The recorded shutdown scenario requests cancellation during initialization and checks a successful process exit. It also exercises closing the GUI through the shutdown page. NodeModel tests cover interruption during initialization; the connected QML close action and application shutdown wiring provide the user path.
+
+QML: [qml/pages/MainWindow.qml](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/MainWindow.qml), [qml/pages/node/Shutdown.qml](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/pages/node/Shutdown.qml).
+
+Hooks: [qml/bitcoin.cpp](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/bitcoin.cpp), [qml/models/nodemodel.cpp](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/models/nodemodel.cpp), [qml/initexecutor.cpp](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/qml/initexecutor.cpp).
+
+Existing tests:
+
+- [Cancellation while initialization is active](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/test/functional/qml_test_shutdown.py): [SIGINT during load_on_startup shutdown completed successfully.](gui-feature-evidence/logs/qml_test_shutdown.log).
+- [Window-close shutdown exits successfully](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/test/functional/qml_test_shutdown.py): [Close during load_on_startup shutdown completed successfully.](gui-feature-evidence/logs/qml_test_shutdown.log).
+- [Interrupted initialization requests shutdown](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/test/test_nodemodel.cpp): [NodeModelTests::initializationFailureRequestsShutdownWhenCoreWasInterrupted()](gui-feature-evidence/logs/qml-unit-tests.log).
+- [Shutdown execution leaves the GUI thread](https://github.com/bitcoin-core/gui-qml/blob/a91f4b4774f25de061fe1a7c132a91ddde117fca/test/test_qmlinitexecutor_api.cpp): [QmlInitExecutorApiTests::shutdownEmitsResultAndRunsOffMainThread()](gui-feature-evidence/logs/qml-unit-tests.log).
+
+Scope: Accepted as the supported startup-cancellation outcome. The recorded build had IPC disabled. IPC child-process lifecycle, sanitizer stderr and other build configurations are not certified by this assessment; their required CI validation remains separate. No new application test was run.
 
 [Review data and source hashes](hardware-platform-review.json)

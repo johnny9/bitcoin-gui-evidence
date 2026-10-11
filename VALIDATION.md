@@ -1,5 +1,19 @@
 # Static site validation
 
+## October 11, 2026 — assess the remaining gaps using existing tests
+
+Validated changes based on site revision `d3e4e1715f68cba70085e808ab412092a7b43abc`; [tested file hashes](validation/tested-files.json) identify the resulting source.
+
+- Accepted six criteria on connected QML plus relevant, previously passing tests: **F20.S03** (storage planning), **F20.S05** (sync progress and estimates), **F22.S03** (traffic periods), **F22.S05** (advanced RPC commands), **F23.S12** (reset and backup retention), and **F27.S04** (cancellation during startup). The existing review mechanism now covers 17 criteria, including the original 11 hardware/platform assessments. Each card links its modules and exact recorded tests and states the inference and limits. [Full review](dist/hardware-platform-review.md).
+- Removed recovery guidance from the storage-planning requirement and focused traffic monitoring on choosing an observation period. Core RPC commands need not each be replayed through the GUI: tested argument parsing, wallet routing and generic dispatch support this interface outcome. Backup file creation tests and write-before-clear source support retention, without claiming a new restore round trip. The IPC-disabled cancellation run supports the user outcome without certifying IPC or sanitizer configurations.
+- Corrected **F27.S03** to partial implementation. `qml/pages/preinit.qml` has a busy startup overlay, but no QML connection to Core initialization-progress messages was found. The block-clock tests cover chain synchronization, a separate outcome. Startup success and cancellation tests cannot establish user-visible initialization progress.
+- **133 of 182 criteria default to Accepted; 49 need implementation** (14 partial, 35 absent). No fully implemented criterion still lacks sufficient evidence under the agreed review standard. Known cache-range and mining-maturity failures remain unchanged. Original criteria, runtime records, functional results, all 1,740 archived evidence files and all 221 selected images are unchanged; no new application run or screenshot is claimed.
+- Verified all **64 reviewed source hashes** against pinned GUI-QML revision `a91f4b4774f25de061fe1a7c132a91ddde117fca`. Existing result strings are checked in their original logs during the build. The updated seven cards were inspected in the browser; desktop/mobile captures confirm the accepted and partial assessments are shown clearly.
+- **64 browser checks pass**, covering totals, parity/evidence combinations, zero remaining proof gaps, preserved review overrides, import/export and mobile navigation. The existing failure/partial-implementation guard remains in force. Build reproducibility, syntax, evidence integrity, local links and whitespace checks pass.
+- Native lint, clang-tidy and ASan commands were attempted from this standalone website checkout and returned 127 because the CI entry scripts are absent. [Command results](validation/native-ci.json) record branch/revision after lint. These acceptance decisions do not replace native CI, IPC lifecycle or sanitizer validation; no such pass is claimed.
+
+[Browser outcomes](validation/browser-results.json) · [Evidence integrity](validation/evidence-integrity.json) · [Tested file hashes](validation/tested-files.json)
+
 ## October 11, 2026 — accept copying saved addresses
 
 Validated changes based on site revision `d93a076c80fb0970a6e8e253747e0e7fdd2f0634`; [tested file hashes](validation/tested-files.json) identify the resulting data and checks.

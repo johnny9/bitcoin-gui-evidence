@@ -416,7 +416,7 @@
     },
     "F20.S03": {
       "status": "parity",
-      "reason": "Storage checks and pruning choices let the user plan disk usage. Missing explanation of wallet-recovery consequences is retained as a guidance gap, rather than blocking the main storage-planning goal."
+      "reason": "The interface presents available space, full/pruned requirements and selection warnings. Recovery guidance is useful documentation but is outside this storage-planning requirement."
     },
     "F20.S04": {
       "status": "parity",
@@ -599,8 +599,8 @@
       "reason": "The minimized-startup argument is not connected to QML window behavior."
     },
     "F27.S03": {
-      "status": "parity",
-      "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
+      "status": "partial",
+      "reason": "The startup handoff has a busy indicator, but Core initialization progress messages are not connected to QML. Block synchronization progress is a separate feature (F20.S05), so its tests do not demonstrate initialization progress."
     },
     "F27.S04": {
       "status": "parity",
@@ -997,8 +997,8 @@
       "goal": "Start and stop the node predictably, including recovery and system shutdown.",
       "reason": "Normal startup, cancellation and clean exit work. Unreadable-settings recovery and Windows session-shutdown coordination have no equivalent supported flow.",
       "counts": {
-        "parity": 4,
-        "partial": 0,
+        "parity": 3,
+        "partial": 1,
         "not-implemented": 4
       }
     },

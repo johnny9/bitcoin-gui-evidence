@@ -1212,8 +1212,7 @@
         "F07.S04"
       ],
       "checks": [
-        "Observe real peer synchronization and compare the displayed progress with the node\u2019s chain state.",
-        "Check the remaining-time estimate after it settles and when throughput changes; a separate processing-rate number is an implementation difference."
+        "Use the displayed progress and remaining-time estimate to assess synchronization. Existing peer-sync evidence and tracker/component tests cover this outcome."
       ],
       "proofFrom": [
         "F29.S02"
@@ -1235,7 +1234,7 @@
         "F34.S01"
       ],
       "checks": [
-        "Run descriptor import, multisig setup, wallet rescanning and PSBT combination through the console, checking the resulting state."
+        "Submit node and wallet commands, preserve structured arguments and wallet context, and display replies or errors. Existing console, parser and wallet-context tests cover the interface; replaying every backend command is not required."
       ]
     },
     "F28.S01": {
@@ -1331,6 +1330,35 @@
       },
       "checks": [
         "Copy a saved address to the clipboard, preserving the complete address even when its display is shortened."
+      ]
+    },
+    "F20.S03": {
+      "reviewMode": "equivalent",
+      "intent": "Assess available storage and the requirements for full or pruned storage.",
+      "implementation": {
+        "status": "parity",
+        "reason": "The interface presents available space, full/pruned requirements and selection warnings. Recovery guidance is useful documentation but is outside this storage-planning requirement."
+      }
+    },
+    "F22.S03": {
+      "reviewMode": "equivalent",
+      "intent": "Focus traffic monitoring on a chosen observation period."
+    },
+    "F27.S03": {
+      "reviewMode": "equivalent",
+      "implementation": {
+        "status": "partial",
+        "reason": "The startup handoff has a busy indicator, but Core initialization progress messages are not connected to QML. Block synchronization progress is a separate feature (F20.S05), so its tests do not demonstrate initialization progress."
+      },
+      "qml": {
+        "status": "limited",
+        "detail": "Source review found a busy overlay during the pre-init handoff, but no Core initialization-message/progress connection in QML. Existing startup tests prove launching and cancellation; block-clock tests prove chain synchronization. They do not prove monitoring initialization stages."
+      },
+      "related": [
+        "F20.S05"
+      ],
+      "checks": [
+        "Show meaningful initialization status while Core loads; chain synchronization and a busy startup handoff alone do not demonstrate this outcome."
       ]
     }
   },

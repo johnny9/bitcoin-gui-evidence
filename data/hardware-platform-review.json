@@ -3,7 +3,7 @@
   "date": "2026-10-11",
   "sourceRevision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
   "snapshotCatalogId": "b4b1026b74ad8bf0a1628c9889b82193d33d210c3aa0170e94783f371fe15c0b",
-  "rule": "For hardware and platform integrations, connected QML user functionality plus existing tests and integration hooks is sufficient for acceptance. Physical-device runs, every operating system, external-service runs and matching captures are not prerequisites. Missing user workflows and recorded failures remain gaps.",
+  "rule": "Connected QML user functionality plus relevant existing unit, component or functional tests is sufficient for acceptance when their combined coverage demonstrates the main user outcome. Confirm the connection between the tested code and the visible workflow. Repeating every backend command, environment or variant through a new GUI run, and collecting a matching screenshot for transient states, are not prerequisites. Missing user functionality and recorded failures remain gaps.",
   "criteria": {
     "F14.S06": {
       "basis": "qml-tests-hooks",
@@ -261,22 +261,251 @@
         }
       ],
       "limits": "Simultaneous public-network instances are not newly run. The tested identities and connected QML display are sufficient for review."
+    },
+    "F20.S03": {
+      "basis": "qml-tests-hooks",
+      "reason": "The storage-planning outcome is covered by tests for full and pruned disk requirements, insufficient space, and the visible selection controls. QML displays these same model values and prevents unsuitable choices. Additional wallet-recovery guidance is useful documentation, but is not required to plan disk use.",
+      "qml": [
+        "qml/pages/onboarding/OnboardingStorageAmount.qml",
+        "qml/pages/onboarding/OnboardingStorageLocation.qml"
+      ],
+      "hooks": [
+        "qml/onboarding_storage.cpp",
+        "qml/models/onboardingoptionsmodel.cpp"
+      ],
+      "tests": [
+        {
+          "label": "Pruned storage requirements",
+          "path": "test/test_onboarding_storage.cpp",
+          "recordedAssertion": "OnboardingStorageTests::prunedSelectionUsesPrunedRequirement()",
+          "log": "logs/qml-unit-tests.log"
+        },
+        {
+          "label": "Insufficient disk space",
+          "path": "test/test_onboarding_storage.cpp",
+          "recordedAssertion": "OnboardingStorageTests::insufficientSelectedStorageWarns()",
+          "log": "logs/qml-unit-tests.log"
+        },
+        {
+          "label": "Storage information reaches QML",
+          "path": "test/qml/tst_onboarding_datadir.qml",
+          "recordedAssertion": "OnboardingDataDir::test_storage_amount_uses_detected_available_space()",
+          "log": "logs/qml-quick-tests.log"
+        },
+        {
+          "label": "QML rejects insufficient full storage",
+          "path": "test/qml/tst_onboarding_datadir.qml",
+          "recordedAssertion": "OnboardingDataDir::test_storage_amount_disables_full_storage_when_space_is_insufficient()",
+          "log": "logs/qml-quick-tests.log"
+        }
+      ],
+      "limits": "Accepted for storage planning. Pruning and wallet-recovery consequences are not explained in the UI. The existing capture and recorded model/component tests are reused; no new disk-space scenario was run."
+    },
+    "F20.S05": {
+      "basis": "qml-tests-hooks",
+      "reason": "The real-peer capture already demonstrates synchronization. Model tests verify ETA publication, progress dips and clock regression; component tests verify that reported progress reaches the clock display. QML binds the remaining-time display to the tested tracker through NodeModel. Together these cover the progress-and-estimate outcome.",
+      "qml": [
+        "qml/components/BlockClock.qml",
+        "qml/controls/utils.js"
+      ],
+      "hooks": [
+        "qml/models/nodemodel.cpp",
+        "qml/models/syncprogresstracker.cpp"
+      ],
+      "tests": [
+        {
+          "label": "ETA remains valid through progress dips",
+          "path": "test/test_syncprogresstracker.cpp",
+          "recordedAssertion": "SyncProgressTrackerTests::publishesDespiteFrequentProgressDips()",
+          "log": "logs/qml-unit-tests.log"
+        },
+        {
+          "label": "Clock regression resets the estimator",
+          "path": "test/test_syncprogresstracker.cpp",
+          "recordedAssertion": "SyncProgressTrackerTests::resetsForClockRegression()",
+          "log": "logs/qml-unit-tests.log"
+        },
+        {
+          "label": "Progress is displayed during catch-up",
+          "path": "test/qml/tst_blockclock.qml",
+          "recordedAssertion": "BlockClock::test_startup_catch_up_uses_reported_progress()",
+          "log": "logs/qml-quick-tests.log"
+        },
+        {
+          "label": "Header progress reaches QML",
+          "path": "test/test_nodemodel.cpp",
+          "recordedAssertion": "NodeModelTests::headerTipNotificationsExposeHeaderSyncProgress()",
+          "log": "logs/qml-unit-tests.log"
+        }
+      ],
+      "limits": "A stable live ETA screenshot and a new throttled-transfer run are not prerequisites. Numerical estimate behavior is supported by the existing tracker tests; the visible binding and actual peer-sync capture supply the integration evidence. No new application run is claimed."
+    },
+    "F22.S03": {
+      "basis": "qml-tests-hooks",
+      "reason": "The QML period controls call the tested traffic-window method. Its unit test changes short and longer windows, checks the displayed sample history size, and preserves cumulative byte totals. This supports focusing the traffic graph on a chosen observation period.",
+      "qml": [
+        "qml/pages/node/NetworkTraffic.qml"
+      ],
+      "hooks": [
+        "qml/models/networktraffictower.cpp"
+      ],
+      "tests": [
+        {
+          "label": "Time-window selection preserves history and totals",
+          "path": "test/test_networktraffictower.cpp",
+          "recordedAssertion": "NetworkTrafficTowerTests::filterWindowChangesPreserveTotalsAndHistory()",
+          "log": "logs/qml-unit-tests.log"
+        }
+      ],
+      "limits": "Clearing all traffic history is not required for choosing an observation period. Totals remain cumulative; the selected period controls graph history. Existing test coverage and the traffic-page capture suffice without another deterministic-traffic GUI run."
+    },
+    "F22.S05": {
+      "basis": "qml-tests-hooks",
+      "reason": "The live console test demonstrates command submission and replies. Model tests verify wallet scoping, and parser tests cover nested commands and quoted arguments. The QML console forwards commands through the same Core RPC dispatcher, so its access to advanced commands can be inferred without replaying every backend operation in the GUI.",
+      "qml": [
+        "qml/pages/node/CommandConsole.qml",
+        "qml/components/SettingsView.qml"
+      ],
+      "hooks": [
+        "qml/models/rpcconsolemodel.cpp",
+        "qml/models/rpccommandexecutor.cpp"
+      ],
+      "tests": [
+        {
+          "label": "Live console submission and output",
+          "path": "test/functional/qml_test_console.py",
+          "recordedAssertion": "All console tests passed.",
+          "log": "logs/qml_test_console.log"
+        },
+        {
+          "label": "Commands use the selected wallet context",
+          "path": "test/test_rpcconsolemodel.cpp",
+          "recordedAssertion": "RpcConsoleModelTests::walletNameScopesRpcToWalletUri()",
+          "log": "logs/qml-unit-tests.log"
+        },
+        {
+          "label": "Nested command parsing",
+          "path": "test/test_rpccommandexecutor.cpp",
+          "recordedAssertion": "RpcCommandExecutorTests::parseNestedCommands()",
+          "log": "logs/qml-unit-tests.log"
+        },
+        {
+          "label": "Quoted argument parsing",
+          "path": "test/test_rpccommandexecutor.cpp",
+          "recordedAssertion": "RpcCommandExecutorTests::parseQuotedArguments()",
+          "log": "logs/qml-unit-tests.log"
+        }
+      ],
+      "limits": "This accepts the console interface to advanced RPCs. It does not claim a fresh GUI run of descriptor import, multisig creation or PSBT combination, or independently certify every backend command. Their availability follows the shared dispatcher and selected wallet context."
+    },
+    "F23.S12": {
+      "basis": "qml-tests-hooks",
+      "reason": "The existing functional reset test verifies restored preferences. Unit tests seed nondefault Core settings, invoke the supported reset paths, assert a backup file exists, and verify cleared settings. The implementation writes the loaded settings to the backup before clearing them. Together these support reset with backup retention.",
+      "qml": [
+        "qml/pages/preinit.qml",
+        "qml/pages/onboarding/OnboardingWizard.qml"
+      ],
+      "hooks": [
+        "qml/datadir.cpp",
+        "qml/onboarding_settings.cpp"
+      ],
+      "tests": [
+        {
+          "label": "Startup reset restores visible defaults",
+          "path": "test/functional/qml_test_resetguisettings.py",
+          "recordedAssertion": "All tests PASSED",
+          "log": "collections/20261010-qml/logs/qml_test_resetguisettings.log"
+        },
+        {
+          "label": "Reset keeps a backup before clearing Core settings",
+          "path": "test/test_options_model.cpp",
+          "recordedAssertion": "OptionsModelTests::resetGuiSettingsClearsSettingsJson()",
+          "log": "logs/qml-unit-tests.log"
+        },
+        {
+          "label": "Reset of a selected profile keeps a backup",
+          "path": "test/test_options_model.cpp",
+          "recordedAssertion": "OptionsModelTests::resetGuiSettingsApplyClearsSelectedCustomDataDirSettingsJson()",
+          "log": "logs/qml-unit-tests.log"
+        }
+      ],
+      "limits": "Backup retention is inferred from the tested file creation and write-before-clear code path. No new backup-restore round trip was run. The backup covers Core settings.json; GUI-only QSettings are cleared. Startup invocation remains an accepted equivalent workflow."
+    },
+    "F27.S04": {
+      "basis": "qml-tests-hooks",
+      "reason": "The recorded shutdown scenario requests cancellation during initialization and checks a successful process exit. It also exercises closing the GUI through the shutdown page. NodeModel tests cover interruption during initialization; the connected QML close action and application shutdown wiring provide the user path.",
+      "qml": [
+        "qml/pages/MainWindow.qml",
+        "qml/pages/node/Shutdown.qml"
+      ],
+      "hooks": [
+        "qml/bitcoin.cpp",
+        "qml/models/nodemodel.cpp",
+        "qml/initexecutor.cpp"
+      ],
+      "tests": [
+        {
+          "label": "Cancellation while initialization is active",
+          "path": "test/functional/qml_test_shutdown.py",
+          "recordedAssertion": "SIGINT during load_on_startup shutdown completed successfully.",
+          "log": "logs/qml_test_shutdown.log"
+        },
+        {
+          "label": "Window-close shutdown exits successfully",
+          "path": "test/functional/qml_test_shutdown.py",
+          "recordedAssertion": "Close during load_on_startup shutdown completed successfully.",
+          "log": "logs/qml_test_shutdown.log"
+        },
+        {
+          "label": "Interrupted initialization requests shutdown",
+          "path": "test/test_nodemodel.cpp",
+          "recordedAssertion": "NodeModelTests::initializationFailureRequestsShutdownWhenCoreWasInterrupted()",
+          "log": "logs/qml-unit-tests.log"
+        },
+        {
+          "label": "Shutdown execution leaves the GUI thread",
+          "path": "test/test_qmlinitexecutor_api.cpp",
+          "recordedAssertion": "QmlInitExecutorApiTests::shutdownEmitsResultAndRunsOffMainThread()",
+          "log": "logs/qml-unit-tests.log"
+        }
+      ],
+      "limits": "Accepted as the supported startup-cancellation outcome. The recorded build had IPC disabled. IPC child-process lifecycle, sanitizer stderr and other build configurations are not certified by this assessment; their required CI validation remains separate. No new application test was run."
     }
   },
   "sourceFiles": {
     "qml/bitcoin.cpp": "938fed4ded7c4063e2bb55b42ca0d4357d4354c3c9011a9865953dae93161dae",
+    "qml/components/BlockClock.qml": "eee0e582757a8ddb827d4676f4bfab05c9dcf7462e845c15aa155e489dcc03f3",
     "qml/components/ExternalSignerReviewActions.qml": "a18e3eeb8fc72c0e87f921dad6f318a8b57b417cf61006c8f7b7ed6a99373240",
     "qml/components/NetworkIndicator.qml": "ae426681fdd3500476113d45a38cb4e3957c380c772026e5778bf5d3650818d1",
+    "qml/components/SettingsView.qml": "43272ec962e8d373351f256be84c12c41cbb254d5d79efdd713f171b8c9f9e40",
+    "qml/controls/utils.js": "868e43afb8c941f50f68cff88de4594ce7b6a5847f188a239e8253ece442c868",
     "qml/core_settings.cpp": "b7d8c0a5301433ca79e1fdd90b4526faf4e78f9e05197f90587bd5c30e5ea1ba",
+    "qml/datadir.cpp": "a9a46defd7c2a4f44bb300cefeff265c36567b7c56209070471f402b4134af07",
+    "qml/initexecutor.cpp": "3e102537007547cad392544e5eefb38159893b77662cd647cc71f2b64722a5f2",
     "qml/models/chainmodel.cpp": "414d9858a32297eb42fe5550303777f8437a8bfe8a48f6e0db8cd46ae0a1a085",
     "qml/models/core_settings_model.cpp": "30e889d8e5e56183b247311cecc2b89985713fcab4ba8d62724268af648f56de",
     "qml/models/desktoptrayiconcontroller.cpp": "6917087044e4ba96aea8787df44f1d65d7f8bb26c6fc455aa495ad0d807bcf5d",
     "qml/models/desktopwindowbehaviormodel.cpp": "dc4b8f43c2d7d679dccf5799e411b9aa5b990a5e6fca21f7378a26c110da1ee1",
     "qml/models/macdockiconhandler.mm": "d5d5630a97b17ba6be6e3b30f74d610a7466f2e7874c446279ff4318ebc9d5d4",
+    "qml/models/networktraffictower.cpp": "d94400f18b5e646d313ed4ad7fb2594fa6792ca451bc5f1ffa723b738d069d6a",
+    "qml/models/nodemodel.cpp": "f5db7eb26a7ceedbdd858f2767713af07016fd173860356223c9f404311bd802",
+    "qml/models/onboardingoptionsmodel.cpp": "a80a9c8bde4cba3d641faf401a765239d84dfb84bd4d59856c2784918a4562fb",
     "qml/models/options_model.cpp": "9fe832dd2004c1f8dd7b1d992193ab9115cdbdd8950388c920996969c20d3bb5",
+    "qml/models/rpccommandexecutor.cpp": "d7e9d2ccf8b18a6776fada091058121098e8f2af185cdf18032036b93381a56e",
+    "qml/models/rpcconsolemodel.cpp": "86854859c47d070586a88a494441f21c519ba11b64b7844ac4858d7023f3778f",
+    "qml/models/syncprogresstracker.cpp": "962c8d5d62a2bca5b2846583394350e74fa8210175834b3361958ff1c8e898c3",
     "qml/models/walletqmlmodel.cpp": "d9cf6156a190008fba033ac59c8e54701b86d296f37c7778edae833744841b71",
     "qml/networkstyle.cpp": "2d0713f203fb888c1394a9d9175c9ba6b257e47920fdb9cbb5feffec3fd3ae4f",
+    "qml/onboarding_settings.cpp": "301fbe2e2c2cb068175b8880c1ec56bbcb199bca07db3a0d2d24576821dbc5ef",
+    "qml/onboarding_storage.cpp": "e8fd6af52271b7073059907ad15cd040ebf0d7f977e06eb9ec8c8439371f8c92",
     "qml/pages/MainWindow.qml": "f307fb6706421a26f2b5e3ec9a330ea1a42aced4f18bac48d3c6e6b337bfdccf",
+    "qml/pages/node/CommandConsole.qml": "f5ef93f035f39b963d58bc4ec1dba333887fb5e7432e0c5253162ce9600aa874",
+    "qml/pages/node/NetworkTraffic.qml": "f3f14bbda882b67b67970a6a676c9a39e0922e00a16a5be3e79a75b0ef7aea50",
+    "qml/pages/node/Shutdown.qml": "023c0cf8b2685c483e8863948bc3db04c52792655bec3ac30906f61da0c37c13",
+    "qml/pages/onboarding/OnboardingStorageAmount.qml": "3b628c3f6d127028af90f7fdc0be7865d7694107a82903292bb8cfc91a128d8f",
+    "qml/pages/onboarding/OnboardingStorageLocation.qml": "58df8999cb93b688558420500f3acd3dbb481905de9cbe052a5c025236b8c5c2",
+    "qml/pages/onboarding/OnboardingWizard.qml": "bacecfeef51c76d49a15fdf510bf24aa9a68325f4a91a3571202516b7faf40ab",
+    "qml/pages/preinit.qml": "1b07050d54f63cc3404bd49103fcab3a7f64f075b7c059f10240b616648ad479",
     "qml/pages/settings/ConnectionSettingsPage.qml": "ce08768d02f07ae80906a271ae9f80d45b23dffdcf763d546eaf026c70231613",
     "qml/pages/settings/ExternalSignerSettingsPage.qml": "b9bdda09f49011d6a38745a15c78ea490b73d9207b37c7223c68b6bb0e2f2cb0",
     "qml/pages/settings/ProxySettingsPage.qml": "326a24ba7044c8232bfac2c33b864f0959ae73014922f5a3fa3cb9145c3b5538",
@@ -287,14 +516,34 @@
     "qml/pages/wallet/TransactionDetail.qml": "17bc712d823232ac7799447e82e01ca27d61ed3a2ec46c983b0f60b32e311f1c",
     "qml/pages/wallet/WalletCreationTypePage.qml": "7c6db78ee6d9348e8410f0063b5e7d05ec3d986e9b3c606c58aca4108cb88573",
     "qml/walletqmlcontroller.cpp": "1ae8b6ffbc347e1fcfd1eb3475e7a1054c9f109594fa6f245fc8a9855960079d",
+    "test/functional/qml_test_console.py": "bde342c36aa5c8fa656b837baf7c12b2a346fb778e31842822888f72109fc186",
     "test/functional/qml_test_external_signer.py": "c83755c7525a4235edbdc91e3baf0f25e28ded3a640797a28f9ddceb30e7fec7",
     "test/functional/qml_test_proxy.py": "98c420389cd8e165804894b9a208dbdc5525df8bc3e9d1c0920e13273ff240ce",
+    "test/functional/qml_test_resetguisettings.py": "fd06cba6641fddd9a6d97a29a8eaba05ccb0c71cd1a6aff91b888f5f197e308a",
+    "test/functional/qml_test_shutdown.py": "8d3a74cd9064da6b4b6c80a4a2405c31f98c53709d710104baa1a7cb30d794dd",
     "test/functional/qml_test_tray.py": "9db9ca07c1c65d2cc62d33283a20e6010e38c89622fbdf80e6d68fdde96c4b5b",
+    "test/qml/tst_blockclock.qml": "8d1105923d707c29be5890664fe574219ddab7de73f3f99662c53507532f9779",
     "test/qml/tst_externalsignerreviewactions.qml": "ea409afcc4aedb0870cc47fafa773179fa6edaf4e5a505329618c8a93a7236d1",
+    "test/qml/tst_onboarding_datadir.qml": "f65329da0902da2a67d3afe18868a19fa97e63af3a8fbbdc61eb9639711d4134",
     "test/test_desktoptrayiconcontroller.cpp": "daf12deaad06055a555d9bb148f956103696e2376a821e092fb1a6c6f0ef97b2",
     "test/test_desktopwindowbehaviormodel.cpp": "7eb270a5e597770e9e947ca6a1ff1163b39c728c6988f085e4532fa58f9fe03a",
     "test/test_networkstyle.cpp": "8f0b993994b5971d5963e512dd2965f256c8263eb740514ac1526bb0c02560ad",
+    "test/test_networktraffictower.cpp": "e0dd696becd16a040e19b59d61a13108bed83743f950b8d9cdbfb1354ef66f7d",
+    "test/test_nodemodel.cpp": "2790b036278e2536fc5de7bac53667336b9ebc33937a4b8f883c6dcae23e5ba9",
+    "test/test_onboarding_storage.cpp": "503aa9731cd3b98f5c48b8c90b8f306029476cc8897a5c7e1e0f0dcb0e03928f",
     "test/test_options_model.cpp": "7f71d2d45505c17c0d3261367d0d40ab8c86ae5bf7662a969205b10b8c38c4c1",
+    "test/test_qmlinitexecutor_api.cpp": "055bf32619bae705fb27e8ef06af2f6410c46b4d71073741c226942bf076eebd",
+    "test/test_rpccommandexecutor.cpp": "0290c4128d2d6dd706b3fee11f7cd27c568bbd515893549698639c5b2d3ed029",
+    "test/test_rpcconsolemodel.cpp": "62a266c40011d7dd254347df207e7e300342273b1244d873d561cae730a8febc",
+    "test/test_syncprogresstracker.cpp": "db703e5efa805aa5a6b3d716d2a57e0a14d2fbba5a46c2c4d9fcda788e176827",
     "test/test_walletqmlmodel.cpp": "21c062b56e7a3ebd7d61d8091d49b52f897b742f8156ba1caa92633c58835823"
-  }
+  },
+  "additionalTestReviews": [
+    "F20.S03",
+    "F20.S05",
+    "F22.S03",
+    "F22.S05",
+    "F23.S12",
+    "F27.S04"
+  ]
 }

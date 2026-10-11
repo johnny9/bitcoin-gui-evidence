@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-11T16:23:28.480Z",
+  "checkedAt": "2026-10-11T16:33:26.974Z",
   "basePath": "/bitcoin-gui-evidence/",
   "outcomes": [
     {
@@ -7,7 +7,7 @@
       "status": "passed"
     },
     {
-      "name": "Acceptance summary separates 48 implementation gaps, 127 accepted and 7 proof gaps",
+      "name": "Acceptance summary separates 49 implementation gaps, 133 accepted and 0 proof gaps",
       "status": "passed"
     },
     {

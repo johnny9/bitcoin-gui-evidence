@@ -1,4 +1,7 @@
-"""Apply the agreed hardware/platform review basis without changing runtime records."""
+"""Apply source-and-test acceptance reviews without changing runtime records.
+
+The original hardware/platform report path remains stable for existing links.
+"""
 import copy
 import re
 
@@ -42,15 +45,18 @@ def review_markdown(data):
     review = data['hardwarePlatformReview']
     source = 'https://github.com/bitcoin-core/gui-qml/blob/' + review['sourceRevision'] + '/'
     criteria = {c['id']: c for g in data['groups'] for c in g['criteria']}
-    lines = ['# Hardware and platform acceptance review', '',
+    lines = ['# Acceptance review using existing tests', '',
              'Assessed ' + review['date'] + ' against GUI-QML `' + review['sourceRevision'] + '`.', '',
              review['rule'], '',
              'These are acceptance assessments using existing source and recorded test results. '
              'No new application test, physical-device run or operating-system run is claimed. '
              'Original runtime records and captures are unchanged. Saved reviewer decisions still take precedence.', '',
-             'The 11 reviewed criteria below now have sufficient proof for this review. '
+             f'The {len(review["criteria"])} reviewed criteria below have sufficient proof for this review. '
              'Device address verification, desktop notification delivery, login startup, Windows session shutdown '
-             'and macOS background-throttling protection still lack the required connected user functionality.', '']
+             'and macOS background-throttling protection still lack the required connected user functionality. '
+             'F27.S03 also remains partial: the startup busy indicator does not expose Core initialization progress. '
+             'The six additional assessments cover storage planning, synchronization estimates, traffic periods, '
+             'advanced console commands, settings reset and cancellation during startup.', '']
     for sid, row in review['criteria'].items():
         criterion = criteria[sid]
         lines += ['## ' + sid + ' — ' + criterion['intent'], '',
