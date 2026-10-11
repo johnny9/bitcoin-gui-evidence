@@ -61,8 +61,8 @@ async function main() {
     assert.equal(await page.$$eval('[data-group-link]',els=>els.length),34);
   });
   await page.screenshot({path:output+'/catalog-desktop.png',fullPage:false});
-  await check('Acceptance summary separates 49 implementation gaps, 133 accepted and 0 proof gaps',async()=>{
-    assert.deepEqual(await page.$$eval('.stats-grid .stat strong',els=>els.map(el=>el.textContent)),['182','49','133','0']);
+  await check('Acceptance summary shows total subfeatures, implementation gaps and accepted items',async()=>{
+    assert.deepEqual(await page.$$eval('.stats-grid .stat strong',els=>els.map(el=>el.textContent)),['182','49','133']);
     assert.equal(await page.$eval('.nav-count',el=>el.textContent),'49');
     assert.equal(await page.$eval('#review-progress-text',el=>el.textContent),'133 / 182');
     await page.click('[data-stat="implementation"]');
@@ -72,15 +72,11 @@ async function main() {
     await page.reload({waitUntil:'networkidle0'});
     assert.equal(await page.$eval('[data-filter="parity"]',el=>el.value),'incomplete');
     assert.equal(await page.$$eval('.criterion-result',els=>els.length),49);
-    await page.click('[data-stat="proof"]');
-    await page.waitForFunction(()=>document.querySelectorAll('.criterion-result').length===0);
-    const proof=await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent));
-    assert.deepEqual(proof,[]);
     await page.click('[data-stat="accepted"]');
     await page.waitForFunction(()=>document.querySelectorAll('.criterion-result').length===133);
     const accepted=await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent));
     assert.ok(accepted.includes('F09.S03'));assert.ok(accepted.includes('F19.S01'));
-    assert.equal(new Set([...gaps,...proof,...accepted]).size,182);
+    assert.equal(new Set([...gaps,...accepted]).size,182);
     assert.equal(await page.$$eval('[data-acceptance="accepted"]',els=>els.length),133);
     await value('[data-filter="review"]','pending');
     assert.equal(await page.$$eval('.criterion-result',els=>els.length),49);

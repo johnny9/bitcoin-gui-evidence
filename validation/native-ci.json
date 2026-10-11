@@ -1,5 +1,5 @@
 {
-  "baseRevision": "d3b8f9ff9c7080e6fbb6675dc281bf2039219817",
+  "baseRevision": "9320d884a2909775eaba523de25f17cabd2d9c67",
   "checks": [
     {
       "command": "./ci/lint.py",
@@ -20,7 +20,7 @@
       "stderr": "/bin/sh: 1: ./ci/test_run_all.sh: not found\n"
     }
   ],
-  "scope": "Static website clarification of existing test coverage. Application code and binary unchanged. Native CI, sanitizer and IPC lifecycle scripts are absent from this standalone website checkout.",
+  "scope": "Static website summary-card removal. Native CI, sanitizer and IPC lifecycle scripts are absent from this standalone website checkout.",
   "branchAfterLint": "main",
-  "revisionAfterLint": "d3b8f9ff9c7080e6fbb6675dc281bf2039219817"
+  "revisionAfterLint": "9320d884a2909775eaba523de25f17cabd2d9c67"
 }

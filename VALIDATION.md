@@ -1,5 +1,16 @@
 # Static site validation
 
+## October 11, 2026 — remove the needs-evidence summary card
+
+Validated changes based on site revision `9320d884a2909775eaba523de25f17cabd2d9c67`; [tested file hashes](validation/tested-files.json) identify the resulting source.
+
+- Removed the Parity · needs evidence summary card and its unused counter. The overview now shows **182 total subfeatures**, **49 criteria to implement**, and **133 accepted** by default. Desktop uses three columns; mobile keeps the accepted card across the second row. Updated the guide and README to direct evidence queries to the existing filters.
+- **64 existing browser checks pass**, including the remaining summary links, evidence/parity filters, review persistence and mobile layouts. Desktop and mobile catalog screenshots were inspected. Build, evidence integrity, JavaScript syntax, local links and whitespace checks pass.
+- Catalog data, acceptance assessments, functional results, selected captures and all 1,740 archived evidence files are unchanged. No application source or tests changed.
+- Native lint, clang-tidy and ASan commands returned 127 because this standalone website checkout lacks their CI entry scripts. [Command results](validation/native-ci.json) record the unchanged branch and revision after lint. No native, sanitizer or IPC-enabled lifecycle pass is claimed.
+
+[Browser outcomes](validation/browser-results.json) · [Evidence integrity](validation/evidence-integrity.json) · [Tested file hashes](validation/tested-files.json)
+
 ## October 11, 2026 — explain what the cited tests prove
 
 Validated changes based on site revision `d3b8f9ff9c7080e6fbb6675dc281bf2039219817`; [tested file hashes](validation/tested-files.json) identify the resulting source.

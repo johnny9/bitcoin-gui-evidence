@@ -30,17 +30,14 @@
     "not-implemented": 35,
     "partial": 14
   },
-  "baseRevision": "d3b8f9ff9c7080e6fbb6675dc281bf2039219817",
+  "baseRevision": "9320d884a2909775eaba523de25f17cabd2d9c67",
   "unchangedPriorEvidenceFiles": 1740,
+  "originalRecordsUnchanged": true,
   "newFunctionalScripts": 0,
   "newSelectedCaptures": 0,
-  "originalRecordsUnchanged": true,
-  "sourceFilesVerifiedAtPinnedRevision": 64,
-  "testReferencesExplained": 36,
-  "acceptedQmlCriteriaWithoutCaptures": [
-    "F16.S09",
-    "F20.S07",
-    "F21.S04",
-    "F27.S04"
+  "summaryCards": [
+    "total",
+    "implementation",
+    "accepted"
   ]
 }
