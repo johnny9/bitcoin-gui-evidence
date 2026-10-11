@@ -2,11 +2,13 @@
 """Check the built catalog, original asset hashes, and generated local links."""
 import ast
 from collections import Counter
+import copy
 import hashlib
 from html.parser import HTMLParser
 import json
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
+from hardware_platform import apply_hardware_platform_review
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / 'dist'
@@ -125,11 +127,40 @@ def main():
     assert by_id['F25.S04']['implementation']['status'] == 'parity'
     assert [c['id'] for c in criteria if c['hasFailure']] == ['F07.S01', 'F23.S01']
     assert by_id['F23.S01']['implementation']['status'] == 'partial'
+    review = json.loads((ROOT / 'data/hardware-platform-review.json').read_text())
+    assert review == json.loads((DIST / 'hardware-platform-review.json').read_text())
+    assert len(review['criteria']) == 11
+    assert {c['id'] for c in criteria if 'qmlReview' in c} == review['criteria'].keys()
+    for sid, assessment in review['criteria'].items():
+        assert by_id[sid]['qmlReview'] == assessment
+        assert by_id[sid]['implementation']['status'] == 'parity' and not by_id[sid]['hasFailure']
+        assert assessment['qml'] and assessment['hooks'] and assessment['tests']
+        for test in assessment['tests']:
+            assert test['recordedAssertion'] in (original / test['log']).read_text()
+    assert all('qmlReview' not in c for c in data['originalCriteria'])
+    assert not any('qmlReview' in by_id[sid] for sid in ('F15.S03', 'F25.S01', 'F27.S01', 'F27.S08', 'F31.S04', 'F07.S01', 'F23.S01'))
+    sufficient = lambda c: not c['hasFailure'] and bool(c.get('qmlReview') or
+        (c['applications']['qml']['status'] == 'assertions' and c['applications']['qml']['captures']))
+    assert sum(sufficient(c) for c in criteria) == 125
+    assert sum(sufficient(c) and c['implementation']['status'] == 'parity' for c in criteria) == 125
+    assert sum(not sufficient(c) and c['implementation']['status'] == 'parity' for c in criteria) == 10
+    # A stale assessment must not override a new failure or an implementation gap.
+    for change in ({'hasFailure': True}, {'implementation': {'status': 'partial'}}):
+        rejected = copy.deepcopy(data)
+        row = next(c for g in rejected['groups'] for c in g['criteria'] if c['id'] == 'F21.S04')
+        row.update(change)
+        try:
+            apply_hardware_platform_review(rejected, review, original)
+        except ValueError as error:
+            assert 'cannot override a gap or failure' in str(error)
+        else:
+            raise AssertionError('Hardware/platform assessment accepted a failure or missing workflow')
     parser = Links()
     parser.feed((DIST / 'index.html').read_text())
     parser.feed(data['testReportHtml'])
     parser.feed(data['provenanceHtml'])
     parser.feed(audit['reportHtml'])
+    parser.feed(data['hardwarePlatformReview']['reportHtml'])
     rerun_capture_count = 0
     for rerun in data['reruns']:
         parser.feed(rerun['reportHtml'])
@@ -301,6 +332,7 @@ def main():
     report = {'status':'passed', 'groups':34, 'criteria':183, 'auditedOriginalCriteria':203, 'retiredCriteria':20, 'appliedFindings':22, 'retainedDistinctions':8, 'originalCapturesVerified':116,
               'rerunCapturesVerified':rerun_capture_count, 'collectionCapturesVerified':collection_capture_count,
               'widgetsCriteriaWithoutCaptures':9, 'historicalWidgetsCriteriaWithoutCaptures':11, 'localLinkTargets':len(local_links), 'unresolvedFailures':2, 'catalogId':data['catalogId'],
+              'hardwarePlatformReviewed':11, 'defaultAccepted':125, 'remainingParityProofGaps':10,
               'groupParity': dict(Counter(g['implementation']['status'] for g in data['groups'])),
               'subfeatureParity': dict(Counter(c['implementation']['status'] for c in criteria))}
     print(json.dumps(report, indent=2))

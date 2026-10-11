@@ -1,5 +1,18 @@
 # Static site validation
 
+## October 11, 2026 — hardware and platform acceptance review
+
+Validated changes based on site revision `f6034f09a62d0d5c6e249ee6065ebe412f5a3d9c`; [tested file hashes](validation/tested-files.json) identify the resulting source. The application source, binary and archived evidence are unchanged.
+
+- The agreed standard accepts hardware/platform integrations when connected QML gives the user the necessary workflow and existing tests/hooks support it. Reviewed signer setup, key separation, approval/broadcast and incomplete-PSBT handoff; explorer launch; network selection/identity; proxy settings; NAT-PMP control; tray/Dock access and background operation. **11 criteria now default to Accepted** using the **QML + tests/hooks** basis. [Criterion assessments, modules, tests and existing pass records](dist/hardware-platform-review.md).
+- All **32 reviewed source/test files** were checked against GUI-QML commit `a91f4b4774f25de061fe1a7c132a91ddde117fca`. Their SHA-256 hashes are recorded in [review data](data/hardware-platform-review.json). Each cited assertion is present in its archived passing log. This was a source and evidence assessment: no new hardware, operating-system, service or application test run is claimed.
+- **62 browser checks pass** under the GitHub Pages project path. Coverage includes the updated filters/counts, full evidence without a required capture for the three reviewed integrations lacking one, manual acceptance overrides/restoration, module/test links, preserved expandable runtime scope, source-gap/failure guards, review migration/import/export, keyboard use, mobile layouts and all 221 original capture decodes. Desktop/mobile review cards and the policy guide were visually inspected. An old browser expectation that router mapping still required partial evidence was updated to reflect the new rule.
+- Build, evidence integrity, Python parsing, JavaScript syntax/execution, local links and whitespace checks pass. A stale review is rejected if the implementation becomes partial or a recorded failure appears. Existing absent workflows, including device address verification, notifications, login startup, Windows session shutdown and macOS background-throttling protection, stay open. Both prior application regressions remain recorded.
+- The catalog remains at **183 criteria: 135 parity, 13 partial and 35 absent**. **125 default to Accepted**, **10 parity items need evidence**, and **48 need implementation**. The 1,740 previously tracked evidence/collection/rerun files are unchanged. The functional record remains 40 passed and two failed; no captures were added. Snapshot identity, catalog revision and manual review compatibility are preserved.
+- Native lint, clang-tidy and ASan commands were attempted from this standalone website checkout and returned 127 because its CI entry scripts are absent. [Command results](validation/native-ci.json) record the unchanged branch/revision after lint. No native rebuild, sanitizer or IPC-enabled GUI lifecycle pass is claimed.
+
+[Browser outcomes](validation/browser-results.json) · [Evidence integrity](validation/evidence-integrity.json) · [Tested file hashes](validation/tested-files.json)
+
 ## October 11, 2026 — verify pending payments
 
 Validated changes based on site revision `e680e15eaff28c6ba5b3ee91c4cf6e4518fd3144`; [tested file hashes](validation/tested-files.json) identify the resulting source. The pinned application and binary are unchanged.

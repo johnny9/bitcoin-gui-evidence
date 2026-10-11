@@ -1,0 +1,300 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-11",
+  "sourceRevision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+  "snapshotCatalogId": "b4b1026b74ad8bf0a1628c9889b82193d33d210c3aa0170e94783f371fe15c0b",
+  "rule": "For hardware and platform integrations, connected QML user functionality plus existing tests and integration hooks is sufficient for acceptance. Physical-device runs, every operating system, external-service runs and matching captures are not prerequisites. Missing user workflows and recorded failures remain gaps.",
+  "criteria": {
+    "F14.S06": {
+      "basis": "qml-tests-hooks",
+      "reason": "The review page lets the user save a transaction for further signing. Model tests preserve an incomplete external-signer result and imported PSBT metadata; component tests expose the more-signatures-required state. These satisfy the signing-handoff outcome.",
+      "qml": [
+        "qml/pages/wallet/SendTransactionReview.qml",
+        "qml/components/ExternalSignerReviewActions.qml"
+      ],
+      "hooks": [
+        "qml/models/walletqmlmodel.cpp"
+      ],
+      "tests": [
+        {
+          "label": "Incomplete signer result is saved",
+          "path": "test/test_walletqmlmodel.cpp",
+          "log": "logs/qml-unit-tests.log",
+          "recordedAssertion": "PASS   : WalletQmlModelTests::externalSignerApprovalKeepsIncompleteSignedPsbt()"
+        },
+        {
+          "label": "Imported PSBT metadata is preserved",
+          "path": "test/test_walletqmlmodel.cpp",
+          "log": "logs/qml-unit-tests.log",
+          "recordedAssertion": "PASS   : WalletQmlModelTests::saveCurrentTransactionAsPsbt_preservesImportedMetadata()"
+        },
+        {
+          "label": "Additional-signature state is presented",
+          "path": "test/qml/tst_externalsignerreviewactions.qml",
+          "log": "logs/qml-quick-tests.log",
+          "recordedAssertion": "PASS   : bitcoinqml_qmltests::ExternalSignerReviewActions::test_partial_success_shows_more_signatures_message()"
+        }
+      ],
+      "limits": "Assessment trusts the existing signer/model tests and QML save flow. No new multisigner-device exchange or matching partial-signature capture was collected; file export provides the handoff."
+    },
+    "F15.S01": {
+      "basis": "qml-tests-hooks",
+      "reason": "The user can configure compatible signer software, check for a device, and create a signer-backed wallet. The recorded functional test drives those QML controls and discovers the mock signer.",
+      "qml": [
+        "qml/pages/settings/ExternalSignerSettingsPage.qml",
+        "qml/pages/wallet/WalletCreationTypePage.qml"
+      ],
+      "hooks": [
+        "qml/walletqmlcontroller.cpp"
+      ],
+      "tests": [
+        {
+          "label": "External signer functional flow",
+          "path": "test/functional/qml_test_external_signer.py",
+          "log": "logs/qml_test_external_signer.log",
+          "recordedAssertion": "External signer GUI flow passed."
+        }
+      ],
+      "limits": "The executable mock stands in for the compatible physical signer. Device-lab repetition is not required by this review standard."
+    },
+    "F15.S02": {
+      "basis": "qml-tests-hooks",
+      "reason": "Signer-backed wallet creation disables local private keys, and the QML wallet settings omit local-key password controls. The recorded functional test checks private_keys_enabled is false; signing remains delegated to the external signer.",
+      "qml": [
+        "qml/pages/settings/WalletSectionPage.qml",
+        "qml/pages/wallet/SendTransactionReview.qml"
+      ],
+      "hooks": [
+        "qml/walletqmlcontroller.cpp",
+        "qml/models/walletqmlmodel.cpp"
+      ],
+      "tests": [
+        {
+          "label": "External signer functional flow",
+          "path": "test/functional/qml_test_external_signer.py",
+          "log": "logs/qml_test_external_signer.log",
+          "recordedAssertion": "External signer GUI flow passed."
+        }
+      ],
+      "limits": "This accepts the application key-separation workflow. It does not claim that a physical device or its firmware was examined."
+    },
+    "F15.S04": {
+      "basis": "qml-tests-hooks",
+      "reason": "The payment review offers device approval, a waiting state, errors/retry, and sending after approval. The mock-signer functional test exercises failure recovery, approval and broadcast through that QML flow.",
+      "qml": [
+        "qml/pages/wallet/SendTransactionReview.qml",
+        "qml/components/ExternalSignerReviewActions.qml"
+      ],
+      "hooks": [
+        "qml/models/walletqmlmodel.cpp"
+      ],
+      "tests": [
+        {
+          "label": "External signer functional flow",
+          "path": "test/functional/qml_test_external_signer.py",
+          "log": "logs/qml_test_external_signer.log",
+          "recordedAssertion": "External signer GUI flow passed."
+        },
+        {
+          "label": "Approval waiting and completion",
+          "path": "test/qml/tst_externalsignerreviewactions.qml",
+          "log": "logs/qml-quick-tests.log",
+          "recordedAssertion": "PASS   : bitcoinqml_qmltests::ExternalSignerReviewActions::test_waiting_state_persists_until_mock_completes()"
+        }
+      ],
+      "limits": "Physical button presses are represented by the signer hook and tests, not a new hardware run."
+    },
+    "F16.S09": {
+      "basis": "qml-tests-hooks",
+      "reason": "Transaction details provide an explorer action whose URL is built by the tested options model and passed to Qt.openUrlExternally. The connected user action and browser handoff meet the outcome.",
+      "qml": [
+        "qml/pages/wallet/TransactionDetail.qml"
+      ],
+      "hooks": [
+        "qml/models/options_model.cpp"
+      ],
+      "tests": [
+        {
+          "label": "Explorer URL construction",
+          "path": "test/test_options_model.cpp",
+          "log": "logs/qml-unit-tests.log",
+          "recordedAssertion": "PASS   : OptionsModelTests::thirdPartyTransactionLinksParseValidUrls()"
+        }
+      ],
+      "limits": "The operating-system browser launcher and remote explorer are trusted integration boundaries; no external service or browser capture is required."
+    },
+    "F20.S07": {
+      "basis": "qml-tests-hooks",
+      "reason": "Startup selects the configured Core chain, supplies its chain model to QML, and exposes a network-aware wallet/node shell. Network-style tests cover mainnet, testnet, testnet4, signet and regtest; the existing application scenarios exercise regtest.",
+      "qml": [
+        "qml/pages/MainWindow.qml",
+        "qml/components/NetworkIndicator.qml"
+      ],
+      "hooks": [
+        "qml/bitcoin.cpp",
+        "qml/models/chainmodel.cpp",
+        "qml/networkstyle.cpp"
+      ],
+      "tests": [
+        {
+          "label": "Known network identities",
+          "path": "test/test_networkstyle.cpp",
+          "log": "logs/qml-unit-tests.log",
+          "recordedAssertion": "PASS   : NetworkStyleTests::getTitleAddText_perNetwork()"
+        }
+      ],
+      "limits": "Core chain selection and the common QML integration are trusted. Downloading each public chain is not an acceptance requirement here."
+    },
+    "F21.S03": {
+      "basis": "qml-tests-hooks",
+      "reason": "The user can configure and validate a default SOCKS5 proxy and a separate Tor proxy. The QML settings page commits them to Core, and the functional test checks toggles, validation, cancellation and persisted proxy/onion settings.",
+      "qml": [
+        "qml/pages/settings/ConnectionSettingsPage.qml",
+        "qml/pages/settings/ProxySettingsPage.qml"
+      ],
+      "hooks": [
+        "qml/models/core_settings_model.cpp",
+        "qml/core_settings.cpp"
+      ],
+      "tests": [
+        {
+          "label": "Proxy settings functional flow",
+          "path": "test/functional/qml_test_proxy.py",
+          "log": "logs/qml_test_proxy.log",
+          "recordedAssertion": "All tests PASSED"
+        }
+      ],
+      "limits": "Core routing is trusted once the settings are connected. Live Tor/SOCKS service testing is not required for this QML acceptance assessment."
+    },
+    "F21.S04": {
+      "basis": "qml-tests-hooks",
+      "reason": "Connection settings expose automatic NAT-PMP port mapping. The setting reaches the node mapPort hook; the recorded model test verifies live enable/disable calls and persisted settings. This gives users the required router-mapping control.",
+      "qml": [
+        "qml/pages/settings/ConnectionSettingsPage.qml"
+      ],
+      "hooks": [
+        "qml/models/options_model.cpp",
+        "qml/models/core_settings_model.cpp"
+      ],
+      "tests": [
+        {
+          "label": "Live router-mapping setting",
+          "path": "test/test_options_model.cpp",
+          "log": "logs/qml-unit-tests.log",
+          "recordedAssertion": "PASS   : OptionsModelTests::natpmpAppliesLiveWithoutRestartDirty()"
+        }
+      ],
+      "limits": "A physical router and a matching screenshot are not required. Actual mapping still depends on a compatible router and build."
+    },
+    "F24.S01": {
+      "basis": "qml-tests-hooks",
+      "reason": "The QML window responds to tray Show/Hide and the macOS Dock reopen hook. The controller uses Qt system-tray integration on supported desktops. Existing functional/model tests and native Linux captures demonstrate hide/restore behavior.",
+      "qml": [
+        "qml/pages/MainWindow.qml"
+      ],
+      "hooks": [
+        "qml/models/desktoptrayiconcontroller.cpp",
+        "qml/models/macdockiconhandler.mm"
+      ],
+      "tests": [
+        {
+          "label": "Tray functional flow",
+          "path": "test/functional/qml_test_tray.py",
+          "log": "logs/qml_test_tray.log",
+          "recordedAssertion": "All tests PASSED"
+        },
+        {
+          "label": "Restore hidden-window geometry",
+          "path": "test/test_desktoptrayiconcontroller.cpp",
+          "log": "logs/qml-unit-tests.log",
+          "recordedAssertion": "PASS   : DesktopTrayIconControllerTests::showRestoresGeometryCapturedAtHide()"
+        }
+      ],
+      "limits": "Windows and macOS execution is not newly certified; their connected Qt/Dock hooks are sufficient for this review."
+    },
+    "F26.S03": {
+      "basis": "qml-tests-hooks",
+      "reason": "Window settings let the user choose minimize-to-tray and minimize-on-close. MainWindow routes those actions to window visibility instead of shutdown, while tray/Dock hooks restore it. Functional/model tests and native Linux RPC checks support continued node operation.",
+      "qml": [
+        "qml/pages/MainWindow.qml",
+        "qml/pages/settings/WindowBehaviorSettingsPage.qml"
+      ],
+      "hooks": [
+        "qml/models/desktopwindowbehaviormodel.cpp",
+        "qml/models/desktoptrayiconcontroller.cpp",
+        "qml/models/macdockiconhandler.mm"
+      ],
+      "tests": [
+        {
+          "label": "Tray functional flow",
+          "path": "test/functional/qml_test_tray.py",
+          "log": "logs/qml_test_tray.log",
+          "recordedAssertion": "All tests PASSED"
+        },
+        {
+          "label": "Close behavior follows user settings",
+          "path": "test/test_desktopwindowbehaviormodel.cpp",
+          "log": "logs/qml-unit-tests.log",
+          "recordedAssertion": "PASS   : DesktopWindowBehaviorModelTests::shouldMinimizeWindowOnClose_requiresDesktopAndMinimizeOnClose()"
+        }
+      ],
+      "limits": "The existing platform hooks are trusted. Additional operating-system screenshots are not acceptance prerequisites."
+    },
+    "F31.S02": {
+      "basis": "qml-tests-hooks",
+      "reason": "QML labels non-mainnet networks, and the shell uses network-specific application names, settings and tray/window identities. Network-style tests check the known chains and their title suffixes; the regtest identity is already captured.",
+      "qml": [
+        "qml/components/NetworkIndicator.qml",
+        "qml/pages/wallet/DesktopWallets.qml"
+      ],
+      "hooks": [
+        "qml/bitcoin.cpp",
+        "qml/networkstyle.cpp",
+        "qml/models/chainmodel.cpp"
+      ],
+      "tests": [
+        {
+          "label": "Known network identities",
+          "path": "test/test_networkstyle.cpp",
+          "log": "logs/qml-unit-tests.log",
+          "recordedAssertion": "PASS   : NetworkStyleTests::getTitleAddText_perNetwork()"
+        }
+      ],
+      "limits": "Simultaneous public-network instances are not newly run. The tested identities and connected QML display are sufficient for review."
+    }
+  },
+  "sourceFiles": {
+    "qml/bitcoin.cpp": "938fed4ded7c4063e2bb55b42ca0d4357d4354c3c9011a9865953dae93161dae",
+    "qml/components/ExternalSignerReviewActions.qml": "a18e3eeb8fc72c0e87f921dad6f318a8b57b417cf61006c8f7b7ed6a99373240",
+    "qml/components/NetworkIndicator.qml": "ae426681fdd3500476113d45a38cb4e3957c380c772026e5778bf5d3650818d1",
+    "qml/core_settings.cpp": "b7d8c0a5301433ca79e1fdd90b4526faf4e78f9e05197f90587bd5c30e5ea1ba",
+    "qml/models/chainmodel.cpp": "414d9858a32297eb42fe5550303777f8437a8bfe8a48f6e0db8cd46ae0a1a085",
+    "qml/models/core_settings_model.cpp": "30e889d8e5e56183b247311cecc2b89985713fcab4ba8d62724268af648f56de",
+    "qml/models/desktoptrayiconcontroller.cpp": "6917087044e4ba96aea8787df44f1d65d7f8bb26c6fc455aa495ad0d807bcf5d",
+    "qml/models/desktopwindowbehaviormodel.cpp": "dc4b8f43c2d7d679dccf5799e411b9aa5b990a5e6fca21f7378a26c110da1ee1",
+    "qml/models/macdockiconhandler.mm": "d5d5630a97b17ba6be6e3b30f74d610a7466f2e7874c446279ff4318ebc9d5d4",
+    "qml/models/options_model.cpp": "9fe832dd2004c1f8dd7b1d992193ab9115cdbdd8950388c920996969c20d3bb5",
+    "qml/models/walletqmlmodel.cpp": "d9cf6156a190008fba033ac59c8e54701b86d296f37c7778edae833744841b71",
+    "qml/networkstyle.cpp": "2d0713f203fb888c1394a9d9175c9ba6b257e47920fdb9cbb5feffec3fd3ae4f",
+    "qml/pages/MainWindow.qml": "f307fb6706421a26f2b5e3ec9a330ea1a42aced4f18bac48d3c6e6b337bfdccf",
+    "qml/pages/settings/ConnectionSettingsPage.qml": "ce08768d02f07ae80906a271ae9f80d45b23dffdcf763d546eaf026c70231613",
+    "qml/pages/settings/ExternalSignerSettingsPage.qml": "b9bdda09f49011d6a38745a15c78ea490b73d9207b37c7223c68b6bb0e2f2cb0",
+    "qml/pages/settings/ProxySettingsPage.qml": "326a24ba7044c8232bfac2c33b864f0959ae73014922f5a3fa3cb9145c3b5538",
+    "qml/pages/settings/WalletSectionPage.qml": "35c2bd5f41eec7fe57b5732e108aa782f08851d1073395bf0a5a54d58987abee",
+    "qml/pages/settings/WindowBehaviorSettingsPage.qml": "f434642647506e3cf31b1e0d2d9383c7b0672bb343cfdfc1afb093fccd0e48a1",
+    "qml/pages/wallet/DesktopWallets.qml": "ef6cf4e80d77a817f4904464caa7530ed343a92b566413bcc46b9e74e86f2d27",
+    "qml/pages/wallet/SendTransactionReview.qml": "f9f87ac7e62473f211c3070f60f5fef12fb646d7f50df322efe5eaf31a4554cb",
+    "qml/pages/wallet/TransactionDetail.qml": "17bc712d823232ac7799447e82e01ca27d61ed3a2ec46c983b0f60b32e311f1c",
+    "qml/pages/wallet/WalletCreationTypePage.qml": "7c6db78ee6d9348e8410f0063b5e7d05ec3d986e9b3c606c58aca4108cb88573",
+    "qml/walletqmlcontroller.cpp": "1ae8b6ffbc347e1fcfd1eb3475e7a1054c9f109594fa6f245fc8a9855960079d",
+    "test/functional/qml_test_external_signer.py": "c83755c7525a4235edbdc91e3baf0f25e28ded3a640797a28f9ddceb30e7fec7",
+    "test/functional/qml_test_proxy.py": "98c420389cd8e165804894b9a208dbdc5525df8bc3e9d1c0920e13273ff240ce",
+    "test/functional/qml_test_tray.py": "9db9ca07c1c65d2cc62d33283a20e6010e38c89622fbdf80e6d68fdde96c4b5b",
+    "test/qml/tst_externalsignerreviewactions.qml": "ea409afcc4aedb0870cc47fafa773179fa6edaf4e5a505329618c8a93a7236d1",
+    "test/test_desktoptrayiconcontroller.cpp": "daf12deaad06055a555d9bb148f956103696e2376a821e092fb1a6c6f0ef97b2",
+    "test/test_desktopwindowbehaviormodel.cpp": "7eb270a5e597770e9e947ca6a1ff1163b39c728c6988f085e4532fa58f9fe03a",
+    "test/test_networkstyle.cpp": "8f0b993994b5971d5963e512dd2965f256c8263eb740514ac1526bb0c02560ad",
+    "test/test_options_model.cpp": "7f71d2d45505c17c0d3261367d0d40ab8c86ae5bf7662a969205b10b8c38c4c1",
+    "test/test_walletqmlmodel.cpp": "21c062b56e7a3ebd7d61d8091d49b52f897b742f8156ba1caa92633c58835823"
+  }
+}

@@ -1,15 +1,15 @@
 {
-  "src/app.js": "5527f8f1a89c7f460b22479167a7a40527ee38b0e93d915a47beec2e28e1ad40",
-  "src/styles.css": "21b36cbc75ed606ca4f5a580bf5705f6e4d24d5f3491fa7a1fc64fa7eb665c9c",
+  "src/app.js": "0f20a8f73900995b7e74aaa0652ac9b4fe6365117b31d9132fcf94a24c5f3942",
+  "src/styles.css": "c9ed5522cb25f183d57a307f9a25bd98b1306356afd07b973938eda4c6975d3d",
   "src/index.html": "20d07e89f5344a65d56723c9813ec00dfe4f0e1db5e6147bb780f614365e0b97",
   "src/theme.js": "f4f4312f29e3d6177699b7579cc1683848b58381874a1259eac50c0e67a81238",
   "src/theme.css": "d8114d219b75195f44dc9eb4558fd110d960677ed6a5a45519fcfb6706faa55a",
-  "dist/data.js": "6f59e6af85e94b510faf97ff2966743e62554cb919edf8cc0be3300dd54de481",
-  "scripts/browser-test.cjs": "c5339b35acc0b347c874bea24aa0c73a7eb4a4ceadd1286e85a50a02232d3dbf",
-  "scripts/build.py": "12a5813be61388cbf21eca8aaa9a9d8de3fa7702e608a7fbc18798fe702bc132",
+  "dist/data.js": "651dd03ea74f4dbb223eadd0ab02887090b2ae73c1c7abb4bbb37c766c93e884",
+  "scripts/browser-test.cjs": "19d329f9c855ad7210d4b65c7f7a88e634f9901cd872c8d955f6c9c766b108f9",
+  "scripts/build.py": "fdb3b82bffb1cbcf150f7a4ba092a525e03a262a4dff768755e4acd911161d78",
   ".github/workflows/pages.yml": "0cba93594a8ecb3e82aee0706e0cfab7dc416c6cd2e142dfc0e9a29e3806a724",
   "data/implementation.json": "d3fd01f0e3cc1b2a0532816e6aab9a0070fc7427c1738ec589933c525e840be7",
-  "scripts/validate.py": "7f4f1f7152545d55e028e4935118b77dd4e2a59fcb4b4abcf72de396b5271697",
+  "scripts/validate.py": "be7094c94572b81f8dfdc84a07786ab27a25f7b015300d25429ed70fd8452d9a",
   "data/reruns/20261010-send-create/result.json": "9b0e616526bea6a019d845888169cc011e639c336b69f7f3e6d30fb5c3426cfa",
   "data/reruns/20261010-wallet-rbf/result.json": "8fc714257f2442f84666917e9cc62d08151a47f0da5f1a6333a86ee0464f7321",
   "data/collections/20261010-widgets/result.json": "c0b53dad75ec2ee1c86b289e17fc720cf25c1a78d915d1cd0242ab12b6ef5d4c",
@@ -19,5 +19,9 @@
   "dist/current-assessments.json": "639423bc5b1a6cd9710579f327ed061ee69429d7679a2854bf8025bc4f3d2eca",
   "dist/current-catalog.md": "44d4fe1d3d3fd94a4c52a6a7cec38c06fd71a43656d4db89524775afc1353f9f",
   "dist/catalog-audit.md": "734fc351377f6b4b40a070145d7f85cffae7016727554c78b3723f48a9c881ec",
-  "data/collections/20261011-pending-balance/result.json": "7fdf4b9e48ede30b21e59696e197653878efce6a92ea130327a0ecec490ea483"
+  "data/collections/20261011-pending-balance/result.json": "7fdf4b9e48ede30b21e59696e197653878efce6a92ea130327a0ecec490ea483",
+  "data/hardware-platform-review.json": "f62f150108341e48993ab9081846c1f6eb811ab704d79e17f1a2dbfd6ed28d2b",
+  "scripts/hardware_platform.py": "f1d599a55d0768875eafe45f801351e55f6e5b8e6ca00bbad0f5c9252cd9d424",
+  "dist/hardware-platform-review.md": "92bc50660781f2a3c7f5b1ff265abe5f48a0b05713983120833081fc8d0a2ad8",
+  "dist/hardware-platform-review.json": "f62f150108341e48993ab9081846c1f6eb811ab704d79e17f1a2dbfd6ed28d2b"
 }

@@ -1,5 +1,5 @@
 {
-  "baseRevision": "e680e15eaff28c6ba5b3ee91c4cf6e4518fd3144",
+  "baseRevision": "f6034f09a62d0d5c6e249ee6065ebe412f5a3d9c",
   "checks": [
     {
       "command": "./ci/lint.py",
@@ -20,7 +20,7 @@
       "stderr": "/bin/sh: 1: ./ci/test_run_all.sh: not found\n"
     }
   ],
-  "scope": "Static review website and evidence scripts. Pinned GUI binary unchanged; two targeted regtest scenarios were run. Native application rebuild, sanitizer and IPC lifecycle coverage are not claimed.",
+  "scope": "Static acceptance website only. Application source, binary, tests and archived evidence unchanged. Existing test records and pinned QML/hooks were reviewed; no new application, hardware or OS test run. Native rebuild, sanitizer and IPC-enabled lifecycle coverage are not claimed.",
   "branchAfterLint": "main",
-  "revisionAfterLint": "e680e15eaff28c6ba5b3ee91c4cf6e4518fd3144"
+  "revisionAfterLint": "f6034f09a62d0d5c6e249ee6065ebe412f5a3d9c"
 }

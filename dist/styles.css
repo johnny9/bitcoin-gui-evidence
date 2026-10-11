@@ -54,3 +54,6 @@ dialog{border:1px solid #e0e5ec;border-radius:12px;background:white;color:var(--
 .criterion-checks ul, .related-criteria ul, .replacement-links { padding-left: 20px; }
 .criterion-checks li, .related-criteria li, .replacement-links li { margin: 8px 0; }
 .criterion-checks p { margin-bottom: 0; }
+
+/* Explain reviewed integrations while preserving their original runtime scope. */
+.qml-review{overflow-wrap:anywhere}.qml-review p{margin:0 0 12px}.qml-review ul{margin:0 0 12px;padding-left:20px}.qml-review li{margin:6px 0}.recorded-evidence{margin:16px 0}.recorded-evidence summary{cursor:pointer;margin-bottom:10px}.recorded-evidence .badge{margin-bottom:10px}#hardware-platform{scroll-margin-top:90px}

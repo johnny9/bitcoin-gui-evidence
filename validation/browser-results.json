@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-11T14:55:09.325Z",
+  "checkedAt": "2026-10-11T15:07:12.798Z",
   "basePath": "/bitcoin-gui-evidence/",
   "outcomes": [
     {
@@ -7,7 +7,7 @@
       "status": "passed"
     },
     {
-      "name": "Acceptance summary separates 48 implementation gaps, 114 accepted and 21 proof gaps",
+      "name": "Acceptance summary separates 48 implementation gaps, 125 accepted and 10 proof gaps",
       "status": "passed"
     },
     {
@@ -44,6 +44,10 @@
     },
     {
       "name": "Evidence defaults survive scope edits and can be overridden and restored",
+      "status": "passed"
+    },
+    {
+      "name": "Hardware/platform review links connected QML and recorded tests, preserving raw scope and manual choices",
       "status": "passed"
     },
     {
@@ -91,7 +95,7 @@
       "status": "passed"
     },
     {
-      "name": "Full evidence requires GUI-QML automation and a capture",
+      "name": "Full evidence accepts targeted captures or reviewed hardware/platform QML with tests/hooks",
       "status": "passed"
     },
     {

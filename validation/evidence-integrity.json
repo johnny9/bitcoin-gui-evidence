@@ -11,9 +11,12 @@
   "collectionCapturesVerified": 101,
   "widgetsCriteriaWithoutCaptures": 9,
   "historicalWidgetsCriteriaWithoutCaptures": 11,
-  "localLinkTargets": 284,
+  "localLinkTargets": 286,
   "unresolvedFailures": 2,
   "catalogId": "b4b1026b74ad8bf0a1628c9889b82193d33d210c3aa0170e94783f371fe15c0b",
+  "hardwarePlatformReviewed": 11,
+  "defaultAccepted": 125,
+  "remainingParityProofGaps": 10,
   "groupParity": {
     "parity": 18,
     "partial": 13,
@@ -24,10 +27,11 @@
     "not-implemented": 35,
     "partial": 13
   },
-  "baseRevision": "e680e15eaff28c6ba5b3ee91c4cf6e4518fd3144",
-  "unchangedPriorEvidenceFiles": 1680,
-  "newFunctionalScripts": 2,
-  "newSelectedCaptures": 3,
-  "pendingAssertionsPassed": 13,
-  "maturityRegression": "Reproduced twice on the unchanged binary; combined balance criterion remains partial"
+  "baseRevision": "f6034f09a62d0d5c6e249ee6065ebe412f5a3d9c",
+  "unchangedPriorEvidenceFiles": 1740,
+  "newFunctionalScripts": 0,
+  "newSelectedCaptures": 0,
+  "reviewedSourceFilesVerified": 32,
+  "reviewedApplicationRevision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+  "assessmentOnly": true
 }
