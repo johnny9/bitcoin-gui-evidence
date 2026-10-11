@@ -10,6 +10,7 @@ import sys
 from tempfile import TemporaryDirectory
 
 from markdown_it import MarkdownIt
+from catalog import apply_catalog_audit, audit_markdown, current_catalog_markdown
 
 ROOT = Path(__file__).resolve().parents[1]
 DEST = ROOT / 'dist'
@@ -290,6 +291,9 @@ def main():
     data['summary']['captures_by_application'] = {app: sum(p['application'] == app for p in photos) for app in ('widgets', 'qml')}
     data['summary']['qml_functional'] = {status: sum(r['status'] == status for r in data['functional']) for status in ('passed', 'failed')}
     data['latestEvidenceDate'] = max([data['summary']['date']] + [r['date'] for r in data['reruns'] + data['collections']])
+    apply_catalog_audit(data, json.loads((ROOT / 'data/catalog-audit.json').read_text()))
+    audit_text = audit_markdown(data)
+    data['catalogAudit']['reportHtml'] = html(audit_text.partition('\n\n')[2], inline=False)
     if DEST.exists():
         shutil.rmtree(DEST)
     DEST.mkdir()
@@ -297,6 +301,9 @@ def main():
         if file.is_file():
             shutil.copy2(file, DEST / file.name)
     (DEST / 'data.js').write_text('window.REVIEW_EVIDENCE = ' + json.dumps(data, ensure_ascii=False).replace('</', '<\\/') + ';\n')
+    (DEST / 'catalog-audit.md').write_text(audit_text)
+    (DEST / 'current-catalog.md').write_text(current_catalog_markdown(data))
+    shutil.copy2(ROOT / 'data/catalog-audit.json', DEST / 'catalog-audit.json')
     shutil.copy2(ROOT / 'data/implementation.json', DEST / 'implementation.json')
     output_evidence = DEST / 'gui-feature-evidence'
     output_evidence.mkdir()

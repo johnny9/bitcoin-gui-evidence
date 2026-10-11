@@ -44,6 +44,9 @@
   const groupMap = new Map(data.groups.map(g => [g.id, g]));
   const criteria = data.groups.flatMap(g => g.criteria);
   const criterionMap = new Map(criteria.map(c => [c.id, c]));
+  const aliases = data.criterionAliases || {};
+  const canonicalId = id => aliases[id] || id;
+  const knownCriterion = id => criterionMap.has(canonicalId(id));
   const captureMap = new Map(data.captures.map(p => [p.path, p]));
   const areaIcons = {wallets:'wallet', payments:'payments', activity:'activity', node:'network', application:'grid'};
   const appNames = {widgets:'Qt Widgets', qml:'GUI-QML'};
@@ -69,10 +72,14 @@
     if (!records || typeof records !== 'object' || Array.isArray(records)) throw new Error('Review records are missing.');
     const clean = {};
     for (const [id, value] of Object.entries(records)) {
-      if ((!criterionMap.has(id) && !groupMap.has(id)) || !value || !permittedStates.includes(value.status) || typeof value.note !== 'string' || value.note.length > 10000) throw new Error('The file contains an invalid review record.');
+      if ((!knownCriterion(id) && !groupMap.has(id)) || !value || !permittedStates.includes(value.status) || typeof value.note !== 'string' || value.note.length > 10000) throw new Error('The file contains an invalid review record.');
       const requirement = value.requirement === undefined ? defaultRequirement(id) : value.requirement;
-      if (!Object.hasOwn(requirementLabels, requirement) && !(criterionMap.has(id) && requirement === 'inherit')) throw new Error('The file contains an invalid requirement.');
+      if (!Object.hasOwn(requirementLabels, requirement) && !(knownCriterion(id) && requirement === 'inherit')) throw new Error('The file contains an invalid requirement.');
       clean[id] = {status:value.status, note:value.note, requirement, updatedAt:typeof value.updatedAt === 'string' ? value.updatedAt : null};
+      if (value.mergedIds !== undefined) {
+        if (!Array.isArray(value.mergedIds) || value.mergedIds.some(source=>aliases[source] !== id)) throw new Error('The file contains an invalid merged review.');
+        clean[id].mergedIds = [...new Set(value.mergedIds)];
+      }
     }
     return clean;
   }
@@ -85,7 +92,18 @@
     const c = criterionMap.get(id);
     return c && c.implementation.status === 'parity' && evidenceCoverage(c) === 'full' ? 'accepted' : 'unreviewed';
   }
-  function savedReviewFor(id) { return reviews[id] || {status:'default', note:'', requirement:defaultRequirement(id)}; }
+  function savedReviewFor(id) {
+    const sourceIds = Object.keys(aliases).filter(source=>aliases[source] === id && reviews[source]);
+    if (!sourceIds.length || sourceIds.every(source=>reviews[id]?.mergedIds?.includes(source))) return reviews[id] || {status:'default', note:'', requirement:defaultRequirement(id)};
+    // Retain the old records for export and display. Combine their decisions
+    // only in the current view until the reviewer explicitly saves this item.
+    const records = [reviews[id], ...sourceIds.map(source=>reviews[source])].filter(Boolean);
+    const states = [...new Set(records.map(r=>r.status === 'default' ? defaultReviewStatus(id) : r.status))];
+    const requirements = [...new Set(records.map(r=>r.requirement))];
+    const conflict = states.length > 1 || requirements.length > 1;
+    return {...records[0], status:conflict?'followup':records.every(r=>r.status==='default')?'default':states[0],
+      requirement:requirements.length===1?requirements[0]:'unassigned', mergedIds:sourceIds, mergeConflict:conflict};
+  }
   function reviewFor(id) {
     const saved = savedReviewFor(id);
     return {...saved, status:saved.status === 'default' ? defaultReviewStatus(id) : saved.status};
@@ -122,7 +140,8 @@
     return `<div class="criterion-review-actions"><button type="button" class="quick-review" data-quick-review="${id}" aria-pressed="${checked}" aria-label="${action}: ${id}" title="${reviewLabel(id)} · ${action}">${icon('tick')}</button>${requirementPicker(id)}<button type="button" class="review-button review-${review.status}" data-review="${id}" aria-label="Review details for ${id}: ${reviewLabel(id)}" title="${reviewLabel(id)} · Open notes and review details">${icon('note')}Review details${review.note?'<span class="note-dot" title="Has a review note"></span>':''}</button></div>`;
   }
   function saveCardReview(id, changes, focusSelector, message) {
-    reviews[id] = {...savedReviewFor(id), ...changes, updatedAt:new Date().toISOString()};
+    const {mergeConflict, ...saved} = savedReviewFor(id);
+    reviews[id] = {...saved, ...changes, updatedAt:new Date().toISOString()};
     const top = window.scrollY;
     persist();
     render();
@@ -236,7 +255,7 @@
   }
   function criterionCard(c) {
     const review = reviewFor(c.id);
-    return `<article class="criterion-card ${c.hasFailure?'has-finding':''}" id="${c.id}"><header class="criterion-card-heading"><div><span class="criterion-id">${c.id}</span> ${acceptanceBadge(c.id)}${c.hasFailure?'<span class="failure-marker">Test failure</span>':''}<h2>${escape(c.intent)}</h2></div><button class="icon-button copy-link" data-copy="${c.id}" aria-label="Copy link to ${c.id}" title="Copy link">#</button></header><div class="evidence-comparison">${comparisonApps.map(app=>evidencePanel(c,app)).join('')}</div><footer class="criterion-footer"><a class="subtle-link" href="#feature/${c.groupId}?tab=tests">Modules & related tests ${icon('external')}</a>${reviewActions(c.id)}</footer>${review.note?`<div class="saved-note"><span class="small-label">Your note</span><p>${escape(review.note)}</p></div>`:''}</article>`;
+    return `<article class="criterion-card ${c.hasFailure?'has-finding':''}" id="${c.id}"><header class="criterion-card-heading"><div><span class="criterion-id">${c.id}</span> ${acceptanceBadge(c.id)}${c.hasFailure?'<span class="failure-marker">Test failure</span>':''}<h2>${escape(c.intent)}</h2>${c.mergedCriteria?`<p class="helper-text">Combines ${c.mergedCriteria.map(s=>escape(s.id)).join(' and ')}. <a href="#audit">Duplicate audit ↗</a></p>`:''}${review.mergeConflict?'<p class="helper-text">Earlier review decisions differ. Review details retains both; choose the combined acceptance status and scope.</p>':''}</div><button class="icon-button copy-link" data-copy="${c.id}" aria-label="Copy link to ${c.id}" title="Copy link">#</button></header><div class="evidence-comparison">${comparisonApps.map(app=>evidencePanel(c,app)).join('')}</div><footer class="criterion-footer"><a class="subtle-link" href="#feature/${c.groupId}?tab=tests">Modules & related tests ${icon('external')}</a>${reviewActions(c.id)}</footer>${review.note?`<div class="saved-note"><span class="small-label">Your note</span><p>${escape(review.note)}</p></div>`:''}</article>`;
   }
   function groupTests(g) {
     return `<section class="content-panel"><div class="section-heading"><h2>Implementation modules</h2><span class="small-label">Pinned source revisions</span></div><div class="prose module-list">${g.modulesHtml}</div></section><section class="content-panel"><div class="section-heading"><h2>Automated tests & assertions</h2><a class="subtle-link" href="#tests">All test results ↗</a></div><p class="helper-text">These tests are related to this feature group. Use the assertions and limits for each criterion to assess whether its required outcome is demonstrated.</p><div class="table-scroll"><table class="tests-table"><thead><tr><th>Application</th><th>Test / module</th><th>Recorded result</th></tr></thead><tbody>${g.tests.map(t=>`<tr class="${t.failed?'failed-row':''}"><td>${escape(t.application)}</td><td>${t.testHtml}</td><td>${t.resultHtml}</td></tr>`).join('')}</tbody></table></div></section>`;
@@ -248,7 +267,7 @@
     const area = data.areas.find(a=>a.id===g.area);
     const previous = data.groups[g.number-2], next = data.groups[g.number];
     const matching = route.params.has('item') ? g.criteria : g.criteria.filter(matches);
-    $('#main').innerHTML = `<a class="back-link" href="#catalog">← Acceptance criteria</a><section class="page-heading feature-heading"><div><div class="eyebrow">${g.id} <span class="eyebrow-divider">/</span> ${escape(area.label)}</div><h1>${escape(g.name)}</h1><div class="implementation-summary"><span class="small-label">GUI-QML</span>${parityBadge(g.implementation)}<span class="helper-text">Subfeature parity: ${paritySummary(g)}</span></div><div class="group-meta"><span>${g.criteria.length} subfeatures</span><span>·</span><span>${g.captures.length} captures</span><span>·</span><span>Proposed acceptance criteria</span></div></div><div class="feature-pagination">${previous?`<a class="icon-button" href="#feature/${previous.id}" aria-label="Previous feature: ${escape(previous.name)}">←</a>`:'<span></span>'}${next?`<a class="icon-button" href="#feature/${next.id}" aria-label="Next feature: ${escape(next.name)}">→</a>`:''}</div></section><section class="content-panel outcome-assessment"><div class="eyebrow">GUI-QML IMPLEMENTATION ASSESSMENT</div><h2>Main user goal</h2><p class="outcome-goal">${escape(g.implementation.goal)}</p><p class="helper-text">${escape(g.implementation.reason)}</p><div class="group-requirement"><div><span class="small-label">Acceptance scope</span><p class="helper-text">Full parity defaults to Needed for merge. A saved group choice applies to criteria without overrides.</p></div><button class="button" data-review="${g.id}" aria-label="Set requirement for ${escape(g.name)}">${requirementBadge(g.id)}<span>Change</span></button></div></section><details class="implementation-note"><summary>Detailed implementation differences <span>Pinned source comparison</span></summary><p class="helper-text">This original comparison lists individual differences. The outcome assessment allows equivalent workflows and secondary differences when the main user goal is achieved.</p><div class="prose">${g.comparisonHtml}${g.supportHtml?`<p class="baseline-note">${g.supportHtml}</p>`:''}</div></details><div class="feature-tabs-row"><nav class="feature-tabs" aria-label="Feature sections">${[['evidence','Subfeatures & evidence'],['tests','Modules & tests'],['captures','All captures']].map(([key,label])=>`<a href="#feature/${g.id}?tab=${key}" ${tab===key?'aria-current="page"':''}>${label}${key==='captures'?` <span>${g.captures.length}</span>`:''}</a>`).join('')}</nav></div><div id="feature-content"></div><div class="feature-bottom-links"><a href="${g.markdown}" download>Download the Markdown evidence page ${icon('download')}</a><a href="#catalog">Back to acceptance criteria ↑</a></div>`;
+    $('#main').innerHTML = `<a class="back-link" href="#catalog">← Acceptance criteria</a><section class="page-heading feature-heading"><div><div class="eyebrow">${g.id} <span class="eyebrow-divider">/</span> ${escape(area.label)}</div><h1>${escape(g.name)}</h1><div class="implementation-summary"><span class="small-label">GUI-QML</span>${parityBadge(g.implementation)}<span class="helper-text">Subfeature parity: ${paritySummary(g)}</span></div><div class="group-meta"><span>${g.criteria.length} subfeatures</span><span>·</span><span>${g.captures.length} captures</span><span>·</span><span>Proposed acceptance criteria</span></div></div><div class="feature-pagination">${previous?`<a class="icon-button" href="#feature/${previous.id}" aria-label="Previous feature: ${escape(previous.name)}">←</a>`:'<span></span>'}${next?`<a class="icon-button" href="#feature/${next.id}" aria-label="Next feature: ${escape(next.name)}">→</a>`:''}</div></section><section class="content-panel outcome-assessment"><div class="eyebrow">GUI-QML IMPLEMENTATION ASSESSMENT</div><h2>Main user goal</h2><p class="outcome-goal">${escape(g.implementation.goal)}</p><p class="helper-text">${escape(g.implementation.reason)}</p><div class="group-requirement"><div><span class="small-label">Acceptance scope</span><p class="helper-text">Full parity defaults to Needed for merge. A saved group choice applies to criteria without overrides.</p></div><button class="button" data-review="${g.id}" aria-label="Set requirement for ${escape(g.name)}">${requirementBadge(g.id)}<span>Change</span></button></div></section><details class="implementation-note"><summary>Detailed implementation differences <span>Pinned source comparison</span></summary><p class="helper-text">This original comparison lists individual differences. The outcome assessment allows equivalent workflows and secondary differences when the main user goal is achieved.</p><div class="prose">${g.comparisonHtml}${g.supportHtml?`<p class="baseline-note">${g.supportHtml}</p>`:''}</div></details><div class="feature-tabs-row"><nav class="feature-tabs" aria-label="Feature sections">${[['evidence','Subfeatures & evidence'],['tests','Modules & tests'],['captures','All captures']].map(([key,label])=>`<a href="#feature/${g.id}?tab=${key}" ${tab===key?'aria-current="page"':''}>${label}${key==='captures'?` <span>${g.captures.length}</span>`:''}</a>`).join('')}</nav></div><div id="feature-content"></div><div class="feature-bottom-links"><a href="${g.markdown}" download>Download the original evidence page ${icon('download')}</a><a href="#catalog">Back to acceptance criteria ↑</a></div>`;
     const content = $('#feature-content');
     if (tab==='tests') content.innerHTML = groupTests(g);
     else if (tab==='captures') {
@@ -276,6 +295,13 @@
     const [path, query=''] = location.hash.slice(1).split('?');
     const [page, groupId] = path.split('/');
     route = {page:page || 'catalog', groupId, params:new URLSearchParams(query)};
+    const item = route.params.get('item');
+    if (route.page === 'feature' && aliases[item]) {
+      const canonical = criterionMap.get(aliases[item]);
+      route.groupId = canonical.groupId;
+      route.params.set('item', canonical.id);
+      history.replaceState(null,'',`#feature/${route.groupId}?${route.params}`);
+    }
     if (route.page==='catalog' && query) {
       filters = {...defaults};
       const legacyEvidence = {assertions:'full', limited:'partial', visual:'partial', source:'partial', gap:'partial'};
@@ -293,7 +319,7 @@
     readRoute();
     $('#main').dataset.route=location.hash;
     if (route.page==='main') { $('#main').focus(); return; }
-    const title = route.page==='feature' ? groupMap.get(route.groupId)?.name || 'Feature' : {catalog:'Acceptance criteria', tests:'Test results', about:'Acceptance guide'}[route.page] || 'Acceptance criteria';
+    const title = route.page==='feature' ? groupMap.get(route.groupId)?.name || 'Feature' : {catalog:'Acceptance criteria', tests:'Test results', about:'Acceptance guide', audit:'Duplicate audit'}[route.page] || 'Acceptance criteria';
     $('#breadcrumb-current').textContent = title;
     document.title = title + ' · GUI-QML acceptance';
     $$('[data-nav]').forEach(a=>{a.removeAttribute('aria-current');if(a.dataset.nav===route.page || (route.page==='feature'&&a.dataset.nav==='catalog'))a.setAttribute('aria-current','page');});
@@ -301,6 +327,7 @@
     if (route.page==='feature') renderGroup();
     else if (route.page==='tests') renderTests();
     else if (route.page==='about') renderAbout();
+    else if (route.page==='audit') $('#main').innerHTML = `<section class="page-heading"><div><div class="eyebrow">CATALOG REVIEW · ${escape(data.catalogAudit.date)}</div><h1>Subfeature duplicate audit</h1></div><a class="button" href="catalog-audit.md" download>${icon('download')} Download audit</a></section><section class="content-panel"><p class="helper-text"><a href="current-catalog.md" download>Download current criteria ↗</a> · <a href="catalog-audit.json" target="_blank" rel="noopener">Structured audit ↗</a></p><div class="prose audit-report">${data.catalogAudit.reportHtml}</div></section>`;
     else renderCatalog();
     updateProgress();
   }
@@ -358,6 +385,13 @@
     $('#review-form button[type="submit"]').textContent=group ? 'Save requirement' : 'Save review';
     $('#review-state').innerHTML=options([['default',`Use evidence default (${reviewLabels[defaultReviewStatus(id)]})`],...Object.entries(reviewLabels)],savedReviewFor(id).status);
     $('#review-note').value=reviewFor(id).note;
+    const sources = Object.keys(aliases).filter(source=>aliases[source]===id && reviews[source]);
+    const unresolved = sources.some(source=>!reviews[id]?.mergedIds?.includes(source));
+    const earlier = [...(unresolved && reviews[id] ? [id] : []), ...sources];
+    const history = $('#merged-review-history');
+    history.hidden=!earlier.length;
+    history.innerHTML=earlier.length?`<summary>Earlier separate reviews (${earlier.length})</summary><p class="helper-text">Review the earlier decisions before saving the combined criterion. The retired criterion’s record remains in your export.</p>${earlier.map(source=>`<div class="saved-note"><span class="small-label">${escape(source)} · ${escape(reviews[source].status==='default'?'Evidence default':reviewLabels[reviews[source].status])} · ${escape(requirementLabels[reviews[source].requirement] || 'Use group default')}</span><p>${escape(reviews[source].note || 'No note recorded.')}</p></div>`).join('')}`:'';
+    history.open=!!reviewFor(id).mergeConflict;
     $('#review-dialog').showModal();
   }
   async function copyCriterionLink(id) {
@@ -402,7 +436,7 @@
     event.preventDefault();
     if (!editingReview) return;
     const previous=savedReviewFor(editingReview), group=groupMap.has(editingReview);
-    reviews[editingReview]={status:group?previous.status:$('#review-state').value,note:group?previous.note:$('#review-note').value.trim(),requirement:$('#review-requirement').value,updatedAt:new Date().toISOString()};
+    reviews[editingReview]={status:group?previous.status:$('#review-state').value,note:group?previous.note:$('#review-note').value.trim(),requirement:$('#review-requirement').value,updatedAt:new Date().toISOString(),...(previous.mergedIds?{mergedIds:previous.mergedIds}:{})};
     persist();$('#review-dialog').close();const top=window.scrollY;render();window.scrollTo(0,top);notify(storageAvailable?'Review saved in this browser.':'Review kept for this session. Export to save.');
   });
   $('#export-review').addEventListener('click',()=>{

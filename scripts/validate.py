@@ -30,8 +30,8 @@ def main():
     coverage = {r['id']: r for r in json.loads((original / 'coverage.json').read_text())}
     assert len(data['groups']) == 34
     criteria = [c for g in data['groups'] for c in g['criteria']]
-    assert len(criteria) == len({c['id'] for c in criteria}) == 203
-    assert set(coverage) == {c['id'] for c in criteria}
+    assert len(criteria) == len({c['id'] for c in criteria}) == 202
+    assert set(coverage) == {c['id'] for c in criteria + data['retiredCriteria']}
     implementation = json.loads((ROOT / 'data/implementation.json').read_text())
     assert implementation == json.loads((DIST / 'implementation.json').read_text())
     assert implementation['snapshotCatalogId'] == data['catalogId']
@@ -45,6 +45,23 @@ def main():
         assert criterion['implementation']['status'] in ('parity', 'partial', 'not-implemented')
         assert criterion['implementation']['reason'].strip()
     by_id = {c['id']: c for c in criteria}
+    assert data['criterionAliases'] == {'F05.S02': 'F05.S01'}
+    assert 'F05.S02' not in by_id
+    combined = by_id['F05.S01']
+    assert combined['intent'] == 'Export a watch-only copy of a wallet for monitoring without spending access.'
+    assert [r['id'] for r in combined['mergedCriteria']] == ['F05.S01', 'F05.S02']
+    assert data['retiredCriteria'] == [combined['mergedCriteria'][1]]
+    assert combined['implementation']['status'] == 'not-implemented'
+    for app in ('widgets', 'qml'):
+        previous = [r['applications'][app] for r in combined['mergedCriteria']]
+        assert combined['applications'][app]['captures'] == list(dict.fromkeys(p for r in previous for p in r['captures']))
+        assert all(r['html'] in combined['applications'][app]['html'] for r in previous)
+    audit = data['catalogAudit']
+    assert audit['reviewedCount'] == 203 and audit['currentCount'] == 202
+    assert Counter(f['kind'] for f in audit['findings']) == {'merged':1, 'duplicate':9, 'overlap':12, 'distinct':8}
+    reviewed = [sid for g in audit['groups'] for sid in g['reviewedCriteria']]
+    assert len(reviewed) == len(set(reviewed)) == 203 and set(reviewed) == set(coverage)
+    assert data['preMergeSummary']['criteria'] == 203 and data['summary']['criteria'] == 202
     # Incomplete proof must not be mistaken for absent implementation.
     assert by_id['F04.S02']['implementation']['status'] == 'parity'
     assert by_id['F04.S02']['applications']['qml']['status'] == 'assertions'
@@ -72,6 +89,7 @@ def main():
     parser.feed((DIST / 'index.html').read_text())
     parser.feed(data['testReportHtml'])
     parser.feed(data['provenanceHtml'])
+    parser.feed(audit['reportHtml'])
     rerun_capture_count = 0
     for rerun in data['reruns']:
         parser.feed(rerun['reportHtml'])
@@ -205,10 +223,10 @@ def main():
     assert data['summary']['qml_functional'] == {'passed':39, 'failed':1}
     assert data['summary']['criteria_statuses']['qml']['Automated evidence collected'] == 127
     assert data['summary']['criteria_statuses']['qml']['Partial / limited evidence'] == 38
-    assert sum(data['summary']['criteria_statuses']['qml'].values()) == 203
+    assert sum(data['summary']['criteria_statuses']['qml'].values()) == 202
     for script in (ROOT / 'scripts').glob('*.py'):
         ast.parse(script.read_text())
-    report = {'status':'passed', 'groups':34, 'criteria':203, 'originalCapturesVerified':116,
+    report = {'status':'passed', 'groups':34, 'criteria':202, 'auditedOriginalCriteria':203, 'retiredCriteria':1, 'originalCapturesVerified':116,
               'rerunCapturesVerified':rerun_capture_count, 'collectionCapturesVerified':collection_capture_count,
               'widgetsCriteriaWithoutCaptures':11, 'localLinkTargets':len(local_links), 'unresolvedFailures':1, 'catalogId':data['catalogId'],
               'groupParity': dict(Counter(g['implementation']['status'] for g in data['groups'])),

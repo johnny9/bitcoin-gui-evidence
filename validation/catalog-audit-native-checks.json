@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-11T12:38:26.571355+00:00",
+  "baseRevision": "07793efda85cc8f637ce4f5b072a302745ec7b8d",
+  "checkout": "/home/codex/workspaces/bitcoin-core-app/bitcoin-gui-evidence",
+  "checks": [
+    {
+      "command": "./ci/lint.py",
+      "exitCode": 127,
+      "output": "/bin/sh: 1: ./ci/lint.py: not found\n",
+      "status": "blocked: required CI scripts absent"
+    },
+    {
+      "command": "FILE_ENV=./ci/test/00_setup_env_native_tidy.sh ./ci/test_run_all.sh",
+      "exitCode": 127,
+      "output": "/bin/sh: 1: ./ci/test_run_all.sh: not found\n",
+      "status": "blocked: required CI scripts absent"
+    },
+    {
+      "command": "FILE_ENV=./ci/test/00_setup_env_native_asan.sh ./ci/test_run_all.sh",
+      "exitCode": 127,
+      "output": "/bin/sh: 1: ./ci/test_run_all.sh: not found\n",
+      "status": "blocked: required CI scripts absent"
+    }
+  ]
+}

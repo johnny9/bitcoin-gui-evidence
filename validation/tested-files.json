@@ -1,17 +1,19 @@
 {
-  "src/app.js": "49e0972115827b99187f9a00100faca4f99a548a6df8663fedbff78ebe2a370f",
+  "src/app.js": "53f3b7c5ed7b739954acb0be0c46a6d8643862b9620d712dd8379ca6e3ec0eac",
   "src/styles.css": "6ddd1f18b4a78c377d028c34e5664d2cf28d16aa8f20b8f998de530917878868",
-  "src/index.html": "cfebedd3ff0f840dd789f9a409403ebcfcbb27657f5b52739221a98cf8d1874a",
+  "src/index.html": "82042a3256a56aa3d870727d69d800f9d765dcb9d598808040be74aab0f1a11e",
   "src/theme.js": "f4f4312f29e3d6177699b7579cc1683848b58381874a1259eac50c0e67a81238",
   "src/theme.css": "d8114d219b75195f44dc9eb4558fd110d960677ed6a5a45519fcfb6706faa55a",
-  "dist/data.js": "d0069ff8bb11a069451dfa9e7dce85d933c9189413fc90ffa352655152ff2ac6",
-  "scripts/browser-test.cjs": "326a4c75bae15dd5d6bbec320759cd4b14b1a8a5edbfb99d115b5afdb1272ed2",
-  "scripts/build.py": "cd324fa4a1f090a5078d4c8e510628d1e7513c7f94bb364f2b0eb09d71931cb5",
+  "dist/data.js": "fcaaed0ca0f6aef0469c13bda272bb9fd6f469bed75c9af969d7c8ebc213bb0b",
+  "scripts/browser-test.cjs": "fd1c0c025f4c7eb3a38b8544d4bfb48ef15aa987d7f5fd001e716fd7ffe85fe0",
+  "scripts/build.py": "6f9f01f9aeeb040ab24e38c1191d97081385585abebafa1fa58757fb71897afc",
   ".github/workflows/pages.yml": "0cba93594a8ecb3e82aee0706e0cfab7dc416c6cd2e142dfc0e9a29e3806a724",
   "data/implementation.json": "a52fdd9524718912a12bad5832e32aa4b7a67fdd602c2a5e7c1da3e33e1b0abf",
-  "scripts/validate.py": "213f0778fb94677aaa273343d67266c33c349ed76e531837f5bfe8ca92b2e96d",
+  "scripts/validate.py": "0e3f9fcfc3c3adf941c4c9e9b8e4f93db6ed231688620ae9268c819ae86df263",
   "data/reruns/20261010-send-create/result.json": "9b0e616526bea6a019d845888169cc011e639c336b69f7f3e6d30fb5c3426cfa",
   "data/reruns/20261010-wallet-rbf/result.json": "8fc714257f2442f84666917e9cc62d08151a47f0da5f1a6333a86ee0464f7321",
   "data/collections/20261010-widgets/result.json": "c0b53dad75ec2ee1c86b289e17fc720cf25c1a78d915d1cd0242ab12b6ef5d4c",
-  "data/collections/20261010-qml/result.json": "76459212113d0739a5182df23b60dc0f471b03ea0d5d9c81eceba134ecafee32"
+  "data/collections/20261010-qml/result.json": "76459212113d0739a5182df23b60dc0f471b03ea0d5d9c81eceba134ecafee32",
+  "scripts/catalog.py": "40b6800cf9da6494bfba04e17e35de15bbd63ff216524979ad85b19ac022e7e6",
+  "data/catalog-audit.json": "baef92f9393e567daa0942923133a0f1ad667fcb70a671429ec901086ecd8fe7"
 }

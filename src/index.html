@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f7f8fa">
-  <meta name="description" content="Explore 203 subfeatures across 34 feature groups to agree GUI-QML acceptance criteria: required user outcomes for merge and release, supported by evidence.">
+  <meta name="description" content="Explore 202 subfeatures across 34 feature groups to agree GUI-QML acceptance criteria: required user outcomes for merge and release, supported by evidence.">
   <title>GUI-QML acceptance criteria · Bitcoin Core</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <script src="theme.js"></script>
@@ -21,6 +21,7 @@
       <button class="mobile-close icon-button" id="close-navigation" aria-label="Close navigation">×</button>
       <nav class="primary-nav" aria-label="Main">
         <a href="#catalog" data-nav="catalog"><span data-icon="grid"></span>Acceptance criteria<span class="nav-count" title="Subfeatures partially or not implemented"></span></a>
+        <a href="#audit" data-nav="audit"><span data-icon="search"></span>Duplicate audit</a>
         <a href="#tests" data-nav="tests"><span data-icon="check"></span>Test results</a>
         <a href="#about" data-nav="about"><span data-icon="info"></span>Acceptance guide</a>
       </nav>
@@ -47,7 +48,7 @@
   <dialog id="review-dialog" class="review-dialog" aria-labelledby="review-title">
     <div class="dialog-header"><span class="eyebrow" id="review-criterion-id"></span><button class="icon-button" data-close-dialog="review-dialog" aria-label="Close review">×</button></div>
     <h2 id="review-title"></h2>
-    <form id="review-form"><label for="review-requirement">Acceptance scope</label><select id="review-requirement" aria-describedby="requirement-help"></select><p class="helper-text" id="requirement-help"></p><div id="review-detail-fields"><label for="review-state">Acceptance status</label><select id="review-state"></select><label for="review-note">Notes <span class="muted">(optional)</span></label><textarea id="review-note" rows="6" maxlength="10000" placeholder="Record why this outcome is required, what you checked, and any remaining evidence gaps."></textarea></div><p class="helper-text">Parity with full GUI-QML evidence defaults to Accepted. Saved decisions override the default. Use the checkmark to accept or reopen an item; choose Use evidence default to restore automatic acceptance. Your choices stay in this browser; export to share them.</p><div class="dialog-actions"><button type="button" class="button" data-close-dialog="review-dialog">Cancel</button><button type="submit" class="button button-primary">Save review</button></div></form>
+    <form id="review-form"><label for="review-requirement">Acceptance scope</label><select id="review-requirement" aria-describedby="requirement-help"></select><p class="helper-text" id="requirement-help"></p><div id="review-detail-fields"><label for="review-state">Acceptance status</label><select id="review-state"></select><label for="review-note">Notes <span class="muted">(optional)</span></label><textarea id="review-note" rows="6" maxlength="10000" placeholder="Record why this outcome is required, what you checked, and any remaining evidence gaps."></textarea><details id="merged-review-history" hidden></details></div><p class="helper-text">Parity with full GUI-QML evidence defaults to Accepted. Saved decisions override the default. Use the checkmark to accept or reopen an item; choose Use evidence default to restore automatic acceptance. Your choices stay in this browser; export to share them.</p><div class="dialog-actions"><button type="button" class="button" data-close-dialog="review-dialog">Cancel</button><button type="submit" class="button button-primary">Save review</button></div></form>
   </dialog>
   <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
   <noscript><div class="noscript">Enable JavaScript to define and review GUI-QML acceptance criteria, or open the <a href="gui-feature-evidence/README.md">original Markdown evidence index</a>.</div></noscript>

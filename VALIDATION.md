@@ -1,5 +1,17 @@
 # Static site validation
 
+## October 11, 2026 — combine watch-only export and audit all subfeatures
+
+Validated changes based on site revision `07793efda85cc8f637ce4f5b072a302745ec7b8d`; [tested file hashes](validation/tested-files.json) identify the resulting source.
+
+- F05.S02 is combined into F05.S01: **Export a watch-only copy of a wallet for monitoring without spending access**. The current catalog has **202 criteria**, with **52 to implement** (15 partial, 37 missing), **125 accepted by default**, and **25 parity criteria needing fuller proof**. This is a catalog correction; no application capability or implementation assessment changed.
+- All **203 original criteria across 34 groups** were audited for duplicate user outcomes. The [audit](dist/catalog-audit.md) documents the applied merge, nine further merge candidates, twelve partial overlaps and eight distinctions to retain. Every original criterion is listed in the group-by-group review. Only the requested F05 merge is applied.
+- **55 browser checks passed**, including old-ID navigation and search, union of both evidence records, retained review notes and scope, conflicting decisions, explicit resolution, export/import, maximum-length notes, and desktop/mobile audit layout. Existing filters, review controls, local-file use and all 218 capture files also passed. The merged criterion, review-conflict dialog and audit page were visually inspected.
+- Build, integrity, Python parsing, JavaScript syntax and source whitespace checks passed. The original evidence snapshot, application captures, dated collection artifacts, source assessments and catalog identity are unchanged. Removed IDs remain valid in historical reviews and exports; resolving a combined review keeps the earlier separate record. No application functional scripts were rerun for this catalog edit.
+- Required native lint, clang-tidy and ASan commands were attempted from this website checkout and returned 127 because `ci/lint.py` and `ci/test_run_all.sh` are absent. No native CI, sanitizer or IPC lifecycle pass is claimed. [Attempt results](validation/catalog-audit-native-checks.json) record the tested base revision and blocker.
+
+[Browser outcomes](validation/browser-results.json) · [Integrity results](validation/evidence-integrity.json). Screenshots are retained in `.validation/criterion-audit/`.
+
 ## October 10, 2026 — QML acceptance evidence and missing functional tests
 
 Validated the changes based on site revision `6e26efe2602af785a01f4eb452072edc7b15ba0d`; [tested file hashes](validation/tested-files.json) identify the resulting source. The application remains GUI-QML `a91f4b4774f25de061fe1a7c132a91ddde117fca` with the original binary hash.

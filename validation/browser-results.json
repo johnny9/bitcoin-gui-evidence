@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-10T17:42:58.080Z",
+  "checkedAt": "2026-10-11T12:40:55.379Z",
   "basePath": "/bitcoin-gui-evidence/",
   "outcomes": [
     {
@@ -7,7 +7,19 @@
       "status": "passed"
     },
     {
-      "name": "Acceptance summary separates 53 implementation gaps, 125 accepted and 25 proof gaps",
+      "name": "Acceptance summary separates 52 implementation gaps, 125 accepted and 25 proof gaps",
+      "status": "passed"
+    },
+    {
+      "name": "Watch-only export is counted once, combines proof, and redirects old links and searches",
+      "status": "passed"
+    },
+    {
+      "name": "Merged criteria preserve old reviews, conflicts, resolution and export/import history",
+      "status": "passed"
+    },
+    {
+      "name": "Duplicate audit covers every original criterion and remains readable on mobile",
       "status": "passed"
     },
     {
@@ -139,7 +151,7 @@
       "status": "passed"
     },
     {
-      "name": "All feature routes expose every original criterion",
+      "name": "All feature routes expose every current criterion",
       "status": "passed"
     },
     {

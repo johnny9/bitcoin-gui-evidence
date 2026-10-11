@@ -1,7 +1,9 @@
 {
   "status": "passed",
   "groups": 34,
-  "criteria": 203,
+  "criteria": 202,
+  "auditedOriginalCriteria": 203,
+  "retiredCriteria": 1,
   "originalCapturesVerified": 116,
   "rerunCapturesVerified": 44,
   "collectionCapturesVerified": 98,
@@ -16,7 +18,7 @@
   },
   "subfeatureParity": {
     "parity": 150,
-    "not-implemented": 38,
+    "not-implemented": 37,
     "partial": 15
   }
 }
