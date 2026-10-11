@@ -1,5 +1,5 @@
 {
-  "baseRevision": "47733363cdfb8eea2e798e3e22b47659a12d1ebe",
+  "baseRevision": "180c4486f8679c6ac6355d9c5bc548dd5d92c42b",
   "checks": [
     {
       "command": "./ci/lint.py",
@@ -20,7 +20,7 @@
       "stderr": "/bin/sh: 1: ./ci/test_run_all.sh: not found\n"
     }
   ],
-  "scope": "Static website wording update: feature parity and evidence supporting acceptance. Native CI, sanitizer and IPC lifecycle scripts are absent from this standalone website checkout.",
+  "scope": "Static website label update: Incomplete features. Native CI, sanitizer and IPC lifecycle scripts are absent from this standalone website checkout.",
   "branchAfterLint": "main",
-  "revisionAfterLint": "47733363cdfb8eea2e798e3e22b47659a12d1ebe"
+  "revisionAfterLint": "180c4486f8679c6ac6355d9c5bc548dd5d92c42b"
 }

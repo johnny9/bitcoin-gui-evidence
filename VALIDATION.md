@@ -1,5 +1,14 @@
 # Static site validation
 
+## October 11, 2026 — incomplete features label
+
+Validated changes based on site revision `180c4486f8679c6ac6355d9c5bc548dd5d92c42b`; [tested file hashes](validation/tested-files.json) identify the resulting source.
+
+- Renamed the remaining-work count **Incomplete features** and clarified that it includes partially implemented and missing subfeatures. Updated the README to match.
+- Build, evidence integrity, JavaScript syntax and whitespace checks pass. Desktop and mobile catalog previews were inspected; the label fits both layouts. Counts remain 49 incomplete (14 partial, 35 not implemented). The complete data bundle and archived evidence are byte-for-byte unchanged.
+- The existing full browser suite runs in the Pages workflow before deployment. The earlier browser outcomes below describe their recorded runs; no additional application tests are claimed for this wording edit.
+- Native lint, clang-tidy and ASan commands returned 127 because this standalone website checkout lacks their CI entry scripts. [Command results](validation/native-ci.json) record the tested revision and branch after lint; no native or sanitizer pass is claimed.
+
 ## October 11, 2026 — feature parity and supporting evidence language
 
 Validated changes based on site revision `47733363cdfb8eea2e798e3e22b47659a12d1ebe`; [tested file hashes](validation/tested-files.json) identify the resulting source.
