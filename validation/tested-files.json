@@ -1,15 +1,15 @@
 {
-  "src/app.js": "67d2c22f45da47032e3735f39e0735b6a2a338687af9d07b50b1d64e55b21a16",
+  "src/app.js": "fc1783f25077587fe33b4d77db5b889858913ae96eb2af19a29df8265c226243",
   "src/styles.css": "c9ed5522cb25f183d57a307f9a25bd98b1306356afd07b973938eda4c6975d3d",
   "src/index.html": "20d07e89f5344a65d56723c9813ec00dfe4f0e1db5e6147bb780f614365e0b97",
   "src/theme.js": "f4f4312f29e3d6177699b7579cc1683848b58381874a1259eac50c0e67a81238",
   "src/theme.css": "d8114d219b75195f44dc9eb4558fd110d960677ed6a5a45519fcfb6706faa55a",
-  "dist/data.js": "7cc07a60b027a91cf658d72dc7213afc40e8168fa3d628ba9e057d5e3fe524d7",
-  "scripts/browser-test.cjs": "b116bb83b088805429f2c3a6a7a18e902b91e9b7167e633d7b1c4194fc16b0a2",
-  "scripts/build.py": "fdb3b82bffb1cbcf150f7a4ba092a525e03a262a4dff768755e4acd911161d78",
+  "dist/data.js": "d1c8c9f84bc2cbddd092682773d1f711c3567357262a531399fdeddc1585fe15",
+  "scripts/browser-test.cjs": "2803581499f218cf335b81c3b19427d9fa40a328caff4812028ae9f533db31aa",
+  "scripts/build.py": "909f0c9fae98f3d6e968131e6df1994d0d37b6f7b9fce9dc5c5ce6cf1e9b4fbb",
   ".github/workflows/pages.yml": "0cba93594a8ecb3e82aee0706e0cfab7dc416c6cd2e142dfc0e9a29e3806a724",
   "data/implementation.json": "d3fd01f0e3cc1b2a0532816e6aab9a0070fc7427c1738ec589933c525e840be7",
-  "scripts/validate.py": "8dc08760213253751aa0c3a77594d462b4457b53380310d726f5ab0932cef882",
+  "scripts/validate.py": "6a6eda2d82cc6144ed40609ef3e8ef3bacd76f0ee05dc25a8ef86370bc9330d3",
   "data/reruns/20261010-send-create/result.json": "9b0e616526bea6a019d845888169cc011e639c336b69f7f3e6d30fb5c3426cfa",
   "data/reruns/20261010-wallet-rbf/result.json": "8fc714257f2442f84666917e9cc62d08151a47f0da5f1a6333a86ee0464f7321",
   "data/collections/20261010-widgets/result.json": "c0b53dad75ec2ee1c86b289e17fc720cf25c1a78d915d1cd0242ab12b6ef5d4c",
@@ -23,5 +23,8 @@
   "data/hardware-platform-review.json": "f62f150108341e48993ab9081846c1f6eb811ab704d79e17f1a2dbfd6ed28d2b",
   "scripts/hardware_platform.py": "f1d599a55d0768875eafe45f801351e55f6e5b8e6ca00bbad0f5c9252cd9d424",
   "dist/hardware-platform-review.md": "92bc50660781f2a3c7f5b1ff265abe5f48a0b05713983120833081fc8d0a2ad8",
-  "dist/hardware-platform-review.json": "f62f150108341e48993ab9081846c1f6eb811ab704d79e17f1a2dbfd6ed28d2b"
+  "dist/hardware-platform-review.json": "f62f150108341e48993ab9081846c1f6eb811ab704d79e17f1a2dbfd6ed28d2b",
+  "data/visual-acceptance.json": "70bf9883ba4772efdfe4c466f2921e2cb4488776f86b5362e5fc32ed4f3b1657",
+  "dist/visual-acceptance.json": "70bf9883ba4772efdfe4c466f2921e2cb4488776f86b5362e5fc32ed4f3b1657",
+  "scripts/visual_review.py": "ad8437f26f0659358c53cf234cfb38efe5e234ee4b2a75c5e0afe5631bfd4c44"
 }

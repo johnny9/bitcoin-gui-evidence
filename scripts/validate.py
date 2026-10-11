@@ -9,6 +9,7 @@ import json
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 from hardware_platform import apply_hardware_platform_review
+from visual_review import apply_visual_review
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / 'dist'
@@ -133,7 +134,7 @@ def main():
     review = json.loads((ROOT / 'data/hardware-platform-review.json').read_text())
     assert review == json.loads((DIST / 'hardware-platform-review.json').read_text())
     assert len(review['criteria']) == 11
-    assert {c['id'] for c in criteria if 'qmlReview' in c} == review['criteria'].keys()
+    assert {c['id'] for c in criteria if c.get('qmlReview', {}).get('basis') == 'qml-tests-hooks'} == review['criteria'].keys()
     for sid, assessment in review['criteria'].items():
         assert by_id[sid]['qmlReview'] == assessment
         assert by_id[sid]['implementation']['status'] == 'parity' and not by_id[sid]['hasFailure']
@@ -141,12 +142,32 @@ def main():
         for test in assessment['tests']:
             assert test['recordedAssertion'] in (original / test['log']).read_text()
     assert all('qmlReview' not in c for c in data['originalCriteria'])
+    visual = json.loads((ROOT / 'data/visual-acceptance.json').read_text())
+    assert visual == data['visualAcceptance'] == json.loads((DIST / 'visual-acceptance.json').read_text())
+    assert set(visual['criteria']) == {'F12.S04'}
+    assert by_id['F12.S04']['qmlReview'] == visual['criteria']['F12.S04']
+    assert by_id['F12.S04']['applications']['qml']['status'] == 'limited'
+    assert by_id['F12.S04']['qmlReview']['capture'].endswith('019-wallet-coin-locked.png')
+    photo = next(p for p in data['captures'] if p['path'] == by_id['F12.S04']['qmlReview']['capture'])
+    assert photo['sha256'] == by_id['F12.S04']['qmlReview']['sha256']
+    # Explicit visual acceptance is scoped to the existing QML image and criterion.
+    for field, value in (('hasFailure', True), ('implementation', {'status': 'partial'})):
+        rejected = copy.deepcopy(data)
+        row = next(c for g in rejected['groups'] for c in g['criteria'] if c['id'] == 'F12.S04')
+        row.pop('qmlReview')
+        row[field] = value
+        try:
+            apply_visual_review(rejected, visual)
+        except ValueError as error:
+            assert 'cannot override a gap or failure' in str(error)
+        else:
+            raise AssertionError('Visual acceptance overrode an implementation gap or failure')
     assert not any('qmlReview' in by_id[sid] for sid in ('F15.S03', 'F25.S01', 'F27.S01', 'F27.S08', 'F31.S04', 'F07.S01', 'F23.S01'))
     sufficient = lambda c: not c['hasFailure'] and bool(c.get('qmlReview') or
         (c['applications']['qml']['status'] == 'assertions' and c['applications']['qml']['captures']))
-    assert sum(sufficient(c) for c in criteria) == 125
-    assert sum(sufficient(c) and c['implementation']['status'] == 'parity' for c in criteria) == 125
-    assert sum(not sufficient(c) and c['implementation']['status'] == 'parity' for c in criteria) == 9
+    assert sum(sufficient(c) for c in criteria) == 126
+    assert sum(sufficient(c) and c['implementation']['status'] == 'parity' for c in criteria) == 126
+    assert sum(not sufficient(c) and c['implementation']['status'] == 'parity' for c in criteria) == 8
     # A stale assessment must not override a new failure or an implementation gap.
     for change in ({'hasFailure': True}, {'implementation': {'status': 'partial'}}):
         rejected = copy.deepcopy(data)
@@ -335,7 +356,7 @@ def main():
     report = {'status':'passed', 'groups':34, 'criteria':182, 'auditedOriginalCriteria':203, 'retiredCriteria':21, 'appliedFindings':22, 'retainedDistinctions':8, 'originalCapturesVerified':116,
               'rerunCapturesVerified':rerun_capture_count, 'collectionCapturesVerified':collection_capture_count,
               'widgetsCriteriaWithoutCaptures':9, 'historicalWidgetsCriteriaWithoutCaptures':11, 'localLinkTargets':len(local_links), 'unresolvedFailures':2, 'catalogId':data['catalogId'],
-              'hardwarePlatformReviewed':11, 'defaultAccepted':125, 'remainingParityProofGaps':9,
+              'hardwarePlatformReviewed':11, 'screenshotsAccepted':1, 'defaultAccepted':126, 'remainingParityProofGaps':8,
               'groupParity': dict(Counter(g['implementation']['status'] for g in data['groups'])),
               'subfeatureParity': dict(Counter(c['implementation']['status'] for c in criteria))}
     print(json.dumps(report, indent=2))

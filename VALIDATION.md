@@ -1,5 +1,18 @@
 # Static site validation
 
+## October 11, 2026 — accept the coin-viewer screenshot
+
+Validated changes based on site revision `5f2fcd65551dfe5ee11ba3120ce1d37b2b2ec528`; [tested file hashes](validation/tested-files.json) identify the resulting source.
+
+- Recorded the user's explicit acceptance of **F12.S04** using the existing standalone **View coins** screenshot. The criterion shows **Screenshot accepted**, displays the approved image first and retains the earlier runtime record in an expandable section. Exact confirmation counts remain a documented, non-blocking difference under the agreed main-goal standard. [Decision, source revision and approved image hash](data/visual-acceptance.json).
+- The visual decision is scoped to this criterion and the existing QML image. It counts as sufficient proof for Full filtering and automatic acceptance; it does not promote other screenshots or alter implementation ratings. Missing workflows, recorded failures, personal overrides and their history retain their prior behavior. The original capture register and test results are unchanged; no new automation pass is claimed.
+- The catalog retains **182 subfeatures**, with **126 accepted by default**, **8 parity proof gaps**, and **48 implementation gaps**. Only F12.S04's acceptance metadata changed; all other criterion records, raw evidence ratings and application results match the preceding revision. All 1,740 tracked evidence/collection/rerun files and all 221 selected images are unchanged.
+- **64 browser checks pass** under the GitHub Pages project path. The added regression checks the visible decision label, approved primary image and image viewer, preserved raw evidence, manual override/restoration, withdrawal when the approved image identity changes, and mobile layout. Existing filtering, migration, keyboard use, import/export and capture decoding checks pass. Desktop and mobile acceptance cards were visually inspected.
+- Build reproducibility, evidence integrity, local links, Python parsing, JavaScript syntax/execution and whitespace checks pass. Build-time guards reject visual acceptance of a partial implementation or recorded failure and require the matching QML image hash. Application source and binary are unchanged.
+- Native lint, clang-tidy and ASan commands were attempted from this standalone website checkout and returned 127 because the CI entry scripts are absent. [Command results](validation/native-ci.json) record the unchanged branch/revision after lint. Native rebuild, sanitizer and IPC-enabled GUI lifecycle coverage are not claimed.
+
+[Browser outcomes](validation/browser-results.json) · [Evidence integrity](validation/evidence-integrity.json) · [Tested file hashes](validation/tested-files.json)
+
 ## October 11, 2026 — remove the aggregate navigation criterion
 
 Validated changes based on site revision `51091d3cc7a0be473c42161db1968b09cfe21028`; [tested file hashes](validation/tested-files.json) identify the resulting source.

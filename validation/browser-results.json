@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-11T16:06:36.040Z",
+  "checkedAt": "2026-10-11T16:13:09.437Z",
   "basePath": "/bitcoin-gui-evidence/",
   "outcomes": [
     {
@@ -7,7 +7,7 @@
       "status": "passed"
     },
     {
-      "name": "Acceptance summary separates 48 implementation gaps, 125 accepted and 9 proof gaps",
+      "name": "Acceptance summary separates 48 implementation gaps, 126 accepted and 8 proof gaps",
       "status": "passed"
     },
     {
@@ -55,6 +55,10 @@
       "status": "passed"
     },
     {
+      "name": "Coin viewer screenshot acceptance is explicit, opens the approved image and preserves manual review",
+      "status": "passed"
+    },
+    {
       "name": "Full-parity groups and subfeatures default to merge without assigning partial or missing items",
       "status": "passed"
     },
@@ -99,7 +103,7 @@
       "status": "passed"
     },
     {
-      "name": "Full evidence accepts targeted captures or reviewed hardware/platform QML with tests/hooks",
+      "name": "Full evidence accepts targeted captures, tested integrations or an explicitly accepted screenshot",
       "status": "passed"
     },
     {

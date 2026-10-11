@@ -1,5 +1,5 @@
 {
-  "baseRevision": "51091d3cc7a0be473c42161db1968b09cfe21028",
+  "baseRevision": "5f2fcd65551dfe5ee11ba3120ce1d37b2b2ec528",
   "checks": [
     {
       "command": "./ci/lint.py",
@@ -20,7 +20,7 @@
       "stderr": "/bin/sh: 1: ./ci/test_run_all.sh: not found\n"
     }
   ],
-  "scope": "Static website criterion removal and saved-review migration only. No application source, tests, binary or archived evidence changed. Native rebuild, sanitizer and IPC-enabled lifecycle validation are blocked by absent CI entry scripts.",
+  "scope": "Static website acceptance of an existing screenshot. Application source, binary, tests and archived evidence unchanged; no new application run. Native rebuild, sanitizer and IPC lifecycle validation blocked by absent CI scripts.",
   "branchAfterLint": "main",
-  "revisionAfterLint": "51091d3cc7a0be473c42161db1968b09cfe21028"
+  "revisionAfterLint": "5f2fcd65551dfe5ee11ba3120ce1d37b2b2ec528"
 }

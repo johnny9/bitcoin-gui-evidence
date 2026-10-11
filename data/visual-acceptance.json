@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-11",
+  "sourceRevision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+  "snapshotCatalogId": "b4b1026b74ad8bf0a1628c9889b82193d33d210c3aa0170e94783f371fe15c0b",
+  "criteria": {
+    "F12.S04": {
+      "basis": "reviewed-screenshot",
+      "decision": "accepted",
+      "capture": "media/qml/qml_additional/019-wallet-coin-locked.png",
+      "sha256": "fe310644c0d71567b9bc609cd50f141c9643c145865da8c699a7113fb2af0ee1",
+      "reason": "The reviewer accepted the existing standalone coin-viewer screenshot as sufficient evidence of the coin-viewing and comparison outcome. It shows coins with amounts, addresses, labels and dates, plus sorting and grouping controls, outside the send flow.",
+      "limits": "Exact confirmation counts remain absent. Under the agreed main-goal standard, this difference does not block acceptance. This records a visual acceptance decision; no new automated test or capture was required."
+    }
+  }
+}
