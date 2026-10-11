@@ -1,0 +1,26 @@
+{
+  "baseRevision": "e680e15eaff28c6ba5b3ee91c4cf6e4518fd3144",
+  "checks": [
+    {
+      "command": "./ci/lint.py",
+      "exitCode": 127,
+      "stdout": "",
+      "stderr": "/bin/sh: 1: ./ci/lint.py: not found\n"
+    },
+    {
+      "command": "FILE_ENV=./ci/test/00_setup_env_native_tidy.sh ./ci/test_run_all.sh",
+      "exitCode": 127,
+      "stdout": "",
+      "stderr": "/bin/sh: 1: ./ci/test_run_all.sh: not found\n"
+    },
+    {
+      "command": "FILE_ENV=./ci/test/00_setup_env_native_asan.sh ./ci/test_run_all.sh",
+      "exitCode": 127,
+      "stdout": "",
+      "stderr": "/bin/sh: 1: ./ci/test_run_all.sh: not found\n"
+    }
+  ],
+  "scope": "Static review website and evidence scripts. Pinned GUI binary unchanged; two targeted regtest scenarios were run. Native application rebuild, sanitizer and IPC lifecycle coverage are not claimed.",
+  "branchAfterLint": "main",
+  "revisionAfterLint": "e680e15eaff28c6ba5b3ee91c4cf6e4518fd3144"
+}

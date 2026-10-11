@@ -1,0 +1,22 @@
+[
+  {
+    "path": "media/qml/qml_evidence_pending_balance/001-pending-mempool-payment-and-wallet-funds.png",
+    "caption": "pending-mempool-payment-and-wallet-funds",
+    "utc": "2026-10-11T14:49:24.666722+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "6129a939f715ba1f34f0e732f60653c3ffb7898d954907250a888003f747dd3d",
+    "test": "qml_evidence_pending_balance",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_evidence_pending_balance/002-payment-confirmed-pending-amount-cleared.png",
+    "caption": "payment-confirmed-pending-amount-cleared",
+    "utc": "2026-10-11T14:49:25.264770+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "b0db6e57f3b751f200e4ff31cafeeb84e261b056054f6ec37d91c25557cf773d",
+    "test": "qml_evidence_pending_balance",
+    "kind": "application-screenshot"
+  }
+]

@@ -1,0 +1,26 @@
+Fontconfig warning: "/etc/fonts/fonts.conf", line 5: unknown element "description"
+Fontconfig warning: "/etc/fonts/conf.d/10-hinting-slight.conf", line 4: unknown element "description"
+Fontconfig warning: "/etc/fonts/conf.d/10-scale-bitmap-fonts.conf", line 4: unknown element "description"
+Fontconfig warning: "/etc/fonts/conf.d/10-sub-pixel-rgb.conf", line 4: unknown element "description"
+Fontconfig warning: "/etc/fonts/conf.d/10-yes-antialias.conf", line 4: unknown element "description"
+Fontconfig warning: "/etc/fonts/conf.d/11-lcdfilter-default.conf", line 4: unknown element "description"
+Fontconfig warning: "/etc/fonts/conf.d/20-unhint-small-vera.conf", line 4: unknown element "description"
+Fontconfig warning: "/etc/fonts/conf.d/30-metric-aliases.conf", line 4: unknown element "description"
+Fontconfig warning: "/etc/fonts/conf.d/40-nonlatin.conf", line 4: unknown element "description"
+Fontconfig warning: "/etc/fonts/conf.d/45-generic.conf", line 4: unknown element "description"
+Fontconfig warning: "/etc/fonts/conf.d/45-latin.conf", line 4: unknown element "description"
+Fontconfig warning: "/etc/fonts/conf.d/48-spacing.conf", line 4: unknown element "description"
+Fontconfig warning: "/etc/fonts/conf.d/49-sansserif.conf", line 4: unknown element "description"
+Fontconfig warning: "/etc/fonts/conf.d/50-user.conf", line 4: unknown element "description"
+Fontconfig warning: "/etc/fonts/conf.d/51-local.conf", line 4: unknown element "description"
+Fontconfig warning: "/etc/fonts/conf.d/60-generic.conf", line 4: unknown element "description"
+Fontconfig warning: "/etc/fonts/conf.d/60-latin.conf", line 4: unknown element "description"
+Fontconfig warning: "/etc/fonts/conf.d/65-nonlatin.conf", line 4: unknown element "description"
+Fontconfig warning: "/etc/fonts/conf.d/70-no-bitmaps-except-emoji.conf", line 4: unknown element "description"
+qrc:/qml/controls/Theme.qml:13:5: QML AppSettings: The Settings type from Qt.labs.settings is deprecated and will be removed in a future release. Please use the one from QtCore instead.
+qrc:/qml/pages/node/Peers.qml:74:5: QML AppSettings: The Settings type from Qt.labs.settings is deprecated and will be removed in a future release. Please use the one from QtCore instead.
+qrc:/qml/components/BlockClock.qml:58:5: QML AppSettings: The Settings type from Qt.labs.settings is deprecated and will be removed in a future release. Please use the one from QtCore instead.
+qrc:/qml/pages/wallet/ActivityListPage.qml:162:5: QML AppSettings: The Settings type from Qt.labs.settings is deprecated and will be removed in a future release. Please use the one from QtCore instead.
+qrc:/qml/pages/MainWindow.qml:119:5: QML AppSettings: The Settings type from Qt.labs.settings is deprecated and will be removed in a future release. Please use the one from QtCore instead.
+Running initialization in thread
+TestBridge: listening on /tmp/evidence_pending_balance_dj4wmybn/test_bridge.sock

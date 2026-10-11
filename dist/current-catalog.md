@@ -65,7 +65,7 @@
 
 | Criterion | User outcome | GUI-QML implementation |
 | --- | --- | --- |
-| F07.S01 | View available, pending, immature mining, and total balances. | parity |
+| F07.S01 | View available, pending, immature mining, and total balances. | partial |
 | F07.S02 | Review recent wallet activity. | parity |
 | F07.S03 | Find a recent transaction in the full transaction history. | parity |
 | F07.S04 | Know when wallet information may be out of date. | parity |

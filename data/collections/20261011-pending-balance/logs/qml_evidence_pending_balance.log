@@ -1,0 +1,13 @@
+transaction-in-mempool: passed
+funds-in-distinct-states: passed
+pending-label-and-value: passed
+unpaid-request-excluded: passed
+unconfirmed-explanation: passed
+immature-explanation: passed
+available-balance: passed
+pending-follows-activity-filter: passed
+filter-preserves-wallet-balance: passed
+confirmed-wallet-funds: passed
+transaction-left-mempool: passed
+confirmed-payment-explanation: passed
+confirmed-pending-hidden: passed

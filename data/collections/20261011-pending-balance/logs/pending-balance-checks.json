@@ -1,0 +1,148 @@
+[
+  {
+    "id": "transaction-in-mempool",
+    "features": [
+      "F07.S01"
+    ],
+    "description": "The pending payment is in the node mempool.",
+    "actual": true,
+    "expected": true,
+    "status": "passed"
+  },
+  {
+    "id": "funds-in-distinct-states",
+    "features": [
+      "F07.S01"
+    ],
+    "description": "The selected wallet has available, unconfirmed, and immature funds.",
+    "actual": [
+      1.5,
+      0.125,
+      50.0
+    ],
+    "expected": [
+      1.5,
+      0.125,
+      50
+    ],
+    "status": "passed"
+  },
+  {
+    "id": "pending-label-and-value",
+    "features": [
+      "F07.S01"
+    ],
+    "description": "The visible Pending subtotal shows the 0.125 BTC mempool payment.",
+    "actual": "+0.12500000 \u20bf",
+    "expected": "+0.12500000 \u20bf",
+    "status": "passed"
+  },
+  {
+    "id": "unpaid-request-excluded",
+    "features": [
+      "F07.S01"
+    ],
+    "description": "The visible 0.75 BTC unpaid request does not increase the Pending subtotal.",
+    "actual": 12500000,
+    "expected": 12500000,
+    "status": "passed"
+  },
+  {
+    "id": "unconfirmed-explanation",
+    "features": [
+      "F07.S01"
+    ],
+    "description": "The payment row tells the user it is unconfirmed.",
+    "actual": true,
+    "expected": true,
+    "status": "passed"
+  },
+  {
+    "id": "immature-explanation",
+    "features": [
+      "F07.S01"
+    ],
+    "description": "The mined funds show how long they remain immature.",
+    "actual": true,
+    "expected": true,
+    "status": "passed"
+  },
+  {
+    "id": "available-balance",
+    "features": [
+      "F07.S01"
+    ],
+    "description": "The wallet balance excludes pending and immature funds.",
+    "actual": 150000000,
+    "expected": 150000000,
+    "status": "passed"
+  },
+  {
+    "id": "pending-follows-activity-filter",
+    "features": [
+      "F07.S01"
+    ],
+    "description": "The Pending subtotal follows visible activity and is hidden when only an unpaid request remains.",
+    "actual": false,
+    "expected": false,
+    "status": "passed"
+  },
+  {
+    "id": "filter-preserves-wallet-balance",
+    "features": [
+      "F07.S01"
+    ],
+    "description": "Filtering activity leaves the wallet balance unchanged.",
+    "actual": 150000000,
+    "expected": 150000000,
+    "status": "passed"
+  },
+  {
+    "id": "confirmed-wallet-funds",
+    "features": [
+      "F07.S01"
+    ],
+    "description": "Confirmation moves the payment into the available wallet funds.",
+    "actual": [
+      1.625,
+      0.0,
+      50.0
+    ],
+    "expected": [
+      1.625,
+      0,
+      50
+    ],
+    "status": "passed"
+  },
+  {
+    "id": "transaction-left-mempool",
+    "features": [
+      "F07.S01"
+    ],
+    "description": "The confirmed payment is no longer in the mempool.",
+    "actual": false,
+    "expected": false,
+    "status": "passed"
+  },
+  {
+    "id": "confirmed-payment-explanation",
+    "features": [
+      "F07.S01"
+    ],
+    "description": "The payment row changes from Unconfirmed to 1 confirmation.",
+    "actual": true,
+    "expected": true,
+    "status": "passed"
+  },
+  {
+    "id": "confirmed-pending-hidden",
+    "features": [
+      "F07.S01"
+    ],
+    "description": "The Pending amount disappears after the payment confirms; the unpaid request stays.",
+    "actual": false,
+    "expected": false,
+    "status": "passed"
+  }
+]

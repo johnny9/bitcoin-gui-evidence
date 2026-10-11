@@ -8,25 +8,26 @@
   "retainedDistinctions": 8,
   "originalCapturesVerified": 116,
   "rerunCapturesVerified": 44,
-  "collectionCapturesVerified": 98,
+  "collectionCapturesVerified": 101,
   "widgetsCriteriaWithoutCaptures": 9,
   "historicalWidgetsCriteriaWithoutCaptures": 11,
-  "localLinkTargets": 259,
-  "unresolvedFailures": 1,
+  "localLinkTargets": 284,
+  "unresolvedFailures": 2,
   "catalogId": "b4b1026b74ad8bf0a1628c9889b82193d33d210c3aa0170e94783f371fe15c0b",
   "groupParity": {
-    "parity": 19,
-    "partial": 12,
+    "parity": 18,
+    "partial": 13,
     "not-implemented": 3
   },
   "subfeatureParity": {
-    "parity": 136,
+    "parity": 135,
     "not-implemented": 35,
-    "partial": 12
+    "partial": 13
   },
-  "baseRevision": "148aed7778e93d05a24f796edd361cad7dff4abf",
-  "unchangedEvidenceFiles": 1681,
-  "originalCriteriaUnchanged": 203,
-  "functionalResultsUnchanged": true,
-  "deterministicRebuild": true
+  "baseRevision": "e680e15eaff28c6ba5b3ee91c4cf6e4518fd3144",
+  "unchangedPriorEvidenceFiles": 1680,
+  "newFunctionalScripts": 2,
+  "newSelectedCaptures": 3,
+  "pendingAssertionsPassed": 13,
+  "maturityRegression": "Reproduced twice on the unchanged binary; combined balance criterion remains partial"
 }

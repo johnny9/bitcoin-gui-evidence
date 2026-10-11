@@ -1336,6 +1336,13 @@
       "checks": [
         "Export an incomplete result from local and external-signing workflows, verify that existing signatures and outputs are preserved, and resume signing elsewhere."
       ]
+    },
+    "F07.S01": {
+      "reviewMode": "equivalent",
+      "checks": [
+        "Verified: a real incoming mempool payment has a visible Pending amount; unpaid requests are excluded, and confirmation moves the payment into the available balance.",
+        "Remaining failure: the wallet balance must update when a mining reward matures. The recorded regression leaves the display at 1.625 BTC while RPC reports 51.625 BTC."
+      ]
     }
   }
 }

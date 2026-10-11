@@ -1,0 +1,157 @@
+{
+  "id": "20261011-pending-balance",
+  "date": "2026-10-11",
+  "application": "qml",
+  "title": "Pending payments verified; mining-maturity refresh regression",
+  "snapshotCatalogId": "b4b1026b74ad8bf0a1628c9889b82193d33d210c3aa0170e94783f371fe15c0b",
+  "sourceRevision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+  "binarySha256": "a8215c7e45242fdf0e740339733696ec832e362f8306bfbe3bac95dd6bb4fb4c",
+  "initialCriteriaWithoutCaptures": 0,
+  "newlyCapturedCriteria": 0,
+  "remainingCriteriaWithoutCaptures": 0,
+  "assertions": 28,
+  "failedAssertions": 1,
+  "criteria": {
+    "F07.S01": {
+      "status": "Partial / limited evidence",
+      "detail": "**Verified: pending payments.** A real 0.125 BTC wallet payment in the mempool appears under Pending with its amount. An unpaid 0.75 BTC request is excluded from the subtotal. After confirmation, the payment leaves Pending and the available balance updates from 1.5 to 1.625 BTC. Screenshots and 13 passing checks verify this behavior. **Separate balance failure:** after a 50 BTC mining reward matures, RPC reports 51.625 BTC available but the wallet header stays at 1.625 BTC. This was reproduced twice. Pending is verified; the combined balance criterion remains partial because of that observed refresh failure. The subtotal follows activity filters, and the UI uses individual maturity explanations rather than a Widgets-style four-line balance summary.",
+      "checks": [
+        "pending-balance-transaction-in-mempool",
+        "pending-balance-funds-in-distinct-states",
+        "pending-balance-pending-label-and-value",
+        "pending-balance-unpaid-request-excluded",
+        "pending-balance-unconfirmed-explanation",
+        "pending-balance-immature-explanation",
+        "pending-balance-available-balance",
+        "pending-balance-pending-follows-activity-filter",
+        "pending-balance-filter-preserves-wallet-balance",
+        "pending-balance-confirmed-wallet-funds",
+        "pending-balance-transaction-left-mempool",
+        "pending-balance-confirmed-payment-explanation",
+        "pending-balance-confirmed-pending-hidden",
+        "maturity-refresh-transaction-in-mempool",
+        "maturity-refresh-funds-in-distinct-states",
+        "maturity-refresh-pending-label-and-value",
+        "maturity-refresh-unpaid-request-excluded",
+        "maturity-refresh-unconfirmed-explanation",
+        "maturity-refresh-immature-explanation",
+        "maturity-refresh-available-balance",
+        "maturity-refresh-pending-follows-activity-filter",
+        "maturity-refresh-filter-preserves-wallet-balance",
+        "maturity-refresh-confirmed-wallet-funds",
+        "maturity-refresh-transaction-left-mempool",
+        "maturity-refresh-confirmed-payment-explanation",
+        "maturity-refresh-confirmed-pending-hidden",
+        "maturity-refresh-matured-wallet-funds",
+        "maturity-refresh-matured-balance-display"
+      ],
+      "hasFailure": true,
+      "testGap": "Fix the mining-maturity balance refresh and rerun qml_evidence_maturity_refresh. Pending payment evidence is complete for the recorded incoming-payment scenario.",
+      "preferNewCaptures": true
+    }
+  },
+  "selectedCaptures": [
+    {
+      "path": "collections/20261011-pending-balance/media/qml/qml_evidence_pending_balance/001-pending-mempool-payment-and-wallet-funds.png",
+      "caption": "Verified pending payment: +0.125 BTC in the mempool; the 0.75 BTC unpaid request is excluded.",
+      "utc": "2026-10-11T14:49:24.666722+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "6129a939f715ba1f34f0e732f60653c3ffb7898d954907250a888003f747dd3d",
+      "test": "qml_evidence_pending_balance",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F07.S01"
+      ]
+    },
+    {
+      "path": "collections/20261011-pending-balance/media/qml/qml_evidence_pending_balance/002-payment-confirmed-pending-amount-cleared.png",
+      "caption": "Verified confirmation: the payment leaves Pending and the wallet balance becomes 1.625 BTC.",
+      "utc": "2026-10-11T14:49:25.264770+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "b0db6e57f3b751f200e4ff31cafeeb84e261b056054f6ec37d91c25557cf773d",
+      "test": "qml_evidence_pending_balance",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F07.S01"
+      ]
+    },
+    {
+      "path": "collections/20261011-pending-balance/media/qml/qml_evidence_maturity_refresh/003-matured-reward-wallet-balance-still-stale.png",
+      "caption": "Separate failure: the reward has matured, but the header still shows 1.625 BTC instead of 51.625 BTC.",
+      "utc": "2026-10-11T14:50:16.415947+00:00",
+      "width": 1180,
+      "height": 1000,
+      "sha256": "47dc625796a83145ec64bdc600c0d1d6c1ea1231303c6129cb8bd52609e8ec5e",
+      "test": "qml_evidence_maturity_refresh",
+      "kind": "application-screenshot",
+      "application": "qml",
+      "features": [
+        "F07.S01"
+      ]
+    }
+  ],
+  "functional": [
+    {
+      "test": "qml_evidence_pending_balance",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 7.31,
+      "captures": 2,
+      "log": "collections/20261011-pending-balance/logs/qml_evidence_pending_balance.log",
+      "date": "2026-10-11",
+      "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+    },
+    {
+      "test": "qml_evidence_maturity_refresh",
+      "status": "failed",
+      "exit_code": 1,
+      "seconds": 30.68,
+      "captures": 3,
+      "log": "collections/20261011-pending-balance/logs/qml_evidence_maturity_refresh.log",
+      "date": "2026-10-11",
+      "source_revision": "a91f4b4774f25de061fe1a7c132a91ddde117fca"
+    }
+  ],
+  "entryScript": "scripts/qml_evidence_pending_balance.py",
+  "failureSummary": "mining-maturity balance refresh failed",
+  "verifiedOutcomes": [
+    "Incoming mempool payment and visible pending amount",
+    "Unpaid requests excluded from pending funds",
+    "Confirmed payment moves into available balance"
+  ],
+  "files": {
+    "logs/checks.json": "f2281ee45f3d83c2967ae171f6e8f3f57c4a299ab78e2d98b0184c3673c1a0a1",
+    "logs/initial-maturity-refresh.log": "fc1b0bada608400828eebcb8d369bb5deb2eefe9cce9cd335448b6ccbe2bc73b",
+    "logs/initial-maturity-wallet-state.json": "47377882e403bd31ffd9c41519a4e456c794d5f97f6b0a8471f2c483ec923be9",
+    "logs/maturity-refresh-checks.json": "354109ea5386ac4d43760b31a3ffe0c88b420eb03b74cd6e222bb5496836f797",
+    "logs/maturity-wallet-state.json": "f8393824486ee839807c2d9dffc56b593336c5f11c05596ed1cf79da78ccf22b",
+    "logs/pending-balance-checks.json": "5ea9e175c917918a45f9d34100c27bc9d00b36ef7f9b9ee44ce71ae5032538ab",
+    "logs/pending-wallet-state.json": "d133b57d82db69ce464b11713d3f94260988c7eda71a48c7b7d49c063e651143",
+    "logs/qml_evidence_maturity_refresh.app.stderr": "f570ef676714a7b3eecae755e2afcc47b53e4cfcfdfae0821a733f05b76fea4b",
+    "logs/qml_evidence_maturity_refresh.app.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/qml_evidence_maturity_refresh.bridge.jsonl": "436a51ee0f4c8fb2fcc0fbd3346ede7400c61ccc543732ed4ba0b72a4b31a771",
+    "logs/qml_evidence_maturity_refresh.log": "e712955efef0a2ec1029d421fb12e51eae82286c78fc01d96183b42356390aee",
+    "logs/qml_evidence_pending_balance.app.stderr": "d48fcd80fdbc6ccd249bb2a5fe4d2106b0e6ba75049dca68fc29abf8b0fe8efd",
+    "logs/qml_evidence_pending_balance.app.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/qml_evidence_pending_balance.bridge.jsonl": "95d60e6e9b42ba2f338ffedc65dfada00222b62e851669243e876e917da8289e",
+    "logs/qml_evidence_pending_balance.log": "d77cb73f44de080f30cfc2479a551e7fb3b1cdde785133551682d99cd6626de6",
+    "media/qml/qml_evidence_maturity_refresh/001-pending-mempool-payment-and-wallet-funds.png": "13134b2214d4aba578b297fefd1edfbae9a1bf66a99fdcba45b8c06db39cb798",
+    "media/qml/qml_evidence_maturity_refresh/002-payment-confirmed-pending-amount-cleared.png": "8337d46d727d52330796c262fb11e3c8a7bec1a85be376b54bb29a1a99570861",
+    "media/qml/qml_evidence_maturity_refresh/003-matured-reward-wallet-balance-still-stale.png": "47dc625796a83145ec64bdc600c0d1d6c1ea1231303c6129cb8bd52609e8ec5e",
+    "media/qml/qml_evidence_maturity_refresh/captures.json": "d79d6fe0fec305aaab75538909ce485b3e6e2474fde11661eba824c351a70604",
+    "media/qml/qml_evidence_pending_balance/001-pending-mempool-payment-and-wallet-funds.png": "6129a939f715ba1f34f0e732f60653c3ffb7898d954907250a888003f747dd3d",
+    "media/qml/qml_evidence_pending_balance/002-payment-confirmed-pending-amount-cleared.png": "b0db6e57f3b751f200e4ff31cafeeb84e261b056054f6ec37d91c25557cf773d",
+    "media/qml/qml_evidence_pending_balance/captures.json": "4c190242b5e28521d3a15956a8fdc2f0afc885ea5879f35d17d547a91faecb64",
+    "native-ci.json": "fe44db5a7fd81907c3f02690a971d88c1f22fe1844fdd84d120fe7ae29c0a901",
+    "report.md": "35fc0addc839cee841845c57c5915306253fe74f26219f3bb2cae9eab161d8c3",
+    "scripts/evidence_helpers.py": "f6c4907536ad2c4ecdaa4b6e6782f5bcfb100b1341f89471b36039892f54a7c4",
+    "scripts/qml_capture_test.py": "8447eb4a2e3b4f5562761e9be1b832a349ca648650b11e04f1153a10169cbf29",
+    "scripts/qml_evidence_maturity_refresh.py": "9d2d79bfc3ad83046b6d77c5d90670cade7f4ad057d2e26a95bf509731c9f094",
+    "scripts/qml_evidence_pending_balance.py": "d1116e552df3b328730c2f77e329b13120945d06d50da4f3ab3a43df4e56aba8",
+    "validation.json": "4eaac0641d11fbbca5cbf72f81967e92bf4533e4c61d22e3b7078896a7672970"
+  }
+}

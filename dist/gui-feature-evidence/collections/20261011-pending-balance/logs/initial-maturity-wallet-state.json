@@ -1,0 +1,25 @@
+{
+  "incomingTransaction": "93bbb214ffd0f59bc565905ca85991196d320bfb2c9e238301e4cb5c53aa825d",
+  "minedTransaction": "407c0023aee576bbfe8d09a76d30ad83d4cca4ba91d400e9d35ebe91fc5e4905",
+  "mempoolBefore": [
+    "93bbb214ffd0f59bc565905ca85991196d320bfb2c9e238301e4cb5c53aa825d"
+  ],
+  "beforeConfirmation": {
+    "trusted": 1.5,
+    "untrusted_pending": 0.125,
+    "immature": 50.0,
+    "nonmempool": 0.0
+  },
+  "afterConfirmation": {
+    "trusted": 1.625,
+    "untrusted_pending": 0.0,
+    "immature": 50.0,
+    "nonmempool": 0.0
+  },
+  "afterMaturity": {
+    "trusted": 51.625,
+    "untrusted_pending": 0.0,
+    "immature": 0.0,
+    "nonmempool": 0.0
+  }
+}

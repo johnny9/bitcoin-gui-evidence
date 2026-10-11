@@ -1,0 +1,25 @@
+{
+  "applicationRevision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+  "bitcoinRevision": "dc282ff31d1cc97507530a541d9cec8a8f6a6ef4",
+  "applicationSha256": "a8215c7e45242fdf0e740339733696ec832e362f8306bfbe3bac95dd6bb4fb4c",
+  "fixtureBitcoindSha256": "0c2667db4e83a12f89e222aa906bbf28b4d45616f7599e83138253ee52046352",
+  "testedSiteBaseRevision": "e680e15eaff28c6ba5b3ee91c4cf6e4518fd3144",
+  "environment": "Linux X11/Xvfb/Openbox, Qt 6.8.3, software renderer, isolated regtest",
+  "binaryChanged": false,
+  "applicationExits": [
+    {
+      "test": "qml_evidence_pending_balance",
+      "utc": "2026-10-11T14:49:25.581707+00:00",
+      "applicationExitCode": 0
+    },
+    {
+      "test": "qml_evidence_maturity_refresh",
+      "utc": "2026-10-11T14:50:16.586280+00:00",
+      "applicationExitCode": 0
+    }
+  ],
+  "pendingChecksPassed": 13,
+  "maturityRefresh": "reproduced twice; RPC 51.625 BTC, wallet header 1.625 BTC after 20 seconds",
+  "ipcEnabled": false,
+  "sanitizerCoverage": false
+}

@@ -1,5 +1,18 @@
 # Static site validation
 
+## October 11, 2026 — verify pending payments
+
+Validated changes based on site revision `e680e15eaff28c6ba5b3ee91c4cf6e4518fd3144`; [tested file hashes](validation/tested-files.json) identify the resulting source. The pinned application and binary are unchanged.
+
+- **Pending payments are verified:** 13 targeted checks pass. An incoming 0.125 BTC wallet transaction is in the mempool and visible under Pending; an unpaid 0.75 BTC request is excluded from the subtotal. Confirmation removes the pending amount and changes the wallet balance from 1.5 to 1.625 BTC. Two original application screenshots show those states. The new pending screenshot leads the F07.S01 comparison; its earlier capture remains accessible.
+- Extending the fixture reveals a **separate mining-maturity refresh failure**, reproduced twice. RPC reports 51.625 BTC available after maturity, while the wallet header remains at 1.625 BTC for at least 20 seconds. A third selected screenshot, failing regression, RPC state and trace retain this result. F07.S01 and the overview group are partial because of this observed failure; the pending capability is explicitly verified. The Widgets-style balance layout is not required. [Evidence, scripts, modules and reproduction](data/collections/20261011-pending-balance/report.md).
+- Both GUI processes exited 0; the pending test exited 0 and the maturity regression exited 1. The collection records 28 assertions: 27 pass and one fails; the maturity test repeats the pending assertions before testing maturity. Stderr was inspected and retains Fontconfig and Qt settings warnings. The latest combined functional record is 40 passing scripts and two failing regressions. Other application scripts were not rerun.
+- **61 browser checks pass** under the GitHub Pages project path, including pending evidence links and primary image, separate failure visibility, all 221 capture decodes, historical collection preservation, filters, saved-review migration, keyboard use and mobile layouts. Application frames and the desktop/mobile evidence pages were visually inspected. Build, integrity, Python parsing, JavaScript execution/syntax and whitespace checks pass. The builder retains superseded collection transitions and shows each new collection's actual date and failure description.
+- The catalog remains at 183 criteria: 135 parity, 13 partial and 35 absent. That is 48 implementation gaps, 114 automatic Accepted defaults and 21 parity proof gaps. Prior evidence files, original screenshot bytes, snapshot identity and personal-review compatibility are preserved. The earlier statement that Pending lacked a visible label was incorrect and is not published.
+- Native lint, clang-tidy and ASan commands were attempted from this standalone website checkout and returned 127 because the CI entry scripts are absent. [Command results](validation/native-ci.json) record the unchanged branch/revision after lint. No native rebuild, sanitizer or IPC-enabled lifecycle pass is claimed; the reused binary has IPC disabled. Initial capture-script development fixed a wallet-notification wait, duplicate heading lookup and unit-symbol expectation. The application maturity failure remains recorded.
+
+[Browser outcomes](validation/browser-results.json) · [Integrity results](validation/evidence-integrity.json). Website QA screenshots are retained locally in `.validation/pending-balance/`.
+
 ## October 11, 2026 — implement the approved duplicate audit
 
 Validated the final website changes based on revision `148aed7778e93d05a24f796edd361cad7dff4abf`; [tested file hashes](validation/tested-files.json) identify the resulting source.

@@ -92,6 +92,12 @@ def main():
     assert current['catalogRevision'] == data['catalogRevision']
     assert current['criteria'] == {c['id']:c['implementation'] for c in criteria}
     assert current['groups'] == {g['id']:g['implementation'] for g in data['groups']}
+    # Pending payments are proved; the separate maturity refresh failure remains.
+    assert by_id['F07.S01']['implementation']['status'] == 'partial'
+    assert implementation['groups']['F07']['status'] == 'partial'
+    assert by_id['F07.S01']['applications']['qml']['status'] == 'limited'
+    assert 'Verified: pending payments.' in by_id['F07.S01']['applications']['qml']['text']
+    assert by_id['F07.S01']['hasFailure']
     # Incomplete proof must not be mistaken for absent implementation.
     assert by_id['F04.S02']['implementation']['status'] == 'parity'
     assert by_id['F04.S02']['applications']['qml']['status'] == 'assertions'
@@ -117,7 +123,7 @@ def main():
     assert by_id['F01.S04']['implementation']['status'] == 'not-implemented'
     assert implementation['groups']['F25']['status'] == 'not-implemented'
     assert by_id['F25.S04']['implementation']['status'] == 'parity'
-    assert [c['id'] for c in criteria if c['hasFailure']] == ['F23.S01']
+    assert [c['id'] for c in criteria if c['hasFailure']] == ['F07.S01', 'F23.S01']
     assert by_id['F23.S01']['implementation']['status'] == 'partial'
     parser = Links()
     parser.feed((DIST / 'index.html').read_text())
@@ -149,6 +155,26 @@ def main():
         for filename, expected in collection['files'].items():
             assert hashlib.sha256((folder / filename).read_bytes()).hexdigest() == expected, filename
         checks = json.loads((folder / 'logs/checks.json').read_text())
+        if collection['id'] == '20261011-pending-balance':
+            assert len(checks) == collection['assertions'] == 28
+            assert [c['id'] for c in checks if c['status'] == 'failed'] == ['maturity-refresh-matured-balance-display']
+            assert all((c['actual'] == c['expected']) == (c['status'] == 'passed') for c in checks)
+            assert len([c for c in checks if c['test'] == 'qml_evidence_pending_balance']) == 13
+            assert Counter(r['status'] for r in collection['functional']) == {'passed': 1, 'failed': 1}
+            assert set(collection['criteria']) == {'F07.S01'}
+            assert len(collection['selectedCaptures']) == 3
+            state = json.loads((folder / 'logs/pending-wallet-state.json').read_text())
+            assert state['incomingTransaction'] in state['mempoolBefore']
+            assert state['beforeConfirmation']['untrusted_pending'] == 0.125
+            assert state['afterConfirmation']['trusted'] == 1.625
+            assert state['afterConfirmation']['untrusted_pending'] == 0
+            for result in collection['functional']:
+                captures = json.loads((folder / 'media/qml' / result['test'] / 'captures.json').read_text())
+                assert len(captures) == result['captures']
+                for capture in captures:
+                    assert hashlib.sha256((folder / capture['path']).read_bytes()).hexdigest() == capture['sha256']
+            collection_capture_count += len(collection['selectedCaptures'])
+            continue
         if app == 'qml':
             assert len(checks) == collection['assertions'] == 50
             assert [c['id'] for c in checks if c['status'] == 'failed'] == ['gui-accepts-768']
@@ -164,10 +190,19 @@ def main():
             assert len({c['testGroup'] for c in plan if c['testGroup']}) == 19
             for previous in history:
                 current = historical[previous['id']]
-                assert current['snapshotQmlEvidence'] == previous['before']
-                assert current['applications']['qml']['captures'] == previous['before']['captures'] + previous['captures']
-                assert current['hasFailure'] == previous['hasFailure']
-                full = current['applications']['qml']['status'] == 'assertions' and bool(current['applications']['qml']['captures']) and not current['hasFailure']
+                transitions = [r for r in current.get('collectionEvidenceHistory', []) if r['application'] == app]
+                if transitions:
+                    assert len(transitions) == 1
+                    assert transitions[0]['before'] == previous['before']
+                    reference = transitions[0]['after']
+                    has_failure = transitions[0]['hasFailure']
+                else:
+                    assert current['snapshotQmlEvidence'] == previous['before']
+                    reference = current['applications']['qml']
+                    has_failure = current['hasFailure']
+                assert reference['captures'] == previous['before']['captures'] + previous['captures']
+                assert has_failure == previous['hasFailure']
+                full = reference['status'] == 'assertions' and bool(reference['captures']) and not has_failure
                 assert full == previous['fullAfter']
                 for cid in previous['checks']:
                     assert any(c['id'] == cid and previous['id'] in c['features'] for c in checks)
@@ -234,7 +269,7 @@ def main():
         assert path.is_relative_to(DIST), target
         assert path.is_file(), target
         local_links.add(url.path)
-    assert len(data['captures']) == 120 + collection_capture_count == 218
+    assert len(data['captures']) == 120 + collection_capture_count == 221
     assert sum(not c['applications']['widgets']['captures'] for c in criteria) == 9
     assert sum(not c['applications']['widgets']['captures'] for c in historical.values()) == 11
     archived_captures = json.loads((original / 'selected-captures.json').read_text())
@@ -245,7 +280,7 @@ def main():
     for photo in archived_captures + data['captures']:
         asset = original / photo['path']
         assert hashlib.sha256(asset.read_bytes()).hexdigest() == photo['sha256'], photo['path']
-    assert Counter(r['status'] for r in data['functional']) == {'passed':39, 'failed':1}
+    assert Counter(r['status'] for r in data['functional']) == {'passed':40, 'failed':2}
     assert Counter(r['status'] for r in json.loads((original / 'logs/qml-functional-results.json').read_text())) == {'passed':33, 'failed':1}
     rerun_result = next(r for r in data['functional'] if r['test'] == 'qml_test_send_create')
     assert rerun_result['previousResult']['status'] == 'failed'
@@ -257,7 +292,7 @@ def main():
         assert historical[sid]['applications']['qml']['captures']
         assert all(p.startswith('reruns/20261010-wallet-rbf/') for p in historical[sid]['applications']['qml']['captures'])
         assert not historical[sid]['hasFailure']
-    assert data['summary']['qml_functional'] == {'passed':39, 'failed':1}
+    assert data['summary']['qml_functional'] == {'passed':40, 'failed':2}
     assert data['summary']['criteria_statuses']['qml']['Automated evidence collected'] == 114
     assert data['summary']['criteria_statuses']['qml']['Partial / limited evidence'] == 35
     assert sum(data['summary']['criteria_statuses']['qml'].values()) == 183
@@ -265,7 +300,7 @@ def main():
         ast.parse(script.read_text())
     report = {'status':'passed', 'groups':34, 'criteria':183, 'auditedOriginalCriteria':203, 'retiredCriteria':20, 'appliedFindings':22, 'retainedDistinctions':8, 'originalCapturesVerified':116,
               'rerunCapturesVerified':rerun_capture_count, 'collectionCapturesVerified':collection_capture_count,
-              'widgetsCriteriaWithoutCaptures':9, 'historicalWidgetsCriteriaWithoutCaptures':11, 'localLinkTargets':len(local_links), 'unresolvedFailures':1, 'catalogId':data['catalogId'],
+              'widgetsCriteriaWithoutCaptures':9, 'historicalWidgetsCriteriaWithoutCaptures':11, 'localLinkTargets':len(local_links), 'unresolvedFailures':2, 'catalogId':data['catalogId'],
               'groupParity': dict(Counter(g['implementation']['status'] for g in data['groups'])),
               'subfeatureParity': dict(Counter(c['implementation']['status'] for c in criteria))}
     print(json.dumps(report, indent=2))

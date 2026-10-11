@@ -1,0 +1,32 @@
+[
+  {
+    "path": "media/qml/qml_evidence_maturity_refresh/001-pending-mempool-payment-and-wallet-funds.png",
+    "caption": "pending-mempool-payment-and-wallet-funds",
+    "utc": "2026-10-11T14:49:52.294880+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "13134b2214d4aba578b297fefd1edfbae9a1bf66a99fdcba45b8c06db39cb798",
+    "test": "qml_evidence_maturity_refresh",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_evidence_maturity_refresh/002-payment-confirmed-pending-amount-cleared.png",
+    "caption": "payment-confirmed-pending-amount-cleared",
+    "utc": "2026-10-11T14:49:52.903558+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "8337d46d727d52330796c262fb11e3c8a7bec1a85be376b54bb29a1a99570861",
+    "test": "qml_evidence_maturity_refresh",
+    "kind": "application-screenshot"
+  },
+  {
+    "path": "media/qml/qml_evidence_maturity_refresh/003-matured-reward-wallet-balance-still-stale.png",
+    "caption": "matured-reward-wallet-balance-still-stale",
+    "utc": "2026-10-11T14:50:16.415947+00:00",
+    "width": 1180,
+    "height": 1000,
+    "sha256": "47dc625796a83145ec64bdc600c0d1d6c1ea1231303c6129cb8bd52609e8ec5e",
+    "test": "qml_evidence_maturity_refresh",
+    "kind": "application-screenshot"
+  }
+]

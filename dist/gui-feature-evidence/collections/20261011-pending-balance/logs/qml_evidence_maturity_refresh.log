@@ -1,0 +1,35 @@
+transaction-in-mempool: passed
+funds-in-distinct-states: passed
+pending-label-and-value: passed
+unpaid-request-excluded: passed
+unconfirmed-explanation: passed
+immature-explanation: passed
+available-balance: passed
+pending-follows-activity-filter: passed
+filter-preserves-wallet-balance: passed
+confirmed-wallet-funds: passed
+transaction-left-mempool: passed
+confirmed-payment-explanation: passed
+confirmed-pending-hidden: passed
+matured-wallet-funds: passed
+Traceback (most recent call last):
+  File "/work/qml-pending-20261011/scripts/qml_evidence_maturity_refresh.py", line 106, in <module>
+    g.wait_for_property('walletBadge', 'balanceSatoshi', 5162500000, timeout_ms=20000)
+  File "/work/qml-source/test/functional/qml_driver.py", line 229, in wait_for_property
+    raise QmlDriverError(
+qml_driver.QmlDriverError: wait_for_property('walletBadge', 'balanceSatoshi') timed out; last value: 162500000
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/work/qml-pending-20261011/scripts/qml_capture_test.py", line 123, in <module>
+    runpy.run_path(str(test_path), run_name='__main__')
+  File "<frozen runpy>", line 286, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/work/qml-pending-20261011/scripts/qml_evidence_maturity_refresh.py", line 109, in <module>
+    check('matured-balance-display', 'F07.S01', 'The visible wallet balance updates when a mining reward becomes available.',
+  File "/work/qml-pending-20261011/scripts/evidence_helpers.py", line 18, in check
+    assert actual == expected, item
+           ^^^^^^^^^^^^^^^^^^
+AssertionError: {'id': 'matured-balance-display', 'features': ['F07.S01'], 'description': 'The visible wallet balance updates when a mining reward becomes available.', 'actual': 162500000, 'expected': 5162500000, 'status': 'failed'}

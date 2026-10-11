@@ -264,7 +264,17 @@ def main():
                     continue
                 update = collection['criteria'][row['id']]
                 reference = row['applications'][app]
-                row['snapshotWidgetsEvidence' if app == 'widgets' else 'snapshotQmlEvidence'] = json.loads(json.dumps(reference))
+                snapshot_key = 'snapshotWidgetsEvidence' if app == 'widgets' else 'snapshotQmlEvidence'
+                if snapshot_key in row:
+                    # Preserve earlier collection transitions when a later run
+                    # supersedes the same criterion's evidence.
+                    row.setdefault('collectionEvidenceHistory', []).append({
+                        'application': app,
+                        'before': row[snapshot_key],
+                        'after': json.loads(json.dumps(reference)),
+                        'hasFailure': row['hasFailure'],
+                    })
+                row[snapshot_key] = json.loads(json.dumps(reference))
                 statuses = data['summary']['criteria_statuses'][app]
                 statuses[reference.get('currentOriginalStatus', reference['originalStatus'])] -= 1
                 statuses[update['status']] = statuses.get(update['status'], 0) + 1
@@ -276,14 +286,16 @@ def main():
                     reference['html'] += ' <strong>Remaining functional proof:</strong> ' + html(update['testGap'], document=evidence / 'README.md')
                 if app == 'qml':
                     row['hasFailure'] = update.get('hasFailure', row['hasFailure'])
-                reference['captures'].extend(p['path'] for p in collection['selectedCaptures'] if row['id'] in p['features'])
+                new_captures = [p['path'] for p in collection['selectedCaptures'] if row['id'] in p['features']]
+                reference['captures'] = (new_captures + reference['captures'] if update.get('preferNewCaptures')
+                                         else reference['captures'] + new_captures)
                 row['searchText'] = ' '.join([group['id'], row['id'], group['name'], row['intent']] + [a['text'] for a in row['applications'].values()]).lower()
                 updated = True
             if updated:
                 group['tests'].append({
                     'application': 'Qt Widgets' if app == 'widgets' else 'GUI-QML',
                     'testHtml': '<a href="' + prefix + base + collection.get('entryScript', 'scripts/capture_widgets.py') + '">Additional capture scenarios</a>',
-                    'resultHtml': '<a href="' + prefix + report + '">October 10: criterion-specific proof and limits</a>; <a href="' + prefix + base + 'logs/checks.json">targeted assertions</a>' + ('; cache-range regression failed' if app == 'qml' and any(c['hasFailure'] for c in group['criteria']) else ''),
+                    'resultHtml': '<a href="' + prefix + report + '">' + collection['date'] + ': criterion-specific proof and limits</a>; <a href="' + prefix + base + 'logs/checks.json">targeted assertions</a>' + ('; ' + collection.get('failureSummary', 'cache-range regression failed') if app == 'qml' and any(c['hasFailure'] for c in group['criteria']) else ''),
                     'failed': app == 'qml' and any(c['hasFailure'] for c in group['criteria']),
                 })
             group['captures'] = [p['path'] for p in photos if any(s.startswith(group['id'] + '.') for s in p['features'])]

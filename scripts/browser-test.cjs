@@ -61,21 +61,21 @@ async function main() {
     assert.equal(await page.$$eval('[data-group-link]',els=>els.length),34);
   });
   await page.screenshot({path:output+'/catalog-desktop.png',fullPage:false});
-  await check('Acceptance summary separates 47 implementation gaps, 114 accepted and 22 proof gaps',async()=>{
-    assert.deepEqual(await page.$$eval('.stats-grid .stat strong',els=>els.map(el=>el.textContent)),['183','47','114','22']);
-    assert.equal(await page.$eval('.nav-count',el=>el.textContent),'47');
+  await check('Acceptance summary separates 48 implementation gaps, 114 accepted and 21 proof gaps',async()=>{
+    assert.deepEqual(await page.$$eval('.stats-grid .stat strong',els=>els.map(el=>el.textContent)),['183','48','114','21']);
+    assert.equal(await page.$eval('.nav-count',el=>el.textContent),'48');
     assert.equal(await page.$eval('#review-progress-text',el=>el.textContent),'114 / 183');
     await page.click('[data-stat="implementation"]');
-    await page.waitForFunction(()=>document.querySelectorAll('.criterion-result').length===47);
+    await page.waitForFunction(()=>document.querySelectorAll('.criterion-result').length===48);
     const gaps=await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent));
-    assert.ok(gaps.includes('F15.S03'));assert.ok(gaps.includes('F03.S04'));assert.ok(!gaps.includes('F04.S02'));
+    assert.ok(gaps.includes('F07.S01'));assert.ok(gaps.includes('F15.S03'));assert.ok(gaps.includes('F03.S04'));assert.ok(!gaps.includes('F04.S02'));
     await page.reload({waitUntil:'networkidle0'});
     assert.equal(await page.$eval('[data-filter="parity"]',el=>el.value),'incomplete');
-    assert.equal(await page.$$eval('.criterion-result',els=>els.length),47);
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),48);
     await page.click('[data-stat="proof"]');
-    await page.waitForFunction(()=>document.querySelectorAll('.criterion-result').length===22);
+    await page.waitForFunction(()=>document.querySelectorAll('.criterion-result').length===21);
     const proof=await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent));
-    assert.ok(proof.includes('F21.S04'));assert.ok(!proof.includes('F15.S03'));
+    assert.ok(!proof.includes('F07.S01'));assert.ok(proof.includes('F21.S04'));assert.ok(!proof.includes('F15.S03'));
     await page.click('[data-stat="accepted"]');
     await page.waitForFunction(()=>document.querySelectorAll('.criterion-result').length===114);
     const accepted=await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent));
@@ -320,6 +320,12 @@ async function main() {
   await check('Applied scope changes retain proof limits, scenario checks and modules from both source groups',async()=>{
     const context=await browser.createBrowserContext();const proof=await context.newPage();currentPage=proof;
     proof.on('pageerror',error=>errors.push(error.message));
+    await proof.goto(base+'#feature/F07?item=F07.S01',{waitUntil:'networkidle0'});
+    assert.ok(await proof.$('[id="F07.S01"] .parity-badge[data-parity="partial"]'));
+    assert.equal(await proof.$eval('[data-quick-review="F07.S01"]',el=>el.getAttribute('aria-pressed')),'false');
+    assert.match(await proof.$eval('[id="F07.S01"] .parity-detail',el=>el.textContent),/Pending payments are implemented and verified/);
+    assert.match(await proof.$eval('[id="F07.S01"] .application-evidence[aria-label^="GUI-QML"]',el=>el.textContent),/Verified: pending payments\./);
+    await proof.screenshot({path:output+'/pending-balance-verified.png'});
     await proof.goto(base+'#feature/F26?item=F26.S03',{waitUntil:'networkidle0'});
     assert.equal(await proof.$eval('[data-quick-review="F26.S03"]',el=>el.getAttribute('aria-pressed')),'false');
     assert.ok(await proof.$('[id="F26.S03"] a[href="#feature/F24?tab=tests"]'));
@@ -384,16 +390,16 @@ async function main() {
 
   await check('Full-parity groups and subfeatures default to merge without assigning partial or missing items',async()=>{
     await value('[data-filter="requirement"]','merge');
-    assert.equal(await page.$$eval('.group-card',els=>els.length),19);
+    assert.equal(await page.$$eval('.group-card',els=>els.length),18);
     await page.click('[data-view="criteria"]');
     const ids=await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent));
-    assert.equal(ids.length,136);
+    assert.equal(ids.length,135);
     assert.ok(ids.includes('F03.S01')); // Full-parity subfeature inside a partial group.
     assert.ok(ids.includes('F25.S04')); // Full-parity fallback inside an absent group.
     assert.ok(!ids.includes('F01.S04')); // Missing subfeature inside a full-parity group.
     assert.ok(ids.includes('F09.S03')); // Corrected input proves the note outcome.
     await value('[data-filter="requirement"]','unassigned');
-    assert.equal(await page.$$eval('.criterion-result',els=>els.length),47);
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),48);
     await value('[data-filter="requirement"]','release');
     assert.equal(await page.$$eval('.criterion-result',els=>els.length),0);
     await value('[data-filter="requirement"]','not-needed');
@@ -431,16 +437,18 @@ async function main() {
   await go('#catalog?parity=parity');
   await check('Group parity filters the whole feature, independently of evidence',async()=>{
     assert.deepEqual(await page.$$eval('[data-filter="parity"] option',els=>els.map(el=>el.textContent)),['Any implementation','Partial or not implemented','Parity','Partial parity','Not implemented']);
-    assert.deepEqual(await page.$$eval('.group-card .group-card-top .criterion-id',els=>els.map(el=>el.textContent)),['F01','F02','F04','F06','F07','F08','F10','F11','F12','F16','F19','F20','F21','F22','F24','F26','F28','F30','F33']);
-    assert.equal(await page.$$eval('.group-card .parity-badge[data-parity="parity"]',els=>els.length),19);
+    assert.deepEqual(await page.$$eval('.group-card .group-card-top .criterion-id',els=>els.map(el=>el.textContent)),['F01','F02','F04','F06','F08','F10','F11','F12','F16','F19','F20','F21','F22','F24','F26','F28','F30','F33']);
+    assert.equal(await page.$$eval('.group-card .parity-badge[data-parity="parity"]',els=>els.length),18);
     assert.match(await page.$eval('#filter-scope',el=>el.textContent),/whole feature groups/);
     await page.reload({waitUntil:'networkidle0'});
     assert.equal(await page.$eval('[data-filter="parity"]',el=>el.value),'parity');
   });
   await check('Group filters assess the main goal even when secondary capabilities differ',async()=>{
     await value('[data-filter="parity"]','partial');
-    assert.equal(await page.$$eval('.group-card',els=>els.length),12);
+    assert.equal(await page.$$eval('.group-card',els=>els.length),13);
     assert.ok(await page.$('.group-card[href="#feature/F03"]'));
+    assert.ok(await page.$('.group-card[href="#feature/F07"]'));
+    assert.match(await page.$eval('.group-card[href="#feature/F07"] .implementation-summary',el=>el.textContent),/3 parity.*1 partial/);
     assert.equal(await page.$('.group-card[href="#feature/F01"]'),null);
     assert.ok(await page.$('.group-card[href="#feature/F34"]')); // RPC rescan exists; progress/cancel do not.
     await value('[data-filter="parity"]','not-implemented');
@@ -458,15 +466,15 @@ async function main() {
     assert.ok(absent.includes('F15.S03')); // Device verification now has its own scope.
     await value('[data-filter="parity"]','partial');
     const partial=await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent));
-    assert.equal(partial.length,12);
+    assert.equal(partial.length,13);
     assert.ok(!partial.includes('F15.S03'));
-    assert.ok(partial.includes('F13.S02'));
+    assert.ok(partial.includes('F13.S02'));assert.ok(partial.includes('F07.S01'));
     assert.ok(!partial.includes('F09.S03'));
     assert.ok(partial.includes('F14.S01')); // File import exists; compatibility still blocks some transactions.
     await value('[data-filter="parity"]','parity');
     const parity=await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent));
-    assert.equal(parity.length,136);
-    assert.ok(parity.includes('F04.S02')); // Migration now has direct runtime proof.
+    assert.equal(parity.length,135);
+    assert.ok(!parity.includes('F07.S01'));assert.ok(parity.includes('F04.S02')); // Migration now has direct runtime proof.
     assert.ok(parity.includes('F21.S04')); // Physical router not tested.
     for(const id of ['F02.S04','F08.S06','F13.S05','F14.S06','F28.S03'])assert.ok(parity.includes(id),id); // Equivalent reachable workflows.
     assert.equal(new Set([...parity,...partial,...absent]).size,183);
@@ -732,9 +740,9 @@ async function main() {
     assert.equal(await page.$$eval('.group-card',els=>els.length),0);
     await value('[data-filter="requirement"]','unassigned');
     await page.$eval('#catalog-search',el=>{el.value='';el.dispatchEvent(new Event('input',{bubbles:true}));});
-    assert.equal(await page.$$eval('.group-card',els=>els.length),15);
+    assert.equal(await page.$$eval('.group-card',els=>els.length),16);
     await page.click('[data-view="criteria"]');
-    assert.equal(await page.$$eval('.criterion-result',els=>els.length),47);
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),48);
   });
   await go('#catalog?requirement=merge&parity=parity&review=reviewed&view=criteria');
   await check('Requirement combines with parity and review filters and clearing filters restores everything',async()=>{
@@ -759,8 +767,8 @@ async function main() {
     assert.equal(await page.$('.finding-panel'),null);
     assert.ok(await page.$('a[href="gui-feature-evidence/logs/qml_test_send_create.log"]'));
     await go('#tests');
-    assert.equal(await page.$$eval('.functional-table tbody tr',els=>els.length),40);
-    assert.equal(await page.$$eval('.functional-table .failed-row',els=>els.length),1);
+    assert.equal(await page.$$eval('.functional-table tbody tr',els=>els.length),42);
+    assert.equal(await page.$$eval('.functional-table .failed-row',els=>els.length),2);
     const rerun = await page.$eval('.functional-table',el=>[...el.querySelectorAll('tr')].find(r=>r.textContent.includes('qml_test_send_create')).textContent);
     assert.match(rerun,/2026-10-10/);
     assert.match(rerun,/Corrected script/);
@@ -827,7 +835,7 @@ async function main() {
     assert.equal(proof.collection.newlyCapturedCriteria,58);
     assert.equal(proof.collection.assertions,44);
     assert.equal(proof.missing.length,9);
-    assert.equal(proof.total,218);
+    assert.equal(proof.total,221);
     assert.equal(proof.backup.applications.widgets.status,'assertions');
     assert.equal(proof.backup.snapshotWidgetsEvidence.captures.length,0);
     assert.ok(proof.backup.applications.widgets.captures.every(p=>p.startsWith('collections/20261010-widgets/')));
@@ -876,7 +884,36 @@ async function main() {
     await page.screenshot({path:output+'/qml-evidence-mobile.png'});
     await page.setViewport({width:1440,height:1000});
   });
-  await check('All 218 selected captures decode in the browser',async()=>{
+  await check('Pending payments have passing proof and a separate maturity failure remains visible',async()=>{
+    await go('#feature/F07?item=F07.S01');
+    const row='[id="F07.S01"]';
+    assert.match(await page.$eval(row,el=>el.textContent),/Verified: pending payments\./);
+    assert.match(await page.$eval(row,el=>el.textContent),/13 passing checks/);
+    assert.match(await page.$eval(row,el=>el.textContent),/51\.625 BTC/);
+    assert.equal(await page.$eval('[data-quick-review="F07.S01"]',el=>el.getAttribute('aria-pressed')),'false');
+    const proof=await page.evaluate(()=>{
+      const c=window.REVIEW_EVIDENCE.collections.find(c=>c.id==='20261011-pending-balance');
+      const row=window.REVIEW_EVIDENCE.groups.find(g=>g.id==='F07').criteria.find(c=>c.id==='F07.S01');
+      return {tests:c.functional.map(r=>[r.test,r.status]),captures:c.selectedCaptures.map(p=>p.path),prior:row.collectionEvidenceHistory.length};
+    });
+    assert.deepEqual(proof.tests,[['qml_evidence_pending_balance','passed'],['qml_evidence_maturity_refresh','failed']]);
+    assert.equal(proof.captures.length,3);assert.equal(proof.prior,1);
+    assert.match(await page.$eval(row+' .application-evidence[aria-label^="GUI-QML"] .capture-preview img',el=>el.src),/001-pending-mempool-payment-and-wallet-funds\.png$/);
+    assert.ok(await page.$(row+' a[href$="collections/20261011-pending-balance/report.md"]'));
+    await go('#feature/F07?tab=tests');
+    assert.match(await page.$eval('.tests-table',el=>el.textContent),/2026-10-11/);
+    assert.match(await page.$eval('.tests-table',el=>el.textContent),/mining-maturity balance refresh failed/);
+    await go('#tests?result=failed');
+    assert.match(await page.$eval('.functional-table',el=>el.textContent),/qml_evidence_maturity_refresh/);
+    assert.doesNotMatch(await page.$eval('.functional-table',el=>el.textContent),/qml_evidence_pending_balance/);
+    await page.click('[data-collection="20261011-pending-balance"] summary');
+    await page.setViewport({width:390,height:844});
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
+    await page.$eval('[data-collection="20261011-pending-balance"]',el=>el.scrollIntoView());
+    await page.screenshot({path:output+'/pending-proof-mobile.png'});
+    await page.setViewport({width:1440,height:1000});
+  });
+  await check('All 221 selected captures decode in the browser',async()=>{
     const bad=await page.evaluate(async()=>{
       const results=await Promise.all(window.REVIEW_EVIDENCE.captures.map(photo=>new Promise(resolve=>{
         const img=new Image();img.onload=()=>resolve(img.naturalWidth===photo.width&&img.naturalHeight===photo.height?null:photo.path);img.onerror=()=>resolve(photo.path);img.src='gui-feature-evidence/'+photo.path;

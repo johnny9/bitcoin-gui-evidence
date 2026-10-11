@@ -111,8 +111,8 @@
       "reason": "The listed capability is implemented in the pinned source comparison. Runtime evidence and its limits are recorded separately."
     },
     "F07.S01": {
-      "status": "parity",
-      "reason": "Balance and pending activity provide the main view of wallet funds. The missing full immature/mined/available breakdown remains a reporting difference in this rough assessment."
+      "status": "partial",
+      "reason": "Pending payments are implemented and verified: the visible amount excludes unpaid requests and clears after confirmation, updating the available balance. Immature rewards have visible maturity explanations. A separate reproduced failure leaves the wallet balance stale when a mining reward matures, so the combined balance criterion remains partial. The placement and four-line Widgets layout are not requirements."
     },
     "F07.S02": {
       "status": "parity",
@@ -797,12 +797,12 @@
       }
     },
     "F07": {
-      "status": "parity",
-      "goal": "Understand wallet funds and recent activity.",
-      "reason": "Balance, pending activity, recent/full history and synchronization status achieve the overview goal. Detailed balance categories and privacy masking remain visible differences.",
+      "status": "partial",
+      "goal": "Understand which wallet funds are available, pending, or immature, and review recent activity.",
+      "reason": "Wallet funds, pending payments, recent activity and synchronization status are visible. Pending payments are verified, but the displayed balance can stay stale when mining rewards mature. That observed incorrect balance keeps the overview partial.",
       "counts": {
-        "parity": 4,
-        "partial": 0,
+        "parity": 3,
+        "partial": 1,
         "not-implemented": 0
       }
     },

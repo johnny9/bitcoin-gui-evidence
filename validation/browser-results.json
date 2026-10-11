@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-11T13:18:35.876Z",
+  "checkedAt": "2026-10-11T14:55:09.325Z",
   "basePath": "/bitcoin-gui-evidence/",
   "outcomes": [
     {
@@ -7,7 +7,7 @@
       "status": "passed"
     },
     {
-      "name": "Acceptance summary separates 47 implementation gaps, 114 accepted and 22 proof gaps",
+      "name": "Acceptance summary separates 48 implementation gaps, 114 accepted and 21 proof gaps",
       "status": "passed"
     },
     {
@@ -195,7 +195,11 @@
       "status": "passed"
     },
     {
-      "name": "All 218 selected captures decode in the browser",
+      "name": "Pending payments have passing proof and a separate maturity failure remains visible",
+      "status": "passed"
+    },
+    {
+      "name": "All 221 selected captures decode in the browser",
       "status": "passed"
     },
     {
