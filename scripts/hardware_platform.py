@@ -20,6 +20,9 @@ def apply_hardware_platform_review(data, review, evidence):
                 or not assessment['qml'] or not assessment['hooks'] or not assessment['tests']):
             raise ValueError('Incomplete hardware/platform review: ' + sid)
         for test in assessment['tests']:
+            if (not test.get('covers', '').strip()
+                    or type(test.get('sourceLine')) is not int or test['sourceLine'] < 1):
+                raise ValueError('Missing test coverage explanation or source location: ' + sid)
             log = (evidence / test['log']).resolve()
             if (not log.is_relative_to(evidence) or not test['recordedAssertion']
                     or test['recordedAssertion'] not in log.read_text()):
@@ -63,10 +66,12 @@ def review_markdown(data):
                   '[Open criterion](#feature/' + criterion['groupId'] + '?item=' + sid + ')', '', row['reason'], '',
                   'QML: ' + ', '.join('[' + p + '](' + source + p + ')' for p in row['qml']) + '.', '',
                   'Hooks: ' + ', '.join('[' + p + '](' + source + p + ')' for p in row['hooks']) + '.', '',
-                  'Existing tests:', '']
+                  'What the tests prove:', '']
         for test in row['tests']:
-            lines.append('- [' + test['label'] + '](' + source + test['path'] + '): ['
-                         + test['recordedAssertion'] + '](gui-feature-evidence/' + test['log'] + ').')
-        lines += ['', 'Scope: ' + row['limits'], '']
+            lines += ['- **' + test['label'] + '** — ' + test['covers'],
+                      '  [Assertions in ' + test['path'] + ':' + str(test['sourceLine']) + ']('
+                      + source + test['path'] + '#L' + str(test['sourceLine']) + ') · ['
+                      + test['recordedAssertion'] + '](gui-feature-evidence/' + test['log'] + ').']
+        lines += ['', 'Coverage limits: ' + row['limits'], '']
     lines += ['[Review data and source hashes](hardware-platform-review.json)', '']
     return '\n'.join(lines)

@@ -1,5 +1,18 @@
 # Static site validation
 
+## October 11, 2026 — explain what the cited tests prove
+
+Validated changes based on site revision `d3b8f9ff9c7080e6fbb6675dc281bf2039219817`; [tested file hashes](validation/tested-files.json) identify the resulting source.
+
+- Added plain-language coverage explanations and assertion-line links to **36 existing test references across 17 criteria**. Every reviewed card distinguishes the checks made by each test from the QML/module connection and the remaining integration limits. Exact recorded pass strings are available in an expandable section, with links to their original logs. The Modules & tests tab repeats this mapping per subfeature before its general reference list.
+- This includes all **four accepted QML criteria without captures**: **F16.S09** (explorer links), **F20.S07** (network support), **F21.S04** (router mapping), and **F27.S04** (startup cancellation). Their source locations and assertions were inspected. Explorer URL generation does not claim browser delivery; network suffix tests do not claim five live chain runs; router-setting tests use a mocked node; only the SIGINT shutdown case waits for startup activity. These boundaries are visible in the explanations.
+- Verified all **64 reviewed source-file hashes** against pinned GUI-QML revision `a91f4b4774f25de061fe1a7c132a91ddde117fca`. All 36 result strings remain linked to existing passing logs. No application tests were rerun, screenshots added, or acceptance assessments changed. The catalog stays at **133 accepted and 49 implementation gaps across 182 criteria**. All 1,740 archived evidence files, 221 captures, functional results, catalog identity and saved-review compatibility are unchanged.
+- **64 existing browser checks pass** under the GitHub Pages project path. Targeted browser inspection also verified all four no-capture cards, assertion-line links, expandable exact results and the per-subfeature modules view. Desktop/mobile screenshots were inspected. The final link-color adjustment was checked by repeating that targeted browser inspection; the full Pages workflow validates the published revision separately.
+- Build reproducibility, evidence integrity, JavaScript syntax, local links and whitespace checks pass. The builder requires every reviewed test to have a nonempty coverage explanation and a source location. No tests were added to the application.
+- Native lint, clang-tidy and ASan commands were attempted from this standalone website checkout and returned 127 because its CI entry scripts are absent. [Command results](validation/native-ci.json) record the unchanged branch and revision after lint. No native, sanitizer or IPC-enabled GUI lifecycle pass is claimed.
+
+[Browser outcomes](validation/browser-results.json) · [Evidence integrity](validation/evidence-integrity.json) · [Tested file hashes](validation/tested-files.json)
+
 ## October 11, 2026 — assess the remaining gaps using existing tests
 
 Validated changes based on site revision `d3e4e1715f68cba70085e808ab412092a7b43abc`; [tested file hashes](validation/tested-files.json) identify the resulting source.

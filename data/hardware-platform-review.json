@@ -20,19 +20,25 @@
           "label": "Incomplete signer result is saved",
           "path": "test/test_walletqmlmodel.cpp",
           "log": "logs/qml-unit-tests.log",
-          "recordedAssertion": "PASS   : WalletQmlModelTests::externalSignerApprovalKeepsIncompleteSignedPsbt()"
+          "recordedAssertion": "PASS   : WalletQmlModelTests::externalSignerApprovalKeepsIncompleteSignedPsbt()",
+          "sourceLine": 3070,
+          "covers": "A simulated signer returns an incomplete PSBT. The model reports that more signatures are needed, prevents broadcast, and preserves the signer data when the PSBT is saved and reopened."
         },
         {
           "label": "Imported PSBT metadata is preserved",
           "path": "test/test_walletqmlmodel.cpp",
           "log": "logs/qml-unit-tests.log",
-          "recordedAssertion": "PASS   : WalletQmlModelTests::saveCurrentTransactionAsPsbt_preservesImportedMetadata()"
+          "recordedAssertion": "PASS   : WalletQmlModelTests::saveCurrentTransactionAsPsbt_preservesImportedMetadata()",
+          "sourceLine": 2929,
+          "covers": "Imports and exports a PSBT, compares the saved bytes with the original, and checks that transaction, input and output metadata survive without another signing attempt."
         },
         {
           "label": "Additional-signature state is presented",
           "path": "test/qml/tst_externalsignerreviewactions.qml",
           "log": "logs/qml-quick-tests.log",
-          "recordedAssertion": "PASS   : bitcoinqml_qmltests::ExternalSignerReviewActions::test_partial_success_shows_more_signatures_message()"
+          "recordedAssertion": "PASS   : bitcoinqml_qmltests::ExternalSignerReviewActions::test_partial_success_shows_more_signatures_message()",
+          "sourceLine": 105,
+          "covers": "With a simulated partial-signing result, the QML component displays the more-signatures-required message and disables sending."
         }
       ],
       "limits": "Assessment trusts the existing signer/model tests and QML save flow. No new multisigner-device exchange or matching partial-signature capture was collected; file export provides the handoff."
@@ -52,7 +58,9 @@
           "label": "External signer functional flow",
           "path": "test/functional/qml_test_external_signer.py",
           "log": "logs/qml_test_external_signer.log",
-          "recordedAssertion": "External signer GUI flow passed."
+          "recordedAssertion": "External signer GUI flow passed.",
+          "sourceLine": 268,
+          "covers": "Configures the mock signer through QML, checks device discovery and the saved signer path, then creates a wallet with the external-signer flag and expected receiving address."
         }
       ],
       "limits": "The executable mock stands in for the compatible physical signer. Device-lab repetition is not required by this review standard."
@@ -73,7 +81,9 @@
           "label": "External signer functional flow",
           "path": "test/functional/qml_test_external_signer.py",
           "log": "logs/qml_test_external_signer.log",
-          "recordedAssertion": "External signer GUI flow passed."
+          "recordedAssertion": "External signer GUI flow passed.",
+          "sourceLine": 325,
+          "covers": "Checks through RPC that the wallet created by the GUI has external_signer enabled and private_keys_enabled disabled. This proves the application stores no local spending keys for that wallet; it does not inspect device firmware."
         }
       ],
       "limits": "This accepts the application key-separation workflow. It does not claim that a physical device or its firmware was examined."
@@ -93,13 +103,17 @@
           "label": "External signer functional flow",
           "path": "test/functional/qml_test_external_signer.py",
           "log": "logs/qml_test_external_signer.log",
-          "recordedAssertion": "External signer GUI flow passed."
+          "recordedAssertion": "External signer GUI flow passed.",
+          "sourceLine": 537,
+          "covers": "Exercises the missing-signer error, restores the mock signer, approves the payment through QML, and checks that the expected transaction reaches the mempool after Send."
         },
         {
           "label": "Approval waiting and completion",
           "path": "test/qml/tst_externalsignerreviewactions.qml",
           "log": "logs/qml-quick-tests.log",
-          "recordedAssertion": "PASS   : bitcoinqml_qmltests::ExternalSignerReviewActions::test_waiting_state_persists_until_mock_completes()"
+          "recordedAssertion": "PASS   : bitcoinqml_qmltests::ExternalSignerReviewActions::test_waiting_state_persists_until_mock_completes()",
+          "sourceLine": 72,
+          "covers": "Checks that the approval button stays disabled in the waiting state until the simulated signer completes, then presents an enabled Send action."
         }
       ],
       "limits": "Physical button presses are represented by the signer hook and tests, not a new hardware run."
@@ -118,7 +132,9 @@
           "label": "Explorer URL construction",
           "path": "test/test_options_model.cpp",
           "log": "logs/qml-unit-tests.log",
-          "recordedAssertion": "PASS   : OptionsModelTests::thirdPartyTransactionLinksParseValidUrls()"
+          "recordedAssertion": "PASS   : OptionsModelTests::thirdPartyTransactionLinksParseValidUrls()",
+          "sourceLine": 2067,
+          "covers": "Checks transaction-ID substitution in HTTP and HTTPS explorer URLs and rejects unsupported schemes, malformed URLs and templates without the transaction placeholder. Browser launch is established by the connected QML source, not this test."
         }
       ],
       "limits": "The operating-system browser launcher and remote explorer are trusted integration boundaries; no external service or browser capture is required."
@@ -140,7 +156,9 @@
           "label": "Known network identities",
           "path": "test/test_networkstyle.cpp",
           "log": "logs/qml-unit-tests.log",
-          "recordedAssertion": "PASS   : NetworkStyleTests::getTitleAddText_perNetwork()"
+          "recordedAssertion": "PASS   : NetworkStyleTests::getTitleAddText_perNetwork()",
+          "sourceLine": 37,
+          "covers": "Instantiates mainnet, testnet, testnet4, signet and regtest styles and checks their window-title and tray suffixes. This test checks network identity, not startup or synchronization on each public chain."
         }
       ],
       "limits": "Core chain selection and the common QML integration are trusted. Downloading each public chain is not an acceptance requirement here."
@@ -161,7 +179,9 @@
           "label": "Proxy settings functional flow",
           "path": "test/functional/qml_test_proxy.py",
           "log": "logs/qml_test_proxy.log",
-          "recordedAssertion": "All tests PASSED"
+          "recordedAssertion": "All tests PASSED",
+          "sourceLine": 237,
+          "covers": "Exercises proxy and Tor controls, validates addresses, checks that Back discards an unsaved draft, and verifies that saved proxy/onion addresses reach settings.json. It does not send traffic through a real proxy."
         }
       ],
       "limits": "Core routing is trusted once the settings are connected. Live Tor/SOCKS service testing is not required for this QML acceptance assessment."
@@ -181,7 +201,9 @@
           "label": "Live router-mapping setting",
           "path": "test/test_options_model.cpp",
           "log": "logs/qml-unit-tests.log",
-          "recordedAssertion": "PASS   : OptionsModelTests::natpmpAppliesLiveWithoutRestartDirty()"
+          "recordedAssertion": "PASS   : OptionsModelTests::natpmpAppliesLiveWithoutRestartDirty()",
+          "sourceLine": 662,
+          "covers": "Disables and enables NAT-PMP, checking both the persisted setting and the corresponding mapPort(false/true) calls. Neither change requires a restart. The node interface is mocked; a physical router is not exercised."
         }
       ],
       "limits": "A physical router and a matching screenshot are not required. Actual mapping still depends on a compatible router and build."
@@ -201,13 +223,17 @@
           "label": "Tray functional flow",
           "path": "test/functional/qml_test_tray.py",
           "log": "logs/qml_test_tray.log",
-          "recordedAssertion": "All tests PASSED"
+          "recordedAssertion": "All tests PASSED",
+          "sourceLine": 112,
+          "covers": "Checks that the window-behavior controls are reachable and that the tray-visibility switch updates when toggled off and on. This offscreen run does not click an operating-system tray icon."
         },
         {
           "label": "Restore hidden-window geometry",
           "path": "test/test_desktoptrayiconcontroller.cpp",
           "log": "logs/qml-unit-tests.log",
-          "recordedAssertion": "PASS   : DesktopTrayIconControllerTests::showRestoresGeometryCapturedAtHide()"
+          "recordedAssertion": "PASS   : DesktopTrayIconControllerTests::showRestoresGeometryCapturedAtHide()",
+          "sourceLine": 51,
+          "covers": "Hides a window, changes its geometry to simulate a window-manager change, and checks that showing it restores its previous position and size."
         }
       ],
       "limits": "Windows and macOS execution is not newly certified; their connected Qt/Dock hooks are sufficient for this review."
@@ -229,13 +255,17 @@
           "label": "Tray functional flow",
           "path": "test/functional/qml_test_tray.py",
           "log": "logs/qml_test_tray.log",
-          "recordedAssertion": "All tests PASSED"
+          "recordedAssertion": "All tests PASSED",
+          "sourceLine": 175,
+          "covers": "Enables minimize-on-close through QML, closes the window, and checks that the application remains reachable through its automation interface."
         },
         {
           "label": "Close behavior follows user settings",
           "path": "test/test_desktopwindowbehaviormodel.cpp",
           "log": "logs/qml-unit-tests.log",
-          "recordedAssertion": "PASS   : DesktopWindowBehaviorModelTests::shouldMinimizeWindowOnClose_requiresDesktopAndMinimizeOnClose()"
+          "recordedAssertion": "PASS   : DesktopWindowBehaviorModelTests::shouldMinimizeWindowOnClose_requiresDesktopAndMinimizeOnClose()",
+          "sourceLine": 170,
+          "covers": "Checks that close-to-minimize is enabled only for a desktop build with the user setting enabled; it is disabled otherwise."
         }
       ],
       "limits": "The existing platform hooks are trusted. Additional operating-system screenshots are not acceptance prerequisites."
@@ -257,7 +287,9 @@
           "label": "Known network identities",
           "path": "test/test_networkstyle.cpp",
           "log": "logs/qml-unit-tests.log",
-          "recordedAssertion": "PASS   : NetworkStyleTests::getTitleAddText_perNetwork()"
+          "recordedAssertion": "PASS   : NetworkStyleTests::getTitleAddText_perNetwork()",
+          "sourceLine": 37,
+          "covers": "Checks the window-title and tray suffix for all five supported networks, with no suffix on mainnet. QML and startup source review establish where that identity reaches the application."
         }
       ],
       "limits": "Simultaneous public-network instances are not newly run. The tested identities and connected QML display are sufficient for review."
@@ -278,25 +310,33 @@
           "label": "Pruned storage requirements",
           "path": "test/test_onboarding_storage.cpp",
           "recordedAssertion": "OnboardingStorageTests::prunedSelectionUsesPrunedRequirement()",
-          "log": "logs/qml-unit-tests.log"
+          "log": "logs/qml-unit-tests.log",
+          "sourceLine": 92,
+          "covers": "Checks that choosing pruning uses the smaller storage requirement and permits a disk that is sufficient for pruning but too small for the full chain."
         },
         {
           "label": "Insufficient disk space",
           "path": "test/test_onboarding_storage.cpp",
           "recordedAssertion": "OnboardingStorageTests::insufficientSelectedStorageWarns()",
-          "log": "logs/qml-unit-tests.log"
+          "log": "logs/qml-unit-tests.log",
+          "sourceLine": 109,
+          "covers": "Checks that insufficient space produces a warning containing the selected storage requirement and marks the selection as lacking space."
         },
         {
           "label": "Storage information reaches QML",
           "path": "test/qml/tst_onboarding_datadir.qml",
           "recordedAssertion": "OnboardingDataDir::test_storage_amount_uses_detected_available_space()",
-          "log": "logs/qml-quick-tests.log"
+          "log": "logs/qml-quick-tests.log",
+          "sourceLine": 483,
+          "covers": "Checks that QML displays the detected available disk space rather than a fixed example value."
         },
         {
           "label": "QML rejects insufficient full storage",
           "path": "test/qml/tst_onboarding_datadir.qml",
           "recordedAssertion": "OnboardingDataDir::test_storage_amount_disables_full_storage_when_space_is_insufficient()",
-          "log": "logs/qml-quick-tests.log"
+          "log": "logs/qml-quick-tests.log",
+          "sourceLine": 492,
+          "covers": "Checks that QML disables full-chain storage when space is insufficient while retaining the viable pruned option and showing both storage estimates."
         }
       ],
       "limits": "Accepted for storage planning. Pruning and wallet-recovery consequences are not explained in the UI. The existing capture and recorded model/component tests are reused; no new disk-space scenario was run."
@@ -317,25 +357,33 @@
           "label": "ETA remains valid through progress dips",
           "path": "test/test_syncprogresstracker.cpp",
           "recordedAssertion": "SyncProgressTrackerTests::publishesDespiteFrequentProgressDips()",
-          "log": "logs/qml-unit-tests.log"
+          "log": "logs/qml-unit-tests.log",
+          "sourceLine": 45,
+          "covers": "Feeds progress samples with repeated small dips into the estimator and checks that remaining-time estimates are still published at the expected intervals and values."
         },
         {
           "label": "Clock regression resets the estimator",
           "path": "test/test_syncprogresstracker.cpp",
           "recordedAssertion": "SyncProgressTrackerTests::resetsForClockRegression()",
-          "log": "logs/qml-unit-tests.log"
+          "log": "logs/qml-unit-tests.log",
+          "sourceLine": 79,
+          "covers": "Checks that a backward clock jump resets the estimator sample history. A decrease in the progress estimate alone does not reset it."
         },
         {
           "label": "Progress is displayed during catch-up",
           "path": "test/qml/tst_blockclock.qml",
           "recordedAssertion": "BlockClock::test_startup_catch_up_uses_reported_progress()",
-          "log": "logs/qml-quick-tests.log"
+          "log": "logs/qml-quick-tests.log",
+          "sourceLine": 298,
+          "covers": "Supplies a connected node with 90% verification progress and checks that the block clock shows 90% and sends the same fraction to its dial."
         },
         {
           "label": "Header progress reaches QML",
           "path": "test/test_nodemodel.cpp",
           "recordedAssertion": "NodeModelTests::headerTipNotificationsExposeHeaderSyncProgress()",
-          "log": "logs/qml-unit-tests.log"
+          "log": "logs/qml-unit-tests.log",
+          "sourceLine": 885,
+          "covers": "Delivers a simulated header-tip notification and checks the model signal, active header-sync/presync state and calculated progress. It does not exercise Core initialization-stage messages."
         }
       ],
       "limits": "A stable live ETA screenshot and a new throttled-transfer run are not prerequisites. Numerical estimate behavior is supported by the existing tracker tests; the visible binding and actual peer-sync capture supply the integration evidence. No new application run is claimed."
@@ -354,7 +402,9 @@
           "label": "Time-window selection preserves history and totals",
           "path": "test/test_networktraffictower.cpp",
           "recordedAssertion": "NetworkTrafficTowerTests::filterWindowChangesPreserveTotalsAndHistory()",
-          "log": "logs/qml-unit-tests.log"
+          "log": "logs/qml-unit-tests.log",
+          "sourceLine": 122,
+          "covers": "Switches between shorter and longer observation periods and checks the resulting history lengths while received/sent totals stay unchanged. Traffic samples come from a mocked node."
         }
       ],
       "limits": "Clearing all traffic history is not required for choosing an observation period. Totals remain cumulative; the selected period controls graph history. Existing test coverage and the traffic-page capture suffice without another deterministic-traffic GUI run."
@@ -375,25 +425,33 @@
           "label": "Live console submission and output",
           "path": "test/functional/qml_test_console.py",
           "recordedAssertion": "All console tests passed.",
-          "log": "logs/qml_test_console.log"
+          "log": "logs/qml_test_console.log",
+          "sourceLine": 205,
+          "covers": "Submits getblockcount, help and an invalid command through the running console, waits for execution to finish, and checks that output entries appear. This does not execute every available RPC."
         },
         {
           "label": "Commands use the selected wallet context",
           "path": "test/test_rpcconsolemodel.cpp",
           "recordedAssertion": "RpcConsoleModelTests::walletNameScopesRpcToWalletUri()",
-          "log": "logs/qml-unit-tests.log"
+          "log": "logs/qml-unit-tests.log",
+          "sourceLine": 319,
+          "covers": "Checks that a selected wallet name is encoded into the RPC wallet endpoint and that a node command with no selected wallet uses no wallet endpoint."
         },
         {
           "label": "Nested command parsing",
           "path": "test/test_rpccommandexecutor.cpp",
           "recordedAssertion": "RpcCommandExecutorTests::parseNestedCommands()",
-          "log": "logs/qml-unit-tests.log"
+          "log": "logs/qml-unit-tests.log",
+          "sourceLine": 51,
+          "covers": "Checks that nested-command syntax is accepted by the parser. This case parses without executing the command."
         },
         {
           "label": "Quoted argument parsing",
           "path": "test/test_rpccommandexecutor.cpp",
           "recordedAssertion": "RpcCommandExecutorTests::parseQuotedArguments()",
-          "log": "logs/qml-unit-tests.log"
+          "log": "logs/qml-unit-tests.log",
+          "sourceLine": 57,
+          "covers": "Checks single- and double-quoted arguments in the command parser. This case does not execute the commands or verify message signing."
         }
       ],
       "limits": "This accepts the console interface to advanced RPCs. It does not claim a fresh GUI run of descriptor import, multisig creation or PSBT combination, or independently certify every backend command. Their availability follows the shared dispatcher and selected wallet context."
@@ -414,19 +472,25 @@
           "label": "Startup reset restores visible defaults",
           "path": "test/functional/qml_test_resetguisettings.py",
           "recordedAssertion": "All tests PASSED",
-          "log": "collections/20261010-qml/logs/qml_test_resetguisettings.log"
+          "log": "collections/20261010-qml/logs/qml_test_resetguisettings.log",
+          "sourceLine": 147,
+          "covers": "Starts onboarding with nondefault saved connection settings, resets them, and checks the visible defaults for listening, mapping, RPC and proxy controls."
         },
         {
           "label": "Reset keeps a backup before clearing Core settings",
           "path": "test/test_options_model.cpp",
           "recordedAssertion": "OptionsModelTests::resetGuiSettingsClearsSettingsJson()",
-          "log": "logs/qml-unit-tests.log"
+          "log": "logs/qml-unit-tests.log",
+          "sourceLine": 1154,
+          "covers": "Checks that resetting Core settings creates a backup file and clears the active settings. It does not reopen the backup or perform a restore."
         },
         {
           "label": "Reset of a selected profile keeps a backup",
           "path": "test/test_options_model.cpp",
           "recordedAssertion": "OptionsModelTests::resetGuiSettingsApplyClearsSelectedCustomDataDirSettingsJson()",
-          "log": "logs/qml-unit-tests.log"
+          "log": "logs/qml-unit-tests.log",
+          "sourceLine": 1241,
+          "covers": "Applies reset to a selected custom data directory, checks the default options, backup-file existence and cleared settings. It does not perform a restore round trip."
         }
       ],
       "limits": "Backup retention is inferred from the tested file creation and write-before-clear code path. No new backup-restore round trip was run. The backup covers Core settings.json; GUI-only QSettings are cleared. Startup invocation remains an accepted equivalent workflow."
@@ -448,28 +512,36 @@
           "label": "Cancellation while initialization is active",
           "path": "test/functional/qml_test_shutdown.py",
           "recordedAssertion": "SIGINT during load_on_startup shutdown completed successfully.",
-          "log": "logs/qml_test_shutdown.log"
+          "log": "logs/qml_test_shutdown.log",
+          "sourceLine": 149,
+          "covers": "Waits for evidence that startup initialization has begun, sends SIGINT, and checks that the GUI exits with code 0."
         },
         {
           "label": "Window-close shutdown exits successfully",
           "path": "test/functional/qml_test_shutdown.py",
           "recordedAssertion": "Close during load_on_startup shutdown completed successfully.",
-          "log": "logs/qml_test_shutdown.log"
+          "log": "logs/qml_test_shutdown.log",
+          "sourceLine": 133,
+          "covers": "Closes the running GUI with load-on-startup wallets configured, observes the shutdown page, and checks exit code 0. This case does not separately assert that initialization is still active at the instant of closing."
         },
         {
           "label": "Interrupted initialization requests shutdown",
           "path": "test/test_nodemodel.cpp",
           "recordedAssertion": "NodeModelTests::initializationFailureRequestsShutdownWhenCoreWasInterrupted()",
-          "log": "logs/qml-unit-tests.log"
+          "log": "logs/qml-unit-tests.log",
+          "sourceLine": 369,
+          "covers": "Simulates failed initialization after Core has requested shutdown and checks that the model requests application shutdown."
         },
         {
           "label": "Shutdown execution leaves the GUI thread",
           "path": "test/test_qmlinitexecutor_api.cpp",
           "recordedAssertion": "QmlInitExecutorApiTests::shutdownEmitsResultAndRunsOffMainThread()",
-          "log": "logs/qml-unit-tests.log"
+          "log": "logs/qml-unit-tests.log",
+          "sourceLine": 99,
+          "covers": "Checks that the shutdown executor calls node shutdown off the GUI thread and emits a successful completion signal exactly once."
         }
       ],
-      "limits": "Accepted as the supported startup-cancellation outcome. The recorded build had IPC disabled. IPC child-process lifecycle, sanitizer stderr and other build configurations are not certified by this assessment; their required CI validation remains separate. No new application test was run."
+      "limits": "The SIGINT case waits for startup activity; the window-close case proves the user close path. Their combination with model tests and source wiring supports startup cancellation. The recorded build had IPC disabled. IPC child-process lifecycle, sanitizer stderr and other build configurations are not certified by this assessment; their required CI validation remains separate. No new application test was run."
     }
   },
   "sourceFiles": {

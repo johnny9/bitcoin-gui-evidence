@@ -1,5 +1,5 @@
 {
-  "baseRevision": "d3e4e1715f68cba70085e808ab412092a7b43abc",
+  "baseRevision": "d3b8f9ff9c7080e6fbb6675dc281bf2039219817",
   "checks": [
     {
       "command": "./ci/lint.py",
@@ -20,7 +20,7 @@
       "stderr": "/bin/sh: 1: ./ci/test_run_all.sh: not found\n"
     }
   ],
-  "scope": "Static acceptance review from existing source and tests. Application code and binary unchanged. Native rebuild, sanitizer and IPC lifecycle validation unavailable because the standalone website lacks their CI scripts.",
+  "scope": "Static website clarification of existing test coverage. Application code and binary unchanged. Native CI, sanitizer and IPC lifecycle scripts are absent from this standalone website checkout.",
   "branchAfterLint": "main",
-  "revisionAfterLint": "d3e4e1715f68cba70085e808ab412092a7b43abc"
+  "revisionAfterLint": "d3b8f9ff9c7080e6fbb6675dc281bf2039219817"
 }

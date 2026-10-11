@@ -454,7 +454,7 @@ async function main() {
     assert.ok(await hardware.$(card+' [data-evidence-basis="qml-tests-hooks"]'));
     assert.match(await hardware.$eval(card+' .qml-review',el=>el.textContent),/NAT-PMP/);
     assert.ok(await hardware.$(card+' .qml-review a[href$="/qml/pages/settings/ConnectionSettingsPage.qml"]'));
-    assert.ok(await hardware.$(card+' .qml-review a[href$="/test/test_options_model.cpp"]'));
+    assert.ok(await hardware.$(card+' .qml-review a[href$="/test/test_options_model.cpp#L662"]'));
     assert.ok(await hardware.$(card+' .qml-review a[href="gui-feature-evidence/logs/qml-unit-tests.log"]'));
     assert.equal(await hardware.$eval(card+' .recorded-evidence',el=>el.open),false);
     await hardware.click(card+' .recorded-evidence summary');

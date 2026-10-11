@@ -12,6 +12,8 @@ F18.S05 now requires **copying saved addresses to the clipboard**. Copying label
 
 The [review using existing tests](dist/hardware-platform-review.md) now covers **17 criteria**. Six additional outcomes are accepted using the connected QML and recorded test coverage: storage planning, sync estimates, traffic periods, advanced RPC commands, settings reset with backup, and cancellation during startup. This records an inference from relevant tests and the connected source, not a new application run. F27.S03 is corrected to **partial implementation**: its busy startup handoff does not expose Core initialization progress; chain synchronization is assessed separately. Required native CI validation, including IPC and sanitizers, is unaffected by these feature-acceptance decisions.
 
+The 17 source-and-test assessments now explain **what each of their 36 test references proves**, with links to the relevant assertion lines, the exact recorded pass, the connected QML/modules and the coverage limits. This includes all **four accepted QML criteria without captures**: explorer links, network support, router mapping and startup cancellation. The same mapping appears in each group's **Modules & tests** tab. Related suites remain supporting references; their names or aggregate pass counts do not establish every subfeature. No acceptance ratings or recorded application results changed.
+
 Explore the [published acceptance criteria](https://johnny9.dev/bitcoin-gui-evidence/) or clone this repository to review it locally.
 
 Open `dist/index.html` directly in a browser, or serve the directory:

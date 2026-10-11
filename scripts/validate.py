@@ -140,6 +140,7 @@ def main():
         assert by_id[sid]['implementation']['status'] == 'parity' and not by_id[sid]['hasFailure']
         assert assessment['qml'] and assessment['hooks'] and assessment['tests']
         for test in assessment['tests']:
+            assert test['covers'].strip() and type(test['sourceLine']) is int and test['sourceLine'] > 0
             assert test['recordedAssertion'] in (original / test['log']).read_text()
     assert all('qmlReview' not in c for c in data['originalCriteria'])
     visual = json.loads((ROOT / 'data/visual-acceptance.json').read_text())
