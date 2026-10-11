@@ -1,5 +1,18 @@
 # Static site validation
 
+## October 11, 2026 — remove the aggregate navigation criterion
+
+Validated changes based on site revision `51091d3cc7a0be473c42161db1968b09cfe21028`; [tested file hashes](validation/tested-files.json) identify the resulting source.
+
+- Removed **F28.S03** from active criteria, filters, counts and review controls. Access to address records, message signing/verification, settings and diagnostics is covered by those individual feature groups; a combined navigation scenario is no longer an acceptance requirement. The old link shows the removal reason and archived evidence. Navigation retains F28.S01 and F28.S05.
+- The catalog now contains **182 subfeatures**: 134 parity, 13 partial and 35 absent. **125 default to Accepted**, **9 parity items need evidence**, and **48 need implementation**. All other implementation and evidence ratings are unchanged. In particular, the separate QML coin viewer was confirmed from `WalletCoins.qml`, the connected settings route, the existing send-create functional test and the original wallet-coin screenshot; its rating was retained after the user confirmed that finding.
+- **63 browser checks pass** under the GitHub Pages project path. The added regression covers migration of the previous v4 catalog, preservation of both current and earlier notes, isolation from older open tabs, import/export of the removed record, exclusion from active counts/search, and the explanatory old-link page. Existing migration, filters, keyboard access, mobile layouts and all 221 capture decodes also pass. Desktop and mobile removal pages were visually inspected.
+- Browser storage is keyed by catalog revision. The explicitly compatible previous revision migrates its F28.S03 record into `retiredReviews`; existing individual-task decisions remain unchanged and the removed criterion does not transfer acceptance or scope to them. Original `priorReviews` stay separate. Other catalog revisions are still rejected.
+- Build reproducibility, evidence integrity, local links, Python parsing, JavaScript syntax/execution and whitespace checks pass. All 1,740 tracked evidence/collection/rerun files, original records, selected images and application functional results are unchanged. No application test or screenshot collection was rerun.
+- Native lint, clang-tidy and ASan commands were attempted from this standalone website checkout and returned 127 because the CI entry scripts are absent. [Command results](validation/native-ci.json) record branch `main` and the tested base revision after lint. Native rebuild, sanitizer and IPC-enabled GUI lifecycle coverage are not claimed.
+
+[Browser outcomes](validation/browser-results.json) · [Evidence integrity](validation/evidence-integrity.json) · [Tested file hashes](validation/tested-files.json)
+
 ## October 11, 2026 — hardware and platform acceptance review
 
 Validated changes based on site revision `f6034f09a62d0d5c6e249ee6065ebe412f5a3d9c`; [tested file hashes](validation/tested-files.json) identify the resulting source. The application source, binary and archived evidence are unchanged.

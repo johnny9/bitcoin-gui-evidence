@@ -32,7 +32,7 @@ def main():
     coverage = {r['id']: r for r in json.loads((original / 'coverage.json').read_text())}
     assert len(data['groups']) == 34
     criteria = [c for g in data['groups'] for c in g['criteria']]
-    assert len(criteria) == len({c['id'] for c in criteria}) == 183
+    assert len(criteria) == len({c['id'] for c in criteria}) == 182
     assert set(coverage) == {c['id'] for c in criteria + data['retiredCriteria']}
     historical = {c['id']: c for c in data['originalCriteria']}
     assert len(historical) == 203 and set(historical) == set(coverage)
@@ -51,12 +51,12 @@ def main():
         assert criterion['implementation']['status'] in ('parity', 'partial', 'not-implemented')
         assert criterion['implementation']['reason'].strip()
     by_id = {c['id']: c for c in criteria}
-    assert len(data['criterionAliases']) == 16
-    assert len(data['criterionReplacements']) == len(data['retiredCriteria']) == 20
+    assert len(data['criterionAliases']) == 18
+    assert len(data['criterionReplacements']) == len(data['retiredCriteria']) == 21
     assert set(data['criterionReplacements']) == set(coverage) - set(by_id)
     assert set(data['sourceTargets']) == set(coverage)
     for sid, targets in data['sourceTargets'].items():
-        assert targets and len(targets) == len(set(targets)) and set(targets).issubset(by_id)
+        assert (targets or sid in audit['removals']) and len(targets) == len(set(targets)) and set(targets).issubset(by_id)
         for target in targets:
             assert sid in [source['id'] for source in by_id[target]['reviewSources']]
     for sid, targets in data['criterionReplacements'].items():
@@ -82,14 +82,17 @@ def main():
             if not override:
                 assert all(r['html'] in record['html'] for r in previous)
         assert set(criterion.get('relatedCriteria', [])).issubset(by_id)
-    assert audit['reviewedCount'] == 203 and audit['currentCount'] == 183
+    assert audit['reviewedCount'] == 203 and audit['currentCount'] == 182
+    assert 'F28.S03' not in by_id and data['sourceTargets']['F28.S03'] == []
+    assert not any(source['id'] == 'F28.S03' for c in criteria for source in c['reviewSources'])
+    assert audit['removals']['F28.S03']['relatedGroups'] == ['F18', 'F19', 'F23', 'F22']
     assert audit['status'] == 'implemented'
     assert Counter(f['kind'] for f in audit['findings']) == {'merged':1, 'duplicate':9, 'overlap':12, 'distinct':8}
     assert Counter(f['status'] for f in audit['findings']) == {'applied':22, 'retained':8}
     assert all(f['resolution'] and set(f['outcomes']).issubset(by_id) for f in audit['findings'])
     reviewed = [sid for g in audit['groups'] for sid in g['reviewedCriteria']]
     assert len(reviewed) == len(set(reviewed)) == 203 and set(reviewed) == set(coverage)
-    assert data['preMergeSummary']['criteria'] == 203 and data['summary']['criteria'] == 183
+    assert data['preMergeSummary']['criteria'] == 203 and data['summary']['criteria'] == 182
     current = json.loads((DIST / 'current-assessments.json').read_text())
     assert current['catalogRevision'] == data['catalogRevision']
     assert current['criteria'] == {c['id']:c['implementation'] for c in criteria}
@@ -107,7 +110,7 @@ def main():
     assert by_id['F15.S03']['implementation']['status'] == 'not-implemented'
     assert by_id['F29.S04']['implementation']['status'] == 'not-implemented'
     assert by_id['F09.S07']['applications']['qml']['status'] == 'assertions'
-    for sid in ('F20.S05', 'F22.S05', 'F26.S03', 'F28.S03', 'F14.S06'):
+    for sid in ('F20.S05', 'F22.S05', 'F26.S03', 'F14.S06'):
         assert by_id[sid]['applications']['qml']['status'] == 'limited', sid
     assert by_id['F03.S04']['implementation']['status'] == 'not-implemented'
     assert by_id['F09.S03']['implementation']['status'] == 'parity'
@@ -143,7 +146,7 @@ def main():
         (c['applications']['qml']['status'] == 'assertions' and c['applications']['qml']['captures']))
     assert sum(sufficient(c) for c in criteria) == 125
     assert sum(sufficient(c) and c['implementation']['status'] == 'parity' for c in criteria) == 125
-    assert sum(not sufficient(c) and c['implementation']['status'] == 'parity' for c in criteria) == 10
+    assert sum(not sufficient(c) and c['implementation']['status'] == 'parity' for c in criteria) == 9
     # A stale assessment must not override a new failure or an implementation gap.
     for change in ({'hasFailure': True}, {'implementation': {'status': 'partial'}}):
         rejected = copy.deepcopy(data)
@@ -325,14 +328,14 @@ def main():
         assert not historical[sid]['hasFailure']
     assert data['summary']['qml_functional'] == {'passed':40, 'failed':2}
     assert data['summary']['criteria_statuses']['qml']['Automated evidence collected'] == 114
-    assert data['summary']['criteria_statuses']['qml']['Partial / limited evidence'] == 35
-    assert sum(data['summary']['criteria_statuses']['qml'].values()) == 183
+    assert data['summary']['criteria_statuses']['qml']['Partial / limited evidence'] == 34
+    assert sum(data['summary']['criteria_statuses']['qml'].values()) == 182
     for script in (ROOT / 'scripts').glob('*.py'):
         ast.parse(script.read_text())
-    report = {'status':'passed', 'groups':34, 'criteria':183, 'auditedOriginalCriteria':203, 'retiredCriteria':20, 'appliedFindings':22, 'retainedDistinctions':8, 'originalCapturesVerified':116,
+    report = {'status':'passed', 'groups':34, 'criteria':182, 'auditedOriginalCriteria':203, 'retiredCriteria':21, 'appliedFindings':22, 'retainedDistinctions':8, 'originalCapturesVerified':116,
               'rerunCapturesVerified':rerun_capture_count, 'collectionCapturesVerified':collection_capture_count,
               'widgetsCriteriaWithoutCaptures':9, 'historicalWidgetsCriteriaWithoutCaptures':11, 'localLinkTargets':len(local_links), 'unresolvedFailures':2, 'catalogId':data['catalogId'],
-              'hardwarePlatformReviewed':11, 'defaultAccepted':125, 'remainingParityProofGaps':10,
+              'hardwarePlatformReviewed':11, 'defaultAccepted':125, 'remainingParityProofGaps':9,
               'groupParity': dict(Counter(g['implementation']['status'] for g in data['groups'])),
               'subfeatureParity': dict(Counter(c['implementation']['status'] for c in criteria))}
     print(json.dumps(report, indent=2))

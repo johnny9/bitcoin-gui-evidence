@@ -46,17 +46,20 @@
   const criterionMap = new Map(criteria.map(c => [c.id, c]));
   const aliases = data.criterionAliases || {};
   const replacements = data.criterionReplacements;
+  const removals = data.catalogAudit.removals || {};
   const originalMap = new Map(data.originalCriteria.map(c=>[c.id,c]));
   const captureMap = new Map(data.captures.map(p => [p.path, p]));
   const areaIcons = {wallets:'wallet', payments:'payments', activity:'activity', node:'network', application:'grid'};
   const appNames = {widgets:'Qt Widgets', qml:'GUI-QML'};
   const comparisonApps = ['widgets', 'qml'];
-  const storageKey = 'bitcoin-gui-evidence-review-v4:' + data.catalogId;
+  const legacyStorageKey = 'bitcoin-gui-evidence-review-v4:' + data.catalogId;
+  const storageKey = legacyStorageKey + ':' + data.catalogRevision;
   const previousStorageKeys = ['bitcoin-gui-evidence-review-v3:', 'bitcoin-gui-evidence-review-v2:', 'bitcoin-gui-evidence-review-v1:'].map(key=>key+data.catalogId);
   const defaults = {q:'', parity:'any', requirement:'any', evidence:'any', area:'all', review:'any', captures:'any', view:'groups'};
   let filters = {...defaults};
   let reviews = {};
   let priorReviews = {};
+  let retiredReviews = {};
   let storageAvailable = true;
   let captureList = [];
   let captureIndex = 0;
@@ -88,15 +91,34 @@
     const c = criterionMap.get(id);
     return originalMap.has(id) && (!c || c.reviewMode === 'reassess' || c.reviewSources.length > 1 || data.sourceTargets[id].length > 1);
   }
+  function validateEnvelope(payload) {
+    const compatible = data.catalogAudit.compatibleReviewRevisions?.includes(payload.catalogRevision);
+    if (payload.schemaVersion !== 4 || (payload.catalogRevision !== data.catalogRevision && !compatible)) throw new Error('This review belongs to a different catalog revision.');
+    const current = validateReviews(payload.reviews, !compatible), prior = validateReviews(payload.priorReviews);
+    const retired = validateReviews(payload.retiredReviews || {});
+    if (Object.keys(retired).some(id=>!Object.hasOwn(removals,id))) throw new Error('The file contains an invalid retired review.');
+    for (const [id, record] of Object.entries(current)) {
+      if (criterionMap.has(id) || groupMap.has(id)) continue;
+      if (!Object.hasOwn(removals,id) || (retired[id] && JSON.stringify(retired[id]) !== JSON.stringify(record))) throw new Error('The file contains an invalid review record.');
+      retired[id] = record;
+      delete current[id];
+    }
+    return {reviews:current, priorReviews:prior, retiredReviews:retired};
+  }
+  function reviewEnvelope() {
+    return {schemaVersion:4,catalogRevision:data.catalogRevision,reviews,priorReviews,retiredReviews};
+  }
   function restoreEnvelope(payload) {
-    if (payload.schemaVersion !== 4 || payload.catalogRevision !== data.catalogRevision) throw new Error('This review belongs to a different catalog revision.');
-    const current = validateReviews(payload.reviews, true), prior = validateReviews(payload.priorReviews);
-    reviews = current; priorReviews = prior;
+    const clean = validateEnvelope(payload);
+    reviews = clean.reviews; priorReviews = clean.priorReviews; retiredReviews = clean.retiredReviews;
   }
   try {
     const current = localStorage.getItem(storageKey);
     if (current !== null) restoreEnvelope(JSON.parse(current));
-    else {
+    else if (localStorage.getItem(legacyStorageKey) !== null) {
+      restoreEnvelope(JSON.parse(localStorage.getItem(legacyStorageKey)));
+      localStorage.setItem(storageKey, JSON.stringify(reviewEnvelope()));
+    } else {
       const saved = previousStorageKeys.map(key=>localStorage.getItem(key)).find(value=>value!==null);
       if (saved) {
         priorReviews = validateReviews(JSON.parse(saved));
@@ -194,7 +216,7 @@
     toastTimer = setTimeout(() => { $('#toast').hidden = true; }, 4500);
   }
   function persist() {
-    try { localStorage.setItem(storageKey, JSON.stringify({schemaVersion:4,catalogRevision:data.catalogRevision,reviews,priorReviews})); storageAvailable = true; }
+    try { localStorage.setItem(storageKey, JSON.stringify(reviewEnvelope())); storageAvailable = true; }
     catch { storageAvailable = false; notify('Browser storage is unavailable. Export your review to save it.'); }
     updateProgress();
   }
@@ -308,8 +330,14 @@
     return ids.map(id=>{const c=criterionMap.get(id);return `<li><a href="#feature/${c.groupId}?item=${id}"><strong>${id}</strong> · ${escape(c.intent)}</a></li>`;}).join('');
   }
   function renderRetiredCriterion(id) {
+    if (removals[id]) { renderRemovedCriterion(id); return; }
     const old=originalMap.get(id), targets=replacements[id], prior=priorReviews[id];
     $('#main').innerHTML=`<a class="back-link" href="#feature/${old.groupId}">← ${escape(groupMap.get(old.groupId).name)}</a><section class="page-heading"><div><div class="eyebrow">${id} · SCOPE CONSOLIDATED</div><h1>${escape(old.intent)}</h1><p>This broad row is now reviewed through the specific outcomes below. Each is counted once in its owning group.</p></div></section><section class="content-panel"><h2>Review these outcomes</h2><ul class="replacement-links">${criterionLinks(targets)}</ul><p class="helper-text">Earlier acceptance is not automatically applied to every replacement. Original review records remain in your export and in the current criteria’s Review details.</p>${prior?`<div class="saved-note"><span class="small-label">Earlier ${id} review · ${escape(prior.status==='default'?'Evidence default':reviewLabels[prior.status])}</span><p>${escape(prior.note || 'No note recorded.')}</p></div>`:''}<a class="subtle-link" href="#audit">Applied audit ↗</a></section><details class="content-panel"><summary>Earlier evidence and limits</summary><div class="evidence-comparison">${comparisonApps.map(app=>evidencePanel(old,app)).join('')}</div></details>`;
+  }
+  function renderRemovedCriterion(id) {
+    const old=originalMap.get(id), removal=removals[id];
+    const notes=[['Saved review before removal',retiredReviews[id]],['Earlier review',priorReviews[id]]].filter(([,record])=>record);
+    $('#main').innerHTML=`<a class="back-link" href="#feature/${old.groupId}">← ${escape(groupMap.get(old.groupId).name)}</a><section class="page-heading removed-criterion"><div><div class="eyebrow">${id} · REMOVED CRITERION</div><h1>Task access is covered by the individual features</h1><p>${escape(removal.reason)}</p><p>This item is excluded from acceptance counts and filters. Its saved review does not change any other criterion.</p></div></section><section class="content-panel"><h2>Individual feature groups</h2><ul>${removal.relatedGroups.map(fid=>`<li><a href="#feature/${fid}">${escape(groupMap.get(fid).name)}</a></li>`).join('')}</ul>${notes.map(([label,record])=>`<div class="saved-note"><span class="small-label">${escape(label)} · ${escape(record.status==='default'?'Evidence default':reviewLabels[record.status])} · ${escape(record.requirement==='inherit'?'Group scope':requirementLabels[record.requirement])}</span><p>${escape(record.note || 'No note recorded.')}</p></div>`).join('')}<a class="subtle-link" href="#audit">Applied audit ↗</a></section><details class="content-panel"><summary>Archived criterion and evidence</summary><h2>${escape(old.intent)}</h2><div class="evidence-comparison">${comparisonApps.map(app=>evidencePanel(old,app)).join('')}</div></details>`;
   }
   function groupTests(g) {
     return `<section class="content-panel"><div class="section-heading"><h2>Implementation modules</h2><span class="small-label">Pinned source revisions</span></div><div class="prose module-list">${g.modulesHtml}</div></section><section class="content-panel"><div class="section-heading"><h2>Automated tests & assertions</h2><a class="subtle-link" href="#tests">All test results ↗</a></div><p class="helper-text">These tests are related to this feature group. Use the assertions and limits for each criterion to assess whether its required outcome is demonstrated.</p><div class="table-scroll"><table class="tests-table"><thead><tr><th>Application</th><th>Test / module</th><th>Recorded result</th></tr></thead><tbody>${g.tests.map(t=>`<tr class="${t.failed?'failed-row':''}"><td>${escape(t.application)}</td><td>${t.testHtml}</td><td>${t.resultHtml}</td></tr>`).join('')}</tbody></table></div></section>`;
@@ -378,7 +406,7 @@
     document.title = title + ' · GUI-QML acceptance';
     $$('[data-nav]').forEach(a=>{a.removeAttribute('aria-current');if(a.dataset.nav===route.page || (route.page==='feature'&&a.dataset.nav==='catalog'))a.setAttribute('aria-current','page');});
     $$('[data-group-link]').forEach(a=>{a.removeAttribute('aria-current');if(route.page==='feature' && a.dataset.groupLink===route.groupId)a.setAttribute('aria-current','page');});
-    if (route.page==='feature' && replacements[route.params.get('item')]?.length>1) renderRetiredCriterion(route.params.get('item'));
+    if (route.page==='feature' && replacements[route.params.get('item')] && replacements[route.params.get('item')].length!==1) renderRetiredCriterion(route.params.get('item'));
     else if (route.page==='feature') renderGroup();
     else if (route.page==='tests') renderTests();
     else if (route.page==='about') {
@@ -496,7 +524,7 @@
     persist();$('#review-dialog').close();const top=window.scrollY;render();window.scrollTo(0,top);notify(storageAvailable?'Review saved in this browser.':'Review kept for this session. Export to save.');
   });
   $('#export-review').addEventListener('click',()=>{
-    const payload={schemaVersion:4,catalogRevision:data.catalogRevision,catalogId:data.catalogId,evidenceDate:data.summary.date,latestEvidenceDate:data.latestEvidenceDate,sourceRevisions:data.revisions,exportedAt:new Date().toISOString(),acceptanceDefaults:{rule:'parity-and-full-qml-evidence',accepted:criteria.filter(c=>savedReviewFor(c.id).status==='default' && defaultReviewStatus(c.id)==='accepted').map(c=>c.id)},reviews,priorReviews};
+    const payload={...reviewEnvelope(),catalogId:data.catalogId,evidenceDate:data.summary.date,latestEvidenceDate:data.latestEvidenceDate,sourceRevisions:data.revisions,exportedAt:new Date().toISOString(),acceptanceDefaults:{rule:'parity-and-full-qml-evidence',accepted:criteria.filter(c=>savedReviewFor(c.id).status==='default' && defaultReviewStatus(c.id)==='accepted').map(c=>c.id)}};
     const blob=new Blob([JSON.stringify(payload,null,2)+'\n'],{type:'application/json'});
     const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='bitcoin-gui-review-'+new Date().toISOString().slice(0,10)+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);notify('Review exported.');
   });
@@ -508,9 +536,9 @@
       const payload=JSON.parse(await file.text());
       if(![1,2,3,4].includes(payload.schemaVersion))throw new Error('This review file version is not supported.');
       if(payload.catalogId!==data.catalogId)throw new Error('This review belongs to a different evidence snapshot.');
-      if(payload.schemaVersion===4 && payload.catalogRevision!==data.catalogRevision)throw new Error('This review belongs to a different catalog revision.');
-      const incoming=validateReviews(payload.reviews,payload.schemaVersion===4);
-      const prior=payload.schemaVersion===4?validateReviews(payload.priorReviews):incoming;
+      const envelope=payload.schemaVersion===4?validateEnvelope(payload):null;
+      const incoming=envelope?envelope.reviews:validateReviews(payload.reviews);
+      const prior=envelope?envelope.priorReviews:incoming;
       let conflicts=0;
       function mergeRecords(target, records) {
         for(const [id,value] of Object.entries(records)) {
@@ -518,7 +546,7 @@
           target[id]=value;
         }
       }
-      if(payload.schemaVersion===4) { mergeRecords(reviews,incoming); mergeRecords(priorReviews,prior); }
+      if(envelope) { mergeRecords(reviews,incoming); mergeRecords(priorReviews,prior); mergeRecords(retiredReviews,envelope.retiredReviews); }
       else {
         for(const [id,value] of Object.entries(prior)) {
           if((reviews[id] && JSON.stringify(reviews[id])!==JSON.stringify(value)) || (priorReviews[id] && JSON.stringify(priorReviews[id])!==JSON.stringify(value))){conflicts++;continue;}

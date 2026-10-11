@@ -1,6 +1,6 @@
 # GUI-QML acceptance criteria
 
-183 current subfeatures across 34 feature groups. All duplicate-audit findings are implemented; the original IDs, evidence and review history remain available.
+182 current subfeatures across 34 feature groups. All duplicate-audit findings are implemented; the original IDs, evidence and review history remain available.
 
 [Implemented audit](catalog-audit.md) · [Original evidence index](gui-feature-evidence/README.md)
 
@@ -272,7 +272,7 @@
 | F24.S01 | Keep the application accessible while its main window is hidden. | parity |
 | F24.S05 | Choose whether to display a tray icon on supported desktops. | parity |
 
-**Related criteria, counted in their owning groups:** F26.S03 — Keep the node running while the main window is hidden, minimized, or closed, where supported.; F28.S01 — Move between wallet balances, payments, and transaction history.; F28.S03 — Access address records, message signing and verification, application settings, and node diagnostics.; F27.S05 — Quit the application and shut down the node cleanly.
+**Related criteria, counted in their owning groups:** F26.S03 — Keep the node running while the main window is hidden, minimized, or closed, where supported.; F28.S01 — Move between wallet balances, payments, and transaction history.; F27.S05 — Quit the application and shut down the node cleanly.
 
 ## F25 — Desktop Notifications
 
@@ -313,7 +313,6 @@
 | Criterion | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F28.S01 | Move between wallet balances, payments, and transaction history. | parity |
-| F28.S03 | Access address records, message signing and verification, application settings, and node diagnostics. | parity |
 | F28.S05 | Use keyboard shortcuts for navigation and common actions. | parity |
 
 **Related criteria, counted in their owning groups:** F02.S03 — Choose which wallet to use.

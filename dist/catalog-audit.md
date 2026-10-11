@@ -1,6 +1,6 @@
 # Implemented subfeature audit
 
-2026-10-11 · All 203 original subfeatures across 34 groups reviewed. The current catalog has **183 criteria**, with 20 repeated or broad rows retired.
+2026-10-11 · All 203 original subfeatures across 34 groups reviewed. The current catalog has **182 criteria**, with 21 repeated, broad or unnecessary rows retired.
 
 Compare user outcomes across all groups, asking whether one outcome can work while another fails. Shared screenshots, source modules or controls alone do not establish a duplicate. Preserve distinct wallet types, security requirements, lifecycle stages and interoperability checks.
 
@@ -9,6 +9,12 @@ Compare user outcomes across all groups, asking whether one outcome can work whi
 Evidence, source modules, tests and original IDs remain available. A merged outcome keeps its incomplete proof visible. Narrowed outcomes are assessed for their remaining scope. Old links redirect to the current criterion or show the several outcomes that replaced a broad row.
 
 Earlier review records remain in exports and Review details. Conflicting decisions require follow-up. Acceptance of a broad old row is not copied onto several separate outcomes. Requirements inherited from an old group are preserved when the outcome moves to another group.
+
+## Removed criterion — [F28.S03](#feature/F28?item=F28.S03)
+
+Removed as an implementation detail: the individual address-book, message-signing, settings and diagnostic outcomes are already assessed in their own feature groups. Accessing all of them through one interface is not a separate acceptance criterion.
+
+Earlier notes and evidence are retained as history. Its review and scope are not transferred to the individual task criteria.
 
 ## Applied merges
 
@@ -180,9 +186,9 @@ The general startup/window preference row overlaps named outcomes for login star
 
 Tray access and general quick-access wording repeat navigation to payments, records and diagnostics. The tray location alone does not add a user goal.
 
-**Implemented:** Removed generic quick-access rows; concrete task navigation and keyboard access remain explicit.
+**Implemented:** Removed generic quick-access rows and F28.S03, which duplicated access to tasks assessed in their own feature groups. Wallet-view navigation and keyboard access remain explicit; no combined navigation scenario is required.
 
-**Review now:** [F28.S01](#feature/F28?item=F28.S01) · [F28.S03](#feature/F28?item=F28.S03) · [F28.S05](#feature/F28?item=F28.S05)
+**Review now:** [F28.S01](#feature/F28?item=F28.S01) · [F28.S05](#feature/F28?item=F28.S05)
 
 ### O08 — Fee estimate and confirmation timing
 
@@ -587,7 +593,7 @@ Every original criterion appears below, with its current review destination. Rel
 | --- | --- | --- | --- |
 | [F24.S01](#feature/F24?item=F24.S01) | Keep the application accessible while its main window is hidden. | [F24.S01](#feature/F24?item=F24.S01) | Kept |
 | [F24.S02](#feature/F24?item=F24.S02) | Control application visibility without interrupting the node. | [F26.S03](#feature/F26?item=F26.S03) | D07 |
-| [F24.S03](#feature/F24?item=F24.S03) | Quickly access payments, message signing and verification, settings, and diagnostics. | [F28.S01](#feature/F28?item=F28.S01), [F28.S03](#feature/F28?item=F28.S03) | O07 |
+| [F24.S03](#feature/F24?item=F24.S03) | Quickly access payments, message signing and verification, settings, and diagnostics. | [F28.S01](#feature/F28?item=F28.S01) | O07 |
 | [F24.S04](#feature/F24?item=F24.S04) | Quit the application. | [F27.S05](#feature/F27?item=F27.S05) | D08 |
 | [F24.S05](#feature/F24?item=F24.S05) | Choose whether to display a tray icon on supported desktops. | [F24.S05](#feature/F24?item=F24.S05) | O06 |
 
@@ -630,8 +636,8 @@ Every original criterion appears below, with its current review destination. Rel
 | --- | --- | --- | --- |
 | [F28.S01](#feature/F28?item=F28.S01) | Move between wallet balances, payments, and transaction history. | [F28.S01](#feature/F28?item=F28.S01) | O07 |
 | [F28.S02](#feature/F28?item=F28.S02) | Switch between available wallets. | [F02.S03](#feature/F02?item=F02.S03) | D04 |
-| [F28.S03](#feature/F28?item=F28.S03) | Access address records and node diagnostics. | [F28.S03](#feature/F28?item=F28.S03) | O07 |
-| [F28.S04](#feature/F28?item=F28.S04) | Reach common wallet and application tasks quickly. | [F28.S01](#feature/F28?item=F28.S01), [F28.S03](#feature/F28?item=F28.S03) | O07 |
+| [F28.S03](#feature/F28?item=F28.S03) | Access address records and node diagnostics. | Removed — implementation detail | O07 |
+| [F28.S04](#feature/F28?item=F28.S04) | Reach common wallet and application tasks quickly. | [F28.S01](#feature/F28?item=F28.S01) | O07 |
 | [F28.S05](#feature/F28?item=F28.S05) | Use keyboard shortcuts for navigation and common actions. | [F28.S05](#feature/F28?item=F28.S05) | Kept |
 
 ### F29 — View Application Status

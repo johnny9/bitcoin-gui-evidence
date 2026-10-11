@@ -25,6 +25,11 @@ def apply_catalog_audit(data, audit):
         if not group['conclusion'] or any(rows[sid]['groupId'] != group['id'] for sid in group['reviewedCriteria']):
             raise ValueError('Invalid audit group: ' + group['id'])
     replacements = deepcopy(audit['replacements'])
+    removals = audit.get('removals', {})
+    for sid, removal in removals.items():
+        if sid not in rows or sid in replacements or not removal['reason'] or not set(removal['relatedGroups']).issubset(g['id'] for g in data['groups']):
+            raise ValueError('Invalid criterion removal: ' + sid)
+        replacements[sid] = []
     for merge in audit['merges']:
         if not merge['sources'] or merge['target'] in merge['sources']:
             raise ValueError('Invalid catalog merge')
@@ -33,8 +38,8 @@ def apply_catalog_audit(data, audit):
                 raise ValueError('Criterion retired more than once: ' + sid)
             replacements[sid] = [merge['target']]
     active = rows.keys() - replacements.keys()
-    if not set(replacements).issubset(rows) or any(not ids or len(ids) != len(set(ids)) or not set(ids).issubset(active) for ids in replacements.values()):
-        raise ValueError('Every retired criterion must lead directly to current criteria')
+    if not set(replacements).issubset(rows) or any((not ids and sid not in removals) or len(ids) != len(set(ids)) or not set(ids).issubset(active) for sid, ids in replacements.items()):
+        raise ValueError('Retired criteria need current destinations or an explicit removal')
     targets = {sid: replacements.get(sid, [sid]) for sid in rows}
     for sid, ids in audit['scopeTransfers'].items():
         if sid not in active or sid not in ids or not set(ids).issubset(active):
@@ -115,10 +120,13 @@ def audit_markdown(data):
     def link(sid):
         return f'[{sid}](#feature/{sid.split(".")[0]}?item={sid})'
 
-    lines = ['# Implemented subfeature audit', '', f'{audit["date"]} · All {audit["reviewedCount"]} original subfeatures across {len(groups)} groups reviewed. The current catalog has **{audit["currentCount"]} criteria**, with {audit["retiredCount"]} repeated or broad rows retired.', '', audit['method'], '',
+    lines = ['# Implemented subfeature audit', '', f'{audit["date"]} · All {audit["reviewedCount"]} original subfeatures across {len(groups)} groups reviewed. The current catalog has **{audit["currentCount"]} criteria**, with {audit["retiredCount"]} repeated, broad or unnecessary rows retired.', '', audit['method'], '',
              '**All findings applied:** the original export merge, nine further duplicate findings and twelve overlapping scopes have been implemented. Eight reviewed distinctions remain separate. These edits change how outcomes are counted and reviewed; they do not implement application features.', '',
              'Evidence, source modules, tests and original IDs remain available. A merged outcome keeps its incomplete proof visible. Narrowed outcomes are assessed for their remaining scope. Old links redirect to the current criterion or show the several outcomes that replaced a broad row.', '',
              'Earlier review records remain in exports and Review details. Conflicting decisions require follow-up. Acceptance of a broad old row is not copied onto several separate outcomes. Requirements inherited from an old group are preserved when the outcome moves to another group.', '']
+    for sid, removal in audit.get('removals', {}).items():
+        lines.extend(['## Removed criterion — ' + link(sid), '', removal['reason'], '',
+                      'Earlier notes and evidence are retained as history. Its review and scope are not transferred to the individual task criteria.', ''])
     for title, kinds in [('Applied merges', ('merged', 'duplicate')), ('Applied scope changes', ('overlap',)), ('Distinct outcomes retained', ('distinct',))]:
         lines.extend([f'## {title}', ''])
         for finding in audit['findings']:
@@ -130,7 +138,8 @@ def audit_markdown(data):
         lines.extend([f'### {group["id"]} — {groups[group["id"]]["name"]}', '', '| Original criterion | Original user outcome | Review now | Findings |', '| --- | --- | --- | --- |'])
         for sid in group['reviewedCriteria']:
             findings = [f['id'] for f in audit['findings'] if sid in f['criteria']]
-            lines.append(f'| {link(sid)} | {original[sid]["intent"]} | {", ".join(link(target) for target in data["sourceTargets"][sid])} | {", ".join(findings) or "Kept"} |')
+            destination = ', '.join(link(target) for target in data['sourceTargets'][sid]) or 'Removed — implementation detail'
+            lines.append(f'| {link(sid)} | {original[sid]["intent"]} | {destination} | {", ".join(findings) or "Kept"} |')
         lines.append('')
     return '\n'.join(lines).rstrip() + '\n'
 

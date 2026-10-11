@@ -427,10 +427,9 @@
       "status": "applied",
       "outcomes": [
         "F28.S01",
-        "F28.S03",
         "F28.S05"
       ],
-      "resolution": "Removed generic quick-access rows; concrete task navigation and keyboard access remain explicit."
+      "resolution": "Removed generic quick-access rows and F28.S03, which duplicated access to tasks assessed in their own feature groups. Wallet-view navigation and keyboard access remain explicit; no combined navigation scenario is required."
     },
     {
       "id": "O08",
@@ -1037,7 +1036,7 @@
         "F28.S04",
         "F28.S05"
       ],
-      "conclusion": "Wallet switching is repeated; broad quick access overlaps concrete navigation; keyboard access remains independently useful."
+      "conclusion": "Wallet switching is repeated; general task access is an implementation detail covered by the individual task criteria. Wallet-view navigation and keyboard access remain independently useful."
     },
     {
       "id": "F29",
@@ -1105,7 +1104,7 @@
       "conclusion": "Rediscovery, progress reporting and cancellation are distinct rescan outcomes."
     }
   ],
-  "revision": "2026-10-11-all-findings",
+  "revision": "2026-10-11-remove-navigation-aggregate",
   "status": "implemented",
   "replacements": {
     "F29.S02": [
@@ -1119,12 +1118,10 @@
       "F24.S05"
     ],
     "F24.S03": [
-      "F28.S01",
-      "F28.S03"
+      "F28.S01"
     ],
     "F28.S04": [
-      "F28.S01",
-      "F28.S03"
+      "F28.S01"
     ]
   },
   "scopeTransfers": {
@@ -1175,7 +1172,7 @@
     },
     "F29.S04": {
       "reviewMode": "reassess",
-      "intent": "Check the wallet’s key-generation status.",
+      "intent": "Check the wallet\u2019s key-generation status.",
       "implementation": {
         "status": "not-implemented",
         "reason": "Key-generation status is not displayed. Encryption and lock status are assessed separately under F06.S05."
@@ -1215,7 +1212,7 @@
         "F07.S04"
       ],
       "checks": [
-        "Observe real peer synchronization and compare the displayed progress with the node’s chain state.",
+        "Observe real peer synchronization and compare the displayed progress with the node\u2019s chain state.",
         "Check the remaining-time estimate after it settles and when throughput changes; a separate processing-rate number is an implementation difference."
       ],
       "proofFrom": [
@@ -1245,33 +1242,10 @@
       "reviewMode": "equivalent",
       "related": [
         "F02.S03",
-        "F28.S03",
         "F28.S05"
       ],
       "proofFrom": [
         "F28.S04"
-      ]
-    },
-    "F28.S03": {
-      "reviewMode": "reassess",
-      "intent": "Access address records, message signing and verification, application settings, and node diagnostics.",
-      "qml": {
-        "detail": "The recorded desktop scenario opens address records and node diagnostics, while signing and verification scenarios open their forms. A targeted navigation scenario covering all named tasks has not yet been recorded.",
-        "status": "limited"
-      },
-      "related": [
-        "F28.S01",
-        "F28.S05",
-        "F19.S01",
-        "F19.S02"
-      ],
-      "checks": [
-        "Reach each named task through the application and confirm it is usable. Shortcut location is not an additional criterion."
-      ],
-      "proofFrom": [
-        "F19.S01",
-        "F19.S02",
-        "F24.S03"
       ]
     },
     "F26.S05": {
@@ -1342,6 +1316,20 @@
       "checks": [
         "Verified: a real incoming mempool payment has a visible Pending amount; unpaid requests are excluded, and confirmation moves the payment into the available balance.",
         "Remaining failure: the wallet balance must update when a mining reward matures. The recorded regression leaves the display at 1.625 BTC while RPC reports 51.625 BTC."
+      ]
+    }
+  },
+  "compatibleReviewRevisions": [
+    "2026-10-11-all-findings"
+  ],
+  "removals": {
+    "F28.S03": {
+      "reason": "Removed as an implementation detail: the individual address-book, message-signing, settings and diagnostic outcomes are already assessed in their own feature groups. Accessing all of them through one interface is not a separate acceptance criterion.",
+      "relatedGroups": [
+        "F18",
+        "F19",
+        "F23",
+        "F22"
       ]
     }
   }

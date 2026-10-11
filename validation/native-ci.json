@@ -1,5 +1,5 @@
 {
-  "baseRevision": "f6034f09a62d0d5c6e249ee6065ebe412f5a3d9c",
+  "baseRevision": "51091d3cc7a0be473c42161db1968b09cfe21028",
   "checks": [
     {
       "command": "./ci/lint.py",
@@ -20,7 +20,7 @@
       "stderr": "/bin/sh: 1: ./ci/test_run_all.sh: not found\n"
     }
   ],
-  "scope": "Static acceptance website only. Application source, binary, tests and archived evidence unchanged. Existing test records and pinned QML/hooks were reviewed; no new application, hardware or OS test run. Native rebuild, sanitizer and IPC-enabled lifecycle coverage are not claimed.",
+  "scope": "Static website criterion removal and saved-review migration only. No application source, tests, binary or archived evidence changed. Native rebuild, sanitizer and IPC-enabled lifecycle validation are blocked by absent CI entry scripts.",
   "branchAfterLint": "main",
-  "revisionAfterLint": "f6034f09a62d0d5c6e249ee6065ebe412f5a3d9c"
+  "revisionAfterLint": "51091d3cc7a0be473c42161db1968b09cfe21028"
 }
