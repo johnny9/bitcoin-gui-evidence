@@ -16,8 +16,8 @@
   "catalogId": "b4b1026b74ad8bf0a1628c9889b82193d33d210c3aa0170e94783f371fe15c0b",
   "hardwarePlatformReviewed": 11,
   "screenshotsAccepted": 1,
-  "defaultAccepted": 126,
-  "remainingParityProofGaps": 8,
+  "defaultAccepted": 127,
+  "remainingParityProofGaps": 7,
   "groupParity": {
     "parity": 18,
     "partial": 13,
@@ -28,12 +28,25 @@
     "not-implemented": 35,
     "partial": 13
   },
-  "baseRevision": "5f2fcd65551dfe5ee11ba3120ce1d37b2b2ec528",
+  "baseRevision": "d93a076c80fb0970a6e8e253747e0e7fdd2f0634",
   "unchangedPriorEvidenceFiles": 1740,
   "newFunctionalScripts": 0,
   "newSelectedCaptures": 0,
-  "visualAcceptanceCriteria": [
-    "F12.S04"
+  "narrowedCriteria": [
+    "F18.S05"
   ],
-  "implementationAndRawEvidenceRatingsUnchanged": true
+  "originalRecordsUnchanged": true,
+  "addressCopyComponentProof": {
+    "sourceRevision": "a91f4b4774f25de061fe1a7c132a91ddde117fca",
+    "test": "AddressComponents::test_addressLabel_passive_mode_does_not_copy_or_highlight",
+    "log": "dist/gui-feature-evidence/logs/qml-quick-tests.log",
+    "scope": "The interactive branch clicks the truncated AddressLabel and verifies copiedText equals the complete address using an injected clipboard. No new end-to-end clipboard run.",
+    "sourceHashes": {
+      "qml/pages/wallet/AddressRow.qml": "03d562cfabcddf8dc0e73828f31a7b83b67b9ba05a766afef5d8449a98f1dbf2",
+      "qml/pages/wallet/AddressDetails.qml": "6a75616ed22920340cff612104d66e81dbe21ec78a48bd33881af951001be368",
+      "qml/components/AddressLabel.qml": "cec492329c075f22eff7b613cc179d4275270190a1ff2a649d4e89437ec881a9",
+      "qml/clipboard.h": "2db2033611246676cc160554a551218dcc2498be66680aef9d2eb2763af82dd1",
+      "test/qml/tst_address_components.qml": "443ac4013dae8779f5452fe0a7ba7292759b63e6f5da37b1499fd44a4afb4f51"
+    }
+  }
 }

@@ -197,7 +197,7 @@
 | F18.S02 | Add, update, and remove saved recipients. | not-implemented |
 | F18.S03 | Label receiving addresses. | parity |
 | F18.S04 | Search and sort saved addresses by address or label. | not-implemented |
-| F18.S05 | Copy saved addresses and labels to the clipboard. | parity |
+| F18.S05 | Copy saved addresses to the clipboard. | parity |
 | F18.S06 | Export address records as CSV. | not-implemented |
 
 ## F19 — Sign and Verify Messages

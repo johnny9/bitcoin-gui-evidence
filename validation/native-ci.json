@@ -1,5 +1,5 @@
 {
-  "baseRevision": "5f2fcd65551dfe5ee11ba3120ce1d37b2b2ec528",
+  "baseRevision": "d93a076c80fb0970a6e8e253747e0e7fdd2f0634",
   "checks": [
     {
       "command": "./ci/lint.py",
@@ -20,7 +20,7 @@
       "stderr": "/bin/sh: 1: ./ci/test_run_all.sh: not found\n"
     }
   ],
-  "scope": "Static website acceptance of an existing screenshot. Application source, binary, tests and archived evidence unchanged; no new application run. Native rebuild, sanitizer and IPC lifecycle validation blocked by absent CI scripts.",
+  "scope": "Static website requirement narrowing using existing component proof. Application source, binaries, tests and archived evidence unchanged; no new application run. Native rebuild, sanitizer and IPC lifecycle validation unavailable because CI scripts are absent.",
   "branchAfterLint": "main",
-  "revisionAfterLint": "5f2fcd65551dfe5ee11ba3120ce1d37b2b2ec528"
+  "revisionAfterLint": "d93a076c80fb0970a6e8e253747e0e7fdd2f0634"
 }

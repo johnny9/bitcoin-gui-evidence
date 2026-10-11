@@ -165,9 +165,9 @@ def main():
     assert not any('qmlReview' in by_id[sid] for sid in ('F15.S03', 'F25.S01', 'F27.S01', 'F27.S08', 'F31.S04', 'F07.S01', 'F23.S01'))
     sufficient = lambda c: not c['hasFailure'] and bool(c.get('qmlReview') or
         (c['applications']['qml']['status'] == 'assertions' and c['applications']['qml']['captures']))
-    assert sum(sufficient(c) for c in criteria) == 126
-    assert sum(sufficient(c) and c['implementation']['status'] == 'parity' for c in criteria) == 126
-    assert sum(not sufficient(c) and c['implementation']['status'] == 'parity' for c in criteria) == 8
+    assert sum(sufficient(c) for c in criteria) == 127
+    assert sum(sufficient(c) and c['implementation']['status'] == 'parity' for c in criteria) == 127
+    assert sum(not sufficient(c) and c['implementation']['status'] == 'parity' for c in criteria) == 7
     # A stale assessment must not override a new failure or an implementation gap.
     for change in ({'hasFailure': True}, {'implementation': {'status': 'partial'}}):
         rejected = copy.deepcopy(data)
@@ -348,15 +348,15 @@ def main():
         assert all(p.startswith('reruns/20261010-wallet-rbf/') for p in historical[sid]['applications']['qml']['captures'])
         assert not historical[sid]['hasFailure']
     assert data['summary']['qml_functional'] == {'passed':40, 'failed':2}
-    assert data['summary']['criteria_statuses']['qml']['Automated evidence collected'] == 114
-    assert data['summary']['criteria_statuses']['qml']['Partial / limited evidence'] == 34
+    assert data['summary']['criteria_statuses']['qml']['Automated evidence collected'] == 115
+    assert data['summary']['criteria_statuses']['qml']['Partial / limited evidence'] == 33
     assert sum(data['summary']['criteria_statuses']['qml'].values()) == 182
     for script in (ROOT / 'scripts').glob('*.py'):
         ast.parse(script.read_text())
     report = {'status':'passed', 'groups':34, 'criteria':182, 'auditedOriginalCriteria':203, 'retiredCriteria':21, 'appliedFindings':22, 'retainedDistinctions':8, 'originalCapturesVerified':116,
               'rerunCapturesVerified':rerun_capture_count, 'collectionCapturesVerified':collection_capture_count,
               'widgetsCriteriaWithoutCaptures':9, 'historicalWidgetsCriteriaWithoutCaptures':11, 'localLinkTargets':len(local_links), 'unresolvedFailures':2, 'catalogId':data['catalogId'],
-              'hardwarePlatformReviewed':11, 'screenshotsAccepted':1, 'defaultAccepted':126, 'remainingParityProofGaps':8,
+              'hardwarePlatformReviewed':11, 'screenshotsAccepted':1, 'defaultAccepted':127, 'remainingParityProofGaps':7,
               'groupParity': dict(Counter(g['implementation']['status'] for g in data['groups'])),
               'subfeatureParity': dict(Counter(c['implementation']['status'] for c in criteria))}
     print(json.dumps(report, indent=2))

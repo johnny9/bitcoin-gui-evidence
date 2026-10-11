@@ -388,7 +388,7 @@
     },
     "F18.S05": {
       "status": "parity",
-      "reason": "Existing addresses can be copied, and editable address notes use a selectable text field. The clipboard goal is available for existing records; missing sending-contact management is assessed separately."
+      "reason": "Saved addresses can be copied from the address list or details view. Copying labels is outside this requirement; sending-contact management is assessed separately."
     },
     "F18.S06": {
       "status": "not-implemented",

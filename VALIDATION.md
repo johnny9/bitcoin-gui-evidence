@@ -1,5 +1,17 @@
 # Static site validation
 
+## October 11, 2026 — accept copying saved addresses
+
+Validated changes based on site revision `d93a076c80fb0970a6e8e253747e0e7fdd2f0634`; [tested file hashes](validation/tested-files.json) identify the resulting data and checks.
+
+- Narrowed **F18.S05** to **Copy saved addresses to the clipboard** as requested. Copying labels is excluded. Existing evidence now supports the complete requirement, so it defaults to Accepted and Full evidence. The earlier combined requirement and label-copy gap remain in the expandable historical record. Existing personal decisions and notes are preserved.
+- The pinned `AddressComponents::test_addressLabel_passive_mode_does_not_copy_or_highlight` test includes an interactive branch: it clicks a shortened address display and checks that the injected clipboard receives the complete address. The recorded component-suite log contains its passing result. `AddressRow.qml` and `AddressDetails.qml` use this `AddressLabel`; `qml/clipboard.h` connects it to the system clipboard. The existing saved-address screenshot shows the reachable view. [Source hashes, test name, recorded result and exact scope](validation/evidence-integrity.json). This is component proof with an injected clipboard; no new end-to-end clipboard run is claimed.
+- The catalog retains **182 subfeatures**, now **127 accepted by default**, **7 parity evidence gaps**, and **48 implementation gaps**. Only F18.S05's current scope and supporting assessment changed. All original criterion records, other current criteria, functional results, 1,740 tracked archived evidence files, and 221 selected images remain unchanged. No application code or binary changed.
+- All **64 existing browser checks pass**, including acceptance/evidence filters and saved review overrides. Updated expected counts account for the newly accepted criterion. Build reproducibility, evidence integrity and whitespace checks pass; the updated card was inspected at desktop and mobile widths.
+- Native lint, clang-tidy and ASan commands were attempted from this standalone site checkout and returned 127 because their CI scripts are absent. [Command results](validation/native-ci.json) record the branch/revision after lint. No native, sanitizer or IPC GUI lifecycle validation is claimed.
+
+[Browser outcomes](validation/browser-results.json) · [Evidence integrity](validation/evidence-integrity.json) · [Tested file hashes](validation/tested-files.json)
+
 ## October 11, 2026 — accept the coin-viewer screenshot
 
 Validated changes based on site revision `5f2fcd65551dfe5ee11ba3120ce1d37b2b2ec528`; [tested file hashes](validation/tested-files.json) identify the resulting source.

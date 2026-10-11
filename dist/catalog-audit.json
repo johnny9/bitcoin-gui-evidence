@@ -908,7 +908,7 @@
         "F18.S05",
         "F18.S06"
       ],
-      "conclusion": "Record management, receive labels, search, clipboard and CSV remain distinct; labels in payment/history workflows have different contexts."
+      "conclusion": "Record management, receive labels, search, clipboard and CSV remain distinct; labels in payment/history workflows have different contexts. Following review, F18.S05 requires copying saved addresses only; label copying is excluded. Existing component assertions and the saved-address screenshot support acceptance."
     },
     {
       "id": "F19",
@@ -1316,6 +1316,21 @@
       "checks": [
         "Verified: a real incoming mempool payment has a visible Pending amount; unpaid requests are excluded, and confirmation moves the payment into the available balance.",
         "Remaining failure: the wallet balance must update when a mining reward matures. The recorded regression leaves the display at 1.625 BTC while RPC reports 51.625 BTC."
+      ]
+    },
+    "F18.S05": {
+      "reviewMode": "equivalent",
+      "intent": "Copy saved addresses to the clipboard.",
+      "implementation": {
+        "status": "parity",
+        "reason": "Saved addresses can be copied from the address list or details view. Copying labels is outside this requirement; sending-contact management is assessed separately."
+      },
+      "qml": {
+        "status": "assertions",
+        "detail": "Copying labels is no longer required. The saved-address list and details view use AddressLabel, whose existing passing component test clicks the interactive control and verifies that its clipboard adapter receives the complete address, including when the display is shortened. The recorded screenshot shows the saved-address workflow. This is component-level proof using an injected clipboard; no new end-to-end desktop clipboard run is claimed."
+      },
+      "checks": [
+        "Copy a saved address to the clipboard, preserving the complete address even when its display is shortened."
       ]
     }
   },
