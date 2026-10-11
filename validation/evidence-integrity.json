@@ -30,7 +30,7 @@
     "not-implemented": 35,
     "partial": 14
   },
-  "baseRevision": "180c4486f8679c6ac6355d9c5bc548dd5d92c42b",
+  "baseRevision": "9c03dbf057439d15f3919e92fadbcc8f4064454f",
   "unchangedPriorEvidenceFiles": 1740,
   "originalRecordsUnchanged": true,
   "newFunctionalScripts": 0,
@@ -40,5 +40,5 @@
     "implementation",
     "accepted"
   ],
-  "presentationScope": "Incomplete features summary label; catalog data and saved-review schema unchanged"
+  "presentationScope": "F05.S03 title changed to Export watch-only wallet; evidence, assessments and saved-review schema unchanged"
 }

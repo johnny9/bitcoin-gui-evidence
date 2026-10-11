@@ -47,7 +47,7 @@
 | Subfeature | User outcome | GUI-QML implementation |
 | --- | --- | --- |
 | F05.S01 | Export a watch-only copy of a wallet for monitoring without spending access. | not-implemented |
-| F05.S03 | Transfer wallet monitoring to another node. | not-implemented |
+| F05.S03 | Export watch-only wallet. | not-implemented |
 
 ## F06 — Encrypt Wallet and Manage Passphrase
 

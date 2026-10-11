@@ -1147,6 +1147,9 @@
     ]
   },
   "rewrites": {
+    "F05.S03": {
+      "intent": "Export watch-only wallet."
+    },
     "F15.S03": {
       "reviewMode": "reassess",
       "implementation": {

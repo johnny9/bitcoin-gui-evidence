@@ -1,5 +1,14 @@
 # Static site validation
 
+## October 11, 2026 — watch-only export wording
+
+Validated changes based on site revision `9c03dbf057439d15f3919e92fadbcc8f4064454f`; [tested file hashes](validation/tested-files.json) identify the resulting source.
+
+- Renamed F05.S03 from **Transfer wallet monitoring to another node** to **Export watch-only wallet**, using the existing catalog wording override. The current card, search result, review dialog and Markdown catalog use the simplified label. Historical evidence retains its original wording and the original phrase remains searchable.
+- Build, evidence integrity and whitespace checks pass. Desktop and mobile F05.S03 previews were inspected. A complete data comparison confirms that only the label, its search text and its override changed; source modules, captures, tests, parity ratings, review identity and all archived evidence are unchanged.
+- The existing full browser suite runs in the Pages workflow before deployment. No application tests were rerun for this wording edit.
+- Native lint, clang-tidy and ASan commands returned 127 because this standalone website checkout lacks their CI entry scripts. [Command results](validation/native-ci.json) record the tested revision and branch after lint; no native or sanitizer pass is claimed.
+
 ## October 11, 2026 — incomplete features label
 
 Validated changes based on site revision `180c4486f8679c6ac6355d9c5bc548dd5d92c42b`; [tested file hashes](validation/tested-files.json) identify the resulting source.

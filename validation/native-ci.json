@@ -1,5 +1,5 @@
 {
-  "baseRevision": "180c4486f8679c6ac6355d9c5bc548dd5d92c42b",
+  "baseRevision": "9c03dbf057439d15f3919e92fadbcc8f4064454f",
   "checks": [
     {
       "command": "./ci/lint.py",
@@ -20,7 +20,7 @@
       "stderr": "/bin/sh: 1: ./ci/test_run_all.sh: not found\n"
     }
   ],
-  "scope": "Static website label update: Incomplete features. Native CI, sanitizer and IPC lifecycle scripts are absent from this standalone website checkout.",
+  "scope": "Static website wording update: Export watch-only wallet. Native CI, sanitizer and IPC lifecycle scripts are absent from this standalone website checkout.",
   "branchAfterLint": "main",
-  "revisionAfterLint": "180c4486f8679c6ac6355d9c5bc548dd5d92c42b"
+  "revisionAfterLint": "9c03dbf057439d15f3919e92fadbcc8f4064454f"
 }
