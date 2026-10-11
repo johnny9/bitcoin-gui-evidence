@@ -1,5 +1,18 @@
 # Static site validation
 
+## October 11, 2026 — independent review and acceptance states
+
+Validated changes based on site revision `249b4b3f8018d597eb4443038a0a20e1962cc3a7`; [tested file hashes](validation/tested-files.json) identify the resulting source.
+
+- Separated review progress (Not reviewed, Reviewed, Needs follow-up) from acceptance (Use evidence default, Accepted, Not accepted). The quick checkmark now toggles Reviewed only. Cards show both states, the dialog has separate controls, and the independent filters can be combined. Accepted totals use only acceptance; notes and merge/release scope preserve both choices.
+- Added schema v5 with independent `status` and `acceptance` fields. Existing v1–v4 data migrates automatically; older files still import. Older Reviewed and Not reviewed choices keep review progress while acceptance uses the evidence default. Explicit old acceptances and follow-up holds retain their acceptance effect. Notes, scope, original review history, removed records and conflict handling are preserved. The new storage key prevents older tabs from overwriting migrated decisions. Old acceptance-filter links map to the new acceptance filter.
+- **67 browser checks passed**, including new regressions for the two older F17 reviews, combined filters, acceptance overrides, storage migration and export/import round trips. The final stricter rejection of malformed acceptance/review values was checked by rerunning the scoped import/storage test. JavaScript syntax, build, evidence integrity and whitespace checks passed. The Pages workflow runs the complete suite on the published revision.
+- Independently imported the actual provided review export in a fresh browser. Both F17.S01 and F17.S02 are Reviewed and Accepted using the evidence default; the counts are **182 total, 49 incomplete, 133 accepted**. The original attachment is untouched and remains outside the published site. Desktop/mobile catalog and dialog previews were inspected; the notes field was shortened to keep the separate controls and save button visible on mobile.
+- The complete catalog data bundle, all parity assessments, all 1,740 archived evidence files and all 221 selected captures are byte-for-byte unchanged. No application source or application tests changed.
+- Native lint, clang-tidy and ASan commands returned 127 because this standalone website checkout lacks their CI entry scripts. [Command results](validation/native-ci.json) record the tested revision and branch after lint. No native, sanitizer or IPC-enabled lifecycle pass is claimed.
+
+[Browser and migration outcomes](validation/browser-results.json) · [Evidence integrity](validation/evidence-integrity.json) · [Tested file hashes](validation/tested-files.json)
+
 ## October 11, 2026 — watch-only export wording
 
 Validated changes based on site revision `9c03dbf057439d15f3919e92fadbcc8f4064454f`; [tested file hashes](validation/tested-files.json) identify the resulting source.

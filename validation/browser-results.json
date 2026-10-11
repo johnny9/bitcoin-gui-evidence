@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-11T19:10:57.179Z",
+  "checkedAt": "2026-10-11T19:35:49.320Z",
   "basePath": "/bitcoin-gui-evidence/",
   "outcomes": [
     {
@@ -35,6 +35,18 @@
       "status": "passed"
     },
     {
+      "name": "Version 4 Reviewed decisions migrate and import independently of acceptance, preserving both fee reviews",
+      "status": "passed"
+    },
+    {
+      "name": "Review statuses and quick marks preserve both automatic acceptance and explicit non-acceptance",
+      "status": "passed"
+    },
+    {
+      "name": "Acceptance and review filters combine, persist, fit mobile and migrate older acceptance links",
+      "status": "passed"
+    },
+    {
       "name": "Current review storage ignores older tabs, synchronizes new tabs and rejects invalid imports atomically",
       "status": "passed"
     },
@@ -47,7 +59,7 @@
       "status": "passed"
     },
     {
-      "name": "Evidence defaults survive scope edits and can be overridden and restored",
+      "name": "Evidence defaults survive review and scope edits and can be overridden and restored independently",
       "status": "passed"
     },
     {
@@ -243,7 +255,7 @@
       "status": "passed"
     },
     {
-      "name": "Quick acceptance toggles immediately and preserves notes, scope, focus and scroll",
+      "name": "Quick review toggles independently of acceptance and preserves notes, scope, focus and scroll",
       "status": "passed"
     },
     {
@@ -260,5 +272,33 @@
     }
   ],
   "errors": [],
-  "failedRequests": []
+  "failedRequests": [],
+  "additionalValidation": {
+    "finalImportChecks": {
+      "checkedAt": "2026-10-11T19:36:18.900Z",
+      "basePath": "/bitcoin-gui-evidence/",
+      "outcomes": [
+        {
+          "name": "Current review storage ignores older tabs, synchronizes new tabs and rejects invalid imports atomically",
+          "status": "passed"
+        }
+      ],
+      "errors": [],
+      "failedRequests": []
+    },
+    "uploadedReviewResult": {
+      "counts": [
+        "182",
+        "49",
+        "133"
+      ],
+      "reviewedAcceptedIds": [
+        "F17.S01",
+        "F17.S02"
+      ],
+      "review": "reviewed",
+      "acceptance": "default",
+      "errors": []
+    }
+  }
 }
