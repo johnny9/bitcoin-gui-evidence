@@ -58,6 +58,24 @@ Implementation parity is a rough assessment of whether the main user goal is ach
 
 Each group has an explicit main goal, status, and rationale in [`data/implementation.json`](data/implementation.json), shown on its feature page. Its rating is judged independently of the subfeature tally. Wallet creation can reach parity while standalone blank-wallet creation remains a secondary gap; in-app error dialogs do not fulfill the desktop-notification goal. Each subfeature also has a reasoned assessment. Original detailed comparisons and evidence remain archived, with dated addenda applied to the current view, so reviewers can inspect exact differences and make their own acceptance decisions.
 
+## Subfeature priorities
+
+Every active subfeature has a numeric `priority.rank` and a written `priority.reason`. Lower ranks mean higher priority. These are planning judgments based on fund safety, recovery, essential workflows, user impact and available alternatives. They are separate from implementation status, evidence, acceptance and personal merge/release scope. They do not estimate effort or claim new application test results.
+
+| Rank | Meaning |
+| --- | --- |
+| P1 | Safety and recovery: protect keys and funds, prevent unintended irreversible actions, or restore access. |
+| P2 | Core workflow: dependable everyday use, correct financial information, essential custody, startup and shutdown. |
+| P3 | Important capability: privacy, advanced workflows, accessibility and practical operation. |
+| P4 | Workflow improvement: efficiency, organization, discovery and integrations. |
+| P5 | Convenience: presentation preferences, shortcuts and polish. |
+
+Select **Incomplete features** to open partial and missing subfeatures with the highest priorities first. **Sort by** offers catalog order, priority order, and **Incomplete first, then priority**. The last option puts partial and missing items together before implemented items. Equal ranks use subfeature ID order. In Groups view, sorting uses each group's first matching subfeature under that order, with group ID as the tie-breaker. The priority filter selects individual subfeatures in either view. Filters and sort order are retained in catalog links.
+
+The first P1 gaps are legacy backup recovery, the custom-change ownership warning, and receiving-address verification on a signing device. The change warning is conditional: it must accompany custom-change support, which is also missing. Its rank does not imply that an unsafe custom-change path is currently exposed. Priority order is not a dependency schedule.
+
+Edit [`data/priorities.json`](data/priorities.json) to revise the ranks and reasons. All 182 active IDs are assigned explicitly after the catalog audit; retired IDs use their existing redirects. The builder rejects missing/extra IDs, invalid ranks, empty reasons and a mismatched catalog. Rebuild after editing and commit the generated output too. The [prioritized incomplete backlog](dist/priorities.md), [all priorities as JSON](dist/priorities.json), and [full catalog](dist/current-catalog.md) are available without running the app. The Review guide explains the same scale and offers downloads.
+
 ## Source and regeneration
 
 `src/` contains the application HTML, CSS, JavaScript, and icon. The runtime has no external dependencies. `scripts/build.py` reads the original Markdown and JSON evidence, generates `dist/data.js`, applies the dated addenda in `data/reruns/` and evidence collections in `data/collections/`, and copies the unmodified original records and rerun artifacts into `dist/gui-feature-evidence/`. The original catalog identity is preserved while current results, captures, and explicitly reassessed subfeatures are updated. `data/catalog-audit.json` records the reviewed IDs, findings and approved merges; `scripts/catalog.py` applies them after the evidence addenda and produces the current catalog and audit. Original snapshot files remain unchanged. Retired subfeature IDs have one or several current destinations, while totals count only active subfeatures. Scope-specific assessment overrides live in the audit; original per-subfeature assessments stay archived. Combined proof keeps the least complete evidence level unless a narrowed scope has an explicit, justified reassessment. A rerun can supersede a gallery capture while its original bytes and historical links remain available in the archive. Existing saved reviews and explicit requirements are preserved; parity-based automatic defaults follow the updated assessment.

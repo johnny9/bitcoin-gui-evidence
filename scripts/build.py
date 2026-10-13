@@ -13,6 +13,7 @@ from markdown_it import MarkdownIt
 from catalog import apply_catalog_audit, audit_markdown, current_catalog_markdown
 from hardware_platform import apply_hardware_platform_review, review_markdown
 from visual_review import apply_visual_review
+from priorities import apply_priorities, priorities_markdown
 
 ROOT = Path(__file__).resolve().parents[1]
 DEST = ROOT / 'dist'
@@ -312,6 +313,7 @@ def main():
     hardware_review_text = review_markdown(data)
     data['hardwarePlatformReview']['reportHtml'] = MD.render(hardware_review_text.partition('\n\n')[2])
     apply_visual_review(data, json.loads((ROOT / 'data/visual-acceptance.json').read_text()))
+    apply_priorities(data, json.loads((ROOT / 'data/priorities.json').read_text()))
     if DEST.exists():
         shutil.rmtree(DEST)
     DEST.mkdir()
@@ -324,6 +326,8 @@ def main():
     shutil.copy2(ROOT / 'data/hardware-platform-review.json', DEST / 'hardware-platform-review.json')
     shutil.copy2(ROOT / 'data/visual-acceptance.json', DEST / 'visual-acceptance.json')
     (DEST / 'current-catalog.md').write_text(current_catalog_markdown(data))
+    (DEST / 'priorities.md').write_text(priorities_markdown(data))
+    shutil.copy2(ROOT / 'data/priorities.json', DEST / 'priorities.json')
     (DEST / 'current-assessments.json').write_text(json.dumps({'catalogId': data['catalogId'], 'catalogRevision': data['catalogRevision'], 'criteria': {c['id']: c['implementation'] for g in groups for c in g['criteria']}, 'groups': {g['id']: g['implementation'] for g in groups}}, indent=2) + '\n')
     shutil.copy2(ROOT / 'data/catalog-audit.json', DEST / 'catalog-audit.json')
     shutil.copy2(ROOT / 'data/implementation.json', DEST / 'implementation.json')

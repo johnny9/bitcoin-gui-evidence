@@ -49,6 +49,10 @@ async function main() {
     await page.waitForFunction(expected=>location.hash===expected&&document.querySelector('#main').dataset.route===expected,{},hash);
   }
   async function value(selector,value){await page.select(selector,value);}
+  async function resetFilters(){
+    await page.$eval('[data-action="clear-filters"]',el=>el.scrollIntoView({block:'center'}));
+    await page.click('[data-action="clear-filters"]');
+  }
   async function setRequirement(id, requirement){
     await page.click(`[data-review="${id}"]`);
     await page.select('#review-requirement',requirement);
@@ -85,7 +89,102 @@ async function main() {
     assert.equal(await page.$$eval('[data-acceptance="accepted"]',els=>els.length),133);
     await value('[data-filter="acceptance"]','not-accepted');
     assert.equal(await page.$$eval('.criterion-result',els=>els.length),49);
-    await page.click('[data-action="clear-filters"]');
+    await resetFilters();
+  });
+  await check('Incomplete summary opens all 49 gaps in priority order',async()=>{
+    await go('#catalog?view=groups');
+    await page.click('[data-stat="implementation"]');
+    await page.waitForFunction(()=>document.querySelectorAll('.criterion-result').length===49);
+    assert.equal(await page.$eval('[data-filter="sort"]',el=>el.value),'priority');
+    const ranks=await page.$$eval('.criterion-result .priority-badge',els=>els.map(el=>Number(el.dataset.priority)));
+    assert.equal(ranks.length,49);
+    assert.deepEqual(ranks,[...ranks].sort((a,b)=>a-b));
+    assert.deepEqual(await page.$$eval('.criterion-result:has([data-priority="1"]) .criterion-id',els=>els.map(el=>el.textContent)),['F03.S04','F12.S09','F15.S03']);
+    assert.ok(await page.$$eval('.criterion-result .priority-reason',els=>els.every(el=>el.textContent.trim().length>0)));
+    await page.screenshot({path:output+'/priorities-desktop.png'});
+  });
+  await check('Priority filters combine with gaps, search, area and evidence and survive reload',async()=>{
+    await value('[data-filter="priority"]','1');
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),3);
+    await page.click('[data-area="payments"]');
+    assert.deepEqual(await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent)),['F12.S09','F15.S03']);
+    await value('[data-filter="evidence"]','partial');
+    await page.type('#catalog-search','F15.S03');
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),1);
+    await page.reload({waitUntil:'networkidle0'});
+    assert.equal(await page.$eval('[data-filter="priority"]',el=>el.value),'1');
+    assert.equal(await page.$eval('[data-filter="sort"]',el=>el.value),'priority');
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),1);
+    await value('[data-filter="priority"]','5');
+    assert.ok(await page.$('.empty-state'));
+    await resetFilters();
+    assert.equal(await page.$eval('[data-filter="priority"]',el=>el.value),'any');
+    assert.equal(await page.$eval('[data-filter="sort"]',el=>el.value),'catalog');
+    assert.equal(await page.$$eval('.group-card',els=>els.length),34);
+  });
+  await check('Incomplete-first sorting keeps both gap states together and uses stable ID ties',async()=>{
+    await go('#catalog?view=criteria&sort=incomplete');
+    const ids=await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent));
+    const rows=await page.evaluate(()=>window.REVIEW_EVIDENCE.groups.flatMap(g=>g.criteria).map(c=>({id:c.id,rank:c.priority.rank,status:c.implementation.status})));
+    const byId=new Map(rows.map(c=>[c.id,c]));
+    assert.equal(ids.length,182);
+    assert.ok(ids.slice(0,49).every(id=>byId.get(id).status!=='parity'));
+    assert.ok(ids.slice(49).every(id=>byId.get(id).status==='parity'));
+    for(const part of [ids.slice(0,49),ids.slice(49)]) {
+      for(let i=1;i<part.length;i++) {
+        const a=byId.get(part[i-1]),b=byId.get(part[i]);
+        assert.ok(a.rank<=b.rank);
+        if(a.rank===b.rank)assert.ok(a.id<b.id);
+      }
+    }
+    await value('[data-filter="sort"]','priority');
+    const ranks=await page.$$eval('.criterion-result .priority-badge',els=>els.map(el=>Number(el.dataset.priority)));
+    assert.deepEqual(ranks,[...ranks].sort((a,b)=>a-b));
+    await value('[data-filter="sort"]','catalog');
+    assert.deepEqual(await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent)),rows.map(c=>c.id));
+  });
+  await check('Group priority ordering uses matching subfeatures and retains deterministic ties',async()=>{
+    await go('#catalog?view=groups&priority=1&sort=priority');
+    assert.deepEqual(await page.$$eval('.group-card .group-card-top .criterion-id',els=>els.map(el=>el.textContent)),['F01','F03','F04','F06','F09','F12','F14','F15','F17','F30']);
+    await value('[data-filter="sort"]','incomplete');
+    const groups=await page.$$eval('.group-card .group-card-top .criterion-id',els=>els.map(el=>el.textContent));
+    assert.deepEqual(groups.slice(0,3),['F03','F12','F15']);
+    await page.click('[data-view="criteria"]');
+    assert.deepEqual((await page.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent))).slice(0,3),['F03.S04','F12.S09','F15.S03']);
+  });
+  await check('Priority details, scale and downloads explain conditional safeguards',async()=>{
+    await go('#feature/F12?item=F12.S09');
+    assert.match(await page.$eval('[id="F12.S09"] .priority-detail',el=>el.textContent),/P1.*required when custom change is introduced/s);
+    await go('#about?section=priorities');
+    assert.equal(await page.$$eval('#priorities .priority-badge',els=>els.length),5);
+    const downloads=await page.evaluate(async()=>({json:await(await fetch('priorities.json')).json(),text:await(await fetch('priorities.md')).text()}));
+    assert.equal(Object.keys(downloads.json.criteria).length,182);
+    assert.equal(downloads.json.criteria['F12.S09'].rank,1);
+    assert.match(downloads.text,/F03.S04/);
+    assert.match(downloads.text,/Conditional safeguards/);
+    await go('#catalog?view=criteria&priority=invalid&sort=invalid');
+    assert.equal(await page.$eval('[data-filter="priority"]',el=>el.value),'any');
+    assert.equal(await page.$eval('[data-filter="sort"]',el=>el.value),'catalog');
+    assert.equal(await page.$$eval('.criterion-result',els=>els.length),182);
+  });
+  await check('Priority controls work on mobile in both themes and from a local file',async()=>{
+    await page.setViewport({width:390,height:844,deviceScaleFactor:1});
+    await go('#catalog?parity=incomplete&view=criteria&sort=priority&priority=1');
+    for(const theme of ['dark','light']) {
+      await page.evaluate(theme=>window.EvidenceTheme.set(theme),theme);
+      assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+      await page.select('[data-filter="sort"]','incomplete');
+      assert.equal(await page.$$eval('.criterion-result',els=>els.length),3);
+      await page.$eval('.catalog-sort',el=>el.scrollIntoView({block:'center'}));
+      await page.screenshot({path:output+`/priorities-mobile-${theme}.png`});
+    }
+    await page.setViewport({width:1440,height:1000,deviceScaleFactor:1});
+    await page.evaluate(()=>window.EvidenceTheme.set('dark'));
+    const local=await browser.newPage();
+    await local.goto('file:///site/dist/index.html#catalog?parity=incomplete&view=criteria&sort=priority&priority=1',{waitUntil:'load'});
+    assert.deepEqual(await local.$$eval('.criterion-result .criterion-id',els=>els.map(el=>el.textContent)),['F03.S04','F12.S09','F15.S03']);
+    await local.close();
+    await go('#catalog?view=groups');
   });
   await check('Watch-only export is counted once, combines proof, and redirects old links and searches',async()=>{
     const context=await browser.createBrowserContext();const merged=await context.newPage();
@@ -666,7 +765,7 @@ async function main() {
     await value('[data-filter="requirement"]','not-needed');
     assert.equal(await page.$$eval('.criterion-result',els=>els.length),0);
     assert.equal(await page.$eval('#review-progress-text',el=>el.textContent),'133 / 182');
-    await page.click('[data-action="clear-filters"]');
+    await resetFilters();
   });
   await check('Criterion search and subfeature view return the exact ID',async()=>{
     await page.type('#catalog-search','F19.S03');
@@ -822,7 +921,7 @@ async function main() {
     assert.ok(await page.$('[id="F20.S07"] .application-evidence[aria-label^="Qt Widgets"] .capture-preview'));
     assert.match(await page.$eval('[id="F20.S07"]',el=>el.textContent),/other chains/);
     await go('#feature/F20');
-    await page.click('[data-action="clear-filters"]');
+    await resetFilters();
     const count=await page.evaluate(()=>window.REVIEW_EVIDENCE.groups.find(g=>g.id==='F20').criteria.length);
     assert.equal(await page.$$eval('.criterion-card',els=>els.length),count);
   });
@@ -834,7 +933,7 @@ async function main() {
     assert.equal(await page.$('[data-filter="app"]'),null);
   });
   await check('Reset restores the full catalog',async()=>{
-    await page.click('[data-action="clear-filters"]');
+    await resetFilters();
     assert.equal(await page.$$eval('.group-card',els=>els.length),34);
   });
   await check('Feature-area navigation filters by the selected area',async()=>{
@@ -1025,7 +1124,7 @@ async function main() {
     await page.click('.group-card');
     await page.waitForSelector('[id="F19.S03"]');
     assert.equal(await page.$$eval('.criterion-card',els=>els.length),3); // Group filter does not hide overrides.
-    await page.click('[data-action="clear-filters"]');
+    await resetFilters();
     await go('#catalog');
     assert.equal(await page.$$eval('.group-card',els=>els.length),34);
     assert.equal(await page.$eval('[data-filter="requirement"]',el=>el.value),'any');
@@ -1230,7 +1329,7 @@ async function main() {
     assert.equal(await page.$$eval('.criterion-result',els=>els.length),35);
     assert.equal(await page.$$eval('.result-statuses',els=>els.every(el=>el.textContent.includes('Qt Widgets')&&el.textContent.includes('GUI-QML'))),true);
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
-    await page.click('[data-action="clear-filters"]');
+    await resetFilters();
   });
   await page.screenshot({path:output+'/catalog-mobile.png',fullPage:false});
   await check('Requirements can be filtered and edited on mobile in both themes without losing review notes',async()=>{
@@ -1259,7 +1358,7 @@ async function main() {
     await page.click('#review-form button[type="submit"]');
     await page.click('#theme-toggle');
     await go('#catalog');
-    await page.click('[data-action="clear-filters"]');
+    await resetFilters();
   });
   await check('Mobile tests and provenance remain navigable',async()=>{
     await go('#tests');assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);

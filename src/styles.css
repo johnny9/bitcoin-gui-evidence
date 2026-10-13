@@ -61,3 +61,17 @@ dialog{border:1px solid #e0e5ec;border-radius:12px;background:white;color:var(--
 .mapped-criterion a{color:var(--orange);text-decoration:underline;text-underline-offset:2px}
 
 @media(max-width:600px){.stats-grid>[data-stat="accepted"]{grid-column:1/-1}}
+
+/* Priority uses the same palette in both themes. */
+.filter-row{flex-wrap:wrap}
+.results-toolbar{flex-wrap:wrap}
+.results-toolbar>div:first-child{flex:1 1 280px;min-width:0}
+.catalog-sort{flex:0 1 210px}
+.priority-badge{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 7px;font-size:10px;font-weight:600;line-height:1.5;color:var(--muted);background:var(--panel)}
+.priority-badge[data-priority="1"]{color:var(--red);background:var(--red-soft);border-color:var(--red)}
+.priority-badge[data-priority="2"]{color:var(--orange);background:var(--orange-soft);border-color:var(--orange)}
+.priority-summary{margin-top:9px}
+.priority-reason{color:var(--muted);font-size:11px;line-height:1.6;margin-top:6px}
+.priority-detail{padding:12px 20px;border-bottom:1px solid var(--line)}
+#priorities{scroll-margin-top:90px}
+@media(max-width:600px){.catalog-sort{flex:0 1 auto}.priority-detail{padding:12px 15px}}

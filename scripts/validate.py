@@ -10,6 +10,7 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 from hardware_platform import apply_hardware_platform_review
 from visual_review import apply_visual_review
+from priorities import apply_priorities, priorities_markdown
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / 'dist'
@@ -52,6 +53,32 @@ def main():
         assert criterion['implementation']['status'] in ('parity', 'partial', 'not-implemented')
         assert criterion['implementation']['reason'].strip()
     by_id = {c['id']: c for c in criteria}
+    priorities = json.loads((ROOT / 'data/priorities.json').read_text())
+    assert priorities == json.loads((DIST / 'priorities.json').read_text())
+    assert set(priorities['criteria']) == set(by_id)
+    assert data['priorityAssessment'] == {k: v for k, v in priorities.items() if k != 'criteria'}
+    assert all(c['priority'] == priorities['criteria'][c['id']] for c in criteria)
+    assert (DIST / 'priorities.md').read_text() == priorities_markdown(data)
+    original_data = copy.deepcopy(data)
+    apply_priorities(data, priorities)
+    assert data == original_data
+    invalid_priorities = []
+    for key, value in [('schemaVersion', 2), ('snapshotCatalogId', 'changed'), ('catalogRevision', 'changed')]:
+        invalid_priorities.append({**priorities, key: value})
+    invalid_priorities.append({**priorities, 'criteria': {k: v for k, v in priorities['criteria'].items() if k != 'F01.S01'}})
+    invalid_priorities.append({**priorities, 'criteria': {**priorities['criteria'], 'F05.S02': priorities['criteria']['F05.S01']}})
+    for key, value in [('rank', 0), ('rank', 6), ('rank', True), ('rank', '1'), ('rank', 1.5), ('reason', ' ')]:
+        invalid_priorities.append({**priorities, 'criteria': {**priorities['criteria'], 'F01.S01': {**priorities['criteria']['F01.S01'], key: value}}})
+    invalid_priorities.append({**priorities, 'levels': priorities['levels'][::-1]})
+    invalid_priorities.append({**priorities, 'levels': [{**priorities['levels'][0], 'label': ''}, *priorities['levels'][1:]]})
+    for invalid in invalid_priorities:
+        try:
+            apply_priorities(data, invalid)
+        except ValueError:
+            pass
+        else:
+            raise AssertionError('Invalid or stale priority assessment was accepted')
+        assert data == original_data
     assert len(data['criterionAliases']) == 18
     assert len(data['criterionReplacements']) == len(data['retiredCriteria']) == 21
     assert set(data['criterionReplacements']) == set(coverage) - set(by_id)

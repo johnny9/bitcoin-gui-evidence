@@ -1,0 +1,765 @@
+{
+  "schemaVersion": 1,
+  "assessedAt": "2026-10-13",
+  "snapshotCatalogId": "b4b1026b74ad8bf0a1628c9889b82193d33d210c3aa0170e94783f371fe15c0b",
+  "catalogRevision": "2026-10-11-remove-navigation-aggregate",
+  "basis": "Relative planning priority based on the user outcome, potential harm, ability to access or recover funds, workflow reach, and available alternatives. Existing implementation assessments inform the reasons. Lower numbers mean higher priority. Ranks are editorial judgments, not project commitments, effort estimates, vulnerability severity, or new test evidence. Implementation status, evidence coverage, acceptance and personal merge/release scope remain separate.",
+  "sorting": "Priority sorts by numeric rank ascending, then subfeature ID. Incomplete first sorts partial and not-implemented outcomes together before parity outcomes, then by priority and ID. Partial and missing status alone do not change criticality. In Groups view the highest-ranked matching subfeature under the selected sort determines group order; ties use group ID. Conditional safeguards must ship with the capability they protect; priority order is not a dependency schedule.",
+  "levels": [
+    {
+      "rank": 1,
+      "label": "Safety and recovery",
+      "description": "Protect keys and funds, prevent unintended irreversible actions, or restore access after loss."
+    },
+    {
+      "rank": 2,
+      "label": "Core workflow",
+      "description": "Enable dependable everyday use, correct financial information, essential custody workflows, or reliable startup and shutdown."
+    },
+    {
+      "rank": 3,
+      "label": "Important capability",
+      "description": "Support privacy, advanced workflows, accessibility, configuration, or practical operation when a basic path exists."
+    },
+    {
+      "rank": 4,
+      "label": "Workflow improvement",
+      "description": "Improve efficiency, organization, discovery, or integrations with usable alternatives."
+    },
+    {
+      "rank": 5,
+      "label": "Convenience",
+      "description": "Add presentation preferences, shortcuts, or polish with limited impact on completing the user goal."
+    }
+  ],
+  "criteria": {
+    "F01.S01": {
+      "rank": 2,
+      "reason": "A standard wallet is the starting point for ordinary receiving and spending."
+    },
+    "F01.S02": {
+      "rank": 1,
+      "reason": "Protecting spending keys at wallet creation prevents an unsafe default for stored funds."
+    },
+    "F01.S03": {
+      "rank": 3,
+      "reason": "Watch-only setup supports monitoring and offline custody without exposing spending keys."
+    },
+    "F01.S04": {
+      "rank": 3,
+      "reason": "Blank wallets enable custom key imports and advanced custody setup; standard setup is already available."
+    },
+    "F01.S05": {
+      "rank": 2,
+      "reason": "External-signer setup is needed before users can spend through their chosen hardware custody workflow."
+    },
+    "F01.S06": {
+      "rank": 4,
+      "reason": "Names help organize wallets; active-wallet identification provides the more important transaction safeguard."
+    },
+    "F02.S01": {
+      "rank": 2,
+      "reason": "Users must be able to reopen existing wallets to access their funds."
+    },
+    "F02.S02": {
+      "rank": 3,
+      "reason": "Keeping several wallets open supports separate accounts without repeated loading."
+    },
+    "F02.S03": {
+      "rank": 2,
+      "reason": "Selecting the intended wallet is necessary for correct payment and account operations."
+    },
+    "F02.S04": {
+      "rank": 3,
+      "reason": "Closing wallets gives users control over loaded accounts and resource use."
+    },
+    "F03.S01": {
+      "rank": 1,
+      "reason": "A usable backup protects access to funds after device loss or wallet damage."
+    },
+    "F03.S02": {
+      "rank": 1,
+      "reason": "Restoring a backup is a direct recovery path when the original wallet is unavailable."
+    },
+    "F03.S03": {
+      "rank": 4,
+      "reason": "A recovery name helps organization but does not restore keys or funds by itself."
+    },
+    "F03.S04": {
+      "rank": 1,
+      "reason": "Legacy backup recovery can be the only practical GUI path back to funds; migration guidance alone does not recover them."
+    },
+    "F04.S01": {
+      "rank": 2,
+      "reason": "Legacy migration lets existing users continue using wallets in the current format."
+    },
+    "F04.S02": {
+      "rank": 1,
+      "reason": "Preserving the original before migration provides a recovery path if conversion fails."
+    },
+    "F04.S03": {
+      "rank": 1,
+      "reason": "Migration must retain keys and wallet information so funds remain accessible and visible."
+    },
+    "F04.S04": {
+      "rank": 2,
+      "reason": "Migrated wallets must be reachable to complete the move to the new format."
+    },
+    "F05.S01": {
+      "rank": 3,
+      "reason": "A watch-only copy enables separate monitoring while spending keys remain in the original wallet."
+    },
+    "F05.S03": {
+      "rank": 3,
+      "reason": "Watch-only export supports moving a monitoring wallet between systems; it does not replace a spending-key backup."
+    },
+    "F06.S01": {
+      "rank": 1,
+      "reason": "Encryption protects stored spending keys from unauthorized access."
+    },
+    "F06.S02": {
+      "rank": 1,
+      "reason": "Changing a passphrase lets users replace a weak or exposed credential protecting spending keys."
+    },
+    "F06.S03": {
+      "rank": 1,
+      "reason": "Unlocking must grant only the access required to authorize a protected operation."
+    },
+    "F06.S04": {
+      "rank": 1,
+      "reason": "Automatic relocking limits the time spending keys remain available after authorization."
+    },
+    "F06.S05": {
+      "rank": 2,
+      "reason": "Users need to know whether keys are currently unlocked; the missing state display weakens security awareness."
+    },
+    "F06.S06": {
+      "rank": 4,
+      "reason": "Visibility controls reduce entry mistakes while giving users control over on-screen passphrases."
+    },
+    "F06.S07": {
+      "rank": 2,
+      "reason": "Clear mismatch feedback helps avoid failed encryption or incorrect passphrase setup."
+    },
+    "F07.S01": {
+      "rank": 2,
+      "reason": "Accurate balances guide spending decisions; the recorded stale balance after mining maturity is a real correctness gap."
+    },
+    "F07.S02": {
+      "rank": 3,
+      "reason": "Recent activity helps users notice incoming and outgoing payments without a separate search."
+    },
+    "F07.S03": {
+      "rank": 4,
+      "reason": "A shortcut to full transaction history reduces navigation work."
+    },
+    "F07.S04": {
+      "rank": 2,
+      "reason": "A stale-data warning prevents users from treating an unsynchronized wallet view as current."
+    },
+    "F08.S01": {
+      "rank": 2,
+      "reason": "A valid receiving address is essential to receiving funds through supported wallet formats."
+    },
+    "F08.S02": {
+      "rank": 3,
+      "reason": "Amounts and labels make payment requests easier to track, while receiving can work with an address alone."
+    },
+    "F08.S03": {
+      "rank": 3,
+      "reason": "Payment links and QR codes reduce manual transcription when sharing a payment destination."
+    },
+    "F08.S04": {
+      "rank": 2,
+      "reason": "Accurate address transfer is part of the basic receiving workflow and reduces transcription mistakes."
+    },
+    "F08.S05": {
+      "rank": 4,
+      "reason": "Saving or copying QR images adds sharing options beyond the displayed code and address."
+    },
+    "F08.S06": {
+      "rank": 5,
+      "reason": "Drag and drop is a convenience when other image-sharing paths already achieve the same outcome."
+    },
+    "F08.S07": {
+      "rank": 4,
+      "reason": "Saved request management helps repeat use and housekeeping."
+    },
+    "F08.S09": {
+      "rank": 2,
+      "reason": "Watch-only wallets must receive funds without requiring access to private keys."
+    },
+    "F09.S01": {
+      "rank": 2,
+      "reason": "Sending payments is a core wallet function."
+    },
+    "F09.S02": {
+      "rank": 2,
+      "reason": "Users must supply the correct destination before preparing a payment."
+    },
+    "F09.S03": {
+      "rank": 4,
+      "reason": "Recipient labels improve recognition and record keeping."
+    },
+    "F09.S04": {
+      "rank": 3,
+      "reason": "Sending the full balance supports wallet consolidation and withdrawal."
+    },
+    "F09.S05": {
+      "rank": 3,
+      "reason": "Selected fee subtraction supports fixed-budget and shared-cost payments; ordinary sending already works."
+    },
+    "F09.S06": {
+      "rank": 1,
+      "reason": "Reviewing recipients, amounts and total cost is the last user safeguard before an irreversible payment."
+    },
+    "F09.S07": {
+      "rank": 2,
+      "reason": "Local-key signing is required to authorize ordinary wallet payments."
+    },
+    "F09.S08": {
+      "rank": 2,
+      "reason": "Preparing unsigned payments is essential for spending from watch-only custody setups."
+    },
+    "F09.S09": {
+      "rank": 1,
+      "reason": "Validating destinations, amounts and funds helps prevent invalid or unintended payment attempts."
+    },
+    "F10.S01": {
+      "rank": 3,
+      "reason": "Payment-link import supports a common way to start a payment without manual entry."
+    },
+    "F10.S02": {
+      "rank": 2,
+      "reason": "Imported recipient and amount data must remain correct when preparing a payment."
+    },
+    "F10.S03": {
+      "rank": 3,
+      "reason": "Receiving requests from other apps makes payment links usable across desktop workflows."
+    },
+    "F11.S01": {
+      "rank": 2,
+      "reason": "Fee estimates let ordinary users choose a cost and avoid unnecessarily delayed payments."
+    },
+    "F11.S02": {
+      "rank": 3,
+      "reason": "Custom rates support unusual fee conditions and experienced users."
+    },
+    "F11.S04": {
+      "rank": 2,
+      "reason": "An unavailable-estimate warning prevents false confidence in an automatic fee choice."
+    },
+    "F12.S01": {
+      "rank": 3,
+      "reason": "Coin selection supports deliberate input use, privacy and consolidation."
+    },
+    "F12.S03": {
+      "rank": 4,
+      "reason": "Coin grouping helps inspect larger wallets before choosing inputs."
+    },
+    "F12.S04": {
+      "rank": 3,
+      "reason": "Coin attributes support informed input selection and confirmation checks."
+    },
+    "F12.S05": {
+      "rank": 3,
+      "reason": "Coin locks let users reserve inputs and avoid accidental selection in later payments."
+    },
+    "F12.S06": {
+      "rank": 4,
+      "reason": "Clipboard export helps inspect and share coin details; coin selection itself remains available."
+    },
+    "F12.S07": {
+      "rank": 2,
+      "reason": "Users need to see fees and change when deciding whether selected inputs produce the intended payment."
+    },
+    "F12.S08": {
+      "rank": 3,
+      "reason": "Custom change supports advanced custody and privacy workflows; deliver the ownership warning with this control."
+    },
+    "F12.S09": {
+      "rank": 1,
+      "reason": "A non-wallet change address can send change outside the user's control; this warning is required when custom change is introduced, not evidence of a current exposed path."
+    },
+    "F13.S01": {
+      "rank": 2,
+      "reason": "Unsigned transaction creation enables offline and external signing workflows."
+    },
+    "F13.S02": {
+      "rank": 2,
+      "reason": "The remaining partial-key multisig gap blocks transaction preparation for affected custody setups."
+    },
+    "F13.S03": {
+      "rank": 2,
+      "reason": "Configured multisig users need a complete preparation path, including wallets with only some local keys."
+    },
+    "F13.S04": {
+      "rank": 2,
+      "reason": "Offline signing still requires control of the intended recipients, fees and funding inputs."
+    },
+    "F13.S05": {
+      "rank": 2,
+      "reason": "Export is necessary to move an unsigned transaction to its signer."
+    },
+    "F14.S01": {
+      "rank": 2,
+      "reason": "Import restrictions can block otherwise usable transactions from other signing tools."
+    },
+    "F14.S02": {
+      "rank": 1,
+      "reason": "Users must inspect transaction outputs and costs before adding signatures or broadcasting."
+    },
+    "F14.S03": {
+      "rank": 2,
+      "reason": "Incomplete multisig support prevents affected users from processing their custody transactions."
+    },
+    "F14.S04": {
+      "rank": 2,
+      "reason": "Adding local partial signatures is necessary for the missing multisig spending workflow."
+    },
+    "F14.S05": {
+      "rank": 2,
+      "reason": "Passing and adding signatures is essential to completing collaborative multisig payments."
+    },
+    "F14.S06": {
+      "rank": 2,
+      "reason": "Exporting partial transactions allows the next signer to continue the payment workflow."
+    },
+    "F14.S07": {
+      "rank": 2,
+      "reason": "Finalization and broadcast complete a signed payment."
+    },
+    "F14.S08": {
+      "rank": 3,
+      "reason": "Wallet-free inspection and broadcast support dedicated relay setups; an open-wallet path already exists."
+    },
+    "F15.S01": {
+      "rank": 2,
+      "reason": "A working signer connection is required for hardware-wallet use."
+    },
+    "F15.S02": {
+      "rank": 1,
+      "reason": "Keeping private keys on the signer preserves the custody boundary users rely on."
+    },
+    "F15.S03": {
+      "rank": 1,
+      "reason": "Device verification lets users check the receiving destination independently of the host display before sending funds to it."
+    },
+    "F15.S04": {
+      "rank": 2,
+      "reason": "Device authorization completes payments for hardware-wallet users."
+    },
+    "F16.S01": {
+      "rank": 2,
+      "reason": "Transaction history is the primary record of funds entering and leaving the wallet."
+    },
+    "F16.S02": {
+      "rank": 4,
+      "reason": "Filters make large histories easier to inspect."
+    },
+    "F16.S03": {
+      "rank": 3,
+      "reason": "Search and sort help locate a specific payment for confirmation or support."
+    },
+    "F16.S04": {
+      "rank": 2,
+      "reason": "Confirmation, conflict and maturity states tell users whether funds are settled or available."
+    },
+    "F16.S05": {
+      "rank": 2,
+      "reason": "Costs and transaction details let users verify and diagnose actual wallet movements."
+    },
+    "F16.S06": {
+      "rank": 4,
+      "reason": "The remaining amount and full-detail copy gaps slow record keeping; transaction ID and raw-data copying already work."
+    },
+    "F16.S07": {
+      "rank": 4,
+      "reason": "Editing outgoing labels improves transaction records without changing payments."
+    },
+    "F16.S08": {
+      "rank": 3,
+      "reason": "History export supports accounting and independent reconciliation."
+    },
+    "F16.S09": {
+      "rank": 4,
+      "reason": "Explorer links provide an optional external inspection path."
+    },
+    "F17.S01": {
+      "rank": 2,
+      "reason": "Fee replacement helps recover a payment delayed by an insufficient fee."
+    },
+    "F17.S02": {
+      "rank": 1,
+      "reason": "Users must approve the additional spend before a fee replacement is authorized."
+    },
+    "F17.S04": {
+      "rank": 2,
+      "reason": "External signers need a fee-bump PSBT path to resolve stuck payments without moving keys online."
+    },
+    "F17.S05": {
+      "rank": 2,
+      "reason": "Abandoning eligible transactions restores spendable inputs after a failed payment attempt."
+    },
+    "F18.S01": {
+      "rank": 3,
+      "reason": "A managed recipient list reduces repeated manual address entry; the missing sending side limits that workflow."
+    },
+    "F18.S02": {
+      "rank": 3,
+      "reason": "Recipient management supports safer repeat payments to known destinations."
+    },
+    "F18.S03": {
+      "rank": 4,
+      "reason": "Receiving labels improve organization and attribution of incoming payments."
+    },
+    "F18.S04": {
+      "rank": 4,
+      "reason": "Search and sorting improve access to larger saved-address lists."
+    },
+    "F18.S05": {
+      "rank": 3,
+      "reason": "Copying a saved address supports reuse without retyping the destination."
+    },
+    "F18.S06": {
+      "rank": 4,
+      "reason": "CSV export supports contact record keeping and transfer."
+    },
+    "F19.S01": {
+      "rank": 3,
+      "reason": "Message signing supports proof of address control without spending funds."
+    },
+    "F19.S02": {
+      "rank": 3,
+      "reason": "Signature verification supports checking claims of address control."
+    },
+    "F19.S03": {
+      "rank": 4,
+      "reason": "Copying signatures makes signed messages easier to share."
+    },
+    "F20.S01": {
+      "rank": 2,
+      "reason": "Selecting a viable data location is required to initialize and retain a node and its wallets."
+    },
+    "F20.S02": {
+      "rank": 2,
+      "reason": "Pruning makes node operation possible on storage-limited systems."
+    },
+    "F20.S03": {
+      "rank": 2,
+      "reason": "Storage checks help prevent setup failures and exhausted disks during synchronization."
+    },
+    "F20.S04": {
+      "rank": 2,
+      "reason": "Blockchain download and validation are required for a usable synchronized node."
+    },
+    "F20.S05": {
+      "rank": 3,
+      "reason": "Progress and estimates help users understand long synchronization waits."
+    },
+    "F20.S06": {
+      "rank": 3,
+      "reason": "Node operation without an open wallet supports independent validation and service use."
+    },
+    "F20.S07": {
+      "rank": 2,
+      "reason": "Correct network support is needed for production use and safe development workflows."
+    },
+    "F21.S01": {
+      "rank": 3,
+      "reason": "Network controls let users pause connections and manage node connectivity deliberately."
+    },
+    "F21.S02": {
+      "rank": 3,
+      "reason": "Incoming connections support reachable nodes and network participation."
+    },
+    "F21.S03": {
+      "rank": 2,
+      "reason": "Proxy routing is a significant privacy and connectivity requirement for users who rely on it."
+    },
+    "F21.S04": {
+      "rank": 4,
+      "reason": "Automatic router mapping reduces configuration work; manual network setup is an alternative."
+    },
+    "F21.S05": {
+      "rank": 3,
+      "reason": "Peer inspection helps diagnose connectivity and synchronization problems."
+    },
+    "F21.S06": {
+      "rank": 3,
+      "reason": "Transport status gives users useful information about connection privacy."
+    },
+    "F21.S07": {
+      "rank": 3,
+      "reason": "Peer management supports troubleshooting and removal of unwanted connections."
+    },
+    "F21.S08": {
+      "rank": 3,
+      "reason": "Ban management gives operators control over unwanted peers and recovery from mistaken bans."
+    },
+    "F21.S09": {
+      "rank": 5,
+      "reason": "Copying ban entries is an operator convenience; inspecting and managing bans already work."
+    },
+    "F22.S01": {
+      "rank": 3,
+      "reason": "Node information supports checking health and diagnosing network issues."
+    },
+    "F22.S02": {
+      "rank": 3,
+      "reason": "Traffic monitoring helps users manage data use and investigate connectivity."
+    },
+    "F22.S03": {
+      "rank": 4,
+      "reason": "Selectable periods improve traffic analysis but do not enable basic monitoring."
+    },
+    "F22.S04": {
+      "rank": 3,
+      "reason": "Log access is a practical troubleshooting path when user-facing messages are insufficient."
+    },
+    "F22.S05": {
+      "rank": 3,
+      "reason": "The console provides advanced operations and recovery tools beyond ordinary GUI workflows."
+    },
+    "F22.S06": {
+      "rank": 2,
+      "reason": "Wallet selection prevents advanced commands from being applied to the wrong account."
+    },
+    "F22.S07": {
+      "rank": 4,
+      "reason": "History, completion and help reduce command-entry effort and mistakes."
+    },
+    "F22.S08": {
+      "rank": 5,
+      "reason": "Readability and clearing controls improve console comfort."
+    },
+    "F23.S01": {
+      "rank": 2,
+      "reason": "The recorded cache cap rejects normal allocations and can obstruct practical node synchronization and tuning."
+    },
+    "F23.S02": {
+      "rank": 3,
+      "reason": "RPC configuration supports external node tools and integrations."
+    },
+    "F23.S03": {
+      "rank": 3,
+      "reason": "Unconfirmed-change policy gives users control over payment availability and confirmation assumptions."
+    },
+    "F23.S04": {
+      "rank": 4,
+      "reason": "A fee-subtraction default saves repeated choices; implement the per-payment capability first."
+    },
+    "F23.S05": {
+      "rank": 5,
+      "reason": "Hiding advanced controls is a presentation preference; the transaction controls are already usable."
+    },
+    "F23.S06": {
+      "rank": 3,
+      "reason": "Language selection makes the application usable for users who need another language."
+    },
+    "F23.S07": {
+      "rank": 5,
+      "reason": "Balance font choice is visual customization."
+    },
+    "F23.S08": {
+      "rank": 4,
+      "reason": "Custom explorer services support personal inspection preferences."
+    },
+    "F23.S10": {
+      "rank": 3,
+      "reason": "Advanced configuration supports node setups beyond the standard settings controls."
+    },
+    "F23.S11": {
+      "rank": 3,
+      "reason": "Precedence and restart guidance help users understand which settings are actually in effect."
+    },
+    "F23.S12": {
+      "rank": 3,
+      "reason": "Reset with a retained backup provides a reversible path out of incorrect preferences."
+    },
+    "F24.S01": {
+      "rank": 3,
+      "reason": "Users need a way to restore an application that continues running with its main window hidden."
+    },
+    "F24.S05": {
+      "rank": 5,
+      "reason": "Tray-icon visibility is a desktop preference."
+    },
+    "F25.S01": {
+      "rank": 4,
+      "reason": "Payment notifications reduce active monitoring; payment history and balances remain available in the app."
+    },
+    "F25.S03": {
+      "rank": 3,
+      "reason": "Desktop warnings help users notice issues while the main window is hidden; in-app error handling already exists."
+    },
+    "F25.S04": {
+      "rank": 2,
+      "reason": "Critical errors must remain visible when the desktop notification channel is unavailable."
+    },
+    "F25.S05": {
+      "rank": 4,
+      "reason": "Historical notification suppression is required with desktop notifications to prevent a misleading flood on wallet load."
+    },
+    "F26.S01": {
+      "rank": 3,
+      "reason": "Basic window control is necessary for routine desktop use."
+    },
+    "F26.S02": {
+      "rank": 5,
+      "reason": "Restoring window placement saves arrangement effort between sessions."
+    },
+    "F26.S03": {
+      "rank": 3,
+      "reason": "Background operation supports continuous validation without keeping the main window visible."
+    },
+    "F26.S04": {
+      "rank": 4,
+      "reason": "Side-by-side diagnostics improve troubleshooting convenience."
+    },
+    "F26.S05": {
+      "rank": 2,
+      "reason": "A clear active-wallet identity helps prevent actions on the wrong wallet."
+    },
+    "F27.S01": {
+      "rank": 4,
+      "reason": "Login startup supports unattended node availability but manual launch already works."
+    },
+    "F27.S02": {
+      "rank": 5,
+      "reason": "Minimized startup is a convenience for background node use."
+    },
+    "F27.S03": {
+      "rank": 3,
+      "reason": "Initialization progress helps users distinguish lengthy startup from a stalled application."
+    },
+    "F27.S04": {
+      "rank": 2,
+      "reason": "Orderly startup cancellation avoids forcing users to terminate initialization abruptly."
+    },
+    "F27.S05": {
+      "rank": 2,
+      "reason": "Clean exit lets node and wallet operations finish their shutdown sequence."
+    },
+    "F27.S06": {
+      "rank": 3,
+      "reason": "Visible shutdown progress discourages users from forcing termination while cleanup continues."
+    },
+    "F27.S07": {
+      "rank": 2,
+      "reason": "A repair-or-abort choice helps recover from settings that block startup while preserving user control over existing configuration."
+    },
+    "F27.S08": {
+      "rank": 2,
+      "reason": "Windows session shutdown needs coordinated cleanup; otherwise that platform lacks the intended orderly exit path."
+    },
+    "F28.S01": {
+      "rank": 2,
+      "reason": "Users must be able to reach balances, sending, receiving and transaction history."
+    },
+    "F28.S05": {
+      "rank": 3,
+      "reason": "Keyboard access supports efficient use and users who cannot rely on pointer navigation."
+    },
+    "F29.S01": {
+      "rank": 3,
+      "reason": "Connectivity state helps explain why payments or synchronization may not progress."
+    },
+    "F29.S03": {
+      "rank": 2,
+      "reason": "Visible proxy state helps users check a privacy-sensitive connection setting."
+    },
+    "F29.S04": {
+      "rank": 3,
+      "reason": "Key-generation status helps users understand wallet capabilities and backup needs."
+    },
+    "F29.S05": {
+      "rank": 2,
+      "reason": "Clear amount units are necessary to interpret balances and payment values correctly."
+    },
+    "F29.S06": {
+      "rank": 4,
+      "reason": "Contextual guidance reduces learning effort for less familiar actions."
+    },
+    "F30.S01": {
+      "rank": 2,
+      "reason": "Clear results and errors let users know whether an important operation succeeded or needs correction."
+    },
+    "F30.S02": {
+      "rank": 1,
+      "reason": "Confirmation of important decisions protects against unintended irreversible actions."
+    },
+    "F30.S03": {
+      "rank": 4,
+      "reason": "Expanded diagnostic details improve support and troubleshooting."
+    },
+    "F30.S04": {
+      "rank": 2,
+      "reason": "An attention prompt is necessary when an operation cannot continue without the user."
+    },
+    "F30.S05": {
+      "rank": 3,
+      "reason": "Progress feedback reduces uncertainty during long wallet operations and rescans."
+    },
+    "F30.S07": {
+      "rank": 3,
+      "reason": "Background sync visibility lets users understand progress while continuing other tasks."
+    },
+    "F31.S02": {
+      "rank": 2,
+      "reason": "Clear network identity helps avoid confusing production funds with test networks or other instances."
+    },
+    "F31.S03": {
+      "rank": 5,
+      "reason": "Desktop appearance matching is visual integration."
+    },
+    "F31.S04": {
+      "rank": 3,
+      "reason": "Preventing background throttling improves practical synchronization time on macOS."
+    },
+    "F31.S06": {
+      "rank": 4,
+      "reason": "Graphical command-line help improves discoverability; application information and RPC help already exist."
+    },
+    "F32.S01": {
+      "rank": 3,
+      "reason": "Masking balances reduces casual disclosure during shared-screen or in-person use; it is not wallet access control."
+    },
+    "F32.S02": {
+      "rank": 3,
+      "reason": "Transaction history must respect privacy mode so hidden balances are not disclosed through another view."
+    },
+    "F32.S03": {
+      "rank": 3,
+      "reason": "Privacy mode must cover all loaded wallets to avoid exposing a second account when switching."
+    },
+    "F32.S04": {
+      "rank": 3,
+      "reason": "Remembering privacy mode avoids unexpected disclosure after restart; deliver it with the masking workflow."
+    },
+    "F33.S01": {
+      "rank": 3,
+      "reason": "Wallet-disabled operation supports dedicated validating nodes."
+    },
+    "F33.S02": {
+      "rank": 3,
+      "reason": "Dedicated node users still need networking and diagnostic controls."
+    },
+    "F33.S03": {
+      "rank": 4,
+      "reason": "Preferences and desktop integration keep wallet-disabled operation practical for daily use."
+    },
+    "F34.S01": {
+      "rank": 2,
+      "reason": "Rescanning recovers wallet history needed to identify funds after key imports or recovery."
+    },
+    "F34.S02": {
+      "rank": 3,
+      "reason": "Rescan progress lets users judge long recovery waits and distinguish activity from a stall."
+    },
+    "F34.S03": {
+      "rank": 3,
+      "reason": "Cancellation gives users control over an expensive scan without stopping the whole application."
+    }
+  }
+}
